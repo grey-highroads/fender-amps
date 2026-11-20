@@ -332,3 +332,22 @@ source `3d3b47b55380e80d1a604d010bc5461cb883a278`, deployment
 `appgdep_6b007223ef048191a77fc6bb3edd44a4`. Existing Site ID and owner-only
 audience preserved. Browser QA was local; the service confirms publication,
 not a signed-in production UI review.
+
+## Inside discovery and tone editorial pass
+
+The Twin's existing view buttons move above the viewport and gain explanatory
+subtitles; active state and keyboard access remain native buttons. Only the Twin
+construction demo receives this layout. `dist/twin-tone.js` separates editorial
+notes from shared photographic references and 3D anchors. Cards lead with tone,
+key attributes and listening prompts; native details reveal system interactions,
+explicitly labeled Fender-choice interpretation, photos and sources. Model
+geometry/materials, export path and other amp assemblies are unchanged.
+
+Current checks: npm test; changed JavaScript syntax; git diff whitespace. Chrome
+review at 1500×1100 and 390×844 verified the Inside control appears above the
+model, all three tone cards, interpretation labels, expandable notes/photos/
+sources, loaded image files, Cabinet clearing selection and different-amp reset.
+No page errors or mobile horizontal overflow. No new GLB check was required:
+this pass changes DOM/UI and editorial data only. Own captures are
+`images/tone-{cabinet,tubes}.png`. This does not constitute tonal measurement or
+confirmation of the vintage specimen's circuitry.

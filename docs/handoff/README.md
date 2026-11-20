@@ -21,7 +21,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `32b17e8`, construction explorer pilot; badge/panel 0.1; knob 0.4 |
+| Runtime baseline | Commit `97f9ed2`, tone-led explorer and primary Inside view; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
@@ -162,8 +162,9 @@ unchanged; badge placement and mounting depth intentionally changed.
 Open the [Twin inside view](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site/?amp=twin-1968&view=inside).
 Cabinet restores the rear panels; Inside the amp removes them and turns to a rear
 view without separating the physical assembly. Three model-attached hotspots
-and equivalent keyboard-accessible buttons explain speakers, power tubes and
-the output transformer. Selecting a part opens an in-viewport card.
+and equivalent keyboard-accessible buttons explore speakers, power tubes and
+the output transformer. The Twin’s view switch now sits above the model, with
+a prominent “Explore the parts behind the tone” invitation. Selecting a part opens an in-viewport card.
 
 The speaker and tube cards contain licensed representative photographs, clearly
 distinguished from actual 1968 factory parts. The transformer links to the vintage
@@ -172,6 +173,16 @@ four larger power tubes from six smaller tubes and has an approximate transforme
 marker. This is an interaction pilot, not a verified service diagram.
 
 ![Construction and photograph pilot](images/construction-tubes.png)
+
+## Tone-focused cards
+
+The cards now lead with tone and player tradeoffs: output-stage headroom, speaker
+response/breakup, transformer bandwidth and how the combination behaves. Each
+has key attributes, listening prompts, expandable interaction/design notes and
+photograph/source access. Fender-choice hypotheses are labeled interpretation.
+AB763 is explicitly a circuit-family reference, not authentication of the dated
+AC568 specimen. Oxford-specific measurements remain unknown; JBL comments are
+attributed to a later 1970 manufacturer brochure, not a listening test.
 
 ## Next useful work
 

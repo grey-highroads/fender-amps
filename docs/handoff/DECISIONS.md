@@ -105,3 +105,17 @@ construction: geometry/layout estimates still need labels and source distinction
 Representative licensed photos can explain component anatomy; do not pass them
 off as the selected Fender's original parts. Dealer photographs stay linked until
 reuse permission is established. The separate Blender master is unchanged.
+
+## Tone-led component storytelling and inside-view discovery
+
+The user approved the educational direction and asked for Inside the amp to be
+more discoverable. On the Twin, Cabinet / Inside are now primary controls above
+the object, with the invitation “Explore the parts behind the tone.” Keep the
+existing route, orbit controls and other amps' behavior.
+
+Write for curious players: the relevant characteristics, headroom, breakup,
+attack and component interactions come before generic component anatomy. Include
+useful listening prompts and tradeoffs. Explanations of why Fender might choose
+a configuration must be visibly labeled interpretation unless primary evidence
+establishes the rationale. A tube label alone does not determine tone; do not
+assign undocumented specifications or a universal voice to an Oxford take-out.

@@ -185,3 +185,30 @@ The 1968 catalog remains the factory-option evidence. Positions, envelopes and
 transformer construction remain estimates; the interaction is not a service layout.
 The transformer card links to the RetroFret gallery rather than embedding an
 unlicensed image. No new dealer-photo redistribution rights are assumed.
+
+## Tone-card evidence, November 20
+
+- Fender AB763 original circuit drawing, archived at
+  https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf
+  Supports four 6L6GCs, fixed-bias supply, diode rectification, output/feedback
+  topology. Family reference only: the dated RetroFret specimen is identified as
+  AC568. Silver-panel cosmetics do not authenticate the circuit.
+- RCA 6L6GC manufacturer sheet: https://tube-data.com/sheets/049/6/6L6GC.pdf
+  Supports output-tube/push-pull operating context. No data-sheet operating point
+  is asserted to be the Twin's measured condition or simply multiplied into an
+  amp rating.
+- JBL March 1970 Musical Instrument Loudspeakers brochure, archived at
+  https://www.cieri.net/Documenti/JBL/Documenti%20tecnici/Cataloghi/JBL%20-%20Musical%20Instrument%20Loudspeakers%20-%20D110F%2C%20D120F%2C%20D130F%2C%20D140F%20-%20Brochure%20%281970%29%20%28English%29.pdf
+  Describes D120F 4-inch edgewound coil and aluminum center dome, with manufacturer
+  emphasis on high-frequency clarity and power handling. Later literature is
+  labeled 1970; not evidence of an exact 1968 specimen, nor an Oxford comparison.
+  Period power-capacity marketing is not converted into a modern test rating.
+- Hammond manufacturer engineering overview:
+  https://www.hammfg.com/electronics/transformers/audio/overview
+  Supports general bandwidth/core/winding principles, not the vintage Twin
+  transformer's measured properties or identity.
+
+Listening prompts, whole-system tonal implications and possible Fender design
+goals are interpretation. No controlled listening comparisons or electrical
+measurements were performed. Existing 1968 catalog supports the JBL factory
+option; no new Oxford sensitivity, response or power figures are claimed.
