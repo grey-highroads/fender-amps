@@ -1,6 +1,6 @@
 # Princeton image comparison trial
 
-November 20, 2026. Local, unpublished review requested by the user. No geometry,
+November 20, 2026. User-approved layout trial, subsequently published below. No geometry,
 catalog, assembly selection, other amp layouts or hosting settings changed.
 
 The revised Princeton trial preserves the original desktop arrangement: model well
@@ -33,7 +33,7 @@ other evidence. The UI identifies AI generation, specimen and interpretive limit
 Original dealer photographs are not copied into dist or committed.
 
 Original PNGs, generation prompts and an interface screenshot remain under ignored
-`outputs/princeton-photoreal-review/`. No publication or commit occurred in this task.
+`outputs/princeton-photoreal-review/`. The initial layout review was local; publication is recorded below.
 
 ## Current-task validation
 
@@ -46,11 +46,23 @@ the browser's 390-wide override). Desktop was reviewed under a 1440 × 1000 over
 No browser error logs were captured in the regression tab. These are interface
 checks, not validation of image historical accuracy.
 
-Next: user review of the layout and image fidelity before expanding this treatment
-or publishing. Princeton hotspot content remains pending as before this trial.
+Next: review image fidelity before expanding this treatment. Princeton hotspot content remains pending as before this trial.
 
 User-directed layout correction: all five checks, syntax and whitespace passed again.
 Desktop 1440 × 1000 and phone 390 × 844 visually reviewed with stacked thumbnails
 inside the model well. Rear thumbnail opened the rear image directly; Escape
 returned to the amp. Decorative caption is hidden on phone to avoid the rail.
 Updated screenshot: ignored outputs/princeton-photoreal-review/interface-thumbnail-rail.jpg.
+
+## Publication
+
+User approved publication November 20. Runtime `0ef21d9177660fb5307e55b778a8e5e3a77dfb69`
+merged the newer copy update without discarding its text. Git production deployment
+`dpl_EnV3in4CmYU7YJdnnV1QfebQ9Uqj` is READY, aliased to fendertubeamps.com.
+All five checks passed in the remote build logs. Live browser review confirmed
+the model, left thumbnail rail, latest right-side copy, rear-image enlargement
+and Escape returning to detail. Screenshot remains in ignored outputs as
+`published-thumbnail-rail.jpg`. Existing public custom domain and protected
+preview settings are preserved; original private Sites prototype is unchanged.
+
+https://fendertubeamps.com/?amp=princeton-reverb-1965

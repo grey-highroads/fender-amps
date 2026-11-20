@@ -153,3 +153,10 @@ Final 5E3 mounting correction `da30b95` also auto-deployed READY as
 `dpl_5VJtFn2mMiEeztPFjRa8BePpfpbS`, Git source. All five remote checks passed;
 public assembly/artwork/export files and live routes were checked. See
 [final typography publication record](FACEPLATE_TYPOGRAPHY.md#publication).
+
+## Princeton image thumbnail publication
+
+Runtime `0ef21d9` deployed READY via Git as `dpl_EnV3in4CmYU7YJdnnV1QfebQ9Uqj`.
+All five remote checks passed. Live model, thumbnail rail, updated copy and image
+enlargement/Escape were verified. See [image study record](PRINCETON_IMAGE_STUDIES.md).
+Public domain/protected previews and original private Sites remain unchanged.

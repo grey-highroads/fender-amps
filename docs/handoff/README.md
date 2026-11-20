@@ -251,10 +251,11 @@ validation and remaining uncertainty](SMALL_AMPS.md).
 
 ## Princeton image comparison trial
 
-November 20: local review now pairs the Princeton construction model with generated
+November 20: published Princeton detail now pairs the Princeton construction model with generated
 front/rear image thumbnails pinned to the left inside the model well and a zoomable
 full-screen viewer. Original model-left/story-right desktop layout is preserved;
-phones retain the thumbnail rail beside the model with story below. This trial is not published. See
+phones retain the thumbnail rail beside the model with story below. Published runtime
+`0ef21d9` is READY and live-browser verified. See
 [implementation and evidence limits](PRINCETON_IMAGE_STUDIES.md).
 
 ## Next useful work
