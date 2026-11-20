@@ -1,0 +1,154 @@
+{
+  "range": "'Scope and sources'!A1:B50",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "Topic",
+      "Explanation"
+    ],
+    [
+      "Scope",
+      "208 model/major-version entries covering Fender tube guitar amps, 1946–2026. Broad catalog, not a verified exhaustive SKU register."
+    ],
+    [
+      "Tube-only definition",
+      "Tube preamp and tube power amplifier. Solid-state rectifiers, switching and ancillary effects do not exclude an amp. Digital-preamp or solid-state-power hybrids are excluded."
+    ],
+    [
+      "Included exceptions",
+      "Vintage Bassmans widely used for guitar; guitar/steel Vibrasonic and Vibrosonic models. Princeton Recording, Champ 12 and Vibro Champ Reverb have non-tube ancillary processing, identified in their notes."
+    ],
+    [
+      "Excluded",
+      "Dedicated bass-only amplifiers, acoustic amps, PA systems, separate reverb units, speaker-only cabinets, pedals, K&F predecessors, prototypes and non-Fender brands. Super Champ XD/X2, Vibro Champ XD, Champ 25, VM, Cyber and digital Tone Master models are excluded."
+    ],
+    [
+      "Grouping",
+      "Major circuit/era changes are separate rows. Many cosmetic editions, speakers, finishes, regional versions, head/combo configurations and limited packages are grouped. Not every circuit subrevision or dealer-exclusive SKU is a separate entry."
+    ],
+    [
+      "Date convention",
+      "Introduced/production-through years are approximate historical catalog windows. Transition years overlap; shipment dates and regional availability differ. Current denotes a continuing product family, not verified stock everywhere. Approximate or uncertain endings are marked."
+    ],
+    [
+      "Sort order",
+      "Introduction year ascending, then maximum/representative output watts ascending, then name. This prioritizes age over size. Use the wattage filter/sort to see all small amps first across every era. Physical dimensions are not the size measure."
+    ],
+    [
+      "Cabinet",
+      "Cabinet means combo/head format and stock speaker count × nominal diameter in inches. Head prices exclude the external cabinet. No dimensions or wood species are implied unless stated."
+    ],
+    [
+      "Power",
+      "Representative audio output in watts, not wall-power consumption or speaker power handling. Ratings, distortion thresholds and circuit revisions vary. Variable-power models use their maximum rating."
+    ],
+    [
+      "Ohm loads",
+      "Nominal factory internal-speaker load for combos, or selected output load for heads. These are reference values, not a blanket list of allowed extension-cabinet combinations. Consult the exact model manual and rear-panel marking before connecting a cabinet. Vintage speakers/output transformers may have been replaced."
+    ],
+    [
+      "Vintage small amps",
+      "Historical 3.2Ω speaker ratings are often rounded to the modern 4Ω class. Champ-related rows note this distinction. Three-speaker and six-speaker arrangements can have non-integer total loads."
+    ],
+    [
+      "Research date",
+      "November 19, 2026. A source URL does not mean every specification in that row was independently verified. Historical and grouped rows require exact-revision confirmation."
+    ],
+    [
+      "Price interpretation",
+      "USD for working used examples in ordinary good-to-excellent condition, unless explicitly labeled new. Excludes tax, shipping and cabinet for a head. Condition, original transformers/speakers, modifications and provenance can move prices substantially."
+    ],
+    [
+      "Price evidence",
+      "Published used-value/sold ranges are explicitly labeled and linked. Most other rows are indicative estimates, not verified current transaction ranges. Those estimates should be refreshed with exact-model sold comparables before budgeting. Blank means a reliable current price was not established."
+    ],
+    [
+      "Rare amp prices",
+      "Woodies, early Twins, rare signatures and decorative Custom Shop packages have sparse comparables. Their broad estimates are especially provisional; obtain an individual appraisal."
+    ],
+    [
+      "Rarity",
+      "Qualitative editorial estimate of availability, not audited production totals and not a value ranking. Common: regularly encountered. Uncommon: available with searching. Rare: infrequent. Very rare: scarce short-run or early surviving examples."
+    ],
+    [
+      "Updating",
+      "For a model of interest, confirm the circuit/version first, then its load and stock speakers, and refresh pricing from recent sold listings. Use the source archive to select the exact owner manual."
+    ],
+    [
+      "Fender official manuals",
+      "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals"
+    ],
+    [
+      "Fender dating guide",
+      "https://support.fender.com/hc/en-us/articles/42521690321051-How-can-I-find-out-how-old-my-amplifier-is"
+    ],
+    [
+      "Historical model directory",
+      "https://ampwares.com/category/amplifiers/fender/"
+    ],
+    [
+      "Historical circuit comparisons",
+      "https://fenderguru.com/amp-models/"
+    ],
+    [
+      "Published tweed value ranges (Oct 2026)",
+      "https://edgewaterguitars.com/blog/vintage-fender-tweed-amp-value-guide-champ-princeton-deluxe-bassman-twin"
+    ],
+    [
+      "Published vintage sold ranges (Nov 2026)",
+      "https://www.worthpic.com/guides/vintage-guitar-amp-value/"
+    ],
+    [
+      "Rivera-era marketplace",
+      "https://reverb.com/s/fender/vintage-rivera-era-amps"
+    ],
+    [
+      "Reverb vintage black-panel listings",
+      "https://reverb.com/s/fender/vintage-black-panel-amps"
+    ],
+    [
+      "Reverb tube amp listings",
+      "https://reverb.com/s/fender/tube-amps"
+    ],
+    [
+      "Current Fender product specifications",
+      "https://www.fender.com/products/57-custom-deluxe"
+    ],
+    [
+      "2025 American Vintage announcement",
+      "https://spotlight.fender.com/newsroom/news/980"
+    ],
+    [
+      "2026 American Vintage Deluxe",
+      "https://www.fender.com/products/62-deluxe-amp"
+    ],
+    [
+      "Review (Nov 20, 2026)",
+      "Row-by-row review added. Review status: Corrected = a value was changed (see Changes). Confirmed = production years, and specs or prices where noted, matched an outside source. Reviewed, not source-checked = read for plausibility only. Added = new row researched on November 20, 2026. The 1946 Pro reissue row was removed and nine rows were added, so the count is 208."
+    ],
+    [
+      "New columns",
+      "Production through is split into Production end year and Production status. Load type says whether the load is fixed, selectable or varies by configuration. Price confidence: High = published sold or used-value range; Medium = observed asking prices; Low = indicative estimate; None = no used range. Era group collapses the 24 era labels into 11."
+    ],
+    [
+      "New list price",
+      "Fender list price for models in the current catalog, first-listed finish, read November 20, 2026 from the Fender Vintage & Pro Tube collection. Used prices remain in the Low and High columns."
+    ],
+    [
+      "Current Fender tube amp collection",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "Fender tube and introduction table",
+      "https://support.fender.com/hc/en-gb/articles/42507659450779-What-tubes-are-in-my-amp"
+    ],
+    [
+      "Mojotone Fender field guide",
+      "https://mojotone.com/blogs/fender-field-guide"
+    ],
+    [
+      "Blue Book Custom Shop series",
+      "https://bluebookofguitarvalues.com/guitar-values/guitar-amplifiers/manufacturer/fender/category/fender-electric-tube-amps-custom-shop-series/models"
+    ]
+  ]
+}

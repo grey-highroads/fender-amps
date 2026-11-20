@@ -14,6 +14,7 @@
 | Treat speakers as major components | Capture diameter, frame, cone, dust cap, basket, motor, colors, labels, terminals, wiring and load. Distinguish selected factory examples, options and later replacements. |
 | Use online photographic evidence actively | The user expects dated references to be researched, not supplied by them. Check part originality and source quality; a dated amp does not automatically authenticate every attached part. |
 | Keep project context in the repository | Future agents should find current state, decisions, rationale, evidence and operational details without rereading the chat. |
+| Corrected workbook is the catalog authority (November 20, 2026) | Use the 208-entry workbook identified in `data/catalog/source.json`; it supersedes the previous sheet. Preserve all three tabs and evidence qualifications. Runtime mapping and exact-year configurations require explicit reconciliation; this does not authorize collection expansion. |
 
 ## Implementation choices
 

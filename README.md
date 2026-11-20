@@ -36,7 +36,11 @@ Other static hosting can serve the same `dist/` directory.
 ## Collection
 
 The timeline remains a selection of 19 Fender guitar tube amp model/generation
-entries from the approximately 200-row catalog. Shared introduction years branch
+entries from the corrected 208-entry catalog. The user-designated
+[authoritative workbook](https://docs.google.com/spreadsheets/d/18bzOLj0RdEdjSneLXf9USwPAM5Zs7IRoAFwKpWmkBJw/edit)
+and [tracked three-tab snapshot](data/catalog/README.md) supersede the earlier
+sheet. The runtime selection is not yet fully reconciled with the corrected data;
+there is no live sheet connection. Shared introduction years branch
 to individual amps ordered by wattage. Opening and closing the detail overlay
 preserves scroll and keyboard focus. Front/rear views, orbit, zoom, pilot light,
 rotation, story/specification tabs and illustrative exploded views are supported.

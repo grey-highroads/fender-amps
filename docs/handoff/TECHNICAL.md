@@ -356,3 +356,18 @@ Tone/discovery publication succeeded: GitHub runtime `97f9ed2`, evidence
 `32f93d1`; Site source `f270f0a9488fd1f6aac054a2ed07beabf8530728`, deployment
 `appgdep_6b0078d43e008191a6ced35bd6be6a78`. Existing owner-only audience and
 Site ID preserved. Service-confirmed publication; visual QA was local.
+
+## Corrected catalog records — November 20, 2026
+
+Adopted the user-corrected workbook as catalog authority. `data/catalog/` contains
+all three populated tabs as JSON/CSV plus source metadata and file hashes.
+The catalog has 208 entries and 22 columns; Changes has 58 records; Scope and
+sources has 36 records. The previous spreadsheet ID is retained as superseded
+provenance. See CATALOG_RECONCILIATION.md for runtime mapping limits.
+
+Current validation: all six snapshot hashes, populated row/header counts,
+rectangular CSV equivalence to returned JSON values, npm test (24 components,
+three assemblies and shared knob checks), and git diff whitespace passed.
+No runtime or visual files changed; browser visual review was not applicable.
+Historical/market claims were not independently reverified in this records pass.
+The runtime baseline and private-site deployment above remain unchanged.

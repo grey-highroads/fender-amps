@@ -1,0 +1,476 @@
+{
+  "range": "Changes!A1:F100",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "Model / major version",
+      "Field",
+      "Old value",
+      "New value",
+      "Reason",
+      "Source"
+    ],
+    [
+      "Super (5F4)",
+      "Introduced",
+      "1955",
+      "1957",
+      "Overlapped the 5E4 row. 5F4 examples start in 1957; some references say 1956.",
+      "https://mojotone.com/blogs/fender-field-guide/fender-narrow-panel-tweed-super"
+    ],
+    [
+      "Super (5F4)",
+      "Notes",
+      "Approximate 25–30W output.",
+      "Approximate 25–30W output. Introduction dated 1956 to 1958 depending on reference.",
+      "Date conflict recorded.",
+      "https://en.wikipedia.org/wiki/Fender_Super"
+    ],
+    [
+      "Super (5E4 / 5E4-A)",
+      "Production through",
+      "1956",
+      "1957",
+      "6V6 5E4-A examples are dated into 1957, before the 5F4 took over.",
+      "https://bernunzio.com/product/fender-5e4-super-amp-6v6-model-1957-28997/"
+    ],
+    [
+      "Pro (5E5-A)",
+      "Introduced",
+      "1955",
+      "1956",
+      "Ampwares dates 5E5 to 1955 and 5E5-A to 1956-1960.",
+      "https://ampwares.com/category/amplifiers/fender/pro/"
+    ],
+    [
+      "Vibrasonic (6G13 / 6G13-A)",
+      "Production through",
+      "1964",
+      "1963",
+      "Brown Vibrasonic ran 1959-1963.",
+      "https://ampwares.com/category/amplifiers/fender/vibrasonic/"
+    ],
+    [
+      "Deluxe (6G3)",
+      "Introduced",
+      "1960",
+      "1961",
+      "Brown 6G3 Deluxe is dated 1961-1963.",
+      "https://ampwares.com/category/amplifiers/fender/deluxe/"
+    ],
+    [
+      "Twin (6G8 / 6G8-A)",
+      "Introduced",
+      "1961",
+      "1960",
+      "Twin production resumed in mid-1960 as the blonde Twin.",
+      "https://en.wikipedia.org/wiki/Prosonic"
+    ],
+    [
+      "Harvard (6G10)",
+      "Introduced",
+      "1961",
+      "1962",
+      "5F10 Harvard ended in 1961; the 6G10 was built 1962-1963.",
+      "https://reverb.com/item/72863885-new-62-harvard-6g10-re-creation-w-p10r"
+    ],
+    [
+      "Harvard (6G10)",
+      "Rarity",
+      "Rare",
+      "Very rare",
+      "Described as the rarest Fender production amp, only a handful built.",
+      "https://reverb.com/item/72863885-new-62-harvard-6g10-re-creation-w-p10r"
+    ],
+    [
+      "Harvard (6G10)",
+      "Notes",
+      "Not the earlier 10W 5F10 Harvard.",
+      "Not the earlier 10W 5F10 Harvard. Tweed Princeton 5F2-A circuit under the Harvard name. Speaker size is reported as 8 or 10 inch; verify.",
+      "Speaker size conflict recorded.",
+      "https://reverb.com/item/68155178-1962-fender-harvard-6g10-narrow-panel-tweed-amp-super-princeton"
+    ],
+    [
+      "Bronco (tube original)",
+      "Production through",
+      "1981",
+      "1975",
+      "Row used the Bronco guitar end date. Teagle/Sprung-based sources end the amp in 1975.",
+      "https://mojotone.com/blogs/fender-field-guide/fender-silverface-bronco"
+    ],
+    [
+      "Bronco (tube original)",
+      "Notes",
+      "Distinct from 1990s solid-state Bronco. Nominal 3.2–4Ω.",
+      "Distinct from 1990s solid-state Bronco. Nominal 3.2–4Ω. End date disputed: 1975 (Teagle and Sprung, Mojotone) or 1980 (Reverb, Guitar World).",
+      "Date conflict recorded.",
+      "https://www.guitarworld.com/gear/combo-amps/in-praise-of-fender-champ-bronco-vibro-champ"
+    ],
+    [
+      "Vibrosonic Reverb (ultralinear)",
+      "Production through",
+      "1982",
+      "1981",
+      "Ampwares dates the Vibrosonic Reverb 1972-1981.",
+      "https://ampwares.com/category/amplifiers/fender/vibrosonic/"
+    ],
+    [
+      "Dual Showman Reverb (ultralinear)",
+      "Production through",
+      "1982",
+      "1981",
+      "Ampwares dates the Dual Showman Reverb 1968-1981.",
+      "https://ampwares.com/category/amplifiers/fender/showman/"
+    ],
+    [
+      "Super Six Reverb",
+      "Notes",
+      "Six 8Ω speakers in series-parallel give about 5.33Ω; verify wiring.",
+      "Six 8Ω speakers in series-parallel give about 5.33Ω; verify wiring. Usually published as 5.2 ohms; Fender used the Twin 4 ohm output transformer.",
+      "Published load figure added.",
+      "https://mojotone.com/blogs/fender-field-guide/fender-super-six-reverb"
+    ],
+    [
+      "Bassman (5F6 / 5F6-A)",
+      "Notes",
+      "Price evidence covers 1958–1960 5F6-A; earlier 5F6 differs.",
+      "Price evidence covers 1958–1960 5F6-A; earlier 5F6 differs. 2026 Reverb sold examples ran about $3,950-7,500, above the estimate range shown.",
+      "Second published source added because the range looked low.",
+      "https://www.worthpic.com/guides/vintage-guitar-amp-value/"
+    ],
+    [
+      "Champ 12",
+      "Notes",
+      "Tube preamp and power amp; reverb circuitry is not all-tube.",
+      "Tube preamp and power amp; reverb circuitry is not all-tube. Owner manual rates 10W RMS; many listings call it 12W.",
+      "Checked the wattage. 10W is correct.",
+      "https://martelmusicstore.com/products/used-fender-champ-12-red-knob-1x12-combo"
+    ],
+    [
+      "Dual Showman (red knob)",
+      "Introduced",
+      "1988",
+      "1987",
+      "Fender and Ampwares both date the red-knob Dual Showman from 1987.",
+      "https://support.fender.com/hc/en-gb/articles/42507659450779-What-tubes-are-in-my-amp"
+    ],
+    [
+      "'65 Twin Reverb reissue",
+      "Notes",
+      "Used estimate; new retail is higher.",
+      "Used estimate; new retail is higher. Fender history article says 1991; Fender spec sheets say introduced 1992.",
+      "Date conflict recorded.",
+      "https://www.fender.com/articles/behind-the-scenes/pristine-cleans-aggressive-overdrive-the-fender-twin-story"
+    ],
+    [
+      "Vibro-King",
+      "Production through",
+      "2014",
+      "2003",
+      "Fender manuals list Vibro-King 1993-2003 and Vibro-King Custom 2003-2013. The Custom now has its own row.",
+      "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals"
+    ],
+    [
+      "Vibro-King",
+      "Notes",
+      "Three 8Ω speakers parallel = 2.67Ω; Fender labels amp 2Ω. Versions grouped.",
+      "Three 8Ω speakers parallel = 2.67Ω; Fender labels amp 2Ω. Vibro-King Custom (2003 on) is a separate row.",
+      "Versions are no longer grouped."
+    ],
+    [
+      "Tone-Master (original tube head)",
+      "Notes",
+      "Original tube Tone-Master, not modern digital Tone Master. Head-only price.",
+      "Original tube Tone-Master, not modern digital Tone Master. Head-only price. Fender support table lists the introduction as 1993.",
+      "Date conflict recorded.",
+      "https://support.fender.com/hc/en-gb/articles/42507659450779-What-tubes-are-in-my-amp"
+    ],
+    [
+      "Concert Reverb (Pro Tube)",
+      "Notes",
+      "",
+      "Some references list production to 2005.",
+      "Date conflict recorded.",
+      "https://reverb.com/p/fender-concert-reverb"
+    ],
+    [
+      "Pro Reverb (Pro Tube)",
+      "Notes",
+      "Not the vintage 2x12 Pro Reverb.",
+      "Not the vintage 2x12 Pro Reverb. Some references list production to 2005.",
+      "Date conflict recorded.",
+      "https://reverb.com/p/fender-concert-reverb"
+    ],
+    [
+      "Deco Tone",
+      "Introduced",
+      "1997",
+      "2000",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.collarcityguitars.com/listing/fender-deco-tone-15w-1x12-tube-amp-2000-usa-limited-edition-165-made-cr272897/29287405"
+    ],
+    [
+      "Deco Tone",
+      "Production through",
+      "1998",
+      "2001",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.collarcityguitars.com/listing/fender-deco-tone-15w-1x12-tube-amp-2000-usa-limited-edition-165-made-cr272897/29287405"
+    ],
+    [
+      "Deco Tone",
+      "Output watts",
+      "60",
+      "15",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.collarcityguitars.com/listing/fender-deco-tone-15w-1x12-tube-amp-2000-usa-limited-edition-165-made-cr272897/29287405"
+    ],
+    [
+      "Deco Tone",
+      "Cabinet",
+      "3x10 combo plus decorative cabinet",
+      "1x12 combo, molded art-deco cabinet",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.collarcityguitars.com/listing/fender-deco-tone-15w-1x12-tube-amp-2000-usa-limited-edition-165-made-cr272897/29287405"
+    ],
+    [
+      "Deco Tone",
+      "Nominal load",
+      "2 (nominal)",
+      "8.0",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.collarcityguitars.com/listing/fender-deco-tone-15w-1x12-tube-amp-2000-usa-limited-edition-165-made-cr272897/29287405"
+    ],
+    [
+      "Deco Tone",
+      "Low price",
+      "$3,500.00",
+      "$950.00",
+      "Old $3,500-7,000 range belonged to the wrong amp. Replaced with observed listings.",
+      "https://reverb.com/item/37800499-fender-deco-tone"
+    ],
+    [
+      "Deco Tone",
+      "High price",
+      "$7,000.00",
+      "$1,200.00",
+      "Old $3,500-7,000 range belonged to the wrong amp. Replaced with observed listings.",
+      "https://reverb.com/item/50000064-fender-deco-tone-amplifier-rare"
+    ],
+    [
+      "Deco Tone",
+      "Price basis",
+      "Indicative used estimate; current range unverified",
+      "Observed asking-price examples; not sold-value range",
+      "Basis updated to match the new price evidence.",
+      "https://reverb.com/item/37800499-fender-deco-tone"
+    ],
+    [
+      "Deco Tone",
+      "Description",
+      "Art-deco styled Vibro-King-family limited edition.",
+      "Blues Junior-based 15W circuit in an art-deco cabinet; limited edition of 165.",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.collarcityguitars.com/listing/fender-deco-tone-15w-1x12-tube-amp-2000-usa-limited-edition-165-made-cr272897/29287405"
+    ],
+    [
+      "Deco Tone",
+      "Notes",
+      "Appraisal recommended; exact package changes value.",
+      "Sources date it 2000 or 2001. Sparse market; a celebrity-owned example sold at auction for about 1,216 GBP in 2023.",
+      "Row described a 60W 3x10 Vibro-King variant. The Deco Tone is a 15W Blues Junior circuit in an art-deco cabinet, 165 made.",
+      "https://www.bonhams.com/auction/29196/lot/15/peter-green-a-fender-deco-tone-yr-2000-amp-15-watt-2000/"
+    ],
+    [
+      "Deco Tone",
+      "Price evidence URL",
+      "",
+      "https://reverb.com/item/37800499-fender-deco-tone",
+      "Price evidence link added."
+    ],
+    [
+      "'57 Twin-Amp reissue",
+      "Production through",
+      "2012",
+      "2011",
+      "Blue Book lists production through mid-2011.",
+      "https://bluebookofguitarvalues.com/guitar-values/guitar-amplifiers/manufacturer/fender/category/fender-electric-tube-amps-custom-shop-series/models"
+    ],
+    [
+      "'57 Deluxe reissue",
+      "Production through",
+      "2012",
+      "2011",
+      "Blue Book lists production through mid-2011.",
+      "https://bluebookofguitarvalues.com/guitar-values/guitar-amplifiers/manufacturer/fender/category/fender-electric-tube-amps-custom-shop-series/models"
+    ],
+    [
+      "'57 Champ reissue",
+      "Production through",
+      "2012",
+      "2011",
+      "Blue Book lists production through mid-2011.",
+      "https://bluebookofguitarvalues.com/guitar-values/guitar-amplifiers/manufacturer/fender/category/fender-electric-tube-amps-custom-shop-series/models"
+    ],
+    [
+      "'57 Bandmaster reissue",
+      "Production through",
+      "2017 approx.",
+      "2019",
+      "Blue Book lists 2013-2019.",
+      "https://bluebookofguitarvalues.com/guitar-values/guitar-amplifiers/manufacturer/fender/category/fender-electric-tube-amps-custom-shop-series/models"
+    ],
+    [
+      "The Edge Deluxe",
+      "Production through",
+      "2019 approx.",
+      "2020",
+      "Blue Book lists 2016-2020.",
+      "https://bluebookofguitarvalues.com/guitar-values/guitar-amplifiers/manufacturer/fender/category/fender-electric-tube-amps-custom-shop-series/models"
+    ],
+    [
+      "'68 Custom Twin Reverb",
+      "Production through",
+      "2020 approx.",
+      "Current",
+      "Listed in the current Fender tube amp collection (Nov 2026).",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "'68 Custom Princeton Reverb",
+      "Production through",
+      "Current/verify",
+      "Current",
+      "Listed in the current Fender tube amp collection (Nov 2026).",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "George Benson Hot Rod Deluxe",
+      "Production through",
+      "Current/verify",
+      "Current",
+      "Listed in the current Fender tube amp collection (Nov 2026).",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "Hot Rod DeVille ML 212",
+      "Production through",
+      "2019 approx.",
+      "Current",
+      "Listed in the current Fender tube amp collection (Nov 2026).",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "Vaporizer",
+      "Introduced",
+      "2013",
+      "2014",
+      "Fender press release announcing the Vaporizer is dated January 2, 2014.",
+      "https://www.fender.com/newsroom/271493-fender-amplifiers-release-new-pawn-shop-special-vaporizer-amp/"
+    ],
+    [
+      "Vaporizer",
+      "Notes",
+      "Verify exact production end by market.",
+      "Verify exact production end by market. Two 16 ohm speakers wired in parallel.",
+      "Load confirmed.",
+      "https://www.fender.com/newsroom/271493-fender-amplifiers-release-new-pawn-shop-special-vaporizer-amp/"
+    ],
+    [
+      "'62 Deluxe Amp (American Vintage)",
+      "Price basis",
+      "Current price not verified",
+      "New list price only; no used range yet",
+      "Fender lists the amp at $1,699.99 new.",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "'62 Deluxe Amp (American Vintage)",
+      "Notes",
+      "Current new price not reliably verified; request retailer quote.",
+      "No used market yet. New list price shown in its own column.",
+      "Fender lists the amp at $1,699.99 new.",
+      "https://intl.fender.com/collections/vintage-pro-tube-amps.oembed"
+    ],
+    [
+      "'46 Pro reissue",
+      "Row",
+      "Row present (1996-1997, 26W, 1x15)",
+      "Row removed",
+      "No source for a 26W 1x15 production reissue. Fender lists Woody Jr. and Pro (2002) with Pro Junior tubes; a 1x15 Professional appears only as 1996 NAMM prototypes. Replaced by the Woody Pro Junior row.",
+      "https://www.tdpri.com/threads/value-of-a-woody-pro.280346/"
+    ],
+    [
+      "Bassman 20",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Included under the Bassman exception. Sources disagree on whether Paul Rivera designed it. One $719.99 dealer listing seen.",
+      "https://mojotone.com/blogs/fender-field-guide/fender-bassman-20"
+    ],
+    [
+      "Two-Tone (Custom Shop)",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. About 200 made, per seller accounts. Fender support table lists the introduction as 2002. One EUR 1,498 asking example seen.",
+      "https://reverb.com/item/6054692-fender-custom-shop-two-tone"
+    ],
+    [
+      "Bass Breaker (Custom Shop)",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Two 6L6 with tube rectifier. Not part of the 2016 Bassbreaker series. Speaker load not verified.",
+      "https://reverb.com/p/fender-bass-breaker-custom-shop-40-watt-2x12-guitar-combo-2001-2003"
+    ],
+    [
+      "Vibro-King Custom",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Split from the Vibro-King row. Reverb dates it 2003-2012; a 20th Anniversary edition followed in 2013. Price estimate carried over from the grouped row.",
+      "https://www.zzounds.com/item--FEN8110000000"
+    ],
+    [
+      "Woody Pro Junior (60th Anniversary)",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Limited 2006 run; some listings date it 2006-2008. Earlier Custom Shop Woody Junior and Woody Pro builds used the same EL84 Pro Junior circuit. One $899 asking example seen.",
+      "https://www.harmonycentral.com/news/uncategorized/60th-anniversary-fender-pro-junior-quotwoodyquot-amplifier-r6609/"
+    ],
+    [
+      "GB Twin Reverb (George Benson)",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Announced at NAMM 2016. Re-voiced low-gain normal channel.",
+      "https://www.fender.com/en-US/guitar-amplifiers/vintage-pro-tube/gb-twin-reverb/2173400000.html"
+    ],
+    [
+      "'62 Princeton Chris Stapleton Edition",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Launched February 2019 at $1,999.99.",
+      "https://www.fender.com/newsroom/271858-fender-and-grammy-award-winner-chris-stapleton-release-all-new-artist-signature-amplifier/"
+    ],
+    [
+      "Jack White Pano Verb",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Announced September 17, 2024. Watts shown are the combined output.",
+      "https://www.fender.com/newsroom/270313-fender-honors-multi-grammy-award-winning-detroit-rocker-jack-white-with-new-signature-collection/"
+    ],
+    [
+      "Hot Rod Deluxe 30th Anniversary",
+      "Row",
+      "",
+      "Row added",
+      "Tube amp missing from the catalog. Limited edition based on the Hot Rod Deluxe IV, with revised preamp and reverb.",
+      "https://www.fender.com/products/hot-rod-deluxe-30th-anniversary"
+    ]
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "authority": "User-corrected catalog; designated source of truth on 2026-11-20",
+  "spreadsheetId": "18bzOLj0RdEdjSneLXf9USwPAM5Zs7IRoAFwKpWmkBJw",
+  "url": "https://docs.google.com/spreadsheets/d/18bzOLj0RdEdjSneLXf9USwPAM5Zs7IRoAFwKpWmkBJw/edit",
+  "title": "Fender Tube Guitar Amp Catalog — 1946–2026 (corrected, 208 rows)",
+  "sourceModifiedAt": "2026-11-20T17:04:34.487Z",
+  "retrievedAt": "2026-11-20T17:37:53Z",
+  "valueRenderOption": "FORMATTED_VALUE",
+  "supersedesSpreadsheetId": "1eio-o-dsTWp1NE5zKDGU5zGP_2VG-o-ZC2yPGPKakto",
+  "tabs": [
+    {
+      "name": "Tube amp catalog",
+      "readRange": "'Tube amp catalog'!A1:V215",
+      "snapshot": "catalog"
+    },
+    {
+      "name": "Changes",
+      "readRange": "Changes!A1:F100",
+      "snapshot": "changes"
+    },
+    {
+      "name": "Scope and sources",
+      "readRange": "'Scope and sources'!A1:B50",
+      "snapshot": "scope-and-sources"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/catalog/catalog.json",
+      "sha256": "15b173a403d827d29c0efe502b1a41793db019f1e303f988bc2ab3c92115bdf2",
+      "dataRows": 208,
+      "columns": 22
+    },
+    {
+      "path": "data/catalog/catalog.csv",
+      "sha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
+      "dataRows": 208,
+      "columns": 22
+    },
+    {
+      "path": "data/catalog/changes.json",
+      "sha256": "d1e9ce24b7aef731384031026698895bc5c43177faa61d0846824a0647b514b8",
+      "dataRows": 58,
+      "columns": 6
+    },
+    {
+      "path": "data/catalog/changes.csv",
+      "sha256": "5a4c57679aee7af99b42ae650fd8808621319bbc50b24a706de69f68c06f32c6",
+      "dataRows": 58,
+      "columns": 6
+    },
+    {
+      "path": "data/catalog/scope-and-sources.json",
+      "sha256": "120806be867c3571384abbd272632a9d4f139f26104394c0fb94bab2be99656c",
+      "dataRows": 36,
+      "columns": 2
+    },
+    {
+      "path": "data/catalog/scope-and-sources.csv",
+      "sha256": "c33a482ea0cb9ae4cb74adb903c74ee55b81a0f701edd6d1fb89150fae646165",
+      "dataRows": 36,
+      "columns": 2
+    }
+  ],
+  "limitations": [
+    "Point-in-time snapshot; no live synchronization.",
+    "Preserves source review status and confidence; transcription is not independent historical verification.",
+    "Runtime selection and exact-year assembly specifications have not been migrated to these catalog rows."
+  ]
+}

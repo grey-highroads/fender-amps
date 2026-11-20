@@ -15,6 +15,8 @@ models remain interpretive and exact interior placement is not established.
 - [Architecture, validation and publishing](TECHNICAL.md)
 - [Photographic references and evidence limits](REFERENCES.md)
 - [Machine-readable photographic reference manifest](references.json)
+- [Authoritative corrected catalog and snapshot](../../data/catalog/README.md)
+- [Catalog reconciliation and remaining work](CATALOG_RECONCILIATION.md)
 
 ## Current state
 
@@ -24,7 +26,7 @@ models remain interpretive and exact interior placement is not established.
 | Runtime baseline | Commit `97f9ed2`, tone-led explorer and primary Inside view; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
-| Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
+| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; runtime is not fully reconciled or connected live |
 | Library | 24 components/materials and three reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
@@ -39,12 +41,14 @@ reference-specimen year, and modern reissue year distinct.
 The other timeline entries remain representative studies. They are not all
 connected to individually verified historical assemblies.
 
-The [original source spreadsheet](https://docs.google.com/spreadsheets/d/1eio-o-dsTWp1NE5zKDGU5zGP_2VG-o-ZC2yPGPKakto/edit)
-was linked in the project conversation. The initial catalog request included
-years, wattage, cabinet, impedance, USD price ranges, rarity and descriptions.
-Treat pricing and rarity estimates as research data requiring verification, not
-as established historical or current-market facts. Access uses the user’s Google
-account; the sheet is separate from this repository.
+The [corrected source spreadsheet](https://docs.google.com/spreadsheets/d/18bzOLj0RdEdjSneLXf9USwPAM5Zs7IRoAFwKpWmkBJw/edit)
+supersedes the earlier workbook by user instruction on November 20, 2026.
+The [tracked snapshot](../../data/catalog/README.md) preserves 208 catalog entries,
+58 change records and 36 scope/source records, including review and price
+confidence fields. Pricing and rarity remain research estimates. This is a
+point-in-time copy, not live synchronization or independent verification.
+Selected-year configurations still require period evidence; see the
+[reconciliation notes](CATALOG_RECONCILIATION.md) for the early Twin and Bassman.
 
 ## Most recent fidelity work
 

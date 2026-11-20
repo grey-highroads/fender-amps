@@ -16,7 +16,11 @@ and the separate GitHub and private-site publishing workflows.
   accuracy. The latest knob revision has not been accepted as photorealistic.
 - This is a buildless static Three.js app. Run `npm test`; review changed visuals
   in the browser, including the part close up and mounted on its reference amps.
-- GitHub is the source of truth. Its repository is public; the existing hosted
+- The corrected spreadsheet identified in [data/catalog/source.json](data/catalog/source.json)
+  is the catalog source of truth; its three-tab snapshot is tracked in the repo.
+  Read [catalog reconciliation notes](docs/handoff/CATALOG_RECONCILIATION.md)
+  before applying grouped rows to selected-year assemblies.
+- GitHub is the source of truth for code and project records. Its repository is public; the existing hosted
   prototype is owner-private. Preserve those audiences and the existing Site ID.
 - Never commit credentials or unlicensed third-party reference photographs.
   Source links and our own rendered review screenshots can be kept in the repo.
