@@ -6,7 +6,9 @@ and the separate GitHub and private-site publishing workflows.
 
 - The current priority is an educational construction explorer: use 3D for
   proportions and component relationships, with clearly attributed real photos.
-  Photorealism is deferred. The first interaction pilot is the 1968 Twin. Keep improvements in the shared library so they reach the timeline and
+  Photorealism is deferred. The first interaction pilot is the 1968 Twin. Use
+  one assembled model with hotspots across front/rear features; separate Cabinet
+  and Inside modes were superseded. Keep improvements in the shared library so they reach the timeline and
   detail views. Collection expansion is deferred.
 - Model Fender factory production for the selected year. Use period Fender
   documentation for configuration, label factory options, and do not treat a

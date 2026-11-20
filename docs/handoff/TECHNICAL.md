@@ -371,3 +371,31 @@ three assemblies and shared knob checks), and git diff whitespace passed.
 No runtime or visual files changed; browser visual review was not applicable.
 Historical/market claims were not independently reverified in this records pass.
 The runtime baseline and private-site deployment above remain unchanged.
+
+## Single-model feature explorer / November 20
+
+Supersedes the two-mode pilot. Removed Cabinet/Inside buttons and exploded-view
+state/animation from the detail app. Default rear panels stay visible. The Twin
+uses eight topics from `twin-features.js` plus existing `twin-tone.js`/photo records.
+Front surface anchors use shared TWIN_PANEL/catalog positions. Rear groups carry
+small anchor offsets to their exposed lower portions; this does not move geometry.
+Anchors/metadata propagate through the shared assembly and GLB exports.
+
+`explore.js` projects compact DOM markers and SVG leaders, spreads nearby markers,
+checks front/rear side and throttles mesh occlusion ray tests to 100 ms. The native
+feature menu retains keyboard/touch access to all topics and turns toward the
+selected side when needed. Cards share tone/cosmetic content structure; cosmetics
+use “What to look for” and historical context. Selection persists while orbiting;
+Reset clears it. Old `view=inside` review URLs now select the rear camera, not a
+separate construction state. Other amps retain ordinary orbit/front/rear controls;
+topic expansion beyond the Twin is deferred.
+
+Validation: npm test, changed JS syntax, diff whitespace. Actual Chrome at
+1500×1100 and 390×844: five visible front markers and three rear markers, hidden
+far-side markers, direct reverb marker click, eight menu cards, interpretation
+labels, representative tube photo loading, Escape/close, Reset, different-amp
+reset and exact timeline restoration. No page errors or mobile horizontal
+overflow. Real library Twin export: glTF 2, metres, 27,189,364 bytes; all eight
+anchor IDs retained. No construction/material geometry or cabinet dimensions
+were refined; these checks are interaction/export evidence, not historical or
+tonal validation. Own captures: images/hotspots-{front,rear,reverb}.png.

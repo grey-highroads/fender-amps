@@ -23,7 +23,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `97f9ed2`, tone-led explorer and primary Inside view; knob 0.4 |
+| Runtime baseline | Commit `42cd4e2`, single-model feature explorer; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; runtime is not fully reconciled or connected live |
@@ -161,22 +161,25 @@ the dated Twin and modern replacement construction photos. They are not an exact
 vintage tracing. No reference-photo pixels were embedded. Camera and lights are
 unchanged; badge placement and mounting depth intentionally changed.
 
-## Construction explorer pilot
+## Single-model feature explorer
 
-Open the [Twin inside view](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site/?amp=twin-1968&view=inside).
-Cabinet restores the rear panels; Inside the amp removes them and turns to a rear
-view without separating the physical assembly. Three model-attached hotspots
-and equivalent keyboard-accessible buttons explore speakers, power tubes and
-the output transformer. The Twin’s view switch now sits above the model, with
-a prominent “Explore the parts behind the tone” invitation. Selecting a part opens an in-viewport card.
+Open the [Twin explorer](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site/?amp=twin-1968).
+The user approved simplifying to one assembled model: Cabinet / Inside modes and
+the old exploded-view controls are removed. Rear panels remain in place. Rotate
+or use Front/Rear camera shortcuts to find features. These are views of the same
+model, not construction modes.
 
-The speaker and tube cards contain licensed representative photographs, clearly
-distinguished from actual 1968 factory parts. The transformer links to the vintage
-chassis gallery; no dealer image has been republished. The Twin now distinguishes
-four larger power tubes from six smaller tubes and has an approximate transformer
-marker. This is an interaction pilot, not a verified service diagram.
+Eight model-attached hotspots cover inputs, reverb, vibrato/tremolo, grille cloth,
+drip edge, speakers, power tubes and output transformer. Hover/focus reveals
+marker names. A native “Explore a part” menu provides all topics and turns toward
+the appropriate side. Markers on the far side or behind geometry disappear;
+small leaders separate nearby control markers without changing their anchors.
 
-![Construction and photograph pilot](images/construction-tubes.png)
+Speaker and tube cards retain credited representative photographs, distinguished
+from actual vintage parts. New cosmetic cards use period and specimen source
+links; no dealer photography is redistributed. Tone hypotheses remain labeled.
+
+![Single-model hotspots](images/hotspots-front.png)
 
 ## Tone-focused cards
 
@@ -190,7 +193,7 @@ attributed to a later 1970 manufacturer brochure, not a listening test.
 
 ## Next useful work
 
-1. Review whether the inside-view and photo cards make construction clearer.
+1. Review the single-model feature discovery and tone/cosmetic cards.
 2. Establish a source-backed Twin interior layout, including both transformers,
    chassis, reverb tank and wiring relationships. Replace generic photographs
    with authorized model-specific photographs when available.

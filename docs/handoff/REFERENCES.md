@@ -212,3 +212,23 @@ Listening prompts, whole-system tonal implications and possible Fender design
 goals are interpretation. No controlled listening comparisons or electrical
 measurements were performed. Existing 1968 catalog supports the JBL factory
 option; no new Oxford sensitivity, response or power figures are claimed.
+
+## Front controls and cosmetics / single-model pass
+
+The original Fender AB763 schematic (previously linked above) supports the
+family input switching/pad topology, transformer-driven spring reverb and
+oscillator/optical tremolo. New input notes explicitly assume one occupied
+input in a channel; the approximate 6 dB pad is not asserted for every silver-
+panel circuit. The reverb tank itself is not reconstructed or assigned an
+unsupported vintage model/spring count.
+
+Fender's current ’65 Twin Reverb page was consulted only as secondary terminology
+evidence (four inputs, reverb and tremolo labeled “vibrato”):
+https://www.fender.com/products/65-twin-reverb/
+It is a modern reissue, not proof of the selected 1968 amp's internals.
+
+Period 1968 catalog leaf 33 / printed 31 and dated RetroFret photographs support
+the silver-panel cloth/trim appearance. Blue/silver weave and aluminum surround
+geometry remain interpretive. No acoustic cloth measurement or trim-induced
+tone is claimed. Drip edge and cloth are clues to appearance, not proof of circuit
+revision, exact year or originality. Fender-choice explanations are hypotheses.

@@ -120,3 +120,17 @@ useful listening prompts and tradeoffs. Explanations of why Fender might choose
 a configuration must be visibly labeled interpretation unless primary evidence
 establishes the rationale. A tube label alone does not determine tone; do not
 assign undocumented specifications or a universal voice to an Oxford take-out.
+
+## Single assembled model supersedes Cabinet / Inside modes
+
+The user requested one model with hotspots across the whole amp, including
+inputs, reverb/vibrato controls and period-specific cosmetics. Remove the mode
+switch and exploded-view controls. Keep the assembled cabinet and rear panels
+intact; do not silently turn menu selection into a cutaway mode. Front/Rear
+remain camera shortcuts. The first eight-topic implementation is the Twin.
+
+Use anchored markers with geometry occlusion and an accessible feature menu
+that can orient the camera. Close-up labels appear on hover/focus, reducing
+clutter. Preserve shared geometry/source placement, timeline scroll/focus and
+photo attribution. Cosmetic cards explain visual identity and dating limits
+without inventing tonal properties of trim or unmeasured cloth.
