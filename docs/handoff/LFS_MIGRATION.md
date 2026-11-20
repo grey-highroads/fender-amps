@@ -1,23 +1,48 @@
 # Git LFS migration and recovery
 
-Status: current-file LFS conversion is published in ordinary forward commit
-`e7d8d03`. A fresh remote clone downloaded all current files and passed all five
-checks. Published historical rewrite still requires explicit user approval. No new amps may be
-added until this maintenance is completed.
+Completed November 20, 2026 after explicit user approval. Catalog mapping,
+all-five-check test coverage and LFS history migration are complete. No new amps
+or runtime/UI changes were included.
 
-## Scope
+## Published result
 
-- `*.blend`
-- `*.glb`
-- `docs/handoff/images/**`
+Only GitHub `refs/heads/main` was rewritten, using an exact expected-old-SHA
+lease. The branch had not advanced since the approved rehearsal.
 
-There are 47 current matching files. Their real content stays in the working
-checkout; Git stores LFS pointers. The existing private Site's separate repository,
-Site ID, audience and live deployment are outside the history rewrite.
+- Previous main: `9bafe1a9ac0a7ddc95434c5f335675159cf7e5a7`
+- Migrated main: `fcb31728d3e017e1a984f4b47299f02342e320d7`
+- Historical commits migrated: 34
+- Current LFS files: 47 (46 unique current objects)
+- Historical LFS objects: 66, totaling 100,135,548 bytes
+- Patterns: `*.blend`, `*.glb`, `docs/handoff/images/**`
 
-## Contributor setup
+[Old-to-new commit map](LFS_COMMIT_MAP.csv) translates the original handoff SHAs.
+Historical journal entries retain their original identifiers; use this map to
+resolve them in the migrated history. Ordinary follow-up documentation commits
+come after the migrated main above.
 
-Install Git LFS from https://git-lfs.com/ or the official release, then:
+A fresh GitHub clone downloaded current files and all historical LFS objects.
+All 138 tracked files at the migrated head matched the pre-rewrite working tree
+byte for byte; all 66 historical object hashes and sizes matched the backup.
+All five npm checks and Git LFS fsck passed. Rehearsal also compared every
+historical non-asset blob, file mode, author/date/message and parent relationship.
+
+Packed ordinary Git history in the fresh remote clone was 10,832 KiB (about
+10.6 MiB), versus 72,242 KiB (70.5 MiB) before migration: approximately 85% less.
+LFS preserves the binary data separately. This is a clone/history comparison,
+not a promise that server caches or local recovery objects disappear immediately.
+
+## Working copies
+
+The canonical working checkout was clean, backed up and aligned to the migrated
+main. Its ignored backups and local recovery refs/objects were retained; no
+original-checkout garbage collection was performed.
+
+Other pre-migration working copies should preserve any uncommitted work and then
+use a fresh clone. Deliberately transfer needed changes; do not merge the old
+history back into main. Future history rewrites require fresh approval.
+
+For a new clone, install Git LFS from https://git-lfs.com/ and run:
 
 ```sh
 git lfs install
@@ -25,96 +50,60 @@ git clone https://github.com/grey-highroads/fender-amps.git
 cd fender-amps
 git lfs pull
 npm test
+git lfs fsck
 ```
 
-`npm test` runs library (including 19-entry catalog mapping), knob, surface,
-identification and Blender master checks. All five must pass. A pointer file is
-not a model: the Blender check reports a missing LFS download explicitly.
-Use `git lfs fsck` to verify downloaded objects. Never publish pointer text as
-an image or model.
+All five checks run: library (including 19-entry catalog mapping), knob, surface,
+identification and Blender master. A pointer is not a model; the Blender check
+explicitly reports missing LFS content and asks for `git lfs pull`.
 
-On the current Mac, verified Git LFS 3.8.1 was installed in
-`/Users/greygarner/.local/bin/git-lfs` from the official darwin-arm64 release.
-SHA-256 of the downloaded archive:
-`0ba10e897e0496412cd86eacaed4ed554c97ddc29bc5c709d28faa5eaaa2222c`.
-This checkout has local absolute filter commands, a local `git lfs` alias and local
-Git hook PATH entries because ~/.local/bin is not on the session's default PATH.
-Global Git configuration was not changed. Other checkouts should install/configure
-Git LFS normally; these machine-local settings are not repository content.
+## Retained, verified backups
 
-## Backups made before migration
+All paths below are local and ignored. These are recovery copies on this Mac,
+not off-device backups. Keep them until the migration is fully settled.
 
-Local directory (ignored; do not delete):
 `/Users/greygarner/Documents/ChatGPT/Fender Amps/.maintenance/backups/pre-lfs-20261120/`
 
-- `repository.bundle`: complete original reachable history and refs.
-- `tracked-files.tar.gz`: original tracked working tree at
+- `repository.bundle`: complete original history and refs.
+- `tracked-files.tar.gz`: original tracked tree at
   `00ff059c391cfe83b49972f31de3bce47cdae600`.
-- `refs.txt` and `published-refs.txt`: recorded local/published reference state.
-- `backup-manifest.json`: file sizes, SHA-256 and restore verification.
-- `restore-check/`: independent test restore; git fsck passed and all 134 tracked
-  files matched the archive byte for byte.
+- `backup-manifest.json`, recorded refs and independent `restore-check/`.
+  Restore fsck passed; all 134 original tracked files matched byte for byte.
+- Original model/image bytes are in this backup, so recovery does not depend
+  on the LFS service.
 
-This is a separate local recovery copy, not an off-device backup. It includes
-original model/image bytes, so restoration does not depend on the LFS service.
-For recovery, clone the bundle into a new directory and verify before replacing
-any working checkout. Do not overwrite someone else's local work.
+`/Users/greygarner/Documents/ChatGPT/Fender Amps/.maintenance/backups/pre-rewrite-20261120/`
 
-## Approval boundary and planned cleanup
+- `repository-final.bundle`: complete history/refs immediately before rewrite.
+- `tracked-files-final.tar.gz`: hydrated tracked tree at old main `9bafe1a`.
+- `lfs-objects/`: all 66 historical objects, checked by SHA-256 and size.
+- `backup-manifest-final.json`: exact commit, artifact hashes and object ledger.
 
-First publish the reviewed mapping/check/LFS conversion as an ordinary forward
-commit and verify a fresh remote clone downloads all current LFS objects.
-Then rehearse `git lfs migrate import` in an isolated checkout with no push remote,
-limited to the published main history and the patterns above. Record old/new
-commit IDs, size comparison, object checks and byte-for-byte tree comparisons.
-Keep a fresh bundle of the completed maintenance commit before that rehearsal.
+Restore a bundle into a new directory, verify it, and restore the associated LFS
+objects/materialized files if needed. Do not overwrite somebody else's work.
+Local `.maintenance/completed-migration-report.json` records final verification;
+`approval-plan.json`, rehearsal reports, commit maps and earlier rehearsal copies
+are retained as the operational audit trail.
 
-Only after user approval: check main has not advanced, upload all required
-historical LFS objects, and update main with an explicit expected-old-SHA lease.
-Never use a broad mirror push. Coordinate fresh clones or deliberate branch
-rebases; old checkouts can otherwise reintroduce the old large-file history.
-Retain the commit map so historic handoff SHAs can be translated.
+## Git LFS installation on this Mac
 
-## Publishing check
+Verified Git LFS 3.8.1 is at `/Users/greygarner/.local/bin/git-lfs`. Official
+Apple Silicon release archive SHA-256:
+`0ba10e897e0496412cd86eacaed4ed554c97ddc29bc5c709d28faa5eaaa2222c`.
+This checkout has local absolute filter commands, a local `git lfs` alias and
+local Git hook PATH entries because ~/.local/bin is not on the default session
+PATH. Global Git configuration was not changed. Other checkouts should install
+and configure Git LFS normally.
 
-No app output changed in this maintenance pass. dist/ contains no LFS-tracked
-assets currently. The existing Sites publisher copies the hydrated dist/ tree,
-not GitHub pointer blobs or the repository archive. Before a future publication,
-run tests in the canonical hydrated checkout, compare copied runtime bytes and
-reject pointer text among packaged assets. Do not copy .gitattributes or GitHub
-Git metadata into the separate Sites source history as a shortcut.
+## Private publishing remains separate
 
-A GitHub checkout/archive used directly by another deployment system must be
-configured to download LFS objects. The supported private Sites workflow remains
-separate, using actual working files and its existing static manifest.
+The existing owner-private Sites repository, project ID, audience and live
+prototype were untouched. No republication was needed: dist/ did not change and
+contains no LFS-tracked assets currently. A smoke archive verified byte-identical
+materialized dist/ content, no pointer text, and the existing private Site binding.
 
-## Verified rehearsal and approval request
-
-The isolated rehearsal has no push remote. Its local report, commit map and
-size measurements are under `.maintenance/`: `rehearsal-report.json`,
-`lfs-object-map.csv`, and `rehearsal-size-{before,after}.txt`. The candidate must
-be refreshed if main advances; use the exact baseline/head in the latest report.
-
-Initial rehearsal of `e7d8d03` rewrote 33 published-main commits locally. All
-historical asset pointers matched the original asset SHA-256 and byte count;
-all other tree blobs/file modes, author dates/messages and parent relationships
-were preserved. All 138 current files matched both the hydrated rehearsal and
-the fresh remote clone byte for byte. All five checks passed in both copies.
-There are 66 unique historical LFS objects totaling 100,135,548 bytes; they must
-be retained/uploaded before a historical main update. The current head contains
-47 LFS-managed files (46 unique objects).
-
-After garbage collection **in the isolated rehearsal only**, packed ordinary Git
-objects dropped from 72,242 KiB to 10,749 KiB (about 85%). This is Git history
-size, not removal of the binary data: LFS keeps the assets separately. The
-original working repo and backups were not garbage-collected or rewritten.
-
-The publishing smoke archive contains byte-identical real dist/ files and the
-existing private Site manifest; no pointer text was packaged and no Site was
-republished. Source/checks/data records changed, but the runtime did not.
-
-Pending approval is specifically the replacement of GitHub main with the tested
-LFS-migrated history. It changes historical commit IDs. Existing checkouts should
-be preserved for local work and then freshly cloned or deliberately rebased.
-The separate Sites source history is unchanged. No approval is inferred from
-this report or from the safe forward push.
+Before future publication, run all checks in the hydrated canonical checkout,
+copy and compare actual runtime files, and reject pointer text in assets. Do not
+copy GitHub Git metadata or LFS pointers into the separate Sites source history.
+Any deployment system using a GitHub checkout/archive directly must be configured
+to download LFS objects.

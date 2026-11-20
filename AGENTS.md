@@ -41,6 +41,7 @@ and the separate GitHub and private-site publishing workflows.
 - Install Git LFS and run `git lfs pull` before checks in a fresh clone. Keep
   `*.blend`, `*.glb` and `docs/handoff/images/**` under LFS; confirm real files
   are materialized before exporting or publishing.
-- Published-history migration is a separate, approval-gated action requested
-  by the user. Prepare and verify backups/rehearsal first; never force-push the
-  prepared rewrite until the user approves it.
+- The November 20 LFS history migration is complete and was user-approved. Read
+  `docs/handoff/LFS_MIGRATION.md` before using an older clone; translate historic
+  SHAs with `LFS_COMMIT_MAP.csv`. Preserve verified local recovery backups.
+  Any future published-history rewrite requires fresh user approval.

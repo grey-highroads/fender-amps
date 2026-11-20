@@ -183,3 +183,14 @@ history. Current files may move to LFS in an ordinary forward commit, but a
 history cleanup must be rehearsed separately and approved before any forced
 update. Preserve the pre-LFS bundle, tracked-tree archive and recovery manifest.
 The private Site has a separate source history; it is not part of this rewrite.
+
+## Approved LFS history migration completed
+
+The user explicitly approved the prepared rewrite. GitHub main alone moved from
+`9bafe1a` to `fcb3172` under an exact expected-old-SHA lease. No branch had advanced
+since rehearsal. All historical LFS objects were uploaded and then downloaded
+and checksum-verified in a fresh remote clone. Original backups and a public
+old/new commit translation table remain available. The canonical working checkout
+is aligned; other old clones should not merge their old history back into main.
+The private Site history/audience/deployment were not part of this operation.
+This approval does not authorize unrelated future history rewrites.

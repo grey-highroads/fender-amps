@@ -498,3 +498,24 @@ No runtime/UI files changed, so no browser rerender or private-site deployment
 was necessary. A packaging smoke test checked actual dist/ bytes, absence of
 pointer text and the original private Site binding. The Sites history and src/
 organization are outside this maintenance. No new amps were added.
+
+## LFS history migration applied with user approval
+
+Approved November 20, 2026. Verified GitHub main still equaled
+`9bafe1a9ac0a7ddc95434c5f335675159cf7e5a7`; checked candidate and recovery-archive
+hashes; then pushed only main with an exact SHA lease to
+`fcb31728d3e017e1a984f4b47299f02342e320d7`. Remote SHA was confirmed. Canonical
+checkout was clean and aligned to migrated main, with local backups/recovery refs
+retained. The old/new map for all 34 migrated commits is LFS_COMMIT_MAP.csv.
+Runtime commit `7448a8f` translates to `401cf349`; source content is unchanged.
+
+A new GitHub clone downloaded all 47 current paths and all 66 historical LFS
+objects. All 138 current tracked files matched byte for byte and all historical
+object hashes/sizes matched the pre-rewrite backup ledger. Git LFS fsck and all
+five npm checks passed. Fresh-clone packed ordinary Git objects: 10,832 KiB,
+compared with pre-migration 72,242 KiB. Asset bytes remain in LFS; local recovery
+objects and remote caches are not counted as erased.
+
+No runtime/UI change or private-site publication was needed. The existing Site,
+its separate source history and its audience remain unchanged. Current recovery
+paths, contributor instructions and migration scope are in LFS_MIGRATION.md.

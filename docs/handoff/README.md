@@ -23,7 +23,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `7448a8f`, Deluxe + Twin profiles, musician-first voice; knob 0.4 |
+| Runtime baseline | Commit `401cf349` (formerly `7448a8f`), Deluxe + Twin profiles; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 19 timeline entries are mapped with explicit differences; no live sync |
@@ -220,9 +220,9 @@ Folkway specimen's badge-less front.
 
 ## Next useful work
 
-1. Finish the prepared LFS history migration after user approval; see
-   [migration status and recovery](LFS_MIGRATION.md). The catalog mapping and
-   all-five-check test command are complete.
+1. Repository maintenance is complete: 19-entry catalog mapping, all five
+   checks, and approved LFS migration. See [recovery and collaborator
+   instructions](LFS_MIGRATION.md) before using an old working copy.
 2. Recommended next: 5E3 tweed Deluxe (existing shared assembly, contrasting
    response/control behavior), then Princeton Reverb AA1164, then Super Reverb
    AB763. These are proposed, not completed treatments or new approved entries.
@@ -245,8 +245,12 @@ entries have explicit scope/date/rating differences. `npm test` runs all five
 root check scripts and validates mapping coverage/source identity. Install Git
 LFS and run `git lfs pull` before tests in a new clone.
 
-Models (`*.blend`, `*.glb`) and `docs/handoff/images/**` now use LFS for current
-files. Restorable pre-migration backups exist locally. Existing published
-history is not rewritten without the user's approval; see LFS_MIGRATION.md.
+Models (`*.blend`, `*.glb`) and `docs/handoff/images/**` now use LFS throughout
+the migrated history. A fresh remote clone fetched all 66 historical objects and
+passed all five checks. The working checkout is aligned; verified backups remain
+under .maintenance/backups/. See [migration and recovery](LFS_MIGRATION.md) and
+translate original handoff SHAs using [LFS_COMMIT_MAP.csv](LFS_COMMIT_MAP.csv).
+Other old clones should be refreshed before work resumes.
+
 No amp expansion, runtime values, interface or private-site publication changed
 in this maintenance pass. The `dist/` structure remains in place.
