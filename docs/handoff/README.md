@@ -57,7 +57,7 @@ Seven shared panels now use original vector artwork: connected Princeton and
 Deluxe script, an upright block Twin title, era-specific labels, input numbers,
 scales, dividers and small manufacturer text. Princeton / brown rear strips use
 matching vector labels. The 5E3 photo also justified correcting its shared
-left-side hardware/control positions; hotspot anchors follow automatically.
+left-side hardware/control positions, opening its top-board recess and correcting the rear-reading plate orientation; hotspot anchors follow automatically.
 Knob 0.4 and existing explorer behavior remain intact.
 
 Start with the [flat comparison](images/typography/flat-comparison.png),

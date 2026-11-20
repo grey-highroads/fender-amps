@@ -40,7 +40,14 @@ export function createAmpModel(a){
  const covering=profile?createMaterial(profile.cover):mat(tweed?0xc6a36c:a.finish==='brown'?0x754f38:a.finish==='cream'?0xe0cda8:a.finish==='wood'?0x956139:0xffffff,{map:coverMap,bumpMap:coverMap,bumpScale:tweed?.012:.018});
  const black=mat(0x101112),chrome=mat(0xc2c7c5,{metalness:.85,roughness:.26}),pine=mat(0x9c7548),leather=mat(tweed?0x4c2915:0x161819),dark=mat(0x292b2c,{metalness:.55});
  for(const side of [-1,1])box(cab,t,h,d,side*(w-t)/2,0,0,covering,.055);
- for(const side of [-1,1])box(cab,w-t*2,t,d,0,side*(h-t)/2,0,covering,.05);
+ for(const side of [-1,1]){if(side===1&&profile?.id==='deluxe-5e3')continue;box(cab,w-t*2,t,d,0,side*(h-t)/2,0,covering,.05);}
+ // A real recess keeps the 5E3 plate above the chassis, rather than buried in
+ // the top board. Opening envelope is estimated around the shared plate.
+ if(profile?.id==='deluxe-5e3'){
+  const pw=assetById(profile.panel).dimensions.widthMm*MM+4*MM,pd=assetById(profile.panel).dimensions.heightMm*MM+4*MM,cz=-d*.28,wing=(w-t*2-pw)/2;
+  for(const sign of [-1,1])box(cab,wing,t,pd,sign*(pw+wing)/2,(h-t)/2,cz,covering,.01);
+  for(const [near,far]of [[-d/2,cz-pd/2],[cz+pd/2,d/2]])box(cab,w-t*2,t,far-near,0,(h-t)/2,(near+far)/2,covering,.01);
+ }
  const rearPanels=[box(cab,w-t*2,.5,.12,0,h/2-.35,-z+.06,covering),box(cab,w-t*2,.38,.12,0,-h/2+.27,-z+.06,covering)];rearPanels.forEach(o=>o.userData.rearPanel=true);
  const ph=front?.37:0,fh=h-(tweed?.63:.32)-ph,fy=tweed?-.045:-ph/2;
  if(tweed){box(face,w-.22,.36,.12,0,h/2-.18,z-.025,covering);box(face,w-.22,.25,.12,0,-h/2+.125,z-.025,covering);for(const [railY,railH] of [[h/2-.18,.34],[-h/2+.125,.23]]){const rail=new THREE.Mesh(new THREE.PlaneGeometry(w-.24,railH),covering);rail.position.set(0,railY,z+.037);face.add(rail);if(profile)physicalUV(rail,MM);}}
@@ -79,7 +86,7 @@ export function createAmpModel(a){
  if(profile){
   for(const child of [...chassis.children]){chassis.remove(child);disposeObject(child);}
   const plate=createFaceplate(profile.panel);plate.scale.setScalar(MM);
-  if(tweed){plate.rotation.x=-Math.PI/2;plate.position.set(0,h/2+.02,-d*.28);}
+  if(tweed){plate.rotation.set(-Math.PI/2,0,Math.PI);plate.position.set(0,h/2+.02,-d*.28);}
   else plate.position.set(0,h/2-.14-ph/2,z+.012);
   chassis.add(plate);
   if(profile.id==='deluxe-5e3'){

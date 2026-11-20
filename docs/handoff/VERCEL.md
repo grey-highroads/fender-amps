@@ -140,3 +140,11 @@ Main runtime `11e5869` auto-deployed READY as
 Public runtime bytes and live model routes were checked. See
 [construction evidence and validation](PRINCETON_BROWN_REAR.md). The original
 private Sites prototype and hosting access settings were preserved.
+
+## Faceplate typography publication
+
+Main runtime `b2783c4` produced READY Git production deployment
+`dpl_HunN6UyrunDLptQWCk2prMWfVVXX`. All five checks passed remotely. Six public
+runtime files matched the tested source bytes; live Princeton, Twin and 5E3
+routes rendered without page errors. See [artwork, visual review and evidence
+limits](FACEPLATE_TYPOGRAPHY.md). Private Sites and hosting settings are unchanged.

@@ -40,7 +40,7 @@ Dates/serials below are dealer attribution, not independent authentication.
 | [Early 1965 Deluxe Reverb, Folkway 5437](https://folkwaymusic.com/vintage-instruments/item/id.5437) | `outputs/references/knobs/deluxe.jpg`, 1200 × 1800 main photograph | Deluxe / Reverb-Amp; NORMAL / VIBRATO; inputs 1, 2 per channel; VOLUME TREBLE BASS / VOLUME TREBLE BASS REVERB SPEED INTENSITY; FENDER MUSICAL INSTRUMENTS | Two lines replace a generic single-line title; channel divider; narrow labels and small title footer | Individual curves/label weights inferred from mounted view, not a macro. The specimen lacks the modeled raised badge; this task does not change the assembly's established mixed-reference status. Tiny patent digits omitted. |
 | [1968 Twin A-13834, RetroFret 13479](https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479) | `outputs/references/twin-master/03.jpg`, 1333 × 2000 angled front, cross-check `outputs/references/knobs/twin.jpg` | TWIN REVERB / -AMP; NORMAL / VIBRATO; BRIGHT; VOLUME TREBLE MIDDLE BASS / VOLUME TREBLE MIDDLE BASS REVERB SPEED INTENSITY | Narrow, heavy, upright block title, turquoise ink; two rounded channel enclosures, upper headings and input numbers below the sockets | Tiny manufacturer text and exact strokes estimated from angled photograph. Production Oxford assembly remains distinct from specimen/master JBL option. |
 | [1962 brown Deluxe D02985, Music Emporium](https://themusicemporium.com/products/fender-6g3-deluxe-1962) | `outputs/expansion-references/brown-03.jpg` title, `brown-04.jpg` channels; `outputs/princeton-review/brown-rear.jpg` | Deluxe / -Amp; FENDER ELECT. INST. CO.; NORMAL / BRIGHT; 1, 2 repeated; VOLUME TONE / VOLUME TONE / SPEED INTENSITY | Script D with broad top sweep and descending stroke; separate -Amp; three panel fields; panel numbers 1–10; rear ON above switch | Paths and registration estimates. Service parts / cord not adopted as factory evidence. Tiny patent digits omitted. |
-| [1957 5E3 Deluxe D-03176, Andy Baxter](https://www.andybaxterbass.com/products/1956-fender-deluxe) | `outputs/5e3-review/baxter-10.jpg` panel, `baxter-07.jpg`, `baxter-11.jpg` | GROUND; ON; TONE; INST. VOL.; MIC. VOL.; INST.; MIC.; 1–12 scales; 2 above 1 between socket columns | Fine ivory chrome-panel printing, socket-column names, row numbering, no faceplate model title | Inherited hardware error corrected: Tone/Instrument/Mic move right to 170/218/266 mm, socket columns to 316/351 mm, pilot to 124 mm. Ground switch (22), fuse (60) and power switch (92) now precede it. These are proportional photographic estimates, not measured dimensions. Damaged/worn fuse wording not reconstructed. |
+| [1957 5E3 Deluxe D-03176, Andy Baxter](https://www.andybaxterbass.com/products/1956-fender-deluxe) | `outputs/5e3-review/baxter-10.jpg` panel, `baxter-07.jpg`, `baxter-11.jpg` | GROUND; ON; TONE; INST. VOL.; MIC. VOL.; INST.; MIC.; 1–12 scales; 2 above 1 between socket columns | Fine ivory chrome-panel printing, socket-column names, row numbering, no faceplate model title | Inherited hardware error corrected: Tone/Instrument/Mic move right to 170/218/266 mm, socket columns to 316/351 mm, pilot to 124 mm. Ground switch (22), fuse (60) and power switch (92) now precede it. The shared assembly also gains an actual top-board recess and the correct rear-reading plate orientation, exposing its lettering instead of burying it under the top. These are proportional photographic estimates, not measured dimensions. Damaged/worn fuse wording not reconstructed. |
 | [1955 early Tremolux 5E9, RetroFret 10792](https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792) | `outputs/expansion-references/tremolux-05.jpg`, 1000 × 667 top panel | OFF; DEPTH; SPEED; TONE; INST. VOL.; MIC. VOL.; 1–12; input row numbers | No model title on control plate; light narrow labels; stacked numbering | Lower socket headings and fuse text partly obscured / worn: INSTRUMENTS and FUSE remain estimates. No exact lettering claim. |
 | [1959 Champ 5F1, RetroFret 8054](https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054) | `outputs/expansion-references/champ-05.jpg`, 1100 × 1650 top view | 2 AMP; OFF VOLUME ON; INSTRUMENTS; inputs 1, 2 above sockets; 1–12 scale | Delicate simple sans, single bottom rule, open space around pilot/fuse; no added model title | Thin strokes and scale positions estimated; stamped serial not copied into family study. |
 
@@ -111,3 +111,21 @@ owner visual acceptance. Next useful work is owner review of the script curves
 against the linked photos, then measured artwork/registration where available.
 The separate Blender master remains unchanged; its next intentional texture
 refresh will consume the revised shared Twin source.
+
+## Publication
+
+Runtime `b2783c4ceb291ca5d009d226a3b4e3f2cd0f9fbf` pushed to main and
+produced READY production deployment `dpl_HunN6UyrunDLptQWCk2prMWfVVXX`:
+https://amplifier-observatory-hp5iunbua-grey-7947s-projects.vercel.app
+All five checks passed in its build logs, including materialized LFS validation.
+Public panel-lettering, parts, Twin artwork, rear chassis, shared coordinates and
+exporter files matched the tested local bytes exactly. Live Princeton, Twin and
+5E3 routes rendered without page errors. The original private Sites prototype,
+DNS and protected-preview/public-domain access settings remain unchanged.
+Final mounted top review then caught the inherited 5E3 solid-top occlusion and reversed plate orientation. A forward runtime correction opens its recess and turns the plate to read from the rear; the following publication record identifies the final assembly revision.
+
+Additional matched mounted top views expose the tweed panels without the front
+cabinet hiding the lettering: [5E3](images/typography/deluxe-5e3-top-after.png),
+[Tremolux](images/typography/tremolux-5e9-top-after.png),
+[Champ](images/typography/champ-5f1-top-after.png). These use a dedicated fixed
+rear/top review camera and the shared studio, with matching before images.
