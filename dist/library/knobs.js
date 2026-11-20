@@ -3,27 +3,27 @@ import {SKIRTED_KNOB as K,KNOB_DIGITS,knobAngleForSetting} from './knob-profile.
 
 function lathe(profile,segments=240){const geometry=new THREE.LatheGeometry(profile.map(([r,z])=>new THREE.Vector2(r,z)),segments);geometry.rotateX(Math.PI/2);return geometry;}
 export function createKnobBodyGeometry(){
- const geometry=lathe(K.profile),positions=geometry.attributes.position;
+ const geometry=lathe(K.profile,K.flutes*20),positions=geometry.attributes.position;
  for(let i=0;i<positions.count;i++){
   const x=positions.getX(i),y=positions.getY(i),z=positions.getZ(i),radius=Math.hypot(x,y);
-  if(z<3.77||z>14.18||radius<5.7)continue;
-  const angle=Math.atan2(y,x),edge=Math.min(1,(z-3.77)/.4,(14.2-z)/.3);
-  const groove=Math.pow((1+Math.cos(angle*K.flutes))/2,7)*K.fluteDepthMm*Math.max(0,edge);
+  if(z<3.77||z>13.94||radius<5.7)continue;
+  const angle=Math.atan2(y,x),edge=Math.min(1,(z-3.77)/.4,(13.94-z)/.6);
+  const groove=Math.pow((1+Math.cos(angle*K.flutes))/2,3)*K.fluteDepthMm*Math.max(0,edge);
   const scale=(radius-groove)/radius;positions.setXY(i,x*scale,y*scale);
  }
  positions.needsUpdate=true;geometry.computeVertexNormals();return geometry;
 }
 export function createKnobInkGeometry(){const geometry=lathe(K.inkProfile);const p=geometry.attributes.position,uv=new Float32Array(p.count*2);for(let i=0;i<p.count;i++){uv[i*2]=.5+p.getX(i)/K.outerDiameterMm;uv[i*2+1]=.5+p.getY(i)/K.outerDiameterMm;}geometry.setAttribute('uv',new THREE.BufferAttribute(uv,2));return geometry;}
-export function createKnobCapGeometry(){const profile=[];for(let i=0;i<=40;i++){const r=K.capRadiusMm*(1-i/40);profile.push([r,13.56+.42*Math.pow(r/K.capRadiusMm,2)]);}return lathe(profile,160);}
+export function createKnobCapGeometry(){const profile=[];for(let i=0;i<=40;i++){const r=K.capRadiusMm*(1-i/40);profile.push([r,13.28+.70*Math.pow(r/K.capRadiusMm,2)]);}return lathe(profile,160);}
 export function createKnobInsertGeometry(){return lathe([[3.175,.28],[3.175,9.6],[4.6,9.6],[4.6,.28],[3.175,.28]],96);}
 function texture(canvas,color=false){const t=new THREE.CanvasTexture(canvas);if(color)t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;return t;}
 function numberMap(){
  const c=document.createElement('canvas');c.width=c.height=1024;const x=c.getContext('2d'),scale=1024/K.outerDiameterMm;
- x.strokeStyle='#e4dfcb';x.lineCap='round';x.lineJoin='round';
+ x.strokeStyle='#eee9d9';x.lineCap='round';x.lineJoin='round';
  for(let number=1;number<=10;number++){
   const angle=knobAngleForSetting(number),text=String(number),digitWidth=1.30*scale,digitGap=.17*scale,height=K.numberHeightMm*scale,total=text.length*digitWidth+(text.length-1)*digitGap;
   x.save();x.translate(512+Math.sin(angle)*K.numberRadiusMm*scale,512-Math.cos(angle)*K.numberRadiusMm*scale);x.rotate(angle+Math.PI);
-  for(let i=0;i<text.length;i++){x.save();x.translate(-total/2+i*(digitWidth+digitGap),-height/2);x.scale(digitWidth,height);x.lineWidth=.12;x.stroke(new Path2D(KNOB_DIGITS[text[i]]));x.restore();}x.restore();
+  for(let i=0;i<text.length;i++){x.save();x.translate(-total/2+i*(digitWidth+digitGap),-height/2);x.scale(digitWidth,height);x.lineWidth=.145;x.stroke(new Path2D(KNOB_DIGITS[text[i]]));x.restore();}x.restore();
  }
  return texture(c,true);
 }
@@ -39,7 +39,7 @@ export function createSkirtedKnob({setting=5}={}){
  const knob=new THREE.Group(),plastic=new THREE.MeshPhysicalMaterial({color:'#090b0c',metalness:0,roughness:.29,clearcoat:.7,clearcoatRoughness:.25,ior:1.49});
  add(knob,createKnobBodyGeometry(),plastic,'knob-molded-body');
  const ink=new THREE.MeshStandardMaterial({color:'#ffffff',map:numberMap(),transparent:true,alphaTest:.1,depthWrite:false,roughness:.66,polygonOffset:true,polygonOffsetFactor:-1});add(knob,createKnobInkGeometry(),ink,'knob-stamped-numbers');
- const maps=surfaceMaps(),metal=new THREE.MeshStandardMaterial({color:'#bfc5c3',metalness:.98,roughness:.37,roughnessMap:maps.rough,normalMap:maps.normal,normalScale:new THREE.Vector2(.12,.12)});
+ const maps=surfaceMaps(),metal=new THREE.MeshStandardMaterial({color:'#d0d2ce',metalness:1,roughness:.23,roughnessMap:maps.rough,normalMap:maps.normal,normalScale:new THREE.Vector2(.12,.12)});
  add(knob,projectCap(createKnobCapGeometry()),metal,'knob-recessed-silver-cap');
  // The insert is annular, so the 1/4-inch socket is a real opening in rear view.
  const insert=createKnobInsertGeometry();

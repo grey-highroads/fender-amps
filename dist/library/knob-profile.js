@@ -1,15 +1,15 @@
 // Photographic reconstruction of the mid-1960s Fender skirted knob family.
 // Millimetres. Exterior dimensions are estimates, NOT measured vintage dimensions.
 export const SKIRTED_KNOB = {
- version: '0.2',
+ version: '0.3',
  outerDiameterMm: 25.2,
  heightMm: 14.2,
  capRadiusMm: 5.05,
  shaftDiameterMm: 6.35,
  flutes: 40,
- fluteDepthMm: .105,
+ fluteDepthMm: .18,
  numberRadiusMm: 10.1,
- numberHeightMm: 2.05,
+ numberHeightMm: 2.20,
  numberStartDeg: 35,
  numberSweepDeg: 290,
  // [radius, distance from mounting plane]. Continuous rolled skirt and tapered grip.
@@ -38,14 +38,14 @@ export const SKIRTED_KNOB = {
 // They remain a lettering study until an original part can be traced at macro scale.
 export const KNOB_DIGITS = {
  '0':'M .5 .05 C .10 .05 .10 .95 .5 .95 C .90 .95 .90 .05 .5 .05',
- '1':'M .25 .20 L .51 .05 L .51 .95',
+ '1':'M .51 .05 L .51 .95',
  '2':'M .15 .22 C .18 -.01 .77 -.04 .82 .22 C .91 .49 .31 .62 .15 .95 L .85 .95',
  '3':'M .16 .13 C .40 -.04 .82 .01 .81 .27 C .81 .43 .65 .49 .43 .49 C .68 .48 .88 .60 .84 .79 C .79 1.02 .35 1.02 .13 .86',
  '4':'M .65 .95 L .65 .05 L .10 .66 L .90 .66',
  '5':'M .82 .06 L .24 .06 L .18 .47 C .44 .32 .83 .43 .83 .69 C .85 1.00 .42 1.06 .13 .86',
  '6':'M .79 .12 C .43 -.13 .11 .36 .15 .68 C .17 1.08 .86 1.04 .85 .71 C .85 .38 .31 .34 .15 .64',
  '7':'M .11 .06 L .87 .06 L .30 .96',
- '8':'M .5 .46 C .08 .43 .13 .04 .5 .04 C .88 .04 .93 .43 .5 .46 C .03 .49 .03 .96 .5 .96 C .97 .96 .97 .49 .5 .46',
+ '8':'M .5 .45 C .10 .45 .10 .04 .5 .04 C .90 .04 .90 .45 .5 .45 M .5 .45 C .02 .45 .02 .96 .5 .96 C .98 .96 .98 .45 .5 .45',
  '9':'M .19 .87 C .62 1.13 .91 .59 .85 .29 C .78 -.06 .16 -.04 .15 .29 C .14 .62 .70 .68 .85 .36'
 };
 export function knobAngleForSetting(value){return (SKIRTED_KNOB.numberStartDeg+(Math.max(1,Math.min(10,value))-1)*SKIRTED_KNOB.numberSweepDeg/9)*Math.PI/180;}
