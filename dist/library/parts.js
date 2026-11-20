@@ -71,7 +71,9 @@ function createSmallFaceplate(id){
  mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,metalness:p.top?.65:0,roughness:.48}),0,0,1.1);
  for(const [i,k] of p.knobs.entries()){const knob=createKnob(p.knob,{setting:3.5});knob.position.set(k-W/2,0,1.5);if(!p.black)knob.rotation.z=.35+(i%3)*.15;g.add(knob);}
  for(const [j,y] of p.jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
- const jewel=createJewel();jewel.position.set(p.pilot-W/2,0,2);g.add(jewel);
+ const jewel=p.pilotLed?createPanelLED():createJewel(p.pilotColor);jewel.position.set(p.pilot-W/2,0,2);g.add(jewel);
+ for(const [x,y] of p.toggles||[]){cylinder(g,5,5,3,material('#bbc0b8',{metalness:.9}),3,x-W/2,y);mesh(g,new THREE.BoxGeometry(3,4,10),material('#bbc0b8',{metalness:.9}),x-W/2,y,9);}
+ for(const [x,y] of p.buttons||[])mesh(g,new THREE.BoxGeometry(7,7,5),material('#171919'),x-W/2,y,4);
  if(p.fuse)cylinder(g,6.5,6.5,12,material('#171817'),7,p.fuse-W/2);
  if(p.toggle){cylinder(g,5,5,3,material('#b9c0bb',{metalness:.9}),3,p.toggle-W/2);mesh(g,new THREE.BoxGeometry(3,3,12),material('#b9c0bb',{metalness:.9}),p.toggle-W/2,0,10);}
  g.name=id;g.userData={componentId:id,letteringRevision:LETTERING_REVISION};return g;
@@ -94,6 +96,10 @@ export function createFaceplate(id){
 }
 export function createBadge(id){
  if(id==='badge-script')return createRaisedTailBadge();
+ if(id==='badge-junior'){
+  const g=new THREE.Group(),W=66,H=23;mesh(g,new THREE.BoxGeometry(W,H,1),material('#1e2222'));
+  const c=document.createElement('canvas');c.width=768;c.height=256;const x=c.getContext('2d');x.fillStyle='#1e2222';x.fillRect(0,0,768,256);x.strokeStyle='#b2b5ad';x.lineWidth=9;x.strokeRect(8,8,752,240);if(brandImage.complete){const mask=document.createElement('canvas');mask.width=768;mask.height=256;const q=mask.getContext('2d');q.drawImage(brandImage,24,18,720,220);q.globalCompositeOperation='source-in';q.fillStyle='#c7cac2';q.fillRect(0,0,768,256);x.drawImage(mask,0,0);}const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;brandReady.then(()=>{if(!brandImage.naturalWidth)return;const mask=document.createElement('canvas');mask.width=768;mask.height=256;const q=mask.getContext('2d');q.drawImage(brandImage,24,18,720,220);q.globalCompositeOperation='source-in';q.fillStyle='#c7cac2';q.fillRect(0,0,768,256);x.drawImage(mask,0,0);t.needsUpdate=true;});mesh(g,new THREE.PlaneGeometry(65,22),material('#fff',{map:t}),0,0,.6);g.name=id;return g;
+ }
  if(id==='badge-small-tweed'){
   const g=new THREE.Group(),c=document.createElement('canvas');c.width=768;c.height=256;const x=c.getContext('2d');x.fillStyle='#493323';x.fillRect(0,0,768,256);x.strokeStyle='#c5b38c';x.lineWidth=12;x.strokeRect(8,8,752,240);x.fillStyle='#d2bf92';x.font='italic 172px Georgia';x.textAlign='center';x.fillText('Fender',384,181,690);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.BoxGeometry(66,23,1),material('#86704e',{metalness:.7}));mesh(g,new THREE.PlaneGeometry(65,22),material('#fff',{map:t,roughness:.5}),0,0,.6);for(const sx of [-29,29]){const screw=createScrew();screw.scale.setScalar(.45);screw.position.set(sx,0,1);g.add(screw);}g.name=id;return g;
  }
@@ -109,9 +115,20 @@ export function createComponent(id){const a=assetById(id);if(!a)throw new Error(
  if(a.category==='Speakers')return createSpeaker(id);
  if(a.category==='Materials'){g=new THREE.Group();const m=createMaterial(id);const tile=mesh(g,new THREE.BoxGeometry(180,180,8,1,1,1),m);physicalUV(tile);return g;}
  if(a.kind==='faceplate')return createFaceplate(id);if(a.kind==='badge')return createBadge(id);
- if(id.startsWith('knob-'))return createKnob(id);if(id==='jewel-red')return createJewel();if(id==='jack-quarter')return createJack();if(id.startsWith('handle-'))return createHandle(id);if(id==='screw-slot')return createScrew();
+ if(id.startsWith('knob-'))return createKnob(id);if(id==='jewel-red')return createJewel();if(id==='jewel-green')return createJewel('#188345');if(id==='pilot-led-red')return createPanelLED();if(id==='caster-snap-in-study')return createCaster();if(id==='jack-quarter')return createJack();if(id.startsWith('handle-'))return createHandle(id);if(id==='screw-slot')return createScrew();
  g=new THREE.Group();if(id==='trim-drip-edge'){const m=createMaterial('metal-nickel');mesh(g,new THREE.BoxGeometry(180,6,4),m);mesh(g,new THREE.BoxGeometry(6,100,4),m,-87,-47,0);return g;}
  // Plate artwork is generated from the same layout records used by assemblies.
  const plate=new THREE.Mesh(new THREE.BoxGeometry(a.dimensions.widthMm,a.dimensions.heightMm,1.5),material(id.includes('twin')?'#abb5b3':id.includes('5e3')?'#b8bfbc':'#141719',{metalness:.65,roughness:.35}));g.add(plate);const c=document.createElement('canvas');c.width=2048;c.height=256;const x=c.getContext('2d');x.textAlign='center';x.fillStyle=id.includes('twin')?'#245b6d':'#e4dfcd';x.font='italic 100px Georgia';x.fillText(a.name.replace(' faceplate','').replace(' nameplate',''),1024,110);x.font='28px Arial';x.fillText('FENDER   •   REFERENCE ARTWORK STUDY',1024,200);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.PlaneGeometry(a.dimensions.widthMm*.96,a.dimensions.heightMm*.9),material('#ffffff',{map:t,transparent:true}),0,0,1);g.name=id;return g;
 }
 export function disposeObject(root){const textures=new Set(),materials=new Set(),geometries=new Set();root.traverse(o=>{if(!o.isMesh)return;geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material]){materials.add(m);for(const key of ['map','normalMap','roughnessMap','metalnessMap','bumpMap','alphaMap'])if(m[key])textures.add(m[key]);}});textures.forEach(t=>t.dispose());materials.forEach(m=>m.dispose());geometries.forEach(g=>g.dispose());}
+
+export function createPanelLED(){const g=new THREE.Group();cylinder(g,3,3,1,material('#302e28'),1);const lens=mesh(g,new THREE.SphereGeometry(2.5,16,8),material('#b4231d',{emissive:'#b4231d',emissiveIntensity:.6}),0,0,2);lens.scale.z=.5;lens.material.name='pilot-jewel';g.name='pilot-led-red';return g;}
+export function createCaster(){
+ const g=new THREE.Group(),metal=material('#a6aaa5',{metalness:.85,roughness:.3});
+ mesh(g,new THREE.BoxGeometry(36,3,30),metal,0,-1.5,0);
+ const stem=mesh(g,new THREE.CylinderGeometry(5,5,16,20),metal,0,-11,0);
+ for(const x of [-12,12])mesh(g,new THREE.BoxGeometry(3,28,17),metal,x,-29,4);
+ const wheel=mesh(g,new THREE.CylinderGeometry(21,21,20,32),material('#212525'),0,-43,4);wheel.rotation.z=Math.PI/2;
+ for(const x of [-11,11]){const hub=mesh(g,new THREE.CylinderGeometry(8,8,3,20),metal,x,-43,4);hub.rotation.z=Math.PI/2;}
+ g.name='caster-snap-in-study';g.userData={componentId:g.name,dimensionBasis:'Factory type; estimated 64 mm drop'};return g;
+}

@@ -25,7 +25,7 @@ function mapsFor(id){
   }else if(item.family==='tolex'||item.family==='leather'){
    const sx=Math.floor(mmX/.85),sy=Math.floor(mmY/.85);let min=3;
    for(let oy=-1;oy<=1;oy++)for(let ox=-1;ox<=1;ox++){const cx=sx+ox,cy=sy+oy;const px=(cx+.15+.7*hash(cx,cy))*.85,py=(cy+.15+.7*hash(cx+97,cy))*.85;min=Math.min(min,Math.hypot(mmX-px,mmY-py));}
-   h=Math.min(1,min/.42);const leather=item.family==='leather';rgb=leather?[64+h*14,36+h*9,21+h*4]:id==='tolex-brown'?[85+h*19,59+h*15,39+h*12]:[18+h*9,20+h*9,21+h*9];r=leather?.67:.74+noise*.1;
+   h=Math.min(1,min/.42);const leather=item.family==='leather';rgb=id==='tolex-red-study'?[105+h*25,24+h*12,27+h*12]:leather?[64+h*14,36+h*9,21+h*4]:id==='tolex-brown'?[85+h*19,59+h*15,39+h*12]:[18+h*9,20+h*9,21+h*9];r=leather?.67:.74+noise*.1;
   }else{h=.45+noise*.1;rgb=item.family==='aluminum'?[171+noise*9,175+noise*9,173+noise*9]:[190,193,187];r=item.family==='aluminum'?.35+hash(0,y)*.18:.2+noise*.05;}
   const i=(y*size+x)*4;for(let k=0;k<3;k++){ci.data[i+k]=Math.max(0,Math.min(255,rgb[k]+(noise-.5)*6));hi.data[i+k]=h*255;ri.data[i+k]=r*255;}ci.data[i+3]=hi.data[i+3]=ri.data[i+3]=255;heights[y*size+x]=h;
  }

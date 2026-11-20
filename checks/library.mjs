@@ -3,7 +3,7 @@ import {SMALL_PANELS} from '../dist/library/small-amp-profiles.js';
 import {ASSETS,ASSEMBLIES,SOURCES,assetById} from '../dist/library/catalog.js';
 assert.equal(new Set(ASSETS.map(a=>a.id)).size,ASSETS.length,'Component IDs must be unique');
 for(const a of ASSETS){assert.ok(a.sources.length,`${a.id}: missing provenance`);for(const source of a.sources)assert.ok(SOURCES[source],`${a.id}: broken reference`);for(const id of a.usedBy)assert.ok(ASSEMBLIES.some(p=>p.id===id),`${a.id}: unknown assembly`);}
-for(const a of ASSEMBLIES){for(const slot of ['speaker','cover','cloth','knob','panel','badge','handle','jewel'])assert.ok((slot==='badge'&&a[slot]===null)||assetById(a[slot]),`${a.id}: missing ${slot}`);const s=assetById(a.speaker);assert.equal(s.impedanceOhm/a.speakerCount,a.loadOhm,`${a.id}: parallel speaker load`);const [width,height,depth]=a.dimensionsMm;assert.ok(s.build.frameDiameter*a.speakerCount<width-30,`${a.id}: speaker frames intersect cabinet sides`);assert.ok(s.build.frameDiameter<height-80,`${a.id}: speaker overlaps chassis`);assert.ok(s.build.depth<depth-35,`${a.id}: motor protrudes outside cabinet`);assert.equal(s.powerW,null,'Do not substitute a modern speaker rating for an unknown vintage rating');}
+for(const a of ASSEMBLIES){for(const slot of ['speaker','cover','cloth','knob','panel','badge','handle','jewel'])assert.ok((slot==='badge'&&a[slot]===null)||assetById(a[slot]),`${a.id}: missing ${slot}`);const s=assetById(a.speaker);const nominal=a.wiringTopology==='series'?s.impedanceOhm*a.speakerCount:a.wiringTopology==='series-pairs-parallel'?s.impedanceOhm*2/(a.speakerCount/2):s.impedanceOhm/a.speakerCount;assert.equal(nominal,a.loadOhm,`${a.id}: declared speaker load`);const [width,height,depth]=a.dimensionsMm;if(!a.speakerPositions)assert.ok(s.build.frameDiameter*a.speakerCount<width-30,`${a.id}: speaker frames intersect cabinet sides`);assert.ok(s.build.frameDiameter<height-80,`${a.id}: speaker overlaps chassis`);assert.ok(s.build.depth<depth-35,`${a.id}: motor protrudes outside cabinet`);assert.equal(s.powerW,null,'Do not substitute a modern speaker rating for an unknown vintage rating');}
 assert.equal(ASSEMBLIES.find(a=>a.id==='deluxe-reverb-black').knobCount,9);
 assert.equal(ASSEMBLIES.find(a=>a.id==='twin-reverb-early').knobCount,11);
 assert.ok(!ASSETS.some(a=>a.id.includes('master')),'Early Twin must not inherit a later master-volume component');
@@ -84,3 +84,22 @@ assert.ok(princeton.rectifierBasis.includes('unresolved'));
 assert.equal(REAR_PANELS['deluxe-6g3'].controls.at(-1)[2],'TREMOLO PEDAL');
 assert.equal(SMALL_PANELS['faceplate-princeton'].jacks.length,2);
 console.log('Validated Princeton seven-tube specification and shared rear opening/control clearances.');
+
+// New layouts must fit at physical scale, including each frame and its neighbours.
+for(const [id,count,knobs,tubes,jacks] of [['super-six-reverb-1972',6,12,10,4],['blues-junior-1995',1,6,5,1],['prosonic-1996',2,8,9,2]]){
+ const a=ASSEMBLIES.find(a=>a.id===id),s=assetById(a.speaker),p=SMALL_PANELS[a.panel],r=s.build.frameDiameter/2,[W,H]=a.dimensionsMm;
+ assert.equal(a.speakerCount,count);assert.equal(a.speakerPositions.length,count);assert.equal(a.knobCount,knobs);assert.equal(p.knobs.length,knobs);assert.equal(p.jacks.length,jacks);assert.equal(a.tubeTypes.length,tubes);
+ assert.ok(p.width<W-32);assert.ok(a.dimensionsStatus&&a.sources.length>=2);
+ for(const [i,[x,y]]of a.speakerPositions.entries()){
+  assert.ok(Math.abs(x)+r<W/2-16,id+' frame clears sides');assert.ok(y+r<H/2-a.topRail,id+' frame clears control rail');assert.ok(y-r>-H/2+a.bottomRail,id+' frame clears bottom rail');
+  for(const [xx,yy]of a.speakerPositions.slice(i+1))assert.ok(Math.hypot(xx-x,yy-y)>r*2+3,id+' frames do not intersect');
+ }
+ for(const x of p.knobs)assert.ok(x>14&&x<p.width-14);
+ for(const [i,x]of p.knobs.entries())for(const xx of p.knobs.slice(i+1))assert.ok(Math.abs(xx-x)>30,id+' rotary clearances');
+ const e=mapping.entries.find(e=>e.runtimeKey===`${a.year}|${a.finish}|${a.name}`);assert.ok(e&&e.scopeNote.length>70);assert.ok(!CATALOG_AMPS.some(c=>c.catalogRow===e.catalogCsvRow),'Promoted amp must not retain duplicate WIP');
+}
+assert.equal(ASSEMBLIES.find(a=>a.id==='super-six-reverb-1972').wiringTopology,'series-pairs-parallel');
+assert.equal(ASSEMBLIES.find(a=>a.id==='prosonic-1996').loadOhm,16);
+assert.ok(SMALL_PANELS['faceplate-blues-junior'].pilotLed);
+assert.equal(SMALL_PANELS['faceplate-prosonic'].pilotColor,'#188345');
+console.log('Validated three new configurations, source mapping, speaker/rotary clearances and non-parallel wiring.');

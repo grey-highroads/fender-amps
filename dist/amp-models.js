@@ -1,3 +1,4 @@
+import {createComboAmp} from './library/combo-amps.js';
 import * as THREE from 'three';
 import {createSmallAmp} from './library/small-amps.js';
 import {TWEED_PANEL,TWIN_PANEL,DELUXE_PANEL} from './library/identification-profile.js';
@@ -28,6 +29,7 @@ function plane(p,w,h,x,y,z,map){const mesh=new THREE.Mesh(new THREE.PlaneGeometr
 export function modelReference(a){const study=assemblyFor(a);if(study?.study)return {dimensions:study.dimensionsMm.map(v=>Number((v/25.4).toFixed(2))).join(' × ')+' in',source:SOURCES[study.sources[0]].url,name:study.example,basis:study.dimensionsStatus};if((a.year===1955||a.year===2016)&&a.finish==='tweed')return {dimensions:'20 × 16.75 × 9.5 in',source:'https://www.fender.com/products/57-custom-deluxe/',name:'5E3 / ’57 Custom Deluxe'};if(a.name==='Deluxe Reverb')return {dimensions:'24.5 × 17.5 × 9.5 in',source:'https://www.fender.com/products/65-deluxe-reverb/',name:'Deluxe Reverb cabinet'};if(a.name==='Twin Reverb'||a.name==='Ultralinear Twin')return {dimensions:'26.5 × 19.87 × 10.375 in',source:'https://www.fender.com/products/65-twin-reverb/',name:'Twin Reverb cabinet family'};return null;}
 export function createAmpModel(a){
  const profile=assemblyFor(a);
+ if(profile?.study==='combo-batch-v1')return createComboAmp(profile);
  if(profile?.study)return createSmallAmp(profile);
  const tweed=a.finish==='tweed',silver=a.finish==='silver',front=['black','silver','brown'].includes(a.finish);
  const twin=a.name.includes('Twin'),deluxe=a.name==='Deluxe Reverb';

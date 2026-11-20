@@ -26,7 +26,7 @@ for(const art of [...PANEL_IDS.map(panelArtwork),...['princeton-reverb-aa1164','
  const name=PANEL_IDS.includes(art.id)?art.id:`rear-${art.id}`;
  assert.equal(readFileSync(new URL(`../dist/assets/panels/${name}.svg`,import.meta.url),'utf8'),artworkSVG(art)+'\n','Regenerate panel SVG proofs after changing artwork');
 }
-console.log('Validated seven vector panel sources, two rear strips and matching SVG proofs.');
+console.log(`Validated ${PANEL_IDS.length} vector panel sources, two rear strips and matching SVG proofs.`);
 const {TWEED_PANEL:E}=await import('../dist/library/identification-profile.js');
 assert.ok(E.ground<E.fuse&&E.fuse<E.power&&E.power<E.pilot&&E.pilot<E.knobs[0],'5E3 photographed left-side hardware order');
 assert.ok(E.knobs.at(-1)+18<E.jacks[0][0]-7,'5E3 control scale must clear inputs');

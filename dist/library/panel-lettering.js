@@ -43,8 +43,9 @@ function rule(a,x,y,w,h){path(a,`M ${x} ${y} h ${w} v ${h} h ${-w} Z`,[1,0,0,1,0
 import {SMALL_PANELS} from './small-amp-profiles.js';
 import {TWIN_PANEL,DELUXE_PANEL,TWEED_PANEL} from './identification-profile.js';
 import {REAR_PANELS} from './rear-profiles.js';
-export const PANEL_IDS=['faceplate-princeton','faceplate-deluxe','faceplate-twin','faceplate-brown-deluxe','faceplate-5e3','faceplate-tremolux','faceplate-champ'];
+export const PANEL_IDS=['faceplate-super-six','faceplate-blues-junior','faceplate-prosonic','faceplate-princeton','faceplate-deluxe','faceplate-twin','faceplate-brown-deluxe','faceplate-5e3','faceplate-tremolux','faceplate-champ'];
 export function panelArtwork(id){
+ if(SMALL_PANELS[id]?.batch)return comboArtwork(id);
  const a=[],small=SMALL_PANELS[id],twin=id==='faceplate-twin',deluxe=id==='faceplate-deluxe',tweed=id==='faceplate-5e3',top=tweed||small?.top;
  const W=small?.width||(twin?632:deluxe?578:365),H=small?.height||51,ink=twin?'#087e8c':top?'#f1ead8':'#e8e0cc',background=twin?'#bdc2bf':top?'#a6aaa2':small?.black||deluxe?'#090c0d':'#35251e';
  const p=small||(twin?{knobs:TWIN_PANEL.knobs.map(v=>v/622*W),labels:TWIN_PANEL.labels,jacks:TWIN_PANEL.jacks.map(v=>[v/622*W,0])}:deluxe?{knobs:DELUXE_PANEL.knobs,labels:['VOLUME','TREBLE','BASS','VOLUME','TREBLE','BASS','REVERB','SPEED','INTENSITY'],jacks:DELUXE_PANEL.jacks.map(v=>[v,0])}:{knobs:TWEED_PANEL.knobs,labels:['TONE','INST. VOL.','MIC. VOL.'],jacks:TWEED_PANEL.jacks});
@@ -95,3 +96,18 @@ export function drawArtwork(canvas,art,channel='color'){
 export function artworkSVG(art){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${art.width} ${art.height}" width="${art.width}mm" height="${art.height}mm"><title>${art.id} — lettering study ${art.revision}</title><rect width="${art.width*(art.inkEnd||1)}" height="${art.height}" fill="${art.background}"/><g fill="none" stroke="${art.ink}" stroke-linecap="round" stroke-linejoin="round">${art.paths.map(p=>`<path d="${p.d}" transform="matrix(${p.matrix.join(' ')})" stroke-width="${p.width}"/>`).join('')}</g></svg>`;}
 const panelTemplates=new Map();
 export function panelCanvas(id){if(panelTemplates.has(id))return panelTemplates.get(id);const art=panelArtwork(id),c=document.createElement('canvas');c.width=4096;c.height=Math.round(4096*art.height/art.width);drawArtwork(c,art);panelTemplates.set(id,c);return c;}
+
+// New batch layouts use the established vector alphabet, leaving accepted panels intact.
+function comboArtwork(id){
+ const p=SMALL_PANELS[id],a=[],W=p.width,H=p.height;
+ for(const [i,k] of p.knobs.entries()){
+  label(a,p.labels[i],k,H-5,2.65,{width:34,weight:.16});
+  if(p.numbers)for(let n=1;n<=p.numbers;n++){const angle=-2.45+(n-1)/(p.numbers-1)*4.9;label(a,String(n),k+Math.sin(angle)*14,H/2-Math.cos(angle)*15-1,2.5,{weight:.12});}
+ }
+ for(const [i,[k]] of p.jacks.entries())label(a,String(i%2+1),k,5,3,{weight:.12});
+ for(const [k,text] of p.channels||[])label(a,text,k,H-5,2.8,{weight:.12,width:49});
+ for(const [k,y,text] of [...p.toggles||[],...p.buttons||[]])label(a,text,k,y?7:H-5,2.4,{weight:.12,width:32});
+ if(p.title){label(a,p.title,p.titleX,6,9,{width:p.titleWidth,weight:.18});label(a,'FENDER MUSICAL INSTRUMENTS',p.titleX,H-5,1.5,{width:p.titleWidth,weight:.1});}
+ if(id==='faceplate-blues-junior')label(a,'INPUT',395,H-5,2.5,{weight:.13});
+ return {id,width:W,height:H,ink:p.ink,background:p.background,paths:a,revision:LETTERING_REVISION};
+}

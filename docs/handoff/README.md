@@ -24,11 +24,11 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Faceplate lettering 1.0 across seven assemblies; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
+| Runtime baseline | Three-combo construction 1.0 (Super Six, Blues Junior, Prosonic); existing faceplate lettering 1.0; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
-| Timeline | 208 catalog entries: seven colored construction studies and 201 gray WIP placeholders; about six visible on desktop, two on a phone |
+| Timeline | 208 catalog entries: ten colored construction studies and 198 gray WIP placeholders; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
-| Library | 36 components/materials and seven reference assemblies |
+| Library | 47 components/materials and ten reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
@@ -51,10 +51,19 @@ point-in-time copy, not live synchronization or independent verification.
 Selected-year configurations still require period evidence; see the
 [reconciliation notes](CATALOG_RECONCILIATION.md) for the early Twin and Bassman.
 
+## Second construction batch
+
+Super Six Reverb (1972-style 100 W), original Blues Junior (1995 PR 295) and
+Prosonic (1996-style CSR 13 combo) now replace three gray placeholders. All use
+the shared library in timeline, detail and inspector/export. Cabinet envelopes
+come from Fender documents; detailed hardware/interiors remain estimates.
+See [sources, reconciliation, review and limits](THREE_COMBOS.md). No new hotspot
+explorers were added, and existing typography/image studies remain intact.
+
 ## Full catalog timeline
 
 All source rows now appear on the timeline. Gray generic amps open spreadsheet-only
-notes; seven modeled amps retain their colored studies and explorers. See
+notes; ten modeled amps retain their colored studies and explorers. See
 [implementation, validation and evidence limits](FULL_TIMELINE.md).
 
 ## Faceplate lettering 1.0

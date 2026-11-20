@@ -1,3 +1,7 @@
+Current update: the [second construction batch](THREE_COMBOS.md) brings the timeline
+to ten models / 198 WIP entries, still 208 total. The record below describes
+the preceding full-catalog rollout.
+
 # Full catalog timeline — November 20, 2026
 
 The user authorized showing the entire spreadsheet collection with generic gray

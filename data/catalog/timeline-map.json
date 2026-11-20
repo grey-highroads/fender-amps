@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-11-20",
-  "scope": "All 208 source catalog rows, one timeline entry per row: seven reviewed shared assemblies and 201 spreadsheet-only WIP entries. Selected-year differences remain explicit.",
+  "scope": "All 208 source rows: ten reviewed shared construction assemblies and 198 spreadsheet-only WIP entries. Selected-year differences remain explicit.",
   "runtimeSource": "dist/collection.js",
   "catalogSource": "data/catalog/catalog.csv",
   "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
@@ -1757,22 +1757,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1972|wip|Super Six Reverb",
+      "runtimeKey": "1972|silver|Super Six Reverb",
       "runtime": {
         "year": 1972,
         "name": "Super Six Reverb",
-        "years": "1972–1979",
-        "watts": "100",
-        "speakers": "6x10 open-back combo",
+        "years": "1972–1979; 1972-style study",
+        "watts": 100,
+        "speakers": "6 × 10″",
         "load": "5.33 Ω",
-        "finish": "wip",
-        "circuit": "Six 8Ω speakers in series-parallel give about 5.33Ω; verify wiring. Usually published as 5.2 ohms; Fender used the Twin 4 ohm output transformer."
+        "finish": "silver",
+        "circuit": "1972-style master-volume family"
       },
       "catalogCsvRow": 91,
       "catalogName": "Super Six Reverb",
       "catalogRowSha256": "ce148522710d64d033f4dcc08dc2a1781b7ef1ed330c3f52b2270e3eae732f26",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected configuration / scope",
+          "status": "Explicit narrower assembly selection",
+          "decision": "Catalog row 91 retains 1972 introduction and 1972–1979 production; sources suggest earlier examples. Six nominal 8 Ω speakers modeled as three series pairs in parallel give 16/3 Ω (5.33 Ω), commonly published as 5.2 Ω. Later 135 W versions are outside this assembly."
+        }
+      ],
+      "scopeNote": "Catalog row 91 retains 1972 introduction and 1972–1979 production; sources suggest earlier examples. Six nominal 8 Ω speakers modeled as three series pairs in parallel give 16/3 Ω (5.33 Ω), commonly published as 5.2 Ω. Later 135 W versions are outside this assembly."
     },
     {
       "runtimeKey": "1972|wip|Vibrosonic Reverb (early)",
@@ -2477,22 +2483,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1995|wip|Blues Junior (I–II)",
+      "runtimeKey": "1995|black|Blues Junior",
       "runtime": {
         "year": 1995,
-        "name": "Blues Junior (I–II)",
-        "years": "1995–2010",
-        "watts": "15",
-        "speakers": "1x12 open-back combo",
+        "name": "Blues Junior",
+        "years": "1995–2010, grouped I–II; 1995 study",
+        "watts": 15,
+        "speakers": "1 × 12″",
         "load": "8 Ω",
-        "finish": "wip",
-        "circuit": "Circuit/board revisions grouped."
+        "finish": "black",
+        "circuit": "PR 295 / original 1995 family"
       },
       "catalogCsvRow": 131,
       "catalogName": "Blues Junior (I–II)",
       "catalogRowSha256": "a4b1e0566f46e86ccb72f8a599e84a985fb98ac4b5be93a25bb65bce444e88ca",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected configuration / scope",
+          "status": "Explicit narrower assembly selection",
+          "decision": "Catalog row 131 groups generations I–II through 2010. This is the original 1995 PR 295 configuration, not a Blues Junior III/IV or an audit of a particular green circuit board. Speaker basket, rear opening and hardware spacing are estimates."
+        }
+      ],
+      "scopeNote": "Catalog row 131 groups generations I–II through 2010. This is the original 1995 PR 295 configuration, not a Blues Junior III/IV or an audit of a particular green circuit board. Speaker basket, rear opening and hardware spacing are estimates."
     },
     {
       "runtimeKey": "1995|wip|Custom Vibrolux Reverb",
@@ -2585,22 +2597,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1996|wip|Prosonic",
+      "runtimeKey": "1996|red|Prosonic",
       "runtime": {
         "year": 1996,
         "name": "Prosonic",
-        "years": "1996–2002",
-        "watts": "60",
-        "speakers": "2x10 combo or head",
-        "load": "16 combo; head 4/8/16 Ω",
-        "finish": "wip",
-        "circuit": "Combo switches to 8Ω with extension jack. About 30/50/60W by mode. Head has no reverb."
+        "years": "1996–2002, catalog range",
+        "watts": 60,
+        "speakers": "2 × 10″",
+        "load": "16 Ω internal",
+        "finish": "red",
+        "circuit": "CSR 13 combo / 30–50–60 W modes"
       },
       "catalogCsvRow": 137,
       "catalogName": "Prosonic",
       "catalogRowSha256": "3a6c4f948181ec1abb7f8aae731f2187976aefd1b30413e9c5ff18ed11b6cfee",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected configuration / scope",
+          "status": "Explicit narrower assembly selection",
+          "decision": "Catalog row 137 groups combo and head. This study selects the CSR 13 combo: 16 Ω internal, switching the amplifier to 8 Ω when an extension is connected; the head’s 4/8/16 selector is omitted. Catalog ends 2002; secondary product guides end 2001. Internal layout and detailed speaker geometry are estimates."
+        }
+      ],
+      "scopeNote": "Catalog row 137 groups combo and head. This study selects the CSR 13 combo: 16 Ω internal, switching the amplifier to 8 Ω when an extension is connected; the head’s 4/8/16 selector is omitted. Catalog ends 2002; secondary product guides end 2001. Internal layout and detailed speaker geometry are estimates."
     },
     {
       "runtimeKey": "2000|wip|Deco Tone",

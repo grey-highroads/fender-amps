@@ -1,7 +1,7 @@
 # Full timeline mapping update
 
-The current machine-readable map covers all 208 catalog rows: seven shared
-construction studies and 201 spreadsheet-only WIP placeholders. The table below
+The current machine-readable map covers all 208 catalog rows: ten shared
+construction studies and 198 spreadsheet-only WIP placeholders. The table below
 is historical reconciliation of the earlier selected collection, not the current
 entry list. See [current timeline](../../docs/handoff/FULL_TIMELINE.md) and
 [timeline-map.json](timeline-map.json) for current coverage.
@@ -63,3 +63,13 @@ replacement Weber is not copied as factory equipment. Oxford-style construction
 comes from the second specimen/research attribution. Cabinet measurements are
 proxies, and rectifier drawing/chart differences remain explicit. See
 `docs/handoff/PRINCETON_BROWN_REAR.md` for inspected evidence and limits.
+
+## Second construction batch
+
+| Timeline model | Exact CSV row | Selected scope / differences |
+| --- | --- | --- |
+| Super Six Reverb | 91 — Super Six Reverb | Catalog 1972 retained despite earlier claims; 100 W early form, 5.33 Ω calculated vs published 5.2 Ω. Factory height excludes casters. |
+| Blues Junior | 131 — Blues Junior (I–II) | Original 1995 PR 295 selected from 1995–2010 grouped generations; six pots plus Fat switch. |
+| Prosonic | 137 — Prosonic | 1996-style red 2×10 reverb combo, 16 Ω internal; 30/50/60 W by mode. Head excluded. Catalog ends 2002 vs secondary 2001. |
+
+See [construction evidence and current validation](../../docs/handoff/THREE_COMBOS.md).

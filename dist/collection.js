@@ -3,13 +3,64 @@ import {CATALOG_AMPS} from './catalog-timeline.js';
 import * as THREE from 'three';
 import {detailScene} from './app.js';
 import {createAmpModel,modelReference} from './amp-models.js';
-import {assemblyFor,assetById} from './library/catalog.js';
+import {assemblyFor,assetById,SOURCES} from './library/catalog.js';
 import {studioEnvironment} from './library/studio.js';
 
 const $=id=>document.getElementById(id);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Selected chronological exhibits. Cabinet studies share geometry, not exact component layouts.
 const amps=[
+{
+ "id": "super-six-reverb-1972",
+ "year": 1972,
+ "name": "Super Six Reverb",
+ "era": "The silver-panel years",
+ "years": "1972–1979; 1972-style study",
+ "watts": 100,
+ "speakers": "6 × 10″",
+ "load": "5.33 Ω",
+ "finish": "silver",
+ "width": 1.325,
+ "height": 2.418,
+ "circuit": "1972-style master-volume family",
+ "voice": "Twin-family power, spread across six tens.",
+ "story": "Six tens in three rows, a master-volume Twin-family chassis, and a cabinet more than forty inches tall before the casters. The Super Six makes its point through speaker area and scale. Both channels have Volume, Treble, Middle and Bass; the Vibrato channel adds spring reverb and tremolo. This study represents the 100-watt early version, with no later pull boost, line out or hum-balance hardware. The period Fender specification sheet supports the cabinet envelope and removable casters. Surviving speaker brands and the exact introduction date remain less settled.",
+ "ratingNote": "Catalog row 91 retains 1972 introduction and 1972–1979 production; sources suggest earlier examples. Six nominal 8 Ω speakers modeled as three series pairs in parallel give 16/3 Ω (5.33 Ω), commonly published as 5.2 Ω. Later 135 W versions are outside this assembly."
+},
+{
+ "id": "blues-junior-1995",
+ "year": 1995,
+ "name": "Blues Junior",
+ "era": "Modern compact combos",
+ "years": "1995–2010, grouped I–II; 1995 study",
+ "watts": 15,
+ "speakers": "1 × 12″",
+ "load": "8 Ω",
+ "finish": "black",
+ "width": 0.9,
+ "height": 0.955,
+ "circuit": "PR 295 / original 1995 family",
+ "voice": "An EL84 pair, a single twelve, and gain before the Master.",
+ "story": "The original Blues Junior puts two EL84s and a twelve-inch speaker into a compact black cabinet. Volume sets how hard the preamp works, while Master sets the level that follows it. The Fat switch changes the first stage’s bypassing; it is a switch beside six rotary controls. The November 1995 Fender manual supplies the cabinet dimensions, 15-watt rating and one 8-ohm Eminence speaker. Our exterior follows a seller-dated December 1995 US example, with its chrome top panel, rectangular Fender tag and distinctive tube opening in the rear board.",
+ "ratingNote": "Catalog row 131 groups generations I–II through 2010. This is the original 1995 PR 295 configuration, not a Blues Junior III/IV or an audit of a particular green circuit board. Speaker basket, rear opening and hardware spacing are estimates."
+},
+{
+ "id": "prosonic-1996",
+ "year": 1996,
+ "name": "Prosonic",
+ "era": "Modern Custom Amp Shop designs",
+ "years": "1996–2002, catalog range",
+ "watts": 60,
+ "speakers": "2 × 10″",
+ "load": "16 Ω internal",
+ "finish": "red",
+ "width": 1.2,
+ "height": 1.105,
+ "circuit": "CSR 13 combo / 30–50–60 W modes",
+ "voice": "Two gain controls, two tens, and three power-section settings.",
+ "story": "The Prosonic gives its drive channel two gain controls before a separate Master. Its more unusual choice sits on the rear: the bias/rectifier selector. Fender specifies 30 watts for Class A/tube, 50 for AB/tube and 60 for AB/solid-state. Those are the factory mode names, not a measurement of this model. This is the 2×10 reverb combo, with two nominal 8-ohm Celestion-format speakers in series. Red is one of the manual’s factory color choices. The black front panel and chicken-head knobs follow an opened, seller-dated 1996 red-lizard example; the covering texture is an approximation.",
+ "ratingNote": "Catalog row 137 groups combo and head. This study selects the CSR 13 combo: 16 Ω internal, switching the amplifier to 8 Ω when an extension is connected; the head’s 4/8/16 selector is omitted. Catalog ends 2002; secondary product guides end 2001. Internal layout and detailed speaker geometry are estimates."
+},
  {
   "year": 1955,
   "name": "Tweed Deluxe",
@@ -126,6 +177,8 @@ amps.push(...CATALOG_AMPS);
 amps.sort((a,b)=>a.year-b.year||(parseFloat(a.watts)||Infinity)-(parseFloat(b.watts)||Infinity)||a.name.localeCompare(b.name));
 function panelLabel(a){
  if(a.wip)return a.era||'Catalog entry';
+ if(a.id==='blues-junior-1995')return 'Original Blues Junior';
+ if(a.id==='prosonic-1996')return 'Custom Amp Shop';
  if(a.era==='The black-panel years')return 'Black panel';
  if(a.era==='The silver-panel years'||a.era==='The headroom years')return 'Silver panel';
  if(a.finish==='wood')return 'Woodie';
@@ -187,7 +240,7 @@ function openAmp(i,button){if(drag?.moved)return;const a=amps[i];if(a.wip){openC
  $('specs-content').innerHTML=a.full?originalSpecs:`<dl class="details"><div><dt>Panel / era</dt><dd>${panelLabel(a)}</dd></div><div><dt>Circuit / version</dt><dd>${a.circuit}</dd></div><div><dt>Production</dt><dd>${a.years}</dd></div><div><dt>Format</dt><dd>Tube combo</dd></div><div><dt>Speaker layout</dt><dd>${a.speakers}</dd></div></dl><p class="fine">Representative specifications. Cabinet profiles distinguish top and front controls, speaker layouts and finishes; internal components are illustrative. ${a.ratingNote||''}</p>`;
  const dds=detail.querySelectorAll('.spec-grid dd');dds[0].innerHTML=`${a.watts}<span> W</span>`;dds[1].textContent=a.speakers;dds[2].textContent=a.load;
  detail.querySelector('.panel-footer > span').textContent=a.circuit.toUpperCase();detail.querySelector('.model-note').textContent=a.full?'INTERPRETIVE 3D RECREATION':'REPRESENTATIVE CABINET STUDY';detail.querySelector('.object-caption strong').textContent=a.full?'OUTSIZED INFLUENCE.':a.era.toUpperCase();detail.querySelector('.object-caption span:last-child').firstChild.textContent=a.full?'SMALL CABINET.':'FENDER TUBE AMPLIFIERS.';
- $('sources').onclick=a.full?originalSource:()=>{const d=$('dialog');$('dialog-content').innerHTML=`<span class="eyebrow">EXHIBIT NOTES</span><h2>${a.name}</h2><p>${a.story}</p><p>These are representative catalog specifications, with rounded output ratings. Production transitions and surviving examples vary. The 3D cabinet is an interpretive study, not a scan or an exact component layout.</p><p><a href="https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals" target="_blank" rel="noopener noreferrer">Fender’s official owner manual archive</a></p>`;d.showModal()};
+ $('sources').onclick=a.full?originalSource:()=>{const d=$('dialog');$('dialog-content').innerHTML=`<span class="eyebrow">EXHIBIT NOTES</span><h2>${a.name}</h2><p>${a.story}</p>${assemblyFor(a)?.study==='combo-batch-v1'?`<p>${a.ratingNote}</p><ul>${assemblyFor(a).sources.map(id=>`<li><a href="${SOURCES[id].url}" target="_blank" rel="noopener noreferrer">${SOURCES[id].title}</a> — ${SOURCES[id].note}</li>`).join('')}</ul>`:''}<p>These are representative catalog specifications, with rounded output ratings. Production transitions and surviving examples vary. The 3D cabinet is an interpretive study, not a scan or an exact component layout.</p><p><a href="https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals" target="_blank" rel="noopener noreferrer">Fender’s official owner manual archive</a></p>`;d.showModal()};
  const reference=modelReference(a);if(reference){const baseSource=$('sources').onclick;$('sources').onclick=()=>{baseSource();$('dialog-content').innerHTML+=`<p><a href="${reference.source}" target="_blank" rel="noopener noreferrer">Exterior reference: ${reference.name}</a></p><p>${reference.basis||'Cabinet dimensions use current reissue specifications as a family proxy, rather than a measured vintage cabinet.'} Badges, cloth and detail dimensions remain interpretive.</p>`;};$('specs-content').innerHTML+=`<dl class="details"><div><dt>Cabinet W × H × D</dt><dd>${reference.dimensions}</dd></div></dl><p class="fine">${reference.basis||'Modern reissue dimension proxy; vintage measurements pending'}. Rear components are illustrative.</p>`;detail.querySelector('.model-note').textContent='REFINED CABINET STUDY';} const assembly=assemblyFor(a);if(assembly){$('specs-content').innerHTML+=`<dl class="details"><div><dt>Speaker reference</dt><dd>${assembly.speakerCount} × ${assetById(assembly.speaker).name}</dd></div><div><dt>Speaker wiring</dt><dd>${assembly.wiring}</dd></div><div><dt>Reference example</dt><dd>${assembly.example}</dd></div></dl><p class="fine">Speaker geometry and finishes remain under review. <a href="components.html">Inspect the shared component library</a>.</p>`;detail.querySelector('.model-note').textContent='COMPONENT LIBRARY / REFERENCE ASSEMBLY';} $('story-tab').click();detail.scrollTop=0;detailScene?.showModel(variant(a));detailScene?.setVisible(true);$('close-detail').focus({preventScroll:true});
 }
 function closeAmp(){if(selected===null)return;if($('dialog').open){$('dialog').close();return;}if(document.fullscreenElement){document.exitFullscreen();}detailScene?.setVisible(false);detail.hidden=true;document.title="The Amplifier Observatory — The collection";document.body.classList.remove('detail-open');$('collection').inert=false;document.querySelector('.masthead').inert=false;document.querySelector('.site-footer').inert=false;scroll.scrollLeft=savedScroll;window.scrollTo({top:savedY,behavior:'instant'});returnFocus?.focus({preventScroll:true});selected=null;}
@@ -201,10 +254,10 @@ function openCatalog(a){
  if(/^https?:\/\//.test(fields[18])){const p=document.createElement('p'),link=document.createElement('a');link.href=fields[18];link.textContent='Specification reference listed in spreadsheet';link.target='_blank';link.rel='noopener noreferrer';p.append(link);$('dialog-content').append(p);}
  $('dialog').showModal();
 }
-$('about').onclick=()=>{$('dialog-content').innerHTML=`<span class="eyebrow">THE AMPLIFIER OBSERVATORY</span><h2>A collection to move through.</h2><p>All ${amps.length} entries from our source spreadsheet appear by approximate introduction year. Seven shared construction studies appear in color. Gray amps are generic WIP placeholders: select one for the spreadsheet’s description, specifications and review notes.</p><p>Catalog rows group major versions; they do not document every selected-year configuration. Models remain interpretive construction studies. Closing an exhibit returns you to your place in the timeline.</p><p>An independent study, not affiliated with Fender Musical Instruments Corporation.</p>`;$('dialog').showModal()};
+$('about').onclick=()=>{$('dialog-content').innerHTML=`<span class="eyebrow">THE AMPLIFIER OBSERVATORY</span><h2>A collection to move through.</h2><p>All ${amps.length} entries from our source spreadsheet appear by approximate introduction year. Ten shared construction studies appear in color. Gray amps are generic WIP placeholders: select one for the spreadsheet’s description, specifications and review notes.</p><p>Catalog rows group major versions; they do not document every selected-year configuration. Models remain interpretive construction studies. Closing an exhibit returns you to your place in the timeline.</p><p>An independent study, not affiliated with Fender Musical Instruments Corporation.</p>`;$('dialog').showModal()};
 
 if(detailScene){const host=$('collection-render');try{const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setClearColor(0x090c10,0);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.45;host.append(renderer.domElement);
- const collectionEnvironment=studioEnvironment(renderer);const scenes=amps.map((a,i)=>{if(a.wip)return null;const scene=new THREE.Scene();scene.environment=collectionEnvironment.texture;scene.environmentIntensity=.55;const model=variant(a);scene.add(model);scene.add(new THREE.HemisphereLight(0xc8dae6,0x4a3020,2.4));for(const [color,power,pos] of [[0xffdfab,4.2,[-4,6,5]],[0xabcce8,2.4,[5,3,-4]],[0xffffff,1,[0,2,7]]]){const light=new THREE.DirectionalLight(color,power);light.position.set(...pos);scene.add(light)}const camera=new THREE.PerspectiveCamera(34,1,.1,50);camera.position.set(4.5,2.8,10);camera.lookAt(0,.05,0);return{scene,model,camera,slot:cards[i].querySelector('.amp-slot')};});
+ const collectionEnvironment=studioEnvironment(renderer);const scenes=amps.map((a,i)=>{if(a.wip)return null;const scene=new THREE.Scene();scene.environment=collectionEnvironment.texture;scene.environmentIntensity=.55;const model=variant(a);scene.add(model);scene.add(new THREE.HemisphereLight(0xc8dae6,0x4a3020,2.4));for(const [color,power,pos] of [[0xffdfab,4.2,[-4,6,5]],[0xabcce8,2.4,[5,3,-4]],[0xffffff,1,[0,2,7]]]){const light=new THREE.DirectionalLight(color,power);light.position.set(...pos);scene.add(light)}const camera=new THREE.PerspectiveCamera(42,1,.1,50);camera.position.set(4.5,2.8,13);camera.lookAt(0,.05,0);return{scene,model,camera,slot:cards[i].querySelector('.amp-slot')};});
  const resize=()=>renderer.setSize(host.clientWidth,host.clientHeight);new ResizeObserver(resize).observe(host);resize();let last=0;let phase=0;
  function frame(time){requestAnimationFrame(frame);if(document.hidden||selected!==null){last=time;return;}if(time-last<32)return;const dt=Math.min((time-last)/1000,.1);last=time;if(!paused)phase+=dt;const root=host.getBoundingClientRect();renderer.setScissorTest(false);renderer.clear();renderer.setScissorTest(true);for(let i=0;i<scenes.length;i++){const s=scenes[i];if(!s)continue;const r=s.slot.getBoundingClientRect();if(r.right<=root.left||r.left>=root.right)continue;const x=r.left-root.left,y=root.bottom-r.bottom,w=r.width,h=r.height;renderer.setViewport(x,y,w,h);renderer.setScissor(Math.max(0,x),Math.max(0,y),Math.min(w,root.width-Math.max(0,x),r.right-root.left),Math.min(h,root.height-y));s.camera.aspect=w/h;s.camera.updateProjectionMatrix();s.model.rotation.y=-.35+Math.sin(phase*.17+i*.6)*.48;s.model.position.y=paused?0:Math.sin(phase*.6+i)*.055;renderer.render(s.scene,s.camera);}renderer.setScissorTest(false);}requestAnimationFrame(frame);
  }catch(error){console.error(error);host.innerHTML='<p class="render-error">3D rendering is unavailable in this browser. You can still select an amp to read its story.</p>';}}
@@ -212,6 +265,6 @@ updatePosition();
 
 // Review link uses the same entry/close behavior as a timeline selection.
 const exhibitQuery=new URLSearchParams(location.search);
-const reviewAmps={'princeton-reverb-1965':{year:1964,name:'Princeton Reverb'},'deluxe-1957':{year:1955,name:'Tweed Deluxe'},'twin-1968':{year:1968,name:'Twin Reverb'},'deluxe-reverb-1965':{year:1963,name:'Deluxe Reverb'},'champ-1959':{year:1958,name:'Tweed Champ'},'tremolux-1955':{year:1955,name:'Tweed Tremolux'},'deluxe-1962':{year:1961,name:'Brown Deluxe'}};
+const reviewAmps={"super-six-reverb-1972":{"year": 1972, "name": "Super Six Reverb"},"blues-junior-1995":{"year": 1995, "name": "Blues Junior"},"prosonic-1996":{"year": 1996, "name": "Prosonic"},'princeton-reverb-1965':{year:1964,name:'Princeton Reverb'},'deluxe-1957':{year:1955,name:'Tweed Deluxe'},'twin-1968':{year:1968,name:'Twin Reverb'},'deluxe-reverb-1965':{year:1963,name:'Deluxe Reverb'},'champ-1959':{year:1958,name:'Tweed Champ'},'tremolux-1955':{year:1955,name:'Tweed Tremolux'},'deluxe-1962':{year:1961,name:'Brown Deluxe'}};
 const reviewAmp=reviewAmps[exhibitQuery.get('amp')];
 if(reviewAmp){const i=amps.findIndex(a=>a.year===reviewAmp.year&&a.name===reviewAmp.name);if(i>=0){openAmp(i,cards[i]);if(exhibitQuery.get('view')==='inside')$('rear').click();}}
