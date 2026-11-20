@@ -148,3 +148,10 @@ in an already-open inspector does not rebuild its initial deep-linked asset.
 No app navigation behavior was changed for this task.
 
 GitHub runtime revision: `c969ce9` (revision 0.3).
+
+Revision 0.3 publication completed successfully through the owner-private Sites
+operation, preserving the existing project and audience. Site source:
+`fbb726f9f6c9ff208b1dae1b00703ba6bd5f0c77`; deployment:
+`appgdep_6b0045ec965081918b181323210fb34e` (`succeeded`). GitHub runtime remains
+`c969ce9`; review/handoff commit `81ecd35`. Browser checks were local; production
+publication was confirmed by the deployment service, not a signed-in UI review.

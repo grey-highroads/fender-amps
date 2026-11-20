@@ -68,6 +68,9 @@ small skirted knob; the shared studio reflection environment gained a fill card.
 These are rendered review images, not photographs. Inspection lighting and lens
 also changed, so the pair is a qualitative comparison, not a controlled benchmark.
 
+Revision 0.3 is published on the existing owner-private prototype; see
+TECHNICAL.md for separate GitHub and Site source revisions.
+
 ## November 20 continuation: revision 0.3
 
 The same shared builder now uses adequately sampled, broader flutes that fade
