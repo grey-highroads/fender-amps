@@ -14,7 +14,7 @@ E=D['estimates']; W,H,DEP=[D['cabinet'][k] for k in ('width','height','depth')]
 mm=lambda v:v*.001
 scene=bpy.context.scene
 # Background process gets a new scene; no existing scene is edited or deleted.
-scene=bpy.data.scenes.new('Twin 1968 — factory JBL option — master 0.3')
+scene=bpy.data.scenes.new('Twin 1968 — factory JBL option — master 0.4')
 bpy.context.window.scene=scene
 scene.unit_settings.system='METRIC';scene.unit_settings.scale_length=1;scene.unit_settings.length_unit='MILLIMETERS'
 scene['specimen']=D['specimen'];scene['dimension_basis']=D['cabinet']['basis'];scene['status']='First assembly study; not a completed faithful replica'
@@ -57,7 +57,10 @@ nt=cloth.node_tree;bs=nt.nodes.get('Principled BSDF')
 for file,socket in [('grille-roughness.png','Roughness'),('grille-metallic.png','Metallic')]:
  im=nt.nodes.new('ShaderNodeTexImage');im.image=bpy.data.images.load(str(OUT/'textures'/file));im.image.colorspace_settings.name='Non-Color';nt.links.new(im.outputs['Color'],bs.inputs[socket])
 n=nt.nodes.new('ShaderNodeTexImage');n.image=bpy.data.images.load(str(OUT/'textures/grille-normal.png'));n.image.colorspace_settings.name='Non-Color';nm=nt.nodes.new('ShaderNodeNormalMap');nm.inputs['Strength'].default_value=SURF['cloth-silver-blue']['normalScale'];nt.links.new(n.outputs['Color'],nm.inputs['Color']);nt.links.new(nm.outputs['Normal'],bs.inputs['Normal'])
-frontart=image_material('Early silverface panel — interpretive artwork','panel-color.png',.75,.32)
+frontart=image_material('Early silverface panel — shared artwork study','panel-color.png',1,1)
+nt=frontart.node_tree;bs=nt.nodes.get('Principled BSDF')
+for file,socket in [('panel-roughness.png','Roughness'),('panel-metallic.png','Metallic')]:
+ im=nt.nodes.new('ShaderNodeTexImage');im.image=bpy.data.images.load(str(OUT/'textures'/file));im.image.colorspace_settings.name='Non-Color';nt.links.new(im.outputs['Color'],bs.inputs[socket])
 logo=image_material('Fender badge — existing vector silhouette','fender-badge.png',.75,.27,True)
 jbl=image_material('JBL corner badge — interpretive artwork','jbl-badge.png',.35,.45)
 
@@ -148,7 +151,12 @@ for z in [20,445]:box('Horizontal aluminum drip edge',(626,5,4.5),(0,front_y(z)-
 # Raised badge face cards preserve existing artwork without embedding a reference photo.
 def badge(name,x,z,w,h,mat):
  o=front_plane(name,w,h,z,mat,-3);o.location.x=mm(x);return o
-badge('Raised Fender script — silhouette study',-222,357,118,45,logo)
+# Import the actual shared 3D badge rather than a separate flat logo card.
+before_badge=set(bpy.data.objects);bpy.ops.import_scene.gltf(filepath=str(OUT/'source/badge-tail-v01.glb'))
+badge_objects=[o for o in bpy.data.objects if o not in before_badge]
+for o in badge_objects:link(o)
+badge_root=next(o for o in badge_objects if o.parent is None);badge_root.parent=root
+badge_root.name='Shared raised tail badge 0.1';badge_root.location=(mm(-222),mm(front_y(400)+.7),mm(400))
 badge('Factory JBL option corner emblem',247,38,57,42,jbl)
 for x,z in [(221,43),(273,43),(221,76),(273,76)]:sphere('JBL badge pin',(2.4,1.6,2.4),(x,front_y(z)-3.3,z),chrome)
 active='03 Chassis and controls'

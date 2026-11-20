@@ -2,7 +2,7 @@
 
 Target: a 1968 early silverface/drip-edge Twin in a documented factory JBL D120F
 option configuration. RetroFret A-13834 remains a photographic reference.
-This is **master 0.3**, an editable dimensional and
+This is **master 0.4**, an editable dimensional and
 assembly foundation, not a finished high-fidelity replica.
 
 - [Blender master](twin-1968-master.blend)
@@ -70,8 +70,9 @@ hardware and a separate review studio. Objects and modifiers remain editable.
 Repeated knobs link the same imported mesh/material data from the accepted shared
 component, rather than re-modeling it in Blender. Its bridge file is
 `source/knob-skirted-v04.glb`; regenerate from the inspector if the shared knob
-changes. The Tolex and silver/aqua cloth now share their generator with the production
-library. The new assembly geometry remains separate from production.
+changes. The Tolex and silver/aqua cloth share their generator with the production
+library. The tail badge is an actual export from its shared 3D builder, and the
+Twin faceplate uses shared normalized layout and artwork sources. The new assembly geometry remains separate from production.
 
 The GLB contains the amp only, excluding review lights, camera and floor. The
 Blender file packs generated images and uses Blender's built-in font. Do not pack
@@ -120,6 +121,36 @@ The Blender studio still gives stronger broad highlights on black vinyl than
 the browser; that lighting needs separate calibration before judging material
 color from a Cycles screenshot.
 
+## Identification study 0.1
+
+The raised tail badge replaces the flat logo image card. `identification-profile.js`
+contains our own backing/stroke study, inclination and estimated construction.
+`tail-badge-contours.js` samples it; `tail-badge.js` builds the layered 3D part.
+The actual inspector export at `source/badge-tail-v01.glb` is imported into this
+master. No photographed texture is used. Its estimated installed envelope is
+108.25 × 59.25 mm; the 114.3 mm flat-width proxy comes from a modern replacement,
+not a measured vintage part. Mounting locations, thickness and exact outlines
+remain provisional. The geometry is a study rather than an exact mold replica.
+
+`twin-panel-art.js` and `identification-profile.js` provide shared Twin title,
+headings, input/bright labels and normalized layout. Display caps are drawn as
+vectors; small labels use a system sans-serif approximation. No exact vintage
+font identification is claimed. Blender uses generated color, metallic-mask and
+roughness maps so turquoise ink responds separately from aluminum.
+
+Run `tools/blender/prepare-tail-badge.cjs` (with the same Playwright environment
+and local review server) after editing the badge paths. Then export `badge-script`
+from the inspector and replace the bridge GLB. Generate only the shared panel maps
+with `create-twin-textures.cjs --identification-only`; regenerate the master last.
+`node checks/identification.mjs` checks contour/source agreement, mesh integrity,
+real mounting holes, raised depth, modeled envelope and layout counts. The
+production panel and master have different provisional physical envelopes;
+shared normalized artwork does not resolve those dimensions.
+
+Own matched browser evidence is in docs/handoff/images/identification-*.png.
+The shared badge sits closer to the cloth; the master badge was also raised to
+match its reference placement. Camera, scale, lighting and exposure stay fixed.
+
 ## Remaining work before production integration
 
 1. Reconcile conflicting period catalog and specimen dimensions (including
@@ -129,7 +160,7 @@ color from a Cycles screenshot.
 3. Refine JBL motor/basket/label, rear ports, cable routes and hardware. Tube and
    circuit-board internals are not modeled in this first pass.
 4. Optimize the exported geometry and establish a mobile detail level. This review
-   mesh has roughly 812k rendered triangles, mostly repeated detailed knobs.
+   mesh has roughly 835k rendered triangles, mostly repeated detailed knobs.
 5. Adapt the browser loader and existing cabinet/face/chassis animation contract,
    then validate the library, timeline and detail views before publishing.
 

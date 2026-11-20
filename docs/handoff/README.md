@@ -20,13 +20,13 @@ in progress; a functioning component is not necessarily an accurate component.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `60e2e95`, shared surface study 0.1; knob revision 0.4 |
+| Runtime baseline | Commit `452a94d`, badge/panel study 0.1; surface study 0.1; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
 | Library | 24 components/materials and three reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
-| Blender master | [1968 Twin A-13834, photographic surface pass 0.3](../../models/twin-1968/README.md); separate from production |
+| Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
 
 The three reference assemblies are a 1957-style 5E3 Deluxe, a 1965-style blackface
@@ -111,7 +111,7 @@ The dealer-based cabinet envelope conflicts with Fender catalog dimensions and
 is explicitly unresolved; detail dimensions and accessory inclusion remain estimates. See the [master record](../../models/twin-1968/README.md).
 
 An editable `.blend`, metre-scale `.glb`, named reusable objects, generated maps,
-dimension ledger and separate browser review now exist. This is master 0.3, an
+dimension ledger and separate browser review now exist. This is master 0.4, an
 assembly foundation, not a completed faithful replica. The production library
 and private site retain knob 0.4 and now share the refined Tolex/grille material
 source with Blender; the Oxford-equipped
@@ -134,6 +134,27 @@ Color, pitch, relief and material response remain estimates from uncalibrated
 vintage photographs. The cloth is a surface-map study, not actual woven geometry.
 Blender's Cycles preview exposure separately changed to -2 EV; the browser pair
 keeps camera, scale, environment, lights and exposure unchanged.
+
+## Raised badge and Twin panel pass
+
+Badge study 0.1 replaces the flat wordmark with an inclined, tail-style painted
+backing, raised silver strokes, rounded bevels and provisional mounting points.
+The shared factory reaches both reference amps. The Blender master imports its
+actual shared GLB export, rather than using a separate logo card.
+
+Twin panel study 0.1 adds a condensed two-line TWIN REVERB / -AMP title, upper
+channel headings, input numbers, bright labels and channel outlines. Its normalized
+layout/artwork source supplies both the production component and Blender maps;
+original dimensions, exact typefaces and registration remain unverified.
+
+| Before | After (same browser setup) |
+| --- | --- |
+| ![Prior badge](images/identification-before-badge.png) | ![Raised tail badge](images/identification-after-badge.png) |
+
+The silhouette and stroke geometry are our approximate vector study, guided by
+the dated Twin and modern replacement construction photos. They are not an exact
+vintage tracing. No reference-photo pixels were embedded. Camera and lights are
+unchanged; badge placement and mounting depth intentionally changed.
 
 ## Next useful work
 

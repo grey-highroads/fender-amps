@@ -5,8 +5,8 @@
     1200
   ],
   "errors": [],
-  "meshInstances": 237,
-  "renderedTriangles": 812428,
+  "meshInstances": 254,
+  "renderedTriangles": 835282,
   "cabinetMm": [
     666.7500138282776,
     508.0000162124634,
@@ -20,7 +20,7 @@
     "mounted knob close-up"
   ],
   "productionIntegrated": false,
-  "revision": "master-0.3",
+  "revision": "master-0.4",
   "configuration": "factory JBL option with estimated glides",
   "glides": 4,
   "casters": 0,
@@ -32,9 +32,10 @@
     "exposure": "unchanged",
     "views": [
       "angle",
-      "front",
-      "tolex",
-      "cloth"
+      "badge",
+      "panel",
+      "title"
     ]
-  }
+  },
+  "identificationStudy": "0.1"
 }

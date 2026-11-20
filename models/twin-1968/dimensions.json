@@ -1,6 +1,6 @@
 {
   "id": "twin-1968-factory-jbl-option",
-  "revision": "master-0.3",
+  "revision": "master-0.4",
   "units": "millimetres",
   "source": "https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php",
   "specimen": "1968 early silverface Twin Reverb, documented JBL D120F factory option; RetroFret A-13834 is a photographic reference, not authority for standard equipment",
@@ -78,5 +78,16 @@
     "depth": 247.65,
     "basis": "1968 Fender catalog scan lists 26 1/2 W \u00d7 20 1/2 H \u00d7 9 3/4 D inches. Published dimensions, not caliper measurements; catalog photographs/specifications may span a transition.",
     "status": "Conflict with dealer-reported specimen envelope remains unresolved. Do not silently average or treat either as verified construction dimensions."
+  },
+  "identification": {
+    "revision": "0.1",
+    "panelSource": "../../dist/library/identification-profile.js",
+    "panelArtwork": "../../dist/library/twin-panel-art.js",
+    "badgeBridge": "source/badge-tail-v01.glb",
+    "badgePlacementMm": [
+      -222,
+      400
+    ],
+    "basis": "Dated vintage mounted photographs and period styling, with modern replacement photographs only as secondary badge construction evidence. Artwork and placement are estimates, not exact traces or specimen measurements."
   }
 }

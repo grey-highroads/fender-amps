@@ -5,6 +5,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  const root=path.resolve(__dirname,'../..'),out=path.join(root,'models/twin-1968/textures');
  const browser=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});
  const page=await browser.newPage();
+ if(process.argv.includes('--identification-only')){
+  await page.goto(process.env.REVIEW_ORIGIN||'http://127.0.0.1:4174/tools/blender/review.html');
+  const images=await page.evaluate(async()=>{const {twinPanelMaps}=await import('/dist/library/twin-panel-art.js');const m=twinPanelMaps();return Object.fromEntries(Object.entries(m).map(([k,c])=>[k,c.toDataURL('image/png').split(',')[1]]));});
+  for(const [key,data]of Object.entries(images))fs.writeFileSync(path.join(out,'panel-'+({color:'color',metallic:'metallic',rough:'roughness'}[key])+'.png'),Buffer.from(data,'base64'));
+  await browser.close();console.log('Generated shared Twin panel maps.');return;
+ }
  const surfaceSource=fs.readFileSync(path.join(root,'dist/library/photographic-surfaces.js'),'utf8');
  await page.addScriptTag({content:surfaceSource.replace(/\bexport /g,'')+';window.generateSurfaceData=generateSurfaceData;window.surfaceStudies=SURFACE_STUDIES;'});
  const svg=fs.readFileSync(path.join(root,'dist/assets/fender-wordmark.svg'),'utf8');

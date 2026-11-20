@@ -145,3 +145,27 @@ Own matched browser evidence: images/surfaces-{before,after}-{angle,tolex,cloth}
 Browser camera/scale/environment/light/exposure stay fixed. Blender Cycles preview
 exposure was separately reduced by 2 stops; do not combine that change with the
 browser material benchmark or present it as a direct photographic match.
+
+## Identification study 0.1 / master 0.4
+
+Re-inspected RetroFret gallery 03/05 and the period catalog styling. The prior
+badge was a flat level generic wordmark, lacking the slanted tail and backing;
+the Twin title was small and insufficiently condensed, without the correct
+strong two-line hierarchy. Corrected those visible characteristics in shared
+builders/artwork. Exact glyph outlines and small-print registration are still
+interpretive, not a traced original panel or badge.
+
+Secondary construction evidence: [modern Fender 0994093000 replacement](https://www.amprepairparts.com/logos.htm),
+front and angled isolated photographs (`fal912.jpg`, `fenderbflogo.png`). These
+show a dark backing, raised silver strokes and three mounting holes. The stated
+approximate 4½-inch width supports only a modern proxy. It is not a vintage
+caliper measurement or proof of the original casting material/underside. The
+[currently seller-attributed original badge listing](https://reverb.com/item/89402423-1965-1972-fender-amp-logo-with-tail-and-screws)
+was consulted, but its image CDN remained unavailable; hidden details were not
+visually verified. Reference photographs stay under ignored outputs/references.
+
+The new contours are our own approximate vector study, not an exact vintage or
+replacement tracing. Mounted placement, inclination, depth, screw positions and
+chrome/paint response remain estimates. The blue title is custom drawn condensed
+caps; controls use approximate system sans-serif text. Our generated panel maps
+contain no reference-photo pixels or baked highlights.

@@ -256,3 +256,35 @@ Surface publication succeeded while retaining owner-only access. GitHub runtime
 remains a separate review artifact; the production library/timeline/detail use
 its shared surface source on their existing assemblies. Production status was
 confirmed by Sites; visual QA was local, not a signed-in production UI review.
+
+## Shared badge and Twin panel study (runtime 452a94d)
+
+New source: identification-profile.js, twin-panel-art.js, tail-badge-contours.js
+and tail-badge.js. Contours are generated from our own path study through the
+matching vendored SVGLoader in tools/blender; a signature check detects stale
+contours. The synchronous shared badge builder adds real extruded backing/holes,
+raised beveled strokes and provisional screw heads. Painted faces and chrome
+edges use multiple materials. Detail cleanup now uses shared disposeObject;
+its former single-material path failed on this layered mesh and was corrected.
+Actual amp switching was repeated with no errors after that fix.
+
+The Twin factory uses common normalized positions/artwork, with instance-owned
+textures from cached canvas templates. Color, metallic mask and roughness are
+exported for Blender. Its master imports the actual badge GLB and shared panel
+maps. Other panel families and accepted knob geometry/art remain unchanged. The
+full master remains separate from the production Oxford-equipped assembly.
+
+Current task: npm test, identification geometry/layout/source checks, GLB checks,
+JavaScript syntax and diff checks passed. Browser inspection covered badge front,
+rear, angle; faceplate front/angle; both reference assemblies and timeline/detail
+switching/scroll restoration; and 390 px layout. No page errors remained. Badge
+export: glTF 2, metres, 17 mesh definitions, 2 materials, 2,207,572 bytes. Complete
+Twin panel export: glTF 2, metres, 113 meshes, 18,740,476 bytes. Saved master checks
+passed; master GLB: 254 rendered mesh instances / 835,282 triangles. These counts
+are integrity evidence, not historical or photoreal approval. Further geometry/
+texture optimization remains necessary before full-master mobile integration.
+
+Matched browser before/after: angle, badge, panel and title. No lighting, camera,
+scale or exposure change in this task. Badge placement and distance from cloth
+intentionally changed; no cabinet dimensions changed. Own reference/review images
+are committed; third-party reference photographs are not.
