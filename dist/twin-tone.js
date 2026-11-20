@@ -1,9 +1,102 @@
-// Editorial notes: circuit-family context is not authentication of a 1968 specimen.
-const circuit='https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf';
-const catalog='https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php';
-const jbl='https://www.cieri.net/Documenti/JBL/Documenti%20tecnici/Cataloghi/JBL%20-%20Musical%20Instrument%20Loudspeakers%20-%20D110F%2C%20D120F%2C%20D130F%2C%20D140F%20-%20Brochure%20%281970%29%20%28English%29.pdf';
+// A circuit drawing describes a design, not the condition of a surviving specimen.
 export const TWIN_TONE={
- speakers:{title:'The final voice of the Twin.',body:'The speakers shape the sound after the electronics have done their work. Their response, efficiency and breakup behavior help decide whether a Twin feels bright and immediate, softer at the attack, or gritty when pushed.',attributes:[['This study','2 × 12″ Oxford-family · 8 Ω each'],['Combined load','4 Ω · parallel wiring'],['Worth comparing','Sensitivity · response · cone breakup']],listen:'Listen for the edge on a hard-picked chord, how bass notes stay distinct, and whether the speaker adds grit before the amp runs out of clean power. These are listening prompts, not measurements of these modeled speakers.',together:'A powerful output stage does not guarantee a clean speaker. The cone, motor and cabinet help decide what reaches your ears. An open back also sends sound into the room behind the amp, making placement part of the result.',choice:'A plausible reason for the two-speaker format is to share power and provide more radiating area than a single equivalent driver. The 1968 catalog documents the JBL D120F option; it does not establish Fender’s complete reasoning.',extraTitle:'Oxford or optional JBL?',extra:'The Oxford identity here comes from an owner-attributed take-out; its exact sensitivity, response and power rating are unverified. JBL’s 1970 D120F brochure describes a 4-inch edgewound coil and an aluminum center dome, and emphasizes clear upper frequencies and power handling. That supports a different design emphasis—not a controlled Oxford-versus-JBL listening result. Reconing and condition can change a surviving speaker substantially.',sources:[[catalog,'1968 Fender catalog'],[jbl,'JBL D120F brochure · 1970']],detail:'Oxford geometry and identification remain provisional. The photograph illustrates generic speaker anatomy; it is not evidence of this Oxford’s tone.'},
- 'power-tubes':{title:'Clean headroom is a team effort.',body:'The Twin’s four 6L6GCs operate as a push-pull output stage: two tubes on each side handle opposing halves of the signal. In this high-power circuit, that helps preserve a clean attack at levels where a smaller amp may already be compressing.',attributes:[['Output stage','4 × 6L6GC · push-pull'],['Circuit context','Fixed bias · negative feedback'],['Player tradeoff','More clean level · louder power-stage breakup']],listen:'Listen for separation between notes when you dig in. Power-stage overdrive requires substantial output; distortion from a pedal or an earlier stage can still arrive while these tubes are operating relatively cleanly.',together:'“6L6 tone” is shorthand, not a complete explanation. Supply voltage, bias, the phase inverter, feedback, transformer and speakers all matter. The Twin’s EQ and reverb character are not created by the power-tube type alone.',choice:'A plausible engineering goal was strong, clean output for larger performance spaces. The circuit supports that reading, but this is an interpretation—not a quotation from Fender’s designers.',extraTitle:'What the circuit tells us',extra:'The AB763 drawing documents four 6L6GCs, a fixed-bias supply, diode rectification and feedback from the output. It is a family reference: silver-panel appearance does not prove AB763 circuitry. The dated photographic specimen is described as AC568; this model does not authenticate its circuit or reproduce that schematic component for component.',sources:[[circuit,'Fender AB763 circuit · family reference'],['https://tube-data.com/sheets/049/6/6L6GC.pdf','RCA 6L6GC data sheet']],detail:'Four large output tubes and six smaller tubes are illustrated. Positions and envelopes remain approximate; the photograph shows RCA tubes for McIntosh, not this Fender’s original tubes.'},
- 'output-transformer':{title:'Keeping the low end together.',body:'The output transformer matches the power tubes to the speaker load. Its core and windings influence low-frequency power handling and bandwidth—part of whether a loud bass note stays defined or becomes compressed and distorted.',attributes:[['Job','Tube output to 4 Ω speaker load'],['What matters','Core · windings · load match'],['Tone context','Bandwidth and low-end power handling']],listen:'Compare the attack and definition of low notes as volume rises. A softer low end can come from several places: transformer limits, the power supply, output tubes or the speakers. Hearing it does not identify the cause by itself.',together:'The transformer works with the four 6L6GCs and the speaker load. In the AB763 family, the feedback loop also samples the output and reduces error within its operating range. The clean response belongs to the whole system, not a “magic” transformer in isolation.',choice:'A plausible design goal is to transfer the Twin’s available power without prematurely losing bass definition. That is an engineering interpretation; we have not established the original transformer’s measured bandwidth, core limits or Fender’s purchasing rationale.',extraTitle:'What we can—and cannot—infer',extra:'Transformer design can change bandwidth and distortion, as contemporary manufacturer engineering notes explain. Those principles do not identify this vintage unit’s material, exact saturation threshold or tonal signature. The dark block in the model is an estimated marker, not a reconstruction of an authenticated transformer.',sources:[[circuit,'Fender AB763 circuit · family reference'],['https://www.hammfg.com/electronics/transformers/audio/overview','Hammond transformer design overview']],detail:'Exact mounting position, dimensions and winding details remain unresolved. This is the output transformer, distinct from the mains power transformer.'}
+  "speakers": {
+    "title": "The JBL option changes the final filter.",
+    "body": "A JBL-equipped Twin and an Oxford-equipped Twin can share an amplifier circuit while delivering different attack and upper-frequency character. The optional speaker is a major configuration choice, not simply a different badge on the same sound.",
+    "attributes": [
+      [
+        "Modeled configuration",
+        "Oxford-family · two nominal 8 Ω drivers"
+      ],
+      [
+        "Factory option",
+        "JBL D120F · documented in 1968 catalog"
+      ],
+      [
+        "Comparison variables",
+        "Response · efficiency · compression · cone condition"
+      ]
+    ],
+    "listen": "For matched nominal drivers, parallel wiring shares amplifier power between the pair. Sensitivity determines acoustic level for that electrical input; frequency response determines where it is emphasized. A higher power-capacity label alone proves neither greater sensitivity nor a particular breakup sound.",
+    "together": "JBL’s 1970 literature specifies a 4-inch edgewound coil and an aluminum center dome, and promotes strong high-frequency definition. That is a documented design emphasis. The modeled Oxford’s exact response and sensitivity remain unmeasured, so an honest Oxford/JBL comparison still needs identified drivers and matched listening conditions.",
+    "extraTitle": "A recone can change the comparison",
+    "extra": "A vintage frame label can survive replacement of the cone and other moving parts. Reconing, coil details and condition matter to the sound attributed to a model name. The generic Nubert photograph illustrates construction only; it supplies no evidence about either vintage option’s tone.",
+    "sources": [
+      [
+        "https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php",
+        "1968 Fender catalog · JBL option"
+      ],
+      [
+        "https://www.cieri.net/Documenti/JBL/Documenti%20tecnici/Cataloghi/JBL%20-%20Musical%20Instrument%20Loudspeakers%20-%20D110F%2C%20D120F%2C%20D130F%2C%20D140F%20-%20Brochure%20%281970%29%20%28English%29.pdf",
+        "JBL 1970 brochure · D120F construction"
+      ]
+    ],
+    "detail": "Oxford identity is owner-attributed and its geometry remains estimated. No power rating, response curve or sensitivity is invented for it."
+  },
+  "power-tubes": {
+    "title": "AC568 adds cathode resistance to the bias story.",
+    "body": "The AC568 drawing retains a negative grid-bias supply and also puts substantial resistance in the output-tube cathode returns. “Four 6L6GCs” therefore misses a consequential distinction from the AB763 arrangement.",
+    "attributes": [
+      [
+        "AC568 drawing",
+        "Cathode resistors plus negative grid bias"
+      ],
+      [
+        "AB763 comparison",
+        "Output cathodes grounded"
+      ],
+      [
+        "Also changed",
+        "Phase-inverter component values"
+      ]
+    ],
+    "listen": "Cathode voltage can make the effective grid-to-cathode bias respond to output current. That makes operating point and drive behavior worth comparing before attributing a difference to tube brand. The exact audible result still requires a known circuit, healthy tubes and measurements.",
+    "together": "The phase inverter, grid-bias network, cathode returns, supply and feedback work together. A “blackface conversion” can change that system while leaving the same quartet installed. Tube type alone cannot tell you which version you are hearing.",
+    "extraTitle": "Why the 1968 label is insufficient",
+    "extra": "The reference dealer calls this specimen AC568. That attribution is useful, but the model has not reproduced or audited its entire chassis. The linked AB763/AC568 drawings establish a circuit comparison; they do not certify that this surviving amp is unmodified.",
+    "sources": [
+      [
+        "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Twin-Reverb-AC568-Schematic.pdf",
+        "Fender AC568 · output stage and phase inverter"
+      ],
+      [
+        "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
+        "Fender AB763 · comparison"
+      ]
+    ],
+    "detail": "This corrects the earlier generic fixed-bias summary: the AC568 cathode network deserves explicit treatment. Tube positions and envelopes in the model remain illustrative."
+  },
+  "output-transformer": {
+    "title": "The same transformer number can span different circuits.",
+    "body": "Both linked AB763 and AC568 drawings identify output transformer TR3 as 125A29A. A matching transformer identifier therefore cannot, by itself, prove that a silver-panel Twin retains the black-panel circuit.",
+    "attributes": [
+      [
+        "Drawing identifier",
+        "TR3 · 125A29A"
+      ],
+      [
+        "Nominal speaker load",
+        "4 Ω"
+      ],
+      [
+        "System connection",
+        "Output secondary feeds the feedback network"
+      ]
+    ],
+    "listen": "The turns ratio reflects the speaker load into the output stage. The feedback loop then samples the secondary signal, placing transformer behavior inside the amplifier’s correction loop. Core, windings, loading and available loop gain belong in the same explanation.",
+    "together": "A speaker change can alter the acoustic result while preserving nominal impedance. A load change also alters the electrical operating conditions seen through the transformer. Those are different comparisons; “same iron” does not hold the rest of the system constant.",
+    "extraTitle": "What the number does not tell us",
+    "extra": "The drawing designation does not establish this specimen’s installed unit, winding condition or measured bandwidth. We have not measured saturation or independently confirmed its transformer codes. No claim of a special vintage alloy or a universal “big iron” tone is warranted.",
+    "sources": [
+      [
+        "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
+        "Fender AB763 · TR3 and feedback"
+      ],
+      [
+        "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Twin-Reverb-AC568-Schematic.pdf",
+        "Fender AC568 · TR3 and feedback"
+      ]
+    ],
+    "detail": "The transformer block is an estimated spatial marker. Part-number comparison is schematic evidence, not authentication of the installed specimen."
+  }
 };
