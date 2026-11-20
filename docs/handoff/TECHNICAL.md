@@ -326,3 +326,9 @@ or DOM cards. Own captures: `images/construction-{inside,tubes}.png`.
 Photos are unmodified licensed files with source/license records under
 `dist/assets/explore/README.md` and in references.json. Actual specimen photos
 remain external links. The transformer has no embedded approved close-up yet.
+
+Pilot publication succeeded: GitHub runtime `32b17e8`, handoff `5ca2c72`; Site
+source `3d3b47b55380e80d1a604d010bc5461cb883a278`, deployment
+`appgdep_6b007223ef048191a77fc6bb3edd44a4`. Existing Site ID and owner-only
+audience preserved. Browser QA was local; the service confirms publication,
+not a signed-in production UI review.
