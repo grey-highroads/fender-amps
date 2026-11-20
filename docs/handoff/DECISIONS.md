@@ -52,11 +52,27 @@ reference-photo rights and credentials in mind when preparing public commits.
 
 ## Choices still open
 
-- Whether the finished asset workflow should move some parts into Blender and
-  imported GLB assets. Blender was discussed as a good route, but no measured
-  Blender master asset or production asset pipeline has been created.
+- Production adoption of the first Blender master: an editable Twin master and
+  reviewed GLB now exist, but the production loader and asset replacement have
+  not yet been implemented.
 - The final material sources, calibrated color process and acceptable fidelity
   standard for each component.
 - Exact vintage speaker/knob variants to represent within transitional years.
 - Backend, live spreadsheet synchronization, expanded catalog ingestion and
   automatic deployment. These are future possibilities, not existing features.
+
+## November 20: full-amp Blender master first
+
+The user approved a whole-amp-first approach after accepting knob 0.4 for now.
+Choose the 1968 early silverface Twin A-13834 because the selected specimen has
+stated dimensions and useful front/rear/chassis photos, with widely reusable
+hardware. Keep parts separate and repeated parts linked. Use the specimen's
+reported cabinet size rather than silently carrying reissue dimensions forward.
+This does not authenticate all dimensions: maintain a ledger distinguishing
+reported measurements, nominal part sizes and modeling estimates.
+
+The dealer identifies factory-option JBL speakers; the Blender master follows
+that specific example while the existing production Twin study remains Oxford.
+The new master is a separate review artifact until shape/material review,
+optimization and browser integration are complete. A GLB export is not itself
+production integration or evidence of high fidelity.

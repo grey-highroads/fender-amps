@@ -1,0 +1,41 @@
+{
+  "id": "twin-1968-retrofret-a13834",
+  "revision": "master-0.1",
+  "units": "millimetres",
+  "source": "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479",
+  "specimen": "1968 early silverface Twin Reverb A-13834, dealer-attributed factory JBL D120F pair",
+  "cabinet": {
+    "width": 666.75,
+    "height": 508,
+    "depth": 260.35,
+    "basis": "Dealer lists 26 1/4 W x 20 H x 10 1/4 D inches. Reported specimen dimensions, not independently measured. Treating height as cabinet body is a photographic interpretation; caster/handle inclusion is unresolved."
+  },
+  "estimates": {
+    "wallThickness": 18,
+    "frontSetbackAtTop": 23,
+    "cornerRadius": 12,
+    "faceplateWidth": 622,
+    "faceplateHeight": 41,
+    "faceplateBottom": 446,
+    "grilleWidth": 625,
+    "grilleHeight": 423,
+    "grilleBottom": 21,
+    "speakerCentersX": [-159,159],
+    "speakerCenterHeight": 218,
+    "speakerFrameDiameter": 310,
+    "speakerDepth": 135,
+    "rearUpperPanelBottom": 334,
+    "rearUpperPanelHeight": 102,
+    "rearLowerPanelBottom": 20,
+    "rearLowerPanelHeight": 117,
+    "casterWheelDiameter": 48,
+    "casterHeight": 62,
+    "note": "All subdimensions above are photographic modeling estimates; 12-inch speaker designation is nominal, not a measured 304.8 mm frame. No claim of independently verified mounting geometry."
+  },
+  "knob": {
+    "source": "../../dist/library/knob-profile.js",
+    "revision": "0.4",
+    "bridge": "source/knob-skirted-v04.glb",
+    "basis": "Exported from the actual shared component builder; exterior dimensions remain estimates. User accepted appearance for now."
+  }
+}

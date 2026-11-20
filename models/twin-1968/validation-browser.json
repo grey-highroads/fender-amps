@@ -1,0 +1,23 @@
+{
+  "browser": "Installed Chrome, headless WebGL",
+  "viewport": [
+    1500,
+    1200
+  ],
+  "errors": [],
+  "meshInstances": 253,
+  "renderedTriangles": 817724,
+  "cabinetMm": [
+    666.7500138282776,
+    508.0000162124634,
+    260.28957962989807
+  ],
+  "viewsInspected": [
+    "front",
+    "angle",
+    "rear",
+    "side",
+    "mounted knob close-up"
+  ],
+  "productionIntegrated": false
+}

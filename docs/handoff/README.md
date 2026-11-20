@@ -26,6 +26,7 @@ in progress; a functioning component is not necessarily an accurate component.
 | Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
 | Library | 24 components/materials and three reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
+| Blender master | [1968 Twin A-13834, first assembly pass](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
 
 The three reference assemblies are a 1957-style 5E3 Deluxe, a 1965-style blackface
@@ -99,18 +100,31 @@ Exact vintage glyph outlines remain provisional.
 
 ![Corrected inward-facing numeral bottoms](images/knob-v04-front.png)
 
+## Current direction: one complete amp as the master
+
+The user accepted knob 0.4 for now and asked to begin a complete Blender amp to
+establish relative scale and harvest reusable components. The selected first amp
+is the 1968 early silverface Twin, specifically RetroFret A-13834 with JBL D120F
+factory-option speakers. Its dealer-reported dimensions are 666.75 W × 508 H ×
+260.35 D mm; these differ from the existing reissue proxy. Detail dimensions and
+accessory inclusion remain estimates. See the [master record](../../models/twin-1968/README.md).
+
+An editable `.blend`, metre-scale `.glb`, named reusable objects, generated maps,
+dimension ledger and separate browser review now exist. This is master 0.1, an
+assembly foundation, not a completed faithful replica. The production library
+and private site remain on the accepted knob 0.4 runtime; the Oxford-equipped
+production Twin is distinct from this JBL-option master.
+
 ## Next useful work
 
-1. Compare knob revision 0.4 with the linked original-part and dated amp references
-   from front, side and rear, then mounted on both reference faceplates. The user
-   has seen the revision but has not declared it accurate or photorealistic.
-2. Resolve the remaining knob details: exact vintage numeral outlines and print
-   registration, original exterior dimensions, cap depth, flute count and underside
-   mold/insert. Preserve uncertainty when a photograph cannot establish a fact.
-3. Improve one component at a time to an agreed visual standard. After the knob
-   review, use the documented 1968 Twin as a common reference for Tolex, grille
-   cloth, faceplate, jewel, logo and hardware. Do not interpret that as a request
-   to expand the catalog or undertake an unrelated interface redesign.
+1. Review the complete Blender master silhouette, front openings, taper and
+   hardware positions against the selected specimen. Resolve the dealer height's
+   accessory inclusion and seek further original dimensions.
+2. Refine the Tolex grain/sheen, cloth weave/color and panel/badge artwork in the
+   context of the whole amp. Then refine JBL speaker and rear construction.
+3. Optimize the export and integrate its parts through the existing shared
+   library and cabinet/face/chassis animation structure. Browser-check the
+   inspector, timeline and detail before publishing a production replacement.
 
 The user is not a technical specialist and asks clarifying questions. Explain
 what changed and what evidence supports it in plain language. Show the visual

@@ -1,0 +1,16 @@
+{
+  "scene": "Twin 1968 \u2014 A-13834 \u2014 master 0.1",
+  "metres_per_blender_unit": 1,
+  "cabinet_xyz_mm": [
+    666.7500138282776,
+    260.28957962989807,
+    508.0000162124634
+  ],
+  "knobs": 11,
+  "linked_knob_body_meshes": 1,
+  "missing_images": [],
+  "packed_images": 10,
+  "font_files": [
+    "<builtin>"
+  ]
+}

@@ -169,3 +169,35 @@ Revision 0.4 runtime commit: `1d93ffd`. Site source commit:
 `1072c53534b462b652084a5a8ccab1d73ac4c596`. Owner-private deployment
 `appgdep_6b0047070b348191b111ad96e1c2f8ca` succeeded. Production confirmation
 comes from the publishing service; visual review was local.
+
+## First Blender master (November 20)
+
+`models/twin-1968/` holds the editable master, GLB, shared knob 0.4 bridge,
+packed/generated texture sources and dimension ledger. `tools/blender/` holds
+the initial generator, portable browser review page and saved-file checker.
+The installed live MCP connection was not available; installed Blender 5.2.2 LTS
+was run as a separate background process, without touching an interactive scene.
+
+Internal units are metres, displayed in millimetres. Blender X/-Y/Z maps to glTF
+X/+Z/Y. The initial geometry includes a continuous tapered open shell, separate
+rear panels, real baffle apertures, shared knob instances, JBL-option speaker
+studies and named hardware. Review floor/cameras/lights are excluded from GLB.
+The script bootstraps this baseline; do not overwrite future manual Blender edits
+by regenerating without first saving a separate copy.
+
+Current task: npm test passed; generator/texture-source syntax checked; GLB check
+`node checks/blender-master.mjs` passed. Actual browser GLTFLoader review covered
+front/angle/rear/side, with no page errors. Browser cabinet bounds agree within
+0.1 mm with the ledger. Saved-file checks verify metre units, 11 linked knob
+bodies and packed image availability. Roughly 818k rendered triangles / 6 MB GLB
+requires optimization before mobile/production integration. This is scale and
+transfer evidence, not historical or photoreal acceptance.
+
+The separate review uses existing studio environment plus its own gray background,
+lights and camera; Blender uses its own Cycles photographic studio. They are not
+matched lighting comparisons. The Blender studio currently makes the black
+covering appear too gray; browser finish also remains a study. No production
+runtime changed and no Site publication is needed for these source/review assets.
+
+Mounted knob close-up also reviewed after the Blender round trip: numeral
+orientation and shared 0.4 profile retained. See images/twin-master-knobs.png.

@@ -81,3 +81,23 @@ had the opposite orientation; its prior review did not catch this error. Revisio
 0.4 rotates each whole label 180 degrees in place and increases stroke weight by
 about 10%, as requested. No new historical measurements or photographic claims
 are introduced. Geometry and inspection setup are unchanged.
+
+## Full amp master: 1968 Twin A-13834
+
+The existing RetroFret source is now the specific first Blender master target.
+Dealer-reported size: height 20 in, width 26¼ in, depth 10¼ in. Treat as specimen
+reported dimensions, not independently measured or universal model dimensions.
+Height accessory inclusion is unclear; using 508 mm for the body is provisional.
+The dealer identifies original factory-option JBL D120F speakers; the earlier
+Oxford study is a different configuration and is retained separately.
+
+Newly inspected full front, rear, angled and exposed-chassis photographs (gallery
+01,02,03,06). The rear image supports removable upper/lower panels, cast JBL
+basket/motor arrangement and caster construction. It does not establish exact
+subdimensions. The new master has only provisional rear/speaker geometry, not a
+completed tube/circuit-board interior. All third-party photographs remain ignored
+under outputs/references/twin-master. No photographic pixels enter the model.
+
+Sources and estimates are recorded in models/twin-1968/dimensions.json; own browser
+review images are images/twin-master-{front,angle,rear,side}.png. Generated surfaces
+and approximate panel/badge artwork require further photographic review.
