@@ -169,3 +169,19 @@ replacement tracing. Mounted placement, inclination, depth, screw positions and
 chrome/paint response remain estimates. The blue title is custom drawn condensed
 caps; controls use approximate system sans-serif text. Our generated panel maps
 contain no reference-photo pixels or baked highlights.
+
+## Construction explorer photographs
+
+Two licensed representative photographs now ship with the app, with visible
+credits/captions/source links. See `dist/assets/explore/README.md` for the full
+license record. Joe Haupt's vintage RCA 6L6GC photograph is CC BY-SA 2.0, retained
+unmodified; it depicts McIntosh-branded tubes, not this Fender specimen. The
+Nubert rear loudspeaker photograph is public-domain and illustrates anatomy,
+not an Oxford or JBL identity. Licensing pages inspected November 20, 2026.
+
+Fender's tube-reference support page was consulted for the power-tube family:
+https://support.fender.com/hc/en-us/articles/42507659450779-What-tubes-are-in-my-amp
+The 1968 catalog remains the factory-option evidence. Positions, envelopes and
+transformer construction remain estimates; the interaction is not a service layout.
+The transformer card links to the RetroFret gallery rather than embedding an
+unlicensed image. No new dealer-photo redistribution rights are assumed.

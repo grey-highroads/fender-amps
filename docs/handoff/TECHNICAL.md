@@ -295,3 +295,34 @@ from source `00e283686076715eaa5363973c74fd9f1a24243d`, deployment
 `appgdep_6b006ba028a08191b176f84b0e877779`. Site ID and audience were preserved.
 The shared runtime badge/panel refinements are live; the complete Blender master
 remains a separate review asset. `npm test` was repeated successfully after saving.
+
+## Construction explorer pilot / November 20
+
+`dist/explore.js` owns the Twin's explanatory content, projected DOM hotspot
+buttons, keyboard-equivalent component navigation and in-viewport cards. Anchors
+are tagged on actual shared amp groups in `amp-models.js`; Twin geometry reaches
+the library, timeline and detail. DOM cards only activate on this assembly.
+Inside removes the two tagged rear panels and selects a rear camera, retaining
+physical component relationships rather than exploding the Twin. Cabinet restores
+panels and clears the card. Existing explosion behavior remains on other amps.
+
+The shared Twin now has four larger output-tube envelopes and six small tubes,
+plus an explicitly estimated output-transformer marker. This is educational
+geometry, not a source-verified socket/transformer layout. The Blender master,
+cabinet dimensions, knobs and materials were not revised. A narrower camera fit
+is applied only to this Twin to make room for the card. Mobile uses small
+projected plus markers and equivalent named buttons; the card scrolls internally.
+
+Review entry: `/?amp=twin-1968&view=inside`, using ordinary timeline open/close
+behavior. Tests: npm test, changed-module syntax, whitespace checks. Actual Chrome
+review at 1500×1100 and 390×844: three projected hotspots, direct hotspot click,
+all three cards, loaded photos, Escape/close, Cabinet reset, different-amp reset,
+review deep link and exact timeline scroll restoration. No page errors; no mobile
+horizontal overflow. Library rear view inspected and real Twin GLB exported:
+glTF 2, metres, 27,188,436 bytes, speaker/power-tube/transformer anchor metadata
+retained. Export includes the cabinet configuration, not transient hidden panels
+or DOM cards. Own captures: `images/construction-{inside,tubes}.png`.
+
+Photos are unmodified licensed files with source/license records under
+`dist/assets/explore/README.md` and in references.json. Actual specimen photos
+remain external links. The transformer has no embedded approved close-up yet.

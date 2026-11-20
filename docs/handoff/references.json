@@ -57,7 +57,7 @@
       "id": "fender-0990930000",
       "page": "https://uk.fender.com/products/pure-vintage-black-silver-skirted-amplifier-knobs",
       "type": "Modern manufacturer replacement",
-      "provenance": "Fender Pure Vintage replacement part. Black, white-stamped 1\u201310, silver center, set screw, 1/4-inch solid shaft.",
+      "provenance": "Fender Pure Vintage replacement part. Black, white-stamped 1–10, silver center, set screw, 1/4-inch solid shaft.",
       "use": [
         "isolated part form",
         "mounting interface",
@@ -128,6 +128,25 @@
       "url": "https://www.stars-music.fr/medias/fender/pure-vintage-black-silver-skirted-amplifier-knobs-x6-hd-135741.jpg",
       "source_id": "stars-modern-photos",
       "view": "group"
+    }
+  ],
+  "construction_explorer_photos": [
+    {
+      "file": "dist/assets/explore/6l6gc-joe-haupt.jpg",
+      "author": "Joe Haupt",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Vintage_RCA_Blackplate_6L6GC_Vacuum_Tubes_Made_For_McIntosh,_Made_In_USA_(15643635699).jpg",
+      "qualification": "Representative RCA tubes for McIntosh, not the Fender specimen",
+      "changes": "None"
+    },
+    {
+      "file": "dist/assets/explore/speaker-nubert.jpg",
+      "author": "Günther Nubert",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:12zollhinten.jpg",
+      "qualification": "Representative Nubert loudspeaker, not Oxford or JBL",
+      "changes": "None"
     }
   ]
 }

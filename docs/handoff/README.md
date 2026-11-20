@@ -3,10 +3,11 @@
 Updated November 20, 2026. This is the starting point for continuing the Amplifier
 Observatory without relying on the chat history.
 
-**Current priority: improve the photographic fidelity of the shared component
-library, then judge those improvements on the actual amps.** The interaction
-prototype and reusable structure are established. Visual accuracy remains work
-in progress; a functioning component is not necessarily an accurate component.
+**Current priority: educational construction, supported by real photographs.**
+The user redirected the project away from photoreal asset production after
+reviewing the workload. The 1968 Twin is the first inside-view/hotspot pilot.
+Accurate proportions and meaningful construction relationships matter; the
+models remain interpretive and exact interior placement is not established.
 
 ## Read next
 
@@ -20,7 +21,7 @@ in progress; a functioning component is not necessarily an accurate component.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `452a94d`, badge/panel study 0.1; surface study 0.1; knob 0.4 |
+| Runtime baseline | Commit `32b17e8`, construction explorer pilot; badge/panel 0.1; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
@@ -156,20 +157,30 @@ the dated Twin and modern replacement construction photos. They are not an exact
 vintage tracing. No reference-photo pixels were embedded. Camera and lights are
 unchanged; badge placement and mounting depth intentionally changed.
 
+## Construction explorer pilot
+
+Open the [Twin inside view](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site/?amp=twin-1968&view=inside).
+Cabinet restores the rear panels; Inside the amp removes them and turns to a rear
+view without separating the physical assembly. Three model-attached hotspots
+and equivalent keyboard-accessible buttons explain speakers, power tubes and
+the output transformer. Selecting a part opens an in-viewport card.
+
+The speaker and tube cards contain licensed representative photographs, clearly
+distinguished from actual 1968 factory parts. The transformer links to the vintage
+chassis gallery; no dealer image has been republished. The Twin now distinguishes
+four larger power tubes from six smaller tubes and has an approximate transformer
+marker. This is an interaction pilot, not a verified service diagram.
+
+![Construction and photograph pilot](images/construction-tubes.png)
+
 ## Next useful work
 
-1. Review the complete Blender master silhouette, front openings, taper and
-   hardware positions against period factory evidence and the specimen. Reconcile
-   catalog/dealer dimensions and seek original measurements.
-2. Refine the Tolex grain/sheen, cloth weave/color and panel/badge artwork in the
-   context of the whole amp. Then refine JBL speaker and rear construction.
-3. Optimize the export and integrate its parts through the existing shared
-   library and cabinet/face/chassis animation structure. Browser-check the
-   inspector, timeline and detail before publishing a production replacement.
-
-The user is not a technical specialist and asks clarifying questions. Explain
-what changed and what evidence supports it in plain language. Show the visual
-result; do not substitute implementation detail or passing tests for fidelity.
+1. Review whether the inside-view and photo cards make construction clearer.
+2. Establish a source-backed Twin interior layout, including both transformers,
+   chassis, reverb tank and wiring relationships. Replace generic photographs
+   with authorized model-specific photographs when available.
+3. Once the interaction is accepted, extend the same data/anchor pattern to the
+   other reference amps. Collection expansion remains deferred.
 
 ## Handoff maintenance
 

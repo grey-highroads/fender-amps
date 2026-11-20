@@ -91,3 +91,17 @@ the dealer specimen's casters are certainly aftermarket. Period catalog and deal
 cabinet dimensions differ; retain both with an unresolved status, rather than
 silently substituting or averaging them. This supersedes the specimen-first
 configuration choice in master 0.1.
+
+## Educational construction replaces photorealism as the priority
+
+The user judged the photographic changes marginal and, after discussing workload
+for 200+ amps, authorized a different direction: use 3D to explain cabinet and
+interior construction, with hotspots opening explanatory cards and photographs
+inside the viewport. Start with the existing Twin, not a new collection or
+framework. Preserve shared component factories and timeline/detail behavior.
+
+Photorealism is deferred. Do not interpret this as permission to invent historical
+construction: geometry/layout estimates still need labels and source distinctions.
+Representative licensed photos can explain component anatomy; do not pass them
+off as the selected Fender's original parts. Dealer photographs stay linked until
+reuse permission is established. The separate Blender master is unchanged.

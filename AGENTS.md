@@ -4,8 +4,9 @@ Read [docs/handoff/README.md](docs/handoff/README.md) before changing this proje
 It links the current state, user priorities, decisions, architecture, references,
 and the separate GitHub and private-site publishing workflows.
 
-- The current priority is photographic component fidelity in three reference
-  amps. Keep improvements in the shared library so they reach the timeline and
+- The current priority is an educational construction explorer: use 3D for
+  proportions and component relationships, with clearly attributed real photos.
+  Photorealism is deferred. The first interaction pilot is the 1968 Twin. Keep improvements in the shared library so they reach the timeline and
   detail views. Collection expansion is deferred.
 - Model Fender factory production for the selected year. Use period Fender
   documentation for configuration, label factory options, and do not treat a
