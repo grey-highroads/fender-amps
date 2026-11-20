@@ -8,3 +8,6 @@ outputs/
 *.blend1
 *.blend2
 __pycache__/
+
+# Separate checkout for the existing private Sites source history.
+.site-publish/

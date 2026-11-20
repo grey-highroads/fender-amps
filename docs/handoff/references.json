@@ -1,0 +1,132 @@
+{
+  "component": "knob-skirted",
+  "purpose": "Evidence supporting skirted knob photographic revision 0.2. See linked source qualifications and pending measurements.",
+  "references": [
+    {
+      "id": "retrofret-twin-1968",
+      "page": "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479",
+      "file": "1968-twin-05.jpg",
+      "type": "Dated vintage specimen",
+      "provenance": "Dealer dates serial A-13834 and component codes to 1968 and explicitly states all original knobs are intact.",
+      "use": [
+        "front silhouette",
+        "numbering orientation",
+        "cap-to-skirt ratio",
+        "plastic gloss",
+        "mounted projection"
+      ],
+      "limits": [
+        "No caliper dimensions",
+        "Photographic perspective",
+        "Dealer attribution, not independent authentication"
+      ]
+    },
+    {
+      "id": "mystic-mid1960s-original-knobs",
+      "page": "https://reverb.com/item/30438997-fender-original-1960s-blackface-amp-knobs-seven-snowman-8",
+      "type": "Isolated vintage parts, seller-attributed",
+      "provenance": "Seller lists 1965, describes mid-1960s Showman take-off knobs, snowman-shaped 8, set screw aligned at 10, metal straight-shaft inserts.",
+      "use": [
+        "number glyphs",
+        "underside insert",
+        "set-screw alignment",
+        "cross-check original part profile"
+      ],
+      "limits": [
+        "Seller attribution is not independent date authentication",
+        "Image CDN could not be retrieved in this session; inspect gallery directly before modeling its hidden details"
+      ]
+    },
+    {
+      "id": "folkway-deluxe-1965",
+      "page": "https://folkwaymusic.com/vintage-instruments/item/id.5437",
+      "file": "1965-deluxe-folkway.jpg",
+      "type": "Dated vintage specimen",
+      "provenance": "Dealer describes early-1965 amp as almost entirely original and supplies transformer and speaker date codes.",
+      "use": [
+        "cross-check blackface era appearance",
+        "mounted proportions"
+      ],
+      "limits": [
+        "Individual knob originality not explicitly confirmed",
+        "Wide photograph rather than macro",
+        "Early example lacks raised grille badge"
+      ]
+    },
+    {
+      "id": "fender-0990930000",
+      "page": "https://uk.fender.com/products/pure-vintage-black-silver-skirted-amplifier-knobs",
+      "type": "Modern manufacturer replacement",
+      "provenance": "Fender Pure Vintage replacement part. Black, white-stamped 1\u201310, silver center, set screw, 1/4-inch solid shaft.",
+      "use": [
+        "isolated part form",
+        "mounting interface",
+        "secondary material reference"
+      ],
+      "limits": [
+        "Modern replacement, not proof of a specific 1965 or 1968 mold",
+        "1/4-inch is shaft diameter, not overall knob diameter"
+      ]
+    },
+    {
+      "id": "stars-modern-photos",
+      "page": "https://www.stars-music.fr/fender-pure-vintage-black-silver-skirted-amplifier-knobs_135741.html",
+      "type": "Isolated modern replacement photographs",
+      "provenance": "Product gallery inspected during revision 0.2; secondary construction evidence only.",
+      "use": [
+        "fine fluting",
+        "tapered grip",
+        "cap recess",
+        "underside",
+        "side set screw"
+      ],
+      "limits": [
+        "Modern replacement, not an authenticated vintage mold",
+        "No caliper measurements"
+      ]
+    }
+  ],
+  "review_before_modeling": [
+    "Compare the current revision with original-part photos before another geometry change",
+    "Resolve exact vintage numeral outlines, spacing and print orientation",
+    "Verify original exterior dimensions, cap depth and flute count",
+    "Verify underside/insert against an original isolated part",
+    "Preserve source-confidence distinctions and separate wear from factory appearance"
+  ],
+  "observations_from_inspected_photos": [
+    "Mounted originals show broad shallow numbered skirts and compact grips.",
+    "Isolated modern-part photos clearly show fine fluting; the prior generic chunky grip blocks were inaccurate.",
+    "Revision 0.2 removed the unsupported raised pointer bar, rebuilt the grip and draped its numerals over the sloping skirt.",
+    "Measurements and exact vintage artwork remain provisional."
+  ],
+  "reference_images": [
+    {
+      "filename": "1968-twin-05.jpg",
+      "url": "https://retrofret.com/cdn/shop/files/05_3af88580-8c0b-4d42-ac25-e4cea1acf909.jpg?v=1774343678&width=1946",
+      "source_id": "retrofret-twin-1968"
+    },
+    {
+      "filename": "1965-deluxe-folkway.jpg",
+      "url": "https://images.folkway.ca/images/instruments/176064562137831965_Fender_Deluxe_Reverb_Amp-1025-2Main.jpg",
+      "source_id": "folkway-deluxe-1965"
+    },
+    {
+      "filename": "isolated-front-modern.jpg",
+      "url": "https://www.stars-music.fr/medias/fender/pure-vintage-black-silver-skirted-amplifier-knobs-x6-hd-3-135741.jpg",
+      "source_id": "stars-modern-photos",
+      "view": "underside"
+    },
+    {
+      "filename": "isolated-angle-modern.jpg",
+      "url": "https://www.stars-music.com/medias/fender/pure-vintage-black-silver-skirted-amplifier-knobs-x6-600-2-135741.jpg",
+      "source_id": "stars-modern-photos",
+      "view": "angled top"
+    },
+    {
+      "filename": "isolated-six-modern.jpg",
+      "url": "https://www.stars-music.fr/medias/fender/pure-vintage-black-silver-skirted-amplifier-knobs-x6-hd-135741.jpg",
+      "source_id": "stars-modern-photos",
+      "view": "group"
+    }
+  ]
+}

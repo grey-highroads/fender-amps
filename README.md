@@ -3,6 +3,8 @@
 An interactive Fender guitar tube amplifier timeline and reusable 3D component
 library. This repository contains only the Amplifier Observatory project.
 
+For project context and continuation, start with [the handoff](docs/handoff/README.md).
+
 ## Run locally
 
 Requires Node.js 20 or newer and Python 3. No dependency installation is needed;
