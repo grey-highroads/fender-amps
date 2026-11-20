@@ -14,3 +14,6 @@ __pycache__/
 
 # Local backups, official maintenance tools and isolated migration rehearsal.
 .maintenance/
+
+# Vercel local project linkage and deployment metadata.
+.vercel/
