@@ -116,3 +116,11 @@ The Git build selected Node 26.x because package.json specifies `>=20`, overridi
 the project's 24.x setting. All checks passed; the package currently allows future
 major upgrades. This hosting task did not change that engine range. This record
 is the last inspected release, not a promise that later commits are verified.
+
+## First amp expansion publication
+
+The 22-entry timeline / six-assembly runtime was published from main at
+`1cad27e`: deployment `dpl_ZkxAX2DJYdihb2feiKEnmk3zcioy`, READY, Git source.
+See [small-amp build and validation](SMALL_AMPS.md). Live browser routes and a
+SHA-256 match of the served model factory were checked. Later documentation
+updates do not change this inspected runtime baseline.

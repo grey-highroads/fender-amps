@@ -106,3 +106,19 @@ pages; detailed hotspots wait for the research/schematic pass.
 - Automatic preview of `d0a8761` reached READY at
   `amplifier-observatory-36eqbne4h-grey-7947s-projects.vercel.app`; remote logs
   confirm all five checks, 22 mappings and hydrated LFS model validation.
+
+## Publication
+
+Runtime batch `d0a8761`, with validation notes at `1cad27e`, was fast-forwarded
+to main and auto-deployed successfully. Inspected production deployment:
+`dpl_ZkxAX2DJYdihb2feiKEnmk3zcioy` (source `git`, SHA
+`1cad27ebf10625b1a0ef58d8aebda0d877f33560`), READY. The public model factory's
+SHA-256 matched the checked local file. Live browser routes confirmed:
+
+- https://fendertubeamps.com/?amp=champ-1959
+- https://fendertubeamps.com/?amp=tremolux-1955
+- https://fendertubeamps.com/?amp=deluxe-1962
+
+The original private Sites prototype was not republished. The parallel research
+branch was not merged or edited. Later documentation-only commits may produce
+new Vercel deployments without changing this runtime baseline.
