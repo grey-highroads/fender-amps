@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {studioEnvironment} from './library/studio.js';
+import {disposeObject} from './library/parts.js';
 
 const $=id=>document.getElementById(id);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -109,7 +110,7 @@ function initScene(){
  function frame(ms){requestAnimationFrame(frame);if(!visible||document.hidden){last=ms;return;}const dt=Math.min((ms-last)/1000,.05);last=ms;const t=ms*.001;if(!reduced)activeAmp.position.y=Math.sin(t*.55)*.045;explode+=(targetExplode-explode)*(reduced?1:.07);activeAmp.children[1].position.z=explode*.95;activeAmp.children[2].position.y=explode*.78;activeAmp.children[2].position.z=-explode*.42;if(viewTransition){viewTransition.t=Math.min(1,viewTransition.t+dt*1.5);const p=viewTransition.t;camera.position.lerpVectors(viewTransition.from,viewTransition.to,p*p*(3-2*p));if(p===1)viewTransition=null;}controls.update(dt);renderer.render(scene,camera);}requestAnimationFrame(frame);
  document.addEventListener('visibilitychange',()=>{last=performance.now()});
  return {base:amp, setVisible(value){visible=value;if(value)resize();}, showModel(model){
-   if(activeAmp!==amp){scene.remove(activeAmp);const disposedTextures=new Set();activeAmp.traverse(o=>{if(o.isMesh&&o.material!==undefined){for(const key of ['map','bumpMap','normalMap','roughnessMap','metalnessMap','alphaMap']){const texture=o.material[key];if(texture&&!disposedTextures.has(texture)){texture.dispose();disposedTextures.add(texture);}}o.geometry.dispose();o.material.dispose();}});}
+   if(activeAmp!==amp){scene.remove(activeAmp);disposeObject(activeAmp);}
    amp.visible=!model;activeAmp=model||amp;if(model)scene.add(model);targetExplode=0;explode=0;setExploded(false);camera.position.set(5,3.1,8.6);controls.target.set(0,.1,0);viewTransition=null;auto=!reduced;updateRotate();controls.update();
  }};
 }
