@@ -8,7 +8,7 @@ export const TWIN_FEATURES=[
       0,
       -25
     ],
-    "title": "The Volume knob comes after the first triode.",
+    "title": "The first stage can be pushed before Volume turns it down.",
     "body": "Input 2 reduces the signal before the first gain stage. Turning down Volume happens later. Those moves can produce different distortion even when the eventual loudness is similar.",
     "attributes": [
       [
@@ -21,10 +21,10 @@ export const TWIN_FEATURES=[
       ],
       [
         "Path",
-        "Input → first triode → EQ / Volume → second triode"
+        "Input → first gain stage → EQ / Volume → second triode"
       ]
     ],
-    "listen": "A hot pickup or boost can overload the first triode before Volume attenuates the signal. Input 2 changes both the level and the load seen by a passive pickup; its lower impedance can damp the pickup/cable resonance. Restoring downstream volume does not restore that same input interaction.",
+    "listen": "A hot pickup or boost can push the first gain stage before Volume turns the signal down. Input 2 changes both the level and the load seen by a passive pickup; its lower impedance can take some edge off a passive pickup’s resonant peak. Restoring downstream volume does not restore that same input interaction.",
     "together": "The phase inverter and output stage respond to the signal that survives the preamp. A quieter input therefore changes where clipping begins; it does not independently change the 6L6 operating conditions. The guitar’s source impedance, EQ settings and available downstream gain matter.",
     "extraTitle": "The channel-jumper wrinkle",
     "extra": "In the AB763 drawing, the Vibrato channel has an additional dry-signal gain stage at the reverb mixer. The Normal and Vibrato dry paths consequently reach the common mix with opposite polarity. Bridging channels can yield frequency-dependent cancellation. The input-jack loading figures above assume only one socket in that channel is occupied.",
@@ -88,8 +88,8 @@ export const TWIN_FEATURES=[
       30,
       -12
     ],
-    "title": "The optical cell works on the mixed channel signal.",
-    "body": "The optical tremolo acts downstream of the Vibrato channel’s dry/reverb mix. The wet return participates in the level modulation too—a different relationship from putting a separate reverb effect after a tremolo pedal.",
+    "title": "The spring tail goes through the pulse, too.",
+    "body": "The optical tremolo acts downstream of the Vibrato channel’s dry/reverb mix. The spring tail is pulsed too. That feels different from putting a reverb pedal after a tremolo pedal.",
     "attributes": [
       [
         "Topology",

@@ -3,7 +3,7 @@ import {assetById} from './catalog.js';
 import {createMaterial,physicalUV} from './materials.js';
 import {createSkirtedKnob} from './knobs.js';
 import {createRaisedTailBadge} from './tail-badge.js';
-import {TWIN_PANEL as TP} from './identification-profile.js';
+import {TWIN_PANEL as TP,DELUXE_PANEL as DP} from './identification-profile.js';
 import {twinPanelMaps} from './twin-panel-art.js';
 export const MM=.17/25.4;
 const brandImage=new Image();const brandReady=new Promise(resolve=>{brandImage.onload=resolve;brandImage.onerror=resolve;});brandImage.src=new URL('../assets/fender-wordmark.svg',import.meta.url).href;
@@ -59,7 +59,7 @@ export function createFaceplate(id){
  const chrome=material('#b8c0bd',{metalness:.85,roughness:.3});mesh(g,new THREE.BoxGeometry(W,H,2),chrome);
  const c=document.createElement('canvas');c.width=3072;c.height=320;const x=c.getContext('2d');x.fillStyle=tweed?'#bdc3bc':twin?'#b0bab6':'#090c0d';x.fillRect(0,0,c.width,c.height);x.strokeStyle=twin?'#315a65':'#d5d4c6';x.lineWidth=3;x.strokeRect(10,10,3052,300);x.fillStyle=twin?'#214f60':tweed?'#1e2522':'#eee9d6';x.textAlign='center';
  const toX=mm=>mm/W*3072;const labels=tweed?['TONE','INST. VOL.','MIC. VOL.']:twin?['VOLUME','TREBLE','MIDDLE','BASS','VOLUME','TREBLE','MIDDLE','BASS','REVERB','SPEED','INTENSITY']:['VOLUME','TREBLE','BASS','VOLUME','TREBLE','BASS','REVERB','SPEED','INTENSITY'];
- const knobs=tweed?[65,115,165]:twin?TP.knobs.map(v=>v/TP.widthMm*W):[71,110,149,246,284,322,360,398,436];
+ const knobs=tweed?[65,115,165]:twin?TP.knobs.map(v=>v/TP.widthMm*W):DP.knobs;
  x.font='bold 30px Arial';labels.forEach((label,i)=>x.fillText(label,toX(knobs[i]),285));
  if(!tweed){x.font='bold 29px Arial';x.fillText('NORMAL',toX(29),285);x.fillText('VIBRATO',toX(twin?227:202),285);x.font=twin?'42px Arial':'italic 49px Georgia';x.fillText(twin?'TWIN REVERB-AMP':'Deluxe Reverb-Amp',toX(twin?550:494),100,twin?410:390);x.font='17px Arial';x.fillText('FENDER MUSICAL INSTRUMENTS',toX(twin?550:494),140,360);}
  else{x.font='bold 28px Arial';x.fillText('INSTRUMENT',toX(270),285);x.fillText('MICROPHONE',toX(320),285);}
@@ -67,7 +67,7 @@ export function createFaceplate(id){
  if(twin){const maps=twinPanelMaps();artwork=maps.color;extra={metalness:1,roughness:1,metalnessMap:new THREE.CanvasTexture(maps.metallic),roughnessMap:new THREE.CanvasTexture(maps.rough)};}
  const t=new THREE.CanvasTexture(artwork);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,...extra}),0,0,1.1);
  for(const [i,k] of knobs.entries()){const settings=twin?[3,5.5,5,4.5,3.5,5,5.5,4,2.5,3,4]:[3,5,4,3.5,5.5,4.5,2.5,3,4];const knob=createKnob(tweed?'knob-chicken':'knob-skirted',{setting:settings[i]});knob.position.set(k-W/2,0,1.5);g.add(knob);}
- const jacks=tweed?[[270,-9],[270,9],[320,-9],[320,9]]:(twin?TP.jacks.map(v=>v/TP.widthMm*W):[17,40,190,213]).map(v=>[v,0]);for(const [j,y] of jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
+ const jacks=tweed?[[270,-9],[270,9],[320,-9],[320,9]]:(twin?TP.jacks.map(v=>v/TP.widthMm*W):DP.jacks).map(v=>[v,0]);for(const [j,y] of jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
  if(twin)for(const x of TP.bright){const k=x/TP.widthMm*W;mesh(g,new THREE.BoxGeometry(5,10,2),material('#131716'),k-W/2,3,2);mesh(g,new THREE.BoxGeometry(3,5,2.8),material('#131716'),k-W/2,4,3.5);}
  const jewel=createJewel();jewel.position.set((tweed?24:twin?TP.pilot/TP.widthMm*W:557)-W/2,0,2);g.add(jewel);g.name=id;return g;
 }

@@ -50,7 +50,7 @@ export const TWIN_TONE={
         "Phase-inverter component values"
       ]
     ],
-    "listen": "Cathode voltage can make the effective grid-to-cathode bias respond to output current. That makes operating point and drive behavior worth comparing before attributing a difference to tube brand. The exact audible result still requires a known circuit, healthy tubes and measurements.",
+    "listen": "As current rises, voltage at the cathodes can shift the tubes’ bias—the conditions they are working under. That makes the circuit worth checking before giving the tube brand credit for a change in feel. The exact audible result still requires a known circuit, healthy tubes and measurements.",
     "together": "The phase inverter, grid-bias network, cathode returns, supply and feedback work together. A “blackface conversion” can change that system while leaving the same quartet installed. Tube type alone cannot tell you which version you are hearing.",
     "extraTitle": "Why the 1968 label is insufficient",
     "extra": "The reference dealer calls this specimen AC568. That attribution is useful, but the model has not reproduced or audited its entire chassis. The linked AB763/AC568 drawings establish a circuit comparison; they do not certify that this surviving amp is unmodified.",
@@ -67,7 +67,7 @@ export const TWIN_TONE={
     "detail": "This corrects the earlier generic fixed-bias summary: the AC568 cathode network deserves explicit treatment. Tube positions and envelopes in the model remain illustrative."
   },
   "output-transformer": {
-    "title": "The same transformer number can span different circuits.",
+    "title": "The same transformer number can hide a different circuit.",
     "body": "Both linked AB763 and AC568 drawings identify output transformer TR3 as 125A29A. A matching transformer identifier therefore cannot, by itself, prove that a silver-panel Twin retains the black-panel circuit.",
     "attributes": [
       [
@@ -83,7 +83,7 @@ export const TWIN_TONE={
         "Output secondary feeds the feedback network"
       ]
     ],
-    "listen": "The turns ratio reflects the speaker load into the output stage. The feedback loop then samples the secondary signal, placing transformer behavior inside the amplifier’s correction loop. Core, windings, loading and available loop gain belong in the same explanation.",
+    "listen": "The transformer makes the speaker’s load part of what the power tubes work into. The feedback loop then samples the secondary signal, placing transformer behavior inside the amplifier’s correction loop. Core, windings, loading and available loop gain belong in the same explanation.",
     "together": "A speaker change can alter the acoustic result while preserving nominal impedance. A load change also alters the electrical operating conditions seen through the transformer. Those are different comparisons; “same iron” does not hold the rest of the system constant.",
     "extraTitle": "What the number does not tell us",
     "extra": "The drawing designation does not establish this specimen’s installed unit, winding condition or measured bandwidth. We have not measured saturation or independently confirmed its transformer codes. No claim of a special vintage alloy or a universal “big iron” tone is warranted.",

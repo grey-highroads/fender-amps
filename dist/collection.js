@@ -109,4 +109,6 @@ updatePosition();
 
 // Review link uses the same entry/close behavior as a timeline selection.
 const exhibitQuery=new URLSearchParams(location.search);
-if(exhibitQuery.get('amp')==='twin-1968'){const i=amps.findIndex(a=>a.year===1968&&a.name==='Twin Reverb');if(i>=0){openAmp(i,cards[i]);if(exhibitQuery.get('view')==='inside')$('rear').click();}}
+const reviewAmps={'twin-1968':{year:1968,name:'Twin Reverb'},'deluxe-reverb-1965':{year:1963,name:'Deluxe Reverb'}};
+const reviewAmp=reviewAmps[exhibitQuery.get('amp')];
+if(reviewAmp){const i=amps.findIndex(a=>a.year===reviewAmp.year&&a.name===reviewAmp.name);if(i>=0){openAmp(i,cards[i]);if(exhibitQuery.get('view')==='inside')$('rear').click();}}

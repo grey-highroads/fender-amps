@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {TWIN_PANEL} from './library/identification-profile.js';
+import {TWIN_PANEL,DELUXE_PANEL} from './library/identification-profile.js';
 import {assemblyFor,assetById} from './library/catalog.js';
 import {createMaterial,physicalUV} from './library/materials.js';
 import {MM,createSpeaker,createFaceplate,createBadge,createHandle,disposeObject} from './library/parts.js';
@@ -93,26 +93,35 @@ export function createAmpModel(a){
  }
  if(front)for(const x of [-w*.43,w*.43]){box(cab,.10,.018,d*.75,x,h/2+.016,0,chrome,.006);for(const zz of [-d*.30,d*.30])cyl(cab,.018,.012,x,h/2+.033,zz,chrome);}
  box(chassis,w*.82,.22,.44,0,h/2-.35,-d*.20,chrome);
- const educationalTwin=profile?.id==='twin-reverb-early';
- const tubes=tweed?5:twin?10:9;const powerGroup=new THREE.Group();chassis.add(powerGroup);powerGroup.userData.explorePart='power-tubes';powerGroup.userData.exploreOffset=[0,-.18,-.06];
- for(let i=0;i<tubes;i++){const x=(i-(tubes-1)/2)*w*.07;const glass=mat(0x9d9280,{transparent:true,opacity:.46,metalness:.25,roughness:.2});const power=educationalTwin&&i>=6;const parent=power?powerGroup:chassis;const tubeX=educationalTwin?(i<6?-w*.34+i*w*.067:w*.10+(i-6)*w*.075):x;const tubeY=h/2-(power?.72:.62);cyl(parent,power?.075:.05,power?.45:educationalTwin?.23:i<3?.23:.32,tubeX,tubeY,-d*.25,glass);if(power)cyl(parent,.079,.065,tubeX,h/2-.46,-d*.25,black);const glow=mat(0xe19743,{emissive:0xdc5515,emissiveIntensity:1.3});glow.name='tube-filament';cyl(parent,.009,.14,tubeX,tubeY,-d*.25,glow);}
- if(educationalTwin){
-  // Teaching geometry: approximate location/envelope, not a service layout.
+ const educationalTwin=profile?.id==='twin-reverb-early',educationalDeluxe=profile?.id==='deluxe-reverb-black',explorable=educationalTwin||educationalDeluxe;
+ const tubes=tweed?5:twin?10:9,powerGroup=new THREE.Group(),rectifierGroup=new THREE.Group();chassis.add(powerGroup);powerGroup.userData.explorePart='power-tubes';powerGroup.userData.exploreOffset=[0,-.18,-.06];
+ if(educationalDeluxe){chassis.add(rectifierGroup);rectifierGroup.userData.explorePart='rectifier';rectifierGroup.userData.exploreOffset=[0,-.18,-.06];}
+ for(let i=0;i<tubes;i++){
+  const power=explorable&&i>=6&&(!educationalDeluxe||i<8),rectifier=educationalDeluxe&&i===8;
+  const parent=power?powerGroup:rectifier?rectifierGroup:chassis;
+  const x=explorable?(i<6?-w*.34+i*w*.067:rectifier?w*.34:w*.10+(i-6)*w*.075):(i-(tubes-1)/2)*w*.07;
+  const y=h/2-(power||rectifier?.72:.62),glass=mat(0x9d9280,{transparent:true,opacity:.46,metalness:.25,roughness:.2});
+  cyl(parent,power||rectifier?.075:.05,power||rectifier?.45:explorable?.23:i<3?.23:.32,x,y,-d*.25,glass);
+  if(power||rectifier)cyl(parent,.079,.065,x,h/2-.46,-d*.25,black);
+  const glow=mat(0xe19743,{emissive:0xdc5515,emissiveIntensity:1.3});glow.name='tube-filament';cyl(parent,.009,.14,x,y,-d*.25,glow);
+ }
+ if(explorable){
+  // Provisional teaching envelopes, not an audited chassis layout.
   const transformer=new THREE.Group();transformer.userData.explorePart='output-transformer';transformer.userData.exploreOffset=[0,-.16,-.25];chassis.add(transformer);
-  box(transformer,.57,.38,.50,-w*.12,h/2-.67,d*.08,dark,.02);
-  for(const side of [-1,1])box(transformer,.10,.40,.53,-w*.12+side*.26,h/2-.67,d*.08,black,.03);
-  for(let i=0;i<8;i++)box(transformer,.37,.012,.51,-w*.12,h/2-.83+i*.044,d*.08,chrome,.002);
-  amp.userData.exploration='twin-hotspots-v2';
-  // Surface anchors share the same normalized panel positions as the actual controls.
+  const tw=educationalTwin?.57:.45;
+  box(transformer,tw,.38,.50,-w*.12,h/2-.67,d*.08,dark,.02);
+  for(const side of [-1,1])box(transformer,.10,.40,.53,-w*.12+side*(tw/2-.025),h/2-.67,d*.08,black,.03);
+  for(let i=0;i<8;i++)box(transformer,tw-.20,.012,.51,-w*.12,h/2-.83+i*.044,d*.08,chrome,.002);
+  amp.userData.exploration=educationalTwin?'twin-hotspots-v2':'deluxe-hotspots-v1';
   const anchor=(id,x,y,zz)=>{const o=new THREE.Object3D();o.name='hotspot-'+id;o.position.set(x,y,zz);o.userData.explorePart=id;o.userData.explorePoint=true;amp.add(o);};
-  const panelWidth=assetById(profile.panel).dimensions.widthMm;
-  const controlX=x=>(x/TWIN_PANEL.widthMm-.5)*panelWidth*MM;
-  const panelY=h/2-.14-ph/2;
-  anchor('inputs',controlX((TWIN_PANEL.jacks[0]+TWIN_PANEL.jacks[1])/2),panelY,z+.075);
-  anchor('reverb',controlX(TWIN_PANEL.knobs[8]),panelY,z+.15);
-  anchor('vibrato',controlX((TWIN_PANEL.knobs[9]+TWIN_PANEL.knobs[10])/2),panelY,z+.15);
+  const panel=educationalTwin?TWIN_PANEL:DELUXE_PANEL,panelWidth=assetById(profile.panel).dimensions.widthMm;
+  const controlX=x=>(x/panel.widthMm-.5)*panelWidth*MM,panelY=h/2-.14-ph/2;
+  anchor('inputs',controlX((panel.jacks[0]+panel.jacks[1])/2),panelY,z+.075);
+  anchor('reverb',controlX(panel.knobs[educationalTwin?8:6]),panelY,z+.15);
+  anchor('vibrato',controlX((panel.knobs[educationalTwin?9:7]+panel.knobs[educationalTwin?10:8])/2),panelY,z+.15);
   anchor('grille-cloth',-w*.22,-h*.12,z-.015);
-  anchor('drip-edge',(w-.30)/2,-h*.10,z+.025);
+  if(educationalTwin)anchor('drip-edge',(w-.30)/2,-h*.10,z+.025);
+  else anchor('bright-cap',controlX(panel.knobs[3]),panelY,z+.15);
  }
  if(profile){const handle=createHandle(profile.handle);handle.scale.setScalar(MM);handle.rotation.x=-Math.PI/2;handle.position.set(0,h/2+.025,.10);cab.add(handle);}else{
  const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(-.6,h/2+.07,.12),new THREE.Vector3(-.4,h/2+.19,.12),new THREE.Vector3(.4,h/2+.19,.12),new THREE.Vector3(.6,h/2+.07,.12)]);const handle=new THREE.Mesh(new THREE.TubeGeometry(curve,24,.055,8,false),leather);handle.scale.z=1.6;cab.add(handle);

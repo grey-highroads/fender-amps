@@ -1,3 +1,5 @@
+// Existing Deluxe placement values, shared by hardware and exploration anchors.
+export const DELUXE_PANEL={widthMm:578,knobs:[71,110,149,246,284,322,360,398,436],jacks:[17,40,190,213]};
 // Photographic studies, not measured vintage artwork or mold drawings.
 export const TWIN_PANEL={revision:'0.1',widthMm:622,heightMm:41,controlY:20,
  knobs:[88,119,151,183,287,319,350,382,413,445,477],jacks:[24,47,219,244],bright:[65,263],pilot:597,
