@@ -288,3 +288,10 @@ Matched browser before/after: angle, badge, panel and title. No lighting, camera
 scale or exposure change in this task. Badge placement and distance from cloth
 intentionally changed; no cabinet dimensions changed. Own reference/review images
 are committed; third-party reference photographs are not.
+
+Publication completed 2026-11-20: GitHub runtime `452a94d` and master/evidence
+`c652f8b` pushed to main. The existing owner-private Site was published successfully
+from source `00e283686076715eaa5363973c74fd9f1a24243d`, deployment
+`appgdep_6b006ba028a08191b176f84b0e877779`. Site ID and audience were preserved.
+The shared runtime badge/panel refinements are live; the complete Blender master
+remains a separate review asset. `npm test` was repeated successfully after saving.
