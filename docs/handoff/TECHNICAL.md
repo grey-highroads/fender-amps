@@ -462,3 +462,8 @@ initial deep link, so export QA explicitly reloads each assembly, as before.
 
 Own images: images/deluxe-{front,rear,bright-cap,rectifier}.png. These checks
 validate interaction/integrity, not historical completeness or tonal accuracy.
+
+Deluxe expansion publication succeeded: GitHub runtime `7448a8f`, handoff
+`dea77d4`; Site source `3e392dab96aeba9d93a62d5e79c80a4aff4f8e29`, deployment
+`appgdep_6b009114b71c819193b832bbb135244b`. Existing owner-private Site ID and
+audience preserved. Browser review was local; the service confirms publication.
