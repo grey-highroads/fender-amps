@@ -25,9 +25,8 @@ than a contradictory date. Keep circuit-specific and grouped introduction years
 distinct when mapping rows.
 
 These are identified reconciliation points, not a completed audit of every
-runtime entry. The next useful data action is an explicit mapping from each
-runtime entry to its corrected catalog row, with selected-year evidence and
-unresolved differences documented before any runtime edits.
+runtime entry. That mapping is now complete for all 19 entries; see the current reconciliation
+section below. Selected-year evidence and unresolved differences remain explicit.
 
 ## Validation in this pass
 
@@ -37,3 +36,20 @@ CSV/JSON equivalence and manifest hashes. Existing application checks are run
 separately; none of these checks establish historical, market or visual accuracy.
 No visual files or application behavior changed; no private-site publication is
 required for this records-only update.
+
+## Current reconciliation: all 19 timeline entries mapped
+
+See [the reviewed table](../../data/catalog/TIMELINE_MAPPING.md) and
+[machine-readable map](../../data/catalog/timeline-map.json). Catalog row numbers
+are logical CSV records, header = 1, reinforced by exact names and row hashes.
+This does not infer spreadsheet gids or silently merge grouped generations.
+
+The Bassman and early Twin scope differences remain documented; Super-Sonic 60
+also needs end-date wording reconciled (runtime “2010s,” catalog approximately
+2016), while combo/head format and load scope stay separate. Every other entry
+has an explicit row and selection note. No runtime values changed.
+
+The library check now compares the entire 19-entry set and its mapped fields to
+the pinned catalog rows, so adding an exhibit or changing either source requires
+a reviewed mapping update. Prices/rarity were not mapped into the runtime or
+independently audited, and catalog review labels were not upgraded.

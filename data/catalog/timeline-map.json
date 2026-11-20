@@ -1,0 +1,672 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-20",
+  "scope": "All 19 selected timeline entries. Mapping/reconciliation only; no runtime specifications changed and no independent historical audit claimed.",
+  "runtimeSource": "dist/collection.js",
+  "catalogSource": "data/catalog/catalog.csv",
+  "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
+  "rowNumbering": "Logical CSV records, header is row 1. Row name and SHA-256 also pin identity; not an inferred spreadsheet gid or range.",
+  "comparisonFields": [
+    "introduction year",
+    "production range",
+    "output",
+    "speaker configuration/format",
+    "load",
+    "generation/circuit scope"
+  ],
+  "confidence": "Catalog review labels are copied as source metadata, not upgraded to verification by this mapping.",
+  "entries": [
+    {
+      "runtimeKey": "1946|wood|Woodie Deluxe",
+      "runtime": {
+        "year": 1946,
+        "name": "Woodie Deluxe",
+        "years": "1946–1948",
+        "watts": 12,
+        "speakers": "1 × 10″",
+        "load": "8 Ω",
+        "finish": "wood",
+        "circuit": "Model 26"
+      },
+      "catalogCsvRow": 3,
+      "catalogName": "Deluxe / Model 26 (woodie)",
+      "catalogRowSha256": "9158447db115257b0a939fb1ee04ed78e4d45f9eccbd6cc0cbe857372ca1f8b1",
+      "catalog": {
+        "introduced": "1946",
+        "productionEnd": "1948",
+        "productionStatus": "Ended",
+        "outputWatts": "12",
+        "cabinetSpeakers": "1x10 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Some examples differ in speaker size and rating.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/deluxe/",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Model 26 is the timeline label; early speaker/output variation remains qualified by the catalog."
+    },
+    {
+      "runtimeKey": "1949|cream|Champion 600",
+      "runtime": {
+        "year": 1949,
+        "name": "Champion 600",
+        "years": "1949–1953",
+        "watts": 4,
+        "speakers": "1 × 6″",
+        "load": "4 Ω",
+        "finish": "cream",
+        "circuit": "5B1 family"
+      },
+      "catalogCsvRow": 11,
+      "catalogName": "Champion 600 (original)",
+      "catalogRowSha256": "da38dda2c859ea9bc55a01e0f28c01930cb698838ec24a9ebe8725d7d929b461",
+      "catalog": {
+        "introduced": "1949",
+        "productionEnd": "1953",
+        "productionStatus": "Ended",
+        "outputWatts": "4",
+        "cabinetSpeakers": "1x6 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "Do not confuse with 2000s reissue.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/champ/",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Original Champion 600, not the later reissue."
+    },
+    {
+      "runtimeKey": "1953|tweed|Wide-panel Deluxe",
+      "runtime": {
+        "year": 1953,
+        "name": "Wide-panel Deluxe",
+        "years": "1953–1955",
+        "watts": 12,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "tweed",
+        "circuit": "5C3 / 5D3"
+      },
+      "catalogCsvRow": 16,
+      "catalogName": "Deluxe (wide panel)",
+      "catalogRowSha256": "b1e47ef96c12bc169ce12c290c9e5a3a8a8c61544053c255048a2fbc0040a97f",
+      "catalog": {
+        "introduced": "1953",
+        "productionEnd": "1955",
+        "productionStatus": "Ended",
+        "outputWatts": "12",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Approximate output.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/deluxe/",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "The timeline names two circuit variants within the catalog’s wide-panel group."
+    },
+    {
+      "runtimeKey": "1955|tweed|Tweed Deluxe",
+      "runtime": {
+        "year": 1955,
+        "name": "Tweed Deluxe",
+        "years": "1955–1960",
+        "watts": 12,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "tweed",
+        "circuit": "5E3"
+      },
+      "catalogCsvRow": 24,
+      "catalogName": "Deluxe (5E3)",
+      "catalogRowSha256": "4c98a42c0e668f56b7b8f341bab112c24811f04f7a1d1c6924f8b84b4d755e86",
+      "catalog": {
+        "introduced": "1955",
+        "productionEnd": "1960",
+        "productionStatus": "Ended",
+        "outputWatts": "12",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Often described as 12–15W.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/deluxe/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "1955 is introduction; the shared assembly uses a 1957-style example and modern reissue dimension proxies. Do not change introduction to the specimen year."
+    },
+    {
+      "runtimeKey": "1957|tweed|High-power Twin",
+      "runtime": {
+        "year": 1957,
+        "name": "High-power Twin",
+        "years": "1957–1960",
+        "watts": 80,
+        "speakers": "2 × 12″",
+        "load": "4 Ω",
+        "finish": "tweed",
+        "circuit": "5F8 / 5F8-A"
+      },
+      "catalogCsvRow": 36,
+      "catalogName": "Twin (5F8 / 5F8-A high power)",
+      "catalogRowSha256": "a362b606c15d11c52e1b410a9623f6644d2e69b4f15622e8206f94f189a01183",
+      "catalog": {
+        "introduced": "1957",
+        "productionEnd": "1960",
+        "productionStatus": "Ended",
+        "outputWatts": "80",
+        "cabinetSpeakers": "2x12 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "Appraisal recommended; some sources date introduction to 1958.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/twin/",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Catalog retains 1957 while noting some sources date introduction to 1958. No new introduction-date research is claimed."
+    },
+    {
+      "runtimeKey": "1958|tweed|Tweed Bassman",
+      "runtime": {
+        "year": 1958,
+        "name": "Tweed Bassman",
+        "years": "1958–1960",
+        "watts": 45,
+        "speakers": "4 × 10″",
+        "load": "2 Ω",
+        "finish": "tweed",
+        "circuit": "5F6-A"
+      },
+      "catalogCsvRow": 35,
+      "catalogName": "Bassman (5F6 / 5F6-A)",
+      "catalogRowSha256": "a529901fb44a2ccb3eaf20c74a4c5b633bd7ecfc47a25a558954670860bd295f",
+      "catalog": {
+        "introduced": "1957",
+        "productionEnd": "1960",
+        "productionStatus": "Ended",
+        "outputWatts": "45",
+        "cabinetSpeakers": "4x10 open-back combo",
+        "nominalLoad": "2",
+        "loadType": "Fixed",
+        "versionNotes": "Price evidence covers 1958–1960 5F6-A; earlier 5F6 differs. 2026 Reverb sold examples ran about $3,950-7,500, above the estimate range shown.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/bassman/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [
+        {
+          "field": "introductionYear",
+          "runtime": 1958,
+          "catalog": 1957,
+          "status": "retained_with_scope_note",
+          "decision": "Runtime selects the 5F6-A subset of the catalog’s combined 5F6 / 5F6-A group. Keep the year difference explicit pending primary circuit-specific dating."
+        },
+        {
+          "field": "productionRange",
+          "runtime": "1958–1960",
+          "catalog": "1957–1960",
+          "status": "retained_with_scope_note",
+          "decision": "Runtime selects the 5F6-A subset of the catalog’s combined 5F6 / 5F6-A group. Keep the year difference explicit pending primary circuit-specific dating."
+        }
+      ],
+      "scopeNote": "Runtime selects the 5F6-A subset of the catalog’s combined 5F6 / 5F6-A group. Keep the year difference explicit pending primary circuit-specific dating."
+    },
+    {
+      "runtimeKey": "1961|brown|Brown Princeton",
+      "runtime": {
+        "year": 1961,
+        "name": "Brown Princeton",
+        "years": "1961–1964",
+        "watts": 12,
+        "speakers": "1 × 10″",
+        "load": "8 Ω",
+        "finish": "brown",
+        "circuit": "6G2"
+      },
+      "catalogCsvRow": 45,
+      "catalogName": "Princeton (6G2 brown)",
+      "catalogRowSha256": "1a585ae3556762a7d946b5e44eba0598914a0bf741b56359153b1353026b2979",
+      "catalog": {
+        "introduced": "1961",
+        "productionEnd": "1964",
+        "productionStatus": "Ended",
+        "outputWatts": "12",
+        "cabinetSpeakers": "1x10 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Some late 6G2 examples have black cosmetics.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/princeton/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Brown finish selects the usual 6G2 appearance; the catalog warns some late examples have black cosmetics."
+    },
+    {
+      "runtimeKey": "1963|black|Deluxe Reverb",
+      "runtime": {
+        "year": 1963,
+        "name": "Deluxe Reverb",
+        "years": "1963–1967",
+        "watts": 22,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "black",
+        "circuit": "AB763"
+      },
+      "catalogCsvRow": 53,
+      "catalogName": "Deluxe Reverb (black panel)",
+      "catalogRowSha256": "87c3d8931b665b4f7f3f7c8039617f2625553c1592c257e35d2f488a9c27b25b",
+      "catalog": {
+        "introduced": "1963",
+        "productionEnd": "1967",
+        "productionStatus": "Ended",
+        "outputWatts": "22",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "",
+        "specificationReference": "https://fenderguru.com/amp-models/deluxe-reverb/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Introduction 1963; shared explorer is a 1965-style AB763 reference assembled from multiple specimens. Measurements and original configuration remain qualified."
+    },
+    {
+      "runtimeKey": "1963|brown|Brown Vibroverb",
+      "runtime": {
+        "year": 1963,
+        "name": "Brown Vibroverb",
+        "years": "1963",
+        "watts": 35,
+        "speakers": "2 × 10″",
+        "load": "4 Ω",
+        "finish": "brown",
+        "circuit": "6G16"
+      },
+      "catalogCsvRow": 56,
+      "catalogName": "Vibroverb (6G16 brown)",
+      "catalogRowSha256": "c44b0b6ed07e1ca1d149c2290b0b60fea4ab1ce310b984a7019bad2566b10d25",
+      "catalog": {
+        "introduced": "1963",
+        "productionEnd": "1963",
+        "productionStatus": "Ended",
+        "outputWatts": "35",
+        "cabinetSpeakers": "2x10 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "Do not confuse with 1990s reissue.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/vibroverb/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Original 6G16 brown Vibroverb, not its later reissue."
+    },
+    {
+      "runtimeKey": "1963|black|Super Reverb",
+      "runtime": {
+        "year": 1963,
+        "name": "Super Reverb",
+        "years": "1963–1967",
+        "watts": 40,
+        "speakers": "4 × 10″",
+        "load": "2 Ω",
+        "finish": "black",
+        "circuit": "AB763"
+      },
+      "catalogCsvRow": 60,
+      "catalogName": "Super Reverb (black panel)",
+      "catalogRowSha256": "c3e5d82578d7848a58ce794ed67cb60ab429403c6474ac405676bb7defe0f98e",
+      "catalog": {
+        "introduced": "1963",
+        "productionEnd": "1967",
+        "productionStatus": "Ended",
+        "outputWatts": "40",
+        "cabinetSpeakers": "4x10 open-back combo",
+        "nominalLoad": "2",
+        "loadType": "Fixed",
+        "versionNotes": "Vintage rated output often 40W; reissue rated 45W.",
+        "specificationReference": "https://fenderguru.com/amp-models/super-reverb/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Runtime uses vintage 40 W, matching the catalog; do not substitute the modern reissue’s 45 W rating. Interior remains a representative study."
+    },
+    {
+      "runtimeKey": "1963|black|Twin Reverb",
+      "runtime": {
+        "year": 1963,
+        "name": "Twin Reverb",
+        "years": "1963–1967",
+        "watts": 85,
+        "speakers": "2 × 12″",
+        "load": "4 Ω",
+        "finish": "black",
+        "circuit": "AB763"
+      },
+      "catalogCsvRow": 63,
+      "catalogName": "Twin Reverb (black panel)",
+      "catalogRowSha256": "77f0affcf83a75d0077947a32624d60f169b6b6e96a0774d37e37a6b20e51018",
+      "catalog": {
+        "introduced": "1963",
+        "productionEnd": "1967",
+        "productionStatus": "Ended",
+        "outputWatts": "85",
+        "cabinetSpeakers": "2x12 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "",
+        "specificationReference": "https://fenderguru.com/amp-models/twin-reverb/",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Black-panel AB763 entry is distinct from the 1968 silver-panel explorer; it does not inherit that explorer."
+    },
+    {
+      "runtimeKey": "1968|silver|Twin Reverb",
+      "runtime": {
+        "year": 1968,
+        "name": "Twin Reverb",
+        "years": "1968–1976",
+        "watts": 85,
+        "speakers": "2 × 12″",
+        "load": "4 Ω",
+        "finish": "silver",
+        "circuit": "Early silver-panel family"
+      },
+      "catalogCsvRow": 78,
+      "catalogName": "Twin Reverb (silver panel, early)",
+      "catalogRowSha256": "5b61f4983456c696d7c0400355cfdc2440422786693d83d79aab5142ca6c4e11",
+      "catalog": {
+        "introduced": "1967",
+        "productionEnd": "1976",
+        "productionStatus": "Ended",
+        "outputWatts": "100",
+        "cabinetSpeakers": "2x12 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "Early transition examples are rated 85W; later ones 100W.",
+        "specificationReference": "https://fenderguru.com/amp-models/twin-reverb/",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [
+        {
+          "field": "introductionYear",
+          "runtime": 1968,
+          "catalog": 1967,
+          "status": "retained_with_scope_note",
+          "decision": "Runtime selects 1968 / 85 W within a broader 1967–1976 row. The row itself explicitly notes early 85 W examples. Preserve selected-year evidence rather than replacing it with the grouped 100 W value."
+        },
+        {
+          "field": "productionRange",
+          "runtime": "1968–1976",
+          "catalog": "1967–1976",
+          "status": "retained_with_scope_note",
+          "decision": "Runtime selects 1968 / 85 W within a broader 1967–1976 row. The row itself explicitly notes early 85 W examples. Preserve selected-year evidence rather than replacing it with the grouped 100 W value."
+        },
+        {
+          "field": "outputWatts",
+          "runtime": 85,
+          "catalog": 100,
+          "status": "retained_with_scope_note",
+          "decision": "Retain 85 W for the selected 1968 example. See period 1968 Fender catalog and the catalog row’s explicit 85/100 W note. Exact cosmetic/circuit transitions still need year-specific evidence."
+        }
+      ],
+      "scopeNote": "Runtime selects 1968 / 85 W within a broader 1967–1976 row. The row itself explicitly notes early 85 W examples. Preserve selected-year evidence rather than replacing it with the grouped 100 W value.",
+      "selectedYearEvidence": [
+        "https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php",
+        "docs/handoff/REFERENCES.md"
+      ]
+    },
+    {
+      "runtimeKey": "1977|silver|Ultralinear Twin",
+      "runtime": {
+        "year": 1977,
+        "name": "Ultralinear Twin",
+        "years": "1977–1982",
+        "watts": 135,
+        "speakers": "2 × 12″",
+        "load": "4 Ω",
+        "finish": "silver",
+        "circuit": "Ultralinear Twin Reverb"
+      },
+      "catalogCsvRow": 99,
+      "catalogName": "Twin Reverb (ultralinear)",
+      "catalogRowSha256": "9f20234ffeb9459ceadaf287d220d0b40bb70ef5017883df3517f40975070fc9",
+      "catalog": {
+        "introduced": "1977",
+        "productionEnd": "1982",
+        "productionStatus": "Ended",
+        "outputWatts": "135",
+        "cabinetSpeakers": "2x12 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "Price evidence covers 1977–81; final cosmetic transitions vary.",
+        "specificationReference": "https://fenderguru.com/amp-models/twin-reverb/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Ultralinear generation is separate from the early silver-panel Twin; output and dates match this row."
+    },
+    {
+      "runtimeKey": "1982|black|Super Champ",
+      "runtime": {
+        "year": 1982,
+        "name": "Super Champ",
+        "years": "1982–1986",
+        "watts": 18,
+        "speakers": "1 × 10″",
+        "load": "8 Ω",
+        "finish": "black",
+        "circuit": "Rivera-era tube"
+      },
+      "catalogCsvRow": 107,
+      "catalogName": "Super Champ",
+      "catalogRowSha256": "478e453bff24b7868b4bce6ce351a0301075bcc43db611fa51e47271cc956cc6",
+      "catalog": {
+        "introduced": "1982",
+        "productionEnd": "1986",
+        "productionStatus": "Ended",
+        "outputWatts": "18",
+        "cabinetSpeakers": "1x10 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Distinct from digital-preamp XD and X2, which are excluded.",
+        "specificationReference": "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Super_Champ_1982.pdf",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Rivera-era Super Champ, not the digital-preamp XD/X2 or the separate hardwood Super Champ Deluxe."
+    },
+    {
+      "runtimeKey": "1993|tweed|Blues Deluxe",
+      "runtime": {
+        "year": 1993,
+        "name": "Blues Deluxe",
+        "years": "1993–1996",
+        "watts": 40,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "tweed",
+        "circuit": "Original Blues series"
+      },
+      "catalogCsvRow": 124,
+      "catalogName": "Blues Deluxe (original)",
+      "catalogRowSha256": "f6c7a698e0253fda4b0927f79f51af28f6ec02ae0178137cacbdc99bc9199d68",
+      "catalog": {
+        "introduced": "1993",
+        "productionEnd": "1996",
+        "productionStatus": "Ended",
+        "outputWatts": "40",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "",
+        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Original Blues Deluxe, not the 2005 reissue."
+    },
+    {
+      "runtimeKey": "1996|black|Hot Rod Deluxe",
+      "runtime": {
+        "year": 1996,
+        "name": "Hot Rod Deluxe",
+        "years": "1996–2010, early generations",
+        "watts": 40,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "black",
+        "circuit": "Hot Rod I–II"
+      },
+      "catalogCsvRow": 135,
+      "catalogName": "Hot Rod Deluxe (I–II)",
+      "catalogRowSha256": "3a1c6ce153a23bd33a12105ca241d3882b00161207721d14c2830aace67abd98",
+      "catalog": {
+        "introduced": "1996",
+        "productionEnd": "2010",
+        "productionStatus": "Ended",
+        "outputWatts": "40",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Early generations grouped.",
+        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
+        "reviewStatus": "Confirmed",
+        "reviewNote": "Price range is under 20% wide; based on a few asking listings."
+      },
+      "differences": [],
+      "scopeNote": "Runtime wording “early generations” denotes the catalog’s combined I–II group; date endpoints agree."
+    },
+    {
+      "runtimeKey": "2006|cream|Super-Sonic 60",
+      "runtime": {
+        "year": 2006,
+        "name": "Super-Sonic 60",
+        "years": "2006–2010s, early series",
+        "watts": 60,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "cream",
+        "circuit": "Super-Sonic 60"
+      },
+      "catalogCsvRow": 155,
+      "catalogName": "Super-Sonic 60",
+      "catalogRowSha256": "a57ac935c896e4996edb9bd806409019240e6a592a6ffe3a1d8359fad08e07a5",
+      "catalog": {
+        "introduced": "2006",
+        "productionEnd": "2016",
+        "productionStatus": "Ended (approx.)",
+        "outputWatts": "60",
+        "cabinetSpeakers": "1x12 combo or head",
+        "nominalLoad": "8 combo; head selectable",
+        "loadType": "Varies by configuration",
+        "versionNotes": "Head/combo and cosmetic revisions grouped.",
+        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
+        "reviewStatus": "Reviewed, not source-checked",
+        "reviewNote": ""
+      },
+      "differences": [
+        {
+          "field": "productionRange",
+          "runtime": "2006–2010s, early series",
+          "catalog": "2006–2016",
+          "status": "open_reconciliation",
+          "decision": "The runtime end label is approximate and not synchronized to the catalog. Retain it in this mapping-only pass; verify the selected combo revision before revising dates."
+        },
+        {
+          "field": "format",
+          "runtime": "1 × 12″",
+          "catalog": "1x12 combo or head",
+          "status": "retained_with_scope_note",
+          "decision": "Runtime depicts the combo, not every format grouped in the catalog."
+        },
+        {
+          "field": "load",
+          "runtime": "8 Ω",
+          "catalog": "8 combo; head selectable",
+          "status": "retained_with_scope_note",
+          "decision": "8 Ω is the runtime combo selection; do not apply it to the grouped head’s selectable output."
+        }
+      ],
+      "scopeNote": "Runtime is the 1x12 / 8 Ω combo subset. Catalog combines head/combo and revisions; the displayed end date is less precise than the catalog’s approximate 2016."
+    },
+    {
+      "runtimeKey": "2016|tweed|’57 Custom Deluxe",
+      "runtime": {
+        "year": 2016,
+        "name": "’57 Custom Deluxe",
+        "years": "2016 onward",
+        "watts": 12,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "tweed",
+        "circuit": "Hand-wired 5E3-inspired"
+      },
+      "catalogCsvRow": 186,
+      "catalogName": "'57 Custom Deluxe",
+      "catalogRowSha256": "5139ea098b52f53787176072c7c47b68e86d5d708c3c346b936e8a8092ea6df6",
+      "catalog": {
+        "introduced": "2016",
+        "productionEnd": "",
+        "productionStatus": "Current",
+        "outputWatts": "12",
+        "cabinetSpeakers": "1x12 open-back pine combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "",
+        "specificationReference": "https://www.fender.com/products/57-custom-deluxe",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Modern 2016 Custom Deluxe, not a 1957 introduction. Runtime visually references the tweed family; no vintage circuit/parts identity is implied."
+    },
+    {
+      "runtimeKey": "2021|silver|Custom Pro Reverb",
+      "runtime": {
+        "year": 2021,
+        "name": "Custom Pro Reverb",
+        "years": "2021 onward",
+        "watts": 40,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "silver",
+        "circuit": "’68 Custom Pro Reverb"
+      },
+      "catalogCsvRow": 204,
+      "catalogName": "'68 Custom Pro Reverb",
+      "catalogRowSha256": "b3420db5a486dac2fc8b1569ce65204aa7881cb65640cbabb3d7a5d56d72ebeb",
+      "catalog": {
+        "introduced": "2021",
+        "productionEnd": "",
+        "productionStatus": "Current",
+        "outputWatts": "40",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Distinct from vintage dual-channel 2x12 Pro Reverb.",
+        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "differences": [],
+      "scopeNote": "Timeline shortens the model name to Custom Pro Reverb. This is the modern 2021 single-speaker model, not vintage dual-channel 2x12 Pro Reverb."
+    }
+  ]
+}

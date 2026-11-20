@@ -7,3 +7,42 @@ assert.equal(ASSEMBLIES.find(a=>a.id==='deluxe-reverb-black').knobCount,9);
 assert.equal(ASSEMBLIES.find(a=>a.id==='twin-reverb-early').knobCount,11);
 assert.ok(!ASSETS.some(a=>a.id.includes('master')),'Early Twin must not inherit a later master-volume component');
 console.log(`Validated ${ASSETS.length} components, 3 assemblies, provenance links, speaker clearance and 8/8/4 Ω loads.`);
+
+// A new exhibit must be reconciled to the authoritative snapshot before expansion.
+const fs=await import('node:fs');
+const vm=await import('node:vm');
+const {createHash}=await import('node:crypto');
+const read=path=>fs.readFileSync(new URL('../'+path,import.meta.url),'utf8');
+const sha=value=>createHash('sha256').update(value).digest('hex');
+function csvRecords(text){
+ const rows=[];let row=[],cell='',quoted=false;
+ for(let i=0;i<text.length;i++){
+  const c=text[i];
+  if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}
+  else if(c===','&&!quoted){row.push(cell);cell='';}
+  else if(c==='\n'&&!quoted){row.push(cell);rows.push(row);row=[];cell='';}
+  else if(c!=='\r'||quoted)cell+=c;
+ }
+ assert.ok(!quoted,'Unclosed catalog CSV field');
+ if(cell||row.length){row.push(cell);rows.push(row);}return rows;
+}
+const mapping=JSON.parse(read('data/catalog/timeline-map.json'));
+const csv=read(mapping.catalogSource),rows=csvRecords(csv);
+assert.equal(sha(csv),mapping.catalogSha256,'Catalog changed: reconcile timeline mappings');
+const source=read(mapping.runtimeSource),start=source.indexOf('const amps=['),end=source.indexOf('function panelLabel');
+assert.ok(start>=0&&end>start,'Timeline data boundary changed: update mapping validation');
+const timeline=JSON.parse(JSON.stringify(vm.runInNewContext(source.slice(start,end)+'\namps',{},{timeout:1000})));
+assert.equal(mapping.entries.length,timeline.length,'Every timeline entry needs a catalog mapping');
+const keys=mapping.entries.map(e=>e.runtimeKey);assert.equal(new Set(keys).size,keys.length,'Duplicate timeline mapping');
+for(const amp of timeline){
+ const key=`${amp.year}|${amp.finish}|${amp.name}`,entry=mapping.entries.find(e=>e.runtimeKey===key);
+ assert.ok(entry,`${key}: missing catalog mapping`);
+ const actual=Object.fromEntries(Object.keys(entry.runtime).map(k=>[k,amp[k]]));
+ assert.deepEqual(actual,entry.runtime,`${key}: runtime changed without reconciliation`);
+ const row=rows[entry.catalogCsvRow-1];assert.ok(row,`${key}: missing catalog row`);
+ assert.equal(row[0],entry.catalogName,`${key}: catalog row identity changed`);
+ assert.equal(sha(JSON.stringify(row)),entry.catalogRowSha256,`${key}: catalog row values changed`);
+ assert.ok(entry.scopeNote&&Array.isArray(entry.differences),`${key}: missing reconciliation notes`);
+ for(const d of entry.differences)assert.ok(d.field&&d.status&&d.decision,`${key}: incomplete difference decision`);
+}
+console.log(`Validated ${timeline.length} timeline/catalog mappings and pinned source rows; historical confidence is unchanged.`);

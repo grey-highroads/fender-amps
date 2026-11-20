@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const base=new URL('../models/twin-1968/',import.meta.url);
 const dimensions=JSON.parse(fs.readFileSync(new URL('dimensions.json',base)));
-function readGLB(name){const b=fs.readFileSync(new URL(name,base));assert.equal(b.toString('utf8',0,4),'glTF');assert.equal(b.readUInt32LE(4),2);assert.equal(b.readUInt32LE(8),b.length);const n=b.readUInt32LE(12);return {b,json:JSON.parse(b.subarray(20,20+n)),binOffset:28+n};}
+function readGLB(name){const b=fs.readFileSync(new URL(name,base));assert.ok(!b.toString('utf8',0,80).startsWith('version https://git-lfs.github.com/spec/v1'),`${name}: LFS content is missing; install Git LFS and run git lfs pull before testing`);assert.equal(b.toString('utf8',0,4),'glTF');assert.equal(b.readUInt32LE(4),2);assert.equal(b.readUInt32LE(8),b.length);const n=b.readUInt32LE(12);return {b,json:JSON.parse(b.subarray(20,20+n)),binOffset:28+n};}
 const {b,json:g,binOffset}=readGLB('twin-1968-master.glb');
 assert.ok(g.meshes.length>0);
 const root=g.nodes.find(n=>n.name==='Twin_1968_Factory_JBL_Option');assert.equal(root.extras.units,'metres');assert.equal(root.extras.revision,dimensions.revision);

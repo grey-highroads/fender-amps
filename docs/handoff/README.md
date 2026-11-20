@@ -26,7 +26,7 @@ models remain interpretive and exact interior placement is not established.
 | Runtime baseline | Commit `7448a8f`, Deluxe + Twin profiles, musician-first voice; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
-| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; runtime is not fully reconciled or connected live |
+| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 19 timeline entries are mapped with explicit differences; no live sync |
 | Library | 24 components/materials and three reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
@@ -220,7 +220,9 @@ Folkway specimen's badge-less front.
 
 ## Next useful work
 
-1. Review the Deluxe's nine stories and the conversational voice.
+1. Finish the prepared LFS history migration after user approval; see
+   [migration status and recovery](LFS_MIGRATION.md). The catalog mapping and
+   all-five-check test command are complete.
 2. Recommended next: 5E3 tweed Deluxe (existing shared assembly, contrasting
    response/control behavior), then Princeton Reverb AA1164, then Super Reverb
    AB763. These are proposed, not completed treatments or new approved entries.
@@ -234,3 +236,17 @@ Keep this file as a concise current-state summary. Put durable rationale in
 DECISIONS.md, operational details in TECHNICAL.md, and evidence in REFERENCES.md
 and references.json. Update the runtime baseline and validation notes when the
 implementation changes. Documentation-only commits do not change that baseline.
+
+## Repository maintenance prerequisite
+
+All 19 runtime entries are now mapped to the corrected CSV in
+[data/catalog/TIMELINE_MAPPING.md](../../data/catalog/TIMELINE_MAPPING.md). Three
+entries have explicit scope/date/rating differences. `npm test` runs all five
+root check scripts and validates mapping coverage/source identity. Install Git
+LFS and run `git lfs pull` before tests in a new clone.
+
+Models (`*.blend`, `*.glb`) and `docs/handoff/images/**` now use LFS for current
+files. Restorable pre-migration backups exist locally. Existing published
+history is not rewritten without the user's approval; see LFS_MIGRATION.md.
+No amp expansion, runtime values, interface or private-site publication changed
+in this maintenance pass. The `dist/` structure remains in place.

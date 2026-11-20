@@ -11,3 +11,6 @@ __pycache__/
 
 # Separate checkout for the existing private Sites source history.
 .site-publish/
+
+# Local backups, official maintenance tools and isolated migration rehearsal.
+.maintenance/

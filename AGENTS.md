@@ -27,7 +27,9 @@ and the separate GitHub and private-site publishing workflows.
 - The corrected spreadsheet identified in [data/catalog/source.json](data/catalog/source.json)
   is the catalog source of truth; its three-tab snapshot is tracked in the repo.
   Read [catalog reconciliation notes](docs/handoff/CATALOG_RECONCILIATION.md)
-  before applying grouped rows to selected-year assemblies.
+  before applying grouped rows to selected-year assemblies. Every timeline entry
+  must have a reviewed row in `data/catalog/timeline-map.json`; preserve explicit
+  differences and update the mapping before adding another explorer.
 - GitHub is the source of truth for code and project records. Its repository is public; the existing hosted
   prototype is owner-private. Preserve those audiences and the existing Site ID.
 - Never commit credentials or unlicensed third-party reference photographs.
@@ -35,3 +37,10 @@ and the separate GitHub and private-site publishing workflows.
 - Update the handoff after substantive changes: current revision, rationale,
   validation, remaining uncertainty, and the next useful action. Keep historical
   evidence distinguishable from checks performed during the current task.
+
+- Install Git LFS and run `git lfs pull` before checks in a fresh clone. Keep
+  `*.blend`, `*.glb` and `docs/handoff/images/**` under LFS; confirm real files
+  are materialized before exporting or publishing.
+- Published-history migration is a separate, approval-gated action requested
+  by the user. Prepare and verify backups/rehearsal first; never force-push the
+  prepared rewrite until the user approves it.

@@ -35,3 +35,12 @@ The app still uses a separately authored 19-entry selection. This records update
 does not import the whole catalog, change geometry or reconcile every runtime
 specification. See [reconciliation notes](../../docs/handoff/CATALOG_RECONCILIATION.md)
 before applying grouped catalog entries to selected-year assemblies.
+
+## Runtime reconciliation
+
+[TIMELINE_MAPPING.md](TIMELINE_MAPPING.md) maps all 19 selected timeline entries
+to logical CSV rows and explains differences. `timeline-map.json` pins exact
+row names/hashes, the snapshot hash, runtime comparison fields and review notes.
+`npm test` validates this mapping. Update it deliberately when the catalog or
+runtime specifications change; do not change a hash merely to bypass a failure.
+No runtime specifications were altered during the first mapping pass.

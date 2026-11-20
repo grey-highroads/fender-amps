@@ -168,3 +168,18 @@ assembly and runtime entry; its corrected-catalog row is not a completed model.
 Super Reverb provides a four-speaker comparison and already has a representative
 timeline study, which still needs a source-backed interior. Do these as reviewed
 small batches before scaling broadly or duplicating close variants.
+
+## Maintenance before more amps
+
+The user accepted the second reviewer's prerequisites: map all timeline entries
+to the authoritative CSV, run all five existing check scripts through npm test,
+and move model binaries/handoff screenshots to LFS. Defer a src/ reorganization.
+Mapping is a reviewed selection ledger, not an automatic overwrite of narrower
+selected-year runtime values with grouped catalog values. All 19 entries now
+have rows, source hashes, confidence and difference notes.
+
+The user explicitly requested backups and notice before rewriting published
+history. Current files may move to LFS in an ordinary forward commit, but a
+history cleanup must be rehearsed separately and approved before any forced
+update. Preserve the pre-LFS bundle, tracked-tree archive and recovery manifest.
+The private Site has a separate source history; it is not part of this rewrite.
