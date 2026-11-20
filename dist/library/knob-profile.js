@@ -1,7 +1,7 @@
 // Photographic reconstruction of the mid-1960s Fender skirted knob family.
 // Millimetres. Exterior dimensions are estimates, NOT measured vintage dimensions.
 export const SKIRTED_KNOB = {
- version: '0.3',
+ version: '0.4',
  outerDiameterMm: 25.2,
  heightMm: 14.2,
  capRadiusMm: 5.05,

@@ -22,8 +22,9 @@ function numberMap(){
  x.strokeStyle='#eee9d9';x.lineCap='round';x.lineJoin='round';
  for(let number=1;number<=10;number++){
   const angle=knobAngleForSetting(number),text=String(number),digitWidth=1.30*scale,digitGap=.17*scale,height=K.numberHeightMm*scale,total=text.length*digitWidth+(text.length-1)*digitGap;
-  x.save();x.translate(512+Math.sin(angle)*K.numberRadiusMm*scale,512-Math.cos(angle)*K.numberRadiusMm*scale);x.rotate(angle+Math.PI);
-  for(let i=0;i<text.length;i++){x.save();x.translate(-total/2+i*(digitWidth+digitGap),-height/2);x.scale(digitWidth,height);x.lineWidth=.145;x.stroke(new Path2D(KNOB_DIGITS[text[i]]));x.restore();}x.restore();
+  x.save();x.translate(512+Math.sin(angle)*K.numberRadiusMm*scale,512-Math.cos(angle)*K.numberRadiusMm*scale);// Glyph bottoms face radially inward toward the grip.
+  x.rotate(angle);
+  for(let i=0;i<text.length;i++){x.save();x.translate(-total/2+i*(digitWidth+digitGap),-height/2);x.scale(digitWidth,height);x.lineWidth=.16;x.stroke(new Path2D(KNOB_DIGITS[text[i]]));x.restore();}x.restore();
  }
  return texture(c,true);
 }
