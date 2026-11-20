@@ -73,3 +73,11 @@ Own rendered views: [front](images/knob-v03-front.png),
 [angled](images/knob-v03-angle.png), [Twin](images/twin-v03.png),
 [Deluxe Reverb](images/deluxe-v03.png). Third-party reference photos remain only
 under ignored outputs/references/knobs and are not included in the public repo.
+
+## Revision 0.4 correction
+
+User review established that numeral bottoms must face the center. Revision 0.3
+had the opposite orientation; its prior review did not catch this error. Revision
+0.4 rotates each whole label 180 degrees in place and increases stroke weight by
+about 10%, as requested. No new historical measurements or photographic claims
+are introduced. Geometry and inspection setup are unchanged.

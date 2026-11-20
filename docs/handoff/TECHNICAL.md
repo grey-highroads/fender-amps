@@ -155,3 +155,17 @@ operation, preserving the existing project and audience. Site source:
 `appgdep_6b0045ec965081918b181323210fb34e` (`succeeded`). GitHub runtime remains
 `c969ce9`; review/handoff commit `81ecd35`. Browser checks were local; production
 publication was confirmed by the deployment service, not a signed-in UI review.
+
+## Revision 0.4 current-task validation
+
+npm test, knob JavaScript syntax and diff whitespace checks passed. Browser
+review inspected the corrected numeral orientation and modest weight increase
+in front/angle views, plus rear/near-side integrity and both mounted reference
+assemblies. No page errors. Camera, scale and lighting are unchanged. The actual
+browser GLB export parsed as glTF 2, revision 0.4, eight meshes, metres; 1,682,404
+bytes. These checks do not establish historical authenticity.
+
+Revision 0.4 runtime commit: `1d93ffd`. Site source commit:
+`1072c53534b462b652084a5a8ccab1d73ac4c596`. Owner-private deployment
+`appgdep_6b0047070b348191b111ad96e1c2f8ca` succeeded. Production confirmation
+comes from the publishing service; visual review was local.

@@ -20,7 +20,7 @@ in progress; a functioning component is not necessarily an accurate component.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `c969ce9`, skirted knob photographic revision 0.3 |
+| Runtime baseline | Commit `1d93ffd`, skirted knob photographic revision 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
@@ -68,7 +68,7 @@ small skirted knob; the shared studio reflection environment gained a fill card.
 These are rendered review images, not photographs. Inspection lighting and lens
 also changed, so the pair is a qualitative comparison, not a controlled benchmark.
 
-Revision 0.3 is published on the existing owner-private prototype; see
+Revision 0.4 is published on the existing owner-private prototype; see
 TECHNICAL.md for separate GitHub and Site source revisions.
 
 ## November 20 continuation: revision 0.3
@@ -88,13 +88,24 @@ Camera, scale, environment, lights and exposure are unchanged in this pair.
 The cap curvature and material changed; the studio did not. See REFERENCES.md
 for the evidence limits and TECHNICAL.md for current-task validation.
 
+## Revision 0.4: user-directed lettering correction
+
+The user found revision 0.3 better, but correctly identified upside-down numerals.
+Each complete number, including 10, is now rotated 180 degrees in place so its
+bottom faces the knob center. Stroke weight increases slightly from .145 to .16
+(about 10%). Shared geometry, positions, camera and lighting are unchanged.
+This corrects the previous review's mistaken acceptance of print orientation.
+Exact vintage glyph outlines remain provisional.
+
+![Corrected inward-facing numeral bottoms](images/knob-v04-front.png)
+
 ## Next useful work
 
-1. Compare knob revision 0.3 with the linked original-part and dated amp references
+1. Compare knob revision 0.4 with the linked original-part and dated amp references
    from front, side and rear, then mounted on both reference faceplates. The user
    has seen the revision but has not declared it accurate or photorealistic.
 2. Resolve the remaining knob details: exact vintage numeral outlines and print
-   orientation, original exterior dimensions, cap depth, flute count and underside
+   registration, original exterior dimensions, cap depth, flute count and underside
    mold/insert. Preserve uncertainty when a photograph cannot establish a fact.
 3. Improve one component at a time to an agreed visual standard. After the knob
    review, use the documented 1968 Twin as a common reference for Tolex, grille
