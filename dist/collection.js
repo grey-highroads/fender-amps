@@ -1,3 +1,4 @@
+import {mountAmpImages} from './amp-images.js';
 import {CATALOG_AMPS} from './catalog-timeline.js';
 import * as THREE from 'three';
 import {detailScene} from './app.js';
@@ -179,7 +180,7 @@ function updateMotion(){$('collection-motion').textContent=paused?'Resume motion
 const originalStory=$('story-content').innerHTML,originalSpecs=$('specs-content').innerHTML,originalSource=$('sources').onclick;
 function openAmp(i,button){if(drag?.moved)return;const a=amps[i];if(a.wip){openCatalog(a);return;}selected=i;returnFocus=button;savedScroll=scroll.scrollLeft;savedY=window.scrollY;
  $('collection').inert=true;document.querySelector('.masthead').inert=true;document.querySelector('.site-footer').inert=true;
- detail.hidden=false;document.title=`${a.name} (${panelLabel(a)}) — The Amplifier Observatory`;$("viewport").setAttribute("aria-label",`Interactive 3D ${a.name} cabinet study. Drag to rotate, scroll to zoom.`);detail.querySelector(".exhibit").setAttribute("aria-label",`${a.name} interactive exhibit`);document.body.classList.add('detail-open');$('detail-index').textContent=`${a.year} / ${a.name.toUpperCase()} / ${panelLabel(a).toUpperCase()}`;detail.setAttribute('aria-label',`${a.name}, ${panelLabel(a)} amplifier detail`);
+ detail.hidden=false;mountAmpImages(a);document.title=`${a.name} (${panelLabel(a)}) — The Amplifier Observatory`;$("viewport").setAttribute("aria-label",`Interactive 3D ${a.name} cabinet study. Drag to rotate, scroll to zoom.`);detail.querySelector(".exhibit").setAttribute("aria-label",`${a.name} interactive exhibit`);document.body.classList.add('detail-open');$('detail-index').textContent=`${a.year} / ${a.name.toUpperCase()} / ${panelLabel(a).toUpperCase()}`;detail.setAttribute('aria-label',`${a.name}, ${panelLabel(a)} amplifier detail`);
  detail.querySelector('.stage-top .eyebrow').innerHTML=`<i></i> ${a.era.toUpperCase()}`;detail.querySelector('.object-id').textContent=`FENDER / ${a.circuit.toUpperCase()} / ${a.year}`;
  detail.querySelector('.story-panel > .eyebrow').innerHTML=`${a.years} <span class="tag">${panelLabel(a).toUpperCase()}</span>`;const words=a.name.split(' ');detail.querySelector('h1').innerHTML=`${words.slice(0,-1).join(' ')}<br><em>${words.at(-1)}.</em>`;detail.querySelector('.deck').textContent=a.voice;
  $('story-content').innerHTML=a.full?originalStory:`<p>${a.story}</p><div class="quote-note"><span>THE ERA</span><strong>${a.era}</strong></div>`;
@@ -191,7 +192,7 @@ function openAmp(i,button){if(drag?.moved)return;const a=amps[i];if(a.wip){openC
 }
 function closeAmp(){if(selected===null)return;if($('dialog').open){$('dialog').close();return;}if(document.fullscreenElement){document.exitFullscreen();}detailScene?.setVisible(false);detail.hidden=true;document.title="The Amplifier Observatory — The collection";document.body.classList.remove('detail-open');$('collection').inert=false;document.querySelector('.masthead').inert=false;document.querySelector('.site-footer').inert=false;scroll.scrollLeft=savedScroll;window.scrollTo({top:savedY,behavior:'instant'});returnFocus?.focus({preventScroll:true});selected=null;}
 $('close-detail').onclick=closeAmp;
-document.addEventListener('keydown',e=>{if(detail.hidden||$('dialog').open)return;if(e.key==='Escape'){e.preventDefault();closeAmp();return;}if(e.key==='Tab'){const focusable=[...detail.querySelectorAll('button,[tabindex="0"],a')].filter(el=>!el.disabled&&el.getClientRects().length);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+document.addEventListener('keydown',e=>{if(detail.hidden||$('dialog').open||document.querySelector('#study-viewer[open]'))return;if(e.key==='Escape'){e.preventDefault();closeAmp();return;}if(e.key==='Tab'){const focusable=[...detail.querySelectorAll('button,[tabindex="0"],a')].filter(el=>!el.disabled&&el.getClientRects().length);const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
 const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function openCatalog(a){
  const fields=a.sourceFields;

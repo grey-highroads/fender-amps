@@ -249,6 +249,14 @@ detail view and component inspector. The timeline uses introduction years 1958,
 hotspots deferred to the parallel research pass. See [modeling evidence, dimensions,
 validation and remaining uncertainty](SMALL_AMPS.md).
 
+## Princeton image comparison trial
+
+November 20: local review now pairs the Princeton construction model with generated
+front/rear image thumbnails pinned to the left inside the model well and a zoomable
+full-screen viewer. Original model-left/story-right desktop layout is preserved;
+phones retain the thumbnail rail beside the model with story below. This trial is not published. See
+[implementation and evidence limits](PRINCETON_IMAGE_STUDIES.md).
+
 ## Next useful work
 
 1. Repository maintenance is complete: 19-entry catalog mapping, all five
