@@ -1,5 +1,5 @@
 {
-  "scene": "Twin 1968 \u2014 factory JBL option \u2014 master 0.2",
+  "scene": "Twin 1968 \u2014 factory JBL option \u2014 master 0.3",
   "metres_per_blender_unit": 1,
   "cabinet_xyz_mm": [
     666.7500138282776,
@@ -12,7 +12,7 @@
   "knobs": 11,
   "linked_knob_body_meshes": 1,
   "missing_images": [],
-  "packed_images": 10,
+  "packed_images": 13,
   "font_files": [
     "<builtin>"
   ]

@@ -20,13 +20,13 @@ in progress; a functioning component is not necessarily an accurate component.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `1d93ffd`, skirted knob photographic revision 0.4 |
+| Runtime baseline | Commit `60e2e95`, shared surface study 0.1; knob revision 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | User reports roughly 200 spreadsheet entries; the full sheet is not imported or connected live |
 | Library | 24 components/materials and three reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
-| Blender master | [1968 Twin A-13834, factory-configuration pass 0.2](../../models/twin-1968/README.md); separate from production |
+| Blender master | [1968 Twin A-13834, photographic surface pass 0.3](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
 
 The three reference assemblies are a 1957-style 5E3 Deluxe, a 1965-style blackface
@@ -106,15 +106,34 @@ The user accepted knob 0.4 for now and asked to begin a complete Blender amp to
 establish relative scale and harvest reusable components. The selected first amp
 is a 1968 early silverface Twin with the period-documented JBL D120F factory
 option. RetroFret A-13834 supplies photographic detail, not authority for standard
-equipment. Revision 0.2 replaces the specimen casters with estimated metal glides.
+equipment. Revision 0.2 replaced the specimen casters with estimated metal glides.
 The dealer-based cabinet envelope conflicts with Fender catalog dimensions and
 is explicitly unresolved; detail dimensions and accessory inclusion remain estimates. See the [master record](../../models/twin-1968/README.md).
 
 An editable `.blend`, metre-scale `.glb`, named reusable objects, generated maps,
-dimension ledger and separate browser review now exist. This is master 0.2, an
+dimension ledger and separate browser review now exist. This is master 0.3, an
 assembly foundation, not a completed faithful replica. The production library
-and private site remain on the accepted knob 0.4 runtime; the Oxford-equipped
+and private site retain knob 0.4 and now share the refined Tolex/grille material
+source with Blender; the Oxford-equipped
 production Twin is distinct from this JBL-option master.
+
+## First photographic surface pass
+
+Shared surface study 0.1 replaces the coarse polygonal Tolex with finer curved
+grain and refines the silver/aqua cloth into layered strands with normal,
+roughness and selective metallic response. One generator feeds the browser
+library and exported Blender maps; black Tolex improves on both reference amps,
+while the silver/aqua cloth applies to the Twin. Geometry and dimensions did not
+change. No photo pixels or baked wear were added.
+
+| Before | After (same browser setup) |
+| --- | --- |
+| ![Before surfaces](images/surfaces-before-angle.png) | ![Refined surfaces](images/surfaces-after-angle.png) |
+
+Color, pitch, relief and material response remain estimates from uncalibrated
+vintage photographs. The cloth is a surface-map study, not actual woven geometry.
+Blender's Cycles preview exposure separately changed to -2 EV; the browser pair
+keeps camera, scale, environment, lights and exposure unchanged.
 
 ## Next useful work
 

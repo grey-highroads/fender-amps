@@ -20,8 +20,21 @@
     "mounted knob close-up"
   ],
   "productionIntegrated": false,
-  "revision": "master-0.2",
+  "revision": "master-0.3",
   "configuration": "factory JBL option with estimated glides",
   "glides": 4,
-  "casters": 0
+  "casters": 0,
+  "surfaceStudy": "0.1",
+  "matchedBeforeAfter": {
+    "camera": "unchanged",
+    "lighting": "unchanged",
+    "scale": "unchanged",
+    "exposure": "unchanged",
+    "views": [
+      "angle",
+      "front",
+      "tolex",
+      "cloth"
+    ]
+  }
 }

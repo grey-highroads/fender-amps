@@ -1,0 +1,14 @@
+{
+  "tolex-black": {
+    "revision": "0.1",
+    "tileMm": 32,
+    "normalScale": 0.75,
+    "metalness": 0
+  },
+  "cloth-silver-blue": {
+    "revision": "0.1",
+    "tileMm": 24,
+    "normalScale": 0.75,
+    "metalness": 1
+  }
+}

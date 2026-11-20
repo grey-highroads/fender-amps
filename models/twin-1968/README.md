@@ -2,7 +2,7 @@
 
 Target: a 1968 early silverface/drip-edge Twin in a documented factory JBL D120F
 option configuration. RetroFret A-13834 remains a photographic reference.
-This is **master 0.2**, an editable dimensional and
+This is **master 0.3**, an editable dimensional and
 assembly foundation, not a finished high-fidelity replica.
 
 - [Blender master](twin-1968-master.blend)
@@ -70,7 +70,8 @@ hardware and a separate review studio. Objects and modifiers remain editable.
 Repeated knobs link the same imported mesh/material data from the accepted shared
 component, rather than re-modeling it in Blender. Its bridge file is
 `source/knob-skirted-v04.glb`; regenerate from the inspector if the shared knob
-changes. Other new parts have not yet replaced the production shared library.
+changes. The Tolex and silver/aqua cloth now share their generator with the production
+library. The new assembly geometry remains separate from production.
 
 The GLB contains the amp only, excluding review lights, camera and floor. The
 Blender file packs generated images and uses Blender's built-in font. Do not pack
@@ -97,6 +98,27 @@ For browser QA, serve the repository root (not only dist) on a local HTTP port a
 open `/tools/blender/review.html`. It uses the app's Three.js r181 and studio
 environment with a matching vendored GLTFLoader, with a separate gray review
 background and camera. It is a development review page, not a production app view.
+
+## Surface study 0.1
+
+`dist/library/photographic-surfaces.js` generates the same physical surface model
+for the browser and Blender. `surface-settings.json` records tile size and PBR
+strengths. Browser maps use 512 px; the Blender source maps use 1024 px. Relief is
+encoded into tangent normals, not geometric displacement. Fine curved Tolex grain
+replaces coarse polygonal cracks. The cloth adds warm weft, silver warp, an aqua
+tracer, smaller intervening strands, normal/roughness maps and selective metallic
+response. The 24 mm tile, 3/2 mm major stripe pitches and relief remain estimates.
+No source photograph pixels, scratches or aged stains are incorporated.
+
+Use `node tools/blender/create-twin-textures.cjs --surfaces-only` with the documented
+Playwright environment to regenerate only these maps and preserve panel/badge
+artwork. `node checks/surfaces.mjs` checks source/Blender setting agreement and
+map integrity. Browser before/after review images use identical camera/light/
+exposure. Cycles preview exposure was separately lowered by 2 stops; Blender and
+browser remain different inspection setups and are not a calibrated color match.
+The Blender studio still gives stronger broad highlights on black vinyl than
+the browser; that lighting needs separate calibration before judging material
+color from a Cycles screenshot.
 
 ## Remaining work before production integration
 

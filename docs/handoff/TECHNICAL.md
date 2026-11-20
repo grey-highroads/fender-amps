@@ -223,3 +223,28 @@ lighting and screenshot checks do not constitute full factory accuracy.
 
 Production app and private Site remain unchanged on knob revision 0.4. Only
 separate master/review/source assets changed, so no Site republishing is needed.
+
+## Shared photographic surface pass (runtime 60e2e95)
+
+`dist/library/photographic-surfaces.js` is a DOM-free source for Tolex and silver/
+aqua cloth map data and physical tile/PBR settings. `materials.js` converts it to
+cached canvas templates, then instance-owned GPU textures. The Blender texture
+helper imports the same generator, writes 1024 px maps and surface-settings.json;
+the master consumes those settings/maps. New metalness maps are disposed in both
+library and detail cleanup paths. Other material families retain their existing
+builder. The production Twin remains Oxford-equipped; shared surfaces do not
+replace it with the separate JBL master.
+
+Current checks: npm test, surface settings/map/normal checks and GLB integrity
+passed. Browser QA covered both material close-ups, both reference assemblies,
+timeline/detail views and scroll restoration, and 390 px layout, without page
+errors. Exported cloth GLB is glTF 2, 631,888 bytes, with embedded normal and packed
+metallic/roughness textures. Saved Blender master retains metre units, four glides,
+11 linked knobs and no missing image files; its GLB remains 237 mesh instances /
+812,428 rendered triangles. Texture resolution raises master GLB size to about
+10 MB; optimize before production integration of the full assembly.
+
+The matched browser before/after views keep all camera and illumination settings.
+The Cycles-only preview exposure change to -2 EV is separately documented. Runtime
+studio environment and inspector lighting are unchanged. The source generator
+produces estimates, not measured vintage textures or certified photoreal assets.

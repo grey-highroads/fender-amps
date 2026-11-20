@@ -124,3 +124,24 @@ Period scans are kept only under ignored outputs/references/fender-period; sourc
 links, rather than copyrighted scan files, are committed. Own review images now
 show the revised feet-equipped model. The old caster-equipped images in Git
 history document an earlier, superseded interpretation.
+
+## Surface study 0.1 / Blender master 0.3
+
+Re-inspected RetroFret gallery 02 (rear covering), 03 (angled complete amp) and 05
+(control/cloth close view). The modeled covering had much larger, straighter
+polygonal boundaries; the photographs show fine, irregular, curved creases with
+small highlights. The cloth model had an evenly bright open square grid; the
+photo shows a denser layered weave, warm horizontal strands and cooler silver/
+aqua details. These observations guide the new procedural surface model, not a
+claim of exact factory dye/color, embossed mold, thread count or physical relief.
+
+The reference is a vintage specimen photographed under unknown lighting, with
+possible aging. No inferred wear, stains or photograph pixels are baked into the
+new maps. Geometry and the unresolved cabinet dimensions are unchanged. The
+factory JBL option/glide baseline is retained. Separate normal, roughness and
+metallic channels control surface response without painting studio highlights.
+
+Own matched browser evidence: images/surfaces-{before,after}-{angle,tolex,cloth}.png.
+Browser camera/scale/environment/light/exposure stay fixed. Blender Cycles preview
+exposure was separately reduced by 2 stops; do not combine that change with the
+browser material benchmark or present it as a direct photographic match.

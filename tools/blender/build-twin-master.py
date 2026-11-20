@@ -9,11 +9,12 @@ from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'models/twin-1968'
 D=json.loads((OUT/'dimensions.json').read_text())
+SURF=json.loads((OUT/'surface-settings.json').read_text())
 E=D['estimates']; W,H,DEP=[D['cabinet'][k] for k in ('width','height','depth')]
 mm=lambda v:v*.001
 scene=bpy.context.scene
 # Background process gets a new scene; no existing scene is edited or deleted.
-scene=bpy.data.scenes.new('Twin 1968 — factory JBL option — master 0.2')
+scene=bpy.data.scenes.new('Twin 1968 — factory JBL option — master 0.3')
 bpy.context.window.scene=scene
 scene.unit_settings.system='METRIC';scene.unit_settings.scale_length=1;scene.unit_settings.length_unit='MILLIMETERS'
 scene['specimen']=D['specimen'];scene['dimension_basis']=D['cabinet']['basis'];scene['status']='First assembly study; not a completed faithful replica'
@@ -49,9 +50,13 @@ def image_material(name,file,metal=0,rough=.5,alpha=False):
  return m
 cover=image_material('Black Tolex — generated 32 mm tile','tolex-color.png',0,.56)
 nt=cover.node_tree;bs=nt.nodes.get('Principled BSDF')
-n=nt.nodes.new('ShaderNodeTexImage');n.image=bpy.data.images.load(str(OUT/'textures/tolex-normal.png'));n.image.colorspace_settings.name='Non-Color';nm=nt.nodes.new('ShaderNodeNormalMap');nm.inputs['Strength'].default_value=.3;nt.links.new(n.outputs['Color'],nm.inputs['Color']);nt.links.new(nm.outputs['Normal'],bs.inputs['Normal'])
+n=nt.nodes.new('ShaderNodeTexImage');n.image=bpy.data.images.load(str(OUT/'textures/tolex-normal.png'));n.image.colorspace_settings.name='Non-Color';nm=nt.nodes.new('ShaderNodeNormalMap');nm.inputs['Strength'].default_value=SURF['tolex-black']['normalScale'];nt.links.new(n.outputs['Color'],nm.inputs['Color']);nt.links.new(nm.outputs['Normal'],bs.inputs['Normal'])
 r=nt.nodes.new('ShaderNodeTexImage');r.image=bpy.data.images.load(str(OUT/'textures/tolex-roughness.png'));r.image.colorspace_settings.name='Non-Color';nt.links.new(r.outputs['Color'],bs.inputs['Roughness'])
-cloth=image_material('Silver aqua woven grille — generated tile','grille-color.png',.28,.7)
+cloth=image_material('Silver aqua woven grille — photographic study','grille-color.png',1,1)
+nt=cloth.node_tree;bs=nt.nodes.get('Principled BSDF')
+for file,socket in [('grille-roughness.png','Roughness'),('grille-metallic.png','Metallic')]:
+ im=nt.nodes.new('ShaderNodeTexImage');im.image=bpy.data.images.load(str(OUT/'textures'/file));im.image.colorspace_settings.name='Non-Color';nt.links.new(im.outputs['Color'],bs.inputs[socket])
+n=nt.nodes.new('ShaderNodeTexImage');n.image=bpy.data.images.load(str(OUT/'textures/grille-normal.png'));n.image.colorspace_settings.name='Non-Color';nm=nt.nodes.new('ShaderNodeNormalMap');nm.inputs['Strength'].default_value=SURF['cloth-silver-blue']['normalScale'];nt.links.new(n.outputs['Color'],nm.inputs['Color']);nt.links.new(nm.outputs['Normal'],bs.inputs['Normal'])
 frontart=image_material('Early silverface panel — interpretive artwork','panel-color.png',.75,.32)
 logo=image_material('Fender badge — existing vector silhouette','fender-badge.png',.75,.27,True)
 jbl=image_material('JBL corner badge — interpretive artwork','jbl-badge.png',.35,.45)
@@ -135,7 +140,7 @@ def front_plane(name,w,h,bottom,mat,offset=0,tile=None):
  vals=[(0,0),(w/tile if tile else 1,0),(w/tile if tile else 1,h/tile if tile else 1),(0,h/tile if tile else 1)]
  for i in range(4):uv.data[i].uv=vals[i]
  return o
-front_plane('Woven grille cloth',E['grilleWidth'],E['grilleHeight'],E['grilleBottom'],cloth,1,80)
+front_plane('Woven grille cloth',E['grilleWidth'],E['grilleHeight'],E['grilleBottom'],cloth,1,SURF['cloth-silver-blue']['tileMm'])
 # Drip edge is a rounded thin metal channel rather than a broad silver frame.
 for x in [-315,315]:
  o=box('Vertical aluminum drip edge',(4.5,5,423),(x,front_y(232)-.7,232),aluminum,1.9);o.rotation_euler.x=-math.atan(E['frontSetbackAtTop']/H)
@@ -278,7 +283,7 @@ for name,loc,power,size in [('Large softbox',(-900,-900,1300),85,1.0),('Side fil
 camdata=bpy.data.cameras.new('Review camera');camera=bpy.data.objects.new('Review camera',camdata);collections[active].objects.link(camera);scene.camera=camera;camdata.type='ORTHO';camdata.ortho_scale=1.02
 scene.render.engine='CYCLES';scene.cycles.samples=32;scene.cycles.use_denoising=True
 scene.render.resolution_x=1500;scene.render.resolution_y=1200;scene.render.resolution_percentage=100
-scene.view_settings.view_transform='AgX';scene.render.image_settings.file_format='PNG'
+scene.view_settings.view_transform='AgX';scene.view_settings.exposure=-2;scene.render.image_settings.file_format='PNG'
 def camera_view(name,loc):
  camera.location=tuple(mm(v)for v in loc);camera.rotation_euler=(Vector((0,0,.24))-camera.location).to_track_quat('-Z','Y').to_euler();camera.name='Review camera — '+name
 camera_view('front three-quarter',(900,-1800,620))
