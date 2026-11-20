@@ -248,3 +248,11 @@ The matched browser before/after views keep all camera and illumination settings
 The Cycles-only preview exposure change to -2 EV is separately documented. Runtime
 studio environment and inspector lighting are unchanged. The source generator
 produces estimates, not measured vintage textures or certified photoreal assets.
+
+Surface publication succeeded while retaining owner-only access. GitHub runtime
+`60e2e95`, model/evidence `f30908e`; Site source
+`189c886dabd26f2a2b21587320650239f1403e95`; deployment
+`appgdep_6b0052380c288191bfcf765e2f544601` (`succeeded`). The full Blender assembly
+remains a separate review artifact; the production library/timeline/detail use
+its shared surface source on their existing assemblies. Production status was
+confirmed by Sites; visual QA was local, not a signed-in production UI review.
