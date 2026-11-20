@@ -421,3 +421,9 @@ scrollability. No page errors or horizontal overflow. Own rendered evidence:
 images/geek-{inputs,reverb,power-tubes}.png. No fresh GLB export was needed for
 this copy/card-template-only change. Schematic comparisons support editorial
 claims; browser/tests do not establish historical or tonal validation.
+
+Specialist editorial publication succeeded: GitHub runtime `83cf54a`, evidence
+`bf5b8f2`; Site source `662fee3527279a5954f49d0f0928e546e304e4af`, deployment
+`appgdep_6b008c1767cc81919d855de878107da6`. Existing Site and owner-only audience
+preserved. Local browser review and service-confirmed publication are separate
+from a signed-in production UI review.
