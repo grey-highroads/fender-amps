@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {assetById} from './catalog.js';
 import {createMaterial,physicalUV} from './materials.js';
+import {createSkirtedKnob} from './knobs.js';
 export const MM=.17/25.4;
 const brandImage=new Image();const brandReady=new Promise(resolve=>{brandImage.onload=resolve;brandImage.onerror=resolve;});brandImage.src=new URL('../assets/fender-wordmark.svg',import.meta.url).href;
 export async function readyForExport(){await brandReady;if(document.fonts)await document.fonts.ready;}
@@ -13,14 +14,10 @@ function labelMap(text,brand,color){const c=document.createElement('canvas');c.w
  const draw=(image)=>{x.clearRect(0,0,512,512);x.fillStyle=color;x.beginPath();x.arc(256,256,247,0,Math.PI*2);x.fill();x.strokeStyle='#c4c2ac';x.lineWidth=5;x.beginPath();x.arc(256,256,230,0,Math.PI*2);x.stroke();x.fillStyle='#e2ddc4';x.textAlign='center';if(brand==='Jensen'){x.font='italic bold 80px Georgia';x.fillText('Jensen',256,168);}else if(image){const m=document.createElement('canvas');m.width=400;m.height=150;const q=m.getContext('2d');q.drawImage(image,0,0,400,150);q.globalCompositeOperation='source-in';q.fillStyle='#d1d1bf';q.fillRect(0,0,400,150);x.drawImage(m,56,65);}
  x.font='bold 27px Arial';x.fillText(brand==='Jensen'?'LOUDSPEAKERS':'MUSICAL INSTRUMENTS',256,350);x.font='23px Arial';x.fillText(text,256,394);t.needsUpdate=true;};draw();if(brand!=='Jensen'){if(brandImage.complete&&brandImage.naturalWidth)draw(brandImage);else brandReady.then(()=>draw(brandImage.naturalWidth?brandImage:null));}return t;}
 export function createScrew(){const g=new THREE.Group(),metal=material('#afb5b3',{metalness:.95,roughness:.25});const dome=mesh(g,new THREE.SphereGeometry(3,16,8,0,Math.PI*2,0,Math.PI/2),metal,0,0,1);dome.rotation.x=Math.PI/2;mesh(g,new THREE.BoxGeometry(4.5,.55,.2),material('#343536'),0,0,3.85);return g;}
-export function createKnob(id='knob-skirted'){
- const g=new THREE.Group(),black=material('#151617',{roughness:.32}),white=material('#eee8d4'),metal=material('#c4c9c6',{metalness:.9,roughness:.23});
- if(id==='knob-chicken'){
+export function createKnob(id='knob-skirted',options={}){
+ if(id==='knob-skirted')return createSkirtedKnob(options);
+ const g=new THREE.Group(),black=material('#151617',{roughness:.32}),white=material('#eee8d4');
   const shape=new THREE.Shape();shape.moveTo(-5,-8);shape.bezierCurveTo(-8,-6,-7,8,-3,11);shape.quadraticCurveTo(0,17,3,11);shape.bezierCurveTo(7,8,8,-6,5,-8);shape.quadraticCurveTo(0,-12,-5,-8);const geo=new THREE.ExtrudeGeometry(shape,{depth:9,bevelEnabled:true,bevelSize:1.3,bevelThickness:1.3,bevelSegments:3,steps:1});mesh(g,geo,black,0,0,2);mesh(g,new THREE.BoxGeometry(.8,12,.3),white,0,5,12.6);
- }else{
-  cylinder(g,11.7,12.5,3,black,1.5);cylinder(g,7.5,10.7,10,black,7);cylinder(g,5.1,5.1,1,metal,12.4);for(let i=0;i<24;i++){const a=i*Math.PI/12;const rib=mesh(g,new THREE.BoxGeometry(.6,1.2,6),black,Math.sin(a)*8,Math.cos(a)*8,7);rib.rotation.z=-a;}
-  const c=document.createElement('canvas');c.width=c.height=512;const x=c.getContext('2d');x.fillStyle='#eee9d5';x.textAlign='center';x.textBaseline='middle';x.font='28px Arial';for(let i=1;i<=10;i++){const a=(i-1)/9*Math.PI*1.55-Math.PI*.775;x.save();x.translate(256+Math.sin(a)*235,256+Math.cos(a)*235);x.rotate(-a);x.fillText(i,0,0);x.restore();}const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.PlaneGeometry(25,25),material('#ffffff',{map:t,transparent:true,depthWrite:false}),0,0,3.1);mesh(g,new THREE.BoxGeometry(.8,3,.15),white,0,6.3,11.4);
- }
  g.name=id;g.userData.componentId=id;return g;
 }
 export function createJack(){const g=new THREE.Group(),chrome=material('#c0c6c5',{metalness:.95,roughness:.22}),dark=material('#101213');cylinder(g,6,6,1,chrome,.5);cylinder(g,4.8,4.8,2.5,chrome,2,0,0,6);cylinder(g,3.175,3.175,3,dark,3.35);ring(g,3.2,4.2,chrome,5);return g;}
@@ -64,7 +61,7 @@ export function createFaceplate(id){
  if(!tweed){x.font='bold 29px Arial';x.fillText('NORMAL',toX(29),285);x.fillText('VIBRATO',toX(twin?227:202),285);x.font=twin?'42px Arial':'italic 49px Georgia';x.fillText(twin?'TWIN REVERB-AMP':'Deluxe Reverb-Amp',toX(twin?550:494),100,twin?410:390);x.font='17px Arial';x.fillText('FENDER MUSICAL INSTRUMENTS',toX(twin?550:494),140,360);}
  else{x.font='bold 28px Arial';x.fillText('INSTRUMENT',toX(270),285);x.fillText('MICROPHONE',toX(320),285);}
  const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,metalness:tweed||twin?.6:0,roughness:.5}),0,0,1.1);
- for(const k of knobs){const knob=createKnob(tweed?'knob-chicken':'knob-skirted');knob.position.set(k-W/2,0,1.5);g.add(knob);}
+ for(const [i,k] of knobs.entries()){const settings=twin?[3,5.5,5,4.5,3.5,5,5.5,4,2.5,3,4]:[3,5,4,3.5,5.5,4.5,2.5,3,4];const knob=createKnob(tweed?'knob-chicken':'knob-skirted',{setting:settings[i]});knob.position.set(k-W/2,0,1.5);g.add(knob);}
  const jacks=tweed?[[270,-9],[270,9],[320,-9],[320,9]]:(twin?[17,40,215,238]:[17,40,190,213]).map(v=>[v,0]);for(const [j,y] of jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
  if(twin)for(const k of [53,251]){mesh(g,new THREE.BoxGeometry(3,8,3),material('#131716'),k-W/2,12,3);mesh(g,new THREE.BoxGeometry(1.5,5,4),chrome,k-W/2,13,5);}
  const jewel=createJewel();jewel.position.set((tweed?24:twin?610:557)-W/2,0,2);g.add(jewel);g.name=id;return g;

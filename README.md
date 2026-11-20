@@ -110,3 +110,33 @@ cabinet dimensions, speaker basket/motor geometry and label variants, then match
 materials under neutral lighting. Keep factory appearance separate from wear.
 Approve one component against references before promoting it from study to
 verified. No component in v0.1 is labeled verified.
+
+## Skirted knob photographic revision 0.2
+
+The black/silver 1–10 knob now has a continuous rolled-skirt profile, a narrower
+finely fluted grip, a shallow silver dish, slotted side set screw and annular
+metal shaft insert. The printed numerals are individual vector strokes projected
+onto a curved skirt surface, rather than text on a floating plane. The previous
+raised pointer and separate chunky grip blocks were removed.
+
+`dist/library/knob-profile.js` holds the millimetre-based profile, number layout,
+revision and provenance. `dist/library/knobs.js` builds the common part used by
+the inspector and the Deluxe Reverb / early Twin faceplates. The shape is informed
+by the dated 1968 RetroFret Twin and early-1965 Folkway Deluxe Reverb photographs;
+isolated **modern replacement** photographs provide secondary views of the grip
+and underside. Reference photos remain local review material and are not shipped
+as model textures. Original and replacement references remain separately labeled.
+
+Open `components.html#knob-skirted` to inspect the part, or
+`components.html#amp/twin-reverb-early` for the assembled Twin. The inspector uses
+a longer lens for this small component to reduce close-up perspective distortion.
+The studio reflection rig includes a broad fill card so the plastic and silver
+center can be judged by their different reflections.
+
+This is a photographic reconstruction, not a measured replica. The 25.2 mm outside
+diameter, 14.2 mm height, flute count, cap depth, exact lettering and underside
+mold remain provisional. Fender's modern replacement specifies a nominal 1/4-inch
+solid-shaft interface. The modern part's dimensions are not represented as an
+original-vintage measurement. `checks/knob.mjs` checks actual surface geometry,
+open shaft clearance, finite normals/UVs, printed-number placement and the shared
+assembly connection; visual fidelity is evaluated separately in the browser.

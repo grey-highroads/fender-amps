@@ -6,7 +6,7 @@
   "description": "An interactive Fender tube amplifier timeline and reusable 3D component library.",
   "scripts": {
     "start": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist",
-    "test": "node checks/library.mjs"
+    "test": "node checks/library.mjs && node checks/knob.mjs"
   },
   "engines": {
     "node": ">=20"
