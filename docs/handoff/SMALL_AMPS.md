@@ -98,3 +98,11 @@ pages; detailed hotspots wait for the research/schematic pass.
   no rendering error was observed in the reviewed models. Neither those warnings
   nor passing tests establish photographic fidelity.
 - Review images use Git LFS. Third-party reference images remain excluded.
+- Regression browser checks: existing Deluxe Reverb bright-cap card and Twin
+  power-tube card still open with their correct profiles. New entries have no
+  misleading empty hotspot menu. Closing the brown Deluxe restored a nonzero
+  timeline offset exactly (1752 px) and returned focus to its card. The 390 × 844
+  Tremolux layout had no horizontal page overflow; its long title fits.
+- Automatic preview of `d0a8761` reached READY at
+  `amplifier-observatory-36eqbne4h-grey-7947s-projects.vercel.app`; remote logs
+  confirm all five checks, 22 mappings and hydrated LFS model validation.
