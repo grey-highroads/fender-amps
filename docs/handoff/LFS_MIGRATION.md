@@ -1,7 +1,8 @@
 # Git LFS migration and recovery
 
-Status: current-file LFS conversion prepared as an ordinary forward commit.
-Published historical rewrite requires explicit user approval. No new amps may be
+Status: current-file LFS conversion is published in ordinary forward commit
+`e7d8d03`. A fresh remote clone downloaded all current files and passed all five
+checks. Published historical rewrite still requires explicit user approval. No new amps may be
 added until this maintenance is completed.
 
 ## Scope
@@ -36,8 +37,8 @@ On the current Mac, verified Git LFS 3.8.1 was installed in
 `/Users/greygarner/.local/bin/git-lfs` from the official darwin-arm64 release.
 SHA-256 of the downloaded archive:
 `0ba10e897e0496412cd86eacaed4ed554c97ddc29bc5c709d28faa5eaaa2222c`.
-This checkout has local absolute filter commands, a local `git lfs` alias and a
-pre-push PATH entry because ~/.local/bin is not on the session's default PATH.
+This checkout has local absolute filter commands, a local `git lfs` alias and local
+Git hook PATH entries because ~/.local/bin is not on the session's default PATH.
 Global Git configuration was not changed. Other checkouts should install/configure
 Git LFS normally; these machine-local settings are not repository content.
 
@@ -86,3 +87,34 @@ Git metadata into the separate Sites source history as a shortcut.
 A GitHub checkout/archive used directly by another deployment system must be
 configured to download LFS objects. The supported private Sites workflow remains
 separate, using actual working files and its existing static manifest.
+
+## Verified rehearsal and approval request
+
+The isolated rehearsal has no push remote. Its local report, commit map and
+size measurements are under `.maintenance/`: `rehearsal-report.json`,
+`lfs-object-map.csv`, and `rehearsal-size-{before,after}.txt`. The candidate must
+be refreshed if main advances; use the exact baseline/head in the latest report.
+
+Initial rehearsal of `e7d8d03` rewrote 33 published-main commits locally. All
+historical asset pointers matched the original asset SHA-256 and byte count;
+all other tree blobs/file modes, author dates/messages and parent relationships
+were preserved. All 138 current files matched both the hydrated rehearsal and
+the fresh remote clone byte for byte. All five checks passed in both copies.
+There are 66 unique historical LFS objects totaling 100,135,548 bytes; they must
+be retained/uploaded before a historical main update. The current head contains
+47 LFS-managed files (46 unique objects).
+
+After garbage collection **in the isolated rehearsal only**, packed ordinary Git
+objects dropped from 72,242 KiB to 10,749 KiB (about 85%). This is Git history
+size, not removal of the binary data: LFS keeps the assets separately. The
+original working repo and backups were not garbage-collected or rewritten.
+
+The publishing smoke archive contains byte-identical real dist/ files and the
+existing private Site manifest; no pointer text was packaged and no Site was
+republished. Source/checks/data records changed, but the runtime did not.
+
+Pending approval is specifically the replacement of GitHub main with the tested
+LFS-migrated history. It changes historical commit IDs. Existing checkouts should
+be preserved for local work and then freshly cloned or deliberately rebased.
+The separate Sites source history is unchanged. No approval is inferred from
+this report or from the safe forward push.

@@ -467,3 +467,34 @@ Deluxe expansion publication succeeded: GitHub runtime `7448a8f`, handoff
 `dea77d4`; Site source `3e392dab96aeba9d93a62d5e79c80a4aff4f8e29`, deployment
 `appgdep_6b009114b71c819193b832bbb135244b`. Existing owner-private Site ID and
 audience preserved. Browser review was local; the service confirms publication.
+
+## Catalog/test/LFS maintenance before further explorer work
+
+Forward maintenance commit `e7d8d03` maps all 19 timeline entries to logical CSV
+rows in data/catalog/timeline-map.json, with a human-reviewed table and explicit
+differences for Bassman, early silver-panel Twin and Super-Sonic 60. Catalog and
+row hashes, runtime fields and complete coverage are checked within library.mjs.
+Deleting a mapping in the disposable verification clone was confirmed to fail;
+the file was restored afterward. No runtime values or catalog source cells
+changed. `npm test` now invokes all five scripts in checks/ and they pass.
+
+Current `.blend` / `.glb` files and handoff images use LFS (47 paths / 46 unique
+current objects). The official Apple Silicon Git LFS release was hash-verified,
+installed for this user, and configured locally. Missing hydrated Blender GLBs
+now give an explicit `git lfs pull` error. A fresh GitHub clone downloaded all
+LFS content, passed all five checks and matched the tracked working files.
+
+Both a pre-LFS restorable bundle/tree archive and a pre-rewrite bundle plus LFS
+object copy exist under ignored .maintenance/backups/. The original bundle was
+restored independently, fsck passed and all 134 original tracked files matched.
+A history rewrite was rehearsed only in .maintenance/lfs-rehearsal/ with its push
+remote removed. Every migrated historical asset checksum, non-asset blob, mode,
+author/message and parent relation was compared. All checks passed; the packing
+comparison is approximately 71 MiB to 10.5 MiB for ordinary Git objects, with
+asset content preserved separately in LFS. The complete report/commit map remain
+local until the user approves the historical update. See LFS_MIGRATION.md.
+
+No runtime/UI files changed, so no browser rerender or private-site deployment
+was necessary. A packaging smoke test checked actual dist/ bytes, absence of
+pointer text and the original private Site binding. The Sites history and src/
+organization are outside this maintenance. No new amps were added.
