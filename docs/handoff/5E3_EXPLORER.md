@@ -80,3 +80,17 @@ establish structural consistency, not historical or photographic accuracy.
 
 Next useful work: validate the Princeton evidence before building that explorer;
 use measured vintage chassis/cabinet evidence for a later construction pass.
+
+## Publication verified
+
+Runtime commit `24f5828d5f75a0b0c4826d64196b89e99c6261e5` was fast-forwarded
+onto main and pushed. Git-source production deployment
+`dpl_6AYd728esRSnyAsvx9xZToqEj7Lq` is READY:
+https://amplifier-observatory-u38sofj9j-grey-7947s-projects.vercel.app
+Build logs show all five checks passing, including the LFS master check.
+Public `tweed-features.js`, `amp-models.js` and `app.js` returned 200 and exactly
+matched the local tested bytes. Live browser review opened the volume card,
+then the preamp photograph/sources (image complete, natural width 3264); no
+console errors were captured. The public custom domain and private original
+Sites audiences were preserved. Later documentation commits may redeploy the
+same runtime; the record above identifies the runtime release actually reviewed.

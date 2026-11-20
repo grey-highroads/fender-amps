@@ -124,3 +124,11 @@ The 22-entry timeline / six-assembly runtime was published from main at
 See [small-amp build and validation](SMALL_AMPS.md). Live browser routes and a
 SHA-256 match of the served model factory were checked. Later documentation
 updates do not change this inspected runtime baseline.
+
+## 5E3 explorer publication
+
+Main runtime `24f5828` automatically produced READY Git deployment
+`dpl_6AYd728esRSnyAsvx9xZToqEj7Lq`. All five build checks passed. Live browser
+cards/photo and byte-for-byte public runtime files were verified. See
+[5E3 publication and evidence](5E3_EXPLORER.md). No hosting protection, DNS or
+original private Sites settings changed.
