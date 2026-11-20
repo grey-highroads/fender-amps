@@ -5,7 +5,7 @@ Observatory without relying on the chat history.
 
 **Current priority: educational construction, supported by real photographs.**
 The user redirected the project away from photoreal asset production after
-reviewing the workload. The 1968 Twin is the first inside-view/hotspot pilot.
+reviewing the workload. The 1968 Twin is the first single-model hotspot pilot.
 Accurate proportions and meaningful construction relationships matter; the
 models remain interpretive and exact interior placement is not established.
 
@@ -23,7 +23,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `42cd4e2`, single-model feature explorer; knob 0.4 |
+| Runtime baseline | Commit `83cf54a`, specialist circuit/collector cards; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; runtime is not fully reconciled or connected live |
@@ -181,15 +181,23 @@ links; no dealer photography is redistributed. Tone hypotheses remain labeled.
 
 ![Single-model hotspots](images/hotspots-front.png)
 
-## Tone-focused cards
+## Specialist hotspot cards
 
-The cards now lead with tone and player tradeoffs: output-stage headroom, speaker
-response/breakup, transformer bandwidth and how the combination behaves. Each
-has key attributes, listening prompts, expandable interaction/design notes and
-photograph/source access. Fender-choice hypotheses are labeled interpretation.
-AB763 is explicitly a circuit-family reference, not authentication of the dated
-AC568 specimen. Oxford-specific measurements remain unknown; JBL comments are
-attributed to a later 1970 manufacturer brochure, not a listening test.
+The audience is experienced amp enthusiasts. Lead with a distinctive insight
+and its consequence, not basic control operation. The eight cards now cover:
+input-pad loading and first-stage clipping before Volume; the reverb channel’s
+3.3 MΩ / 10 pF dry network and mixer; optical tremolo after the dry/wet mix;
+AC568 cathode resistance alongside negative grid bias; shared transformer
+designations across circuit revisions; JBL-option construction versus unknown
+Oxford measurements; and cosmetic/restoration evidence limits.
+
+Use “Why it matters” and expandable “Follow the circuit” notes. Cosmetics use
+“The collector angle.” Mandatory speculative Fender-choice paragraphs were
+removed. Representative photo credits and explicit circuit/specimen limits
+remain available in sources. The AC568 and AB763 drawings were inspected in
+this pass; the physical amp’s complete circuit and tank remain unauthenticated.
+
+![Specialist input-stage card](images/geek-inputs.png)
 
 ## Next useful work
 

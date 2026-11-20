@@ -134,3 +134,19 @@ that can orient the camera. Close-up labels appear on hover/focus, reducing
 clutter. Preserve shared geometry/source placement, timeline scroll/focus and
 photo attribution. Cosmetic cards explain visual identity and dating limits
 without inventing tonal properties of trim or unmeasured cloth.
+
+## Experienced-player editorial standard
+
+The user clarified that the target audience already understands amp controls.
+Every hotspot should answer “what is interesting about this particular design,
+and so what?” Lead with a concrete circuit, construction or collector insight.
+Explain where loading, gain, mixing, bias or feedback changes the result; avoid
+introductory knob instructions and generic component descriptions. Keep clear
+prose without reducing the technical depth.
+
+The cards now use “Why it matters” / “Follow the circuit,” or collector evidence
+for cosmetics. Optional Fender design-rationale text remains supported, but
+remove obligatory speculative filler. Unknown tank identity, original circuitry,
+recone history and measured response belong in evidence notes rather than being
+filled with plausible-sounding specifics. A schematic comparison is not a
+specimen audit. The single-model UX and eight-topic scope remain unchanged.

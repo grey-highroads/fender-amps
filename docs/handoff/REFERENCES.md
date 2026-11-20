@@ -232,3 +232,30 @@ the silver-panel cloth/trim appearance. Blue/silver weave and aluminum surround
 geometry remain interpretive. No acoustic cloth measurement or trim-induced
 tone is claimed. Drip edge and cloth are clues to appearance, not proof of circuit
 revision, exact year or originality. Fender-choice explanations are hypotheses.
+
+## Specialist editorial pass: actual schematic comparison
+
+Original Fender AC568 drawing newly downloaded and visually inspected:
+https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Twin-Reverb-AC568-Schematic.pdf
+The linked AB763 drawing was also downloaded and visually inspected. Copies
+and rendered sheets stayed in /tmp, not the public repository.
+
+Observed drawing evidence: input-jack resistor/switch topology; volume after
+the first gain stage and tone network; dry 3.3 MΩ / 10 pF network and additional
+Vibrato-channel mixer stage; parallel 12AT7 transformer-coupled reverb driver;
+optical tremolo downstream of the wet/dry mix; AC568 cathode resistors alongside
+negative grid bias, with phase-inverter value differences; and TR3 125A29A
+designation on both drawings. The previous generic fixed-bias summary omitted
+the important AC568 cathode-network distinction and is superseded.
+
+Nominal single-input impedances (about 1 MΩ / 136 kΩ) and the approximately
+6 dB pad are circuit calculations for the stated switching condition, not
+measurements. Pickup-resonance loading, clipping order, channel polarity and
+wet-return modulation are engineering implications of the traced signal paths.
+Do not present these as a listening test or a complete circuit audit of the
+dealer-attributed AC568 specimen. No exact tank code, decay rating, spring count,
+Oxford response, or measured transformer bandwidth was established.
+
+JBL 1970 construction/marketing evidence and the 1968 catalog option evidence
+remain separately dated. Cosmetics now emphasize originality/restoration limits
+and do not imply circuit identity or an unmeasured cloth tone.

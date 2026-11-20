@@ -10,6 +10,10 @@ and the separate GitHub and private-site publishing workflows.
   one assembled model with hotspots across front/rear features; separate Cabinet
   and Inside modes were superseded. Keep improvements in the shared library so they reach the timeline and
   detail views. Collection expansion is deferred.
+- Write for experienced amp enthusiasts. Hotspots should reveal a distinctive
+  circuit, construction or collector insight and its consequences, not teach
+  basic control functions. Scope schematic facts to their circuit revision;
+  distinguish measured behavior, engineering inference and specimen attribution.
 - Model Fender factory production for the selected year. Use period Fender
   documentation for configuration, label factory options, and do not treat a
   dealer originality claim as proof of factory fitment.

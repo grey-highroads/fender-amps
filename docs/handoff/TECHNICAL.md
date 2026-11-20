@@ -404,3 +404,20 @@ Single-model publication succeeded: GitHub runtime `42cd4e2`, handoff `712d205`;
 Site source `012a50875714d4f5f1fa5ab188c00f573c6f379a`, deployment
 `appgdep_6b008933af6881919658182f6bdbc482`. Existing Site and owner-only audience
 preserved. Browser QA was local; publication was confirmed by the service.
+
+## Specialist card editorial pass
+
+Rewrote all eight topic bodies in `twin-features.js` and `twin-tone.js` for an
+experienced audience. Cards lead with concrete topology or collector evidence,
+then consequences, interactions and evidence limits. `explore.js` headings now
+use “Why it matters,” “Follow the circuit” and “The collector angle.” Design-
+rationale paragraphs are optional; no mandatory speculative placeholder remains.
+Single-model navigation, anchors, occlusion, geometry and export code unchanged.
+
+Validation: npm test and changed JS syntax/whitespace checks passed. Actual
+Chrome review at 1500×1100 and 390×844 covered all eight cards, expanded circuit
+and source notes, loaded representative tube photograph, Escape/close and mobile
+scrollability. No page errors or horizontal overflow. Own rendered evidence:
+images/geek-{inputs,reverb,power-tubes}.png. No fresh GLB export was needed for
+this copy/card-template-only change. Schematic comparisons support editorial
+claims; browser/tests do not establish historical or tonal validation.
