@@ -194,3 +194,14 @@ old/new commit translation table remain available. The canonical working checkou
 is aligned; other old clones should not merge their old history back into main.
 The private Site history/audience/deployment were not part of this operation.
 This approval does not authorize unrelated future history rewrites.
+
+
+## Timeline expansion now authorized in reviewed batches
+
+The user approved a breadth pass followed by smaller content/hotspot passes,
+with a separate research agent preparing evidence. The first build batch is
+Champ 5F1, early Tremolux 5E9 and brown Deluxe 6G3. This supersedes the earlier
+collection-expansion deferral for these entries. Map each to the catalog before
+publishing; inspect photographs rather than treating an unviewed gallery as
+modeling evidence. Preserve dimensions, specimen dates and unresolved conflicts.
+The public Vercel site auto-deploys main; the original Sites prototype stays private.

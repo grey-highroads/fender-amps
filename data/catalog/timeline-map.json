@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-11-20",
-  "scope": "All 19 selected timeline entries. Mapping/reconciliation only; no runtime specifications changed and no independent historical audit claimed.",
+  "scope": "All 22 selected timeline entries; three additions reconciled before publication. Historical confidence is unchanged.",
   "runtimeSource": "dist/collection.js",
   "catalogSource": "data/catalog/catalog.csv",
   "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
@@ -141,6 +141,44 @@
       "scopeNote": "1955 is introduction; the shared assembly uses a 1957-style example and modern reissue dimension proxies. Do not change introduction to the specimen year."
     },
     {
+      "runtimeKey": "1955|tweed|Tweed Tremolux",
+      "runtime": {
+        "year": 1955,
+        "name": "Tweed Tremolux",
+        "years": "1955–1957, 5E9 / 5E9-A",
+        "watts": 15,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "tweed",
+        "circuit": "5E9"
+      },
+      "catalogCsvRow": 25,
+      "catalogName": "Tremolux (5E9 / 5E9-A)",
+      "catalogRowSha256": "a980f77902208299f6e7c28b7c1a71148266ba8c6291cf63a531a41d3894f6b1",
+      "catalog": {
+        "introduced": "1955",
+        "productionEnd": "1957",
+        "productionStatus": "Ended",
+        "outputWatts": "15",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/tremolux/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "scopeNote": "Select early 1955 5E9 from the combined 5E9/5E9-A row. 15 W matches catalog; cabinet envelope is provisional and conflicts are recorded.",
+      "differences": [
+        {
+          "field": "generation/circuit scope",
+          "status": "selected subset",
+          "decision": "Select early 1955 5E9 from the combined 5E9/5E9-A row. 15 W matches catalog; cabinet envelope is provisional and conflicts are recorded."
+        }
+      ],
+      "research": "docs/handoff/SMALL_AMPS.md"
+    },
+    {
       "runtimeKey": "1957|tweed|High-power Twin",
       "runtime": {
         "year": 1957,
@@ -170,6 +208,44 @@
       },
       "differences": [],
       "scopeNote": "Catalog retains 1957 while noting some sources date introduction to 1958. No new introduction-date research is claimed."
+    },
+    {
+      "runtimeKey": "1958|tweed|Tweed Champ",
+      "runtime": {
+        "year": 1958,
+        "name": "Tweed Champ",
+        "years": "1958–1964, 8-inch version",
+        "watts": 5,
+        "speakers": "1 × 8″",
+        "load": "4 Ω",
+        "finish": "tweed",
+        "circuit": "5F1"
+      },
+      "catalogCsvRow": 37,
+      "catalogName": "Champ (5F1, 8-inch)",
+      "catalogRowSha256": "88d19afc2f4689745371f21f2beb2f1f6a2e1d6b7b4921027ebf0dd76992258d",
+      "catalog": {
+        "introduced": "1958",
+        "productionEnd": "1964",
+        "productionStatus": "Ended",
+        "outputWatts": "5",
+        "cabinetSpeakers": "1x8 open-back combo",
+        "nominalLoad": "4",
+        "loadType": "Fixed",
+        "versionNotes": "Nominal vintage load often quoted as 3.2–4Ω.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/champ/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": ""
+      },
+      "scopeNote": "1958 is the catalog start for the 8-inch version, not the first 5F1 circuit. Selected exterior is 1959. Nominal 4 ohms follows catalog; 3.2-ohm vintage markings remain qualified.",
+      "differences": [
+        {
+          "field": "generation/circuit scope",
+          "status": "selected subset",
+          "decision": "1958 is the catalog start for the 8-inch version, not the first 5F1 circuit. Selected exterior is 1959. Nominal 4 ohms follows catalog; 3.2-ohm vintage markings remain qualified."
+        }
+      ],
+      "research": "docs/handoff/SMALL_AMPS.md"
     },
     {
       "runtimeKey": "1958|tweed|Tweed Bassman",
@@ -247,6 +323,44 @@
       },
       "differences": [],
       "scopeNote": "Brown finish selects the usual 6G2 appearance; the catalog warns some late examples have black cosmetics."
+    },
+    {
+      "runtimeKey": "1961|brown|Brown Deluxe",
+      "runtime": {
+        "year": 1961,
+        "name": "Brown Deluxe",
+        "years": "1961–1963",
+        "watts": 20,
+        "speakers": "1 × 12″",
+        "load": "8 Ω",
+        "finish": "brown",
+        "circuit": "6G3"
+      },
+      "catalogCsvRow": 46,
+      "catalogName": "Deluxe (6G3)",
+      "catalogRowSha256": "9275965059155f46cbedbabe904d12761dd1da64ff9a188629310b5f2cef1476",
+      "catalog": {
+        "introduced": "1961",
+        "productionEnd": "1963",
+        "productionStatus": "Ended",
+        "outputWatts": "20",
+        "cabinetSpeakers": "1x12 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Frequently rated around 20W.",
+        "specificationReference": "https://ampwares.com/category/amplifiers/fender/deluxe/",
+        "reviewStatus": "Corrected",
+        "reviewNote": ""
+      },
+      "scopeNote": "1961 introduction; selected 1962 6G3 exterior with Normal-left panel. Approximate 20 W retained from catalog; 15 W alternative remains qualified.",
+      "differences": [
+        {
+          "field": "generation/circuit scope",
+          "status": "selected subset",
+          "decision": "1961 introduction; selected 1962 6G3 exterior with Normal-left panel. Approximate 20 W retained from catalog; 15 W alternative remains qualified."
+        }
+      ],
+      "research": "docs/handoff/SMALL_AMPS.md"
     },
     {
       "runtimeKey": "1963|black|Deluxe Reverb",

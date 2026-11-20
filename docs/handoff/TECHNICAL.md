@@ -26,7 +26,7 @@ Useful routes are `/`, `/components.html#knob-skirted`, and
 | --- | --- |
 | `dist/index.html`, `collection.css`, `collection.js` | Timeline entries, shared-year groups, visible amp rendering, detail overlay and scroll/focus restoration |
 | `dist/app.js` | Detail renderer, orbit/view controls, light and illustrative exploded-view behavior; also retains an older prototype base mesh |
-| `dist/amp-models.js` | Amp construction; selects the three reference assemblies and falls back to representative studies for other entries |
+| `dist/amp-models.js` | Amp construction; selects six shared reference assemblies and falls back to representative studies for other entries |
 | `dist/components.html`, `library/library.css`, `library/library.js` | Inspector, filters, shared assemblies, source notes, catalog/texture/GLB export and component deep links |
 | `dist/library/catalog.js` | Sources, materials, parts, speaker records, assembly selection and component usage |
 | `dist/library/parts.js` | Shared hardware, faceplate, badge and speaker factories; delegates the skirted knob to its dedicated builder |
@@ -524,3 +524,12 @@ objects and remote caches are not counted as erased.
 No runtime/UI change or private-site publication was needed. The existing Site,
 its separate source history and its audience remain unchanged. Current recovery
 paths, contributor instructions and migration scope are in LFS_MIGRATION.md.
+
+
+## Three small-amp construction studies
+
+See [SMALL_AMPS.md](SMALL_AMPS.md) for current evidence and validation.
+`dist/library/small-amps.js` builds the three new assemblies in millimetres, then
+uses the established scene conversion. `small-amp-profiles.js` supplies their
+panel placements. The canonical `createAmpModel` dispatch supplies timeline,
+detail, inspector and export; no presentation-only copy was introduced.

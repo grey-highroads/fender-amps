@@ -24,16 +24,16 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `401cf349` (formerly `7448a8f`), Deluxe + Twin profiles; knob 0.4 |
+| Runtime baseline | Small-amp construction studies 1.0; existing Deluxe + Twin hotspot profiles and knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
-| Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
-| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 19 timeline entries are mapped with explicit differences; no live sync |
-| Library | 24 components/materials and three reference assemblies |
+| Timeline | 22 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
+| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 22 timeline entries are mapped with explicit differences; no live sync |
+| Library | 34 components/materials and six reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
 
-The three reference assemblies are a 1957-style 5E3 Deluxe, a 1965-style blackface
+The original three reference assemblies are a 1957-style 5E3 Deluxe, a 1965-style blackface
 Deluxe Reverb, and a 1968 early silverface Twin. The timeline uses introduction
 years, so its 1955 Deluxe and 1963 Deluxe Reverb cards use later photographed
 examples as construction references. Keep introduction year, production range,
@@ -218,6 +218,15 @@ The model still combines multiple references and does not reproduce the early
 Folkway specimen's badge-less front.
 
 ![Deluxe bright-cap card](images/deluxe-bright-cap.png)
+
+## First expansion batch
+
+The Champ (1959-style 5F1), early Tremolux (1955-style 5E9) and brown Deluxe
+(1962-style 6G3) now share a parameterized construction factory across the timeline,
+detail view and component inspector. The timeline uses introduction years 1958,
+1955 and 1961 respectively. These are exterior/construction studies, with deeper
+hotspots deferred to the parallel research pass. See [modeling evidence, dimensions,
+validation and remaining uncertainty](SMALL_AMPS.md).
 
 ## Next useful work
 

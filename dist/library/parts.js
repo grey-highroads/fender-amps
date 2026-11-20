@@ -4,6 +4,7 @@ import {createMaterial,physicalUV} from './materials.js';
 import {createSkirtedKnob} from './knobs.js';
 import {createRaisedTailBadge} from './tail-badge.js';
 import {TWIN_PANEL as TP,DELUXE_PANEL as DP} from './identification-profile.js';
+import {SMALL_PANELS} from './small-amp-profiles.js';
 import {twinPanelMaps} from './twin-panel-art.js';
 export const MM=.17/25.4;
 const brandImage=new Image();const brandReady=new Promise(resolve=>{brandImage.onload=resolve;brandImage.onerror=resolve;});brandImage.src=new URL('../assets/fender-wordmark.svg',import.meta.url).href;
@@ -14,11 +15,18 @@ function cylinder(p,r1,r2,d,m,z=0,x=0,y=0,segments=64){const o=mesh(p,new THREE.
 function ring(p,inner,outer,m,z=0){return mesh(p,new THREE.RingGeometry(inner,outer,96),m,0,0,z);}
 function torus(p,r,t,m,z=0){return mesh(p,new THREE.TorusGeometry(r,t,10,96),m,0,0,z);}
 function labelMap(text,brand,color){const c=document.createElement('canvas');c.width=c.height=512;const x=c.getContext('2d');const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
- const draw=(image)=>{x.clearRect(0,0,512,512);x.fillStyle=color;x.beginPath();x.arc(256,256,247,0,Math.PI*2);x.fill();x.strokeStyle='#c4c2ac';x.lineWidth=5;x.beginPath();x.arc(256,256,230,0,Math.PI*2);x.stroke();x.fillStyle='#e2ddc4';x.textAlign='center';if(brand==='Jensen'){x.font='italic bold 80px Georgia';x.fillText('Jensen',256,168);}else if(image){const m=document.createElement('canvas');m.width=400;m.height=150;const q=m.getContext('2d');q.drawImage(image,0,0,400,150);q.globalCompositeOperation='source-in';q.fillStyle='#d1d1bf';q.fillRect(0,0,400,150);x.drawImage(m,56,65);}
- x.font='bold 27px Arial';x.fillText(brand==='Jensen'?'LOUDSPEAKERS':'MUSICAL INSTRUMENTS',256,350);x.font='23px Arial';x.fillText(text,256,394);t.needsUpdate=true;};draw();if(brand!=='Jensen'){if(brandImage.complete&&brandImage.naturalWidth)draw(brandImage);else brandReady.then(()=>draw(brandImage.naturalWidth?brandImage:null));}return t;}
+ const draw=(image)=>{x.clearRect(0,0,512,512);x.fillStyle=color;x.beginPath();x.arc(256,256,247,0,Math.PI*2);x.fill();x.strokeStyle='#c4c2ac';x.lineWidth=5;x.beginPath();x.arc(256,256,230,0,Math.PI*2);x.stroke();x.fillStyle='#e2ddc4';x.textAlign='center';if(brand==='Jensen'){x.font='italic bold 80px Georgia';x.fillText('Jensen',256,168);}else if(image&&brand!=='Study'){const m=document.createElement('canvas');m.width=400;m.height=150;const q=m.getContext('2d');q.drawImage(image,0,0,400,150);q.globalCompositeOperation='source-in';q.fillStyle='#d1d1bf';q.fillRect(0,0,400,150);x.drawImage(m,56,65);}
+ x.font='bold 27px Arial';x.fillText(brand==='Jensen'?'LOUDSPEAKERS':brand==='Study'?'CONSTRUCTION STUDY':'MUSICAL INSTRUMENTS',256,350);x.font='23px Arial';x.fillText(text,256,394);t.needsUpdate=true;};draw();if(brand!=='Jensen'){if(brandImage.complete&&brandImage.naturalWidth)draw(brandImage);else brandReady.then(()=>draw(brandImage.naturalWidth?brandImage:null));}return t;}
 export function createScrew(){const g=new THREE.Group(),metal=material('#afb5b3',{metalness:.95,roughness:.25});const dome=mesh(g,new THREE.SphereGeometry(3,16,8,0,Math.PI*2,0,Math.PI/2),metal,0,0,1);dome.rotation.x=Math.PI/2;mesh(g,new THREE.BoxGeometry(4.5,.55,.2),material('#343536'),0,0,3.85);return g;}
 export function createKnob(id='knob-skirted',options={}){
  if(id==='knob-skirted')return createSkirtedKnob(options);
+ if(id==='knob-brown'){
+  const g=new THREE.Group(),brown=material('#39251e',{roughness:.36});
+  const geo=new THREE.LatheGeometry([new THREE.Vector2(0,0),new THREE.Vector2(9.6,0),new THREE.Vector2(9.1,11),new THREE.Vector2(8,14),new THREE.Vector2(0,14)],160);geo.rotateX(Math.PI/2);mesh(g,geo,brown);
+  for(let n=0;n<48;n++){const a=n*Math.PI/24;const rib=mesh(g,new THREE.BoxGeometry(.45,.45,8),brown,Math.sin(a)*9,Math.cos(a)*9,6);rib.rotation.z=-a;}
+  mesh(g,new THREE.BoxGeometry(.8,9,.35),material('#e2d2ae'),0,3,14.1);g.name=id;g.userData.componentId=id;return g;
+ }
+
  const g=new THREE.Group(),black=material('#151617',{roughness:.32}),white=material('#eee8d4');
   const shape=new THREE.Shape();shape.moveTo(-5,-8);shape.bezierCurveTo(-8,-6,-7,8,-3,11);shape.quadraticCurveTo(0,17,3,11);shape.bezierCurveTo(7,8,8,-6,5,-8);shape.quadraticCurveTo(0,-12,-5,-8);const geo=new THREE.ExtrudeGeometry(shape,{depth:9,bevelEnabled:true,bevelSize:1.3,bevelThickness:1.3,bevelSegments:3,steps:1});mesh(g,geo,black,0,0,2);mesh(g,new THREE.BoxGeometry(.8,12,.3),white,0,5,12.6);
  g.name=id;g.userData.componentId=id;return g;
@@ -54,7 +62,33 @@ export function createSpeaker(id){
  mesh(g,new THREE.BoxGeometry(28,13,3),material('#a28c63'),R*.68,-R*.5,-18);for(const sign of [-1,1]){mesh(g,new THREE.BoxGeometry(6,4,5),metal,R*.68+sign*8,-R*.5,-23);const c=new THREE.CatmullRomCurve3([new THREE.Vector3(R*.68+sign*8,-R*.5,-24),new THREE.Vector3(R*.35+sign*10,-R*.62,-45),new THREE.Vector3(sign*12,-R*.38,-67)]);mesh(g,new THREE.TubeGeometry(c,18,1,6,false),material(sign<0?'#242524':'#c6b27b'));}
  g.name=id;g.userData={componentId:id,dimensionsBasis:spec.dimensionBasis,estimatedEnvelopeMm:spec.build};return g;
 }
+function createSmallFaceplate(id){
+ const p=SMALL_PANELS[id],g=new THREE.Group(),W=p.width,H=p.height;
+ const c=document.createElement('canvas');c.width=3072;c.height=360;const x=c.getContext('2d');
+ x.fillStyle=p.top?'#a6aaa2':'#35251e';x.fillRect(0,0,c.width,c.height);x.strokeStyle=p.top?'#e9e1c9':'#ded4b8';x.lineWidth=3;x.strokeRect(9,9,3054,342);x.fillStyle=p.top?'#f0e9d6':'#e6ddc6';x.textAlign='center';
+ const px=v=>v/W*c.width;
+ for(const [i,k] of p.knobs.entries()){
+  x.font='bold 31px Arial';x.fillText(p.labels[i],px(k),326,px(42));
+  x.font='24px Arial';const count=p.top?12:10;
+  for(let n=1;n<=count;n++){const a=-2.45+(n-1)/(count-1)*4.9;x.fillText(String(n),px(k)+Math.sin(a)*px(14),180-Math.cos(a)*100);}
+ }
+ for(const [j,y] of p.jacks){x.font='26px Arial';x.fillText(String(p.jacks.findIndex(v=>v[0]===j)+1),px(j),48);}
+ if(p.channels)for(const [k,label] of p.channels){x.font='bold 31px Arial';x.fillText(label,px(k),326);}
+ if(p.top){x.font='26px Arial';x.fillText('2 AMP',px(p.fuse),326);x.fillText('INSTRUMENTS',px(p.jacks[0][0]+(p.jacks.at(-1)[0]-p.jacks[0][0])/2),326);}
+ else{x.font='italic 65px Georgia';x.fillText('Deluxe',px(400),140,px(95));x.fillText('-Amp',px(400),213,px(85));x.font='19px Arial';x.fillText('FENDER ELECT. INST. CO.',px(400),320);}
+ const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
+ mesh(g,new THREE.BoxGeometry(W,H,2),material(p.top?'#b9beb6':'#39291f',{metalness:p.top?.8:.1,roughness:.42}));
+ mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,metalness:p.top?.65:0,roughness:.48}),0,0,1.1);
+ for(const [i,k] of p.knobs.entries()){const knob=createKnob(p.knob);knob.position.set(k-W/2,0,1.5);knob.rotation.z=.35+(i%3)*.15;g.add(knob);}
+ for(const [j,y] of p.jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
+ const jewel=createJewel();jewel.position.set(p.pilot-W/2,0,2);g.add(jewel);
+ if(p.fuse)cylinder(g,6.5,6.5,12,material('#171817'),7,p.fuse-W/2);
+ if(p.toggle){cylinder(g,5,5,3,material('#b9c0bb',{metalness:.9}),3,p.toggle-W/2);mesh(g,new THREE.BoxGeometry(3,3,12),material('#b9c0bb',{metalness:.9}),p.toggle-W/2,0,10);}
+ g.name=id;g.userData.componentId=id;return g;
+}
 export function createFaceplate(id){
+ if(SMALL_PANELS[id])return createSmallFaceplate(id);
+
  const def=assetById(id),g=new THREE.Group(),tweed=id==='faceplate-5e3',twin=id==='faceplate-twin',W=def.dimensions.widthMm,H=def.dimensions.heightMm;
  const chrome=material('#b8c0bd',{metalness:.85,roughness:.3});mesh(g,new THREE.BoxGeometry(W,H,2),chrome);
  const c=document.createElement('canvas');c.width=3072;c.height=320;const x=c.getContext('2d');x.fillStyle=tweed?'#bdc3bc':twin?'#b0bab6':'#090c0d';x.fillRect(0,0,c.width,c.height);x.strokeStyle=twin?'#315a65':'#d5d4c6';x.lineWidth=3;x.strokeRect(10,10,3052,300);x.fillStyle=twin?'#214f60':tweed?'#1e2522':'#eee9d6';x.textAlign='center';
@@ -73,6 +107,10 @@ export function createFaceplate(id){
 }
 export function createBadge(id){
  if(id==='badge-script')return createRaisedTailBadge();
+ if(id==='badge-small-tweed'){
+  const g=new THREE.Group(),c=document.createElement('canvas');c.width=768;c.height=256;const x=c.getContext('2d');x.fillStyle='#493323';x.fillRect(0,0,768,256);x.strokeStyle='#c5b38c';x.lineWidth=12;x.strokeRect(8,8,752,240);x.fillStyle='#d2bf92';x.font='italic 172px Georgia';x.textAlign='center';x.fillText('Fender',384,181,690);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.BoxGeometry(66,23,1),material('#86704e',{metalness:.7}));mesh(g,new THREE.PlaneGeometry(65,22),material('#fff',{map:t,roughness:.5}),0,0,.6);for(const sx of [-29,29]){const screw=createScrew();screw.scale.setScalar(.45);screw.position.set(sx,0,1);g.add(screw);}g.name=id;return g;
+ }
+
  const def=assetById(id),g=new THREE.Group(),W=def.dimensions.widthMm,H=def.dimensions.heightMm,tweed=id==='badge-tweed';
  const c=document.createElement('canvas');c.width=1024;c.height=320;const x=c.getContext('2d');const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
  const draw=(image)=>{x.clearRect(0,0,1024,320);if(tweed){x.fillStyle='#4d362a';x.fillRect(0,0,1024,320);x.strokeStyle='#bdb293';x.lineWidth=12;x.strokeRect(8,8,1008,304);}if(image){const m=document.createElement('canvas');m.width=1024;m.height=320;const q=m.getContext('2d');q.drawImage(image,0,0,1024,320);q.globalCompositeOperation='source-in';q.fillStyle='#d1d0be';q.fillRect(0,0,1024,320);x.drawImage(m,tweed?35:0,tweed?24:0,tweed?510:1024,tweed?220:320);}if(tweed){x.fillStyle='#d1c2a0';x.font='italic 99px Georgia';x.fillText('Deluxe',560,199);}t.needsUpdate=true;};draw();

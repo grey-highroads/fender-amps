@@ -1,6 +1,6 @@
 # Timeline-to-catalog map
 
-Reviewed November 20, 2026. All 19 runtime entries are mapped below. CSV row numbers include the header; the machine-readable [timeline-map.json](timeline-map.json) also pins the exact catalog name, row hash, source-file hash, runtime comparison fields and decisions. Display names are aliases, not separate catalog models.
+Reviewed November 20, 2026. All 22 runtime entries are mapped below. CSV row numbers include the header; the machine-readable [timeline-map.json](timeline-map.json) also pins the exact catalog name, row hash, source-file hash, runtime comparison fields and decisions. Display names are aliases, not separate catalog models.
 
 This is reconciliation, not a new historical audit. Catalog review/confidence labels retain their original meaning. No runtime specifications were changed. Grouped rows must not overwrite selected-year evidence automatically.
 
@@ -37,3 +37,11 @@ No other core year/endpoints/output/speaker-count-size/load conflicts were found
 ## Before another explorer
 
 The 5E3 Deluxe and black-panel Super Reverb already map to rows 24 and 60. The proposed Princeton Reverb must receive an explicit mapping when it is added to the runtime; the catalog row alone is not an implemented or verified assembly. `npm test` now fails if the timeline set, mapped runtime fields or catalog snapshot changes without reconciliation.
+
+## First expansion batch
+
+| Timeline entry | CSV row / catalog entry | Selection and remaining differences |
+| --- | --- | --- |
+| Tweed Champ | 37 — Champ (5F1, 8-inch) | 1958 is the catalog start for the 8-inch version, not the first 5F1 circuit. Selected exterior is 1959. Nominal 4 ohms follows catalog; 3.2-ohm vintage markings remain qualified. |
+| Tweed Tremolux | 25 — Tremolux (5E9 / 5E9-A) | Select early 1955 5E9 from the combined 5E9/5E9-A row. 15 W matches catalog; cabinet envelope is provisional and conflicts are recorded. |
+| Brown Deluxe | 46 — Deluxe (6G3) | 1961 introduction; selected 1962 6G3 exterior with Normal-left panel. Approximate 20 W retained from catalog; 15 W alternative remains qualified. |

@@ -1,0 +1,150 @@
+{
+  "reviewedOn": "2026-11-20",
+  "rights": "Modeling reference only. Dealer images not redistributed.",
+  "references": [
+    {
+      "amp": "champ",
+      "page": "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/01_62d0398f-6125-424b-8be9-b8dfdb81600d.jpg?v=1774333606",
+      "view": "front",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "champ",
+      "page": "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/02_948b60d9-ad25-45da-a4aa-e0ee28191e76.jpg?v=1774333607",
+      "view": "rear",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "champ",
+      "page": "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/04_8993a168-41a8-4206-9858-7d5dad2d3680.jpg?v=1774333606",
+      "view": "tube chart",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "champ",
+      "page": "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/05_a1155303-6bae-443f-a4df-43a7bcd09fe4.jpg?v=1774333606",
+      "view": "top panel",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "tremolux",
+      "page": "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/01_a0435cb0-ce51-4596-8644-0a6df53f7580.jpg?v=1774339408",
+      "view": "front",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "tremolux",
+      "page": "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/02_2944d762-c7fb-4de6-a2b9-1192ad80a6f6.jpg?v=1774339408",
+      "view": "rear",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "tremolux",
+      "page": "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/03_504b72d0-c8ac-42f5-a5b0-268b9f5b2a4d.jpg?v=1774339408",
+      "view": "angled cabinet",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "tremolux",
+      "page": "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/04_c49a1c67-67d9-4d8d-9c24-023a9ab7993a.jpg?v=1774339408",
+      "view": "tube chart",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "tremolux",
+      "page": "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/05_55c252c5-c541-4edf-8ca6-f78655067b80.jpg?v=1774339408",
+      "view": "top panel",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "tremolux",
+      "page": "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
+      "image": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/06_c002cfe6-af00-4705-aaec-e85073288dcc.jpg?v=1774339408",
+      "view": "exposed chassis",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Uncalibrated photograph; dealer originality claims qualified in SMALL_AMPS.md"
+    },
+    {
+      "amp": "brown-deluxe",
+      "page": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "image": "https://themusicemporium.com/cdn/shop/files/AMP26002-1.jpg",
+      "view": "front angled",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Service and replacement history not a factory specification"
+    },
+    {
+      "amp": "brown-deluxe",
+      "page": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "image": "https://themusicemporium.com/cdn/shop/files/AMP26002-3.jpg",
+      "view": "panel title",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Service and replacement history not a factory specification"
+    },
+    {
+      "amp": "brown-deluxe",
+      "page": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "image": "https://themusicemporium.com/cdn/shop/files/AMP26002-4.jpg",
+      "view": "channel controls",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Service and replacement history not a factory specification"
+    },
+    {
+      "amp": "brown-deluxe",
+      "page": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "image": "https://themusicemporium.com/cdn/shop/files/AMP26002-6.jpg",
+      "view": "handle and top",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Service and replacement history not a factory specification"
+    },
+    {
+      "amp": "brown-deluxe",
+      "page": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "image": "https://themusicemporium.com/cdn/shop/files/AMP26002-8.jpg",
+      "view": "rear serial and opening",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Service and replacement history not a factory specification"
+    },
+    {
+      "amp": "brown-deluxe",
+      "page": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "image": "https://themusicemporium.com/cdn/shop/files/AMP26002-9.jpg",
+      "view": "tube chart",
+      "inspected": true,
+      "kind": "Dealer-dated vintage specimen",
+      "limits": "Service and replacement history not a factory specification"
+    }
+  ]
+}

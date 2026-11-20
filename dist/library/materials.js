@@ -21,11 +21,11 @@ function mapsFor(id){
    const period=tile/24,u=mmX/period,v=mmY/period,ix=Math.floor(u),iy=Math.floor(v),over=((ix-iy)%4+4)%4<2;
    const warp=Math.pow(Math.sin(Math.PI*(u-Math.floor(u))),.5),weft=Math.pow(Math.sin(Math.PI*(v-Math.floor(v))),.5);h=.15+.65*(over?warp:weft);const dark=over?1:.72;rgb=[167*dark+30*h,127*dark+24*h,66*dark+21*h];r=.73+noise*.12;
   }else if(cloth){
-   const pitch=tile/(item.family==='cloth-blue'?18:20),u=(mmX/pitch)%1,v=(mmY/(tile/24))%1,vertical=u<.25,horizontal=v<.23;h=vertical?.7:horizontal?.57:.1;const gold=id==='cloth-brown-gold';rgb=gold?(vertical?[111,82,46]:horizontal?[155,118,65]:[35,29,23]):(vertical?[102,110,105]:horizontal?[176,179,165]:[26,32,30]);if(item.family==='cloth-blue'&&Math.floor(mmX/pitch)%9===0&&vertical)rgb=[65,102,121];r=.87;
+   const pitch=tile/(item.family==='cloth-blue'?18:20),u=(mmX/pitch)%1,v=(mmY/(tile/24))%1,vertical=u<.25,horizontal=v<.23;h=vertical?.7:horizontal?.57:.1;const gold=id==='cloth-brown-gold',wheat=id==='cloth-wheat';rgb=wheat?(vertical?[173,139,81]:horizontal?[192,159,100]:[94,70,41]):gold?(vertical?[111,82,46]:horizontal?[155,118,65]:[35,29,23]):(vertical?[102,110,105]:horizontal?[176,179,165]:[26,32,30]);if(item.family==='cloth-blue'&&Math.floor(mmX/pitch)%9===0&&vertical)rgb=[65,102,121];r=.87;
   }else if(item.family==='tolex'||item.family==='leather'){
    const sx=Math.floor(mmX/.85),sy=Math.floor(mmY/.85);let min=3;
    for(let oy=-1;oy<=1;oy++)for(let ox=-1;ox<=1;ox++){const cx=sx+ox,cy=sy+oy;const px=(cx+.15+.7*hash(cx,cy))*.85,py=(cy+.15+.7*hash(cx+97,cy))*.85;min=Math.min(min,Math.hypot(mmX-px,mmY-py));}
-   h=Math.min(1,min/.42);const leather=item.family==='leather';rgb=leather?[64+h*14,36+h*9,21+h*4]:[18+h*9,20+h*9,21+h*9];r=leather?.67:.74+noise*.1;
+   h=Math.min(1,min/.42);const leather=item.family==='leather';rgb=leather?[64+h*14,36+h*9,21+h*4]:id==='tolex-brown'?[85+h*19,59+h*15,39+h*12]:[18+h*9,20+h*9,21+h*9];r=leather?.67:.74+noise*.1;
   }else{h=.45+noise*.1;rgb=item.family==='aluminum'?[171+noise*9,175+noise*9,173+noise*9]:[190,193,187];r=item.family==='aluminum'?.35+hash(0,y)*.18:.2+noise*.05;}
   const i=(y*size+x)*4;for(let k=0;k<3;k++){ci.data[i+k]=Math.max(0,Math.min(255,rgb[k]+(noise-.5)*6));hi.data[i+k]=h*255;ri.data[i+k]=r*255;}ci.data[i+3]=hi.data[i+3]=ri.data[i+3]=255;heights[y*size+x]=h;
  }
