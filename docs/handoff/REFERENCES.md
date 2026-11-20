@@ -288,3 +288,10 @@ Reverb (1963 / 40 W). Those catalog rows remain research records. The original
 AA1164 drawing was located for the proposed Princeton treatment:
 https://el34world.com/charts/Schematics/Files/Fender/Fender_princeton_reverb_aa1164.pdf
 No new Princeton/Super interior or historical audit was performed in this pass.
+
+## 5E3 explorer evidence
+
+Fender schematic/layout, Baxter mounted photographs and a licensed representative
+chassis image were visually inspected for this pass. Full links, values read,
+originality qualifications and remaining uncertainty are in
+[5E3 explorer 1.0](5E3_EXPLORER.md).

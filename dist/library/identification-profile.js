@@ -1,3 +1,5 @@
+// Estimated 5E3 hardware centers, shared by plate and top-facing markers.
+export const TWEED_PANEL={knobs:[65,115,165],jacks:[[270,-9],[270,9],[320,-9],[320,9]]};
 // Existing Deluxe placement values, shared by hardware and exploration anchors.
 export const DELUXE_PANEL={widthMm:578,knobs:[71,110,149,246,284,322,360,398,436],jacks:[17,40,190,213]};
 // Photographic studies, not measured vintage artwork or mold drawings.

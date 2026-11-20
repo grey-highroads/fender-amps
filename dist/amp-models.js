@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {createSmallAmp} from './library/small-amps.js';
-import {TWIN_PANEL,DELUXE_PANEL} from './library/identification-profile.js';
+import {TWEED_PANEL,TWIN_PANEL,DELUXE_PANEL} from './library/identification-profile.js';
 import {assemblyFor,assetById,SOURCES} from './library/catalog.js';
 import {createMaterial,physicalUV} from './library/materials.js';
 import {MM,createSpeaker,createFaceplate,createBadge,createHandle,disposeObject} from './library/parts.js';
@@ -82,6 +82,12 @@ export function createAmpModel(a){
   if(tweed){plate.rotation.x=-Math.PI/2;plate.position.set(0,h/2+.02,-d*.28);}
   else plate.position.set(0,h/2-.14-ph/2,z+.012);
   chassis.add(plate);
+  if(profile.id==='deluxe-5e3'){
+   amp.userData.exploration='tweed-hotspots-v1';amp.userData.controlPanelY=h/2;
+   for(const [id,x] of [['tone',TWEED_PANEL.knobs[0]],['volumes',(TWEED_PANEL.knobs[1]+TWEED_PANEL.knobs[2])/2],['inputs',(TWEED_PANEL.jacks[0][0]+TWEED_PANEL.jacks[2][0])/2]]){
+    const point=new THREE.Object3D();point.position.set(x-assetById(profile.panel).dimensions.widthMm/2,0,25);point.userData={explorePart:id,explorePoint:true};point.name='hotspot-'+id;plate.add(point);
+   }
+  }
   for(let i=0;i<profile.speakerCount;i++){const speaker=createSpeaker(profile.speaker);speaker.scale.setScalar(MM);speaker.position.set(profile.speakerCount===2?(i?1:-1)*w*.235:0,-.23,z-.17);speaker.userData.explorePart='speakers';cab.add(speaker);}
   if(profile.speakerCount===2){const wireMat=mat(0xc5b486);for(const side of [-1,1]){const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(side*w*.235+.20,-.77,z-.42),new THREE.Vector3(side*w*.18,-h*.30,z-.62),new THREE.Vector3(0,-h*.28,-d*.25)]);cab.add(new THREE.Mesh(new THREE.TubeGeometry(curve,20,.009,5,false),wireMat));}}
   amp.userData.assemblyId=profile.id;
@@ -95,10 +101,11 @@ export function createAmpModel(a){
  }
  if(front)for(const x of [-w*.43,w*.43]){box(cab,.10,.018,d*.75,x,h/2+.016,0,chrome,.006);for(const zz of [-d*.30,d*.30])cyl(cab,.018,.012,x,h/2+.033,zz,chrome);}
  box(chassis,w*.82,.22,.44,0,h/2-.35,-d*.20,chrome);
+ const educationalTweed=profile?.id==='deluxe-5e3';
  const educationalTwin=profile?.id==='twin-reverb-early',educationalDeluxe=profile?.id==='deluxe-reverb-black',explorable=educationalTwin||educationalDeluxe;
- const tubes=tweed?5:twin?10:9,powerGroup=new THREE.Group(),rectifierGroup=new THREE.Group();chassis.add(powerGroup);powerGroup.userData.explorePart='power-tubes';powerGroup.userData.exploreOffset=[0,-.18,-.06];
+ const tubes=tweed?5:twin?10:9,powerGroup=new THREE.Group(),rectifierGroup=new THREE.Group();chassis.add(powerGroup);if(!educationalTweed)powerGroup.userData.explorePart='power-tubes';powerGroup.userData.exploreOffset=[0,-.18,-.06];
  if(educationalDeluxe){chassis.add(rectifierGroup);rectifierGroup.userData.explorePart='rectifier';rectifierGroup.userData.exploreOffset=[0,-.18,-.06];}
- for(let i=0;i<tubes;i++){
+ for(let i=0;i<(educationalTweed?0:tubes);i++){
   const power=explorable&&i>=6&&(!educationalDeluxe||i<8),rectifier=educationalDeluxe&&i===8;
   const parent=power?powerGroup:rectifier?rectifierGroup:chassis;
   const x=explorable?(i<6?-w*.34+i*w*.067:rectifier?w*.34:w*.10+(i-6)*w*.075):(i-(tubes-1)/2)*w*.07;
@@ -106,6 +113,20 @@ export function createAmpModel(a){
   cyl(parent,power||rectifier?.075:.05,power||rectifier?.45:explorable?.23:i<3?.23:.32,x,y,-d*.25,glass);
   if(power||rectifier)cyl(parent,.079,.065,x,h/2-.46,-d*.25,black);
   const glow=mat(0xe19743,{emissive:0xdc5515,emissiveIntensity:1.3});glow.name='tube-filament';cyl(parent,.009,.14,x,y,-d*.25,glow);
+ }
+ if(educationalTweed){
+  // Rear socket order follows Fender's layout; spacing/envelopes remain estimates.
+  for(const [kind,x,id] of [['5Y3GT',.31,'rectifier'],['6V6GT',.15,'power-tubes'],['6V6GT',0,null],['12AX7',-.22,'phase-inverter'],['12AY7',-.34,'preamp']]){
+   const large=!kind.startsWith('12'),g=new THREE.Group();g.name=kind;if(id)g.userData.explorePart=id;
+   g.position.set(w*x,h/2-(large?.80:.73),-d*.25);chassis.add(g);
+   cyl(g,large?.077:.05,large?.43:.25,0,0,0,mat(0x9d9280,{transparent:true,opacity:.46,roughness:.2,metalness:.25}));
+   cyl(g,large?.08:.055,.055,0,large?.23:.14,0,black);
+   const glow=mat(0xe19743,{emissive:0xdc5515,emissiveIntensity:1.3});glow.name='tube-filament';cyl(g,.009,.12,0,0,0,glow);
+  }
+  // Conceptual output-transformer marker: no claim of measured specimen position.
+  const transformer=new THREE.Group();transformer.name='5E3-output-transformer-estimate';transformer.userData.explorePart='output-transformer';chassis.add(transformer);
+  box(transformer,.32,.26,.32,w*.25,h*.12,d*.06,dark,.02);
+  for(let i=0;i<7;i++)box(transformer,.33,.012,.33,w*.25,h*.12-.10+i*.032,d*.06,chrome,.002);
  }
  if(explorable){
   // Provisional teaching envelopes, not an audited chassis layout.

@@ -533,3 +533,10 @@ See [SMALL_AMPS.md](SMALL_AMPS.md) for current evidence and validation.
 uses the established scene conversion. `small-amp-profiles.js` supplies their
 panel placements. The canonical `createAmpModel` dispatch supplies timeline,
 detail, inspector and export; no presentation-only copy was introduced.
+
+## 5E3 explorer 1.0
+
+`dist/tweed-features.js` adds nine cards. Top-facing anchors are supported by
+`explore.js` and the existing detail camera; `TWEED_PANEL` shares estimated
+hardware centers with `parts.js`. The 5E3 tube/transformer envelopes live in the
+shared `amp-models.js` factory. See [evidence and validation](5E3_EXPLORER.md).

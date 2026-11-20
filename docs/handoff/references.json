@@ -148,5 +148,22 @@
       "qualification": "Representative Nubert loudspeaker, not Oxford or JBL",
       "changes": "None"
     }
-  ]
+  ],
+  "fiveE3Explorer": {
+    "revision": "1.0",
+    "evidenceRecord": "docs/handoff/5E3_EXPLORER.md",
+    "drawing": "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-5E3-Schematic.pdf",
+    "drawingInspection": "Both pages rendered and visually read, November 20 2026",
+    "specimen": "https://www.andybaxterbass.com/products/1956-fender-deluxe",
+    "specimenQualification": "1957 specimen, reconed P12R, serviced; mounted gallery photographs visually inspected",
+    "photograph": {
+      "file": "dist/assets/explore/tweed-deluxe-nimasu.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Tweed_deluxe.jpg",
+      "author": "Nimasu",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "None",
+      "qualification": "Representative Deluxe-style handmade chassis with modern capacitors; year, circuit and vintage originality not established"
+    }
+  }
 }

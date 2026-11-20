@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {TWIN_TONE} from './twin-tone.js';
 import {TWIN_FEATURES} from './twin-features.js';
+import {TWEED_FEATURES} from './tweed-features.js';
 import {DELUXE_FEATURES} from './deluxe-features.js';
 
 const vintage='https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479';
@@ -11,6 +12,7 @@ const partReferences=[
 ];
 export const twinParts=[...TWIN_FEATURES,...partReferences.map(part=>({...part,...TWIN_TONE[part.id],side:'rear'}))];
 export const EXPLORATIONS={
+ 'deluxe-5e3':{name:'Tweed Deluxe',parts:TWEED_FEATURES},
  'twin-reverb-early':{name:'Twin',parts:twinParts},
  'deluxe-reverb-black':{name:'Deluxe Reverb',parts:DELUXE_FEATURES}
 };
@@ -25,7 +27,7 @@ export function createExploration({host,stage,camera,stopMotion,focusPart}){
  let model=null,profile=null,parts=[],buttons=[],enabled=false,selected=null,anchors=[],meshes=[],lastButton=null,lastRay=0;const world=new THREE.Vector3(),projected=new THREE.Vector3(),bounds=new THREE.Box3(),ray=new THREE.Raycaster(),direction=new THREE.Vector3(),localCamera=new THREE.Vector3();
  function mount(next){
   buttons.forEach(({b,line})=>{b.remove();line.remove()});menu.replaceChildren(new Option('Choose a feature…',''));parts=next?.parts||[];
-  for(const side of ['front','rear']){const group=document.createElement('optgroup');group.label=side==='front'?'Controls & cosmetics':'Rear components';for(const p of parts.filter(p=>p.side===side))group.append(new Option(p.label,p.id));menu.append(group)}
+  for(const side of ['front','top','rear']){const group=document.createElement('optgroup');group.label=side==='front'?'Controls & cosmetics':side==='top'?'Top-panel controls':'Rear components';for(const p of parts.filter(p=>p.side===side))group.append(new Option(p.label,p.id));if(group.children.length)menu.append(group)}
   buttons=parts.map(part=>{const b=document.createElement('button');b.className='part-hotspot';b.innerHTML=`<span class="hotspot-symbol" aria-hidden="true">+</span><span class="hotspot-label">${part.label}</span>`;b.setAttribute('aria-label',`Explore ${part.label.toLowerCase()}`);b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','part-info');b.onclick=()=>select(part.id,b);layer.append(b);const line=document.createElementNS(svg.namespaceURI,'line');line.setAttribute('stroke','#d7b47d');line.setAttribute('stroke-width','1');svg.append(line);return {part,b,line,occluded:false};});
  }
  function clear(focus=false){panel.hidden=true;selected=null;menu.value='';stage.classList.remove('part-selected');buttons.forEach(({b})=>b.setAttribute('aria-expanded','false'));if(focus)lastButton?.focus({preventScroll:true});}
@@ -38,7 +40,7 @@ export function createExploration({host,stage,camera,stopMotion,focusPart}){
   clear,
   update(){if(!enabled)return;model.updateWorldMatrix(true,true);localCamera.copy(camera.position);model.worldToLocal(localCamera);const now=performance.now(),testRays=now-lastRay>100;const placed=[];
    buttons.forEach(item=>{const {part,b,line}=item;const o=anchors.find(o=>o.userData.explorePart===part.id);if(!o){b.hidden=true;line.style.display='none';return;}if(o.userData.explorePoint)o.getWorldPosition(world);else {bounds.setFromObject(o).getCenter(world);if(o.userData.exploreOffset){o.worldToLocal(world);world.add(new THREE.Vector3(...o.userData.exploreOffset));o.localToWorld(world);}}
-    projected.copy(world).project(camera);const x=(projected.x*.5+.5)*host.clientWidth,y=(-projected.y*.5+.5)*host.clientHeight;let hidden=projected.z< -1||projected.z>1||x<12||x>host.clientWidth-12||y<12||y>host.clientHeight-12||(part.side==='front'?localCamera.z<.1:localCamera.z>-.1);
+    projected.copy(world).project(camera);const x=(projected.x*.5+.5)*host.clientWidth,y=(-projected.y*.5+.5)*host.clientHeight;let hidden=projected.z< -1||projected.z>1||x<12||x>host.clientWidth-12||y<12||y>host.clientHeight-12||(part.side==='top'?localCamera.y<(model.userData.controlPanelY||0):part.side==='front'?localCamera.z<.1:localCamera.z>-.1);
     if(!hidden&&testRays){direction.subVectors(world,camera.position);const distance=direction.length();ray.set(camera.position,direction.normalize());ray.far=distance+.02;const hit=ray.intersectObjects(meshes,false).find(h=>visibleHierarchy(h.object));let own=false;for(let n=hit?.object;n;n=n.parent)if(n===o)own=true;item.occluded=!!hit&&!own&&hit.distance<distance-.035;}
     hidden=hidden||item.occluded;b.hidden=hidden;line.style.display=hidden?'none':'';if(hidden)return;
     const preferredX=x+(part.offset?.[0]||0),preferredY=y+(part.offset?.[1]||0);let bx,by;

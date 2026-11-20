@@ -54,3 +54,15 @@ for(const amp of timeline){
  for(const d of entry.differences)assert.ok(d.field&&d.status&&d.decision,`${key}: incomplete difference decision`);
 }
 console.log(`Validated ${timeline.length} timeline/catalog mappings and pinned source rows; historical confidence is unchanged.`);
+
+const {TWEED_FEATURES}=await import('../dist/tweed-features.js');
+assert.equal(TWEED_FEATURES.length,9);
+assert.equal(new Set(TWEED_FEATURES.map(p=>p.id)).size,9);
+assert.deepEqual(TWEED_FEATURES.filter(p=>p.side==='top').map(p=>p.id).sort(),['inputs','tone','volumes']);
+for(const part of TWEED_FEATURES){
+ assert.ok(['top','rear'].includes(part.side));
+ for(const field of ['title','body','listen','together','extraTitle','extra','detail'])assert.ok(part[field]?.length>15,`${part.id}: incomplete explorer copy`);
+ assert.ok(part.attributes.length>=2&&part.sources.every(([url,label])=>url.startsWith('https://')&&label));
+ if(part.image){assert.ok(fs.existsSync(new URL('../dist/'+part.image,import.meta.url)));assert.ok(part.credit&&part.license&&part.caption.includes('not established'));}
+}
+console.log('Validated nine 5E3 cards, top/rear grouping and licensed photograph provenance.');

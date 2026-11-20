@@ -17,3 +17,11 @@ cropping. No association or endorsement by the photographers is implied.
 Licensing/source pages inspected November 20, 2026. Full attributions and source
 links also appear in the visible cards. Dealer photographs remain external links;
 no permission to redistribute RetroFret photography has been assumed.
+
+- `tweed-deluxe-nimasu.jpg`: Nimasu, “Tweed deluxe.jpg,” CC BY-SA 4.0,
+  https://commons.wikimedia.org/wiki/File:Tweed_deluxe.jpg
+  https://creativecommons.org/licenses/by-sa/4.0/
+  Original full-resolution bytes, unmodified. Visually inspected November 20,
+  2026. Modern orange capacitors are visible; the file page also describes a
+  handmade amp. Treat as representative Deluxe-style construction, not an
+  authenticated vintage Fender, a verified 5E3, or the modeled Baxter specimen.

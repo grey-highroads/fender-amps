@@ -5,7 +5,7 @@ Observatory without relying on the chat history.
 
 **Current priority: educational construction, supported by real photographs.**
 The user redirected the project away from photoreal asset production after
-reviewing the workload. The 1968 Twin and blackface Deluxe Reverb now share the single-model explorer.
+reviewing the workload. The 1968 Twin, blackface Deluxe Reverb and tweed 5E3 Deluxe now share the single-model explorer.
 Accurate proportions and meaningful construction relationships matter; the
 models remain interpretive and exact interior placement is not established.
 
@@ -24,7 +24,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Small-amp construction studies 1.0; existing Deluxe + Twin hotspot profiles and knob 0.4 retained |
+| Runtime baseline | 5E3 explorer 1.0; small-amp studies, Deluxe Reverb + Twin profiles and knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
 | Timeline | 22 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 22 timeline entries are mapped with explicit differences; no live sync |
@@ -264,3 +264,9 @@ Other old clones should be refreshed before work resumes.
 
 No amp expansion, runtime values, interface or private-site publication changed
 in this maintenance pass. The `dist/` structure remains in place.
+
+## Tweed 5E3 explorer
+
+Nine cards, top-panel camera navigation and five differentiated tubes are now in
+the shared assembly. See [5E3 evidence, validation and limits](5E3_EXPLORER.md).
+The catalog remains 22 entries; Princeton research is still separate.
