@@ -130,3 +130,21 @@ replace estimated dimensions with measured original cabinet/chassis evidence.
 - Regression browser checks: 5E3 interacting-volume card, black Deluxe Reverb
   bright-cap card and Twin AC568 power-tube card opened their correct profiles.
   No console errors were captured in that regression tab.
+
+## Publication verified
+
+Runtime `11e586988b1d55be1fba3b9f73e2d23c9778dcf2` was fast-forwarded to main.
+Git production deployment `dpl_vFE8bgZA5pxE52LWs3D64gpaNbJW` is READY:
+https://amplifier-observatory-3om4l1owe-grey-7947s-projects.vercel.app
+All five checks passed in its build logs, including hydrated LFS validation.
+Public `collection.js`, `library/small-amps.js`, `library/rear-chassis.js` and
+`library/catalog.js` returned 200 and exactly matched the tested local files.
+Live browser review confirmed the Princeton model and corrected brown rear; no
+Princeton console errors captured. Public routes:
+
+- https://fendertubeamps.com/?amp=princeton-reverb-1965
+- https://fendertubeamps.com/?amp=deluxe-1962
+
+The original private Sites prototype, DNS and hosting protection were unchanged.
+Subsequent documentation-only commits may redeploy this same runtime; the SHA
+above identifies the runtime actually inspected.

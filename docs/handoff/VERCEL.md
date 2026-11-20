@@ -132,3 +132,11 @@ Main runtime `24f5828` automatically produced READY Git deployment
 cards/photo and byte-for-byte public runtime files were verified. See
 [5E3 publication and evidence](5E3_EXPLORER.md). No hosting protection, DNS or
 original private Sites settings changed.
+
+## Princeton and brown Deluxe rear publication
+
+Main runtime `11e5869` auto-deployed READY as
+`dpl_vFE8bgZA5pxE52LWs3D64gpaNbJW`, Git source. All five checks passed remotely.
+Public runtime bytes and live model routes were checked. See
+[construction evidence and validation](PRINCETON_BROWN_REAR.md). The original
+private Sites prototype and hosting access settings were preserved.
