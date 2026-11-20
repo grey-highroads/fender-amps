@@ -13,7 +13,7 @@ models remain interpretive and exact interior placement is not established.
 
 - [Decisions and user priorities](DECISIONS.md)
 - [Architecture, validation and publishing](TECHNICAL.md)
-- [Private Vercel hosting and update workflow](VERCEL.md)
+- [Vercel hosting and update workflow](VERCEL.md)
 - [Photographic references and evidence limits](REFERENCES.md)
 - [Machine-readable photographic reference manifest](references.json)
 - [Authoritative corrected catalog and snapshot](../../data/catalog/README.md)
@@ -25,7 +25,7 @@ models remain interpretive and exact interior placement is not established.
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
 | Runtime baseline | Commit `401cf349` (formerly `7448a8f`), Deluxe + Twin profiles; knob 0.4 |
-| Hosting | [Private Vercel deployment](https://amplifier-observatory.vercel.app), protected by Vercel sign-in on every URL; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. No custom domain connected. |
+| Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 19 timeline entries are mapped with explicit differences; no live sync |
 | Library | 24 components/materials and three reference assemblies |

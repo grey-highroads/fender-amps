@@ -91,9 +91,9 @@ manifest’s source IDs were checked. No application code changed in that task.
 
 ## GitHub and private site deployment
 
-Vercel is now also configured as a protected host. See [Vercel deployment and
+Vercel now serves the public custom domain, with preview URLs protected. See [Vercel deployment and
 update workflow](VERCEL.md) for project IDs, source/deployment records, validation
-and the pending GitHub integration. No custom domain is connected. The original
+and the connected GitHub integration. The domain is fendertubeamps.com. The original
 Sites workflow below remains intact.
 
 GitHub pushes and Sites deployment are separate operations with different source

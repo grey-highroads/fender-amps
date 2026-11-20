@@ -1,12 +1,13 @@
-# Private Vercel hosting
+# Vercel hosting
 
-Established November 20, 2026 at the user's request. No custom domain or DNS
-change was made. The existing owner-private ChatGPT Sites prototype is retained
+Established November 20, 2026 at the user's request. Later the same day the user
+authorized GitHub auto-deployment and public custom-domain publication. The existing owner-private ChatGPT Sites prototype is retained
 unchanged; its source history and publishing workflow remain separate.
 
 ## Deployment record
 
-- Address: https://amplifier-observatory.vercel.app
+- Public address: https://fendertubeamps.com; `www` redirects to the apex (308).
+- Vercel address: https://amplifier-observatory.vercel.app
 - Team: `grey-7947s-projects` (`team_kE5IeTW9aCbn1MPmGTKpvirV`), existing Pro account.
 - Project: `amplifier-observatory` (`prj_5u5TGxLdxA9hbYHxNSdxqE8DBaL7`).
 - Production deployment: `dpl_FhrSvVJ4KVnUMepcQ3crtnL2yLpe`, READY.
@@ -16,10 +17,10 @@ unchanged; its source history and publishing workflow remain separate.
   hydrated LFS assets. No ignored backups or credentials were copied.
 - Framework: Other; no dependency installation; build command `npm test`;
   output `dist`. Node project setting: 24.x. `vercel.json` records the build.
-- Vercel Authentication is enabled with `ssoProtection.deploymentType: "all"`.
-  This covers production aliases, generated deployment addresses and previews.
-  Visitors need a Vercel account with project access. Do not disable protection
-  or add public exceptions when connecting the eventual custom domain.
+- Current protection: `ssoProtection.deploymentType: "all_except_custom_domains"`.
+  The production custom domain is public by the user's explicit instruction;
+  generated deployment/preview URLs remain protected. The original private
+  Sites prototype remains unchanged.
 - Git LFS retrieval is enabled for a future Git connection. Source exposure
   and directory listing are disabled. GitHub itself remains public.
 
@@ -49,13 +50,15 @@ or photographic fidelity.
 
 ## Publishing updates
 
-Automatic GitHub deployment is **not connected**. The connector rejected linking
-`grey-highroads/fender-amps` because GitHub integration access is needed. Do not
-create another Vercel project to work around this. Connect the repository to
-this existing project when that access is available; keep `main` as production,
-root directory at the repository root, LFS enabled and all-URL protection on.
+Automatic GitHub deployment is **connected** to `grey-highroads/fender-amps`.
+The user approved adding this repository to the existing Vercel GitHub app's
+selected-repository list; the other three selections were preserved. CLI
+`vercel git connect` subsequently returned Connected. Pushes to `main` should
+publish production after the five checks pass. Keep the repository root, LFS
+retrieval and `vercel.json` settings intact. Verify the resulting deployment
+rather than assuming a successful push means a successful release.
 
-Until then, deploy explicitly using the authenticated CLI:
+The following manual CLI workflow is retained as a fallback:
 
 1. Start from the canonical GitHub checkout. Run `git lfs pull`, `npm test` and
    appropriate browser checks. Commit/push source and note the exact SHA.
@@ -68,8 +71,8 @@ Until then, deploy explicitly using the authenticated CLI:
    `.vercel/project.json` contains only the project ID, team ID and project name
    listed above. Never commit CLI authentication state.
 4. Inspect the target with `vercel project inspect amplifier-observatory
-   --scope grey-7947s-projects --non-interactive`. Reconfirm all-URL protection
-   through project settings before release.
+   --scope grey-7947s-projects --non-interactive`. Reconfirm the intended protection
+   through project settings before release (custom domains public; previews protected).
 5. From that staged root run `vercel deploy --prod --yes --scope
    grey-7947s-projects --non-interactive --meta sourceCommit=<checked-SHA>`.
    `vercel.json` runs all five checks remotely and serves only `dist`.
@@ -77,5 +80,25 @@ Until then, deploy explicitly using the authenticated CLI:
    and record the deployment ID and source SHA here. Keep temporary authenticated
    review links and credentials out of source, screenshots and handoff prose.
 
-Domain connection is deferred until the user chooses to proceed. It does not
-require moving the domain registration to Vercel.
+## Public domain and DNS record
+
+GoDaddy remains registrar and authoritative DNS provider (`ns43` / `ns44.domaincontrol.com`).
+Only two website records changed; NS, SOA, `_domainconnect` and `_dmarc` were preserved.
+
+| Record | Before | After | TTL |
+| --- | --- | --- | --- |
+| A `@` | Parked (resolved to 3.33.130.190 / 15.197.148.33) | 76.76.21.21 | 600 seconds |
+| CNAME `www` | fendertubeamps.com. | d44c676f1a1b8755.vercel-dns-016.com. | 1 hour |
+
+Values came from this project's live Vercel domain configuration. The apex uses
+Vercel's supported rank-2 single-address option; automated review rejected an
+incomplete first attempt at the rank-1 pair before any DNS write. The supported
+single-address alternative was saved successfully. Both domain configurations
+subsequently reported `misconfigured: false`.
+
+Anonymous HTTPS returned 200 at the apex and 308 from `www` to the apex, with
+certificate validation enabled. The generated deployment address still returned
+302 to authentication. Live Chrome review loaded the timeline and Deluxe model,
+and opened its bright-cap hotspot. All five local checks passed; no runtime
+geometry, copy, lighting or interaction changed. DNS caches may update at different
+times. Registration was not transferred and no email records were changed.
