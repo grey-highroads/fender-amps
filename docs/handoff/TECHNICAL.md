@@ -351,3 +351,8 @@ No page errors or mobile horizontal overflow. No new GLB check was required:
 this pass changes DOM/UI and editorial data only. Own captures are
 `images/tone-{cabinet,tubes}.png`. This does not constitute tonal measurement or
 confirmation of the vintage specimen's circuitry.
+
+Tone/discovery publication succeeded: GitHub runtime `97f9ed2`, evidence
+`32f93d1`; Site source `f270f0a9488fd1f6aac054a2ed07beabf8530728`, deployment
+`appgdep_6b0078d43e008191a6ced35bd6be6a78`. Existing owner-only audience and
+Site ID preserved. Service-confirmed publication; visual QA was local.
