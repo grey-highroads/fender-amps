@@ -31,7 +31,9 @@ and headers, updating hashes and retrieval metadata, and recording changes in th
 handoff. Do not collapse blanks into zero or strip production-status, load-type,
 price-confidence, review-status or review-note columns.
 
-The app still uses a separately authored 19-entry selection. This records update
+The app now displays all 208 source rows: seven separately authored shared
+construction studies and 201 spreadsheet-only WIP placeholders. See
+[full timeline notes](../../docs/handoff/FULL_TIMELINE.md). Historically, the app used a separately authored 19-entry selection. This records update
 does not import the whole catalog, change geometry or reconcile every runtime
 specification. See [reconciliation notes](../../docs/handoff/CATALOG_RECONCILIATION.md)
 before applying grouped catalog entries to selected-year assemblies.

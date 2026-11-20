@@ -26,8 +26,8 @@ models remain interpretive and exact interior placement is not established.
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
 | Runtime baseline | Faceplate lettering 1.0 across seven assemblies; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
-| Timeline | 23 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
-| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 23 timeline entries are mapped with explicit differences; no live sync |
+| Timeline | 208 catalog entries: seven colored construction studies and 201 gray WIP placeholders; about six visible on desktop, two on a phone |
+| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
 | Library | 36 components/materials and seven reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
@@ -50,6 +50,12 @@ confidence fields. Pricing and rarity remain research estimates. This is a
 point-in-time copy, not live synchronization or independent verification.
 Selected-year configurations still require period evidence; see the
 [reconciliation notes](CATALOG_RECONCILIATION.md) for the early Twin and Bassman.
+
+## Full catalog timeline
+
+All source rows now appear on the timeline. Gray generic amps open spreadsheet-only
+notes; seven modeled amps retain their colored studies and explorers. See
+[implementation, validation and evidence limits](FULL_TIMELINE.md).
 
 ## Faceplate lettering 1.0
 

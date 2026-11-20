@@ -1,3 +1,11 @@
+# Full timeline mapping update
+
+The current machine-readable map covers all 208 catalog rows: seven shared
+construction studies and 201 spreadsheet-only WIP placeholders. The table below
+is historical reconciliation of the earlier selected collection, not the current
+entry list. See [current timeline](../../docs/handoff/FULL_TIMELINE.md) and
+[timeline-map.json](timeline-map.json) for current coverage.
+
 # Timeline-to-catalog map
 
 Reviewed November 20, 2026. All 22 runtime entries are mapped below. CSV row numbers include the header; the machine-readable [timeline-map.json](timeline-map.json) also pins the exact catalog name, row hash, source-file hash, runtime comparison fields and decisions. Display names are aliases, not separate catalog models.

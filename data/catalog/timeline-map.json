@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-11-20",
-  "scope": "All 23 runtime timeline entries, reviewed against pinned catalog rows; selected-year assembly differences remain explicit.",
+  "scope": "All 208 source catalog rows, one timeline entry per row: seven reviewed shared assemblies and 201 spreadsheet-only WIP entries. Selected-year differences remain explicit.",
   "runtimeSource": "dist/collection.js",
   "catalogSource": "data/catalog/catalog.csv",
   "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
@@ -17,97 +17,400 @@
   "confidence": "Catalog review labels are copied as source metadata, not upgraded to verification by this mapping.",
   "entries": [
     {
-      "runtimeKey": "1946|wood|Woodie Deluxe",
+      "runtimeKey": "1946|wip|Princeton (woodie)",
       "runtime": {
         "year": 1946,
-        "name": "Woodie Deluxe",
-        "years": "1946–1948",
-        "watts": 12,
-        "speakers": "1 × 10″",
+        "name": "Princeton (woodie)",
+        "years": "1946–1947",
+        "watts": "4",
+        "speakers": "1x8 open-back combo",
         "load": "8 Ω",
-        "finish": "wood",
-        "circuit": "Model 26"
+        "finish": "wip",
+        "circuit": "Approximate output and load; verify surviving example."
+      },
+      "catalogCsvRow": 2,
+      "catalogName": "Princeton (woodie)",
+      "catalogRowSha256": "0300bfe76853c84108e5c95f371476ea88454c19383a55300ef6860b7443a566",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1946|wip|Deluxe / Model 26 (woodie)",
+      "runtime": {
+        "year": 1946,
+        "name": "Deluxe / Model 26 (woodie)",
+        "years": "1946–1948",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Some examples differ in speaker size and rating."
       },
       "catalogCsvRow": 3,
       "catalogName": "Deluxe / Model 26 (woodie)",
       "catalogRowSha256": "9158447db115257b0a939fb1ee04ed78e4d45f9eccbd6cc0cbe857372ca1f8b1",
-      "catalog": {
-        "introduced": "1946",
-        "productionEnd": "1948",
-        "productionStatus": "Ended",
-        "outputWatts": "12",
-        "cabinetSpeakers": "1x10 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "Some examples differ in speaker size and rating.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/deluxe/",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Model 26 is the timeline label; early speaker/output variation remains qualified by the catalog."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1949|cream|Champion 600",
+      "runtimeKey": "1946|wip|Professional / Pro (woodie)",
+      "runtime": {
+        "year": 1946,
+        "name": "Professional / Pro (woodie)",
+        "years": "1946–1947",
+        "watts": "18",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Approximate power; early production varies."
+      },
+      "catalogCsvRow": 4,
+      "catalogName": "Professional / Pro (woodie)",
+      "catalogRowSha256": "47a51241505b3da2dc85ca4815ec18962bc3eabdaa73c5316aa6fb34f31dfab9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1947|wip|Dual Professional",
+      "runtime": {
+        "year": 1947,
+        "name": "Dual Professional",
+        "years": "1947–1948",
+        "watts": "18",
+        "speakers": "2x10 V-front combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Vintage original, distinct from 1990s Dual Professional."
+      },
+      "catalogCsvRow": 5,
+      "catalogName": "Dual Professional",
+      "catalogRowSha256": "c99ad0232a622ee842b869966b04bdbd4d1f5cea42e7b773935ac0fc5dae33b4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1948|wip|Champion 800",
+      "runtime": {
+        "year": 1948,
+        "name": "Champion 800",
+        "years": "1948–1949",
+        "watts": "4",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Short-lived predecessor of Champion 600."
+      },
+      "catalogCsvRow": 6,
+      "catalogName": "Champion 800",
+      "catalogRowSha256": "e39e376452efc931fbf19af32208fd7b42fd1b5a07f155ff4297a97edd12e35a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1948|wip|Princeton (TV front)",
+      "runtime": {
+        "year": 1948,
+        "name": "Princeton (TV front)",
+        "years": "1948–1953",
+        "watts": "4",
+        "speakers": "1x8 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 7,
+      "catalogName": "Princeton (TV front)",
+      "catalogRowSha256": "9a807f22aee997d40d73ad40e6595ee2ed41ad6ed8cdabaab0de353de6085d9f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1948|wip|Deluxe (TV front)",
+      "runtime": {
+        "year": 1948,
+        "name": "Deluxe (TV front)",
+        "years": "1948–1953",
+        "watts": "12",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Output varies by circuit."
+      },
+      "catalogCsvRow": 8,
+      "catalogName": "Deluxe (TV front)",
+      "catalogRowSha256": "16567e148835066bfa067493910c9cc4b6bdd51cdd670ca94dca28d87c9e7a42",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1948|wip|Pro (TV front)",
+      "runtime": {
+        "year": 1948,
+        "name": "Pro (TV front)",
+        "years": "1948–1953",
+        "watts": "18",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Approximate output."
+      },
+      "catalogCsvRow": 9,
+      "catalogName": "Pro (TV front)",
+      "catalogRowSha256": "08f5ded2c977f81248d4a0eb3fa7c4b0f2c86c4ea776a25587e62664e357c720",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1948|wip|Super (early tweed)",
+      "runtime": {
+        "year": 1948,
+        "name": "Super (early tweed)",
+        "years": "1948–1953",
+        "watts": "18",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Approximate output; circuit revisions vary."
+      },
+      "catalogCsvRow": 10,
+      "catalogName": "Super (early tweed)",
+      "catalogRowSha256": "0bd056733adfee157c7349674f30abfd2989ee0a2522525d0cb6b7b582ee8c07",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1949|wip|Champion 600 (original)",
       "runtime": {
         "year": 1949,
-        "name": "Champion 600",
+        "name": "Champion 600 (original)",
         "years": "1949–1953",
-        "watts": 4,
-        "speakers": "1 × 6″",
+        "watts": "4",
+        "speakers": "1x6 open-back combo",
         "load": "4 Ω",
-        "finish": "cream",
-        "circuit": "5B1 family"
+        "finish": "wip",
+        "circuit": "Do not confuse with 2000s reissue."
       },
       "catalogCsvRow": 11,
       "catalogName": "Champion 600 (original)",
       "catalogRowSha256": "da38dda2c859ea9bc55a01e0f28c01930cb698838ec24a9ebe8725d7d929b461",
-      "catalog": {
-        "introduced": "1949",
-        "productionEnd": "1953",
-        "productionStatus": "Ended",
-        "outputWatts": "4",
-        "cabinetSpeakers": "1x6 open-back combo",
-        "nominalLoad": "4",
-        "loadType": "Fixed",
-        "versionNotes": "Do not confuse with 2000s reissue.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/champ/",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Original Champion 600, not the later reissue."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1953|tweed|Wide-panel Deluxe",
+      "runtimeKey": "1952|wip|Twin (wide panel)",
+      "runtime": {
+        "year": 1952,
+        "name": "Twin (wide panel)",
+        "years": "1952–1955",
+        "watts": "25",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Approximate power varies by circuit; appraisal recommended."
+      },
+      "catalogCsvRow": 12,
+      "catalogName": "Twin (wide panel)",
+      "catalogRowSha256": "5930bbc61a4cc9761dbb44305cc4d1f62bd20080da7047b8cef69a7adfa80e85",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1952|wip|Bassman (5B6, 1x15)",
+      "runtime": {
+        "year": 1952,
+        "name": "Bassman (5B6, 1x15)",
+        "years": "1952–1954",
+        "watts": "26",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Included for established guitar use."
+      },
+      "catalogCsvRow": 13,
+      "catalogName": "Bassman (5B6, 1x15)",
+      "catalogRowSha256": "dcfee0b6eb6b74a0beaffb841613e431bed465e62cc09074bb4f865aba0a014a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1953|wip|Champ (wide panel)",
       "runtime": {
         "year": 1953,
-        "name": "Wide-panel Deluxe",
+        "name": "Champ (wide panel)",
         "years": "1953–1955",
-        "watts": 12,
-        "speakers": "1 × 12″",
+        "watts": "4",
+        "speakers": "1x6 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 14,
+      "catalogName": "Champ (wide panel)",
+      "catalogRowSha256": "8ad49e3781ea21a02f79adc320989d5ef22a65e96c2fa88daecd4eed7f391021",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1953|wip|Princeton (wide panel)",
+      "runtime": {
+        "year": 1953,
+        "name": "Princeton (wide panel)",
+        "years": "1953–1955",
+        "watts": "4",
+        "speakers": "1x8 open-back combo",
         "load": "8 Ω",
-        "finish": "tweed",
-        "circuit": "5C3 / 5D3"
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 15,
+      "catalogName": "Princeton (wide panel)",
+      "catalogRowSha256": "f8a93d733fa86093d632b4539979b2392f959b69052f56aa946b76c3af644c9c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1953|wip|Deluxe (wide panel)",
+      "runtime": {
+        "year": 1953,
+        "name": "Deluxe (wide panel)",
+        "years": "1953–1955",
+        "watts": "12",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Approximate output."
       },
       "catalogCsvRow": 16,
       "catalogName": "Deluxe (wide panel)",
       "catalogRowSha256": "b1e47ef96c12bc169ce12c290c9e5a3a8a8c61544053c255048a2fbc0040a97f",
-      "catalog": {
-        "introduced": "1953",
-        "productionEnd": "1955",
-        "productionStatus": "Ended",
-        "outputWatts": "12",
-        "cabinetSpeakers": "1x12 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "Approximate output.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/deluxe/",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "The timeline names two circuit variants within the catalog’s wide-panel group."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1953|wip|Bandmaster (wide panel)",
+      "runtime": {
+        "year": 1953,
+        "name": "Bandmaster (wide panel)",
+        "years": "1953–1955",
+        "watts": "26",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 17,
+      "catalogName": "Bandmaster (wide panel)",
+      "catalogRowSha256": "69f9911edd2483423b1e585a2ecd592969ba4aad6ff7b54816654a8bcd13e07f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1953|wip|Pro (wide panel)",
+      "runtime": {
+        "year": 1953,
+        "name": "Pro (wide panel)",
+        "years": "1953–1955",
+        "watts": "26",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Approximate output."
+      },
+      "catalogCsvRow": 18,
+      "catalogName": "Pro (wide panel)",
+      "catalogRowSha256": "c5fb4b312c555607d1c6e339141a0d6de2f407a56071309cc397559cd871318c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1953|wip|Super (wide panel)",
+      "runtime": {
+        "year": 1953,
+        "name": "Super (wide panel)",
+        "years": "1953–1955",
+        "watts": "26",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Approximate output, revision dependent."
+      },
+      "catalogCsvRow": 19,
+      "catalogName": "Super (wide panel)",
+      "catalogRowSha256": "111d8f7568a323cc6c65ffb69f41c153165a522a92b68166b0d13407f75d0d6c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1954|wip|Bassman (5D6 / 5E6)",
+      "runtime": {
+        "year": 1954,
+        "name": "Bassman (5D6 / 5E6)",
+        "years": "1954–1957",
+        "watts": "40",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": "Approximate 40W rating; not a 5F6-A."
+      },
+      "catalogCsvRow": 20,
+      "catalogName": "Bassman (5D6 / 5E6)",
+      "catalogRowSha256": "6b011d262c438fa436bb2ccad5582505e32cb388354b3d57012a0e345eabced1",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1955|wip|Princeton (5E2 / early narrow)",
+      "runtime": {
+        "year": 1955,
+        "name": "Princeton (5E2 / early narrow)",
+        "years": "1955–1957",
+        "watts": "4",
+        "speakers": "1x8 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 21,
+      "catalogName": "Princeton (5E2 / early narrow)",
+      "catalogRowSha256": "344c52ac8cec016ea9ca3fdb2c08f15270fb2d2791df4c56fa9cef05b4ef5e10",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1955|wip|Champ (narrow panel, 6-inch)",
+      "runtime": {
+        "year": 1955,
+        "name": "Champ (narrow panel, 6-inch)",
+        "years": "1955–1958",
+        "watts": "5",
+        "speakers": "1x6 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Circuit transition and production dates overlap."
+      },
+      "catalogCsvRow": 22,
+      "catalogName": "Champ (narrow panel, 6-inch)",
+      "catalogRowSha256": "1007274e763460bdfe16923f373c8467addedd9c555f756471c13f4a3e702518",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1955|wip|Harvard (5F10)",
+      "runtime": {
+        "year": 1955,
+        "name": "Harvard (5F10)",
+        "years": "1955–1961",
+        "watts": "10",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 23,
+      "catalogName": "Harvard (5F10)",
+      "catalogRowSha256": "7bba869854ac70f8f786d35baaab50116327a8e6b95fc43fdd68b178459aa066",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
       "runtimeKey": "1955|tweed|Tweed Deluxe",
@@ -179,35 +482,202 @@
       "research": "docs/handoff/SMALL_AMPS.md"
     },
     {
-      "runtimeKey": "1957|tweed|High-power Twin",
+      "runtimeKey": "1955|wip|Super (5E4 / 5E4-A)",
+      "runtime": {
+        "year": 1955,
+        "name": "Super (5E4 / 5E4-A)",
+        "years": "1955–1957",
+        "watts": "18",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 26,
+      "catalogName": "Super (5E4 / 5E4-A)",
+      "catalogRowSha256": "996a5c045f895f7a1f1a829c3f89d865ad5dc4d38765b63c3a9c469a5c9a2c8a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1955|wip|Bandmaster (5E7)",
+      "runtime": {
+        "year": 1955,
+        "name": "Bandmaster (5E7)",
+        "years": "1955–1960",
+        "watts": "26",
+        "speakers": "3x10 open-back combo",
+        "load": "2.67 Ω",
+        "finish": "wip",
+        "circuit": "Three 8Ω speakers in parallel produce about 2.67Ω."
+      },
+      "catalogCsvRow": 27,
+      "catalogName": "Bandmaster (5E7)",
+      "catalogRowSha256": "09b9a0369c3b0fa52100f030525c2236568ef05abcd4bd147a2f013f56533880",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1955|wip|Pro (5E5)",
+      "runtime": {
+        "year": 1955,
+        "name": "Pro (5E5)",
+        "years": "1955–1955",
+        "watts": "26",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 28,
+      "catalogName": "Pro (5E5)",
+      "catalogRowSha256": "767934b684bf4f1d8858ba573df820afb789450be3288beb33f72e44a65d3e23",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1955|wip|Twin (5E8 / 5E8-A low power)",
+      "runtime": {
+        "year": 1955,
+        "name": "Twin (5E8 / 5E8-A low power)",
+        "years": "1955–1958",
+        "watts": "40",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Appraisal recommended; originality drives value."
+      },
+      "catalogCsvRow": 29,
+      "catalogName": "Twin (5E8 / 5E8-A low power)",
+      "catalogRowSha256": "2e2f4ceedb85123efb16c8417e3033bd4feab26eb91ede245885d8552b9ebba5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1956|wip|Vibrolux (5F11)",
+      "runtime": {
+        "year": 1956,
+        "name": "Vibrolux (5F11)",
+        "years": "1956–1961",
+        "watts": "10",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 30,
+      "catalogName": "Vibrolux (5F11)",
+      "catalogRowSha256": "6a661d91397a6d882846fb00d9b04a2e40135035183230a62f43ba7b1090c08a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1956|wip|Pro (5E5-A)",
+      "runtime": {
+        "year": 1956,
+        "name": "Pro (5E5-A)",
+        "years": "1956–1960",
+        "watts": "28",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Approximate 25–30W output."
+      },
+      "catalogCsvRow": 31,
+      "catalogName": "Pro (5E5-A)",
+      "catalogRowSha256": "ed62847781c68f1fe0a41426a8e6c113277ec8e57a708a452272b1a279c4a0ed",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1957|wip|Princeton (5F2 / 5F2-A)",
       "runtime": {
         "year": 1957,
-        "name": "High-power Twin",
+        "name": "Princeton (5F2 / 5F2-A)",
         "years": "1957–1960",
-        "watts": 80,
-        "speakers": "2 × 12″",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 32,
+      "catalogName": "Princeton (5F2 / 5F2-A)",
+      "catalogRowSha256": "c85b25a6179c4d30fa4c216fd311d887fd70b7896b84c3f8ba4ad9f16947e44a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1957|wip|Tremolux (5G9)",
+      "runtime": {
+        "year": 1957,
+        "name": "Tremolux (5G9)",
+        "years": "1957–1960",
+        "watts": "18",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 33,
+      "catalogName": "Tremolux (5G9)",
+      "catalogRowSha256": "067cfd4810b3da4e5574684c86372ef88a3ac054835e8e6050b8df08bcf25882",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1957|wip|Super (5F4)",
+      "runtime": {
+        "year": 1957,
+        "name": "Super (5F4)",
+        "years": "1957–1960",
+        "watts": "28",
+        "speakers": "2x10 open-back combo",
         "load": "4 Ω",
-        "finish": "tweed",
-        "circuit": "5F8 / 5F8-A"
+        "finish": "wip",
+        "circuit": "Approximate 25–30W output. Introduction dated 1956 to 1958 depending on reference."
+      },
+      "catalogCsvRow": 34,
+      "catalogName": "Super (5F4)",
+      "catalogRowSha256": "1eac3a8089e76966dccb0c1515881ce929babd72521e971f55c6f66faa9655b5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1957|wip|Bassman (5F6 / 5F6-A)",
+      "runtime": {
+        "year": 1957,
+        "name": "Bassman (5F6 / 5F6-A)",
+        "years": "1957–1960",
+        "watts": "45",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": "Price evidence covers 1958–1960 5F6-A; earlier 5F6 differs. 2026 Reverb sold examples ran about $3,950-7,500, above the estimate range shown."
+      },
+      "catalogCsvRow": 35,
+      "catalogName": "Bassman (5F6 / 5F6-A)",
+      "catalogRowSha256": "a529901fb44a2ccb3eaf20c74a4c5b633bd7ecfc47a25a558954670860bd295f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1957|wip|Twin (5F8 / 5F8-A high power)",
+      "runtime": {
+        "year": 1957,
+        "name": "Twin (5F8 / 5F8-A high power)",
+        "years": "1957–1960",
+        "watts": "80",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Appraisal recommended; some sources date introduction to 1958."
       },
       "catalogCsvRow": 36,
       "catalogName": "Twin (5F8 / 5F8-A high power)",
       "catalogRowSha256": "a362b606c15d11c52e1b410a9623f6644d2e69b4f15622e8206f94f189a01183",
-      "catalog": {
-        "introduced": "1957",
-        "productionEnd": "1960",
-        "productionStatus": "Ended",
-        "outputWatts": "80",
-        "cabinetSpeakers": "2x12 open-back combo",
-        "nominalLoad": "4",
-        "loadType": "Fixed",
-        "versionNotes": "Appraisal recommended; some sources date introduction to 1958.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/twin/",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Catalog retains 1957 while noting some sources date introduction to 1958. No new introduction-date research is claimed."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
       "runtimeKey": "1958|tweed|Tweed Champ",
@@ -248,81 +718,148 @@
       "research": "docs/handoff/SMALL_AMPS.md"
     },
     {
-      "runtimeKey": "1958|tweed|Tweed Bassman",
+      "runtimeKey": "1959|wip|Vibrasonic (6G13 / 6G13-A)",
       "runtime": {
-        "year": 1958,
-        "name": "Tweed Bassman",
-        "years": "1958–1960",
-        "watts": 45,
-        "speakers": "4 × 10″",
-        "load": "2 Ω",
-        "finish": "tweed",
-        "circuit": "5F6-A"
+        "year": 1959,
+        "name": "Vibrasonic (6G13 / 6G13-A)",
+        "years": "1959–1963",
+        "watts": "40",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Spelling differs from later Vibrosonic Reverb."
       },
-      "catalogCsvRow": 35,
-      "catalogName": "Bassman (5F6 / 5F6-A)",
-      "catalogRowSha256": "a529901fb44a2ccb3eaf20c74a4c5b633bd7ecfc47a25a558954670860bd295f",
-      "catalog": {
-        "introduced": "1957",
-        "productionEnd": "1960",
-        "productionStatus": "Ended",
-        "outputWatts": "45",
-        "cabinetSpeakers": "4x10 open-back combo",
-        "nominalLoad": "2",
-        "loadType": "Fixed",
-        "versionNotes": "Price evidence covers 1958–1960 5F6-A; earlier 5F6 differs. 2026 Reverb sold examples ran about $3,950-7,500, above the estimate range shown.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/bassman/",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
-      "differences": [
-        {
-          "field": "introductionYear",
-          "runtime": 1958,
-          "catalog": 1957,
-          "status": "retained_with_scope_note",
-          "decision": "Runtime selects the 5F6-A subset of the catalog’s combined 5F6 / 5F6-A group. Keep the year difference explicit pending primary circuit-specific dating."
-        },
-        {
-          "field": "productionRange",
-          "runtime": "1958–1960",
-          "catalog": "1957–1960",
-          "status": "retained_with_scope_note",
-          "decision": "Runtime selects the 5F6-A subset of the catalog’s combined 5F6 / 5F6-A group. Keep the year difference explicit pending primary circuit-specific dating."
-        }
-      ],
-      "scopeNote": "Runtime selects the 5F6-A subset of the catalog’s combined 5F6 / 5F6-A group. Keep the year difference explicit pending primary circuit-specific dating."
+      "catalogCsvRow": 38,
+      "catalogName": "Vibrasonic (6G13 / 6G13-A)",
+      "catalogRowSha256": "659c834fb5a6cadd845623dd23e5c9044f3f664880ac6af1bc9f160561ba5462",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1961|brown|Brown Princeton",
+      "runtimeKey": "1960|wip|Bandmaster (6G7 combo)",
+      "runtime": {
+        "year": 1960,
+        "name": "Bandmaster (6G7 combo)",
+        "years": "1960–1961",
+        "watts": "40",
+        "speakers": "3x10 open-back combo",
+        "load": "2.67 Ω",
+        "finish": "wip",
+        "circuit": "Verify exact early circuit and speaker wiring."
+      },
+      "catalogCsvRow": 39,
+      "catalogName": "Bandmaster (6G7 combo)",
+      "catalogRowSha256": "efe699bebe66936a98d02df16d5c7cdf5d654988ea37e44275d418fce2af293f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1960|wip|Concert (6G12 / 6G12-A)",
+      "runtime": {
+        "year": 1960,
+        "name": "Concert (6G12 / 6G12-A)",
+        "years": "1960–1963",
+        "watts": "40",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 40,
+      "catalogName": "Concert (6G12 / 6G12-A)",
+      "catalogRowSha256": "75c47859eec3b7e91e8b2c21dc590599e4a999635c5c6209929ca3c7717a14d8",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1960|wip|Pro (6G5 / 6G5-A)",
+      "runtime": {
+        "year": 1960,
+        "name": "Pro (6G5 / 6G5-A)",
+        "years": "1960–1963",
+        "watts": "40",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 41,
+      "catalogName": "Pro (6G5 / 6G5-A)",
+      "catalogRowSha256": "a4c9c479f9727133a7d03688a0a0af3e3aac3b44e2bc091eb887bc57778042d5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1960|wip|Super (6G4 / 6G4-A)",
+      "runtime": {
+        "year": 1960,
+        "name": "Super (6G4 / 6G4-A)",
+        "years": "1960–1963",
+        "watts": "40",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 42,
+      "catalogName": "Super (6G4 / 6G4-A)",
+      "catalogRowSha256": "9c0b75afb4bfdee9f31ad4463a1e54d3808f9318cd140fb442e72ea3fa1eae96",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1960|wip|Twin (6G8 / 6G8-A)",
+      "runtime": {
+        "year": 1960,
+        "name": "Twin (6G8 / 6G8-A)",
+        "years": "1960–1963",
+        "watts": "80",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Appraisal recommended."
+      },
+      "catalogCsvRow": 43,
+      "catalogName": "Twin (6G8 / 6G8-A)",
+      "catalogRowSha256": "d524d83720bee35e7c7a0b8d006efccc21751da60935820748a3f5378f8b8f35",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1960|wip|Showman (blonde)",
+      "runtime": {
+        "year": 1960,
+        "name": "Showman (blonde)",
+        "years": "1960–1963",
+        "watts": "85",
+        "speakers": "Head; typically 1x15 closed-back cabinet",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only. Early circuits/output vary."
+      },
+      "catalogCsvRow": 44,
+      "catalogName": "Showman (blonde)",
+      "catalogRowSha256": "d58700fc194a56ac315826dfbce21bd177d26b8df2d45ddcfa934f71d45403aa",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1961|wip|Princeton (6G2 brown)",
       "runtime": {
         "year": 1961,
-        "name": "Brown Princeton",
+        "name": "Princeton (6G2 brown)",
         "years": "1961–1964",
-        "watts": 12,
-        "speakers": "1 × 10″",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
         "load": "8 Ω",
-        "finish": "brown",
-        "circuit": "6G2"
+        "finish": "wip",
+        "circuit": "Some late 6G2 examples have black cosmetics."
       },
       "catalogCsvRow": 45,
       "catalogName": "Princeton (6G2 brown)",
       "catalogRowSha256": "1a585ae3556762a7d946b5e44eba0598914a0bf741b56359153b1353026b2979",
-      "catalog": {
-        "introduced": "1961",
-        "productionEnd": "1964",
-        "productionStatus": "Ended",
-        "outputWatts": "12",
-        "cabinetSpeakers": "1x10 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "Some late 6G2 examples have black cosmetics.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/princeton/",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Brown finish selects the usual 6G2 appearance; the catalog warns some late examples have black cosmetics."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
       "runtimeKey": "1961|brown|Brown Deluxe",
@@ -363,6 +900,114 @@
       "research": "docs/handoff/SMALL_AMPS.md"
     },
     {
+      "runtimeKey": "1961|wip|Vibrolux (6G11 / 6G11-A)",
+      "runtime": {
+        "year": 1961,
+        "name": "Vibrolux (6G11 / 6G11-A)",
+        "years": "1961–1963",
+        "watts": "30",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 47,
+      "catalogName": "Vibrolux (6G11 / 6G11-A)",
+      "catalogRowSha256": "d9f9ffa03a5c8d2fa7d5b4cbbdcf7c81e1114beb5040312e5712580f85298eda",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1961|wip|Tremolux (6G9 family)",
+      "runtime": {
+        "year": 1961,
+        "name": "Tremolux (6G9 family)",
+        "years": "1961–1963",
+        "watts": "35",
+        "speakers": "Head; typically 2x10 closed-back cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Head-only price. Rare initial 6G9 EL84 circuit differs."
+      },
+      "catalogCsvRow": 48,
+      "catalogName": "Tremolux (6G9 family)",
+      "catalogRowSha256": "6ce9603bee9a42640a28bd0a55bd0fb232f993c09a1cc16775d4f1a82f8485e4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1961|wip|Bandmaster (6G7-A head)",
+      "runtime": {
+        "year": 1961,
+        "name": "Bandmaster (6G7-A head)",
+        "years": "1961–1963",
+        "watts": "40",
+        "speakers": "Head; typically 2x12 closed-back cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 49,
+      "catalogName": "Bandmaster (6G7-A head)",
+      "catalogRowSha256": "92a8c6c1c28ad3c999eaee2d1ec6fb61a18aff07f2ac09117da5bec454fa507d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1961|wip|Bassman (6G6 family)",
+      "runtime": {
+        "year": 1961,
+        "name": "Bassman (6G6 family)",
+        "years": "1961–1963",
+        "watts": "50",
+        "speakers": "Head; typically 2x12 closed-back cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only. Early 1x12/8Ω sets exist; verify circuit."
+      },
+      "catalogCsvRow": 50,
+      "catalogName": "Bassman (6G6 family)",
+      "catalogRowSha256": "72892e41ae68b8c6841428a7366618441e025c8e38c538cd32f97f4e1ed2ecb4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1962|wip|Harvard (6G10)",
+      "runtime": {
+        "year": 1962,
+        "name": "Harvard (6G10)",
+        "years": "1962–1963",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Not the earlier 10W 5F10 Harvard. Tweed Princeton 5F2-A circuit under the Harvard name. Speaker size is reported as 8 or 10 inch; verify."
+      },
+      "catalogCsvRow": 51,
+      "catalogName": "Harvard (6G10)",
+      "catalogRowSha256": "83df75d1a908534298dd8229791b2e7a98b149c730fe2d006f831e2daecfeaed",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Deluxe (black panel, no reverb)",
+      "runtime": {
+        "year": 1963,
+        "name": "Deluxe (black panel, no reverb)",
+        "years": "1963–1966",
+        "watts": "20",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 52,
+      "catalogName": "Deluxe (black panel, no reverb)",
+      "catalogRowSha256": "e81db59003fcec2bc62ee189ca1118ff0845f8aa7d4411d33b67f5bf3fa68d6d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
       "runtimeKey": "1963|black|Deluxe Reverb",
       "runtime": {
         "year": 1963,
@@ -394,97 +1039,238 @@
       "scopeNote": "Introduction 1963; shared explorer is a 1965-style AB763 reference assembled from multiple specimens. Measurements and original configuration remain qualified."
     },
     {
-      "runtimeKey": "1963|brown|Brown Vibroverb",
+      "runtimeKey": "1963|wip|Tremolux (black panel)",
       "runtime": {
         "year": 1963,
-        "name": "Brown Vibroverb",
-        "years": "1963",
-        "watts": 35,
-        "speakers": "2 × 10″",
+        "name": "Tremolux (black panel)",
+        "years": "1963–1966",
+        "watts": "35",
+        "speakers": "Head; typically 2x10 closed-back cabinet",
         "load": "4 Ω",
-        "finish": "brown",
-        "circuit": "6G16"
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 54,
+      "catalogName": "Tremolux (black panel)",
+      "catalogRowSha256": "79c5c36109637f375fe0d66bb74cd28839b18c41a139e6b2c0ecb0918102067b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Vibrolux (black panel, no reverb)",
+      "runtime": {
+        "year": 1963,
+        "name": "Vibrolux (black panel, no reverb)",
+        "years": "1963–1964",
+        "watts": "35",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 55,
+      "catalogName": "Vibrolux (black panel, no reverb)",
+      "catalogRowSha256": "45021863d6eea4380ce9f38fa7713ad572652358a3c3796852c2ff3d6ff0115b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Vibroverb (6G16 brown)",
+      "runtime": {
+        "year": 1963,
+        "name": "Vibroverb (6G16 brown)",
+        "years": "1963–1963",
+        "watts": "35",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Do not confuse with 1990s reissue."
       },
       "catalogCsvRow": 56,
       "catalogName": "Vibroverb (6G16 brown)",
       "catalogRowSha256": "c44b0b6ed07e1ca1d149c2290b0b60fea4ab1ce310b984a7019bad2566b10d25",
-      "catalog": {
-        "introduced": "1963",
-        "productionEnd": "1963",
-        "productionStatus": "Ended",
-        "outputWatts": "35",
-        "cabinetSpeakers": "2x10 open-back combo",
-        "nominalLoad": "4",
-        "loadType": "Fixed",
-        "versionNotes": "Do not confuse with 1990s reissue.",
-        "specificationReference": "https://ampwares.com/category/amplifiers/fender/vibroverb/",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Original 6G16 brown Vibroverb, not its later reissue."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1963|black|Super Reverb",
+      "runtimeKey": "1963|wip|Bandmaster (black panel)",
       "runtime": {
         "year": 1963,
-        "name": "Super Reverb",
+        "name": "Bandmaster (black panel)",
         "years": "1963–1967",
-        "watts": 40,
-        "speakers": "4 × 10″",
+        "watts": "40",
+        "speakers": "Head; typically 2x12 closed-back cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 57,
+      "catalogName": "Bandmaster (black panel)",
+      "catalogRowSha256": "9427b4666d76a4aa8254b44f77ce6d0384d5e706321cb622cc91ca8a516ce1aa",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Concert (black panel)",
+      "runtime": {
+        "year": 1963,
+        "name": "Concert (black panel)",
+        "years": "1963–1965",
+        "watts": "40",
+        "speakers": "4x10 open-back combo",
         "load": "2 Ω",
-        "finish": "black",
-        "circuit": "AB763"
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 58,
+      "catalogName": "Concert (black panel)",
+      "catalogRowSha256": "3e833e7052d3ee2476a96923f6f472801daee9d5690c62b28750e3963e6ed955",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Pro (black panel, no reverb)",
+      "runtime": {
+        "year": 1963,
+        "name": "Pro (black panel, no reverb)",
+        "years": "1963–1965",
+        "watts": "40",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 59,
+      "catalogName": "Pro (black panel, no reverb)",
+      "catalogRowSha256": "30ed7c4c99a515e15b53c6d560b72143898d04dadc72e25687d49beea989edcb",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Super Reverb (black panel)",
+      "runtime": {
+        "year": 1963,
+        "name": "Super Reverb (black panel)",
+        "years": "1963–1967",
+        "watts": "40",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": "Vintage rated output often 40W; reissue rated 45W."
       },
       "catalogCsvRow": 60,
       "catalogName": "Super Reverb (black panel)",
       "catalogRowSha256": "c3e5d82578d7848a58ce794ed67cb60ab429403c6474ac405676bb7defe0f98e",
-      "catalog": {
-        "introduced": "1963",
-        "productionEnd": "1967",
-        "productionStatus": "Ended",
-        "outputWatts": "40",
-        "cabinetSpeakers": "4x10 open-back combo",
-        "nominalLoad": "2",
-        "loadType": "Fixed",
-        "versionNotes": "Vintage rated output often 40W; reissue rated 45W.",
-        "specificationReference": "https://fenderguru.com/amp-models/super-reverb/",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Runtime uses vintage 40 W, matching the catalog; do not substitute the modern reissue’s 45 W rating. Interior remains a representative study."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1963|black|Twin Reverb",
+      "runtimeKey": "1963|wip|Dual Showman (black panel)",
       "runtime": {
         "year": 1963,
-        "name": "Twin Reverb",
+        "name": "Dual Showman (black panel)",
         "years": "1963–1967",
-        "watts": 85,
-        "speakers": "2 × 12″",
+        "watts": "85",
+        "speakers": "Head; typically 2x15 cabinet",
         "load": "4 Ω",
-        "finish": "black",
-        "circuit": "AB763"
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 61,
+      "catalogName": "Dual Showman (black panel)",
+      "catalogRowSha256": "b17e99bcb8abc5553b78945d690b9764244ea2fca2c3b95aa4ca6771412b040b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Showman (black panel)",
+      "runtime": {
+        "year": 1963,
+        "name": "Showman (black panel)",
+        "years": "1963–1967",
+        "watts": "85",
+        "speakers": "Head; typically 1x15 cabinet",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only; confirm transformer/load."
+      },
+      "catalogCsvRow": 62,
+      "catalogName": "Showman (black panel)",
+      "catalogRowSha256": "29e159845fe420502daeec93671fd6de0b8cf59730ad19bb2d1127dcc26d7806",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1963|wip|Twin Reverb (black panel)",
+      "runtime": {
+        "year": 1963,
+        "name": "Twin Reverb (black panel)",
+        "years": "1963–1967",
+        "watts": "85",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
       },
       "catalogCsvRow": 63,
       "catalogName": "Twin Reverb (black panel)",
       "catalogRowSha256": "77f0affcf83a75d0077947a32624d60f169b6b6e96a0774d37e37a6b20e51018",
-      "catalog": {
-        "introduced": "1963",
-        "productionEnd": "1967",
-        "productionStatus": "Ended",
-        "outputWatts": "85",
-        "cabinetSpeakers": "2x12 open-back combo",
-        "nominalLoad": "4",
-        "loadType": "Fixed",
-        "versionNotes": "",
-        "specificationReference": "https://fenderguru.com/amp-models/twin-reverb/",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Black-panel AB763 entry is distinct from the 1968 silver-panel explorer; it does not inherit that explorer."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1964|wip|Champ (black panel)",
+      "runtime": {
+        "year": 1964,
+        "name": "Champ (black panel)",
+        "years": "1964–1967",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Often quoted 5–6W; original nominal speaker 3.2Ω."
+      },
+      "catalogCsvRow": 64,
+      "catalogName": "Champ (black panel)",
+      "catalogRowSha256": "d56cad3fb25cb3644b8a0597a560d1d88697ba74369153e69aedb6b203ec6611",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1964|wip|Vibro Champ (black panel)",
+      "runtime": {
+        "year": 1964,
+        "name": "Vibro Champ (black panel)",
+        "years": "1964–1967",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Often quoted 5–6W; original nominal speaker 3.2Ω."
+      },
+      "catalogCsvRow": 65,
+      "catalogName": "Vibro Champ (black panel)",
+      "catalogRowSha256": "01d4a0c90d336ebcf39b961e5270899a903d4c3123874cdee240623a7bb49546",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1964|wip|Princeton (black panel)",
+      "runtime": {
+        "year": 1964,
+        "name": "Princeton (black panel)",
+        "years": "1964–1967",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 66,
+      "catalogName": "Princeton (black panel)",
+      "catalogRowSha256": "2ab83a8fb9e90649bfc926b47d70905e19043d755b4fc5d66b83adb7442f30de",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
       "runtimeKey": "1964|black|Princeton Reverb",
@@ -516,6 +1302,186 @@
       },
       "differences": [],
       "scopeNote": "1964 introduction / 1964–1967 catalog range. Construction follows a raised-logo 1965 cabinet with an estimated period Oxford-style ten, not the reference specimen’s replacement Weber. AA1164 drawing supplies circuit/tube specification; 5U4GB versus early GZ34 chart evidence remains unresolved. No numerical year, output, speaker-format or load difference from catalog row 67."
+    },
+    {
+      "runtimeKey": "1964|wip|Vibrolux Reverb (black panel)",
+      "runtime": {
+        "year": 1964,
+        "name": "Vibrolux Reverb (black panel)",
+        "years": "1964–1967",
+        "watts": "35",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 68,
+      "catalogName": "Vibrolux Reverb (black panel)",
+      "catalogRowSha256": "2fcf0fd06f2ff31b1e3037bec44b601e858d6a0bfb225f8304874ef4d07f1563",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1964|wip|Vibroverb (black panel)",
+      "runtime": {
+        "year": 1964,
+        "name": "Vibroverb (black panel)",
+        "years": "1964–1964",
+        "watts": "40",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Rare 1965 shipments reported; appraisal recommended."
+      },
+      "catalogCsvRow": 69,
+      "catalogName": "Vibroverb (black panel)",
+      "catalogRowSha256": "727976c786370d818ddabe54faa04a86677c29ac8eb6af7485bc6deb67f80afd",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1964|wip|Bassman (black panel)",
+      "runtime": {
+        "year": 1964,
+        "name": "Bassman (black panel)",
+        "years": "1964–1967",
+        "watts": "50",
+        "speakers": "Head; typically 2x12 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 70,
+      "catalogName": "Bassman (black panel)",
+      "catalogRowSha256": "06ee0639ba8f9578c9e1cff3072bfe903c60794f6313204c80819dd14cedb3f2",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1965|wip|Pro Reverb (black panel)",
+      "runtime": {
+        "year": 1965,
+        "name": "Pro Reverb (black panel)",
+        "years": "1965–1967",
+        "watts": "40",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 71,
+      "catalogName": "Pro Reverb (black panel)",
+      "catalogRowSha256": "2056ef029e5a75d05c093c58c4b7809d7a84fae8a55a96edd439a7024e9e3c99",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1967|wip|Bronco (tube original)",
+      "runtime": {
+        "year": 1967,
+        "name": "Bronco (tube original)",
+        "years": "1967–1975",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Distinct from 1990s solid-state Bronco. Nominal 3.2–4Ω. End date disputed: 1975 (Teagle and Sprung, Mojotone) or 1980 (Reverb, Guitar World)."
+      },
+      "catalogCsvRow": 72,
+      "catalogName": "Bronco (tube original)",
+      "catalogRowSha256": "ded4446c2ff6403ec959a5e9a09bff7138c625b793415f3a03e9033ea6d2aa4e",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1967|wip|Bandmaster (silver panel)",
+      "runtime": {
+        "year": 1967,
+        "name": "Bandmaster (silver panel)",
+        "years": "1967–1974",
+        "watts": "40",
+        "speakers": "Head; typically 2x12 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only. Transition dates overlap 1967–68."
+      },
+      "catalogCsvRow": 73,
+      "catalogName": "Bandmaster (silver panel)",
+      "catalogRowSha256": "0addb8413f5e0837123ad1c5613897aa45d6bfb62ce22e380a38b04edd594bae",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1967|wip|Super Reverb (silver panel, early)",
+      "runtime": {
+        "year": 1967,
+        "name": "Super Reverb (silver panel, early)",
+        "years": "1967–1976",
+        "watts": "45",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": "Early versions sometimes rated 40W; master volume added later."
+      },
+      "catalogCsvRow": 74,
+      "catalogName": "Super Reverb (silver panel, early)",
+      "catalogRowSha256": "b85a8adb647dad36ea700cc9f439ef98cefaeeadebdc4eac666be4ffc02533a3",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1967|wip|Bassman (silver panel)",
+      "runtime": {
+        "year": 1967,
+        "name": "Bassman (silver panel)",
+        "years": "1967–1972",
+        "watts": "50",
+        "speakers": "Head; typically 2x12 or 2x15 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 75,
+      "catalogName": "Bassman (silver panel)",
+      "catalogRowSha256": "03582e7dcb321c5a8edd341547f24fe8d717e4a4379027e1f37767574f460b1d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1967|wip|Showman (silver panel)",
+      "runtime": {
+        "year": 1967,
+        "name": "Showman (silver panel)",
+        "years": "1967–1969",
+        "watts": "85",
+        "speakers": "Head; typically 1x15 cabinet",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 76,
+      "catalogName": "Showman (silver panel)",
+      "catalogRowSha256": "a730c6744e962477b882282b04d1eef11358fddcc669d96a1302e054a0ba4875",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1967|wip|Dual Showman (silver panel)",
+      "runtime": {
+        "year": 1967,
+        "name": "Dual Showman (silver panel)",
+        "years": "1967–1969",
+        "watts": "100",
+        "speakers": "Head; typically 2x15 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only; early output ratings vary."
+      },
+      "catalogCsvRow": 77,
+      "catalogName": "Dual Showman (silver panel)",
+      "catalogRowSha256": "3792c25710c0c8b1e4d4995680fc5e5f69f41951957c074103004e162887eec9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
       "runtimeKey": "1968|silver|Twin Reverb",
@@ -575,243 +1541,2362 @@
       ]
     },
     {
-      "runtimeKey": "1977|silver|Ultralinear Twin",
+      "runtimeKey": "1968|wip|Champ (silver panel)",
+      "runtime": {
+        "year": 1968,
+        "name": "Champ (silver panel)",
+        "years": "1968–1982",
+        "watts": "6",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price evidence is for drip-edge 1968–69. Nominal 3.2–4Ω."
+      },
+      "catalogCsvRow": 79,
+      "catalogName": "Champ (silver panel)",
+      "catalogRowSha256": "d388e3ed103b1356b4c4c1e91b6b2e2caec1b59608281d490adb06aa3e1298a7",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Vibro Champ (silver panel)",
+      "runtime": {
+        "year": 1968,
+        "name": "Vibro Champ (silver panel)",
+        "years": "1968–1982",
+        "watts": "6",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Nominal vintage speaker 3.2Ω; usually treated as 4Ω class."
+      },
+      "catalogCsvRow": 80,
+      "catalogName": "Vibro Champ (silver panel)",
+      "catalogRowSha256": "91b8eedff90db47dfe661408aaca6dc3ac1374f892678f3c35ed393b7b7a3168",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Princeton (silver panel)",
+      "runtime": {
+        "year": 1968,
+        "name": "Princeton (silver panel)",
+        "years": "1968–1979",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Last production date varies by reference."
+      },
+      "catalogCsvRow": 81,
+      "catalogName": "Princeton (silver panel)",
+      "catalogRowSha256": "15121e2a0ca069d81448e7a5688c83d778ebad7548060365fa23314b9e58d618",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Princeton Reverb (silver panel)",
+      "runtime": {
+        "year": 1968,
+        "name": "Princeton Reverb (silver panel)",
+        "years": "1968–1981",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Late push-pull boost and black-panel cosmetic variants exist."
+      },
+      "catalogCsvRow": 82,
+      "catalogName": "Princeton Reverb (silver panel)",
+      "catalogRowSha256": "791af59a2247f87d60058246bec3616e90e688b2bc8184c101c75c021656fdba",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Deluxe Reverb (silver panel, drip edge)",
+      "runtime": {
+        "year": 1968,
+        "name": "Deluxe Reverb (silver panel, drip edge)",
+        "years": "1968–1969",
+        "watts": "22",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 83,
+      "catalogName": "Deluxe Reverb (silver panel, drip edge)",
+      "catalogRowSha256": "24029b15131fdd6bdd48f62cfec5752edb56e9ed218122840379278dbf67ac24",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Vibrolux Reverb (silver panel)",
+      "runtime": {
+        "year": 1968,
+        "name": "Vibrolux Reverb (silver panel)",
+        "years": "1968–1982",
+        "watts": "35",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 84,
+      "catalogName": "Vibrolux Reverb (silver panel)",
+      "catalogRowSha256": "05212a139b4bd0a9396ae1b9fc65f91a611ba8eb914ef395e8329286ab15ee56",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Pro Reverb (silver panel, early)",
+      "runtime": {
+        "year": 1968,
+        "name": "Pro Reverb (silver panel, early)",
+        "years": "1968–1976",
+        "watts": "40",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Later master-volume versions vary in rating."
+      },
+      "catalogCsvRow": 85,
+      "catalogName": "Pro Reverb (silver panel, early)",
+      "catalogRowSha256": "068bd84e74a209f0a263638eb5328b1485321d9116403c664eaf9e8f3889dcb8",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Bandmaster Reverb (early)",
+      "runtime": {
+        "year": 1968,
+        "name": "Bandmaster Reverb (early)",
+        "years": "1968–1976",
+        "watts": "45",
+        "speakers": "Head; typically 2x12 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only. Often described as 40–45W."
+      },
+      "catalogCsvRow": 86,
+      "catalogName": "Bandmaster Reverb (early)",
+      "catalogRowSha256": "a842efb4e5db31242fad2ce6796e335076db8bee81649cce6fe5ba950da03d18",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1968|wip|Dual Showman Reverb (early)",
+      "runtime": {
+        "year": 1968,
+        "name": "Dual Showman Reverb (early)",
+        "years": "1968–1976",
+        "watts": "100",
+        "speakers": "Head; typically 2x15 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 87,
+      "catalogName": "Dual Showman Reverb (early)",
+      "catalogRowSha256": "17b09a695816c75f216232e808126ba6807a36ce3d7c64f3c890042a115258b4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1970|wip|Deluxe Reverb (silver panel, later)",
+      "runtime": {
+        "year": 1970,
+        "name": "Deluxe Reverb (silver panel, later)",
+        "years": "1970–1982",
+        "watts": "22",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Price evidence covers 1970–77; late boost/black cosmetics differ."
+      },
+      "catalogCsvRow": 88,
+      "catalogName": "Deluxe Reverb (silver panel, later)",
+      "catalogRowSha256": "be8225abea765dee98b00f0e9d6b0b5570a641bd94876b92ee5ad4d26c8a3c86",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1972|wip|Bassman 50",
+      "runtime": {
+        "year": 1972,
+        "name": "Bassman 50",
+        "years": "1972–1977",
+        "watts": "50",
+        "speakers": "Head; external cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only. Included for guitar crossover use."
+      },
+      "catalogCsvRow": 89,
+      "catalogName": "Bassman 50",
+      "catalogRowSha256": "bf163d6fffb211786be58f24f7033a4ae83837e77787b04f8013f9488d5845d0",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1972|wip|Quad Reverb (early)",
+      "runtime": {
+        "year": 1972,
+        "name": "Quad Reverb (early)",
+        "years": "1972–1976",
+        "watts": "100",
+        "speakers": "4x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Very heavy; headroom rather than easy power-tube breakup."
+      },
+      "catalogCsvRow": 90,
+      "catalogName": "Quad Reverb (early)",
+      "catalogRowSha256": "6bb449a9fce8d464bc333e76bc8222668d7bd4b6cb05e171490d39357d59a65d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1972|wip|Super Six Reverb",
+      "runtime": {
+        "year": 1972,
+        "name": "Super Six Reverb",
+        "years": "1972–1979",
+        "watts": "100",
+        "speakers": "6x10 open-back combo",
+        "load": "5.33 Ω",
+        "finish": "wip",
+        "circuit": "Six 8Ω speakers in series-parallel give about 5.33Ω; verify wiring. Usually published as 5.2 ohms; Fender used the Twin 4 ohm output transformer."
+      },
+      "catalogCsvRow": 91,
+      "catalogName": "Super Six Reverb",
+      "catalogRowSha256": "ce148522710d64d033f4dcc08dc2a1781b7ef1ed330c3f52b2270e3eae732f26",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1972|wip|Vibrosonic Reverb (early)",
+      "runtime": {
+        "year": 1972,
+        "name": "Vibrosonic Reverb (early)",
+        "years": "1972–1976",
+        "watts": "100",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Included as guitar/steel design, unlike dedicated bass-only models."
+      },
+      "catalogCsvRow": 92,
+      "catalogName": "Vibrosonic Reverb (early)",
+      "catalogRowSha256": "a554e68c955a0975c4c77bf557d7dd36538f8bda09b64a5c3211af05d9e0e755",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1975|wip|Super Twin",
+      "runtime": {
+        "year": 1975,
+        "name": "Super Twin",
+        "years": "1975–1976",
+        "watts": "180",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Not a Twin Reverb; verify original speakers' power handling."
+      },
+      "catalogCsvRow": 93,
+      "catalogName": "Super Twin",
+      "catalogRowSha256": "94154e7aa1b5cd1dff16020dd6604b86d25e61e29c40f365961ababe50ade010",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Bandmaster Reverb (ultralinear)",
       "runtime": {
         "year": 1977,
-        "name": "Ultralinear Twin",
-        "years": "1977–1982",
-        "watts": 135,
-        "speakers": "2 × 12″",
+        "name": "Bandmaster Reverb (ultralinear)",
+        "years": "1977–1980",
+        "watts": "70",
+        "speakers": "Head; typically 2x12 cabinet",
         "load": "4 Ω",
-        "finish": "silver",
-        "circuit": "Ultralinear Twin Reverb"
+        "finish": "wip",
+        "circuit": "Price is head only; transition sometimes dated 1978."
+      },
+      "catalogCsvRow": 94,
+      "catalogName": "Bandmaster Reverb (ultralinear)",
+      "catalogRowSha256": "eb40c4d2260f4282f54f5766dde42dbce1cca795206651a46f486077eca3f04b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Pro Reverb (ultralinear)",
+      "runtime": {
+        "year": 1977,
+        "name": "Pro Reverb (ultralinear)",
+        "years": "1977–1982",
+        "watts": "70",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 95,
+      "catalogName": "Pro Reverb (ultralinear)",
+      "catalogRowSha256": "1ed01969f2dc144daa50a0a07a19279a3959117cba7166f0d94dc0603acdbdd0",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Super Reverb (ultralinear)",
+      "runtime": {
+        "year": 1977,
+        "name": "Super Reverb (ultralinear)",
+        "years": "1977–1982",
+        "watts": "70",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 96,
+      "catalogName": "Super Reverb (ultralinear)",
+      "catalogRowSha256": "fa60a90507e2ed6fafc8506d34552c7a3f04878bef1d646143f666a66ecd465a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Dual Showman Reverb (ultralinear)",
+      "runtime": {
+        "year": 1977,
+        "name": "Dual Showman Reverb (ultralinear)",
+        "years": "1977–1981",
+        "watts": "135",
+        "speakers": "Head; typically 2x15 cabinet",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 97,
+      "catalogName": "Dual Showman Reverb (ultralinear)",
+      "catalogRowSha256": "4f89fd05e0ea1ea0edb69d5eb2a0f97799d2725dbca23c8b134d9041cd7daff6",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Quad Reverb (ultralinear)",
+      "runtime": {
+        "year": 1977,
+        "name": "Quad Reverb (ultralinear)",
+        "years": "1977–1979",
+        "watts": "135",
+        "speakers": "4x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 98,
+      "catalogName": "Quad Reverb (ultralinear)",
+      "catalogRowSha256": "847e1566af4327af902c1311157abc145d01820fefb8ae88e25b1d8f8f1e49a3",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Twin Reverb (ultralinear)",
+      "runtime": {
+        "year": 1977,
+        "name": "Twin Reverb (ultralinear)",
+        "years": "1977–1982",
+        "watts": "135",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Price evidence covers 1977–81; final cosmetic transitions vary."
       },
       "catalogCsvRow": 99,
       "catalogName": "Twin Reverb (ultralinear)",
       "catalogRowSha256": "9f20234ffeb9459ceadaf287d220d0b40bb70ef5017883df3517f40975070fc9",
-      "catalog": {
-        "introduced": "1977",
-        "productionEnd": "1982",
-        "productionStatus": "Ended",
-        "outputWatts": "135",
-        "cabinetSpeakers": "2x12 open-back combo",
-        "nominalLoad": "4",
-        "loadType": "Fixed",
-        "versionNotes": "Price evidence covers 1977–81; final cosmetic transitions vary.",
-        "specificationReference": "https://fenderguru.com/amp-models/twin-reverb/",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Ultralinear generation is separate from the early silver-panel Twin; output and dates match this row."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1982|black|Super Champ",
+      "runtimeKey": "1977|wip|Vibrosonic Reverb (ultralinear)",
+      "runtime": {
+        "year": 1977,
+        "name": "Vibrosonic Reverb (ultralinear)",
+        "years": "1977–1981",
+        "watts": "135",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 100,
+      "catalogName": "Vibrosonic Reverb (ultralinear)",
+      "catalogRowSha256": "9267f6628d58d87b3af32109748c367e38c9ac38194174e519a6d7e032cc71d2",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1977|wip|Super Twin Reverb",
+      "runtime": {
+        "year": 1977,
+        "name": "Super Twin Reverb",
+        "years": "1977–1980",
+        "watts": "180",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 101,
+      "catalogName": "Super Twin Reverb",
+      "catalogRowSha256": "5d00d30b50849b047ff3b5dbe3ad21e7fdeb10741ac7e3c6774b6b22d577fc8c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1979|wip|Fender 30",
+      "runtime": {
+        "year": 1979,
+        "name": "Fender 30",
+        "years": "1979–1982",
+        "watts": "30",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Approximate dates; verify exact circuit/load."
+      },
+      "catalogCsvRow": 102,
+      "catalogName": "Fender 30",
+      "catalogRowSha256": "a0bb62bc06e3294524a54ad5f35b12d8dfd4ab805356e421a33c2806cfadff59",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1980|wip|Fender 75",
+      "runtime": {
+        "year": 1980,
+        "name": "Fender 75",
+        "years": "1980–1982",
+        "watts": "75",
+        "speakers": "1x15 combo or head",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Price for combo or bare head varies. Also 1x12 examples."
+      },
+      "catalogCsvRow": 103,
+      "catalogName": "Fender 75",
+      "catalogRowSha256": "004c44374834b16c6501fdbc2ec479bbd63eb6b71fc2af3791cd36e2cb7ae656",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1980|wip|Fender 140",
+      "runtime": {
+        "year": 1980,
+        "name": "Fender 140",
+        "years": "1980–1982",
+        "watts": "140",
+        "speakers": "Head; external cabinet",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Approximate years. Sparse market; seek exact manual."
+      },
+      "catalogCsvRow": 104,
+      "catalogName": "Fender 140",
+      "catalogRowSha256": "73280cd9c0ce3cbf74994b4daf1dccd27da14bfb9cb03efa55cdc87dc205e883",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1982|wip|Bassman 20",
+      "runtime": {
+        "year": 1982,
+        "name": "Bassman 20",
+        "years": "1982–1983",
+        "watts": "18",
+        "speakers": "1x15 combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Included under the Bassman exception. Sources disagree on whether Paul Rivera designed it. One $719.99 dealer listing seen."
+      },
+      "catalogCsvRow": 105,
+      "catalogName": "Bassman 20",
+      "catalogRowSha256": "37f50f36b355eb4c00330b12ac2a399a29e6b06f9f538d929717a35a6ea37a07",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1982|wip|Champ II",
+      "runtime": {
+        "year": 1982,
+        "name": "Champ II",
+        "years": "1982–1983",
+        "watts": "18",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Some catalogs group from 1981."
+      },
+      "catalogCsvRow": 106,
+      "catalogName": "Champ II",
+      "catalogRowSha256": "c2365bd30c2318548088cddeb0dd143ea44dad0b5a9d8fbce3ef88783f9e56c4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1982|wip|Super Champ",
       "runtime": {
         "year": 1982,
         "name": "Super Champ",
         "years": "1982–1986",
-        "watts": 18,
-        "speakers": "1 × 10″",
+        "watts": "18",
+        "speakers": "1x10 open-back combo",
         "load": "8 Ω",
-        "finish": "black",
-        "circuit": "Rivera-era tube"
+        "finish": "wip",
+        "circuit": "Distinct from digital-preamp XD and X2, which are excluded."
       },
       "catalogCsvRow": 107,
       "catalogName": "Super Champ",
       "catalogRowSha256": "478e453bff24b7868b4bce6ce351a0301075bcc43db611fa51e47271cc956cc6",
-      "catalog": {
-        "introduced": "1982",
-        "productionEnd": "1986",
-        "productionStatus": "Ended",
-        "outputWatts": "18",
-        "cabinetSpeakers": "1x10 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "Distinct from digital-preamp XD and X2, which are excluded.",
-        "specificationReference": "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Super_Champ_1982.pdf",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Rivera-era Super Champ, not the digital-preamp XD/X2 or the separate hardwood Super Champ Deluxe."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1993|tweed|Blues Deluxe",
+      "runtimeKey": "1982|wip|Super Champ Deluxe (wood cabinet)",
+      "runtime": {
+        "year": 1982,
+        "name": "Super Champ Deluxe (wood cabinet)",
+        "years": "1982–1985",
+        "watts": "18",
+        "speakers": "1x10 hardwood combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Sparse pricing; one current asking price is about $7,000."
+      },
+      "catalogCsvRow": 108,
+      "catalogName": "Super Champ Deluxe (wood cabinet)",
+      "catalogRowSha256": "a4855d770c17f7faef83e4f6b62c82a10ba259888a84abab35e9d2d112e82b6c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1982|wip|Deluxe Reverb II",
+      "runtime": {
+        "year": 1982,
+        "name": "Deluxe Reverb II",
+        "years": "1982–1986",
+        "watts": "20",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 109,
+      "catalogName": "Deluxe Reverb II",
+      "catalogRowSha256": "0e06b989e8791065f5452135cecb5770465ae931f97c56e75f62410c9268d668",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1982|wip|Princeton Reverb II",
+      "runtime": {
+        "year": 1982,
+        "name": "Princeton Reverb II",
+        "years": "1982–1986",
+        "watts": "22",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 110,
+      "catalogName": "Princeton Reverb II",
+      "catalogRowSha256": "b42ce4dcd5778856debb40de939bf2993b6b041436c39a41e8ab050d4c7529e9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1982|wip|Concert (Rivera)",
+      "runtime": {
+        "year": 1982,
+        "name": "Concert (Rivera)",
+        "years": "1982–1987",
+        "watts": "60",
+        "speakers": "1x12, 2x10, 4x10 combo or head",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Configurations grouped; head-only and combo prices differ."
+      },
+      "catalogCsvRow": 111,
+      "catalogName": "Concert (Rivera)",
+      "catalogRowSha256": "e076b41588e64dd0561e0690d050b0dfe6aad94a06035586a0ebad52f2d1f3c5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1983|wip|Twin Reverb II",
+      "runtime": {
+        "year": 1983,
+        "name": "Twin Reverb II",
+        "years": "1983–1986",
+        "watts": "105",
+        "speakers": "2x12 combo or head",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Often rated 100–105W."
+      },
+      "catalogCsvRow": 112,
+      "catalogName": "Twin Reverb II",
+      "catalogRowSha256": "9b696d263de4da9586c26a09dce47608873062e471529d5bb45906b4f88e32b0",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1987|wip|Champ 12",
+      "runtime": {
+        "year": 1987,
+        "name": "Champ 12",
+        "years": "1987–1992",
+        "watts": "10",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Tube preamp and power amp; reverb circuitry is not all-tube. Owner manual rates 10W RMS; many listings call it 12W."
+      },
+      "catalogCsvRow": 113,
+      "catalogName": "Champ 12",
+      "catalogRowSha256": "eff7ad1841874f06fc3bcdd7c036e172bd184b341a38f192b89a002fe1066ad3",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1987|wip|Dual Showman (red knob)",
+      "runtime": {
+        "year": 1987,
+        "name": "Dual Showman (red knob)",
+        "years": "1987–1993",
+        "watts": "100",
+        "speakers": "Head; external cabinet",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 114,
+      "catalogName": "Dual Showman (red knob)",
+      "catalogRowSha256": "d65e7bbe107c461d4b1ba3b5563489627f0a90c3b57087ef6f5e9136cc0955c5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1987|wip|The Twin (red/black knob)",
+      "runtime": {
+        "year": 1987,
+        "name": "The Twin (red/black knob)",
+        "years": "1987–1994",
+        "watts": "100",
+        "speakers": "2x12 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Low-power mode about 25W. Not the 1994 Twin Amp."
+      },
+      "catalogCsvRow": 115,
+      "catalogName": "The Twin (red/black knob)",
+      "catalogRowSha256": "3365de6a0520b7655f50c27f83acdede2387e0436735dc44bbbf81943fa425c2",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1988|wip|Super 60",
+      "runtime": {
+        "year": 1988,
+        "name": "Super 60",
+        "years": "1988–1992",
+        "watts": "60",
+        "speakers": "1x12 combo, head or rack",
+        "load": "8/16 (verify exact version) Ω",
+        "finish": "wip",
+        "circuit": "Configurations grouped; verify exact back-panel load marking."
+      },
+      "catalogCsvRow": 116,
+      "catalogName": "Super 60",
+      "catalogRowSha256": "17baaf2ad533c688986787a7778fa0d06846ad042a65470d02b1fb181ef98351",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1990|wip|'63 Vibroverb reissue",
+      "runtime": {
+        "year": 1990,
+        "name": "'63 Vibroverb reissue",
+        "years": "1990–1995",
+        "watts": "40",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Introduction often dated 1990; catalog availability varies."
+      },
+      "catalogCsvRow": 117,
+      "catalogName": "'63 Vibroverb reissue",
+      "catalogRowSha256": "64b9b03fdea6551fcaa1e3a7c1c51430cbeafbb7f5f1447218ae07fa552fe713",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1990|wip|'59 Bassman reissue",
+      "runtime": {
+        "year": 1990,
+        "name": "'59 Bassman reissue",
+        "years": "1990–2004",
+        "watts": "45",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": "Original reissue before LTD version."
+      },
+      "catalogCsvRow": 118,
+      "catalogName": "'59 Bassman reissue",
+      "catalogRowSha256": "edc24e8233f09dbf9d7a90203196ecf7306dabef4564b7c43acf7c154fa7ad6c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1990|wip|Super 112",
+      "runtime": {
+        "year": 1990,
+        "name": "Super 112",
+        "years": "1990–1992",
+        "watts": "60",
+        "speakers": "1x12 open-back combo",
+        "load": "4/8 selectable Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 119,
+      "catalogName": "Super 112",
+      "catalogRowSha256": "d187006d949b4341d2c95c0d852c520bc73aa7375e26b1c136a38739cc91ada8",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1990|wip|Super 210",
+      "runtime": {
+        "year": 1990,
+        "name": "Super 210",
+        "years": "1990–1992",
+        "watts": "60",
+        "speakers": "2x10 open-back combo",
+        "load": "4/8 selectable Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 120,
+      "catalogName": "Super 210",
+      "catalogRowSha256": "986a91618b12f1f9690babc57633de7b2068d9aee5525670c89df4e25da097c9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1991|wip|'65 Twin Reverb reissue",
+      "runtime": {
+        "year": 1991,
+        "name": "'65 Twin Reverb reissue",
+        "years": "1991 onward",
+        "watts": "85",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Used estimate; new retail is higher. Fender history article says 1991; Fender spec sheets say introduced 1992."
+      },
+      "catalogCsvRow": 121,
+      "catalogName": "'65 Twin Reverb reissue",
+      "catalogRowSha256": "aa8677119c369537f66a71e43be6086acedcad73e864418698230e855c3c4755",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1993|wip|Pro Junior (I–II)",
       "runtime": {
         "year": 1993,
-        "name": "Blues Deluxe",
-        "years": "1993–1996",
-        "watts": 40,
-        "speakers": "1 × 12″",
+        "name": "Pro Junior (I–II)",
+        "years": "1993–2010",
+        "watts": "15",
+        "speakers": "1x10 open-back combo",
         "load": "8 Ω",
-        "finish": "tweed",
-        "circuit": "Original Blues series"
+        "finish": "wip",
+        "circuit": "Dates refer to family generations I–II combined."
+      },
+      "catalogCsvRow": 122,
+      "catalogName": "Pro Junior (I–II)",
+      "catalogRowSha256": "f9da0c0ecee9b75ef167a98131207d2fa3c6db4e53d9aba0fa40a37f54e1ec05",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1993|wip|'65 Deluxe Reverb reissue",
+      "runtime": {
+        "year": 1993,
+        "name": "'65 Deluxe Reverb reissue",
+        "years": "1993 onward",
+        "watts": "22",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Used estimate; speaker/finish editions grouped."
+      },
+      "catalogCsvRow": 123,
+      "catalogName": "'65 Deluxe Reverb reissue",
+      "catalogRowSha256": "9187f1c7d70c716b08431cbc3926aa4f89d06d7ca65a02b63acbb3520fd59099",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1993|wip|Blues Deluxe (original)",
+      "runtime": {
+        "year": 1993,
+        "name": "Blues Deluxe (original)",
+        "years": "1993–1996",
+        "watts": "40",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
       },
       "catalogCsvRow": 124,
       "catalogName": "Blues Deluxe (original)",
       "catalogRowSha256": "f6c7a698e0253fda4b0927f79f51af28f6ec02ae0178137cacbdc99bc9199d68",
-      "catalog": {
-        "introduced": "1993",
-        "productionEnd": "1996",
-        "productionStatus": "Ended",
-        "outputWatts": "40",
-        "cabinetSpeakers": "1x12 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "",
-        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Original Blues Deluxe, not the 2005 reissue."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1996|black|Hot Rod Deluxe",
+      "runtimeKey": "1993|wip|Blues DeVille (original)",
+      "runtime": {
+        "year": 1993,
+        "name": "Blues DeVille (original)",
+        "years": "1993–1996",
+        "watts": "60",
+        "speakers": "4x10 or 2x12 open-back combo",
+        "load": "8 (4x10); 4 (2x12) Ω",
+        "finish": "wip",
+        "circuit": "Speaker configurations grouped; impedance differs."
+      },
+      "catalogCsvRow": 125,
+      "catalogName": "Blues DeVille (original)",
+      "catalogRowSha256": "493dfb8cb2ada33986e661b805d77e3cb763908ff53acc33d412c6555fc5c7c1",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1993|wip|Concert Amp (1993)",
+      "runtime": {
+        "year": 1993,
+        "name": "Concert Amp (1993)",
+        "years": "1993–1995",
+        "watts": "60",
+        "speakers": "1x12 open-back combo",
+        "load": "8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Distinct from Rivera Concert and 2001 Concert Reverb."
+      },
+      "catalogCsvRow": 126,
+      "catalogName": "Concert Amp (1993)",
+      "catalogRowSha256": "ee532c8759d0801736b783f8d6487f71cfc05e2ae151588736b9e2ad98080060",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1993|wip|Super Amp (1993)",
+      "runtime": {
+        "year": 1993,
+        "name": "Super Amp (1993)",
+        "years": "1993–1995",
+        "watts": "60",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": "Often called Super Pro Tube."
+      },
+      "catalogCsvRow": 127,
+      "catalogName": "Super Amp (1993)",
+      "catalogRowSha256": "f65878fe048d94b6d82df784989acf3c5cfff80f1ef20e88a894656e22a84b1e",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1993|wip|Vibro-King",
+      "runtime": {
+        "year": 1993,
+        "name": "Vibro-King",
+        "years": "1993–2003",
+        "watts": "60",
+        "speakers": "3x10 open-back combo",
+        "load": "2 (nominal) Ω",
+        "finish": "wip",
+        "circuit": "Three 8Ω speakers parallel = 2.67Ω; Fender labels amp 2Ω. Vibro-King Custom (2003 on) is a separate row."
+      },
+      "catalogCsvRow": 128,
+      "catalogName": "Vibro-King",
+      "catalogRowSha256": "72fb7cbe5ff4fcb3044aa73b68707bf298379567bd5bf29165655a36cd1efb1b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1994|wip|Tone-Master (original tube head)",
+      "runtime": {
+        "year": 1994,
+        "name": "Tone-Master (original tube head)",
+        "years": "1994–2002",
+        "watts": "100",
+        "speakers": "Head; matching 2x12 or 4x12 cabinet",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Original tube Tone-Master, not modern digital Tone Master. Head-only price. Fender support table lists the introduction as 1993."
+      },
+      "catalogCsvRow": 129,
+      "catalogName": "Tone-Master (original tube head)",
+      "catalogRowSha256": "4cf09af3baf85ba168bf1b482da65435d0d87183c46b759583b79f21195dde63",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1994|wip|Twin Amp ('94 / Evil Twin)",
+      "runtime": {
+        "year": 1994,
+        "name": "Twin Amp ('94 / Evil Twin)",
+        "years": "1994–2001",
+        "watts": "100",
+        "speakers": "2x12 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 130,
+      "catalogName": "Twin Amp ('94 / Evil Twin)",
+      "catalogRowSha256": "7821431b0922159ca584df4cf5492db44a07c44b6f96e08db9a2ac9d20e0a26a",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1995|wip|Blues Junior (I–II)",
+      "runtime": {
+        "year": 1995,
+        "name": "Blues Junior (I–II)",
+        "years": "1995–2010",
+        "watts": "15",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Circuit/board revisions grouped."
+      },
+      "catalogCsvRow": 131,
+      "catalogName": "Blues Junior (I–II)",
+      "catalogRowSha256": "a4b1e0566f46e86ccb72f8a599e84a985fb98ac4b5be93a25bb65bce444e88ca",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1995|wip|Custom Vibrolux Reverb",
+      "runtime": {
+        "year": 1995,
+        "name": "Custom Vibrolux Reverb",
+        "years": "1995–2013",
+        "watts": "40",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Distinct from vintage Vibrolux Reverb and '68 Custom version."
+      },
+      "catalogCsvRow": 132,
+      "catalogName": "Custom Vibrolux Reverb",
+      "catalogRowSha256": "aa02898c517f538d3dab36274e7c30fc407cd0aba6b56bf4c7d999f3ccdada8e",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1995|wip|Custom Vibrasonic",
+      "runtime": {
+        "year": 1995,
+        "name": "Custom Vibrasonic",
+        "years": "1995–1997",
+        "watts": "100",
+        "speakers": "1x15 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Not the brown-panel Vibrasonic or silver-panel Vibrosonic."
+      },
+      "catalogCsvRow": 133,
+      "catalogName": "Custom Vibrasonic",
+      "catalogRowSha256": "be2d9de9c5c676477bf78f4d4875f456a7ccfbc7a4c81c5b50291ffa10c66590",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1995|wip|Dual Professional (modern)",
+      "runtime": {
+        "year": 1995,
+        "name": "Dual Professional (modern)",
+        "years": "1995–2002",
+        "watts": "100",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Distinct from 1947 Dual Professional."
+      },
+      "catalogCsvRow": 134,
+      "catalogName": "Dual Professional (modern)",
+      "catalogRowSha256": "7773fd3885314780514daa0fb770748d34d14d914d5c36ec009f3e529fb506d1",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1996|wip|Hot Rod Deluxe (I–II)",
       "runtime": {
         "year": 1996,
-        "name": "Hot Rod Deluxe",
-        "years": "1996–2010, early generations",
-        "watts": 40,
-        "speakers": "1 × 12″",
+        "name": "Hot Rod Deluxe (I–II)",
+        "years": "1996–2010",
+        "watts": "40",
+        "speakers": "1x12 open-back combo",
         "load": "8 Ω",
-        "finish": "black",
-        "circuit": "Hot Rod I–II"
+        "finish": "wip",
+        "circuit": "Early generations grouped."
       },
       "catalogCsvRow": 135,
       "catalogName": "Hot Rod Deluxe (I–II)",
       "catalogRowSha256": "3a1c6ce153a23bd33a12105ca241d3882b00161207721d14c2830aace67abd98",
-      "catalog": {
-        "introduced": "1996",
-        "productionEnd": "2010",
-        "productionStatus": "Ended",
-        "outputWatts": "40",
-        "cabinetSpeakers": "1x12 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "Early generations grouped.",
-        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
-        "reviewStatus": "Confirmed",
-        "reviewNote": "Price range is under 20% wide; based on a few asking listings."
-      },
       "differences": [],
-      "scopeNote": "Runtime wording “early generations” denotes the catalog’s combined I–II group; date endpoints agree."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "2006|cream|Super-Sonic 60",
+      "runtimeKey": "1996|wip|Hot Rod DeVille (I–II)",
+      "runtime": {
+        "year": 1996,
+        "name": "Hot Rod DeVille (I–II)",
+        "years": "1996–2010",
+        "watts": "60",
+        "speakers": "4x10 or 2x12 open-back combo",
+        "load": "8 (4x10); 4 (2x12) Ω",
+        "finish": "wip",
+        "circuit": "Configurations grouped; nominal load differs."
+      },
+      "catalogCsvRow": 136,
+      "catalogName": "Hot Rod DeVille (I–II)",
+      "catalogRowSha256": "7ddd056380e80a0fef62b0cdb4809f789b4b88d2ab27779f3e8269215380b7fa",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "1996|wip|Prosonic",
+      "runtime": {
+        "year": 1996,
+        "name": "Prosonic",
+        "years": "1996–2002",
+        "watts": "60",
+        "speakers": "2x10 combo or head",
+        "load": "16 combo; head 4/8/16 Ω",
+        "finish": "wip",
+        "circuit": "Combo switches to 8Ω with extension jack. About 30/50/60W by mode. Head has no reverb."
+      },
+      "catalogCsvRow": 137,
+      "catalogName": "Prosonic",
+      "catalogRowSha256": "3a6c4f948181ec1abb7f8aae731f2187976aefd1b30413e9c5ff18ed11b6cfee",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2000|wip|Deco Tone",
+      "runtime": {
+        "year": 2000,
+        "name": "Deco Tone",
+        "years": "2000–2001",
+        "watts": "15",
+        "speakers": "1x12 combo, molded art-deco cabinet",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Sources date it 2000 or 2001. Sparse market; a celebrity-owned example sold at auction for about 1,216 GBP in 2023."
+      },
+      "catalogCsvRow": 138,
+      "catalogName": "Deco Tone",
+      "catalogRowSha256": "5fe6f432e31c60e71f77cb61ae39b4b44127e06b74db581557c64a63f8763550",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2001|wip|Two-Tone (Custom Shop)",
+      "runtime": {
+        "year": 2001,
+        "name": "Two-Tone (Custom Shop)",
+        "years": "2001–2003",
+        "watts": "15",
+        "speakers": "1x12 + 1x10 pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "About 200 made, per seller accounts. Fender support table lists the introduction as 2002. One EUR 1,498 asking example seen."
+      },
+      "catalogCsvRow": 139,
+      "catalogName": "Two-Tone (Custom Shop)",
+      "catalogRowSha256": "ce87c925e07f166a0e15481c69273278fa49221b4771e97fdc72c42550841192",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2001|wip|Bass Breaker (Custom Shop)",
+      "runtime": {
+        "year": 2001,
+        "name": "Bass Breaker (Custom Shop)",
+        "years": "2001–2003",
+        "watts": "40",
+        "speakers": "2x12 tweed combo",
+        "load": "Not verified Ω",
+        "finish": "wip",
+        "circuit": "Two 6L6 with tube rectifier. Not part of the 2016 Bassbreaker series. Speaker load not verified."
+      },
+      "catalogCsvRow": 140,
+      "catalogName": "Bass Breaker (Custom Shop)",
+      "catalogRowSha256": "3643ce8d9b0d5201ae78bed98369abf69309ee878ce3a1ef9f446ada1d726d63",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2001|wip|'65 Super Reverb reissue",
+      "runtime": {
+        "year": 2001,
+        "name": "'65 Super Reverb reissue",
+        "years": "2001 onward",
+        "watts": "45",
+        "speakers": "4x10 open-back combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 141,
+      "catalogName": "'65 Super Reverb reissue",
+      "catalogRowSha256": "13cb3ba1f7cc0e5e307da6715d646062d9d5f6a96593e1dd96d545533efa67c4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2001|wip|Concert Reverb (Pro Tube)",
+      "runtime": {
+        "year": 2001,
+        "name": "Concert Reverb (Pro Tube)",
+        "years": "2001–2003",
+        "watts": "50",
+        "speakers": "4x10 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Some references list production to 2005."
+      },
+      "catalogCsvRow": 142,
+      "catalogName": "Concert Reverb (Pro Tube)",
+      "catalogRowSha256": "f6c08444ccdf44f04b48e144c98783f550b16c02c997224af98a3f79df2b6a59",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2001|wip|Pro Reverb (Pro Tube)",
+      "runtime": {
+        "year": 2001,
+        "name": "Pro Reverb (Pro Tube)",
+        "years": "2001–2003",
+        "watts": "50",
+        "speakers": "1x12 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Not the vintage 2x12 Pro Reverb. Some references list production to 2005."
+      },
+      "catalogCsvRow": 143,
+      "catalogName": "Pro Reverb (Pro Tube)",
+      "catalogRowSha256": "559406f2f49ed54f2406f0af483c3fe467af1e96efd8722495b5871811ebc3c3",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2001|wip|Twin Amp (2001 Pro Tube)",
+      "runtime": {
+        "year": 2001,
+        "name": "Twin Amp (2001 Pro Tube)",
+        "years": "2001–2010",
+        "watts": "100",
+        "speakers": "2x12 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 144,
+      "catalogName": "Twin Amp (2001 Pro Tube)",
+      "catalogRowSha256": "3fa8da2d6cb49741ad6216c6157ec30d7bdd64ef40cd4df07d795d4e01e2acd2",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2003|wip|'64 Vibroverb Custom",
+      "runtime": {
+        "year": 2003,
+        "name": "'64 Vibroverb Custom",
+        "years": "2003–2008",
+        "watts": "40",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 145,
+      "catalogName": "'64 Vibroverb Custom",
+      "catalogRowSha256": "c38ff90f414a8d6470bc1ec271b3fc046039d19785acf45eb92547bfa9d0c701",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2003|wip|Vibro-King Custom",
+      "runtime": {
+        "year": 2003,
+        "name": "Vibro-King Custom",
+        "years": "2003–2013",
+        "watts": "60",
+        "speakers": "3x10 open-back combo",
+        "load": "2 (nominal) Ω",
+        "finish": "wip",
+        "circuit": "Split from the Vibro-King row. Reverb dates it 2003-2012; a 20th Anniversary edition followed in 2013. Price estimate carried over from the grouped row."
+      },
+      "catalogCsvRow": 146,
+      "catalogName": "Vibro-King Custom",
+      "catalogRowSha256": "3444b15ae184d7927f5d5c41da31d7759beb88919dd907cb7507b802da26616d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2004|wip|'57 Twin-Amp reissue",
+      "runtime": {
+        "year": 2004,
+        "name": "'57 Twin-Amp reissue",
+        "years": "2004–2011",
+        "watts": "40",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Production dating differs by catalog/market; not the 2016 Custom."
+      },
+      "catalogCsvRow": 147,
+      "catalogName": "'57 Twin-Amp reissue",
+      "catalogRowSha256": "5e238db0c93b72350bf337f9954404e28309d1f8c6488e8630e1c099605816c7",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2004|wip|'59 Bassman LTD",
+      "runtime": {
+        "year": 2004,
+        "name": "'59 Bassman LTD",
+        "years": "2004 onward",
+        "watts": "45",
+        "speakers": "4x10 open-back pine combo",
+        "load": "2 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 148,
+      "catalogName": "'59 Bassman LTD",
+      "catalogRowSha256": "56c0208de59884b6ae69682446f6aef3a94e4d80fd3daa3dc1a844c3f4b247e5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2004|wip|'65 Twin Custom 15",
+      "runtime": {
+        "year": 2004,
+        "name": "'65 Twin Custom 15",
+        "years": "2004–2017",
+        "watts": "85",
+        "speakers": "1x15 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Some references list earlier family dates; confirm exact unit."
+      },
+      "catalogCsvRow": 149,
+      "catalogName": "'65 Twin Custom 15",
+      "catalogRowSha256": "1f7516d675f65684b6e5e5d9c4835000815776d51704c8f06b50299adc5947c6",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2005|wip|Blues Deluxe reissue",
+      "runtime": {
+        "year": 2005,
+        "name": "Blues Deluxe reissue",
+        "years": "2005 onward",
+        "watts": "40",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 150,
+      "catalogName": "Blues Deluxe reissue",
+      "catalogRowSha256": "56870dc01bea4464fe84df72aebe06cb3da5f0bcc3eba8bf20a275a3329b9c88",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2005|wip|Blues DeVille reissue",
+      "runtime": {
+        "year": 2005,
+        "name": "Blues DeVille reissue",
+        "years": "2005–2016",
+        "watts": "60",
+        "speakers": "4x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 151,
+      "catalogName": "Blues DeVille reissue",
+      "catalogRowSha256": "22a6000317ce76af72a0c1dbe4b740e5da1948b3830be19b810891c6cfc1ba9b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2006|wip|Champion 600 reissue",
+      "runtime": {
+        "year": 2006,
+        "name": "Champion 600 reissue",
+        "years": "2006–2012",
+        "watts": "5",
+        "speakers": "1x6 closed/semi-open combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Dates vary 2006/07 to 2011/12 by market."
+      },
+      "catalogCsvRow": 152,
+      "catalogName": "Champion 600 reissue",
+      "catalogRowSha256": "c11d138de7f36a3dee1acffda48fc68f99af46f7cd5d0360aef471632dea3179",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2006|wip|Woody Pro Junior (60th Anniversary)",
+      "runtime": {
+        "year": 2006,
+        "name": "Woody Pro Junior (60th Anniversary)",
+        "years": "2006–2006",
+        "watts": "15",
+        "speakers": "1x10 hardwood combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Limited 2006 run; some listings date it 2006-2008. Earlier Custom Shop Woody Junior and Woody Pro builds used the same EL84 Pro Junior circuit. One $899 asking example seen."
+      },
+      "catalogCsvRow": 153,
+      "catalogName": "Woody Pro Junior (60th Anniversary)",
+      "catalogRowSha256": "0156972091ed729c2a468bc64b56f83bf0affd7965788814861150be31adabb0",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2006|wip|Princeton Recording Amp",
+      "runtime": {
+        "year": 2006,
+        "name": "Princeton Recording Amp",
+        "years": "2006–2010",
+        "watts": "20",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Tube preamp/power amp; added compressor/overdrive are solid-state effects."
+      },
+      "catalogCsvRow": 154,
+      "catalogName": "Princeton Recording Amp",
+      "catalogRowSha256": "1fb36d344efa2c87225592c074209dc8698d2867c9a80b04ae19940a93a472dc",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2006|wip|Super-Sonic 60",
       "runtime": {
         "year": 2006,
         "name": "Super-Sonic 60",
-        "years": "2006–2010s, early series",
-        "watts": 60,
-        "speakers": "1 × 12″",
-        "load": "8 Ω",
-        "finish": "cream",
-        "circuit": "Super-Sonic 60"
+        "years": "2006–2016",
+        "watts": "60",
+        "speakers": "1x12 combo or head",
+        "load": "8 combo; head selectable Ω",
+        "finish": "wip",
+        "circuit": "Head/combo and cosmetic revisions grouped."
       },
       "catalogCsvRow": 155,
       "catalogName": "Super-Sonic 60",
       "catalogRowSha256": "a57ac935c896e4996edb9bd806409019240e6a592a6ffe3a1d8359fad08e07a5",
-      "catalog": {
-        "introduced": "2006",
-        "productionEnd": "2016",
-        "productionStatus": "Ended (approx.)",
-        "outputWatts": "60",
-        "cabinetSpeakers": "1x12 combo or head",
-        "nominalLoad": "8 combo; head selectable",
-        "loadType": "Varies by configuration",
-        "versionNotes": "Head/combo and cosmetic revisions grouped.",
-        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
-        "reviewStatus": "Reviewed, not source-checked",
-        "reviewNote": ""
-      },
-      "differences": [
-        {
-          "field": "productionRange",
-          "runtime": "2006–2010s, early series",
-          "catalog": "2006–2016",
-          "status": "open_reconciliation",
-          "decision": "The runtime end label is approximate and not synchronized to the catalog. Retain it in this mapping-only pass; verify the selected combo revision before revising dates."
-        },
-        {
-          "field": "format",
-          "runtime": "1 × 12″",
-          "catalog": "1x12 combo or head",
-          "status": "retained_with_scope_note",
-          "decision": "Runtime depicts the combo, not every format grouped in the catalog."
-        },
-        {
-          "field": "load",
-          "runtime": "8 Ω",
-          "catalog": "8 combo; head selectable",
-          "status": "retained_with_scope_note",
-          "decision": "8 Ω is the runtime combo selection; do not apply it to the grouped head’s selectable output."
-        }
-      ],
-      "scopeNote": "Runtime is the 1x12 / 8 Ω combo subset. Catalog combines head/combo and revisions; the displayed end date is less precise than the catalog’s approximate 2016."
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "2016|tweed|’57 Custom Deluxe",
+      "runtimeKey": "2007|wip|'57 Deluxe reissue",
+      "runtime": {
+        "year": 2007,
+        "name": "'57 Deluxe reissue",
+        "years": "2007–2011",
+        "watts": "12",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "First availability sometimes dated 2006–07."
+      },
+      "catalogCsvRow": 156,
+      "catalogName": "'57 Deluxe reissue",
+      "catalogRowSha256": "aaa6d3993fdd650ddf4ea761f354114f68739a33141aa04f4d4a59eaf9e00904",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2007|wip|The '57 Amp (limited maple cabinet)",
+      "runtime": {
+        "year": 2007,
+        "name": "The '57 Amp (limited maple cabinet)",
+        "years": "2007–2007",
+        "watts": "12",
+        "speakers": "1x12 maple-cabinet combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Sparse secondary market; exact package and condition matter."
+      },
+      "catalogCsvRow": 157,
+      "catalogName": "The '57 Amp (limited maple cabinet)",
+      "catalogRowSha256": "778bd832be0c07a4c56b8cfcd6cff5bb2d00ac125b143cc66b071ff0252ee015",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2008|wip|'65 Princeton Reverb reissue",
+      "runtime": {
+        "year": 2008,
+        "name": "'65 Princeton Reverb reissue",
+        "years": "2008 onward",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Dealer 1x12 special editions grouped, with same typical 8Ω load."
+      },
+      "catalogCsvRow": 158,
+      "catalogName": "'65 Princeton Reverb reissue",
+      "catalogRowSha256": "1f41c5759c07dc418c3d4252fbf4626b96a79acde0ee07fa43af8a9bacf9fb7b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2009|wip|'57 Champ reissue",
+      "runtime": {
+        "year": 2009,
+        "name": "'57 Champ reissue",
+        "years": "2009–2011",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 159,
+      "catalogName": "'57 Champ reissue",
+      "catalogRowSha256": "3c780bb5c307a10c06dc9ff1a5ca3faa70a111890e5180045c5d3b71806d2a73",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2010|wip|Blues Junior III",
+      "runtime": {
+        "year": 2010,
+        "name": "Blues Junior III",
+        "years": "2010–2018",
+        "watts": "15",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 160,
+      "catalogName": "Blues Junior III",
+      "catalogRowSha256": "53215be7013542490d6270c74e61320b8160d99f1514256cbf7633aaee817ed4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2010|wip|Pro Junior III",
+      "runtime": {
+        "year": 2010,
+        "name": "Pro Junior III",
+        "years": "2010–2018",
+        "watts": "15",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 161,
+      "catalogName": "Pro Junior III",
+      "catalogRowSha256": "4d159358da8858dd856893364fe9c7561d75a0fb4b6254ab687007935634c638",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2010|wip|Super-Sonic 22",
+      "runtime": {
+        "year": 2010,
+        "name": "Super-Sonic 22",
+        "years": "2010 onward",
+        "watts": "22",
+        "speakers": "1x12 combo or head",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Combo/head availability differs by year."
+      },
+      "catalogCsvRow": 162,
+      "catalogName": "Super-Sonic 22",
+      "catalogRowSha256": "db60fc89b440183a53acc0d7c110bac3c10be117f57a506e4690751e509ff9a9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2010|wip|Hot Rod Deluxe III",
+      "runtime": {
+        "year": 2010,
+        "name": "Hot Rod Deluxe III",
+        "years": "2010–2018",
+        "watts": "40",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 163,
+      "catalogName": "Hot Rod Deluxe III",
+      "catalogRowSha256": "d3775c3ff1a5bfabd4c2e5ac876534940f1b4e5e8219de6b8ff2b71b239fde81",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2010|wip|Hot Rod DeVille III",
+      "runtime": {
+        "year": 2010,
+        "name": "Hot Rod DeVille III",
+        "years": "2010–2018",
+        "watts": "60",
+        "speakers": "4x10 or 2x12 open-back combo",
+        "load": "8 (4x10); 4 (2x12) Ω",
+        "finish": "wip",
+        "circuit": "Speaker configurations grouped."
+      },
+      "catalogCsvRow": 164,
+      "catalogName": "Hot Rod DeVille III",
+      "catalogRowSha256": "a12a2935ae28b9b82ff39dbcef6b74f82f8997b3ce8c989c53675281ae6fedb5",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2011|wip|EC Vibro-Champ",
+      "runtime": {
+        "year": 2011,
+        "name": "EC Vibro-Champ",
+        "years": "2011–2016",
+        "watts": "5",
+        "speakers": "1x8 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 165,
+      "catalogName": "EC Vibro-Champ",
+      "catalogRowSha256": "7019da7b6ededd2d100675bf0d93e56b18022b2427a4990d127fc3028f819624",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2011|wip|EC Tremolux",
+      "runtime": {
+        "year": 2011,
+        "name": "EC Tremolux",
+        "years": "2011–2016",
+        "watts": "12",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 166,
+      "catalogName": "EC Tremolux",
+      "catalogRowSha256": "6016edbd3c8a6e3973b465278c6ef4cecba3e133bddfde1899b5401fce06b09b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2011|wip|EC Twinolux",
+      "runtime": {
+        "year": 2011,
+        "name": "EC Twinolux",
+        "years": "2011–2016",
+        "watts": "40",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 167,
+      "catalogName": "EC Twinolux",
+      "catalogRowSha256": "e9f6d58747c455d0d54710eb29a95646779348824bc05f7624b4a6ae2f3028e9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2011|wip|Super-Sonic 100 head",
+      "runtime": {
+        "year": 2011,
+        "name": "Super-Sonic 100 head",
+        "years": "2011–2014",
+        "watts": "100",
+        "speakers": "Head; external cabinet",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 168,
+      "catalogName": "Super-Sonic 100 head",
+      "catalogRowSha256": "5f386868637caf5ba13f8465e7712cb8d335990fb6da5b7704cd09b7c0be50c3",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2011|wip|Super-Sonic Twin",
+      "runtime": {
+        "year": 2011,
+        "name": "Super-Sonic Twin",
+        "years": "2011–2014",
+        "watts": "100",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 169,
+      "catalogName": "Super-Sonic Twin",
+      "catalogRowSha256": "ba00695e4b72e66401010ce0d63ca48f6733a15cde5640b686a45bb7077e31d8",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2012|wip|Greta",
+      "runtime": {
+        "year": 2012,
+        "name": "Greta",
+        "years": "2012–2013",
+        "watts": "2",
+        "speakers": "1x4 desktop combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "External speaker output permits a larger cabinet."
+      },
+      "catalogCsvRow": 170,
+      "catalogName": "Greta",
+      "catalogRowSha256": "1121db08b39c4780c7088f3e3522505f73b053cab6cbf45f10df523fde16333f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2012|wip|Excelsior / Excelsior Pro",
+      "runtime": {
+        "year": 2012,
+        "name": "Excelsior / Excelsior Pro",
+        "years": "2012–2014",
+        "watts": "13",
+        "speakers": "1x15 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Pro speaker/color variations grouped."
+      },
+      "catalogCsvRow": 171,
+      "catalogName": "Excelsior / Excelsior Pro",
+      "catalogRowSha256": "9640cab743a1eb6cfa09088ff7f346559b431e833b01927fcc02ac6dbf620bb8",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2012|wip|George Benson Hot Rod Deluxe",
+      "runtime": {
+        "year": 2012,
+        "name": "George Benson Hot Rod Deluxe",
+        "years": "2012 onward",
+        "watts": "40",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Availability varies by market."
+      },
+      "catalogCsvRow": 172,
+      "catalogName": "George Benson Hot Rod Deluxe",
+      "catalogRowSha256": "720783f96cae2e982d10a8174645c046c5b4659ea259a80726d3dd31a7986e0f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2012|wip|Machete",
+      "runtime": {
+        "year": 2012,
+        "name": "Machete",
+        "years": "2012–2015",
+        "watts": "50",
+        "speakers": "1x12 combo or head",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Cabinet sold separately with head."
+      },
+      "catalogCsvRow": 173,
+      "catalogName": "Machete",
+      "catalogRowSha256": "1c31444c0a88d3cbb48414e026d8bda920fdb8bbae3767a84f1dad6bca047c32",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2013|wip|Ramparte",
+      "runtime": {
+        "year": 2013,
+        "name": "Ramparte",
+        "years": "2013–2015",
+        "watts": "9",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 174,
+      "catalogName": "Ramparte",
+      "catalogRowSha256": "6bfd3cb75abfce11515d15ef992d1972f02f320fd1c54e8d697ad3290a6a5ca1",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2013|wip|'68 Custom Princeton Reverb",
+      "runtime": {
+        "year": 2013,
+        "name": "'68 Custom Princeton Reverb",
+        "years": "2013 onward",
+        "watts": "12",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 175,
+      "catalogName": "'68 Custom Princeton Reverb",
+      "catalogRowSha256": "be3a2cb2b7941e765435cfacc24b80bb0d9713b8902e619aa39316e9206b86d2",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2013|wip|'68 Custom Deluxe Reverb",
+      "runtime": {
+        "year": 2013,
+        "name": "'68 Custom Deluxe Reverb",
+        "years": "2013 onward",
+        "watts": "22",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 176,
+      "catalogName": "'68 Custom Deluxe Reverb",
+      "catalogRowSha256": "34acf213958cb38f5b390c6ae831a0c280702c723f02359e2ee7d5c1c4f02885",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2013|wip|'57 Bandmaster reissue",
+      "runtime": {
+        "year": 2013,
+        "name": "'57 Bandmaster reissue",
+        "years": "2013–2019",
+        "watts": "26",
+        "speakers": "3x10 open-back combo",
+        "load": "2.67 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 177,
+      "catalogName": "'57 Bandmaster reissue",
+      "catalogRowSha256": "9b87492fc57709e52bfba1a4d637b24a4b378cb1ae9d04f0a2757fa4aebbbbe6",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2013|wip|'68 Custom Twin Reverb",
+      "runtime": {
+        "year": 2013,
+        "name": "'68 Custom Twin Reverb",
+        "years": "2013 onward",
+        "watts": "85",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Not a literal 1968 circuit reissue."
+      },
+      "catalogCsvRow": 178,
+      "catalogName": "'68 Custom Twin Reverb",
+      "catalogRowSha256": "3e5d979232e4bc718dbe7fab342829b962f8e3778d551e1e52611ee17b0b20c2",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2014|wip|'57 Deluxe head",
+      "runtime": {
+        "year": 2014,
+        "name": "'57 Deluxe head",
+        "years": "2014–2014",
+        "watts": "12",
+        "speakers": "Head; external cabinet",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 179,
+      "catalogName": "'57 Deluxe head",
+      "catalogRowSha256": "239ba78f79c7100a075afe578bfe39a0ca74e0d439f55dd213ccd249fa8256dd",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2014|wip|Vaporizer",
+      "runtime": {
+        "year": 2014,
+        "name": "Vaporizer",
+        "years": "2014–2015",
+        "watts": "12",
+        "speakers": "2x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Verify exact production end by market. Two 16 ohm speakers wired in parallel."
+      },
+      "catalogCsvRow": 180,
+      "catalogName": "Vaporizer",
+      "catalogRowSha256": "c828d4a0db0fae0d40f18b6f7f3f4d260ab2516efa6b2fe2faa9c32a58689578",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2014|wip|'65 Deluxe Reverb head",
+      "runtime": {
+        "year": 2014,
+        "name": "'65 Deluxe Reverb head",
+        "years": "2014–2016",
+        "watts": "22",
+        "speakers": "Head; external cabinet",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Price is head only."
+      },
+      "catalogCsvRow": 181,
+      "catalogName": "'65 Deluxe Reverb head",
+      "catalogRowSha256": "f0866becd388c50edc536dad1958308bfabf41c54a4d6e8c41b8e4a45987f8f9",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2014|wip|'68 Custom Vibrolux Reverb",
+      "runtime": {
+        "year": 2014,
+        "name": "'68 Custom Vibrolux Reverb",
+        "years": "2014–2020",
+        "watts": "35",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Not the earlier 40W Custom Vibrolux Reverb."
+      },
+      "catalogCsvRow": 182,
+      "catalogName": "'68 Custom Vibrolux Reverb",
+      "catalogRowSha256": "883412480afee0b52b488dcde10d99740a5d738163ac21b1ab8ff350e9605289",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2015|wip|Hot Rod DeVille ML 212",
+      "runtime": {
+        "year": 2015,
+        "name": "Hot Rod DeVille ML 212",
+        "years": "2015 onward",
+        "watts": "60",
+        "speakers": "2x12 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 183,
+      "catalogName": "Hot Rod DeVille ML 212",
+      "catalogRowSha256": "def7761f35a9200b72c4086d287d8aaf25f2a649ca2aafed12cc5d565436c20b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|'57 Custom Champ",
       "runtime": {
         "year": 2016,
-        "name": "’57 Custom Deluxe",
+        "name": "'57 Custom Champ",
         "years": "2016 onward",
-        "watts": 12,
-        "speakers": "1 × 12″",
+        "watts": "5",
+        "speakers": "1x8 open-back pine combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Used estimate; current new retail differs."
+      },
+      "catalogCsvRow": 184,
+      "catalogName": "'57 Custom Champ",
+      "catalogRowSha256": "a101f30ea013931fae0ec9fd43e1cac79c96a51baeef458d9ce9ec92c515a503",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|Bassbreaker 007",
+      "runtime": {
+        "year": 2016,
+        "name": "Bassbreaker 007",
+        "years": "2016–2023",
+        "watts": "7",
+        "speakers": "1x10 combo or head",
         "load": "8 Ω",
-        "finish": "tweed",
-        "circuit": "Hand-wired 5E3-inspired"
+        "finish": "wip",
+        "circuit": "Dates approximate; combo/head grouped."
+      },
+      "catalogCsvRow": 185,
+      "catalogName": "Bassbreaker 007",
+      "catalogRowSha256": "0d0adc1428a1fb22263a261dcd8b193ee07a59b1235c78fa3b2c23a2da707907",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|'57 Custom Deluxe",
+      "runtime": {
+        "year": 2016,
+        "name": "'57 Custom Deluxe",
+        "years": "2016 onward",
+        "watts": "12",
+        "speakers": "1x12 open-back pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
       },
       "catalogCsvRow": 186,
       "catalogName": "'57 Custom Deluxe",
       "catalogRowSha256": "5139ea098b52f53787176072c7c47b68e86d5d708c3c346b936e8a8092ea6df6",
-      "catalog": {
-        "introduced": "2016",
-        "productionEnd": "",
-        "productionStatus": "Current",
-        "outputWatts": "12",
-        "cabinetSpeakers": "1x12 open-back pine combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "",
-        "specificationReference": "https://www.fender.com/products/57-custom-deluxe",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Modern 2016 Custom Deluxe, not a 1957 introduction. Runtime visually references the tweed family; no vintage circuit/parts identity is implied."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "2021|silver|Custom Pro Reverb",
+      "runtimeKey": "2016|wip|The Edge Deluxe",
+      "runtime": {
+        "year": 2016,
+        "name": "The Edge Deluxe",
+        "years": "2016–2020",
+        "watts": "12",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 187,
+      "catalogName": "The Edge Deluxe",
+      "catalogRowSha256": "8ab63ad5126d4064bfa0de7182c32cdc2cc808a941c10e212e9179384d907274",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|Bassbreaker 15",
+      "runtime": {
+        "year": 2016,
+        "name": "Bassbreaker 15",
+        "years": "2016–2024",
+        "watts": "15",
+        "speakers": "1x12 combo or head",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 188,
+      "catalogName": "Bassbreaker 15",
+      "catalogRowSha256": "63c397613abc9084e72294800ba725faac2416cf2fbf7ddcdfbc2a9b279f443f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|'57 Custom Pro-Amp",
+      "runtime": {
+        "year": 2016,
+        "name": "'57 Custom Pro-Amp",
+        "years": "2016–2020",
+        "watts": "26",
+        "speakers": "1x15 open-back pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 189,
+      "catalogName": "'57 Custom Pro-Amp",
+      "catalogRowSha256": "d24938c4cb8873ece8af4872e7a272c940a16945bc90e290804059c0912f521b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|Bassbreaker 18/30",
+      "runtime": {
+        "year": 2016,
+        "name": "Bassbreaker 18/30",
+        "years": "2016–2018",
+        "watts": "30",
+        "speakers": "2x12 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Listed maximum output is 30W."
+      },
+      "catalogCsvRow": 190,
+      "catalogName": "Bassbreaker 18/30",
+      "catalogRowSha256": "ff4ae16499f76b8fa0e664f3fd0c9a3acc8ff7c19938893a6eb6bf6a085ae10b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|'57 Custom Twin-Amp",
+      "runtime": {
+        "year": 2016,
+        "name": "'57 Custom Twin-Amp",
+        "years": "2016 onward",
+        "watts": "40",
+        "speakers": "2x12 open-back pine combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 191,
+      "catalogName": "'57 Custom Twin-Amp",
+      "catalogRowSha256": "6840b3b9a384fdfc448d54bee9773594f6ddb60f1b066d63f13d4599fa6117fe",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|Bassbreaker 45",
+      "runtime": {
+        "year": 2016,
+        "name": "Bassbreaker 45",
+        "years": "2016–2018",
+        "watts": "45",
+        "speakers": "2x12 combo or head",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": "Scales approximately 1–45W; combo/head grouped."
+      },
+      "catalogCsvRow": 192,
+      "catalogName": "Bassbreaker 45",
+      "catalogRowSha256": "eef3f5cac2331491d3c0a47b49f9721f120cdeb45c3c860035cfc981d461e71d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2016|wip|GB Twin Reverb (George Benson)",
+      "runtime": {
+        "year": 2016,
+        "name": "GB Twin Reverb (George Benson)",
+        "years": "2016 onward",
+        "watts": "85",
+        "speakers": "2x12 pine combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Announced at NAMM 2016. Re-voiced low-gain normal channel."
+      },
+      "catalogCsvRow": 193,
+      "catalogName": "GB Twin Reverb (George Benson)",
+      "catalogRowSha256": "e644eb4989328edd712979431e4b4b94b496ca4d18c84951dfcb63d9f80a8a41",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2017|wip|'64 Custom Deluxe Reverb",
+      "runtime": {
+        "year": 2017,
+        "name": "'64 Custom Deluxe Reverb",
+        "years": "2017 onward",
+        "watts": "20",
+        "speakers": "1x12 open-back pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Rated 20W, unlike 22W '65 production reissue."
+      },
+      "catalogCsvRow": 194,
+      "catalogName": "'64 Custom Deluxe Reverb",
+      "catalogRowSha256": "d812ed74dbaff0b565d0d5991326ed9ac9e6982a5748ee2cb3dee85af9f2728f",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2018|wip|Blues Junior IV",
+      "runtime": {
+        "year": 2018,
+        "name": "Blues Junior IV",
+        "years": "2018 onward",
+        "watts": "15",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 195,
+      "catalogName": "Blues Junior IV",
+      "catalogRowSha256": "568991ceed0ed57f7dd8462cd3b91d12ced0b5b2204a67d313d727c0130f3e7c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2018|wip|Pro Junior IV / IV SE",
+      "runtime": {
+        "year": 2018,
+        "name": "Pro Junior IV / IV SE",
+        "years": "2018 onward",
+        "watts": "15",
+        "speakers": "1x10 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "IV LTD and SE speaker/cabinet variants grouped."
+      },
+      "catalogCsvRow": 196,
+      "catalogName": "Pro Junior IV / IV SE",
+      "catalogRowSha256": "d78c7b6cb5374362b8fb8a7a4562bb015342d89d157f57de676ea4cf048014b0",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2018|wip|Hot Rod Deluxe IV",
+      "runtime": {
+        "year": 2018,
+        "name": "Hot Rod Deluxe IV",
+        "years": "2018 onward",
+        "watts": "40",
+        "speakers": "1x12 open-back pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 197,
+      "catalogName": "Hot Rod Deluxe IV",
+      "catalogRowSha256": "e63d95cf44870d7b46c35fef5ff3cf0ae38d714c66ad1d4286d8ec08b73c2e3e",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2018|wip|Hot Rod DeVille IV",
+      "runtime": {
+        "year": 2018,
+        "name": "Hot Rod DeVille IV",
+        "years": "2018 onward",
+        "watts": "60",
+        "speakers": "2x12 open-back pine combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 198,
+      "catalogName": "Hot Rod DeVille IV",
+      "catalogRowSha256": "e456bdc5d3db15e8510ca6630146bb43160a1981d121a27dfc20e6071321ac7c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2018|wip|'59 Twin-Amp JB Edition",
+      "runtime": {
+        "year": 2018,
+        "name": "'59 Twin-Amp JB Edition",
+        "years": "2018–2018",
+        "watts": "80",
+        "speakers": "2x12 open-back tweed combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Tube original. Excludes 2026 digital Tone Master JB edition."
+      },
+      "catalogCsvRow": 199,
+      "catalogName": "'59 Twin-Amp JB Edition",
+      "catalogRowSha256": "ea7ee37b66018cc920ec688d982ae8bf9b550bba0f33262ae8e7bb7fd2b42298",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2019|wip|'62 Princeton Chris Stapleton Edition",
+      "runtime": {
+        "year": 2019,
+        "name": "'62 Princeton Chris Stapleton Edition",
+        "years": "2019 onward",
+        "watts": "12",
+        "speakers": "1x12 pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Launched February 2019 at $1,999.99."
+      },
+      "catalogCsvRow": 200,
+      "catalogName": "'62 Princeton Chris Stapleton Edition",
+      "catalogRowSha256": "011361c4dff5537ca26ff2ed0073fd59699c1a10d0792b38f645fc8dd6acc2dd",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2019|wip|Bassbreaker 30R",
+      "runtime": {
+        "year": 2019,
+        "name": "Bassbreaker 30R",
+        "years": "2019–2024",
+        "watts": "30",
+        "speakers": "1x12 open-back combo",
+        "load": "4/8/16 selectable Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 201,
+      "catalogName": "Bassbreaker 30R",
+      "catalogRowSha256": "9408fc0e741134ebc452fe2fe371e01dda8986696f515aab839ef397ff8c81a4",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2020|wip|'64 Custom Princeton Reverb",
+      "runtime": {
+        "year": 2020,
+        "name": "'64 Custom Princeton Reverb",
+        "years": "2020 onward",
+        "watts": "12",
+        "speakers": "1x10 open-back pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": null
+      },
+      "catalogCsvRow": 202,
+      "catalogName": "'64 Custom Princeton Reverb",
+      "catalogRowSha256": "92a842a0841a7fbea52ebdc354387b81b7e220ef41d7394c57e071d9c78aca0d",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2021|wip|'68 Custom Vibro Champ Reverb",
       "runtime": {
         "year": 2021,
-        "name": "Custom Pro Reverb",
+        "name": "'68 Custom Vibro Champ Reverb",
         "years": "2021 onward",
-        "watts": 40,
-        "speakers": "1 × 12″",
+        "watts": "5",
+        "speakers": "1x10 open-back combo",
+        "load": "3.2 Ω",
+        "finish": "wip",
+        "circuit": "Tube preamp/power amp; hall reverb is digital. Included with this distinction."
+      },
+      "catalogCsvRow": 203,
+      "catalogName": "'68 Custom Vibro Champ Reverb",
+      "catalogRowSha256": "632eec411cc5644bcfef74364c81e657018005da1ec8c7d5653c282ed25b99ea",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2021|wip|'68 Custom Pro Reverb",
+      "runtime": {
+        "year": 2021,
+        "name": "'68 Custom Pro Reverb",
+        "years": "2021 onward",
+        "watts": "40",
+        "speakers": "1x12 open-back combo",
         "load": "8 Ω",
-        "finish": "silver",
-        "circuit": "’68 Custom Pro Reverb"
+        "finish": "wip",
+        "circuit": "Distinct from vintage dual-channel 2x12 Pro Reverb."
       },
       "catalogCsvRow": 204,
       "catalogName": "'68 Custom Pro Reverb",
       "catalogRowSha256": "b3420db5a486dac2fc8b1569ce65204aa7881cb65640cbabb3d7a5d56d72ebeb",
-      "catalog": {
-        "introduced": "2021",
-        "productionEnd": "",
-        "productionStatus": "Current",
-        "outputWatts": "40",
-        "cabinetSpeakers": "1x12 open-back combo",
-        "nominalLoad": "8",
-        "loadType": "Fixed",
-        "versionNotes": "Distinct from vintage dual-channel 2x12 Pro Reverb.",
-        "specificationReference": "https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals",
-        "reviewStatus": "Confirmed",
-        "reviewNote": ""
-      },
       "differences": [],
-      "scopeNote": "Timeline shortens the model name to Custom Pro Reverb. This is the modern 2021 single-speaker model, not vintage dual-channel 2x12 Pro Reverb."
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2023|wip|'48 Dual Professional JB Edition",
+      "runtime": {
+        "year": 2023,
+        "name": "'48 Dual Professional JB Edition",
+        "years": "2023–2023",
+        "watts": "26",
+        "speakers": "2x10 V-front tweed combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Limited run; approximate secondary-market range."
+      },
+      "catalogCsvRow": 205,
+      "catalogName": "'48 Dual Professional JB Edition",
+      "catalogRowSha256": "32e23e613e0b3fed0b606a8016643c015daaded173830f38313bd57341494aab",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2024|wip|Jack White Pano Verb",
+      "runtime": {
+        "year": 2024,
+        "name": "Jack White Pano Verb",
+        "years": "2024 onward",
+        "watts": "70",
+        "speakers": "1x15 + 1x10 combo",
+        "load": "4 and 8 (two outputs) Ω",
+        "finish": "wip",
+        "circuit": "Announced September 17, 2024. Watts shown are the combined output."
+      },
+      "catalogCsvRow": 206,
+      "catalogName": "Jack White Pano Verb",
+      "catalogRowSha256": "9f092ed314d66940267f6176dd1216c7f2fdd7fb653ef642400e883a346e675c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2025|wip|'62 Super Amp (American Vintage)",
+      "runtime": {
+        "year": 2025,
+        "name": "'62 Super Amp (American Vintage)",
+        "years": "2025 onward",
+        "watts": "40",
+        "speakers": "2x10 open-back combo",
+        "load": "4 Ω",
+        "finish": "wip",
+        "circuit": "Used asking examples. New advertised launch price was $2,499.99."
+      },
+      "catalogCsvRow": 207,
+      "catalogName": "'62 Super Amp (American Vintage)",
+      "catalogRowSha256": "34d06496679916df086e76e7e36e25f067b5188bde2f30f9ca8964d748748d64",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2026|wip|'62 Deluxe Amp (American Vintage)",
+      "runtime": {
+        "year": 2026,
+        "name": "'62 Deluxe Amp (American Vintage)",
+        "years": "2026 onward",
+        "watts": "20",
+        "speakers": "1x12 open-back combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "No used market yet. New list price shown in its own column."
+      },
+      "catalogCsvRow": 208,
+      "catalogName": "'62 Deluxe Amp (American Vintage)",
+      "catalogRowSha256": "82a2d5154be5f4a29c9d9b2843b8e87d7d51d28ac59181c8ab85325de7c2b49b",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+    },
+    {
+      "runtimeKey": "2026|wip|Hot Rod Deluxe 30th Anniversary",
+      "runtime": {
+        "year": 2026,
+        "name": "Hot Rod Deluxe 30th Anniversary",
+        "years": "2026 onward",
+        "watts": "40",
+        "speakers": "1x12 pine combo",
+        "load": "8 Ω",
+        "finish": "wip",
+        "circuit": "Limited edition based on the Hot Rod Deluxe IV, with revised preamp and reverb."
+      },
+      "catalogCsvRow": 209,
+      "catalogName": "Hot Rod Deluxe 30th Anniversary",
+      "catalogRowSha256": "c286c777c0d726594b25f5efafa10ccae6eed7061f19aea598edc4127b61458c",
+      "differences": [],
+      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     }
   ]
 }

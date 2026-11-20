@@ -39,7 +39,11 @@ const csv=read(mapping.catalogSource),rows=csvRecords(csv);
 assert.equal(sha(csv),mapping.catalogSha256,'Catalog changed: reconcile timeline mappings');
 const source=read(mapping.runtimeSource),start=source.indexOf('const amps=['),end=source.indexOf('function panelLabel');
 assert.ok(start>=0&&end>start,'Timeline data boundary changed: update mapping validation');
-const timeline=JSON.parse(JSON.stringify(vm.runInNewContext(source.slice(start,end)+'\namps',{},{timeout:1000})));
+const {CATALOG_AMPS}=await import('../dist/catalog-timeline.js');
+const timeline=JSON.parse(JSON.stringify(vm.runInNewContext(source.slice(start,end)+'\namps',{CATALOG_AMPS},{timeout:1000})));
+assert.equal(timeline.length,rows.length-1,'All catalog rows must appear');
+assert.equal(new Set(mapping.entries.map(e=>e.catalogCsvRow)).size,rows.length-1,'One entry per catalog row');
+for(const a of CATALOG_AMPS)assert.deepEqual(a.sourceFields,rows[a.catalogRow-1], 'WIP fields must match snapshot verbatim');
 assert.equal(mapping.entries.length,timeline.length,'Every timeline entry needs a catalog mapping');
 const keys=mapping.entries.map(e=>e.runtimeKey);assert.equal(new Set(keys).size,keys.length,'Duplicate timeline mapping');
 for(const amp of timeline){

@@ -34,3 +34,15 @@
 .detail-bar #detail-index{max-width:55%;text-align:center;line-height:1.7}
 @media(max-width:1100px){:root{--amp-card-width:max(170px,calc(92vw/5))}}
 @media(max-width:760px){:root{--amp-card-width:max(156px,calc(92vw/2));--branch-y:250px;--timeline-y:268px}.collection-viewport{height:422px}.amp-tether{height:30px}.year-marker{top:282px}.year-marker small{font-size:9px}.amp-era{font-size:9px}.collection-note button{margin:8px 0 0;display:block;padding:0}.detail-bar #detail-index{max-width:48%;font-size:9px;line-height:1.6}.detail-open .story-panel>.eyebrow{flex-wrap:wrap}}
+
+/* A deliberately generic silhouette, independent of any historical cabinet. */
+.amp-card-wip .amp-slot{display:flex;align-items:center;justify-content:center}
+.generic-amp{position:relative;display:block;width:112px;height:94px;border:3px solid #777e86;border-radius:7px;background:#343a42;box-shadow:8px 8px 0 #232830;transform:rotate(-3deg);opacity:.75}
+.generic-amp:before{content:'';position:absolute;top:-13px;left:36px;width:34px;height:10px;border:3px solid #777e86;border-bottom:0;border-radius:5px 5px 0 0}
+.generic-amp:after{content:'';position:absolute;inset:23px 7px 7px;border:1px solid #737a82;background:repeating-linear-gradient(0deg,#4b525a 0 1px,#373e46 1px 4px)}
+.generic-amp i{position:absolute;left:8px;right:8px;top:7px;height:9px;border-bottom:2px dotted #8b929a}
+.amp-card-wip .amp-era{color:#abb2bc;border-color:#626a75}
+.amp-card-wip .amp-open{color:#c2c8d0}
+.amp-card-wip strong{color:#c2c8d0}
+#dialog .details dd{overflow-wrap:anywhere}
+.amp-card-wip .amp-open{opacity:1;transform:none;font-size:12px}
