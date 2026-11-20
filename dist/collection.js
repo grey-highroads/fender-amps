@@ -22,9 +22,9 @@ const amps=[
   "width": 1,
   "height": 1,
   "circuit": "5E3",
-  "voice": "The little amp that learned to roar.",
+  "voice": "Two Volumes and one Tone, and they all interact.",
   "full": true,
-  "story": "In 1955, Fender gave the Deluxe a narrow-panel cabinet and the 5E3 circuit—a modest amplifier built for working musicians. Its pair of 6V6 power tubes delivered warm cleans that gave way to thick, compressed overdrive as the volume climbed. Neil Young made the tweed Deluxe part of his unmistakable electric voice. The secret wasn’t more power: it was what happened when this small amp reached its limits."
+  "story": "This is the 5E3, the narrow-panel Deluxe Fender built from 1955 to 1960. Two 6V6s, a 5Y3 rectifier, cathode bias, and no negative feedback loop on the drawing. Most owners will tell you there isn’t much clean headroom. It’s breaking up by the time it’s loud enough for a band, and plenty of people buy one for exactly that. The controls are the other thing players talk about. There are two Volumes and one Tone, and they all affect each other, including the Volume for the channel you’re not plugged into. It’s usually listed at 12 watts, and you’ll see 15 quoted too."
  },
  {
   "year": 1955,
@@ -38,8 +38,8 @@ const amps=[
   "width": 1,
   "height": 0.955,
   "circuit": "5E9",
-  "voice": "The small tweed gets a pulse.",
-  "story": "The early Tremolux takes the small two-channel tweed format and adds Speed and Depth controls for tremolo. A pair of 6V6s and a single twelve keep it in the Deluxe’s neighborhood, but the five-knob top panel makes its extra trick visible. This is an early 1955 5E9 small-box study, not the later large-cabinet 5G9 or blonde piggyback.",
+  "voice": "A small tweed with tremolo built in.",
+  "story": "Take a small two-channel tweed, add tremolo, and you’ve got the Tremolux. Speed and Depth sit on the top panel next to Tone and the two Volumes, so it’s five knobs where a Deluxe has three. Power is still a pair of 6V6s into one twelve, about 15 watts. The amp shown here is the early 1955 5E9 in the small Deluxe-size box. The later large-cabinet 5G9 and the blonde piggyback are different amps with the same name.",
   "ratingNote": "15 W follows the selected catalog row; later versions and published ratings vary. Cabinet dimensions remain provisional."
  },
  {
@@ -54,8 +54,8 @@ const amps=[
   "width": 0.675,
   "height": 0.716,
   "circuit": "5F1",
-  "voice": "One knob. A very direct conversation.",
-  "story": "The eight-inch tweed Champ puts a single 6V6 power tube behind one switched Volume control. There is no separate tone stack or master volume to work around: the guitar and that one knob do the shaping. This entry follows the catalog’s 1958 start for the eight-inch version; the exterior study uses a photographed 1959 example.",
+  "voice": "One 6V6, one knob, no tone control.",
+  "story": "It has one knob. That’s the Volume, and the power switch is built into it. Behind it there’s a 12AX7, a single 6V6 and a 5Y3, making about 5 watts into an eight-inch speaker. There’s no tone control, so you shape the sound with that knob and your guitar. This entry is the eight-inch version, which our catalog starts in 1958. The 5F1 circuit itself is usually dated from 1956. The cabinet here is modeled on a 1959 example.",
   "ratingNote": "Nominal load follows the catalog’s 4 Ω; vintage speakers may be marked 3.2 Ω."
  },
  {
@@ -70,8 +70,8 @@ const amps=[
   "width": 1.05,
   "height": 1.015,
   "circuit": "6G3",
-  "voice": "A different kind of Deluxe bite.",
-  "story": "The brown Deluxe gives each channel its own Volume and Tone, then adds tremolo without adding reverb. Its front-facing six-control panel sits in a cabinet narrower than the later Deluxe Reverb. This 1962 exterior study follows a Normal-left, Bright-right example, with brown barrel knobs and no badge on the grille.",
+  "voice": "Fixed bias and tremolo, still no reverb.",
+  "story": "Each channel gets its own Volume and Tone, and there’s tremolo but no reverb. It’s a big step from the tweed Deluxe: the 6G3 drawing shows fixed bias, a negative feedback loop and a GZ34 rectifier. The tremolo works on the power-tube bias. Most sources rate it around 20 watts and some say 15. The cabinet is narrower than the later Deluxe Reverb. Ours is modeled on a 1962 amp with the Normal channel on the left, brown barrel knobs and no badge on the grille.",
   "ratingNote": "20 W follows the catalog’s approximate rating; some references quote 15 W. Speaker construction and internal placement are illustrative."
  },
  {
@@ -86,8 +86,8 @@ const amps=[
   "width": 1.08,
   "height": 0.96,
   "circuit": "AB763",
-  "voice": "The club-sized classic.",
-  "story": "The Deluxe Reverb combined a single twelve-inch speaker with spring reverb and tremolo. Its output gave working guitarists a practical balance of clean sound and driven response. The design became one of Fender’s most enduring reference points."
+  "voice": "Two 6V6s, one twelve, reverb and tremolo.",
+  "story": "Two 6V6s, about 22 watts and one twelve, with reverb and tremolo on the Vibrato channel. A lot of players think of it as the club-size Fender. You can get to the point where the power section starts to push without needing a Twin’s worth of volume. The AB763 circuit is fixed bias with a GZ34 rectifier, and the tremolo is the optical kind, a different design from the bias tremolo on the Princeton Reverb. The model dates from 1963. Our explorer is based on 1965 examples."
  },
  {
   "year": 1964,
@@ -101,8 +101,8 @@ const amps=[
   "width": 0.994,
   "height": 0.955,
   "circuit": "AA1164",
-  "voice": "Small cabinet. Its own kind of pulse.",
-  "story": "The Princeton Reverb pairs two 6V6s with a single ten, spring reverb and tremolo that moves the power-tube bias. Its split-load phase inverter sets it apart from the larger black-panel reverb amps. This 1965-style construction study uses the photographed raised-logo cabinet, with a period Oxford-style speaker rather than the specimen’s replacement Weber.",
+  "voice": "Its tremolo works on the power tubes.",
+  "story": "Two 6V6s into a single ten, about 12 watts, one channel with reverb and tremolo. Two things set it apart from the bigger black-panel reverb amps. The tremolo works on the power-tube bias, not on the signal. And the phase inverter is half a 12AX7, where the bigger amps give that job a whole 12AT7. Analysts usually point to that inverter when they explain how a Princeton breaks up. Our model follows a 1965 raised-logo cabinet, with a period Oxford-style speaker in place of that amp’s replacement Weber.",
   "ratingNote": "12 W follows catalog row 67. Cabinet dimensions and internal spacing are estimates. AA1164 specifies 5U4GB; early GZ34 chart evidence remains unresolved."
  },
  {
@@ -118,8 +118,8 @@ const amps=[
   "height": 1.02,
   "circuit": "Early silver-panel family",
   "ratingNote": "Early silver-panel Twins are commonly rated 85 watts. Later versions in this era increased to 100 watts; the 1977 ultralinear version is a separate exhibit.",
-  "voice": "Room for the clean sound to grow.",
-  "story": "The silver-panel Twin Reverb carried Fender’s big clean-combo idea into another era. Two twelve-inch speakers and considerable output suited players seeking headroom. Ratings and circuitry changed during this period, so the exact production version matters."
+  "voice": "Early ones are 85 watts. Later ones are 100.",
+  "story": "The same big clean combo, now with a silver panel: two twelves and about 85 watts on the early ones. The exact year matters in this era. Later amps in the run are rated 100 watts, and the circuit changed along the way, so a 1968 and a 1975 aren’t the same amp. Ours is a 1968. Open the explorer and you’ll find several cards that compare the AC568 drawing to the earlier AB763."
  }
 ];
 amps.push(...CATALOG_AMPS);
