@@ -10,8 +10,8 @@ unchanged; its source history and publishing workflow remain separate.
 - Vercel address: https://amplifier-observatory.vercel.app
 - Team: `grey-7947s-projects` (`team_kE5IeTW9aCbn1MPmGTKpvirV`), existing Pro account.
 - Project: `amplifier-observatory` (`prj_5u5TGxLdxA9hbYHxNSdxqE8DBaL7`).
-- Production deployment: `dpl_FhrSvVJ4KVnUMepcQ3crtnL2yLpe`, READY.
-- Immutable address: https://amplifier-observatory-icgdo7yk2-grey-7947s-projects.vercel.app
+- Initial CLI production deployment: `dpl_FhrSvVJ4KVnUMepcQ3crtnL2yLpe`, READY.
+- Initial immutable address: https://amplifier-observatory-icgdo7yk2-grey-7947s-projects.vercel.app
 - Source: GitHub `491485624aaa04a497c68e406a38516d6b81d457`, uploaded through
   authenticated Vercel CLI 66.6.0 from a staging copy of tracked files with
   hydrated LFS assets. No ignored backups or credentials were copied.
@@ -21,7 +21,7 @@ unchanged; its source history and publishing workflow remain separate.
   The production custom domain is public by the user's explicit instruction;
   generated deployment/preview URLs remain protected. The original private
   Sites prototype remains unchanged.
-- Git LFS retrieval is enabled for a future Git connection. Source exposure
+- Git LFS retrieval is enabled for the connected Git repository. Source exposure
   and directory listing are disabled. GitHub itself remains public.
 
 ## Validation and limits
@@ -102,3 +102,17 @@ certificate validation enabled. The generated deployment address still returned
 and opened its bright-cap hotspot. All five local checks passed; no runtime
 geometry, copy, lighting or interaction changed. DNS caches may update at different
 times. Registration was not transferred and no email records were changed.
+
+
+## Automatic deployment verification
+
+Pushing `0f6bf162f1600d95301bbd74d4fb2f7902ce94ab` to `main` automatically
+created `dpl_7dzbFBWZsZPszLe8tRwZVCgxV1iQ` (source `git`), READY, aliased to
+both custom domains. Build logs confirm GitHub cloning, all five checks including
+the materialized GLB, and successful publication. Immutable URL:
+https://amplifier-observatory-lidcrrfus-grey-7947s-projects.vercel.app
+
+The Git build selected Node 26.x because package.json specifies `>=20`, overriding
+the project's 24.x setting. All checks passed; the package currently allows future
+major upgrades. This hosting task did not change that engine range. This record
+is the last inspected release, not a promise that later commits are verified.
