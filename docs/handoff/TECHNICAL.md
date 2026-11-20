@@ -399,3 +399,8 @@ overflow. Real library Twin export: glTF 2, metres, 27,189,364 bytes; all eight
 anchor IDs retained. No construction/material geometry or cabinet dimensions
 were refined; these checks are interaction/export evidence, not historical or
 tonal validation. Own captures: images/hotspots-{front,rear,reverb}.png.
+
+Single-model publication succeeded: GitHub runtime `42cd4e2`, handoff `712d205`;
+Site source `012a50875714d4f5f1fa5ab188c00f573c6f379a`, deployment
+`appgdep_6b008933af6881919658182f6bdbc482`. Existing Site and owner-only audience
+preserved. Browser QA was local; publication was confirmed by the service.
