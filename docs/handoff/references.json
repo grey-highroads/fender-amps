@@ -165,5 +165,31 @@
       "changes": "None",
       "qualification": "Representative Deluxe-style handmade chassis with modern capacitors; year, circuit and vintage originality not established"
     }
+  },
+  "princetonAndBrownRear": {
+    "record": "docs/handoff/PRINCETON_BROWN_REAR.md",
+    "researchCommit": "7137042",
+    "princeton": {
+      "specimen": "https://retrofret.com/products/fender-princeton-reverb-tube-amplifier-1965-9339",
+      "inspectedViews": [
+        "front",
+        "rear",
+        "chassis top"
+      ],
+      "qualification": "1965 cabinet reference; replaced speaker, tank, tubes and filter can not treated as factory evidence",
+      "drawing": "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
+      "rectifier": "5U4GB per drawing; early GZ34 chart evidence remains unresolved",
+      "dimensionsMm": [
+        504.825,
+        406.4,
+        241.3
+      ],
+      "dimensionKind": "Modern reproduction/reissue proxy, not measured original"
+    },
+    "brownDeluxe": {
+      "specimen": "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
+      "inspectedView": "AMP26002-12.jpg rear",
+      "change": "Upper trapezoid opening, chassis strip/hardware, raised tubes, flat lower back panel; dimensions estimated"
+    }
   }
 }

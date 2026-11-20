@@ -24,11 +24,11 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | 5E3 explorer 1.0; small-amp studies, Deluxe Reverb + Twin profiles and knob 0.4 retained |
+| Runtime baseline | Princeton construction 1.0 / brown Deluxe rear 1.1; existing three explorers and knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
-| Timeline | 22 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
-| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 22 timeline entries are mapped with explicit differences; no live sync |
-| Library | 34 components/materials and six reference assemblies |
+| Timeline | 23 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
+| Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 23 timeline entries are mapped with explicit differences; no live sync |
+| Library | 36 components/materials and seven reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
@@ -233,9 +233,8 @@ validation and remaining uncertainty](SMALL_AMPS.md).
 1. Repository maintenance is complete: 19-entry catalog mapping, all five
    checks, and approved LFS migration. See [recovery and collaborator
    instructions](LFS_MIGRATION.md) before using an old working copy.
-2. Recommended next: 5E3 tweed Deluxe (existing shared assembly, contrasting
-   response/control behavior), then Princeton Reverb AA1164, then Super Reverb
-   AB763. These are proposed, not completed treatments or new approved entries.
+2. Next: Princeton Reverb AA1164 hotspot content on its new shared assembly,
+   then review the Super Reverb AB763 treatment. The 5E3 explorer is published.
 3. Establish source-backed interior positions and model-specific authorized
    photos as the profiles expand. Keep variants, measurements and specimen
    evidence distinct.
@@ -270,3 +269,10 @@ in this maintenance pass. The `dist/` structure remains in place.
 Nine cards, top-panel camera navigation and five differentiated tubes are now in
 the shared assembly. See [5E3 evidence, validation and limits](5E3_EXPLORER.md).
 The catalog remains 22 entries; Princeton research is still separate.
+
+## Princeton and brown Deluxe rear
+
+The Princeton Reverb now has a 1964 timeline entry and shared 1965-style
+construction assembly, mapped to catalog row 67. Its deeper explorer is next.
+The brown Deluxe rear has the photographed upper opening and chassis hardware.
+See [evidence, validation and limits](PRINCETON_BROWN_REAR.md).

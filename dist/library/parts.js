@@ -65,21 +65,21 @@ export function createSpeaker(id){
 function createSmallFaceplate(id){
  const p=SMALL_PANELS[id],g=new THREE.Group(),W=p.width,H=p.height;
  const c=document.createElement('canvas');c.width=3072;c.height=360;const x=c.getContext('2d');
- x.fillStyle=p.top?'#a6aaa2':'#35251e';x.fillRect(0,0,c.width,c.height);x.strokeStyle=p.top?'#e9e1c9':'#ded4b8';x.lineWidth=3;x.strokeRect(9,9,3054,342);x.fillStyle=p.top?'#f0e9d6':'#e6ddc6';x.textAlign='center';
+ x.fillStyle=p.top?'#a6aaa2':p.black?'#090c0d':'#35251e';x.fillRect(0,0,c.width,c.height);x.strokeStyle=p.top?'#e9e1c9':'#ded4b8';x.lineWidth=3;x.strokeRect(9,9,3054,342);x.fillStyle=p.top?'#f0e9d6':'#e6ddc6';x.textAlign='center';
  const px=v=>v/W*c.width;
  for(const [i,k] of p.knobs.entries()){
   x.font='bold 31px Arial';x.fillText(p.labels[i],px(k),326,px(42));
   x.font='24px Arial';const count=p.top?12:10;
-  for(let n=1;n<=count;n++){const a=-2.45+(n-1)/(count-1)*4.9;x.fillText(String(n),px(k)+Math.sin(a)*px(14),180-Math.cos(a)*100);}
+  for(let n=1;n<=count&&!p.black;n++){const a=-2.45+(n-1)/(count-1)*4.9;x.fillText(String(n),px(k)+Math.sin(a)*px(14),180-Math.cos(a)*100);}
  }
  for(const [j,y] of p.jacks){x.font='26px Arial';x.fillText(String(p.jacks.findIndex(v=>v[0]===j)+1),px(j),48);}
  if(p.channels)for(const [k,label] of p.channels){x.font='bold 31px Arial';x.fillText(label,px(k),326);}
  if(p.top){x.font='26px Arial';x.fillText('2 AMP',px(p.fuse),326);x.fillText('INSTRUMENTS',px(p.jacks[0][0]+(p.jacks.at(-1)[0]-p.jacks[0][0])/2),326);}
- else{x.font='italic 65px Georgia';x.fillText('Deluxe',px(400),140,px(95));x.fillText('-Amp',px(400),213,px(85));x.font='19px Arial';x.fillText('FENDER ELECT. INST. CO.',px(400),320);}
+ else if(p.black){x.font='italic 64px Georgia';x.fillText('Princeton',px(365),124,px(100));x.fillText('Reverb-Amp',px(365),206,px(108));x.font='18px Arial';x.fillText('FENDER ELECT. INSTR. CO.',px(365),294,px(110));}else{x.font='italic 65px Georgia';x.fillText('Deluxe',px(400),140,px(95));x.fillText('-Amp',px(400),213,px(85));x.font='19px Arial';x.fillText('FENDER ELECT. INST. CO.',px(400),320);}
  const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
- mesh(g,new THREE.BoxGeometry(W,H,2),material(p.top?'#b9beb6':'#39291f',{metalness:p.top?.8:.1,roughness:.42}));
+ mesh(g,new THREE.BoxGeometry(W,H,2),material(p.top?'#b9beb6':p.black?'#101313':'#39291f',{metalness:p.top?.8:.1,roughness:.42}));
  mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,metalness:p.top?.65:0,roughness:.48}),0,0,1.1);
- for(const [i,k] of p.knobs.entries()){const knob=createKnob(p.knob);knob.position.set(k-W/2,0,1.5);knob.rotation.z=.35+(i%3)*.15;g.add(knob);}
+ for(const [i,k] of p.knobs.entries()){const knob=createKnob(p.knob,{setting:3.5});knob.position.set(k-W/2,0,1.5);if(!p.black)knob.rotation.z=.35+(i%3)*.15;g.add(knob);}
  for(const [j,y] of p.jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
  const jewel=createJewel();jewel.position.set(p.pilot-W/2,0,2);g.add(jewel);
  if(p.fuse)cylinder(g,6.5,6.5,12,material('#171817'),7,p.fuse-W/2);

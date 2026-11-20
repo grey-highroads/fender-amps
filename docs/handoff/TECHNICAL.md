@@ -540,3 +540,10 @@ detail, inspector and export; no presentation-only copy was introduced.
 `explore.js` and the existing detail camera; `TWEED_PANEL` shares estimated
 hardware centers with `parts.js`. The 5E3 tube/transformer envelopes live in the
 shared `amp-models.js` factory. See [evidence and validation](5E3_EXPLORER.md).
+
+## Princeton and rear-panel construction
+
+`small-amps.js` now serves four studies including Princeton. `rear-profiles.js`
+and `rear-chassis.js` share actual upper-panel cutouts and per-model rear hardware
+for Princeton and brown Deluxe. Princeton reuses knob 0.4, badge and materials.
+See [current construction evidence and checks](PRINCETON_BROWN_REAR.md).

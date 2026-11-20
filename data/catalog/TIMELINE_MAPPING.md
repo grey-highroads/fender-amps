@@ -45,3 +45,13 @@ The 5E3 Deluxe and black-panel Super Reverb already map to rows 24 and 60. The p
 | Tweed Champ | 37 — Champ (5F1, 8-inch) | 1958 is the catalog start for the 8-inch version, not the first 5F1 circuit. Selected exterior is 1959. Nominal 4 ohms follows catalog; 3.2-ohm vintage markings remain qualified. |
 | Tweed Tremolux | 25 — Tremolux (5E9 / 5E9-A) | Select early 1955 5E9 from the combined 5E9/5E9-A row. 15 W matches catalog; cabinet envelope is provisional and conflicts are recorded. |
 | Brown Deluxe | 46 — Deluxe (6G3) | 1961 introduction; selected 1962 6G3 exterior with Normal-left panel. Approximate 20 W retained from catalog; 15 W alternative remains qualified. |
+
+## Princeton Reverb addition
+
+CSV row 67, `Princeton Reverb (black panel)`, maps to the new 1964 introduction
+entry, 1964–1967, 12 W, 1 × 10-inch, 8 Ω. No core catalog-value difference.
+The shared assembly is a 1965-style raised-logo family study: the main specimen's
+replacement Weber is not copied as factory equipment. Oxford-style construction
+comes from the second specimen/research attribution. Cabinet measurements are
+proxies, and rectifier drawing/chart differences remain explicit. See
+`docs/handoff/PRINCETON_BROWN_REAR.md` for inspected evidence and limits.

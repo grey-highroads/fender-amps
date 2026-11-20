@@ -122,3 +122,10 @@ SHA-256 matched the checked local file. Live browser routes confirmed:
 The original private Sites prototype was not republished. The parallel research
 branch was not merged or edited. Later documentation-only commits may produce
 new Vercel deployments without changing this runtime baseline.
+
+## Subsequent rear correction
+
+Brown Deluxe rear construction was corrected in revision 1.1: upper trapezoid
+opening, rear chassis strip/hardware, raised tube positions and flat lower panel.
+It has no separate vent slots. Princeton also joins the shared factory. See
+[the current evidence and validation](PRINCETON_BROWN_REAR.md).

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-11-20",
-  "scope": "All 22 selected timeline entries; three additions reconciled before publication. Historical confidence is unchanged.",
+  "scope": "All 23 runtime timeline entries, reviewed against pinned catalog rows; selected-year assembly differences remain explicit.",
   "runtimeSource": "dist/collection.js",
   "catalogSource": "data/catalog/catalog.csv",
   "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
@@ -485,6 +485,37 @@
       },
       "differences": [],
       "scopeNote": "Black-panel AB763 entry is distinct from the 1968 silver-panel explorer; it does not inherit that explorer."
+    },
+    {
+      "runtimeKey": "1964|black|Princeton Reverb",
+      "runtime": {
+        "year": 1964,
+        "name": "Princeton Reverb",
+        "years": "1964–1967",
+        "watts": 12,
+        "speakers": "1 × 10″",
+        "load": "8 Ω",
+        "finish": "black",
+        "circuit": "AA1164"
+      },
+      "catalogCsvRow": 67,
+      "catalogName": "Princeton Reverb (black panel)",
+      "catalogRowSha256": "3d0846ac0ac8d4b1e92f701ae6f3765982c89e46f5f6c5d0b741bf3cb3aa284b",
+      "catalog": {
+        "introduced": "1964",
+        "productionEnd": "1967",
+        "productionStatus": "Ended",
+        "outputWatts": "12",
+        "cabinetSpeakers": "1x10 open-back combo",
+        "nominalLoad": "8",
+        "loadType": "Fixed",
+        "versionNotes": "Small reverb combo with responsive 6V6 breakup.",
+        "specificationReference": "https://fenderguru.com/amp-models/princeton-reverb/",
+        "reviewStatus": "Confirmed",
+        "reviewNote": "Price range is under 20% wide; based on a few asking listings."
+      },
+      "differences": [],
+      "scopeNote": "1964 introduction / 1964–1967 catalog range. Construction follows a raised-logo 1965 cabinet with an estimated period Oxford-style ten, not the reference specimen’s replacement Weber. AA1164 drawing supplies circuit/tube specification; 5U4GB versus early GZ34 chart evidence remains unresolved. No numerical year, output, speaker-format or load difference from catalog row 67."
     },
     {
       "runtimeKey": "1968|silver|Twin Reverb",

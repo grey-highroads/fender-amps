@@ -6,10 +6,10 @@ and the separate GitHub and private-site publishing workflows.
 
 - The current priority is an educational construction explorer: use 3D for
   proportions and component relationships, with clearly attributed real photos.
-  Photorealism is deferred. The explorer now covers the 1968 Twin and blackface Deluxe Reverb. Use
+  Photorealism is deferred. The explorer now covers the 1968 Twin, blackface Deluxe Reverb and tweed 5E3 Deluxe. Use
   one assembled model with hotspots across front/rear features; separate Cabinet
   and Inside modes were superseded. Keep improvements in the shared library so they reach the timeline and
-  detail views. Collection expansion is now authorized in reviewed batches. The first additions are the Champ 5F1, early Tremolux 5E9 and brown Deluxe 6G3; see docs/handoff/SMALL_AMPS.md. Other additions still require review.
+  detail views. Collection expansion is now authorized in reviewed batches. The first additions are the Champ 5F1, early Tremolux 5E9 and brown Deluxe 6G3; see docs/handoff/SMALL_AMPS.md. The Princeton Reverb construction study is also authorized and mapped; see docs/handoff/PRINCETON_BROWN_REAR.md. Other additions still require review.
 - Write for experienced musicians: clear, conversational, and technical only
   where the detail earns its place. Lead with what changes under the pick or
   in the sound, with deeper circuit notes available. Hotspots should reveal a distinctive

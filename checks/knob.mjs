@@ -18,6 +18,6 @@ const innerInkRadius=Math.min(...K.inkProfile.map(p=>p[0]));assert.ok(K.numberRa
 assert.ok(K.numberRadiusMm+K.numberHeightMm/2<K.outerDiameterMm/2,'Numerals extend beyond skirt');
 assert.deepEqual(Object.keys(KNOB_DIGITS).sort(),['0','1','2','3','4','5','6','7','8','9']);
 assert.ok(knobAngleForSetting(10)>knobAngleForSetting(1),'Control rotation must increase monotonically');
-assert.equal(ASSEMBLIES.filter(a=>a.knob==='knob-skirted').length,2,'The reference Deluxe Reverb and Twin must share the rebuilt knob');
+assert.deepEqual(ASSEMBLIES.filter(a=>a.knob==='knob-skirted').map(a=>a.id).sort(),['deluxe-reverb-black','princeton-reverb-aa1164','twin-reverb-early'],'Princeton, Deluxe Reverb and Twin must share the rebuilt knob');
 Object.values(geometries).forEach(g=>g.dispose());
 console.log('Validated knob surfaces, shaft opening, numeral clearance, physical catalog dimensions and shared assembly usage.');

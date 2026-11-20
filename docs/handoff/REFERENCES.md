@@ -295,3 +295,11 @@ Fender schematic/layout, Baxter mounted photographs and a licensed representativ
 chassis image were visually inspected for this pass. Full links, values read,
 originality qualifications and remaining uncertainty are in
 [5E3 explorer 1.0](5E3_EXPLORER.md).
+
+## Princeton and brown Deluxe rear evidence
+
+Dated RetroFret A-03894 front/rear/chassis photographs, Fender AA1164 scan and
+Music Emporium D02985 rear guided this construction pass. Source URLs, inspected
+versus researcher-reported details, factory/replacement distinctions, dimension
+proxies and unresolved rectifier evidence are recorded in
+[Princeton / brown rear](PRINCETON_BROWN_REAR.md).

@@ -7,7 +7,7 @@ for(const a of ASSEMBLIES){for(const slot of ['speaker','cover','cloth','knob','
 assert.equal(ASSEMBLIES.find(a=>a.id==='deluxe-reverb-black').knobCount,9);
 assert.equal(ASSEMBLIES.find(a=>a.id==='twin-reverb-early').knobCount,11);
 assert.ok(!ASSETS.some(a=>a.id.includes('master')),'Early Twin must not inherit a later master-volume component');
-for(const [id,knobs,tubes] of [['champ-5f1',1,3],['tremolux-5e9',5,6],['deluxe-6g3',6,6]]){
+for(const [id,knobs,tubes] of [['champ-5f1',1,3],['tremolux-5e9',5,6],['deluxe-6g3',6,6],['princeton-reverb-aa1164',6,7]]){
  const a=ASSEMBLIES.find(a=>a.id===id);assert.equal(a.knobCount,knobs);assert.equal(a.tubeKinds.length,tubes);
  const speaker=assetById(a.speaker);assert.ok(Math.abs(a.speakerOffset[0]*a.dimensionsMm[0])+speaker.build.frameDiameter/2<a.dimensionsMm[0]/2-16,`${id}: offset speaker clips side wall`);
  assert.ok(a.dimensionsStatus&&a.study,'New studies need explicit dimension basis');
@@ -66,3 +66,17 @@ for(const part of TWEED_FEATURES){
  if(part.image){assert.ok(fs.existsSync(new URL('../dist/'+part.image,import.meta.url)));assert.ok(part.credit&&part.license&&part.caption.includes('not established'));}
 }
 console.log('Validated nine 5E3 cards, top/rear grouping and licensed photograph provenance.');
+
+const {REAR_PANELS}=await import('../dist/library/rear-profiles.js');
+for(const id of ['deluxe-6g3','princeton-reverb-aa1164']){
+ const a=ASSEMBLIES.find(a=>a.id===id),r=REAR_PANELS[id],upper=a.dimensionsMm[1]*r.upperRatio;
+ assert.ok(r.notchDepth>r.height&&r.notchDepth<upper-12,'Rear strip must fit in a real cutout with panel remaining below');
+ assert.ok(r.notchOuter>r.notchInner&&r.notchOuter<.5,'Sloping opening must clear panel ends');
+ assert.ok(r.controls.every(([,x])=>x>6&&x<r.width-6),'Rear controls must fit strip');
+}
+const princeton=ASSEMBLIES.find(a=>a.id==='princeton-reverb-aa1164');
+assert.deepEqual(princeton.tubeTypes,['5U4GB','6V6GT','6V6GT','12AX7','12AX7','12AT7','7025']);
+assert.ok(princeton.rectifierBasis.includes('unresolved'));
+assert.equal(REAR_PANELS['deluxe-6g3'].controls.at(-1)[2],'TREMOLO PEDAL');
+assert.equal(SMALL_PANELS['faceplate-princeton'].jacks.length,2);
+console.log('Validated Princeton seven-tube specification and shared rear opening/control clearances.');
