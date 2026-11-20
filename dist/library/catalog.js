@@ -15,10 +15,10 @@ for(const r of SKIRTED_KNOB.references)SOURCES[r.id]={title:({retrofret1968:'196
 const material=(id,name,family,tileMm,notes,sources)=>({id,name,category:'Materials',family,tileMm,dimensions:{tileMm},status:'Procedural study',notes,sources,usedBy:[]});
 export const MATERIALS=[
  material('tweed-lacquered','Lacquered cotton tweed','tweed',24,'Diagonal twill with separate color, relief and roughness. Physical tile scale is provisional; exact panel wrapping and seam placement remain under review.',['deluxe','tweedReissue']),
- material('tolex-black','Black textured Tolex','tolex',32,'Irregular pebbled vinyl. Grain size and finish need comparison with measured macro photographs.',['black','blackReissue']),
+ material('tolex-black','Black textured Tolex','tolex',32,'Photographic surface study 0.1: finer curved grain and restrained vinyl sheen, shared with the Blender master. Grain pitch and relief remain estimates.',['black','blackReissue','retrofret1968']),
  material('cloth-brown-gold','Brown / gold grille cloth','cloth',16,'Dark open weave with gold horizontal threads. Synthetic weave; not a photograph or scan.',['deluxe']),
  material('cloth-black-silver','Black / silver grille cloth','cloth',16,'Silver warp and dark weft, restrained metallic response. Thread pitch remains provisional.',['black','blackReissue']),
- material('cloth-silver-blue','Silver / blue grille cloth','cloth-blue',16,'Separate blue tracer threads; early silverface appearance study, awaiting a chosen intact vintage cloth reference.',['twin']),
+ material('cloth-silver-blue','Silver / blue grille cloth','cloth-blue',24,'Photographic surface study 0.1: warm horizontal weft, silver warp and aqua tracer, separate relief/roughness/metallic maps. Thread pitch and color are estimates from the dated Twin photographs; aging and lighting are not calibrated.',['retrofret1968']),
  material('metal-nickel','Nickel-plated hardware','nickel',null,'Reflective plated steel with fine directional roughness. No baked-in studio highlights.',['tweedReissue','blackReissue']),
  material('panel-brushed','Brushed aluminum faceplate','aluminum',24,'Horizontal brushing and separate lettering; early Twin color needs matching to an original panel.',['twin']),
  material('leather-brown','Brown leather strap','leather',30,'Brown leather surface; original handle dimensions remain unmeasured. The documented Deluxe example has a replacement handle.',['deluxe','tweedReissue'])

@@ -1,9 +1,15 @@
 import * as THREE from 'three';
 import {assetById} from './catalog.js';
+import {SURFACE_STUDIES,generateSurfaceData} from './photographic-surfaces.js';
 const tiles=new Map();
 function mapsFor(id){
  if(tiles.has(id))return tiles.get(id);
  const item=assetById(id),size=512,tile=item.tileMm||24;
+ if(SURFACE_STUDIES[id]){
+  const data=generateSurfaceData(id,size),maps={tileMm:data.tileMm};
+  for(const key of ['color','height','rough','normal','metallic']){const c=document.createElement('canvas');c.width=c.height=size;c.getContext('2d').putImageData(new ImageData(data[key],size,size),0,0);maps[key]=c;}
+  tiles.set(id,maps);return maps;
+ }
  const color=document.createElement('canvas'),height=document.createElement('canvas'),rough=document.createElement('canvas'),normal=document.createElement('canvas');
  for(const c of [color,height,rough,normal])c.width=c.height=size;
  const ci=color.getContext('2d').createImageData(size,size),hi=height.getContext('2d').createImageData(size,size),ri=rough.getContext('2d').createImageData(size,size),ni=normal.getContext('2d').createImageData(size,size),heights=new Float32Array(size*size);
@@ -28,6 +34,6 @@ function mapsFor(id){
  const maps={color,height,rough,normal,tileMm:tile};tiles.set(id,maps);return maps;
 }
 export function materialMaps(id){return mapsFor(id);}
-export function createMaterial(id){const item=assetById(id),m=mapsFor(id);const tex=(canvas,color=false)=>{const t=new THREE.CanvasTexture(canvas);if(color)t.colorSpace=THREE.SRGBColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=8;return t;};const metal=['nickel','aluminum'].includes(item.family);const out=new THREE.MeshStandardMaterial({color:0xffffff,map:tex(m.color,true),normalMap:tex(m.normal),normalScale:new THREE.Vector2(.45,.45),roughnessMap:tex(m.rough),roughness:1,metalness:metal?.9:0,side:THREE.DoubleSide});out.name=id;out.userData.tileMm=m.tileMm;return out;}
+export function createMaterial(id){const item=assetById(id),m=mapsFor(id);const tex=(canvas,color=false)=>{const t=new THREE.CanvasTexture(canvas);if(color)t.colorSpace=THREE.SRGBColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=8;return t;};const metal=['nickel','aluminum'].includes(item.family);const out=new THREE.MeshStandardMaterial({color:0xffffff,map:tex(m.color,true),normalMap:tex(m.normal),normalScale:new THREE.Vector2(SURFACE_STUDIES[id]?.normalScale??.45,SURFACE_STUDIES[id]?.normalScale??.45),roughnessMap:tex(m.rough),roughness:1,metalness:SURFACE_STUDIES[id]?.metalness??(metal?.9:0),metalnessMap:m.metallic?tex(m.metallic):null,side:THREE.DoubleSide});out.name=id;out.userData.tileMm=m.tileMm;return out;}
 // Project from physical dimensions, not normalized UVs: no stretching when a cabinet changes size.
 export function physicalUV(mesh,unitsPerMm=1,rotation=0){const geom=mesh.geometry,p=geom.attributes.position,n=geom.attributes.normal;const uv=new Float32Array(p.count*2),tile=(mesh.material.userData.tileMm||24)*unitsPerMm,c=Math.cos(rotation),s=Math.sin(rotation);for(let i=0;i<p.count;i++){const nx=Math.abs(n.getX(i)),ny=Math.abs(n.getY(i)),nz=Math.abs(n.getZ(i));let u,v;if(nz>=nx&&nz>=ny){u=p.getX(i);v=p.getY(i);}else if(nx>=ny){u=p.getZ(i);v=p.getY(i);}else{u=p.getX(i);v=p.getZ(i);}uv[i*2]=(u*c-v*s)/tile;uv[i*2+1]=(u*s+v*c)/tile;}geom.setAttribute('uv',new THREE.BufferAttribute(uv,2));return mesh;}
