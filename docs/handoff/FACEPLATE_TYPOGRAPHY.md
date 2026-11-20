@@ -129,3 +129,13 @@ cabinet hiding the lettering: [5E3](images/typography/deluxe-5e3-top-after.png),
 [Tremolux](images/typography/tremolux-5e9-top-after.png),
 [Champ](images/typography/champ-5f1-top-after.png). These use a dedicated fixed
 rear/top review camera and the shared studio, with matching before images.
+
+Final runtime `da30b95c27c3c8bb64b9fa48792f5819a39cc92f` (including the
+5E3 recess/orientation correction) produced READY Git production deployment
+`dpl_5VJtFn2mMiEeztPFjRa8BePpfpbS`:
+https://amplifier-observatory-pcgsf2a94-grey-7947s-projects.vercel.app
+All five remote checks passed. Public `amp-models.js` and the six typography /
+export files match local bytes; live Princeton, Twin and corrected 5E3 routes
+rendered without page errors. Final 5E3 assembly export: 5,192,932 bytes,
+131 meshes, with named ground/power switches and fuse. Its volume hotspot was
+rechecked after the orientation change. The original private Site is unchanged.

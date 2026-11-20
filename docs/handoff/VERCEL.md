@@ -148,3 +148,8 @@ Main runtime `b2783c4` produced READY Git production deployment
 runtime files matched the tested source bytes; live Princeton, Twin and 5E3
 routes rendered without page errors. See [artwork, visual review and evidence
 limits](FACEPLATE_TYPOGRAPHY.md). Private Sites and hosting settings are unchanged.
+
+Final 5E3 mounting correction `da30b95` also auto-deployed READY as
+`dpl_5VJtFn2mMiEeztPFjRa8BePpfpbS`, Git source. All five remote checks passed;
+public assembly/artwork/export files and live routes were checked. See
+[final typography publication record](FACEPLATE_TYPOGRAPHY.md#publication).
