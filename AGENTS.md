@@ -6,11 +6,13 @@ and the separate GitHub and private-site publishing workflows.
 
 - The current priority is an educational construction explorer: use 3D for
   proportions and component relationships, with clearly attributed real photos.
-  Photorealism is deferred. The first interaction pilot is the 1968 Twin. Use
+  Photorealism is deferred. The explorer now covers the 1968 Twin and blackface Deluxe Reverb. Use
   one assembled model with hotspots across front/rear features; separate Cabinet
   and Inside modes were superseded. Keep improvements in the shared library so they reach the timeline and
   detail views. Collection expansion is deferred.
-- Write for experienced amp enthusiasts. Hotspots should reveal a distinctive
+- Write for experienced musicians: clear, conversational, and technical only
+  where the detail earns its place. Lead with what changes under the pick or
+  in the sound, with deeper circuit notes available. Hotspots should reveal a distinctive
   circuit, construction or collector insight and its consequences, not teach
   basic control functions. Scope schematic facts to their circuit revision;
   distinguish measured behavior, engineering inference and specimen attribution.

@@ -259,3 +259,32 @@ Oxford response, or measured transformer bandwidth was established.
 JBL 1970 construction/marketing evidence and the 1968 catalog option evidence
 remain separately dated. Cosmetics now emphasize originality/restoration limits
 and do not imply circuit identity or an unmeasured cloth tone.
+
+## Blackface Deluxe Reverb / musician-first pass
+
+Newly downloaded and visually inspected both original AB763 sheets (layout and
+circuit): https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf
+The layout/circuit show two 6V6GTs, six small tubes, GZ34 rectifier, fixed bias,
+12AT7 phase inverter, 47 pF Vibrato-volume bright capacitor, dry/reverb mixing
+network and optical tremolo. Exact specimen circuit/values were not audited.
+Drawings stayed in /tmp and were not committed.
+
+Re-read the dated Black Book and Folkway records already linked above. Black
+Book attributes a 12K5-6 / 465-512 Oxford with original cone and pan marking
+RA 3265. These are dealer statements, not independently measured values. No
+modern tank code, decay rating or spring count is inferred from RA 3265.
+Folkway's early 1965 example lacks a raised badge and has an Oxford dated late
+1964; our badge-equipped shared assembly is not a replica of that specimen.
+
+The GZ34/supply-response and power-section comparisons explain design implications,
+not measured sag, clipping thresholds or a controlled Deluxe/Twin listening test.
+The Oxford's response, sensitivity and power capacity remain unknown. The only
+embedded Deluxe photo is the existing licensed generic Nubert speaker, labeled
+representative. The existing RCA 6L6 photo is not assigned to the 6V6 card.
+
+Candidate follow-ons were checked against the corrected catalog: 5E3 Deluxe
+(1955 / 12 W), black-panel Princeton Reverb (1964 / 12 W), black-panel Super
+Reverb (1963 / 40 W). Those catalog rows remain research records. The original
+AA1164 drawing was located for the proposed Princeton treatment:
+https://el34world.com/charts/Schematics/Files/Fender/Fender_princeton_reverb_aa1164.pdf
+No new Princeton/Super interior or historical audit was performed in this pass.

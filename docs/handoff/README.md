@@ -5,7 +5,7 @@ Observatory without relying on the chat history.
 
 **Current priority: educational construction, supported by real photographs.**
 The user redirected the project away from photoreal asset production after
-reviewing the workload. The 1968 Twin is the first single-model hotspot pilot.
+reviewing the workload. The 1968 Twin and blackface Deluxe Reverb now share the single-model explorer.
 Accurate proportions and meaningful construction relationships matter; the
 models remain interpretive and exact interior placement is not established.
 
@@ -23,7 +23,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Commit `83cf54a`, specialist circuit/collector cards; knob 0.4 |
+| Runtime baseline | Commit `7448a8f`, Deluxe + Twin profiles, musician-first voice; knob 0.4 |
 | Hosting | [Existing private prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site); ChatGPT sign-in is expected |
 | Timeline | 19 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; runtime is not fully reconciled or connected live |
@@ -199,14 +199,34 @@ this pass; the physical amp’s complete circuit and tank remain unauthenticated
 
 ![Specialist input-stage card](images/geek-inputs.png)
 
+## Blackface Deluxe Reverb treatment
+
+[Explore the Deluxe Reverb](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site/?amp=deluxe-reverb-1965).
+The 1963 introduction entry still uses a 1965-style reference assembly. Nine
+topics cover inputs, the fixed bright capacitor, reverb, optical tremolo, cloth/
+badge history, Oxford speaker evidence, 6V6 power section, GZ34 rectifier and
+output transformer. Wording is musician-first, with values and caveats in deeper
+notes. The existing Twin also gains lighter phrasing and “Dig a little deeper.”
+
+One explorer mounts an amp-specific profile; cards/markers reset when switching
+amps. The shared Deluxe assembly now separates two power tubes, six small tubes
+and a rectifier, plus an estimated transformer marker. This is explanatory
+placement, not a verified socket layout. The generic speaker photograph is
+explicitly representative; the Twin's 6L6 photograph is not reused for 6V6s.
+The model still combines multiple references and does not reproduce the early
+Folkway specimen's badge-less front.
+
+![Deluxe bright-cap card](images/deluxe-bright-cap.png)
+
 ## Next useful work
 
-1. Review the single-model feature discovery and tone/cosmetic cards.
-2. Establish a source-backed Twin interior layout, including both transformers,
-   chassis, reverb tank and wiring relationships. Replace generic photographs
-   with authorized model-specific photographs when available.
-3. Once the interaction is accepted, extend the same data/anchor pattern to the
-   other reference amps. Collection expansion remains deferred.
+1. Review the Deluxe's nine stories and the conversational voice.
+2. Recommended next: 5E3 tweed Deluxe (existing shared assembly, contrasting
+   response/control behavior), then Princeton Reverb AA1164, then Super Reverb
+   AB763. These are proposed, not completed treatments or new approved entries.
+3. Establish source-backed interior positions and model-specific authorized
+   photos as the profiles expand. Keep variants, measurements and specimen
+   evidence distinct.
 
 ## Handoff maintenance
 

@@ -427,3 +427,38 @@ Specialist editorial publication succeeded: GitHub runtime `83cf54a`, evidence
 `appgdep_6b008c1767cc81919d855de878107da6`. Existing Site and owner-only audience
 preserved. Local browser review and service-confirmed publication are separate
 from a signed-in production UI review.
+
+## Deluxe Reverb explorer and reusable profile mounting
+
+`explore.js` now mounts profile-specific menus, cards and markers from an
+EXPLORATIONS registry keyed by shared assembly ID. It clears the previous
+profile when an amp changes; Twin-only and Deluxe-only topics stay separate.
+`deluxe-features.js` supplies nine musician-first cards. The Twin's specialist
+notes keep their facts while some lead phrasing is softened. “Dig a little
+deeper” replaces “Follow the circuit.” One card renderer/occlusion system serves
+both amps; no duplicate presentation model or framework was introduced.
+
+DELUXE_PANEL centralizes the existing faceplate knob/jack coordinates without
+changing their values. Shared hardware and new surface anchors consume them.
+The shared Deluxe model now groups two large 6V6 envelopes and one separate
+GZ34, with six small tubes and an estimated output-transformer marker. The Twin
+keeps four output tubes and no tube rectifier. This remains approximate teaching
+geometry, not a traced chassis. Full Blender master unchanged.
+
+Review link `?amp=deluxe-reverb-1965` opens the existing 1963-introduction card,
+not a new timeline entry. Camera framing/lighting are unchanged; marker collision
+placement now tries sideways positions when the upper screen edge is crowded.
+
+Current validation: npm test, changed JS syntax, whitespace checks. Actual Chrome
+at 1500×1100 and 390×844: nine Deluxe cards, five front/four rear markers, deeper
+notes/sources, licensed speaker photo load, no 6L6 photo on the Deluxe tube card,
+Escape/close, exact timeline restoration and repeated Twin/Deluxe switches without
+stale selection or profile-topic leakage. No page errors or horizontal overflow.
+Inspector rear views reviewed on fresh pages. Actual glTF 2/metre exports:
+Deluxe 21,604,624 bytes (nine feature IDs, two output-tube mesh triplets plus
+separate rectifier triplet); Twin 27,189,352 bytes (eight IDs, four output-tube
+triplets, no rectifier). Hash-only inspector navigation does not remount its
+initial deep link, so export QA explicitly reloads each assembly, as before.
+
+Own images: images/deluxe-{front,rear,bright-cap,rectifier}.png. These checks
+validate interaction/integrity, not historical completeness or tonal accuracy.

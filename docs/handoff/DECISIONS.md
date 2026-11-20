@@ -150,3 +150,21 @@ remove obligatory speculative filler. Unknown tank identity, original circuitry,
 recone history and measured response belong in evidence notes rather than being
 filled with plausible-sounding specifics. A schematic comparison is not a
 specimen audit. The single-model UX and eight-topic scope remain unchanged.
+
+## Scale by musical contrast; keep the musician's voice
+
+The user authorized the blackface Deluxe Reverb next and asked which few amps
+should follow. Expertise is the audience's starting point, not a license for
+academic prose. Lead with an interesting observation a player can recognize;
+explain the consequence plainly; move component values and longer reasoning
+into deeper notes. Keep conversational clarity across existing and new cards.
+
+The Deluxe now uses the shared single-model explorer with its own nine-topic
+profile. Recommended next sequence (not yet implementation authorization for
+all three): 5E3 tweed Deluxe, AA1164 Princeton Reverb, AB763 Super Reverb. The 5E3
+already has a shared assembly and provides a strong feel/control contrast.
+Princeton Reverb adds a useful small-amp/tremolo comparison but needs a proper
+assembly and runtime entry; its corrected-catalog row is not a completed model.
+Super Reverb provides a four-speaker comparison and already has a representative
+timeline study, which still needs a source-backed interior. Do these as reviewed
+small batches before scaling broadly or duplicating close variants.
