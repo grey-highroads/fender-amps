@@ -547,3 +547,20 @@ shared `amp-models.js` factory. See [evidence and validation](5E3_EXPLORER.md).
 and `rear-chassis.js` share actual upper-panel cutouts and per-model rear hardware
 for Princeton and brown Deluxe. Princeton reuses knob 0.4, badge and materials.
 See [current construction evidence and checks](PRINCETON_BROWN_REAR.md).
+
+
+## Faceplate lettering 1.0 / November 20
+
+`panel-lettering.js` is the shared DOM-free vector/composition source; synchronous
+canvas textures and generated `assets/panels/*.svg` use the same commands.
+Original drawings are CC0; no font files or photographic pixels are shipped.
+Panel textures are 4096 px wide, proportionally sized, with instance-owned GPU
+maps from cached canvas templates. Export limit is 4096, preserving small print.
+The existing Twin map API also feeds the separate Blender workflow; its saved
+master was not regenerated in this task.
+
+All five checks, all seven panel downloads/re-imports, mounted/flat/detail/mobile
+review, 5E3 hotspot and exact scroll restoration passed. Full evidence and limits:
+[FACEPLATE_TYPOGRAPHY.md](FACEPLATE_TYPOGRAPHY.md). Review helpers live under
+`tools/typography/`; owner-facing annotated source sheet is included. The
+original private Sites prototype and hosting settings remain unchanged.

@@ -24,7 +24,7 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Princeton construction 1.0 / brown Deluxe rear 1.1; existing three explorers and knob 0.4 retained |
+| Runtime baseline | Faceplate lettering 1.0 across seven assemblies; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
 | Timeline | 23 selected Fender guitar tube-amp model/generation entries; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 23 timeline entries are mapped with explicit differences; no live sync |
@@ -50,6 +50,21 @@ confidence fields. Pricing and rarity remain research estimates. This is a
 point-in-time copy, not live synchronization or independent verification.
 Selected-year configurations still require period evidence; see the
 [reconciliation notes](CATALOG_RECONCILIATION.md) for the early Twin and Bassman.
+
+## Faceplate lettering 1.0
+
+Seven shared panels now use original vector artwork: connected Princeton and
+Deluxe script, an upright block Twin title, era-specific labels, input numbers,
+scales, dividers and small manufacturer text. Princeton / brown rear strips use
+matching vector labels. The 5E3 photo also justified correcting its shared
+left-side hardware/control positions; hotspot anchors follow automatically.
+Knob 0.4 and existing explorer behavior remain intact.
+
+Start with the [flat comparison](images/typography/flat-comparison.png),
+[annotated visual reference sheet](../../tools/typography/reference-sheet.html),
+and [sources, limits and validation](FACEPLATE_TYPOGRAPHY.md).
+These are lettering studies, not authenticated vintage tracings. Fine curves,
+registration and tiny legal marks remain approximate.
 
 ## Most recent fidelity work
 

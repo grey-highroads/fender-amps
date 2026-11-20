@@ -1,0 +1,6 @@
+Original Amplifier Observatory panel-lettering studies, 2026.
+The original drawings in library/panel-lettering.js and their generated panel
+SVGs are dedicated to the public domain under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+This dedication does not grant rights to Fender trademarks or third-party
+reference photographs. No font files or photographic pixels are included.

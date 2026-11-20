@@ -15,3 +15,18 @@ for(const o of badge.children){assert.ok(o.isMesh);for(const field of ['position
 assert.ok(raised>0);assert.equal(P.knobs.length,11);assert.equal(P.labels.length,11);assert.equal(P.jacks.length,4);assert.equal(P.bright.length,2);
 assert.ok(P.knobs.every((x,i)=>x>0&&x<P.widthMm&&(i===0||x>P.knobs[i-1])));assert.ok(P.pilot>P.knobs.at(-1));
 console.log('Validated raised badge geometry, backing openings, modeled envelope and Twin layout integrity.');
+
+// Exercise all panel artwork without a DOM: catches missing glyphs and stale
+// published proofs before a runtime factory first encounters a less common label.
+const {PANEL_IDS,panelArtwork,rearArtwork,artworkSVG}=await import('../dist/library/panel-lettering.js');
+const {readFileSync}=await import('node:fs');
+for(const art of [...PANEL_IDS.map(panelArtwork),...['princeton-reverb-aa1164','deluxe-6g3'].map(rearArtwork)]){
+ assert.ok(art.paths.length>20);
+ assert.ok(art.paths.every(p=>p.matrix.every(Number.isFinite)&&p.width>0));
+ const name=PANEL_IDS.includes(art.id)?art.id:`rear-${art.id}`;
+ assert.equal(readFileSync(new URL(`../dist/assets/panels/${name}.svg`,import.meta.url),'utf8'),artworkSVG(art)+'\n','Regenerate panel SVG proofs after changing artwork');
+}
+console.log('Validated seven vector panel sources, two rear strips and matching SVG proofs.');
+const {TWEED_PANEL:E}=await import('../dist/library/identification-profile.js');
+assert.ok(E.ground<E.fuse&&E.fuse<E.power&&E.power<E.pilot&&E.pilot<E.knobs[0],'5E3 photographed left-side hardware order');
+assert.ok(E.knobs.at(-1)+18<E.jacks[0][0]-7,'5E3 control scale must clear inputs');

@@ -6,6 +6,7 @@ import {createRaisedTailBadge} from './tail-badge.js';
 import {TWEED_PANEL as EP,TWIN_PANEL as TP,DELUXE_PANEL as DP} from './identification-profile.js';
 import {SMALL_PANELS} from './small-amp-profiles.js';
 import {twinPanelMaps} from './twin-panel-art.js';
+import {panelCanvas,LETTERING_REVISION} from './panel-lettering.js';
 export const MM=.17/25.4;
 const brandImage=new Image();const brandReady=new Promise(resolve=>{brandImage.onload=resolve;brandImage.onerror=resolve;});brandImage.src=new URL('../assets/fender-wordmark.svg',import.meta.url).href;
 export async function readyForExport(){await brandReady;if(document.fonts)await document.fonts.ready;}
@@ -64,19 +65,8 @@ export function createSpeaker(id){
 }
 function createSmallFaceplate(id){
  const p=SMALL_PANELS[id],g=new THREE.Group(),W=p.width,H=p.height;
- const c=document.createElement('canvas');c.width=3072;c.height=360;const x=c.getContext('2d');
- x.fillStyle=p.top?'#a6aaa2':p.black?'#090c0d':'#35251e';x.fillRect(0,0,c.width,c.height);x.strokeStyle=p.top?'#e9e1c9':'#ded4b8';x.lineWidth=3;x.strokeRect(9,9,3054,342);x.fillStyle=p.top?'#f0e9d6':'#e6ddc6';x.textAlign='center';
- const px=v=>v/W*c.width;
- for(const [i,k] of p.knobs.entries()){
-  x.font='bold 31px Arial';x.fillText(p.labels[i],px(k),326,px(42));
-  x.font='24px Arial';const count=p.top?12:10;
-  for(let n=1;n<=count&&!p.black;n++){const a=-2.45+(n-1)/(count-1)*4.9;x.fillText(String(n),px(k)+Math.sin(a)*px(14),180-Math.cos(a)*100);}
- }
- for(const [j,y] of p.jacks){x.font='26px Arial';x.fillText(String(p.jacks.findIndex(v=>v[0]===j)+1),px(j),48);}
- if(p.channels)for(const [k,label] of p.channels){x.font='bold 31px Arial';x.fillText(label,px(k),326);}
- if(p.top){x.font='26px Arial';x.fillText('2 AMP',px(p.fuse),326);x.fillText('INSTRUMENTS',px(p.jacks[0][0]+(p.jacks.at(-1)[0]-p.jacks[0][0])/2),326);}
- else if(p.black){x.font='italic 64px Georgia';x.fillText('Princeton',px(365),124,px(100));x.fillText('Reverb-Amp',px(365),206,px(108));x.font='18px Arial';x.fillText('FENDER ELECT. INSTR. CO.',px(365),294,px(110));}else{x.font='italic 65px Georgia';x.fillText('Deluxe',px(400),140,px(95));x.fillText('-Amp',px(400),213,px(85));x.font='19px Arial';x.fillText('FENDER ELECT. INST. CO.',px(400),320);}
- const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
+ const c=panelCanvas(id);
+ const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;
  mesh(g,new THREE.BoxGeometry(W,H,2),material(p.top?'#b9beb6':p.black?'#101313':'#39291f',{metalness:p.top?.8:.1,roughness:.42}));
  mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,metalness:p.top?.65:0,roughness:.48}),0,0,1.1);
  for(const [i,k] of p.knobs.entries()){const knob=createKnob(p.knob,{setting:3.5});knob.position.set(k-W/2,0,1.5);if(!p.black)knob.rotation.z=.35+(i%3)*.15;g.add(knob);}
@@ -84,26 +74,23 @@ function createSmallFaceplate(id){
  const jewel=createJewel();jewel.position.set(p.pilot-W/2,0,2);g.add(jewel);
  if(p.fuse)cylinder(g,6.5,6.5,12,material('#171817'),7,p.fuse-W/2);
  if(p.toggle){cylinder(g,5,5,3,material('#b9c0bb',{metalness:.9}),3,p.toggle-W/2);mesh(g,new THREE.BoxGeometry(3,3,12),material('#b9c0bb',{metalness:.9}),p.toggle-W/2,0,10);}
- g.name=id;g.userData.componentId=id;return g;
+ g.name=id;g.userData={componentId:id,letteringRevision:LETTERING_REVISION};return g;
 }
 export function createFaceplate(id){
  if(SMALL_PANELS[id])return createSmallFaceplate(id);
 
  const def=assetById(id),g=new THREE.Group(),tweed=id==='faceplate-5e3',twin=id==='faceplate-twin',W=def.dimensions.widthMm,H=def.dimensions.heightMm;
  const chrome=material('#b8c0bd',{metalness:.85,roughness:.3});mesh(g,new THREE.BoxGeometry(W,H,2),chrome);
- const c=document.createElement('canvas');c.width=3072;c.height=320;const x=c.getContext('2d');x.fillStyle=tweed?'#bdc3bc':twin?'#b0bab6':'#090c0d';x.fillRect(0,0,c.width,c.height);x.strokeStyle=twin?'#315a65':'#d5d4c6';x.lineWidth=3;x.strokeRect(10,10,3052,300);x.fillStyle=twin?'#214f60':tweed?'#1e2522':'#eee9d6';x.textAlign='center';
- const toX=mm=>mm/W*3072;const labels=tweed?['TONE','INST. VOL.','MIC. VOL.']:twin?['VOLUME','TREBLE','MIDDLE','BASS','VOLUME','TREBLE','MIDDLE','BASS','REVERB','SPEED','INTENSITY']:['VOLUME','TREBLE','BASS','VOLUME','TREBLE','BASS','REVERB','SPEED','INTENSITY'];
+ const c=panelCanvas(id);
  const knobs=tweed?EP.knobs:twin?TP.knobs.map(v=>v/TP.widthMm*W):DP.knobs;
- x.font='bold 30px Arial';labels.forEach((label,i)=>x.fillText(label,toX(knobs[i]),285));
- if(!tweed){x.font='bold 29px Arial';x.fillText('NORMAL',toX(29),285);x.fillText('VIBRATO',toX(twin?227:202),285);x.font=twin?'42px Arial':'italic 49px Georgia';x.fillText(twin?'TWIN REVERB-AMP':'Deluxe Reverb-Amp',toX(twin?550:494),100,twin?410:390);x.font='17px Arial';x.fillText('FENDER MUSICAL INSTRUMENTS',toX(twin?550:494),140,360);}
- else{x.font='bold 28px Arial';x.fillText('INSTRUMENT',toX(270),285);x.fillText('MICROPHONE',toX(320),285);}
  let artwork=c,extra={metalness:tweed?.6:0,roughness:.5};
  if(twin){const maps=twinPanelMaps();artwork=maps.color;extra={metalness:1,roughness:1,metalnessMap:new THREE.CanvasTexture(maps.metallic),roughnessMap:new THREE.CanvasTexture(maps.rough)};}
- const t=new THREE.CanvasTexture(artwork);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,...extra}),0,0,1.1);
+ const t=new THREE.CanvasTexture(artwork);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,...extra}),0,0,1.1);
  for(const [i,k] of knobs.entries()){const settings=twin?[3,5.5,5,4.5,3.5,5,5.5,4,2.5,3,4]:[3,5,4,3.5,5.5,4.5,2.5,3,4];const knob=createKnob(tweed?'knob-chicken':'knob-skirted',{setting:settings[i]});knob.position.set(k-W/2,0,1.5);g.add(knob);}
  const jacks=tweed?EP.jacks:(twin?TP.jacks.map(v=>v/TP.widthMm*W):DP.jacks).map(v=>[v,0]);for(const [j,y] of jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
  if(twin)for(const x of TP.bright){const k=x/TP.widthMm*W;mesh(g,new THREE.BoxGeometry(5,10,2),material('#131716'),k-W/2,3,2);mesh(g,new THREE.BoxGeometry(3,5,2.8),material('#131716'),k-W/2,4,3.5);}
- const jewel=createJewel();jewel.position.set((tweed?24:twin?TP.pilot/TP.widthMm*W:557)-W/2,0,2);g.add(jewel);g.name=id;return g;
+ if(tweed){for(const [name,k]of [['ground',EP.ground],['power',EP.power]]){cylinder(g,5,5,3,chrome,3,k-W/2);const lever=mesh(g,new THREE.BoxGeometry(2.5,2.5,13),chrome,k-W/2,0,10);lever.name='5e3-'+name+'-switch';}const fuse=cylinder(g,6,6,12,material('#171817'),7,EP.fuse-W/2);fuse.name='5e3-fuse';}
+ const jewel=createJewel();jewel.position.set((tweed?EP.pilot:twin?TP.pilot/TP.widthMm*W:557)-W/2,0,2);g.add(jewel);g.name=id;g.userData.letteringRevision=LETTERING_REVISION;return g;
 }
 export function createBadge(id){
  if(id==='badge-script')return createRaisedTailBadge();
