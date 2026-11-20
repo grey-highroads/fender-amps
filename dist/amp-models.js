@@ -38,7 +38,7 @@ export function createAmpModel(a){
  const black=mat(0x101112),chrome=mat(0xc2c7c5,{metalness:.85,roughness:.26}),pine=mat(0x9c7548),leather=mat(tweed?0x4c2915:0x161819),dark=mat(0x292b2c,{metalness:.55});
  for(const side of [-1,1])box(cab,t,h,d,side*(w-t)/2,0,0,covering,.055);
  for(const side of [-1,1])box(cab,w-t*2,t,d,0,side*(h-t)/2,0,covering,.05);
- box(cab,w-t*2,.5,.12,0,h/2-.35,-z+.06,covering);box(cab,w-t*2,.38,.12,0,-h/2+.27,-z+.06,covering);
+ const rearPanels=[box(cab,w-t*2,.5,.12,0,h/2-.35,-z+.06,covering),box(cab,w-t*2,.38,.12,0,-h/2+.27,-z+.06,covering)];rearPanels.forEach(o=>o.userData.insideRemovable=true);
  const ph=front?.37:0,fh=h-(tweed?.63:.32)-ph,fy=tweed?-.045:-ph/2;
  if(tweed){box(face,w-.22,.36,.12,0,h/2-.18,z-.025,covering);box(face,w-.22,.25,.12,0,-h/2+.125,z-.025,covering);for(const [railY,railH] of [[h/2-.18,.34],[-h/2+.125,.23]]){const rail=new THREE.Mesh(new THREE.PlaneGeometry(w-.24,railH),covering);rail.position.set(0,railY,z+.037);face.add(rail);if(profile)physicalUV(rail,MM);}}
  box(face,w-.25,fh+.03,.08,0,fy,z-.1,black);
@@ -79,7 +79,7 @@ export function createAmpModel(a){
   if(tweed){plate.rotation.x=-Math.PI/2;plate.position.set(0,h/2+.02,-d*.28);}
   else plate.position.set(0,h/2-.14-ph/2,z+.012);
   chassis.add(plate);
-  for(let i=0;i<profile.speakerCount;i++){const speaker=createSpeaker(profile.speaker);speaker.scale.setScalar(MM);speaker.position.set(profile.speakerCount===2?(i?1:-1)*w*.235:0,-.23,z-.17);cab.add(speaker);}
+  for(let i=0;i<profile.speakerCount;i++){const speaker=createSpeaker(profile.speaker);speaker.scale.setScalar(MM);speaker.position.set(profile.speakerCount===2?(i?1:-1)*w*.235:0,-.23,z-.17);speaker.userData.explorePart='speakers';cab.add(speaker);}
   if(profile.speakerCount===2){const wireMat=mat(0xc5b486);for(const side of [-1,1]){const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(side*w*.235+.20,-.77,z-.42),new THREE.Vector3(side*w*.18,-h*.30,z-.62),new THREE.Vector3(0,-h*.28,-d*.25)]);cab.add(new THREE.Mesh(new THREE.TubeGeometry(curve,20,.009,5,false),wireMat));}}
   amp.userData.assemblyId=profile.id;
  }else{
@@ -92,7 +92,17 @@ export function createAmpModel(a){
  }
  if(front)for(const x of [-w*.43,w*.43]){box(cab,.10,.018,d*.75,x,h/2+.016,0,chrome,.006);for(const zz of [-d*.30,d*.30])cyl(cab,.018,.012,x,h/2+.033,zz,chrome);}
  box(chassis,w*.82,.22,.44,0,h/2-.35,-d*.20,chrome);
- const tubes=tweed?5:twin?10:9;for(let i=0;i<tubes;i++){const x=(i-(tubes-1)/2)*w*.07;const glass=mat(0x9d9280,{transparent:true,opacity:.46,metalness:.25,roughness:.2});cyl(chassis,.05,i<3?.23:.32,x,h/2-.62,-d*.25,glass);const glow=mat(0xe19743,{emissive:0xdc5515,emissiveIntensity:1.3});glow.name='tube-filament';cyl(chassis,.009,.14,x,h/2-.64,-d*.25,glow);}
+ const educationalTwin=profile?.id==='twin-reverb-early';
+ const tubes=tweed?5:twin?10:9;const powerGroup=new THREE.Group();chassis.add(powerGroup);powerGroup.userData.explorePart='power-tubes';
+ for(let i=0;i<tubes;i++){const x=(i-(tubes-1)/2)*w*.07;const glass=mat(0x9d9280,{transparent:true,opacity:.46,metalness:.25,roughness:.2});const power=educationalTwin&&i>=6;const parent=power?powerGroup:chassis;const tubeX=educationalTwin?(i<6?-w*.34+i*w*.067:w*.10+(i-6)*w*.075):x;const tubeY=h/2-(power?.72:.62);cyl(parent,power?.075:.05,power?.45:educationalTwin?.23:i<3?.23:.32,tubeX,tubeY,-d*.25,glass);if(power)cyl(parent,.079,.065,tubeX,h/2-.46,-d*.25,black);const glow=mat(0xe19743,{emissive:0xdc5515,emissiveIntensity:1.3});glow.name='tube-filament';cyl(parent,.009,.14,tubeX,tubeY,-d*.25,glow);}
+ if(educationalTwin){
+  // Teaching geometry: approximate location/envelope, not a service layout.
+  const transformer=new THREE.Group();transformer.userData.explorePart='output-transformer';chassis.add(transformer);
+  box(transformer,.57,.38,.50,-w*.12,h/2-.67,d*.08,dark,.02);
+  for(const side of [-1,1])box(transformer,.10,.40,.53,-w*.12+side*.26,h/2-.67,d*.08,black,.03);
+  for(let i=0;i<8;i++)box(transformer,.37,.012,.51,-w*.12,h/2-.83+i*.044,d*.08,chrome,.002);
+  amp.userData.exploration='twin-construction-v1';
+ }
  if(profile){const handle=createHandle(profile.handle);handle.scale.setScalar(MM);handle.rotation.x=-Math.PI/2;handle.position.set(0,h/2+.025,.10);cab.add(handle);}else{
  const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(-.6,h/2+.07,.12),new THREE.Vector3(-.4,h/2+.19,.12),new THREE.Vector3(.4,h/2+.19,.12),new THREE.Vector3(.6,h/2+.07,.12)]);const handle=new THREE.Mesh(new THREE.TubeGeometry(curve,24,.055,8,false),leather);handle.scale.z=1.6;cab.add(handle);
  for(const x of [-.63,.63]){box(cab,.22,.04,.22,x,h/2+.04,.12,chrome);cyl(cab,.023,.012,x,h/2+.07,.12,chrome);}

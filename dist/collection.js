@@ -106,3 +106,7 @@ if(detailScene){const host=$('collection-render');try{const renderer=new THREE.W
  function frame(time){requestAnimationFrame(frame);if(document.hidden||selected!==null){last=time;return;}if(time-last<32)return;const dt=Math.min((time-last)/1000,.1);last=time;if(!paused)phase+=dt;const root=host.getBoundingClientRect();renderer.setScissorTest(false);renderer.clear();renderer.setScissorTest(true);for(let i=0;i<scenes.length;i++){const s=scenes[i],r=s.slot.getBoundingClientRect();if(r.right<=root.left||r.left>=root.right)continue;const x=r.left-root.left,y=root.bottom-r.bottom,w=r.width,h=r.height;renderer.setViewport(x,y,w,h);renderer.setScissor(Math.max(0,x),Math.max(0,y),Math.min(w,root.width-Math.max(0,x),r.right-root.left),Math.min(h,root.height-y));s.camera.aspect=w/h;s.camera.updateProjectionMatrix();s.model.rotation.y=-.35+Math.sin(phase*.17+i*.6)*.48;s.model.position.y=paused?0:Math.sin(phase*.6+i)*.055;renderer.render(s.scene,s.camera);}renderer.setScissorTest(false);}requestAnimationFrame(frame);
  }catch(error){console.error(error);host.innerHTML='<p class="render-error">3D rendering is unavailable in this browser. You can still select an amp to read its story.</p>';}}
 updatePosition();
+
+// Review link uses the same entry/close behavior as a timeline selection.
+const exhibitQuery=new URLSearchParams(location.search);
+if(exhibitQuery.get('amp')==='twin-1968'){const i=amps.findIndex(a=>a.year===1968&&a.name==='Twin Reverb');if(i>=0){openAmp(i,cards[i]);if(exhibitQuery.get('view')==='inside')$('exploded').click();}}
