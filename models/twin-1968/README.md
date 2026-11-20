@@ -1,7 +1,8 @@
 # 1968 Twin Reverb master — first assembly pass
 
-Target: RetroFret specimen A-13834, early silverface/drip edge, dealer-attributed
-factory JBL D120F speakers. This is **master 0.1**, an editable dimensional and
+Target: a 1968 early silverface/drip-edge Twin in a documented factory JBL D120F
+option configuration. RetroFret A-13834 remains a photographic reference.
+This is **master 0.2**, an editable dimensional and
 assembly foundation, not a finished high-fidelity replica.
 
 - [Blender master](twin-1968-master.blend)
@@ -11,6 +12,20 @@ assembly foundation, not a finished high-fidelity replica.
 - [Browser angled review](../../docs/handoff/images/twin-master-angle.png)
 - [Mounted knob round-trip review](../../docs/handoff/images/twin-master-knobs.png)
 - [Browser rear review](../../docs/handoff/images/twin-master-rear.png)
+
+## Factory configuration takes precedence
+
+The user clarified that the goal is what Fender produced, rather than every
+feature on one surviving amp. Revision 0.2 removes the casters and uses four
+estimated metal glides. The [1968 Fender catalog specification scan](https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php)
+confirms JBL D120F speakers as an extra-cost option; its [adjacent product photo](https://www.vintageguitarandbass.com/fender/catalogues/1968_33.php)
+shows a Twin without casters. A [secondary historical compilation](https://www.tandj.net/cnjradio/fenderamps/twin_reverb_sf.html)
+corroborates glides for 1968–71. We do not claim the catalog proves every production
+exception, or that the reference specimen's casters are definitively aftermarket.
+The dealer's originality claim does not independently establish factory fitment.
+
+JBL remains explicitly an option, not standard equipment. No unresolved supplier
+variant is silently presented as the universal 1968 specification.
 
 ## Why this amp
 
@@ -30,11 +45,18 @@ the app's assembly selection or generalize JBL equipment to all 1968 Twins.
 | Quantity | Basis |
 | --- | --- |
 | 666.75 W × 508 H × 260.35 D mm | Exact conversion of dealer-reported 26¼ × 20 × 10¼ inches; not independently measured |
-| Height excludes casters/handle in this first model | Photographic interpretation; dealer does not specify inclusion |
+| Cabinet envelope | Dealer-specimen proxy, now explicitly unresolved against differing period catalog dimensions |
+| Four metal glides | Period photograph supports no casters; exact foot shape/size/position are estimates |
 | Taper, wall thickness, openings, hardware positions | Modeling estimates from the photographed specimen |
 | Knob 0.4 | Actual GLB export from shared builder; user accepted appearance for now; exterior measurements remain estimates |
 | JBL frame/motor/cone | Provisional shape and envelope from rear photo; not manufacturer dimensional drawings |
 | Covering, cloth, panel and badge maps | Our generated studies; no third-party photograph is embedded |
+
+The 1968 catalog lists **673.1 W × 520.7 H × 247.65 D mm**, differing from the
+current dealer-based envelope. Both values and their sources are retained in
+dimensions.json. Do not call the current geometry's size a verified factory
+measurement; reconcile the discrepancy before approving the dimensions. Catalog
+specifications and imagery may span a model transition.
 
 Blender uses metres internally, displays millimetres, and exports a metre-scale
 GLB. X is width, -Y faces forward, Z is up in Blender. glTF converts this to X
@@ -78,16 +100,20 @@ background and camera. It is a development review page, not a production app vie
 
 ## Remaining work before production integration
 
-1. Compare orthographic silhouettes/openings to the references and resolve whether
-   stated height includes accessories. Seek original panel/cabinet measurements.
+1. Reconcile conflicting period catalog and specimen dimensions (including
+   accessory inclusion) against original measurements before approving scale.
 2. Refine covering grain/sheen, cloth thread structure and colors, panel lettering,
    raised Fender casting/backing, JBL emblem and mounting details.
 3. Refine JBL motor/basket/label, rear ports, cable routes and hardware. Tube and
    circuit-board internals are not modeled in this first pass.
 4. Optimize the exported geometry and establish a mobile detail level. This review
-   mesh has roughly 818k rendered triangles, mostly repeated detailed knobs.
+   mesh has roughly 812k rendered triangles, mostly repeated detailed knobs.
 5. Adapt the browser loader and existing cabinet/face/chassis animation contract,
    then validate the library, timeline and detail views before publishing.
 
 The model is deliberately reviewed separately while those steps are unfinished.
 The existing private prototype remains on accepted knob revision 0.4.
+
+Historical note: master 0.1 (commit e384248) copied the specimen's casters. That
+was not sufficient evidence for factory fitment. Its screenshots in Git history
+are superseded by the current feet-equipped review views.

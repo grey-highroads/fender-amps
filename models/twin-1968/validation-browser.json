@@ -5,8 +5,8 @@
     1200
   ],
   "errors": [],
-  "meshInstances": 253,
-  "renderedTriangles": 817724,
+  "meshInstances": 237,
+  "renderedTriangles": 812428,
   "cabinetMm": [
     666.7500138282776,
     508.0000162124634,
@@ -19,5 +19,9 @@
     "side",
     "mounted knob close-up"
   ],
-  "productionIntegrated": false
+  "productionIntegrated": false,
+  "revision": "master-0.2",
+  "configuration": "factory JBL option with estimated glides",
+  "glides": 4,
+  "casters": 0
 }

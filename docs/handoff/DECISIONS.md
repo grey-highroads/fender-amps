@@ -76,3 +76,18 @@ that specific example while the existing production Twin study remains Oxford.
 The new master is a separate review artifact until shape/material review,
 optimization and browser integration are complete. A GLB export is not itself
 production integration or evidence of high fidelity.
+
+## Factory production accuracy governs the master
+
+The user clarified that the model should represent what Fender produced. Prefer
+contemporaneous Fender catalogs, manuals, drawings and parts lists for factory
+configuration; distinguish documented options from standard fitment. Dealer
+originality assertions and surviving-specimen photographs are supporting evidence,
+not conclusive proof that replaceable hardware left the factory that way.
+
+Master 0.2 removes the unverified 1968 caster fitment, uses estimated glides and
+retains JBL D120F as an explicitly documented factory option. Do not assert that
+the dealer specimen's casters are certainly aftermarket. Period catalog and dealer
+cabinet dimensions differ; retain both with an unresolved status, rather than
+silently substituting or averaging them. This supersedes the specimen-first
+configuration choice in master 0.1.

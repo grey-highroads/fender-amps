@@ -7,6 +7,9 @@ and the separate GitHub and private-site publishing workflows.
 - The current priority is photographic component fidelity in three reference
   amps. Keep improvements in the shared library so they reach the timeline and
   detail views. Collection expansion is deferred.
+- Model Fender factory production for the selected year. Use period Fender
+  documentation for configuration, label factory options, and do not treat a
+  dealer originality claim as proof of factory fitment.
 - Separate vintage specimen evidence, modern replacements, measured dimensions,
   and modeling estimates. Passing tests does not establish visual or historical
   accuracy. The latest knob revision has not been accepted as photorealistic.

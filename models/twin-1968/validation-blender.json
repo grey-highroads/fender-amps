@@ -1,11 +1,14 @@
 {
-  "scene": "Twin 1968 \u2014 A-13834 \u2014 master 0.1",
+  "scene": "Twin 1968 \u2014 factory JBL option \u2014 master 0.2",
   "metres_per_blender_unit": 1,
   "cabinet_xyz_mm": [
     666.7500138282776,
     260.28957962989807,
     508.0000162124634
   ],
+  "configuration": "factory JBL option with glides",
+  "glides": 4,
+  "casters": 0,
   "knobs": 11,
   "linked_knob_body_meshes": 1,
   "missing_images": [],

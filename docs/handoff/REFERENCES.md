@@ -101,3 +101,26 @@ under outputs/references/twin-master. No photographic pixels enter the model.
 Sources and estimates are recorded in models/twin-1968/dimensions.json; own browser
 review images are images/twin-master-{front,angle,rear,side}.png. Generated surfaces
 and approximate panel/badge artwork require further photographic review.
+
+## Factory configuration correction: master 0.2
+
+Primary evidence newly inspected: Fender's 1968 catalog, scan leaves
+[32 / printed 30](https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php)
+and [33 / printed 31](https://www.vintageguitarandbass.com/fender/catalogues/1968_33.php).
+The specification lists the JBL D120F upgrade at additional cost; the product
+photograph depicts the Twin without casters. That supports a feet-equipped
+baseline, not a sweeping claim that every production exception is known.
+The [secondary historical compilation](https://www.tandj.net/cnjradio/fenderamps/twin_reverb_sf.html)
+lists glides for 1968–71 and casters for 1972–82, which is corroboration only.
+
+The catalog's listed envelope converts to 673.1 W × 520.7 H × 247.65 D mm.
+It differs from the dealer's 666.75 W × 508 H × 260.35 D mm. Current geometry
+retains the latter provisionally; neither source is an independently measured
+construction drawing. The conflict and accessory inclusion must be resolved.
+
+Revision 0.2 replaces casters with four estimated metal glides, retains the JBL
+factory option explicitly and changes the configuration metadata accordingly.
+Period scans are kept only under ignored outputs/references/fender-period; source
+links, rather than copyrighted scan files, are committed. Own review images now
+show the revised feet-equipped model. The old caster-equipped images in Git
+history document an earlier, superseded interpretation.

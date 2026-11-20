@@ -201,3 +201,25 @@ runtime changed and no Site publication is needed for these source/review assets
 
 Mounted knob close-up also reviewed after the Blender round trip: numeral
 orientation and shared 0.4 profile retained. See images/twin-master-knobs.png.
+
+## Master 0.2: factory-configuration correction
+
+The user clarified that Fender production configuration governs the model.
+The generator, `.blend` and `.glb` now use four estimated metal glides and exclude
+casters. Root metadata identifies the factory JBL option, instead of presenting
+the full dealer specimen configuration as a factory baseline. JBL option status
+is supported by a newly inspected period Fender catalog. Unresolved catalog/dealer
+dimensions are both retained in the ledger; the geometry still uses the explicitly
+provisional dealer envelope. This task did not silently rescale the cabinet.
+
+Current validation: npm test and GLB integrity checks passed; saved-file checks
+confirm four glides, no caster objects, metre units, linked knob bodies and packed
+images. Actual Chrome GLB review inspected front, angle, rear, side and mounted
+knob close-up with no page errors. Export: 158 mesh definitions, 237 rendered
+mesh instances, 812,428 triangles, 5,766,604 bytes. Review images supersede the
+caster-equipped master 0.1 captures. Inspection cameras and browser lighting are
+unchanged; the Blender studio floor was raised to the new foot level. Geometry,
+lighting and screenshot checks do not constitute full factory accuracy.
+
+Production app and private Site remain unchanged on knob revision 0.4. Only
+separate master/review/source assets changed, so no Site republishing is needed.

@@ -1,4 +1,4 @@
-"""Build a separate, metre-scale first master of RetroFret Twin A-13834.
+"""Build a separate, metre-scale first factory-configuration Twin master.
 Run with Blender --background --factory-startup --python this_file.
 All detail dimensions except the reported cabinet envelope are estimates.
 This does not modify an interactive Blender session or the production app.
@@ -13,7 +13,7 @@ E=D['estimates']; W,H,DEP=[D['cabinet'][k] for k in ('width','height','depth')]
 mm=lambda v:v*.001
 scene=bpy.context.scene
 # Background process gets a new scene; no existing scene is edited or deleted.
-scene=bpy.data.scenes.new('Twin 1968 — A-13834 — master 0.1')
+scene=bpy.data.scenes.new('Twin 1968 — factory JBL option — master 0.2')
 bpy.context.window.scene=scene
 scene.unit_settings.system='METRIC';scene.unit_settings.scale_length=1;scene.unit_settings.length_unit='MILLIMETERS'
 scene['specimen']=D['specimen'];scene['dimension_basis']=D['cabinet']['basis'];scene['status']='First assembly study; not a completed faithful replica'
@@ -25,8 +25,8 @@ def link(obj):
  for c in list(obj.users_collection):c.objects.unlink(obj)
  collections[active].objects.link(obj)
  return obj
-root=bpy.data.objects.new('Twin_1968_A13834',None);collections[active].objects.link(root)
-root['revision']='master-0.1';root['units']='metres';root['reference_url']=D['source'];root['accuracy']='Reported cabinet envelope; estimated subdimensions. JBL option specific to specimen.'
+root=bpy.data.objects.new('Twin_1968_Factory_JBL_Option',None);collections[active].objects.link(root)
+root['revision']=D['revision'];root['units']='metres';root['reference_url']=D['source'];root['support_configuration']=D['configuration']['support'];root['speaker_configuration']='Documented JBL D120F factory option';root['accuracy']='Reported cabinet envelope; estimated subdimensions. JBL factory option; specimen photographs do not establish standard equipment.'
 def material(name,color,metal=0,rough=.5):
  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True
  bs=m.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(*color,1);bs.inputs['Metallic'].default_value=metal;bs.inputs['Roughness'].default_value=rough
@@ -250,21 +250,29 @@ for x in [-W/2,W/2]:
   box('Bottom corner metal front-back face',(27,1.2,18),(x+sx*13.5,y,10),chrome,2)
   box('Bottom corner metal side face',(1.2,30,18),(x,y+sy*15,10),chrome,2)
   box('Bottom corner metal underside',(27,30,1.2),(x+sx*13.5,y+sy*15,.5),chrome,2)
-# Swivel casters: wheel/fork/axle/turntable; dealer says original casters present.
-for x in [-258,258]:
- for y in [-85,85]:
-  cylinder('Caster swivel bearing',16,6,(x,y,-5),chrome)
-  cylinder('Caster wheel rubber',24,19,(x,y+9,-38),black,'X',64)
-  cylinder('Caster axle',4,27,(x,y+9,-38),chrome,'X')
-  for dx in [-12,12]:
-   fork=box('Caster plated fork',(2.5,21,31),(x+dx,y+4,-24),chrome,2);fork.rotation_euler.x=.2
+# Baseline uses glides. Caster geometry is available only for an explicitly
+# specimen-specific build, never silently attributed to 1968 Fender production.
+if D['configuration']['support']=='casters':
+ for x in [-258,258]:
+  for y in [-85,85]:
+   cylinder('Caster swivel bearing',16,6,(x,y,-5),chrome)
+   cylinder('Caster wheel rubber',24,19,(x,y+9,-38),black,'X',64)
+   cylinder('Caster axle',4,27,(x,y+9,-38),chrome,'X')
+   for dx in [-12,12]:
+    fork=box('Caster plated fork',(2.5,21,31),(x+dx,y+4,-24),chrome,2);fork.rotation_euler.x=.2
+else:
+ for x in [-278,278]:
+  for y in [-89,89]:
+   # Individual glide form/dimensions are estimates, not a measured vintage part.
+   o=sphere('Cabinet glide — estimated metal foot',(E['glideDiameter'],E['glideDiameter'],E['glideHeight']*2),(x,y,0),chrome)
+   o['configuration_basis']='1968 catalog photograph shows no casters; glide form remains estimated'
 # Rear-panel screws and discreet wiring visible through opening.
 for x in [-306,306]:
  for z in [37,118,356,413]:sphere('Rear panel fixing screw',(4,2,4),(x,DEP/2-1,z),chrome)
 active='90 Review studio'
 # Review studio is excluded from the GLB export.
 world=bpy.data.worlds.new('Neutral photographic studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.10,.12,.14,1);world.node_tree.nodes['Background'].inputs[1].default_value=.45;scene.world=world
-floor=box('Review floor',(6000,6000,5),(0,0,-65),material('Studio gray',(.16,.17,.18),0,.82),1);floor.parent=None
+floor=box('Review floor',(6000,6000,5),(0,0,-E['glideHeight']-2.5),material('Studio gray',(.16,.17,.18),0,.82),1);floor.parent=None
 for name,loc,power,size in [('Large softbox',(-900,-900,1300),85,1.0),('Side fill',(1000,-100,750),60,.8),('Rear strip',(-400,700,1000),95,.7)]:
  data=bpy.data.lights.new(name,'AREA');data.energy=power;data.shape='DISK';data.size=size;o=bpy.data.objects.new(name,data);collections[active].objects.link(o);o.location=tuple(mm(v)for v in loc);o.rotation_euler=(Vector((0,0,.24))-o.location).to_track_quat('-Z','Y').to_euler()
 camdata=bpy.data.cameras.new('Review camera');camera=bpy.data.objects.new('Review camera',camdata);collections[active].objects.link(camera);scene.camera=camera;camdata.type='ORTHO';camdata.ortho_scale=1.02
@@ -299,6 +307,6 @@ for screen in bpy.data.screens:
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'twin-1968-master.blend'))
 # Initial render; fixed front/rear views generated by the validation helper later.
 scene.render.filepath=str(ROOT/'outputs/twin-master-angle.png');bpy.ops.render.render(write_still=True)
-report={'revision':'master-0.1','objects':len(asset),'units':'metres','cabinet_mm':[W,H,DEP],'blend':str(OUT/'twin-1968-master.blend'),'glb':str(OUT/'twin-1968-master.glb'),'images':[i.name for i in bpy.data.images if i.users and i.source=='FILE']}
+report={'revision':D['revision'],'objects':len(asset),'units':'metres','cabinet_mm':[W,H,DEP],'blend':str(OUT/'twin-1968-master.blend'),'glb':str(OUT/'twin-1968-master.glb'),'images':[i.name for i in bpy.data.images if i.users and i.source=='FILE']}
 (ROOT/'outputs/twin-master-build.json').write_text(json.dumps(report,indent=2))
 print(json.dumps(report))
