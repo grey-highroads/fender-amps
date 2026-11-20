@@ -132,3 +132,19 @@ the workflow preserved as a documentation template. Do not block ordinary
 component work on adding CI or silently enable a deployment workflow.
 
 Documentation-only handoff updates do not require republishing the prototype.
+
+## Revision 0.3 current-task validation
+
+November 20 continuation: npm test, JavaScript syntax checks and git diff --check
+passed. Browser review used installed Chrome, 1440 × 1000, unchanged inspector
+camera/light/environment. Inspected front, rear, angled and near-side views;
+both reference assemblies; both timeline/detail entries; and exact scroll
+restoration after closing each detail. No page errors were recorded. The GLB
+export parsed as glTF 2, eight meshes, revision 0.3, metres, 1,682,224 bytes.
+These checks establish integration/export integrity, not historical accuracy.
+
+A fresh browser document was loaded for each assembly: changing only the hash
+in an already-open inspector does not rebuild its initial deep-linked asset.
+No app navigation behavior was changed for this task.
+
+GitHub runtime revision: `c969ce9` (revision 0.3).

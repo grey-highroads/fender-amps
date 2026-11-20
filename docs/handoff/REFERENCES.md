@@ -41,3 +41,35 @@ materials, dimensions or artwork are accurate.
 The catalog's per-component source records remain the operational evidence list.
 Keep new evidence connected to stable component IDs and record differences
 between factory options, model generations and later replacements.
+
+## Revision 0.3 observations (November 20 continuation)
+
+Reacquired and visually inspected the RetroFret control-panel photograph and
+Folkway main photograph, plus the isolated Stars Music modern angled part.
+The vintage photos support the broad skirt/compact grip relationship and small
+ivory markings. The modern photo resolves the straight, distinct grooves,
+continuous top lip and reflective shallow silver dish more clearly; those are
+secondary evidence, not authentication of a vintage mold. The vintage isolated
+Reverb image remained unavailable (empty/blocked CDN responses). No original
+underside or screw-height detail was newly verified.
+
+Compared with 0.2, the grooves were too thin and poorly sampled (six divisions
+per flute), lettering too light, and the disc too uniformly dull under the same
+studio. Revision 0.3 uses twenty divisions per flute, a broader 0.18 mm estimated
+groove with a soft termination below the top lip, 2.20 mm estimated numeral
+height and heavier strokes. The 1 is simplified; 8 uses two unequal touching
+loops instead of a crossing waist. These are interpretive artwork corrections,
+not traced vintage artwork. Estimated silver dish depth increases from 0.42 to
+0.70 mm and its roughness decreases. Neither value is a specimen measurement.
+
+Grip diameter/height/taper and skirt curvature/thickness/rolled edge remain
+unchanged after review. Screw alignment at 10 and rear insert remain provisional
+as before. Mounted models still differ substantially in panel geometry, scale
+relationships, materials and artwork; do not use this knob revision as evidence
+that those assemblies match their photographs.
+
+Own rendered views: [front](images/knob-v03-front.png),
+[rear](images/knob-v03-rear.png), [near side](images/knob-v03-side.png),
+[angled](images/knob-v03-angle.png), [Twin](images/twin-v03.png),
+[Deluxe Reverb](images/deluxe-v03.png). Third-party reference photos remain only
+under ignored outputs/references/knobs and are not included in the public repo.
