@@ -11,6 +11,57 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Selected chronological exhibits. Cabinet studies share geometry, not exact component layouts.
 const amps=[
 {
+ "id": "super-reverb-ab763",
+ "year": 1963,
+ "name": "Super Reverb",
+ "era": "Black-panel amplifiers",
+ "years": "1963–1967; 1965-style AB763 study",
+ "watts": 40,
+ "speakers": "4 × 10″",
+ "load": "2 Ω",
+ "finish": "black",
+ "width": 1.256,
+ "height": 1.463,
+ "circuit": "AB763",
+ "voice": "Four tens wired in parallel for a 2 Ω load.",
+ "story": "Four ten-inch speakers share a two-6L6GC output stage. The Vibrato channel adds Middle, spring reverb and optical tremolo; both channels have switched bright capacitors. The AB763 power supply uses a GZ34 tube rectifier. This construction study keeps the speaker array, chassis, rear panels and tilt-back legs in one assembly.",
+ "ratingNote": "Catalog row 60, 1963 introduction; selected 1965-style AB763, not every revision in the run. Cabinet dimensions come from a secondary field guide. Speaker maker, exact interior positions and detailed hardware dimensions remain estimates."
+},
+{
+ "id": "vibrasonic-5g13-1960",
+ "year": 1959,
+ "name": "Vibrasonic",
+ "era": "Brown-panel amplifiers",
+ "years": "1959–1963; 1960-style 5G13 study",
+ "watts": 40,
+ "speakers": "1 × 15″",
+ "load": "8 Ω",
+ "finish": "brown",
+ "width": 1.25,
+ "height": 1.194,
+ "circuit": "5G13",
+ "voice": "A single fifteen, harmonic vibrato and a diode power supply.",
+ "story": "The early Vibrasonic puts two channels, harmonic vibrato and Presence ahead of a two-6L6GC output stage. Its 5G13 circuit uses five 7025s and silicon rectifiers, with no rectifier tube. A single fifteen sits behind the grille in the open-back brown cabinet. This is the early configuration, before the later 6G13-A circuit.",
+ "ratingNote": "Catalog row 38 groups 6G13 / 6G13-A; this explicitly selects earlier 5G13. Catalog 40 W retained against a secondary 50 W figure. Early cabinet envelope is a secondary estimate; later Fender catalog width and tube complement differ. Exact speaker suffix remains unresolved."
+},
+{
+ "id": "showman-blonde-1961",
+ "year": 1960,
+ "name": "Showman",
+ "era": "Blonde piggyback amplifiers",
+ "years": "1960–1963; 1961-style 6G14-A study",
+ "watts": 85,
+ "speakers": "1 × 15″",
+ "load": "8 Ω",
+ "finish": "blonde",
+ "width": 1.8,
+ "height": 1.97,
+ "circuit": "6G14-A",
+ "voice": "A four-5881 head above a separate single-fifteen cabinet.",
+ "story": "The blonde Showman separates the amplifier chassis from the speaker enclosure. The selected 6G14-A head has four 5881 output tubes, silicon rectification, harmonic vibrato and a shared Presence control. It sits above a closed-back fifteen-inch tone-ring cabinet with tilt-back legs and head restraints. The twelve-inch cabinet offered alongside it is outside this assembly.",
+ "ratingNote": "Catalog row 44, 85 W retained against secondary 80–100 W figures. Fifteen cabinet dimensions agree with a later period Fender catalog. Head depth uses a selected-year secondary 9-inch estimate; later catalog 11½-inch depth conflicts. Tone-ring geometry, speaker suffix and fastening details remain provisional."
+},
+{
  "id": "super-six-reverb-1972",
  "year": 1972,
  "name": "Super Six Reverb",
@@ -182,6 +233,8 @@ function panelLabel(a){
  if(a.era==='The black-panel years')return 'Black panel';
  if(a.era==='The silver-panel years'||a.era==='The headroom years')return 'Silver panel';
  if(a.finish==='wood')return 'Woodie';
+ if(a.id==='super-reverb-ab763')return 'Black panel';
+ if(a.finish==='blonde')return 'Blonde';
  if(a.year===1949)return 'Two-tone';
  if(a.finish==='brown')return 'Brown panel';
  if(a.era==='The Rivera years')return 'Rivera era';
@@ -260,11 +313,11 @@ function openAmp(i,button){if(drag?.moved)return;const a=amps[i];if(a.wip){openC
  detail.querySelector('.stage-top .eyebrow').innerHTML=`<i></i> ${a.era.toUpperCase()}`;detail.querySelector('.object-id').textContent=`FENDER / ${a.circuit.toUpperCase()} / ${a.year}`;
  detail.querySelector('.story-panel > .eyebrow').innerHTML=`${a.years} <span class="tag">${panelLabel(a).toUpperCase()}</span>`;const words=a.name.split(' ');detail.querySelector('h1').innerHTML=`${words.slice(0,-1).join(' ')}<br><em>${words.at(-1)}.</em>`;detail.querySelector('.deck').textContent=a.voice;
  $('story-content').innerHTML=a.full?originalStory:`<p>${a.story}</p><div class="quote-note"><span>THE ERA</span><strong>${a.era}</strong></div>`;
- $('specs-content').innerHTML=a.full?originalSpecs:`<dl class="details"><div><dt>Panel / era</dt><dd>${panelLabel(a)}</dd></div><div><dt>Circuit / version</dt><dd>${a.circuit}</dd></div><div><dt>Production</dt><dd>${a.years}</dd></div><div><dt>Format</dt><dd>Tube combo</dd></div><div><dt>Speaker layout</dt><dd>${a.speakers}</dd></div></dl><p class="fine">Representative specifications. Cabinet profiles distinguish top and front controls, speaker layouts and finishes; internal components are illustrative. ${a.ratingNote||''}</p>`;
+ $('specs-content').innerHTML=a.full?originalSpecs:`<dl class="details"><div><dt>Panel / era</dt><dd>${panelLabel(a)}</dd></div><div><dt>Circuit / version</dt><dd>${a.circuit}</dd></div><div><dt>Production</dt><dd>${a.years}</dd></div><div><dt>Format</dt><dd>${a.id==='showman-blonde-1961'?'Head and separate cabinet':'Tube combo'}</dd></div><div><dt>Speaker layout</dt><dd>${a.speakers}</dd></div></dl><p class="fine">Representative specifications. Cabinet profiles distinguish top and front controls, speaker layouts and finishes; internal components are illustrative. ${a.ratingNote||''}</p>`;
  const dds=detail.querySelectorAll('.spec-grid dd');dds[0].innerHTML=`${a.watts}<span> W</span>`;dds[1].textContent=a.speakers;dds[2].textContent=a.load;
  detail.querySelector('.panel-footer > span').textContent=a.circuit.toUpperCase();detail.querySelector('.model-note').textContent='3D MODEL · BUILT FROM DRAWINGS AND PHOTOS';
  $('sources').onclick=a.full?originalSource:()=>{const d=$('dialog');$('dialog-content').innerHTML=`<span class="eyebrow">NOTES AND SOURCES</span><h2>${a.name}</h2><p>${a.story}</p>${assemblyFor(a)?.study==='combo-batch-v1'?`<p>${a.ratingNote}</p><ul>${assemblyFor(a).sources.map(id=>`<li><a href="${SOURCES[id].url}" target="_blank" rel="noopener noreferrer">${SOURCES[id].title}</a> — ${SOURCES[id].note}</li>`).join('')}</ul>`:''}<p>The specs are typical catalog figures, and the power ratings are rounded. Fender changed amps during a production run, so individual amps vary. The 3D model is built from drawings and photos. It isn’t a scan, and parts inside may not sit exactly where they are on a real chassis.</p><p><a href="https://support.fender.com/hc/en-us/articles/47450512831259-Fender-Guitar-Amplifier-Owner-s-Manuals" target="_blank" rel="noopener noreferrer">Fender’s official owner manual archive</a></p>`;d.showModal()};
- const reference=modelReference(a);if(reference){const baseSource=$('sources').onclick;$('sources').onclick=()=>{baseSource();$('dialog-content').innerHTML+=`<p><a href="${reference.source}" target="_blank" rel="noopener noreferrer">Exterior reference: ${reference.name}</a></p><p>${reference.basis||'Cabinet dimensions use current reissue specifications as a family proxy, rather than a measured vintage cabinet.'} Badges, cloth and detail dimensions remain interpretive.</p>`;};$('specs-content').innerHTML+=`<dl class="details"><div><dt>Cabinet W × H × D</dt><dd>${reference.dimensions}</dd></div></dl><p class="fine">${reference.basis||'Modern reissue dimension proxy; vintage measurements pending'}. Rear components are illustrative.</p>`;} const assembly=assemblyFor(a);if(assembly){$('specs-content').innerHTML+=`<dl class="details"><div><dt>Speaker reference</dt><dd>${assembly.speakerCount} × ${assetById(assembly.speaker).name}</dd></div><div><dt>Speaker wiring</dt><dd>${assembly.wiring}</dd></div><div><dt>Reference example</dt><dd>${assembly.example}</dd></div></dl><p class="fine">Speaker geometry and finishes remain under review. <a href="components.html">Inspect the shared component library</a>.</p>`;} $('story-tab').click();detail.scrollTop=0;detailScene?.showModel(variant(a));detailScene?.setVisible(true);$('close-detail').focus({preventScroll:true});
+ const reference=modelReference(a);if(reference){const baseSource=$('sources').onclick;$('sources').onclick=()=>{baseSource();$('dialog-content').innerHTML+=`<p><a href="${reference.source}" target="_blank" rel="noopener noreferrer">Exterior reference: ${reference.name}</a></p><p>${reference.basis||'Cabinet dimensions use current reissue specifications as a family proxy, rather than a measured vintage cabinet.'} Badges, cloth and detail dimensions remain interpretive.</p>`;};$('specs-content').innerHTML+=`<dl class="details"><div><dt>${a.id==='showman-blonde-1961'?'Assembled W × H × D':'Cabinet W × H × D'}</dt><dd>${reference.dimensions}</dd></div></dl><p class="fine">${reference.basis||'Modern reissue dimension proxy; vintage measurements pending'}. Rear components are illustrative.</p>`;} const assembly=assemblyFor(a);if(assembly){$('specs-content').innerHTML+=`<dl class="details"><div><dt>Speaker reference</dt><dd>${assembly.speakerCount} × ${assetById(assembly.speaker).name}</dd></div><div><dt>Speaker wiring</dt><dd>${assembly.wiring}</dd></div><div><dt>Reference example</dt><dd>${assembly.example}</dd></div></dl><p class="fine">Speaker geometry and finishes remain under review. <a href="components.html">Inspect the shared component library</a>.</p>`;} $('story-tab').click();detail.scrollTop=0;detailScene?.showModel(variant(a));detailScene?.setVisible(true);$('close-detail').focus({preventScroll:true});
 }
 function closeAmp(){if(selected===null)return;if($('dialog').open){$('dialog').close();return;}if(document.fullscreenElement){document.exitFullscreen();}detailScene?.setVisible(false);detail.hidden=true;document.title="Amp Archive: classic Fender tube amps";document.body.classList.remove('detail-open');$('collection').inert=false;document.querySelector('.masthead').inert=false;document.querySelector('.site-footer').inert=false;scroll.scrollLeft=savedScroll;window.scrollTo({top:savedY,behavior:'instant'});returnFocus?.focus({preventScroll:true});selected=null;}
 $('close-detail').onclick=closeAmp;
@@ -288,6 +341,6 @@ updatePosition();
 
 // Review link uses the same entry/close behavior as a timeline selection.
 const exhibitQuery=new URLSearchParams(location.search);
-const reviewAmps={"super-six-reverb-1972":{"year": 1972, "name": "Super Six Reverb"},"blues-junior-1995":{"year": 1995, "name": "Blues Junior"},"prosonic-1996":{"year": 1996, "name": "Prosonic"},'princeton-reverb-1965':{year:1964,name:'Princeton Reverb'},'deluxe-1957':{year:1955,name:'Tweed Deluxe'},'twin-1968':{year:1968,name:'Twin Reverb'},'deluxe-reverb-1965':{year:1963,name:'Deluxe Reverb'},'champ-1959':{year:1958,name:'Tweed Champ'},'tremolux-1955':{year:1955,name:'Tweed Tremolux'},'deluxe-1962':{year:1961,name:'Brown Deluxe'}};
+const reviewAmps={"super-reverb-ab763":{"year": 1963, "name": "Super Reverb"},"vibrasonic-5g13-1960":{"year": 1959, "name": "Vibrasonic"},"showman-blonde-1961":{"year": 1960, "name": "Showman"},"super-six-reverb-1972":{"year": 1972, "name": "Super Six Reverb"},"blues-junior-1995":{"year": 1995, "name": "Blues Junior"},"prosonic-1996":{"year": 1996, "name": "Prosonic"},'princeton-reverb-1965':{year:1964,name:'Princeton Reverb'},'deluxe-1957':{year:1955,name:'Tweed Deluxe'},'twin-1968':{year:1968,name:'Twin Reverb'},'deluxe-reverb-1965':{year:1963,name:'Deluxe Reverb'},'champ-1959':{year:1958,name:'Tweed Champ'},'tremolux-1955':{year:1955,name:'Tweed Tremolux'},'deluxe-1962':{year:1961,name:'Brown Deluxe'}};
 const reviewAmp=reviewAmps[exhibitQuery.get('amp')];
 if(reviewAmp){const i=amps.findIndex(a=>a.year===reviewAmp.year&&a.name===reviewAmp.name);if(i>=0){openAmp(i,cards[i]);if(exhibitQuery.get('view')==='inside')$('rear').click();}}

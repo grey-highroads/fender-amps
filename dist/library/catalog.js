@@ -30,6 +30,9 @@ Object.assign(SOURCES,{
 for(const r of SKIRTED_KNOB.references)SOURCES[r.id]={title:({retrofret1968:'1968 Twin Reverb — original knobs',folkway1965:'Early 1965 Deluxe Reverb',mysticKnobs:'Seller-attributed original mid-1960s knobs',fenderKnobs:'Fender Pure Vintage replacement specifications',isolatedKnobs:'Isolated modern replacement photographs'})[r.id],url:r.url,kind:r.id==='retrofret1968'||r.id==='folkway1965'?'Dated specimen photographs':r.id==='mysticKnobs'?'Seller attribution':'Modern replacement reference',note:r.basis};
 const material=(id,name,family,tileMm,notes,sources)=>({id,name,category:'Materials',family,tileMm,dimensions:{tileMm},status:'Procedural study',notes,sources,usedBy:[]});
 export const MATERIALS=[
+ material("cloth-oxblood","Oxblood grille cloth","cloth",32,'Color and grain are estimates from selected-year photographs; no scan or measured color.',["showmanPhoto"]),
+ material("tolex-blonde","Blonde vinyl","tolex",32,'Color and grain are estimates from selected-year photographs; no scan or measured color.',["showmanPhoto"]),
+ material("tolex-pink-brown","Early pink-brown vinyl","tolex",32,'Color and grain are estimates from selected-year photographs; no scan or measured color.',["vibrasonicPhoto"]),
  material('tolex-red-study','Red Prosonic covering study','tolex',32,'Red is a documented factory option; this regular vinyl grain is an approximation of the photographed lizard pattern, not a scan.',['prosonicFactory','prosonicSpecimen']),
  material('tweed-lacquered','Lacquered cotton tweed','tweed',24,'Diagonal twill with separate color, relief and roughness. Physical tile scale is provisional; exact panel wrapping and seam placement remain under review.',['deluxe','tweedReissue']),
  material('tolex-brown','Rough brown Tolex','tolex',32,'Brown vinyl study from a 1962 Deluxe gallery; color and grain scale estimated.',['brownDeluxe1962']),

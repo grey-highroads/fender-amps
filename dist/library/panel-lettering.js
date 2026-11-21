@@ -43,7 +43,7 @@ function rule(a,x,y,w,h){path(a,`M ${x} ${y} h ${w} v ${h} h ${-w} Z`,[1,0,0,1,0
 import {SMALL_PANELS} from './small-amp-profiles.js';
 import {TWIN_PANEL,DELUXE_PANEL,TWEED_PANEL} from './identification-profile.js';
 import {REAR_PANELS} from './rear-profiles.js';
-export const PANEL_IDS=['faceplate-super-six','faceplate-blues-junior','faceplate-prosonic','faceplate-princeton','faceplate-deluxe','faceplate-twin','faceplate-brown-deluxe','faceplate-5e3','faceplate-tremolux','faceplate-champ'];
+export const PANEL_IDS=['faceplate-super-reverb','faceplate-vibrasonic','faceplate-showman','faceplate-super-six','faceplate-blues-junior','faceplate-prosonic','faceplate-princeton','faceplate-deluxe','faceplate-twin','faceplate-brown-deluxe','faceplate-5e3','faceplate-tremolux','faceplate-champ'];
 export function panelArtwork(id){
  if(SMALL_PANELS[id]?.batch)return comboArtwork(id);
  const a=[],small=SMALL_PANELS[id],twin=id==='faceplate-twin',deluxe=id==='faceplate-deluxe',tweed=id==='faceplate-5e3',top=tweed||small?.top;

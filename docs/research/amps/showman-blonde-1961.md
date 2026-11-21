@@ -93,3 +93,29 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - Whether the earliest 6G14 used two or four output tubes. The dealer page that said two is gone. Not verified.
 - The Fender 6G14-A schematic was not read in this pass.
 
+
+## Builder selection and primary-source check, November 21, 2026
+
+Owner authorized this batch after the three-amp recommendation. Selected the
+**single-fifteen cabinet**, consistent with the catalog's typical configuration.
+The twelve-inch option is outside this assembly. The 1961 Showman 12 front photo
+was inspected at 800 px for ivory barrel knobs, blonde/oxblood and flat badge only;
+its cabinet and replacement K120 are not copied onto the fifteen.
+
+Both pages of [Fender drawing K-FJ](https://el34world.com/charts/Schematics/files/fender/Fender_SHOWMAN_6G14A.pdf)
+were rendered at 2000 px and read: four 5881, four 7025, two 12AX7; six silicon
+rectifier diodes; nine pots; main and extension speaker jacks. Control order is
+Normal Volume/Treble/Bass, Vibrato Volume/Treble/Bass/Speed/Intensity, Presence.
+
+The [1962–63 Fender catalog](https://guitar-compare.com/wp-content/uploads/2019/08/Fender-1962-1963-Catalog.pdf),
+PDF page 4, specifies a fifteen-inch Lansing speaker without model suffix and
+36 W × 24½ H × 11½ D cabinet; the tube complement agrees with K-FJ. It gives
+26 W × 8 H × **11½ D** for the head, conflicting with the field guide's **9 D**.
+The selected-year model keeps the 9-inch depth as an explicit estimate, pending
+a dated 1961 factory specification or measurement (Q28). The later catalog does
+not independently authenticate 1961 D130 versus F-series fitment.
+
+Tone ring, annular path, supports, leg pivots and head restraints are estimates.
+The cabinet is closed at the rear, with a port path at the tone-ring baffle; it
+is not described as an acoustically sealed box. Speaker and rectifier topics are
+menu-only. No simulated acoustics or measured bass-response claim.

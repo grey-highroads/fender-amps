@@ -53,3 +53,13 @@ The library check now compares the entire 19-entry set and its mapped fields to
 the pinned catalog rows, so adding an exhibit or changing either source requires
 a reviewed mapping update. Prices/rarity were not mapped into the runtime or
 independently audited, and catalog review labels were not upgraded.
+
+## November 21: three selected-year promotions
+
+Rows 38 (Vibrasonic), 44 (Showman blonde), 60 (Super Reverb black panel) now have
+shared construction assemblies and explorers. Total remains 208: thirteen active,
+195 WIP. Row names, hashes and the catalog CSV are unchanged. The runtime map
+records the early 5G13 selection within the grouped Vibrasonic row, 1961 6G14-A
+with single fifteen for Showman, and 1965-style AB763 for Super Reverb. Catalog
+40/85/40 W and introduction 1959/1960/1963 remain. See
+[VINTAGE_TRIO.md](VINTAGE_TRIO.md) and research Q28 for dimensional conflicts.

@@ -186,3 +186,14 @@ November 21, 2026, on `main`. Owner: slogan-style interface copy goes.
 - Catalog note and footer tagline rewritten.
 
 Not changed: the hidden history section in `dist/index.html` and its era and milestone text in `dist/app.js` (not displayed; `collection.css` hides `.timeline-section`). If it is ever shown again, its copy needs this pass. The footer's "Prototype / 001" and "Component library" link, and the details tab's "Reference example" row and component-library link, are builder items.
+
+## Builder handoff: November 21 vintage trio
+
+`dist/vintage-amp-features.js` adds plain factual first drafts for Super Reverb
+AB763 (9), early Vibrasonic 5G13 (6), blonde Showman 6G14-A/fifteen (7).
+Three new stories/voice lines are in `dist/collection.js`; all existing copy is
+retained from current main. The copy role can refine these 22 cards and three
+stories on main after the builder release. Preserve circuits, anchors, attribute
+values and uncertainty. No dealer specimen narrative in main card text.
+Primary drawing checks and later-catalog/selected-year conflicts are in the
+existing briefs and Q28. No new generated illustrations.

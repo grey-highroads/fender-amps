@@ -21,11 +21,11 @@ function labelMap(text,brand,color){const c=document.createElement('canvas');c.w
 export function createScrew(){const g=new THREE.Group(),metal=material('#afb5b3',{metalness:.95,roughness:.25});const dome=mesh(g,new THREE.SphereGeometry(3,16,8,0,Math.PI*2,0,Math.PI/2),metal,0,0,1);dome.rotation.x=Math.PI/2;mesh(g,new THREE.BoxGeometry(4.5,.55,.2),material('#343536'),0,0,3.85);return g;}
 export function createKnob(id='knob-skirted',options={}){
  if(id==='knob-skirted')return createSkirtedKnob(options);
- if(id==='knob-brown'){
-  const g=new THREE.Group(),brown=material('#39251e',{roughness:.36});
+ if(id==='knob-brown'||id==='knob-ivory'){
+  const g=new THREE.Group(),brown=material(id==='knob-ivory'?'#e6ddbc':'#39251e',{roughness:.36});
   const geo=new THREE.LatheGeometry([new THREE.Vector2(0,0),new THREE.Vector2(9.6,0),new THREE.Vector2(9.1,11),new THREE.Vector2(8,14),new THREE.Vector2(0,14)],160);geo.rotateX(Math.PI/2);mesh(g,geo,brown);
   for(let n=0;n<48;n++){const a=n*Math.PI/24;const rib=mesh(g,new THREE.BoxGeometry(.45,.45,8),brown,Math.sin(a)*9,Math.cos(a)*9,6);rib.rotation.z=-a;}
-  mesh(g,new THREE.BoxGeometry(.8,9,.35),material('#e2d2ae'),0,3,14.1);g.name=id;g.userData.componentId=id;return g;
+  mesh(g,new THREE.BoxGeometry(.8,9,.35),material(id==='knob-ivory'?'#49372b':'#e2d2ae'),0,3,14.1);g.name=id;g.userData.componentId=id;return g;
  }
 
  const g=new THREE.Group(),black=material('#151617',{roughness:.32}),white=material('#eee8d4');
@@ -47,12 +47,17 @@ export function createSpeaker(id){
  // Corrugated paper cone: a curved radial profile, open basket and exposed motor.
  const profile=[];for(let i=0;i<=64;i++){const radius=25+(R-38)*i/64,fr=i/64;const ridge=fr>.37&&fr<.94?Math.sin(fr*120)*.55:0;profile.push(new THREE.Vector2(radius,-53+fr*48+ridge));}const cone=mesh(g,new THREE.LatheGeometry(profile,96),paper);cone.rotation.x=Math.PI/2;
  for(let i=0;i<4;i++)torus(g,R-14-i*2.2,.7,paper,-2-i*.6);
- const cap=mesh(g,new THREE.SphereGeometry(27,48,20),paper,0,0,-52);cap.scale.z=.32;
+ const cap=mesh(g,new THREE.SphereGeometry(spec.build.aluminumDome?47:27,48,20),spec.build.aluminumDome?material('#c2c6c4',{metalness:.85,roughness:.3}):paper,0,0,-52);cap.scale.z=.32;
  // Pressed basket shell with three rows of open stamped windows per sector.
+ if(spec.build.castBasket){
+  ring(g,magR*.74,magR,paint,-78);
+  for(let i=0;i<spokes;i++){const angle=i*Math.PI*2/spokes,from=new THREE.Vector3(Math.sin(angle)*(R-8),Math.cos(angle)*(R-8),-5),to=new THREE.Vector3(Math.sin(angle)*magR*.85,Math.cos(angle)*magR*.85,-78),v=to.clone().sub(from);const rib=mesh(g,new THREE.BoxGeometry(24,9,v.length()),paint);rib.position.copy(from.clone().add(to).multiplyScalar(.5));rib.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),v.normalize());rib.name="cast-basket-spoke-estimate";}
+ }else{
  const vertices=[],indices=[],radial=96,angular=288,inner=magR*.70;
  for(let row=0;row<=radial;row++){const t=row/radial,r=inner+(R-5-inner)*t,z=-78*Math.pow(1-t,.85);for(let col=0;col<=angular;col++){const angle=col/angular*Math.PI*2;vertices.push(Math.sin(angle)*r,Math.cos(angle)*r,z);}}
  for(let row=0;row<radial;row++)for(let col=0;col<angular;col++){const t=(row+.5)/radial,sector=((col+.5)/angular*spokes)%1;const windowRow=(t>.16&&t<.32)||(t>.42&&t<.58)||(t>.68&&t<.84);const corner=Math.min(Math.abs(t-.16),Math.abs(t-.32),Math.abs(t-.42),Math.abs(t-.58),Math.abs(t-.68),Math.abs(t-.84));const margin=.14+.06*(1-Math.min(1,corner/.025));if(windowRow&&sector>margin&&sector<1-margin)continue;const k=row*(angular+1)+col;indices.push(k,k+angular+1,k+1,k+1,k+angular+1,k+angular+2);}
- const basketGeo=new THREE.BufferGeometry();basketGeo.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));basketGeo.setIndex(indices);basketGeo.computeVertexNormals();paint.side=THREE.DoubleSide;mesh(g,basketGeo,paint).name='pressed-basket';torus(g,R-6,1.8,paint,-2);
+ const basketGeo=new THREE.BufferGeometry();basketGeo.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));basketGeo.setIndex(indices);basketGeo.computeVertexNormals();paint.side=THREE.DoubleSide;mesh(g,basketGeo,paint).name='pressed-basket';}
+ torus(g,R-6,1.8,paint,-2);
  if(alnico){cylinder(g,magR*.76,magR*.83,depth-80,paint,-80-(depth-80)/2);cylinder(g,magR*.86,magR*.86,7,paint,-depth+3);}
  else{cylinder(g,magR,magR,25,magnet,-depth+15);cylinder(g,magR+3,magR+3,3,paint,-depth+29);cylinder(g,magR+2,magR+2,3,paint,-depth+1.5);}
  const label=labelMap(spec.model,spec.brand,spec.colors.label);const disk=mesh(g,new THREE.CircleGeometry(alnico?magR*.73:magR*.84,64),material('#ffffff',{map:label,roughness:.73}),0,0,-depth-1);disk.rotation.y=Math.PI;disk.name='speaker-label';

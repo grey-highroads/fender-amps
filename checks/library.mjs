@@ -103,3 +103,27 @@ assert.equal(ASSEMBLIES.find(a=>a.id==='prosonic-1996').loadOhm,16);
 assert.ok(SMALL_PANELS['faceplate-blues-junior'].pilotLed);
 assert.equal(SMALL_PANELS['faceplate-prosonic'].pilotColor,'#188345');
 console.log('Validated three new configurations, source mapping, speaker/rotary clearances and non-parallel wiring.');
+
+// Selected-year vintage batch: the early seven-tube Vibrasonic must not acquire
+// the later catalog complement, and the closed Showman retains its hidden driver.
+for(const [id,count,knobs,tubes] of [['super-reverb-ab763',4,10,9],['vibrasonic-5g13-1960',1,9,7],['showman-blonde-1961',1,9,10]]){
+ const a=ASSEMBLIES.find(a=>a.id===id),p=SMALL_PANELS[a.panel],s=assetById(a.speaker),r=s.build.frameDiameter/2;
+ assert.equal(a.speakerPositions.length,count);assert.equal(a.speakerCount,count);assert.equal(p.knobs.length,knobs);assert.equal(a.tubeTypes.length,tubes);assert.equal(p.jacks.length,4);
+ const [W,H]=a.headDimensionsMm||a.dimensionsMm;assert.ok(p.width<W-32);
+ for(const [i,x]of p.knobs.entries()){assert.ok(x>14&&x<p.width-14);for(const xx of p.knobs.slice(i+1))assert.ok(Math.abs(x-xx)>30);}
+ const [cw,ch]=a.cabinetDimensionsMm||a.dimensionsMm;
+ for(const [i,[x,y]]of a.speakerPositions.entries()){
+  assert.ok(Math.abs(x)+r<cw/2-16);
+  assert.ok(y+r<ch/2-(a.piggyback?16:a.topRail));assert.ok(y-r>-ch/2+(a.piggyback?16:a.bottomRail));
+  for(const [xx,yy]of a.speakerPositions.slice(i+1))assert.ok(Math.hypot(xx-x,yy-y)>r*2+3);
+ }
+ const row=mapping.entries.find(e=>e.runtimeKey===`${a.year}|${a.finish}|${a.name}`);assert.ok(row&&!CATALOG_AMPS.some(c=>c.catalogRow===row.catalogCsvRow));
+}
+const {COMBO_REAR_CONTROLS}=await import('../dist/library/combo-rear-profiles.js');
+assert.equal(COMBO_REAR_CONTROLS['vibrasonic-5g13-1960'].filter(([kind])=>kind==='jack').length,2,'Early 5G13 has no later extension speaker jack');
+assert.equal(ASSEMBLIES.find(a=>a.id==='vibrasonic-5g13-1960').tubeTypes.filter(t=>t==='7025').length,5);
+const showman=ASSEMBLIES.find(a=>a.id==='showman-blonde-1961');
+assert.equal(showman.dimensionsMm[1],showman.headDimensionsMm[1]+showman.headGapMm+showman.cabinetDimensionsMm[1]);
+assert.equal(showman.tubeTypes.filter(t=>t==='5881').length,4);
+assert.ok(showman.dimensionsStatus.includes('conflicts'));
+console.log('Validated selected-year Super Reverb, early Vibrasonic and Showman layouts, source promotions, tube complements and split cabinet envelope.');

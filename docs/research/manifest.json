@@ -87,8 +87,12 @@
       "catalogCsvRow": 44,
       "catalogRowSha256": "d58700fc194a56ac315826dfbce21bd177d26b8df2d45ddcfa934f71d45403aa",
       "openQuestions": [
-        "Q3"
-      ]
+        "Q3",
+        "Q28"
+      ],
+      "modeledAssembly": "showman-blonde-1961",
+      "builderCheckedOn": "2026-11-21",
+      "builderStatus": "Shared model and explorer locally validated; production verification next"
     },
     {
       "id": "deluxe-6g3-1962",
@@ -296,7 +300,10 @@
       "openQuestions": [
         "Q12",
         "Q17"
-      ]
+      ],
+      "modeledAssembly": "super-reverb-ab763",
+      "builderCheckedOn": "2026-11-21",
+      "builderStatus": "Shared model and explorer locally validated; production verification next"
     },
     {
       "id": "pro-tv-front-1949",
@@ -365,9 +372,13 @@
       "catalogCsvRow": 38,
       "catalogRowSha256": "659c834fb5a6cadd845623dd23e5c9044f3f664880ac6af1bc9f160561ba5462",
       "openQuestions": [
-        "Q2"
+        "Q2",
+        "Q28"
       ],
-      "researchPass": 3
+      "researchPass": 3,
+      "modeledAssembly": "vibrasonic-5g13-1960",
+      "builderCheckedOn": "2026-11-21",
+      "builderStatus": "Shared model and explorer locally validated; production verification next"
     },
     {
       "id": "bassman-blackface-ab165-1965",

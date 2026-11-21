@@ -173,3 +173,14 @@ Five features that most distinguish this amp:
 - Fenderguru starts production in 1964; the catalog, Mojotone and Ampwares say 1963.
 - A photo of a "1965 Super Reverb schematic" is on Wikimedia Commons under CC0. The licence covers the uploader's photo. The drawing itself is Fender's, so do not treat it as cleared for display without advice.
 
+
+## Builder selection, November 21, 2026
+
+Owner authorized a new shared assembly and explorer for the 1965-style AB763.
+The model uses the secondary 25⅛ W × 24½ H × 10½ D envelope, four generic
+ceramic-format tens, two 6L6GC, six small tubes and GZ34. Ten rotary controls;
+Middle only on Vibrato. Nine topics use the existing rechecked drawing facts.
+The feedback topic is menu-only because the network is hidden. The speaker
+array is four parallel branches at nominal 2 Ω. No universal CTS stock claim,
+exact socket position or measured acoustic result is inferred from the geometry.
+Q17's missing primary layout remains open.

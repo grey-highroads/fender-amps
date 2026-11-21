@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-20",
-  "scope": "All 208 source rows: ten reviewed shared construction assemblies and 198 spreadsheet-only WIP entries. Selected-year differences remain explicit.",
+  "reviewedAt": "2026-11-21",
+  "scope": "All 208 rows: thirteen shared construction assemblies and 195 spreadsheet-only WIP entries; selected-year differences explicit.",
   "runtimeSource": "dist/collection.js",
   "catalogSource": "data/catalog/catalog.csv",
   "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
@@ -718,22 +718,28 @@
       "research": "docs/handoff/SMALL_AMPS.md"
     },
     {
-      "runtimeKey": "1959|wip|Vibrasonic (6G13 / 6G13-A)",
+      "runtimeKey": "1959|brown|Vibrasonic",
       "runtime": {
         "year": 1959,
-        "name": "Vibrasonic (6G13 / 6G13-A)",
-        "years": "1959–1963",
-        "watts": "40",
-        "speakers": "1x15 open-back combo",
+        "name": "Vibrasonic",
+        "years": "1959–1963; 1960-style 5G13 study",
+        "watts": 40,
+        "speakers": "1 × 15″",
         "load": "8 Ω",
-        "finish": "wip",
-        "circuit": "Spelling differs from later Vibrosonic Reverb."
+        "finish": "brown",
+        "circuit": "5G13"
       },
       "catalogCsvRow": 38,
       "catalogName": "Vibrasonic (6G13 / 6G13-A)",
       "catalogRowSha256": "659c834fb5a6cadd845623dd23e5c9044f3f664880ac6af1bc9f160561ba5462",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected-year circuit and construction",
+          "status": "Explicit selection",
+          "decision": "Catalog row 38 groups 6G13 / 6G13-A; this explicitly selects earlier 5G13. Catalog 40 W retained against a secondary 50 W figure. Early cabinet envelope is a secondary estimate; later Fender catalog width and tube complement differ. Exact speaker suffix remains unresolved."
+        }
+      ],
+      "scopeNote": "Catalog row 38 groups 6G13 / 6G13-A; this explicitly selects earlier 5G13. Catalog 40 W retained against a secondary 50 W figure. Early cabinet envelope is a secondary estimate; later Fender catalog width and tube complement differ. Exact speaker suffix remains unresolved."
     },
     {
       "runtimeKey": "1960|wip|Bandmaster (6G7 combo)",
@@ -826,22 +832,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1960|wip|Showman (blonde)",
+      "runtimeKey": "1960|blonde|Showman",
       "runtime": {
         "year": 1960,
-        "name": "Showman (blonde)",
-        "years": "1960–1963",
-        "watts": "85",
-        "speakers": "Head; typically 1x15 closed-back cabinet",
+        "name": "Showman",
+        "years": "1960–1963; 1961-style 6G14-A study",
+        "watts": 85,
+        "speakers": "1 × 15″",
         "load": "8 Ω",
-        "finish": "wip",
-        "circuit": "Price is head only. Early circuits/output vary."
+        "finish": "blonde",
+        "circuit": "6G14-A"
       },
       "catalogCsvRow": 44,
       "catalogName": "Showman (blonde)",
       "catalogRowSha256": "d58700fc194a56ac315826dfbce21bd177d26b8df2d45ddcfa934f71d45403aa",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected-year circuit and construction",
+          "status": "Explicit selection",
+          "decision": "Catalog row 44, 85 W retained against secondary 80–100 W figures. Fifteen cabinet dimensions agree with a later period Fender catalog. Head depth uses a selected-year secondary 9-inch estimate; later catalog 11½-inch depth conflicts. Tone-ring geometry, speaker suffix and fastening details remain provisional."
+        }
+      ],
+      "scopeNote": "Catalog row 44, 85 W retained against secondary 80–100 W figures. Fifteen cabinet dimensions agree with a later period Fender catalog. Head depth uses a selected-year secondary 9-inch estimate; later catalog 11½-inch depth conflicts. Tone-ring geometry, speaker suffix and fastening details remain provisional."
     },
     {
       "runtimeKey": "1961|wip|Princeton (6G2 brown)",
@@ -1147,22 +1159,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1963|wip|Super Reverb (black panel)",
+      "runtimeKey": "1963|black|Super Reverb",
       "runtime": {
         "year": 1963,
-        "name": "Super Reverb (black panel)",
-        "years": "1963–1967",
-        "watts": "40",
-        "speakers": "4x10 open-back combo",
+        "name": "Super Reverb",
+        "years": "1963–1967; 1965-style AB763 study",
+        "watts": 40,
+        "speakers": "4 × 10″",
         "load": "2 Ω",
-        "finish": "wip",
-        "circuit": "Vintage rated output often 40W; reissue rated 45W."
+        "finish": "black",
+        "circuit": "AB763"
       },
       "catalogCsvRow": 60,
       "catalogName": "Super Reverb (black panel)",
       "catalogRowSha256": "c3e5d82578d7848a58ce794ed67cb60ab429403c6474ac405676bb7defe0f98e",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected-year circuit and construction",
+          "status": "Explicit selection",
+          "decision": "Catalog row 60, 1963 introduction; selected 1965-style AB763, not every revision in the run. Cabinet dimensions come from a secondary field guide. Speaker maker, exact interior positions and detailed hardware dimensions remain estimates."
+        }
+      ],
+      "scopeNote": "Catalog row 60, 1963 introduction; selected 1965-style AB763, not every revision in the run. Cabinet dimensions come from a secondary field guide. Speaker maker, exact interior positions and detailed hardware dimensions remain estimates."
     },
     {
       "runtimeKey": "1963|wip|Dual Showman (black panel)",

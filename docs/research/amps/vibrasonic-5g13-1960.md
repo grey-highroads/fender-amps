@@ -84,3 +84,25 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - "First tolex Fender" is often said of this amp. The source read here supports the rectifier and JBL firsts only. Do not state the tolex claim.
 - The 6G13-A schematic exists at [fender-6g13a-schem](https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Vibrasonic-6G13A-Schematic.pdf) and was not read in this pass.
 - Covering colour for a 1960 amp comes from one specimen photo and one field-guide line.
+
+## Builder check, November 21, 2026
+
+The owner authorized the Super Reverb / Vibrasonic / Showman construction batch.
+The selected 1960 front photograph was inspected at 800 px; it confirms brown
+barrel knobs, light pink-brown covering, striped dark cloth and a flat script
+badge. Colors and hardware dimensions remain estimates. No photo is redistributed.
+
+Both pages of Fender drawing A-FJ were rendered at 2000 px and read. The layout
+shows **five 7025 bottles and two 6L6GCs**, seven tubes total, plus six rectifier
+diodes. This supersedes the incomplete tube-count shorthand above. The underside
+layout reverses to front-reading Bass, Treble, Volume for each channel; the
+Vibrato channel then has Speed, Intensity, followed by shared Presence. One speaker
+jack and one vibrato-pedal jack; no later extension jack.
+
+The later [1962–63 Fender catalog](https://guitar-compare.com/wp-content/uploads/2019/08/Fender-1962-1963-Catalog.pdf),
+PDF page 4, explicitly specifies a Lansing D-130, 26 W × 20 H × 10¼ D inches,
+and four 7025/two 12AX7/two 5881. That is a later configuration, not proof of the
+1960 5G13 complement or exact suffix. The model retains the early field-guide
+25-inch width and early drawing's seven tubes. New Q28 records the width gap.
+The shared fifteen has an estimated cast basket and aluminum dome, with no
+asserted D130F/D140F identity, authenticated rating or original label.

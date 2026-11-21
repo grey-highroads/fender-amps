@@ -18,6 +18,11 @@ Front, rear, side, panel and interior of a matching dated specimen are now cover
 
 **Status: partly resolved.** Two 1961 6G14-A amps eight serial numbers apart are documented, one a 12 and one a 15, and the 15 is sold with what its dealer calls the original JBL D130; choosing between them is now a decision, and no Fender document for the speaker model was read.
 
+November 21 builder update: the owner-authorized batch selects the single fifteen.
+Fender's later 1962–63 catalog confirms the fifteen-inch Lansing format without a
+model suffix. Exact 1961 suffix remains open; the model uses a generic cast-frame
+fifteen, not the specimen's replacement D140F. Head depth is tracked in Q28.
+
 ### Q4. Deluxe 6G3: channel order and baffle fixing.
 
 **Status: partly resolved.** A 1962 specimen reads Normal then Bright from left to right with no front baffle screws visible, and the Fender schematic settles the rectifier as GZ34; no early amp was found to confirm the other layout.
@@ -147,3 +152,13 @@ placements, exact 1972 Super Six revision or 1996 Prosonic values against the
 available 1997 sheet. The original Junior service text is kept separate from
 later sheets in the downloaded bundle. Owner accepted the earlier batch’s
 hotspots but rejected its renders; further generated-image work is deferred.
+
+### Q28. Selected-year Vibrasonic width and Showman head depth.
+
+**Status: open; blocks exact dimensional acceptance, not educational construction.**
+November 21 builder read the 1962–63 Fender catalog, PDF page 4, at full page size.
+It gives Vibrasonic width 26 inches against the early field-guide 25, and Showman
+head depth 11½ inches against the field-guide 9. The models select 1960 5G13 and
+1961 6G14-A respectively; the later catalog is not automatically applied to those
+years. Need a selected-year factory document or actual cabinet measurement.
+Both differences are disclosed in profiles, catalog mapping and fine print.

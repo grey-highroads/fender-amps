@@ -1,5 +1,9 @@
 // Targets on the shared assemblies. All detailed placement remains estimated.
 export const EXPLORER_ANCHORS={
+"super-reverb-ab763":{"middle": {"knob": 5, "side": "front"}, "bright": {"toggle": 0, "side": "front"}, "reverb": {"knob": 7, "side": "front"}, "tremolo": {"knob": 9, "side": "front"}, "speakers": {"speakerIndex": 2, "side": "rear"}, "supply": {"tube": 0, "side": "rear"}, "power": {"tube": 1, "side": "rear"}, "feedback": {"chassis": true, "menuOnly": true, "side": "rear"}, "legs": {"leg": true, "side": "rear"}},
+"vibrasonic-5g13-1960":{"tone": {"knob": 1, "side": "front"}, "harmonic": {"knob": 7, "side": "front"}, "presence": {"knob": 8, "side": "front"}, "speaker": {"speakerIndex": 0, "side": "rear"}, "power": {"tube": 0, "side": "rear"}, "rectifier": {"chassis": true, "menuOnly": true, "side": "rear"}},
+"showman-blonde-1961":{"harmonic": {"knob": 7, "side": "front"}, "presence": {"knob": 8, "side": "front"}, "power": {"tube": 0, "side": "rear"}, "rectifier": {"chassis": true, "menuOnly": true, "side": "rear"}, "cabinet": {"cabinet": true, "side": "front"}, "speaker": {"speakerIndex": 0, "menuOnly": true, "side": "rear"}, "legs": {"leg": true, "side": "rear"}},
+
   "princeton-reverb-aa1164": {
     "tone": {
       "knob": 1,
