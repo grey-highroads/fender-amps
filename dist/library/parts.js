@@ -21,6 +21,12 @@ function labelMap(text,brand,color){const c=document.createElement('canvas');c.w
 export function createScrew(){const g=new THREE.Group(),metal=material('#afb5b3',{metalness:.95,roughness:.25});const dome=mesh(g,new THREE.SphereGeometry(3,16,8,0,Math.PI*2,0,Math.PI/2),metal,0,0,1);dome.rotation.x=Math.PI/2;mesh(g,new THREE.BoxGeometry(4.5,.55,.2),material('#343536'),0,0,3.85);return g;}
 export function createKnob(id='knob-skirted',options={}){
  if(id==='knob-skirted')return createSkirtedKnob(options);
+ if(id==='knob-radio-metal'){
+  const g=new THREE.Group(),silver=material('#b8b9ac',{metalness:.85,roughness:.42});
+  cylinder(g,10,9.5,13,silver,6.5);cylinder(g,8.6,8.6,1.2,material('#a7a99f',{metalness:.8,roughness:.5}),13.8);
+  for(let n=0;n<64;n++){const a=n*Math.PI/32,rib=mesh(g,new THREE.BoxGeometry(.35,.35,10),silver,Math.sin(a)*9.8,Math.cos(a)*9.8,6);rib.rotation.z=-a;}
+  mesh(g,new THREE.BoxGeometry(.8,6,.3),material('#292d28'),0,4.5,14.6);g.name=id;g.userData.componentId=id;return g;
+ }
  if(id==='knob-brown'||id==='knob-ivory'){
   const g=new THREE.Group(),brown=material(id==='knob-ivory'?'#e6ddbc':'#39251e',{roughness:.36});
   const geo=new THREE.LatheGeometry([new THREE.Vector2(0,0),new THREE.Vector2(9.6,0),new THREE.Vector2(9.1,11),new THREE.Vector2(8,14),new THREE.Vector2(0,14)],160);geo.rotateX(Math.PI/2);mesh(g,geo,brown);
@@ -74,10 +80,12 @@ function createSmallFaceplate(id){
  const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;
  mesh(g,new THREE.BoxGeometry(W,H,2),material(p.top?'#b9beb6':p.black?'#101313':'#39291f',{metalness:p.top?.8:.1,roughness:.42}));
  mesh(g,new THREE.PlaneGeometry(W-1,H-1),material('#ffffff',{map:t,metalness:p.top?.65:0,roughness:.48}),0,0,1.1);
+ if(p.border){const edge=material(p.border);for(const sign of [-1,1]){mesh(g,new THREE.BoxGeometry(W,1,1),edge,0,sign*(H/2-1),2);mesh(g,new THREE.BoxGeometry(1,H,1),edge,sign*(W/2-1),0,2);}}
  for(const [i,k] of p.knobs.entries()){const knob=createKnob(p.knob,{setting:3.5});knob.position.set(k-W/2,0,1.5);if(!p.black)knob.rotation.z=.35+(i%3)*.15;g.add(knob);}
  for(const [j,y] of p.jacks){const jack=createJack();jack.position.set(j-W/2,y,1.5);g.add(jack);}
  const jewel=p.pilotLed?createPanelLED():createJewel(p.pilotColor);jewel.position.set(p.pilot-W/2,0,2);g.add(jewel);
  for(const [x,y] of p.toggles||[]){cylinder(g,5,5,3,material('#bbc0b8',{metalness:.9}),3,x-W/2,y);mesh(g,new THREE.BoxGeometry(3,4,10),material('#bbc0b8',{metalness:.9}),x-W/2,y,9);}
+ for(const [x,y]of p.slides||[]){mesh(g,new THREE.BoxGeometry(6,16,2),material('#b7b9ac',{metalness:.75}),x-W/2,y,2);mesh(g,new THREE.BoxGeometry(3.5,13,2.5),material('#111514'),x-W/2,y,3.5);mesh(g,new THREE.BoxGeometry(3.5,4,3),material('#9a9d94'),x-W/2,y+3,5);}
  for(const [x,y] of p.buttons||[])mesh(g,new THREE.BoxGeometry(7,7,5),material('#171919'),x-W/2,y,4);
  if(p.fuse)cylinder(g,6.5,6.5,12,material('#171817'),7,p.fuse-W/2);
  if(p.toggle){cylinder(g,5,5,3,material('#b9c0bb',{metalness:.9}),3,p.toggle-W/2);mesh(g,new THREE.BoxGeometry(3,3,12),material('#b9c0bb',{metalness:.9}),p.toggle-W/2,0,10);}
@@ -100,6 +108,7 @@ export function createFaceplate(id){
  const jewel=createJewel();jewel.position.set((tweed?EP.pilot:twin?TP.pilot/TP.widthMm*W:557)-W/2,0,2);g.add(jewel);g.name=id;g.userData.letteringRevision=LETTERING_REVISION;return g;
 }
 export function createBadge(id){
+ if(id==='badge-pano-yellow'){const g=createBadge('badge-flat-script');g.traverse(o=>{if(o.isMesh&&o.material.map){o.material=o.material.clone();o.material.color.set('#edc112');}});g.name=id;g.userData.componentId=id;return g;}
  if(id==='badge-script')return createRaisedTailBadge();
  if(id==='badge-junior'){
   const g=new THREE.Group(),W=66,H=23;mesh(g,new THREE.BoxGeometry(W,H,1),material('#1e2222'));
@@ -109,9 +118,9 @@ export function createBadge(id){
   const g=new THREE.Group(),c=document.createElement('canvas');c.width=768;c.height=256;const x=c.getContext('2d');x.fillStyle='#493323';x.fillRect(0,0,768,256);x.strokeStyle='#c5b38c';x.lineWidth=12;x.strokeRect(8,8,752,240);x.fillStyle='#d2bf92';x.font='italic 172px Georgia';x.textAlign='center';x.fillText('Fender',384,181,690);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.BoxGeometry(66,23,1),material('#86704e',{metalness:.7}));mesh(g,new THREE.PlaneGeometry(65,22),material('#fff',{map:t,roughness:.5}),0,0,.6);for(const sx of [-29,29]){const screw=createScrew();screw.scale.setScalar(.45);screw.position.set(sx,0,1);g.add(screw);}g.name=id;return g;
  }
 
- const def=assetById(id),g=new THREE.Group(),W=def.dimensions.widthMm,H=def.dimensions.heightMm,tweed=id==='badge-tweed';
+ const def=assetById(id),g=new THREE.Group(),W=def.dimensions.widthMm,H=def.dimensions.heightMm,tweed=id==='badge-tweed'||id==='badge-bassman-tweed';
  const c=document.createElement('canvas');c.width=1024;c.height=320;const x=c.getContext('2d');const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
- const draw=(image)=>{x.clearRect(0,0,1024,320);if(tweed){x.fillStyle='#4d362a';x.fillRect(0,0,1024,320);x.strokeStyle='#bdb293';x.lineWidth=12;x.strokeRect(8,8,1008,304);}if(image){const m=document.createElement('canvas');m.width=1024;m.height=320;const q=m.getContext('2d');q.drawImage(image,0,0,1024,320);q.globalCompositeOperation='source-in';q.fillStyle='#d1d0be';q.fillRect(0,0,1024,320);x.drawImage(m,tweed?35:0,tweed?24:0,tweed?510:1024,tweed?220:320);}if(tweed){x.fillStyle='#d1c2a0';x.font='italic 99px Georgia';x.fillText('Deluxe',560,199);}t.needsUpdate=true;};draw();
+ const draw=(image)=>{x.clearRect(0,0,1024,320);if(tweed){x.fillStyle='#4d362a';x.fillRect(0,0,1024,320);x.strokeStyle='#bdb293';x.lineWidth=12;x.strokeRect(8,8,1008,304);}if(image){const m=document.createElement('canvas');m.width=1024;m.height=320;const q=m.getContext('2d');q.drawImage(image,0,0,1024,320);q.globalCompositeOperation='source-in';q.fillStyle='#d1d0be';q.fillRect(0,0,1024,320);x.drawImage(m,tweed?35:0,tweed?24:0,tweed?510:1024,tweed?220:320);}if(tweed){x.fillStyle='#d1c2a0';x.font='italic 99px Georgia';if(id==='badge-bassman-tweed')x.fillText('Bassman',560,199,450);else x.fillText('Deluxe',560,199);}t.needsUpdate=true;};draw();
  if(brandImage.complete&&brandImage.naturalWidth)draw(brandImage);else brandReady.then(()=>draw(brandImage.naturalWidth?brandImage:null));
  mesh(g,new THREE.PlaneGeometry(W,H),material('#d7dbd5',{map:t,transparent:true,roughness:.34,metalness:.75,side:THREE.DoubleSide}),0,0,1);
  if(tweed)for(const sx of [-1,1])for(const sy of [-1,1]){const screw=createScrew();screw.scale.setScalar(.45);screw.position.set(sx*(W/2-3),sy*(H/2-3),1);g.add(screw);}g.name=id;return g;
@@ -120,7 +129,7 @@ export function createComponent(id){const a=assetById(id);if(!a)throw new Error(
  if(a.category==='Speakers')return createSpeaker(id);
  if(a.category==='Materials'){g=new THREE.Group();const m=createMaterial(id);const tile=mesh(g,new THREE.BoxGeometry(180,180,8,1,1,1),m);physicalUV(tile);return g;}
  if(a.kind==='faceplate')return createFaceplate(id);if(a.kind==='badge')return createBadge(id);
- if(id.startsWith('knob-'))return createKnob(id);if(id==='jewel-red')return createJewel();if(id==='jewel-green')return createJewel('#188345');if(id==='pilot-led-red')return createPanelLED();if(id==='caster-snap-in-study')return createCaster();if(id==='jack-quarter')return createJack();if(id.startsWith('handle-'))return createHandle(id);if(id==='screw-slot')return createScrew();
+ if(id.startsWith('knob-'))return createKnob(id);if(id==='jewel-red')return createJewel();if(id==='jewel-yellow')return createJewel('#d2ac16');if(id==='jewel-green')return createJewel('#188345');if(id==='pilot-led-red')return createPanelLED();if(id==='caster-snap-in-study')return createCaster();if(id==='jack-quarter')return createJack();if(id.startsWith('handle-'))return createHandle(id);if(id==='screw-slot')return createScrew();
  g=new THREE.Group();if(id==='trim-drip-edge'){const m=createMaterial('metal-nickel');mesh(g,new THREE.BoxGeometry(180,6,4),m);mesh(g,new THREE.BoxGeometry(6,100,4),m,-87,-47,0);return g;}
  // Plate artwork is generated from the same layout records used by assemblies.
  const plate=new THREE.Mesh(new THREE.BoxGeometry(a.dimensions.widthMm,a.dimensions.heightMm,1.5),material(id.includes('twin')?'#abb5b3':id.includes('5e3')?'#b8bfbc':'#141719',{metalness:.65,roughness:.35}));g.add(plate);const c=document.createElement('canvas');c.width=2048;c.height=256;const x=c.getContext('2d');x.textAlign='center';x.fillStyle=id.includes('twin')?'#245b6d':'#e4dfcd';x.font='italic 100px Georgia';x.fillText(a.name.replace(' faceplate','').replace(' nameplate',''),1024,110);x.font='28px Arial';x.fillText('FENDER   •   REFERENCE ARTWORK STUDY',1024,200);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;mesh(g,new THREE.PlaneGeometry(a.dimensions.widthMm*.96,a.dimensions.heightMm*.9),material('#ffffff',{map:t,transparent:true}),0,0,1);g.name=id;return g;

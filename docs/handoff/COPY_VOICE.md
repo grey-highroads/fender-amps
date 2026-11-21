@@ -213,3 +213,12 @@ Flags:
 - The year-range labels on six amps ("1959–1963; 1960-style 5G13 study" and similar) read as internal notes, but they are reconciled against `data/catalog/timeline-map.json` and `checks/library.mjs` fails if they change. A copy change was pushed and reverted on November 21. Builder item: change them together with the map.
 
 Checked in a headless browser at 1440 and 390 px wide: every card opens, no title wraps past three lines, no script errors.
+
+## Builder handoff: two Bassmans and Pano Verb
+
+November 21: `dist/bassman-pano-features.js` contains factual first drafts for
+5F6-A (9), AB165 (6), Pano Verb (7), plus three new stories in `collection.js`.
+All previous copy is retained from main `f4aa2cc`. Copy role can refine the new
+text after the builder release. Keep factual values, anchors, two independent
+Pano outputs, cabinet estimates and Q29 drawing-label conflict intact. Factory
+circuit/construction leads the text; specimen caveats stay in fine print/docs.

@@ -43,7 +43,7 @@ function rule(a,x,y,w,h){path(a,`M ${x} ${y} h ${w} v ${h} h ${-w} Z`,[1,0,0,1,0
 import {SMALL_PANELS} from './small-amp-profiles.js';
 import {TWIN_PANEL,DELUXE_PANEL,TWEED_PANEL} from './identification-profile.js';
 import {REAR_PANELS} from './rear-profiles.js';
-export const PANEL_IDS=['faceplate-super-reverb','faceplate-vibrasonic','faceplate-showman','faceplate-super-six','faceplate-blues-junior','faceplate-prosonic','faceplate-princeton','faceplate-deluxe','faceplate-twin','faceplate-brown-deluxe','faceplate-5e3','faceplate-tremolux','faceplate-champ'];
+export const PANEL_IDS=['faceplate-bassman-tweed','faceplate-bassman-black','faceplate-pano','faceplate-super-reverb','faceplate-vibrasonic','faceplate-showman','faceplate-super-six','faceplate-blues-junior','faceplate-prosonic','faceplate-princeton','faceplate-deluxe','faceplate-twin','faceplate-brown-deluxe','faceplate-5e3','faceplate-tremolux','faceplate-champ'];
 export function panelArtwork(id){
  if(SMALL_PANELS[id]?.batch)return comboArtwork(id);
  const a=[],small=SMALL_PANELS[id],twin=id==='faceplate-twin',deluxe=id==='faceplate-deluxe',tweed=id==='faceplate-5e3',top=tweed||small?.top;
@@ -104,9 +104,10 @@ function comboArtwork(id){
   label(a,p.labels[i],k,H-5,2.65,{width:34,weight:.16});
   if(p.numbers)for(let n=1;n<=p.numbers;n++){const angle=-2.45+(n-1)/(p.numbers-1)*4.9;label(a,String(n),k+Math.sin(angle)*14,H/2-Math.cos(angle)*15-1,2.5,{weight:.12});}
  }
- for(const [i,[k]] of p.jacks.entries())label(a,String(i%2+1),k,5,3,{weight:.12});
+ for(const [i,[k,y]] of p.jacks.entries())label(a,String(i%2+1),id==='faceplate-bassman-tweed'?k+11:k,id==='faceplate-bassman-tweed'?H/2-y:5,3,{weight:.12});
  for(const [k,text] of p.channels||[])label(a,text,k,H-5,2.8,{weight:.12,width:49});
  for(const [k,y,text] of [...p.toggles||[],...p.buttons||[]])label(a,text,k,y?7:H-5,2.4,{weight:.12,width:32});
+ for(const [x,y,up,down]of p.slides||[]){label(a,up,x,6,2,{width:26,weight:.12});label(a,down,x,H-6,2,{width:26,weight:.12});}
  if(p.title){label(a,p.title,p.titleX,6,9,{width:p.titleWidth,weight:.18});label(a,'FENDER MUSICAL INSTRUMENTS',p.titleX,H-5,1.5,{width:p.titleWidth,weight:.1});}
  if(id==='faceplate-blues-junior')label(a,'INPUT',395,H-5,2.5,{weight:.13});
  return {id,width:W,height:H,ink:p.ink,background:p.background,paths:a,revision:LETTERING_REVISION};

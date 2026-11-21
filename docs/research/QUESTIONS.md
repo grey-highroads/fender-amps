@@ -122,7 +122,7 @@ Licence and credit were read from the Commons metadata on 2026-11-20. Check each
 
 ### Q23. No shared assemblies for the Bassman 5F6-A and Vibroverb 6G16.
 
-**Status: open. Blocks the explorers.** Both are on the timeline. Main now has six assemblies (5E3, Deluxe Reverb, 1968 Twin, Champ, early Tremolux and brown Deluxe), none of which is a 4x10 or a 2x10 brown cabinet, so hotspot anchors need a new assembly first.
+**Status: partly resolved November 21.** The owner authorized and the builder implemented a shared 5F6-A assembly and nine topics; its absence blocker is resolved upon publication. The Vibroverb 6G16 still needs its own assembly. The following is historical context: both were on the timeline. Main now has six assemblies (5E3, Deluxe Reverb, 1968 Twin, Champ, early Tremolux and brown Deluxe), none of which is a 4x10 or a 2x10 brown cabinet, so hotspot anchors need a new assembly first.
 
 ### Q24. Bassman 5B6 dimensions.
 
@@ -162,3 +162,13 @@ head depth 11½ inches against the field-guide 9. The models select 1960 5G13 an
 1961 6G14-A respectively; the later catalog is not automatically applied to those
 years. Need a selected-year factory document or actual cabinet measurement.
 Both differences are disclosed in profiles, catalog mapping and fine print.
+
+### Q29. Bassman 5F6-A inverter label in I-EG drawing pair.
+
+**Status: open; blocks an unqualified tube-label assertion, not the assembly.**
+November 21 visual read: the layout labels the inverter 12AX7 while the schematic
+label appears 12AY7. The topology and surrounding component values are clear.
+Model follows the layout and discloses the discrepancy in profile/card fine print.
+Need an authoritative revision clarification or sharper independent Fender copy;
+do not silently erase either label. Existing brief's statement that all tube
+labels agree is superseded by this current check.

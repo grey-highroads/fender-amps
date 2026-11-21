@@ -80,3 +80,32 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - Which output is 4 ohms and which is 8 was not confirmed.
 - How the harmonic tremolo is implemented was not researched.
 - Thomann lists 34.6 kg, which looks like shipping weight. Use Fender's 61 lb.
+
+## Builder manual and factory-photo check, November 21, 2026
+
+The [Fender PR 6273 owner manual](https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf)
+was downloaded and English printed pages 1–2 (PDF pages 2–3) rendered at 1700 px
+and visually read. This resolves the open output assignment: **OUT 1: 50 W,
+4 Ω minimum, fifteen-inch Jensen C15N; OUT 2: 20 W, 8 Ω minimum, ten-inch Jensen
+P10R.** These are separate amplifier outputs, not main/extension jacks and not
+a combined 4/8-ohm load. Eleven pots and two slide switches are shown.
+Drive has a bypassed off detent and up to +26 dB boost. Split routes reverb only
+to the ten; Full to both. The manual specifies six 12AX7, one 12AT7, two 6L6 and
+two 6V6. It does not provide a socket map or internal rectifier/modulation drawing.
+No circuit topology or measured pitch-shifting result is inferred from marketing.
+
+The [Fender product gallery](https://uk.fender.com/products/jack-white-pano-verb)
+and its [rear photograph](https://uk.fender.com/cdn/shop/files/8151904000_fen_amp_bck_1_nr.png?v=1739875061&width=1445)
+were checked. Rear-reading ten is upper left, fifteen lower right; local
+front-reading coordinates reverse that. The substantial upper and lower rear
+boards remain in place. Frame/motor geometry and positions are estimates.
+The source speaker photo is used for structure, never redistributed.
+
+Correction to the earlier photo table: its `m4njlumshjnc2bx42q3x.jpg` URL shows
+a product hangtag/top, **not the rear speakers** when opened full size. Do not use
+that URL as baffle evidence. The verified factory rear image supersedes it.
+Manufacturer dimensions 26.6 W × 26.9 H × 10.7 D inches are retained; whether
+these include handle/feet is unspecified. Model uses distinct ceramic fifteen
+and alnico ten studies, not the Lansing cast-frame fifteen from the prior batch.
+The new metal radio knob, yellow jewel and flat yellow badge are estimated
+construction, not accepted photoreal assets. No generated illustrations added.

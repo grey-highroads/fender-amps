@@ -63,3 +63,13 @@ records the early 5G13 selection within the grouped Vibrasonic row, 1961 6G14-A
 with single fifteen for Showman, and 1965-style AB763 for Super Reverb. Catalog
 40/85/40 W and introduction 1959/1960/1963 remain. See
 [VINTAGE_TRIO.md](VINTAGE_TRIO.md) and research Q28 for dimensional conflicts.
+
+## November 21: Bassman / Pano promotions
+
+Rows 35, 70 and 206 now map to shared construction profiles: 1959-style tweed
+5F6-A (group introduction remains 1957), 1965-style black-panel AB165 (1964
+introduction), 2024 Pano Verb PR 6273. Total stays 208, with sixteen active and
+192 WIP. Catalog rows/hashes and CSV unchanged; descriptive alias Pano Verb
+retains the Jack White Pano Verb source row. Pano displays 4 / 8 Ω but has no
+combined load: distinct 4 Ω OUT1 and 8 Ω OUT2 are checked against Fender's manual.
+See [BASSMAN_PANO.md](BASSMAN_PANO.md) for estimates, validation and release.

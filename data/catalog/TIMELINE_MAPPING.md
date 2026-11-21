@@ -1,7 +1,7 @@
 # Full timeline mapping update
 
-The current machine-readable map covers all 208 catalog rows: thirteen shared
-construction studies and 195 spreadsheet-only WIP placeholders. The table below
+The current machine-readable map covers all 208 catalog rows: sixteen shared
+construction studies and 192 spreadsheet-only WIP placeholders. The table below
 is historical reconciliation of the earlier selected collection, not the current
 entry list. See [current timeline](../../docs/handoff/FULL_TIMELINE.md) and
 [timeline-map.json](timeline-map.json) for current coverage.

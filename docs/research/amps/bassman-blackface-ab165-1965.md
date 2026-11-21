@@ -86,3 +86,24 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - AA165 and AB165 tube-chart labels were reused; readers report amps whose label and circuit disagree. Confirm the circuit from the board, not the chart. [mojo-bf-bassman](https://mojotone.com/blogs/fender-field-guide/fender-blackface-bassman)
 - Speaker brand by year is not settled.
 - The AA864 and AA165 drawings exist at the same retailer and were not read.
+
+## Builder check, November 21, 2026
+
+Owner authorized the shared 1965-style AB165 head and horizontal 2x12 cabinet.
+Both D-FE pages were rendered at 1900 px and read: six tubes (three 7025, one
+12AT7, two 6L6GC), six rectifier diodes, six rotary controls, Deep in the Bass
+channel tone network and 120 pF Bright at the Normal Volume. The drawing shows
+a shared post-mix gain stage with 47 kΩ output feedback, and 220 kΩ output-plate
+feedback paths. The balance network and minimum-hum service note are explicit.
+These are circuit facts, not measured gain, distortion or stability results.
+
+The 1965 head front photo was opened at 800 px for control order, knobs and
+tailed badge. Its service work does not authenticate factory speaker fitment.
+Use generic ceramic-format twelves at nominal 8 Ω each, in parallel for 4 Ω.
+The cabinet remains closed; the internal-speaker topic is menu-only. No Showman
+tone ring is copied onto this ordinary two-speaker baffle.
+
+Head 22¼ W × 8 H × 9 D and cabinet 32 W × 21 H × 11½ D inches remain secondary
+working envelopes. Q22's 20-inch reader correction remains unresolved. Tilt-back
+leg length follows the secondary 16-inch reference; pivots and restraints are
+estimates. No new measurement or universal stock speaker-maker claim.

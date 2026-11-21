@@ -3,7 +3,7 @@ import {SMALL_PANELS} from '../dist/library/small-amp-profiles.js';
 import {ASSETS,ASSEMBLIES,SOURCES,assetById} from '../dist/library/catalog.js';
 assert.equal(new Set(ASSETS.map(a=>a.id)).size,ASSETS.length,'Component IDs must be unique');
 for(const a of ASSETS){assert.ok(a.sources.length,`${a.id}: missing provenance`);for(const source of a.sources)assert.ok(SOURCES[source],`${a.id}: broken reference`);for(const id of a.usedBy)assert.ok(ASSEMBLIES.some(p=>p.id===id),`${a.id}: unknown assembly`);}
-for(const a of ASSEMBLIES){for(const slot of ['speaker','cover','cloth','knob','panel','badge','handle','jewel'])assert.ok((slot==='badge'&&a[slot]===null)||assetById(a[slot]),`${a.id}: missing ${slot}`);const s=assetById(a.speaker);const nominal=a.wiringTopology==='series'?s.impedanceOhm*a.speakerCount:a.wiringTopology==='series-pairs-parallel'?s.impedanceOhm*2/(a.speakerCount/2):s.impedanceOhm/a.speakerCount;assert.equal(nominal,a.loadOhm,`${a.id}: declared speaker load`);const [width,height,depth]=a.dimensionsMm;if(!a.speakerPositions)assert.ok(s.build.frameDiameter*a.speakerCount<width-30,`${a.id}: speaker frames intersect cabinet sides`);assert.ok(s.build.frameDiameter<height-80,`${a.id}: speaker overlaps chassis`);assert.ok(s.build.depth<depth-35,`${a.id}: motor protrudes outside cabinet`);assert.equal(s.powerW,null,'Do not substitute a modern speaker rating for an unknown vintage rating');}
+for(const a of ASSEMBLIES){for(const slot of ['speaker','cover','cloth','knob','panel','badge','handle','jewel'])assert.ok((slot==='badge'&&a[slot]===null)||assetById(a[slot]),`${a.id}: missing ${slot}`);const s=assetById(a.speaker);const nominal=a.wiringTopology==='independent-outputs'?null:a.wiringTopology==='series'?s.impedanceOhm*a.speakerCount:a.wiringTopology==='series-pairs-parallel'?s.impedanceOhm*2/(a.speakerCount/2):s.impedanceOhm/a.speakerCount;if(a.wiringTopology==='independent-outputs'){assert.equal(a.loadOhm,null,'Independent outputs have no combined load');assert.deepEqual(a.speakerIds.map(id=>assetById(id).impedanceOhm),a.outputLoadsOhm);}else assert.equal(nominal,a.loadOhm,`${a.id}: declared speaker load`);const [width,height,depth]=a.dimensionsMm;if(!a.speakerPositions)assert.ok(s.build.frameDiameter*a.speakerCount<width-30,`${a.id}: speaker frames intersect cabinet sides`);assert.ok(s.build.frameDiameter<height-80,`${a.id}: speaker overlaps chassis`);assert.ok(s.build.depth<depth-35,`${a.id}: motor protrudes outside cabinet`);assert.equal(s.powerW,null,'Do not substitute a modern speaker rating for an unknown vintage rating');}
 assert.equal(ASSEMBLIES.find(a=>a.id==='deluxe-reverb-black').knobCount,9);
 assert.equal(ASSEMBLIES.find(a=>a.id==='twin-reverb-early').knobCount,11);
 assert.ok(!ASSETS.some(a=>a.id.includes('master')),'Early Twin must not inherit a later master-volume component');
@@ -127,3 +127,21 @@ assert.equal(showman.dimensionsMm[1],showman.headDimensionsMm[1]+showman.headGap
 assert.equal(showman.tubeTypes.filter(t=>t==='5881').length,4);
 assert.ok(showman.dimensionsStatus.includes('conflicts'));
 console.log('Validated selected-year Super Reverb, early Vibrasonic and Showman layouts, source promotions, tube complements and split cabinet envelope.');
+
+// Independent Pano outputs and selected Bassman layouts must survive promotion.
+for(const [id,count,knobs,tubes,jacks]of [['bassman-5f6a',4,6,6,4],['bassman-blackface-ab165-1965',2,6,6,4],['pano-verb-2024',2,11,11,1]]){
+ const a=ASSEMBLIES.find(a=>a.id===id),p=SMALL_PANELS[a.panel],[cw,ch]=a.cabinetDimensionsMm||a.dimensionsMm;
+ assert.equal(a.speakerCount,count);assert.equal(a.speakerPositions.length,count);assert.equal(p.knobs.length,knobs);assert.equal(p.jacks.length,jacks);assert.equal(a.tubeTypes.length,tubes);assert.ok(p.width<(a.headDimensionsMm||a.dimensionsMm)[0]-32);
+ const radii=a.speakerPositions.map((_,i)=>assetById(a.speakerIds?.[i]||a.speaker).build.frameDiameter/2);
+ for(const [i,[x,y]]of a.speakerPositions.entries()){
+  const radius=radii[i];assert.ok(Math.abs(x)+radius<cw/2-16,id+' frame clears side walls');assert.ok(y+radius<ch/2-(a.piggyback?16:a.topRail));assert.ok(y-radius>-ch/2+(a.piggyback?16:a.bottomRail));
+  for(let j=i+1;j<radii.length;j++)assert.ok(Math.hypot(x-a.speakerPositions[j][0],y-a.speakerPositions[j][1])>radius+radii[j]+3,id+' different frames clear one another');
+ }
+ for(const [i,x]of p.knobs.entries()){assert.ok(x>14&&x<p.width-14);for(const xx of p.knobs.slice(i+1))assert.ok(Math.abs(x-xx)>30);}
+ const e=mapping.entries.find(e=>e.runtimeKey===`${a.year}|${a.finish}|${a.name}`);assert.ok(e&&!CATALOG_AMPS.some(c=>c.catalogRow===e.catalogCsvRow));
+}
+const pano=ASSEMBLIES.find(a=>a.id==='pano-verb-2024'),bassman=ASSEMBLIES.find(a=>a.id==='bassman-blackface-ab165-1965');
+assert.deepEqual(pano.outputLoadsOhm,[4,8]);assert.equal(pano.loadOhm,null);assert.equal(pano.wiringTopology,'independent-outputs');assert.equal(pano.speakerIds.length,2);assert.equal(SMALL_PANELS[pano.panel].slides.length,2);assert.equal(bassman.toneRing,false);
+assert.ok(Math.abs(bassman.dimensionsMm[1]-bassman.headDimensionsMm[1]-bassman.headGapMm-bassman.cabinetDimensionsMm[1])<.001);
+assert.deepEqual(ASSEMBLIES.find(a=>a.id==='bassman-5f6a').tubeTypes,['GZ34','5881','5881','12AX7','12AX7','12AY7']);
+console.log('Validated both Bassman variants and Pano independent outputs, unequal frame clearances, selected-year complements and catalog promotions.');

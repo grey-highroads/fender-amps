@@ -93,7 +93,7 @@ export const ASSEMBLIES=[
  {id:'twin-reverb-early',name:'Twin Reverb',example:'1968 / early silverface',year:1968,finish:'silver',dimensionsMm:[673.1,504.7,263.525],dimensionsStatus:'Modern reissue proxy — vintage measurement pending',sources:['twin','twinReissue'],speaker:'speaker-oxford-12t6',speakerCount:2,wiring:'Two 8 Ω speakers in parallel',loadOhm:4,watts:85,speakers:'2 × 12″',width:1.25,height:1.02,circuit:'Early silver-panel reference',cover:'tolex-black',cloth:'cloth-silver-blue',knob:'knob-skirted',knobCount:11,panel:'faceplate-twin',badge:'badge-script',handle:'handle-black',jewel:'jewel-red'}
 ];
 // Newly consuming assemblies retain the same component records and factories.
-for(const a of ASSEMBLIES.filter(a=>a.study))for(const id of [a.speaker,a.cover,a.cloth,a.knob,a.panel,a.badge,a.handle,a.jewel,'jack-quarter','screw-slot']){
+for(const a of ASSEMBLIES.filter(a=>a.study))for(const id of [a.speaker,...(a.speakerIds||[]),a.cover,a.cloth,a.knob,a.panel,a.badge,a.handle,a.jewel,'jack-quarter','screw-slot']){
  const part=[...SPEAKERS,...MATERIALS,...PARTS].find(p=>p.id===id);if(part&&!part.usedBy.includes(a.id))part.usedBy.push(a.id);
 }
 export const ASSETS=[...SPEAKERS,...MATERIALS,...PARTS];

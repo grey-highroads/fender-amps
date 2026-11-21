@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {BP_EXPLORATIONS} from './bassman-pano-features.js';
 import {VINTAGE_EXPLORATIONS} from './vintage-amp-features.js';
 import {ACTIVE_EXPLORATIONS} from './active-amp-features.js';
 import {TWIN_TONE} from './twin-tone.js';
@@ -15,6 +16,7 @@ const partReferences=[
 ];
 export const twinParts=[...TWIN_FEATURES,...partReferences.map(part=>({...part,...TWIN_TONE[part.id],side:'rear'}))];
 export const EXPLORATIONS={
+ ...BP_EXPLORATIONS,
  ...VINTAGE_EXPLORATIONS,
  ...ACTIVE_EXPLORATIONS,
  'princeton-reverb-aa1164':{name:'Princeton Reverb',parts:PRINCETON_FEATURES},

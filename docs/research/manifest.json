@@ -229,7 +229,11 @@
       "catalogRowSha256": "9f092ed314d66940267f6176dd1216c7f2fdd7fb653ef642400e883a346e675c",
       "openQuestions": [
         "Q2"
-      ]
+      ],
+      "modeledAssembly": "pano-verb-2024",
+      "builderCheckedOn": "2026-11-21",
+      "builderStatus": "Desktop/phone cards, source mappings and metre-scale exports validated; production verification next",
+      "handoff": "../../docs/handoff/BASSMAN_PANO.md"
     },
     {
       "id": "deluxe-5e3",
@@ -405,7 +409,11 @@
       "openQuestions": [
         "Q22"
       ],
-      "researchPass": 3
+      "researchPass": 3,
+      "modeledAssembly": "bassman-blackface-ab165-1965",
+      "builderCheckedOn": "2026-11-21",
+      "builderStatus": "Desktop/phone cards, source mappings and metre-scale exports validated; production verification next",
+      "handoff": "../../docs/handoff/BASSMAN_PANO.md"
     },
     {
       "id": "fender-75-1980",
@@ -458,10 +466,8 @@
       "selectedYear": 1959,
       "circuit": "5F6-A",
       "brief": "amps/bassman-5f6a.md",
-      "readiness": "blocked",
-      "blockingQuestions": [
-        "Q23"
-      ],
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
       "reuseCandidates": [
         "tweed, oxblood grille, chicken-head knobs and top-hung chassis from deluxe-5e3",
         "10-inch speaker from the Super Reverb study",
@@ -471,9 +477,14 @@
       "catalogCsvRow": 35,
       "catalogRowSha256": "a529901fb44a2ccb3eaf20c74a4c5b633bd7ecfc47a25a558954670860bd295f",
       "openQuestions": [
-        "Q23"
+        "Q29"
       ],
-      "researchPass": 3
+      "researchPass": 3,
+      "modeledAssembly": "bassman-5f6a",
+      "builderCheckedOn": "2026-11-21",
+      "builderStatus": "Desktop/phone cards, source mappings and metre-scale exports validated; production verification next",
+      "handoff": "../../docs/handoff/BASSMAN_PANO.md",
+      "assemblyBlockResolution": "Q23: owner-authorized assembly now implemented; publish after validation"
     },
     {
       "id": "vibroverb-6g16",

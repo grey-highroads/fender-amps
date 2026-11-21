@@ -166,3 +166,28 @@ Five features that most distinguish this amp:
 - The CME specimen has a 5R4 rectifier fitted and replaced back panels. The factory GZ34 is from the drawing.
 - Width varies by about an inch across sources.
 - No shared 5F6-A assembly exists. Interior placement needs one before hotspots can be anchored.
+
+## Builder check, November 21, 2026
+
+Owner authorized construction and hotspots for the two Bassmans and Pano Verb;
+no generated images. Both pages of I-EG were rendered at 1900 px and re-read.
+The layout explicitly labels the inverter **12AX7**, while the companion
+schematic label appears **12AY7**. The model follows the layout; Q29 keeps the
+disagreement open rather than claiming the pair of drawings is unambiguous.
+The 12AY7 input, two 5881 and GZ34 are clear. Nine factual hotspot drafts draw
+from the existing proposals. No exact bias-voltage claim was added.
+
+Front and top-panel photographs of BM01454 were opened at 800 px. The panel
+reads Presence, Middle, Bass, Treble, Vol Bright, Vol Normal and two input pairs
+when viewed from behind. A rectangular Fender Bassman tag occupies the front
+upper rail. Rear boards are replacements and are not copied as factory proof.
+The shared model uses a working 23 W × 22½ H × 10½ D inch envelope, with
+estimated rear-board and hardware dimensions. Four alnico-format ten-inch
+studies connect by separate leads to four parallel underside jacks. Factory
+P10R/P10Q fitment remains supported by secondary sources, not an authenticated
+1959 Fender speaker specification; generic geometry and labels retain that limit.
+
+The catalog row groups 5F6/5F6-A from **1957**. The new active card stays at that
+group introduction while selecting a 1959-style 5F6-A. The older runtime/year
+statements above are historical, not current mapping. Q23's absent-assembly
+block is resolved for this amp when this build is published.

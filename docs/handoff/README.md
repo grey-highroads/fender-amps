@@ -1,11 +1,11 @@
 # Fender Amps handoff
 
-Updated November 20, 2026. This is the starting point for continuing the Amplifier
+Updated November 21, 2026. This is the starting point for continuing the Amplifier
 Observatory without relying on the chat history.
 
 **Current priority: educational construction, supported by real photographs.**
 The user redirected the project away from photoreal asset production after
-reviewing the workload. Thirteen active amps now share the single-model explorer, with 87 topics.
+reviewing the workload. Sixteen active amps now share the single-model explorer, with 109 topics.
 Accurate proportions and meaningful construction relationships matter; the
 models remain interpretive and exact interior placement is not established.
 
@@ -26,12 +26,12 @@ models remain interpretive and exact interior placement is not established.
 | Area | State |
 | --- | --- |
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
-| Runtime baseline | Vintage trio construction 1.0 (Super Reverb, Vibrasonic, Showman); three-combo construction 1.0 (Super Six, Blues Junior, Prosonic); existing faceplate lettering 1.0; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
+| Runtime baseline | Bassman/Pano construction 1.0; Vintage trio construction 1.0 (Super Reverb, Vibrasonic, Showman); three-combo construction 1.0 (Super Six, Blues Junior, Prosonic); existing faceplate lettering 1.0; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
-| Timeline | Active (default): thirteen modeled amps. All: 208 catalog entries including 195 gray WIP placeholders; about six visible on desktop, two on a phone |
+| Timeline | Active (default): sixteen modeled amps. All: 208 catalog entries including 192 gray WIP placeholders; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
-| Library | 57 components/materials and thirteen reference assemblies |
-| Hotspots | Thirteen profiles / 87 topics; vintage trio runtime `e50a45f` READY and live-verified |
+| Library | 68 components/materials and sixteen reference assemblies |
+| Hotspots | Sixteen profiles / 109 topics; Bassman/Pano batch locally validated, live verification pending |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
@@ -42,7 +42,7 @@ years, so its 1955 Deluxe and 1963 Deluxe Reverb cards use later photographed
 examples as construction references. Keep introduction year, production range,
 reference-specimen year, and modern reissue year distinct.
 
-The other 195 timeline entries remain spreadsheet-only placeholders. Their gray
+The other 192 timeline entries remain spreadsheet-only placeholders. Their gray
 silhouettes make no model-specific geometry claim.
 
 The [corrected source spreadsheet](https://docs.google.com/spreadsheets/d/18bzOLj0RdEdjSneLXf9USwPAM5Zs7IRoAFwKpWmkBJw/edit)
@@ -372,3 +372,12 @@ Showman selects its single-fifteen cabinet. See [build, evidence and review](VIN
 The batch starts from current public main `67e058d`, preserving the new copy
 passes and branding. An isolated detached checkout avoids touching local
 uncommitted homepage concepts.
+
+## November 21: authorized Bassman / Pano construction batch
+
+Owner authorized tweed Bassman 5F6-A, black-panel Bassman AB165 and Pano Verb
+construction plus hotspots, no generated images. The three shared assemblies
+and 22 factual draft topics are locally validated. See
+[BASSMAN_PANO.md](BASSMAN_PANO.md) for scope, sources, uncertainty and release.
+The Pano's two speaker outputs retain distinct loads, rather than being treated
+as a parallel pair. Current previous-trio copy from `f4aa2cc` is preserved.

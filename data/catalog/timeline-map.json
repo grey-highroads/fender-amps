@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-11-21",
-  "scope": "All 208 rows: thirteen shared construction assemblies and 195 spreadsheet-only WIP entries; selected-year differences explicit.",
+  "scope": "All 208 rows: sixteen shared construction assemblies and 192 spreadsheet-only WIP entries; selected-year differences explicit.",
   "runtimeSource": "dist/collection.js",
   "catalogSource": "data/catalog/catalog.csv",
   "catalogSha256": "e9ba57740b2562360d174131539e5fb0e28bda3637b5e1020b7341e1287e237b",
@@ -644,22 +644,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1957|wip|Bassman (5F6 / 5F6-A)",
+      "runtimeKey": "1957|tweed|Tweed Bassman",
       "runtime": {
         "year": 1957,
-        "name": "Bassman (5F6 / 5F6-A)",
-        "years": "1957–1960",
-        "watts": "45",
-        "speakers": "4x10 open-back combo",
+        "name": "Tweed Bassman",
+        "years": "1957–1960, grouped 5F6 / 5F6-A; 1959-style study",
+        "watts": 45,
+        "speakers": "4 × 10″",
         "load": "2 Ω",
-        "finish": "wip",
-        "circuit": "Price evidence covers 1958–1960 5F6-A; earlier 5F6 differs. 2026 Reverb sold examples ran about $3,950-7,500, above the estimate range shown."
+        "finish": "tweed",
+        "circuit": "5F6-A"
       },
       "catalogCsvRow": 35,
       "catalogName": "Bassman (5F6 / 5F6-A)",
       "catalogRowSha256": "a529901fb44a2ccb3eaf20c74a4c5b633bd7ecfc47a25a558954670860bd295f",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected-year circuit and construction",
+          "status": "Explicit selection",
+          "decision": "Catalog row 35 groups 5F6 and 5F6-A from 1957; this selects the 1959-style 5F6-A, whose circuit followed in 1958. Approximate 45 W retained. Working cabinet width 23 inches varies across specimen reports. Layout labels the inverter 12AX7; companion schematic label appears 12AY7 (Q29)."
+        }
+      ],
+      "scopeNote": "Catalog row 35 groups 5F6 and 5F6-A from 1957; this selects the 1959-style 5F6-A, whose circuit followed in 1958. Approximate 45 W retained. Working cabinet width 23 inches varies across specimen reports. Layout labels the inverter 12AX7; companion schematic label appears 12AY7 (Q29)."
     },
     {
       "runtimeKey": "1957|wip|Twin (5F8 / 5F8-A high power)",
@@ -1358,22 +1364,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "1964|wip|Bassman (black panel)",
+      "runtimeKey": "1964|black|Bassman",
       "runtime": {
         "year": 1964,
-        "name": "Bassman (black panel)",
-        "years": "1964–1967",
-        "watts": "50",
-        "speakers": "Head; typically 2x12 cabinet",
+        "name": "Bassman",
+        "years": "1964–1967; 1965-style AB165 study",
+        "watts": 50,
+        "speakers": "2 × 12″",
         "load": "4 Ω",
-        "finish": "wip",
-        "circuit": "Price is head only."
+        "finish": "black",
+        "circuit": "AB165"
       },
       "catalogCsvRow": 70,
       "catalogName": "Bassman (black panel)",
       "catalogRowSha256": "06ee0639ba8f9578c9e1cff3072bfe903c60794f6313204c80819dd14cedb3f2",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected-year circuit and construction",
+          "status": "Explicit selection",
+          "decision": "Catalog row 70 covers 1964–1967 black-panel Bassmans; this selects 1965-style AB165 rather than AA864 or AA165. Approximate 50 W retained. Cabinet 21-inch working height conflicts with a 20-inch reader correction (Q22). Speaker supplier, exact hardware dimensions and interior placements remain estimates."
+        }
+      ],
+      "scopeNote": "Catalog row 70 covers 1964–1967 black-panel Bassmans; this selects 1965-style AB165 rather than AA864 or AA165. Approximate 50 W retained. Cabinet 21-inch working height conflicts with a 20-inch reader correction (Q22). Speaker supplier, exact hardware dimensions and interior placements remain estimates."
     },
     {
       "runtimeKey": "1965|wip|Pro Reverb (black panel)",
@@ -3863,22 +3875,28 @@
       "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
     },
     {
-      "runtimeKey": "2024|wip|Jack White Pano Verb",
+      "runtimeKey": "2024|black|Pano Verb",
       "runtime": {
         "year": 2024,
-        "name": "Jack White Pano Verb",
-        "years": "2024 onward",
-        "watts": "70",
-        "speakers": "1x15 + 1x10 combo",
-        "load": "4 and 8 (two outputs) Ω",
-        "finish": "wip",
-        "circuit": "Announced September 17, 2024. Watts shown are the combined output."
+        "name": "Pano Verb",
+        "years": "2024–present; launch configuration",
+        "watts": 70,
+        "speakers": "15″ + 10″",
+        "load": "4 / 8 Ω",
+        "finish": "black",
+        "circuit": "PR 6273 / dual output"
       },
       "catalogCsvRow": 206,
       "catalogName": "Jack White Pano Verb",
       "catalogRowSha256": "9f092ed314d66940267f6176dd1216c7f2fdd7fb653ef642400e883a346e675c",
-      "differences": [],
-      "scopeNote": "Spreadsheet-only WIP entry. Generic silhouette has no model-specific dimensional or construction claim; source review status retained verbatim."
+      "differences": [
+        {
+          "field": "selected-year circuit and construction",
+          "status": "Explicit selection",
+          "decision": "Catalog row 206; Fender PR 6273 manual specifies 50 W / 4 Ω OUT 1 and 20 W / 8 Ω OUT 2, not one combined speaker load. Cabinet envelope follows Fender specifications. Detailed speaker geometry, socket positions, tank and transformer mounting remain estimates; no internal schematic is inferred from the owner manual."
+        }
+      ],
+      "scopeNote": "Catalog row 206; Fender PR 6273 manual specifies 50 W / 4 Ω OUT 1 and 20 W / 8 Ω OUT 2, not one combined speaker load. Cabinet envelope follows Fender specifications. Detailed speaker geometry, socket positions, tank and transformer mounting remain estimates; no internal schematic is inferred from the owner manual."
     },
     {
       "runtimeKey": "2025|wip|'62 Super Amp (American Vintage)",
