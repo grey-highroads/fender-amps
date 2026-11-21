@@ -139,5 +139,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://www.andybaxterbass.com/products/1956-fender-deluxe"
     ],
     "knownInaccuracies": "Generated fine lettering, tweed pitch/color, tube and speaker construction remain approximate. Replacement handle and reconed speaker appearance follow the specimen, not independently verified factory fitment."
+  },
+  {
+    "id": "deluxe-reverb-front",
+    "assemblyId": "deluxe-reverb-black",
+    "amp": "Deluxe Reverb",
+    "configuration": "1965 blackface Deluxe Reverb AB763 specimen study guided by Black Book A-08900; nine controls, four inputs, one twelve",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/deluxe-reverb/front.jpg",
+    "referenceLinks": [
+      "https://www.blackbookguitars.com/products/1966-fender-deluxe-reverb-nickel-copy"
+    ],
+    "knownInaccuracies": "Generated fine lettering, texture scale and dimensions remain approximate. Speaker and fitted parts follow the photographed specimen; dealer originality claims are not independently verified. Grounded cord is a replacement."
+  },
+  {
+    "id": "deluxe-reverb-rear",
+    "assemblyId": "deluxe-reverb-black",
+    "amp": "Deluxe Reverb",
+    "configuration": "1965 blackface Deluxe Reverb AB763 specimen study guided by Black Book A-08900; nine controls, four inputs, one twelve",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/deluxe-reverb/rear.jpg",
+    "referenceLinks": [
+      "https://www.blackbookguitars.com/products/1966-fender-deluxe-reverb-nickel-copy"
+    ],
+    "knownInaccuracies": "Generated fine lettering, texture scale and dimensions remain approximate. Speaker and fitted parts follow the photographed specimen; dealer originality claims are not independently verified. Grounded cord is a replacement."
   }
 ];

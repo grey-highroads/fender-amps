@@ -303,3 +303,20 @@ Music Emporium D02985 rear guided this construction pass. Source URLs, inspected
 versus researcher-reported details, factory/replacement distinctions, dimension
 proxies and unresolved rectifier evidence are recorded in
 [Princeton / brown rear](PRINCETON_BROWN_REAR.md).
+
+## Blackface Deluxe Reverb generated pair — November 20
+
+User requested same-specimen realistic image generation following the other pairs.
+Reopened the existing Black Book 1965 source; rear stamp reads A 08900. Dealer
+records OI chart, Oxford 12K5-6/465-512, serviced amp and grounded cord. Downloaded
+private gallery references and inspected front, badge/panel, assembled rear,
+board-removed rear, chassis and cabinet views. These are source appearance details,
+not an independent factory-originality audit. No new circuit research was made.
+
+Built-in image generation front used gallery 1/21/22; rear used 3 (boards installed)
+and 4 (detail support, panels removed). Private originals and exact prompts are
+under ignored `outputs/deluxe-reverb-photoreal-review/`. Generated front.png and
+rear.png follow nine knobs/four inputs, raised badge, two rear boards, chassis
+connections and single blue-label speaker. Tiny text, textures and dimensions
+remain approximate; rear has more background margin than front. User review
+pending. No site images, model, hotspots or publication changed.

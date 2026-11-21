@@ -178,5 +178,41 @@
     ],
     "knownInaccuracies": "Generated fine lettering, tweed pitch/color, tube and speaker construction remain approximate. Replacement handle and reconed speaker appearance follow the specimen, not independently verified factory fitment.",
     "provenance": "User-approved same-specimen pair. Front references Andy Baxter D-03176 photos 1/3/10; rear references 6/7/10/1. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "deluxe-reverb-front",
+    "assemblyId": "deluxe-reverb-black",
+    "amp": "Deluxe Reverb",
+    "configuration": "1965 blackface Deluxe Reverb AB763 specimen study guided by Black Book A-08900; nine controls, four inputs, one twelve",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/deluxe-reverb/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case product-mockup. Highly photorealistic studio FRONT catalog image of exact vintage 1965 Fender Deluxe Reverb AB763 specimen A-08900 from Black Book Guitars. Reference 1 whole front, 2 left controls/logo detail, 3 right controls/title detail. Preserve this specimen's proportions and hardware; change camera to centered straight front long lens slightly elevated, full cabinet and black strap handle uncropped, about 80% frame width, pale warm gray seamless floor/backdrop, soft key upper left and fill, grounded shadow. Black finely pebbled Tolex, rounded edges, subtle wear, silver/beige woven grille with fine actual threads, raised chrome Fender tail logo upper-left grille. Black faceplate thin white outline and channel divider. EXACTLY NINE black skirted silver-center knobs and FOUR inputs. Left to right: NORMAL two inputs 1 2, VOLUME TREBLE BASS three knobs; VIBRATO two inputs 1 2, VOLUME TREBLE BASS REVERB SPEED INTENSITY six knobs; white script Deluxe Reverb-Amp on right and dark red pilot jewel far right. Small FENDER MUSICAL INSTRUMENTS beneath title. NO Mid knobs, NO bright toggles, no master, no silverface trim or drip edge. Match photographed knob sizes, white numbers printed on skirts, narrow finely fluted grips and recessed metal silver caps, do not use oversized knobs. Top strap handle black ribbed with metal caps, two chrome chassis strips toward sides. Photographic cloth grain/Tolex scale, physical metal reflections, natural minor imperfections, not painted illustration or plastic CGI. No caption or watermark. Same specimen for companion rear, no claim all parts original.",
+    "referenceLinks": [
+      "https://www.blackbookguitars.com/products/1966-fender-deluxe-reverb-nickel-copy"
+    ],
+    "knownInaccuracies": "Generated fine lettering, texture scale and dimensions remain approximate. Speaker and fitted parts follow the photographed specimen; dealer originality claims are not independently verified. Grounded cord is a replacement.",
+    "provenance": "User-approved same-specimen pair. Front references Black Book gallery photos 1/21/22; rear references 3/4, preserving installed rear boards. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "deluxe-reverb-rear",
+    "assemblyId": "deluxe-reverb-black",
+    "amp": "Deluxe Reverb",
+    "configuration": "1965 blackface Deluxe Reverb AB763 specimen study guided by Black Book A-08900; nine controls, four inputs, one twelve",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/deluxe-reverb/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case product-mockup. Highly photorealistic studio REAR catalog image of exact 1965 Fender Deluxe Reverb AB763 specimen A-08900 Black Book Guitars. Reference 1 is PRIMARY assembled rear with BOTH BOARDS INSTALLED; reference 2 board-removed rear is supporting hardware/speaker detail only. KEEP BOTH BOARDS installed as reference1, do not copy disassembled state of reference2. Preserve specimen proportions black fine pebbled Tolex, rounded cabinet, black strap handle slight top glimpse. Centered long-lens straight rear, full cabinet/handle uncropped fills 80% frame width, pale warm gray seamless floor/backdrop, soft key upper left gentle fill and contact shadow matching front companion. Upper board has wide shallow trapezoid cut from its TOP edge exposing narrow black chassis label strip; sloped ends, solid broad board beneath. Four screws two each end. Large rectangular middle gap exposes ONE twelve-inch black stamped Oxford-style speaker basket with small flat central dark round magnet and blue circular Fender Musical Instruments Special Design Speaker label, NOT alnico bell cover. Match speaker scale/orientation and tan lead to upper-right terminals as photographed. Flat lower black Tolex board four screws two each end; do not scoop its top edge or cut vents. Brown wooden interior side cleats. Upper board hides tube bodies except tips/retainers visible in shallow slot; don't hang tubes across central speaker opening. Actual rear chassis order: mains cord at far left metal end; convenience outlet; black strip GROUND toggle, FUSE black cap with 2 AMP SLO-BLO, ON toggle, STANDBY toggle, connected SPEAKER jack with black Fender cap, empty EXT SPKR jack, UL emblem and tiny Fender Musical Instruments text, VIBRATO PEDAL and REVERB PEDAL empty jacks, REVERB OUTPUT and REVERB INPUT plugged braided leads toward right; bare metal end right with A 08900 stamp. Keep photographed connection spacing and cable paths; no extra switches or jacks. Dark natural interior, no added glow, no second speaker, no bright blue modern replacement driver, no chrome corners, no silverface trim. Exact board proportions from PRIMARY photo crucial. Natural material/metal reflections and small aging, no plastic CGI or painted illustration, no caption/watermark. Specimen appearance only, not factory-originality claim.",
+    "referenceLinks": [
+      "https://www.blackbookguitars.com/products/1966-fender-deluxe-reverb-nickel-copy"
+    ],
+    "knownInaccuracies": "Generated fine lettering, texture scale and dimensions remain approximate. Speaker and fitted parts follow the photographed specimen; dealer originality claims are not independently verified. Grounded cord is a replacement.",
+    "provenance": "User-approved same-specimen pair. Front references Black Book gallery photos 1/21/22; rear references 3/4, preserving installed rear boards. Original dealer photographs are not redistributed."
   }
 ]

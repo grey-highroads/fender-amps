@@ -282,3 +282,13 @@ Live thumbnail/viewer check loaded front (1402 px, `tweed-deluxe/front.jpg`) and
 rear visibly matching the approved pair. Private capture:
 `outputs/tweed-deluxe-photoreal-review/published-rear.jpg`.
 https://fendertubeamps.com/?amp=deluxe-1957
+
+## Blackface Deluxe Reverb images — user approved
+
+November 20: user approved publication of Black Book A-08900 front/rear pair.
+Two shared media records use `assets/studies/deluxe-reverb/{front,rear}.jpg` in
+the existing thumbnail/viewer. Exact prompts and provenance are tracked in the
+media manifest; private dealer references remain ignored. No model, hotspot,
+other amp media or viewer code changed. Six npm checks and whitespace pass;
+local front/rear viewer images visually checked. Generated fine details remain
+interpretive; dealer originality and replacement grounded cord remain qualified.
