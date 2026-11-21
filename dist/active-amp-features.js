@@ -5,8 +5,8 @@ export const TREMOLUX_FEATURES=[
     "label": "Early tremolo & circuit identity",
     "side": "top",
     "menuOnly": false,
-    "title": "A Tremolux chart isn’t a complete circuit identification.",
-    "body": "This small-box study follows a June 1955 amp with Depth and Speed on the top panel. Later Tremoluxes kept familiar names and chart stock while the circuitry changed, so a tube chart alone is a poor guide to which tremolo circuit you’re hearing.",
+    "title": "The tube chart doesn’t identify the circuit.",
+    "body": "Our model follows a June 1955 amp with Depth and Speed on the top panel. Later Tremoluxes kept the name and even the chart stock while the circuit changed. So the chart alone is a poor guide to which tremolo circuit is in the amp.",
     "attributes": [
       [
         "Represented example",
@@ -17,11 +17,11 @@ export const TREMOLUX_FEATURES=[
         "Depth, Speed, Tone, Instrument and Microphone Volumes"
       ]
     ],
-    "listen": "When comparing or buying one, establish the actual circuit revision before borrowing a description of a later Tremolux’s pulse or headroom.",
-    "together": "The inspected panel and chart support the early form and tube complement. A genuine 5E9 circuit drawing has not been established here; the available 5E9-A sheet is not silently substituted.",
-    "extraTitle": "Evidence & scope",
-    "extra": "No claim is made that the 5E9 uses the 5E9-A’s tremolo mechanism. Dealer dating and surviving chart markings remain specimen evidence.",
-    "detail": "The marker identifies Depth, not the hidden oscillator. Position follows the shared top-panel layout; no component placement or cabinet geometry changed.",
+    "listen": "If you’re comparing or buying one, find out the actual circuit revision first. Don’t borrow a description of a later Tremolux’s tremolo or headroom.",
+    "together": "The panel and chart on serial 0093 support the early layout and the tube lineup. We haven’t found a Fender drawing for the 5E9 itself. The one that’s available is the 5E9-A, and we don’t use it to fill the gap.",
+    "extraTitle": "Where this comes from",
+    "extra": "Photos of the chart and panel on serial 0093, a dealer-dated 1955 amp.",
+    "detail": "The marker is on Depth. How the 5E9’s tremolo works isn’t established here.",
     "sources": [
       [
         "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
@@ -34,8 +34,8 @@ export const TREMOLUX_FEATURES=[
     "label": "12AY7 input-tube specification",
     "side": "rear",
     "menuOnly": false,
-    "title": "The chart gives the input job to a 12AY7.",
-    "body": "The inspected 1955 chart ends with a 12AY7, alongside two 12AX7s. A replacement that fits the socket needn’t keep the same operating behavior, which makes the first tube worth recording when you compare surviving amps.",
+    "title": "The chart puts a 12AY7 at the input.",
+    "body": "The 1955 chart lists a 12AY7 along with two 12AX7s. Other tubes will fit that socket, and the amp won’t necessarily behave the same with them. So it’s worth noting what’s in there when you compare two of these.",
     "attributes": [
       [
         "Chart complement",
@@ -46,11 +46,11 @@ export const TREMOLUX_FEATURES=[
         "Rectifier, two 6V6GTs, two 12AX7s, 12AY7"
       ]
     ],
-    "listen": "Before giving a speaker or transformer all the credit for a difference in drive, find out which input tube is fitted.",
-    "together": "Tube type is only part of stage gain and headroom. The surrounding circuit, signal level and loading decide how a change reaches the rest of the amp.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The lineup is read from serial 0093’s chart. No exact gain, clipping threshold or recommended substitution is inferred without tracing its circuit.",
-    "detail": "The marker follows the modeled rightmost small-tube envelope in rear chart order. Spacing is illustrative; cabinet panels can hide it.",
+    "listen": "Before you give the speaker or the transformer all the credit for a difference in drive, check which input tube is fitted.",
+    "together": "Tube type is only part of a stage’s gain and headroom. The circuit around it, the signal level and the loading decide how a swap reaches the rest of the amp.",
+    "extraTitle": "Where this comes from",
+    "extra": "Read from the tube chart on serial 0093.",
+    "detail": "The marker is on the small tube at the right end, following the chart’s rear order. Spacing is illustrative. The circuit hasn’t been traced, so no gain figure or swap advice is implied.",
     "sources": [
       [
         "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
@@ -63,8 +63,8 @@ export const TREMOLUX_FEATURES=[
     "label": "Hand-corrected rectifier chart",
     "side": "rear",
     "menuOnly": false,
-    "title": "Someone corrected the printed rectifier specification.",
-    "body": "The 0093 chart has its printed 5U4GA crossed out and 5Y3GT written in. The power-consumption figure is corrected too. That is more useful evidence than treating a modern fitted bottle as proof of the original specification.",
+    "title": "Somebody corrected the rectifier on the chart by hand.",
+    "body": "On serial 0093’s chart, the printed 5U4GA is crossed out and 5Y3GT is written in. The power-consumption figure is corrected too. That’s better evidence than whatever rectifier happens to be in the socket today.",
     "attributes": [
       [
         "Printed chart",
@@ -75,11 +75,11 @@ export const TREMOLUX_FEATURES=[
         "5Y3GT · modeled specification"
       ]
     ],
-    "listen": "For a serviced early Tremolux, keep chart evidence and the installed tube as separate records. Neither alone establishes every amp in the first production run.",
-    "together": "The model retains the 5Y3GT interpretation already documented for this study. Rectifier voltage drop, transformer resistance and load would all enter a real supply-response comparison.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The hand correction is visible in the inspected photograph. Who made it and the fitment of every early 5E9 are not independently authenticated.",
-    "detail": "The marker attaches to the existing rectifier envelope. No universal claim about sag or a replacement recommendation is made.",
+    "listen": "On a serviced early Tremolux, keep two records: what the chart says and what’s installed. Neither one settles what every first-run amp left the factory with.",
+    "together": "Our model goes with the 5Y3GT. Rectifier drop, transformer resistance and load would all figure in any real comparison of how the supply responds.",
+    "extraTitle": "Where this comes from",
+    "extra": "The hand correction is visible in the photo of the chart. We don’t know who made it.",
+    "detail": "The marker is on the rectifier. Nothing here is a claim about sag or a recommendation to swap.",
     "sources": [
       [
         "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
@@ -92,8 +92,8 @@ export const TREMOLUX_FEATURES=[
     "label": "Small box & Jensen-family speaker",
     "side": "rear",
     "menuOnly": false,
-    "title": "The earliest box changes the comparison.",
-    "body": "This is the compact early Tremolux, not the taller cabinet often pictured under the same name. Its single twelve sits in a Deluxe-sized construction study, so comparing cabinets without their dates can mislead you before you play a note.",
+    "title": "The earliest Tremolux is in a smaller box.",
+    "body": "This is the compact early Tremolux, not the taller cabinet you usually see pictured under the name. The single twelve sits in a Deluxe-size box. Compare two Tremoluxes without checking their dates and you may be comparing different cabinets.",
     "attributes": [
       [
         "Modeled format",
@@ -104,11 +104,11 @@ export const TREMOLUX_FEATURES=[
         "20 × 16 × 9.5 in · W × H × D"
       ]
     ],
-    "listen": "Cabinet size, speaker identity and cone condition belong alongside circuit revision when you compare two Tremolux recordings.",
-    "together": "The shared speaker is a Jensen P12Q-family proxy. The reference’s serviced history includes a replaced output transformer, so it cannot establish an untouched factory signal chain.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The small-box decision follows several early specimens; conflicting dealer dimensions remain documented. No measured cabinet response, original cone or exact speaker motor is claimed.",
-    "detail": "The marker is on the existing speaker’s rear motor surface. Basket, motor and cabinet dimensions remain estimates.",
+    "listen": "When you compare two Tremolux recordings, cabinet size, speaker and cone condition belong in the comparison along with the circuit revision.",
+    "together": "The speaker in the model stands in for a Jensen P12Q-type. The reference amp has had its output transformer replaced, so it can’t show you an untouched factory signal chain.",
+    "extraTitle": "Where this comes from",
+    "extra": "The small-box call follows several early examples. Dealer dimensions for them don’t all agree.",
+    "detail": "The marker is on the back of the speaker. Basket, magnet and cabinet dimensions are estimates.",
     "sources": [
       [
         "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
@@ -127,8 +127,8 @@ export const SUPER_SIX_FEATURES=[
     "label": "Master before the phase inverter",
     "side": "front",
     "menuOnly": false,
-    "title": "This Master doesn’t turn down a cranked output stage.",
-    "body": "On the 100-watt master-volume family drawing, Master sits after the two channel paths meet and before the phase inverter. Reducing it lowers the signal reaching the inverter and four output tubes.",
+    "title": "This Master sits before the phase inverter.",
+    "body": "On the 100-watt master-volume drawing, Master sits after the two channels meet and before the phase inverter. Turn it down and less signal reaches the inverter and the four output tubes.",
     "attributes": [
       [
         "Drawing",
@@ -139,11 +139,11 @@ export const SUPER_SIX_FEATURES=[
         "Channel mix → Master → phase inverter"
       ]
     ],
-    "listen": "High channel Volume with a low Master can drive earlier stages while keeping the output section cleaner. It doesn’t reproduce a loud output stage at a lower acoustic level.",
-    "together": "The Master is a common control after the channel mixing resistors. It is not a speaker attenuator, and it does not leave power-stage operating signal unchanged.",
-    "extraTitle": "Evidence & scope",
-    "extra": "This is a 100 W family drawing that includes a Super Six speaker hookup. It is not a chassis audit or proof of the exact drawing revision inside CFA7106.",
-    "detail": "The marker follows shared knob 11. The selected study has no later pull-boost or 135 W ultralinear features.",
+    "listen": "High channel Volume with a low Master pushes the earlier stages and keeps the output section cleaner. That isn’t the sound of the power section working hard, only quieter.",
+    "together": "It’s one control for both channels, placed after the mixing resistors. It isn’t a speaker attenuator.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing 010182 Rev C, the 100-watt family sheet with no pull boost. It includes the Super Six speaker hookup.",
+    "detail": "The marker is on the Master knob. The drawing is a family sheet, not an audit of our reference amp’s chassis.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/Fender/Fender_twinreverb_sf_100_mv_noboost.pdf",
@@ -156,8 +156,8 @@ export const SUPER_SIX_FEATURES=[
     "label": "Volume-dependent Bright bypass",
     "side": "front",
     "menuOnly": false,
-    "title": "Bright does less as channel Volume comes up.",
-    "body": "The drawing switches a small capacitor across part of each channel’s Volume control. It gives high frequencies another path around the turned-down pot, so its influence changes with the Volume setting.",
+    "title": "Bright does less as you turn the channel up.",
+    "body": "The switch puts a small cap, 120 pF on the drawing, across part of the channel’s Volume control. That gives highs a way around the pot when it’s turned down, so how much you hear depends on where Volume is set.",
     "attributes": [
       [
         "Drawing bypass",
@@ -168,11 +168,11 @@ export const SUPER_SIX_FEATURES=[
         "Channel Volume, before common Master"
       ]
     ],
-    "listen": "Try Bright at low channel Volume, then with more channel Volume and less Master. Similar loudness can come with a different amount of bypassed treble.",
-    "together": "At full channel Volume, the bypassed portion of the control is effectively gone. Master changes the later signal level without occupying the same place in that bright network.",
-    "extraTitle": "Evidence & scope",
-    "extra": "Topology and value follow 010182 Rev C. No frequency response or surviving capacitor value has been measured here.",
-    "detail": "The marker identifies the Normal Bright switch using the same toggle coordinates as the hardware.",
+    "listen": "Try Bright at low channel Volume. Then raise the channel Volume and bring Master down to match. You can be about as loud with a different amount of added treble.",
+    "together": "With the channel Volume all the way up, the part of the pot the cap bridges is effectively gone. Master comes later and doesn’t sit in that bright network.",
+    "extraTitle": "Where this comes from",
+    "extra": "The layout and the value are from drawing 010182 Rev C.",
+    "detail": "The marker is on the Normal channel’s Bright switch. No frequency response was measured, and the cap in a surviving amp may differ.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/Fender/Fender_twinreverb_sf_100_mv_noboost.pdf",
@@ -185,8 +185,8 @@ export const SUPER_SIX_FEATURES=[
     "label": "Wet/dry mix before Master",
     "side": "front",
     "menuOnly": false,
-    "title": "Master changes the return level after the springs.",
-    "body": "The family drawing takes the spring drive from the Vibrato channel before the common Master. The recovered return rejoins the dry path before Master, so reducing Master is different from reducing the signal sent into the tank.",
+    "title": "Master comes after the reverb mix.",
+    "body": "The spring drive is taken from the Vibrato channel ahead of Master, and the return rejoins the dry signal ahead of Master too. So turning Master down isn’t the same as sending less signal into the tank.",
     "attributes": [
       [
         "Driver",
@@ -197,11 +197,11 @@ export const SUPER_SIX_FEATURES=[
         "After wet/dry mixing"
       ]
     ],
-    "listen": "With channel Volume held, lowering Master reduces what comes out later without simply turning down the tank’s input by the same amount.",
-    "together": "The dry path uses the familiar large mixing resistor and small treble bypass. Spring drive, return level and final master level remain distinct parts of the signal path.",
-    "extraTitle": "Evidence & scope",
-    "extra": "This routing is traced on the no-pull 100 W family sheet. Tank type, decay, spring count and the reference amp’s actual service history are not established.",
-    "detail": "The marker is on Reverb. The hidden tank and circuitry are not presented as visible components.",
+    "listen": "Hold the channel Volume where it is and lower Master. What comes out gets quieter, but you haven’t turned down the tank’s input by the same amount.",
+    "together": "The dry path uses a large mixing resistor with a small treble bypass. A transformer-coupled 12AT7 drives the tank. Spring drive, return level and Master are three separate things in the signal path.",
+    "extraTitle": "Where this comes from",
+    "extra": "Traced on the no-pull 100-watt family drawing.",
+    "detail": "The marker is on the Reverb knob. The tank type, its decay and spring count, and our reference amp’s service history aren’t established.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/Fender/Fender_twinreverb_sf_100_mv_noboost.pdf",
@@ -214,8 +214,8 @@ export const SUPER_SIX_FEATURES=[
     "label": "Optical tremolo after the mix",
     "side": "front",
     "menuOnly": false,
-    "title": "The tremolo moves the spring tail too.",
-    "body": "The no-pull 100 W drawing places the optical tremolo on the signal path after dry sound and reverb have joined. It acts on that combined signal before it reaches the common Master.",
+    "title": "The tremolo pulses the reverb tail too.",
+    "body": "On the no-pull 100-watt drawing, the optical tremolo works on the signal after dry and reverb have been mixed, and before the common Master.",
     "attributes": [
       [
         "Method",
@@ -226,11 +226,11 @@ export const SUPER_SIX_FEATURES=[
         "Wet/dry mix → tremolo → Master"
       ]
     ],
-    "listen": "A long spring tail lets you hear the pulse continue after your picking stops. That follows from the circuit position, rather than from the six-speaker cabinet.",
-    "together": "This is a signal-shunting optical arrangement, not the brown Deluxe or Princeton output-grid bias scheme. The panel still calls it Vibrato.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The stage order is drawing evidence; perceived depth and pulse shape depend on operating conditions and have not been measured.",
-    "detail": "The marker identifies Intensity. No optical device is claimed visible through the assembled cabinet.",
+    "listen": "Let a long spring tail ring after you stop picking and you’ll hear the pulse carry on through it. That comes from where the tremolo sits in the circuit. The six speakers have nothing to do with it.",
+    "together": "It’s an optical circuit that shunts the signal. That’s a different design from the bias tremolo in the brown Deluxe and the Princeton Reverb. The panel calls it Vibrato anyway.",
+    "extraTitle": "Where this comes from",
+    "extra": "The order of the stages is from the drawing.",
+    "detail": "The marker is on Intensity. Depth and pulse shape weren’t measured.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/Fender/Fender_twinreverb_sf_100_mv_noboost.pdf",
@@ -243,8 +243,8 @@ export const SUPER_SIX_FEATURES=[
     "label": "Six drivers & unusual load",
     "side": "rear",
     "menuOnly": false,
-    "title": "Six eights make 5.33 ohms in this arrangement.",
-    "body": "The Super Six hookup on Fender’s family drawing uses three parallel branches with two eight-ohm speakers in series in each branch. Each branch is sixteen ohms; three together give sixteen-thirds.",
+    "title": "Six 8-ohm speakers come out at 5.33 ohms.",
+    "body": "The Super Six hookup on Fender’s drawing wires the speakers as three pairs. Each pair is two 8-ohm speakers in series, which is 16 ohms, and the three pairs are in parallel. That works out to 16 divided by 3.",
     "attributes": [
       [
         "Declared wiring",
@@ -255,11 +255,11 @@ export const SUPER_SIX_FEATURES=[
         "16/3 Ω ≈ 5.33 Ω"
       ]
     ],
-    "listen": "Speaker count alone won’t tell you the load. A replacement set needs its actual wiring and individual impedances recorded, not just six matching-looking labels.",
-    "together": "The historical 5.2 Ω figure and the nominal 5.33 Ω arithmetic describe the same general load class. Real loudspeaker impedance varies with frequency.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The drawing supports the arrangement; the modeled wires are explanatory and CFA7106 has not been continuity-tested. Maker, cone originality and sensitivity remain unverified.",
-    "detail": "The marker is on the one middle-row modeled motor, representing the entire six-driver assembly. It does not identify an independently authenticated Oxford or CTS.",
+    "listen": "You can’t tell the load from the speaker count. If the set has been replaced, you need the actual wiring and each speaker’s impedance, not six labels that look alike.",
+    "together": "You’ll see 5.2 ohms published for this amp. That and the 5.33 from the arithmetic describe the same load. A speaker’s real impedance moves with frequency anyway.",
+    "extraTitle": "Where this comes from",
+    "extra": "The wiring is from Fender’s family drawing.",
+    "detail": "The marker is on one middle-row speaker and stands for all six. The wires in the model are there to explain the hookup. We haven’t tested the reference amp’s wiring or identified its speakers.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/Fender/Fender_twinreverb_sf_100_mv_noboost.pdf",
@@ -276,8 +276,8 @@ export const SUPER_SIX_FEATURES=[
     "label": "Four 6L6s & bias balance",
     "side": "rear",
     "menuOnly": false,
-    "title": "The drawing’s adjustment balances the output sides.",
-    "body": "The family sheet labels its output adjustment Balance. That is worth distinguishing from a control intended to sweep the idle current of the whole quartet together.",
+    "title": "The bias control on this drawing is a Balance control.",
+    "body": "The family drawing labels its output-stage adjustment Balance. That’s worth keeping apart from a control meant to set the idle current of all four tubes together.",
     "attributes": [
       [
         "Output section",
@@ -288,11 +288,11 @@ export const SUPER_SIX_FEATURES=[
         "Balance in the grid-bias network"
       ]
     ],
-    "listen": "When you compare service records, ask what was measured and what kind of bias circuit is present. “The bias was adjusted” can describe different work on different Fender revisions.",
-    "together": "The drawing shows negative grid bias, grounded cathodes and a long-tail inverter feeding the four tubes. A later conversion may change that network while leaving four 6L6s installed.",
-    "extraTitle": "Evidence & scope",
-    "extra": "No idle-current target or service procedure is supplied. The 100 W construction scope comes from period Fender documentation, not multiplying tube data-sheet ratings.",
-    "detail": "The marker attaches to one modeled 6L6 envelope. Socket positions are estimated and the upper board may hide the marker.",
+    "listen": "When you read a service record, ask what was measured and what kind of bias circuit the amp has. A note that the bias was adjusted can mean different work on different Fender revisions.",
+    "together": "The drawing shows negative grid bias, grounded cathodes and a long-tail inverter feeding the four 6L6GCs. A later conversion can change that network with the same four tubes still in place.",
+    "extraTitle": "Where this comes from",
+    "extra": "Drawing 010182 Rev C. The 100-watt rating is from period Fender documentation.",
+    "detail": "The marker is on one 6L6. Socket positions are estimated, and the upper board may hide the marker. No idle-current target or service procedure is given.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/Fender/Fender_twinreverb_sf_100_mv_noboost.pdf",
@@ -307,8 +307,8 @@ export const JUNIOR_FEATURES=[
     "label": "Volume before Master",
     "side": "top",
     "menuOnly": false,
-    "title": "The two level controls leave different stages working hard.",
-    "body": "Volume is earlier in the preamp; Master follows more gain and the tone network. You can reduce the feed to the output section while keeping stronger drive in those earlier stages.",
+    "title": "Volume and Master turn you down at different points.",
+    "body": "Volume comes early in the preamp. Master comes after more gain and the tone controls. So you can run the early stages hard and still turn down what reaches the output section.",
     "attributes": [
       [
         "Selected circuit",
@@ -319,11 +319,11 @@ export const JUNIOR_FEATURES=[
         "Volume → gain and tone stages → Master"
       ]
     ],
-    "listen": "Compare a lower Volume/higher Master setting with the reverse at similar loudness. A master control changes where signal level is reduced, not just the number of watts on a label.",
-    "together": "The 1995 service text explicitly separates the first stage, Volume, tone network and later Master. Turning down Master does not turn down the guitar signal entering the first stage.",
-    "extraTitle": "Evidence & scope",
-    "extra": "This follows the original service text, not the later circuitry appended to some manual downloads. No specific clipping stage or quiet-volume output-tube distortion is promised.",
-    "detail": "The marker follows top-panel Volume at shared knob 5; both controls remain on the same assembled model.",
+    "listen": "Try low Volume with high Master, then the reverse, at about the same loudness. They won’t feel the same, because different stages are doing the work.",
+    "together": "The 1995 service text lays out the order: first stage, Volume, more gain and the tone network, then Master. Turning Master down doesn’t reduce what your guitar sends into the first stage.",
+    "extraTitle": "Where this comes from",
+    "extra": "The original 1995 service text. Some manual downloads have later circuits appended, and those aren’t used here.",
+    "detail": "The marker is on the Volume knob. We haven’t measured which stage clips first or what the output tubes do at low volume.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/Files/Fender/Fender_blues_junior_service_manual.pdf",
@@ -336,8 +336,8 @@ export const JUNIOR_FEATURES=[
     "label": "Fat changes the first stage",
     "side": "top",
     "menuOnly": false,
-    "title": "Fat starts before the tone controls.",
-    "body": "The Fat circuit switches in a cathode bypass at the first input stage. Its extra drive happens before the later tone controls, so it isn’t equivalent to adding Bass at the end.",
+    "title": "Fat works on the first stage, before the tone controls.",
+    "body": "The Fat switch adds a bypass cap at the cathode of the first gain stage. The extra drive happens ahead of the tone controls, so it isn’t the same as turning up Bass at the end.",
     "attributes": [
       [
         "Location",
@@ -348,11 +348,11 @@ export const JUNIOR_FEATURES=[
         "Bypass capacitor controlled through a JFET"
       ]
     ],
-    "listen": "Try Fat with the guitar backed off, then with a stronger input. The later stages receive a different signal, which can change drive as well as tonal balance.",
-    "together": "A bypass changes the stage’s local feedback over part of the frequency range. The panel button and optional footswitch operate that same feature.",
-    "extraTitle": "Evidence & scope",
-    "extra": "Topology follows the November 1995 theory text. No fixed amount of gain or a universal tonal comparison with later Juniors is asserted.",
-    "detail": "The marker sits on the actual Fat button’s shared panel coordinate. The JFET and bypass capacitor are inside the chassis.",
+    "listen": "Try it with your guitar’s volume backed off, then with a hotter signal. The later stages get a different signal either way, so the drive can change along with the tone.",
+    "together": "A cathode bypass changes that stage’s local feedback over part of the frequency range. The panel button and the optional footswitch work the same circuit, switched through a JFET.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s November 1995 theory-of-operation text.",
+    "detail": "The marker is on the Fat button. The JFET and the cap are inside the chassis. No gain figure is given, and this isn’t a comparison with later Juniors.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/Files/Fender/Fender_blues_junior_service_manual.pdf",
@@ -365,8 +365,8 @@ export const JUNIOR_FEATURES=[
     "label": "Solid-state spring circuit",
     "side": "top",
     "menuOnly": false,
-    "title": "The springs don’t have a tube driver here.",
-    "body": "The original Junior uses solid-state drive and recovery for a real spring tank. Its three 12AX7s are not proof that the reverb uses the same tube circuit as a Princeton Reverb.",
+    "title": "Real springs, no tube driver.",
+    "body": "The original Junior drives and recovers a real spring tank with solid-state parts. It has three 12AX7s, but that doesn’t mean its reverb works like a Princeton Reverb’s tube circuit.",
     "attributes": [
       [
         "Reverb electronics",
@@ -377,11 +377,11 @@ export const JUNIOR_FEATURES=[
         "Drive feed after Master"
       ]
     ],
-    "listen": "Changing Master can change the signal sent into the springs. Reverb then changes how much recovered spring sound joins the dry signal.",
-    "together": "The original service text places the wet/dry sum ahead of the phase inverter. The dry signal path and the reverb electronics need separate descriptions.",
-    "extraTitle": "Evidence & scope",
-    "extra": "This is the 1995 routing; later revisions in the same downloaded PDF are not treated as first-year evidence. No noise or decay measurement was made.",
-    "detail": "The marker follows top Reverb, shared knob 0. The internal circuit and tank are hidden or only partly visible.",
+    "listen": "The feed to the springs comes after Master, so changing Master can change how hard they’re driven. The Reverb knob then sets how much spring sound gets mixed back in.",
+    "together": "In the 1995 routing, wet and dry are summed ahead of the phase inverter. The service text labels the reverb driver U1A and the recovery U1B.",
+    "extraTitle": "Where this comes from",
+    "extra": "The 1995 service text. Later revisions bundled in the same PDF aren’t treated as first-year evidence.",
+    "detail": "The marker is on the Reverb knob. The tank is hidden or only partly visible. Noise and decay weren’t measured.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/Files/Fender/Fender_blues_junior_service_manual.pdf",
@@ -394,8 +394,8 @@ export const JUNIOR_FEATURES=[
     "label": "EL84 pair with fixed bias",
     "side": "rear",
     "menuOnly": false,
-    "title": "EL84s don’t automatically mean cathode bias.",
-    "body": "This pair runs with negative grid bias. The output-tube name alone doesn’t make the Junior a cathode-biased British circuit in a black cabinet.",
+    "title": "EL84s, but not cathode bias.",
+    "body": "This pair runs fixed bias, from a negative grid supply. Having EL84s doesn’t make the Junior a cathode-biased British circuit in a black cabinet.",
     "attributes": [
       [
         "Output",
@@ -406,11 +406,11 @@ export const JUNIOR_FEATURES=[
         "Resistor-set negative grid-bias supply"
       ]
     ],
-    "listen": "Tube family is only a starting point for a comparison. Inverter, feedback, operating conditions, speaker and cabinet still belong in the explanation.",
-    "together": "The original service text derives output bias from a negative supply through a resistor divider. That is a different arrangement from the shared cathode resistor in a tweed 5E3.",
-    "extraTitle": "Evidence & scope",
-    "extra": "No operating-class measurement, idle-current target or tube-swap recommendation follows from this comparison.",
-    "detail": "The marker identifies one modeled EL84 at the rear tube window. Envelope and socket spacing are estimates.",
+    "listen": "The tube type is only where a comparison starts. The inverter, the feedback, how the tubes are run, the speaker and the cabinet all belong in it too.",
+    "together": "The service text takes the bias from a negative supply through a resistor divider. Compare that with the tweed 5E3, where the two output tubes share a cathode resistor.",
+    "extraTitle": "Where this comes from",
+    "extra": "The original 1995 service text.",
+    "detail": "The marker is on one EL84 at the rear tube window. Tube shape and socket spacing are estimates. No operating class, idle current or tube-swap advice is implied.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/Files/Fender/Fender_blues_junior_service_manual.pdf",
@@ -423,8 +423,8 @@ export const JUNIOR_FEATURES=[
     "label": "One twelve in a small cabinet",
     "side": "rear",
     "menuOnly": false,
-    "title": "The speaker can change while the model name stays put.",
-    "body": "The first-year manual specifies one eight-ohm Eminence twelve. That format is the reliable starting point; it doesn’t make a later limited-edition speaker the specification for this 1995 amp.",
+    "title": "Not every Blues Junior has the same speaker.",
+    "body": "The first-year manual calls for one 8-ohm Eminence twelve. A speaker from a later limited edition doesn’t tell you what a 1995 amp shipped with.",
     "attributes": [
       [
         "Factory format",
@@ -435,11 +435,11 @@ export const JUNIOR_FEATURES=[
         "Unbranded construction proxy"
       ]
     ],
-    "listen": "If two Juniors sound different, record the fitted driver and cone history before attributing everything to green versus later circuit boards.",
-    "together": "The manual’s speaker-model wording is internally awkward, so this study keeps the manufacturer, diameter and load without inventing an exact vintage model identity.",
-    "extraTitle": "Evidence & scope",
-    "extra": "No measured response, sensitivity, cone originality or green-board tonal rule is claimed.",
-    "detail": "The marker attaches to the actual shared speaker motor; detailed geometry is illustrative.",
+    "listen": "If two Juniors sound different, write down which speaker each one has and whether its cone is original before you put it all down to green board versus later boards.",
+    "together": "The manual’s wording for the exact speaker model is muddled, so we keep to what’s clear: the maker, the size and the load.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s November 1995 owner’s manual.",
+    "detail": "The marker is on the speaker magnet. The speaker in the model is unbranded and its geometry is illustrative. No response or sensitivity figures are claimed, and no green-board tone rule.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/Files/Fender/Fender_blues_junior_service_manual.pdf",
@@ -454,8 +454,8 @@ export const PROSONIC_FEATURES=[
     "label": "Two drive-gain controls",
     "side": "front",
     "menuOnly": false,
-    "title": "Gain 2 isn’t just another loudness knob.",
-    "body": "Fender describes Gain 1 as conventional drive and Gain 2 as adding compression-like sustain with less edge. That gives the drive channel two ways to change its response before you set the final level.",
+    "title": "Gain 2 isn’t a second volume knob.",
+    "body": "Fender describes Gain 1 as conventional drive and Gain 2 as adding a compression-like sustain with less edge. So the drive channel gives you two different ways to shape the response before you set the level.",
     "attributes": [
       [
         "Channel",
@@ -466,11 +466,11 @@ export const PROSONIC_FEATURES=[
         "Gain 2: compression-like behavior"
       ]
     ],
-    "listen": "Compare more Gain 1 with less Gain 2, then reverse them and match the Master level. Listen to the attack and note decay, not just how much louder it gets.",
-    "together": "The later combo drawing shows separate gain-control networks within the drive path. Fender’s compressor comparison is descriptive; it does not establish a standalone compressor processor.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The owner manual supports the behavior description. The available combo drawing is Rev E, revised 1997, and is not proof of every 1996 component value.",
-    "detail": "The marker follows Gain 1, shared knob 1; Gain 2 is immediately adjacent.",
+    "listen": "Try more Gain 1 and less Gain 2, then swap them and match the level with Master. Listen to the attack and how the note decays, not how loud it is.",
+    "together": "The combo drawing shows separate networks for the two gain controls inside the drive path. The compressor comparison is Fender describing the feel. It doesn’t mean there’s a separate compressor in there.",
+    "extraTitle": "Where this comes from",
+    "extra": "The behavior is from Fender’s owner’s manual. The combo drawing we have is Rev E, revised in 1997, so it doesn’t prove every part value in a 1996 amp.",
+    "detail": "The marker is on Gain 1. Gain 2 is the next knob over.",
     "sources": [
       [
         "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Prosonic.pdf",
@@ -487,8 +487,8 @@ export const PROSONIC_FEATURES=[
     "label": "Drive-only Master",
     "side": "front",
     "menuOnly": false,
-    "title": "Master leaves the Normal channel’s level alone.",
-    "body": "The Normal channel uses Volume; the drive channel uses its gain controls and Master. Treating Master as a common final volume for both channels can make channel balancing needlessly frustrating.",
+    "title": "Master only works on the drive channel.",
+    "body": "The Normal channel’s level is its Volume. The drive channel’s level is Master, after the two gains. If you treat Master as an overall volume, balancing the channels gets frustrating.",
     "attributes": [
       [
         "Normal level",
@@ -499,11 +499,11 @@ export const PROSONIC_FEATURES=[
         "Gain 1 / Gain 2 into Master"
       ]
     ],
-    "listen": "Balance the two sounds with their own level controls before judging a change in gain or rectifier mode. Similar loudness makes the attack comparison easier to hear.",
-    "together": "Both channels still use shared tone controls and the same output section. Independent channel levels do not make them separate amplifiers.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The channel assignments come directly from Fender’s owner manual. No exact gain, switching transient or compression measurement was made.",
-    "detail": "The marker is on shared Master knob 6; the relay routing remains inside the chassis.",
+    "listen": "Balance the two channels with their own level controls before you judge a change in gain or rectifier mode. Matched loudness makes the difference in attack easier to hear.",
+    "together": "Both channels share the tone controls and the output section. Separate level controls don’t make them two separate amps.",
+    "extraTitle": "Where this comes from",
+    "extra": "The channel assignments are straight from Fender’s owner’s manual.",
+    "detail": "The marker is on the Master knob. The relay switching is inside the chassis. No gain or compression measurements were made.",
     "sources": [
       [
         "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Prosonic.pdf",
@@ -516,8 +516,8 @@ export const PROSONIC_FEATURES=[
     "label": "Combo-only tube spring reverb",
     "side": "front",
     "menuOnly": false,
-    "title": "The combo has more than speakers added to the head.",
-    "body": "The combo includes tube-driven spring reverb on both channels. The head omits it and has a different tube complement, so head and combo drawings aren’t interchangeable reference sheets.",
+    "title": "The combo isn’t the head with speakers added.",
+    "body": "The combo has tube-driven spring reverb on both channels. The head leaves it out and has a different set of tubes, so a head schematic is no reference for the combo, or the other way round.",
     "attributes": [
       [
         "Format",
@@ -528,11 +528,11 @@ export const PROSONIC_FEATURES=[
         "Transformer-coupled 12AT7 in combo drawing"
       ]
     ],
-    "listen": "When you compare drive sounds, check the reverb setting too. It can remain in the sound after a channel change.",
-    "together": "The owner manual distinguishes the combo and head explicitly. The combo drawing includes its spring transformer, recovery and return control; the head sheet does not.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The traced drawing is the later Rev E combo reference. No exact installed tank, spring count or 1996 value audit is claimed.",
-    "detail": "The marker follows Reverb knob 7, not a visible internal driver or tank.",
+    "listen": "When you’re comparing drive sounds, check where Reverb is set. It can stay in the sound when you switch channels.",
+    "together": "Fender’s manual treats the combo and the head as separate things. The combo drawing shows a transformer-coupled 12AT7 driver, a recovery stage and the return control. The head drawing has none of that.",
+    "extraTitle": "Where this comes from",
+    "extra": "The owner’s manual and the later Rev E combo drawing.",
+    "detail": "The marker is on the Reverb knob. The tank, its spring count and the part values in a 1996 amp haven’t been checked.",
     "sources": [
       [
         "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Prosonic.pdf",
@@ -549,8 +549,8 @@ export const PROSONIC_FEATURES=[
     "label": "Rectifier and bias selector",
     "side": "rear",
     "menuOnly": false,
-    "title": "The selector changes two things together.",
-    "body": "The rear switch changes rectification and output bias arrangement. The tube-rectified cathode-bias mode and tube-rectified grid-bias mode already differ before you select solid-state rectification.",
+    "title": "The rear switch changes rectifier and bias together.",
+    "body": "The switch on the back changes how the amp is rectified and how the output tubes are biased. Two of the three positions use the tube rectifier, one with cathode bias and one with grid bias. So those two already differ before you get to solid-state.",
     "attributes": [
       [
         "Factory mode labels",
@@ -561,11 +561,11 @@ export const PROSONIC_FEATURES=[
         "30 / 50 / 60 W"
       ]
     ],
-    "listen": "Compare the two tube-rectified positions before crediting the entire change in feel to the rectifier. Then compare the two AB positions at a similar listening level.",
-    "together": "Fender’s Class A and AB names are factory mode descriptions, not conduction-angle measurements made here. The switch couples bias and supply choices rather than offering every combination independently.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The manual establishes the three choices; the available combo drawing shows the multi-section switch. No measured sag or operating-class certification is implied.",
-    "detail": "The marker uses the actual shared rear rotary-selector coordinate. Its labels and spacing remain construction estimates.",
+    "listen": "Compare the two tube-rectifier positions first, so you don’t credit the rectifier for a change that’s partly bias. Then compare the two AB positions at about the same volume.",
+    "together": "Fender labels the positions Class A with tube rectifier, AB with tube rectifier and AB with solid-state, rated 30, 50 and 60 watts. You get those three combinations and no others.",
+    "extraTitle": "Where this comes from",
+    "extra": "The three modes are from the owner’s manual. The combo drawing shows the multi-section switch.",
+    "detail": "Class A and AB are Fender’s names for the modes. We haven’t measured operating class, output or sag. Switch labels and spacing in the model are estimates.",
     "sources": [
       [
         "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Prosonic.pdf",
@@ -586,8 +586,8 @@ export const PROSONIC_FEATURES=[
     "label": "Series effects-loop return",
     "side": "rear",
     "menuOnly": false,
-    "title": "The Return jack can interrupt the internal path.",
-    "body": "Fender says inserting a plug into Return disconnects the normal preamp-to-power connection. An empty cable left there can therefore explain a silent amp without any failure in the tubes.",
+    "title": "Leave a plug in Return and the amp can go silent.",
+    "body": "Fender says plugging into Return disconnects the preamp from the power amp. So a cable left in that jack with nothing on the other end can give you a dead amp with nothing wrong with the tubes.",
     "attributes": [
       [
         "Loop",
@@ -598,11 +598,11 @@ export const PROSONIC_FEATURES=[
         "Also usable as a line-level output per manual"
       ]
     ],
-    "listen": "When comparing a pedal in front and in the loop, remember that they meet different signal levels and different parts of the gain path.",
-    "together": "The return’s normal contact completes the internal connection when no plug is present. The available combo drawing shows a tube stage feeding Send and the switched Return network.",
-    "extraTitle": "Evidence & scope",
-    "extra": "This is functional routing, not a guarantee that every pedal will have suitable level/headroom in the loop. No loop-level measurement was made.",
-    "detail": "The marker is on the actual shared Return jack, not the adjacent Send.",
+    "listen": "A pedal in front and the same pedal in the loop see different signal levels and sit at different points in the gain path. Don’t expect them to behave the same.",
+    "together": "With no plug in Return, a contact on the jack completes the connection inside the amp. The combo drawing shows a tube stage feeding Send. The manual says Send can also be used as a line-level output.",
+    "extraTitle": "Where this comes from",
+    "extra": "The owner’s manual and the later combo drawing.",
+    "detail": "The marker is on the Return jack, not the Send next to it. Loop levels weren’t measured, so there’s no promise every pedal will suit it.",
     "sources": [
       [
         "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Prosonic.pdf",
@@ -619,8 +619,8 @@ export const PROSONIC_FEATURES=[
     "label": "Combo extension jack & tap change",
     "side": "rear",
     "menuOnly": false,
-    "title": "The extension jack changes the amplifier tap.",
-    "body": "The combo’s two eight-ohm tens form a sixteen-ohm internal load. Inserting an extension-speaker plug selects the amplifier’s eight-ohm output tap; it isn’t the head’s manual 4/8/16 selector.",
+    "title": "Plug in an extension cab and the amp switches taps.",
+    "body": "The combo’s two 8-ohm tens are wired in series for 16 ohms. Plugging into the extension jack switches the amp to its 8-ohm output tap. The head has a manual 4/8/16 selector. The combo doesn’t.",
     "attributes": [
       [
         "Internal speakers",
@@ -631,11 +631,11 @@ export const PROSONIC_FEATURES=[
         "Selects 8 Ω amplifier tap"
       ]
     ],
-    "listen": "Record both the connected cabinets and the selected tap when comparing setups. A jack’s presence is not permission to connect any load.",
-    "together": "Two equal sixteen-ohm cabinets in parallel would total eight ohms. That arithmetic explains the matching arrangement; speaker impedance still varies with frequency.",
-    "extraTitle": "Evidence & scope",
-    "extra": "The owner manual and later combo drawing agree on the switched tap. No factory speaker originality or measured impedance curve is authenticated.",
-    "detail": "The marker follows the shared extension-jack coordinate; it represents the load relationship of the existing two-speaker assembly.",
+    "listen": "When you compare setups, note which cabinets were connected and which tap was in use. Having the jack doesn’t mean any load is fine.",
+    "together": "The matching works out when the extension cab is also 16 ohms: two 16-ohm loads in parallel make 8. A speaker’s real impedance still moves around with frequency.",
+    "extraTitle": "Where this comes from",
+    "extra": "The owner’s manual and the later combo drawing agree on the switched tap.",
+    "detail": "The marker is on the extension jack. Speaker originality and measured impedance aren’t established.",
     "sources": [
       [
         "https://www.fmicassets.com/Damroot/Original/10001/OM_leg_gtramp_Prosonic.pdf",

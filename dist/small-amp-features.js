@@ -5,8 +5,8 @@ export const PRINCETON_FEATURES=[
     "label": "Treble, Bass & fixed mids",
     "side": "front",
     "menuOnly": false,
-    "title": "Two tone knobs still shape the mids.",
-    "body": "There’s no Middle knob, but Treble and Bass still change the balance around the midrange. They share a passive network, so a number on one knob only makes sense alongside the other.",
+    "title": "No Middle knob, but Treble and Bass still move the mids.",
+    "body": "Treble and Bass share one passive network, so each changes the balance around the midrange too. A number on one knob only means something next to the other.",
     "attributes": [
       [
         "Panel",
@@ -17,11 +17,11 @@ export const PRINCETON_FEATURES=[
         "Passive tone network before Volume"
       ]
     ],
-    "listen": "If the low strings feel too full as you turn up, try less Bass before adding more Treble. You’re changing what the following stages have to handle.",
-    "together": "The AA1164 drawing puts the tone network between the first input stage and Volume. A fixed resistor completes the ground leg where a larger Fender may have a Middle control.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "No fixed-mid value is printed here: the available scan is coarse at that marking. The relationship is visible without assigning a doubtful number.",
-    "detail": "The marker is on Treble; the network is hidden behind the panel. Control centers follow the shared hardware layout. Response has not been measured.",
+    "listen": "If the low strings get too full as you turn up, try less Bass before you add Treble. You’re changing what the later stages have to deal with.",
+    "together": "The AA1164 drawing puts the tone network between the first stage and Volume. Where a bigger Fender might have a Middle control, the Princeton has a fixed resistor to ground.",
+    "extraTitle": "Where this comes from",
+    "extra": "The AA1164 drawing. The scan is too coarse to read that resistor’s value, so we don’t give one.",
+    "detail": "The marker is on Treble. The network is behind the panel. Response wasn’t measured.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -34,8 +34,8 @@ export const PRINCETON_FEATURES=[
     "label": "Spring reverb & dry mix",
     "side": "front",
     "menuOnly": false,
-    "title": "Turning up Reverb adds return, not tank drive.",
-    "body": "Volume changes the signal feeding the spring circuit. Reverb sets how much of the recovered spring signal joins the dry sound. You can get a different result by changing one and compensating with the other.",
+    "title": "The Reverb knob sets the return, not the drive.",
+    "body": "Volume sets how much signal goes into the spring circuit. Reverb sets how much of what comes back gets mixed with the dry sound. So you can change one, make up for it with the other, and get a different result.",
     "attributes": [
       [
         "Driver",
@@ -46,11 +46,11 @@ export const PRINCETON_FEATURES=[
         "3.3 MΩ with 10 pF bypass"
       ]
     ],
-    "listen": "Try a louder Volume setting with less Reverb, then the reverse at a suitable listening level. The springs and the following stages see different signal levels.",
-    "together": "The drawing shows a transformer-coupled driver, spring unit, recovery stage and wet/dry mixing network. The dry path remains part of that network even with the spring return turned down.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The drawing establishes the signal paths. It doesn’t identify the installed tank’s decay, spring count or a modern replacement code.",
-    "detail": "The marker identifies the Reverb control, not a visible tank or internal mixer. The floor tank envelope in the model is estimated.",
+    "listen": "Try more Volume with less Reverb, then the other way round. The springs and the stages after them see different levels each way.",
+    "together": "The drawing shows both halves of a 12AT7 driving the springs through a transformer, then a recovery stage and the wet and dry mixer. The dry signal goes through a 3.3 MΩ resistor with a 10 pF bypass, and it stays in that network even with Reverb at zero.",
+    "extraTitle": "Where this comes from",
+    "extra": "The signal paths are from the AA1164 drawing.",
+    "detail": "The marker is on the Reverb knob. The tank’s outline in the model is estimated, and its decay, spring count and replacement code aren’t identified.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -63,8 +63,8 @@ export const PRINCETON_FEATURES=[
     "label": "Bias tremolo",
     "side": "front",
     "menuOnly": false,
-    "title": "The pulse reaches the output tubes.",
-    "body": "The Princeton’s tremolo varies the bias on the two 6V6s. That puts the movement in the output stage, after the dry sound and spring return have come together.",
+    "title": "The tremolo works on the output tubes.",
+    "body": "The Princeton’s tremolo varies the bias on the two 6V6s. That puts it in the output stage, after the dry signal and the reverb return have been mixed.",
     "attributes": [
       [
         "Method",
@@ -75,11 +75,11 @@ export const PRINCETON_FEATURES=[
         "Fixed bias · no adjustment pot"
       ]
     ],
-    "listen": "A held chord lets you hear how the pulse changes as the amp works harder. Depth depends on the output tubes’ operating conditions as well as Intensity.",
-    "together": "The oscillator feeds the Intensity control and bias line. This differs from the optical signal shunt in the blackface Deluxe Reverb; it is not a claim that one method is always deeper.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "Topology follows AA1164. Tremolo depth and bias interaction are engineering interpretation, not measurements of our reference amp.",
-    "detail": "The marker is on Intensity. No optical tremolo device is modeled or implied.",
+    "listen": "Hold a chord and listen to how the pulse changes as the amp works harder. Depth depends on what the output tubes are doing as well as on the Intensity knob.",
+    "together": "The oscillator feeds the Intensity control and the bias line. The blackface Deluxe Reverb does it another way, with an optical cell that shunts the signal. Neither is automatically the deeper one.",
+    "extraTitle": "Where this comes from",
+    "extra": "The topology is from the AA1164 drawing, which shows fixed bias with no adjustment pot.",
+    "detail": "The marker is on Intensity. Depth wasn’t measured on our reference amp.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -92,8 +92,8 @@ export const PRINCETON_FEATURES=[
     "label": "Hidden: cathodyne inverter",
     "side": "rear",
     "menuOnly": true,
-    "title": "Half a 12AX7 splits the drive.",
-    "body": "The Princeton gives the two 6V6s opposite-polarity signals from one tube half. A Deluxe Reverb uses a different inverter circuit, so matching the output-tube names doesn’t make the two amps respond alike.",
+    "title": "Half a 12AX7 splits the signal for the 6V6s.",
+    "body": "One half of a tube gives the two 6V6s their opposite-polarity signals. The Deluxe Reverb uses a different inverter, so having the same output tubes doesn’t make the two amps respond alike.",
     "attributes": [
       [
         "Topology",
@@ -104,11 +104,11 @@ export const PRINCETON_FEATURES=[
         "56 kΩ plate and cathode arms"
       ]
     ],
-    "listen": "At high drive, the inverter and the output tubes belong in the same explanation of attack and distortion. There’s no single stage responsible for every cranked Princeton sound.",
-    "together": "The other half of this 12AX7 runs the tremolo oscillator. The cathodyne splits phase without the large voltage gain of another conventional gain stage.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The AA1164 drawing establishes the stage assignment. No clipping threshold, waveform or gain measurement was made.",
-    "detail": "Menu-only topic: this tube and its circuitry are partly hidden by the upper back panel. The selected rear view identifies the assembly area; socket spacing is estimated.",
+    "listen": "When a Princeton is turned up, the inverter and the output tubes both belong in the explanation of its attack and distortion. No one stage accounts for every cranked Princeton sound.",
+    "together": "It’s a cathodyne, with 56 kΩ plate and cathode loads on the drawing. It splits the signal without the large gain of a normal gain stage. The other half of the same 12AX7 runs the tremolo oscillator.",
+    "extraTitle": "Where this comes from",
+    "extra": "The AA1164 drawing shows which tube half does which job.",
+    "detail": "There’s no marker on the model for this one. The tube is partly hidden by the upper back panel, so it’s in the menu only. Socket spacing is estimated, and nothing was measured.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -121,8 +121,8 @@ export const PRINCETON_FEATURES=[
     "label": "6V6 pair & feedback",
     "side": "rear",
     "menuOnly": false,
-    "title": "Two 6V6s, with a different surrounding circuit.",
-    "body": "The AA1164 drawing connects the screens directly to their supply node and shows no series screen resistors or control-grid stoppers at the output tubes. That’s a useful distinction from the AB763 Deluxe Reverb.",
+    "title": "Two 6V6s, wired differently from a Deluxe Reverb’s.",
+    "body": "On the AA1164 drawing the 6V6 screens connect straight to their supply, with no series screen resistors, and there are no grid-stopper resistors at the output tubes. That’s a real difference from the AB763 Deluxe Reverb.",
     "attributes": [
       [
         "Output",
@@ -133,11 +133,11 @@ export const PRINCETON_FEATURES=[
         "2.7 kΩ return from output secondary"
       ]
     ],
-    "listen": "When two Princetons feel different, tube condition, bias and service changes are worth checking alongside the speaker. The tube brand alone doesn’t describe the operating circuit.",
-    "together": "Output feedback returns to the stage ahead of the cathodyne. Its action depends on the amplifier and speaker load together; the resistor value alone is not a measurement of feedback strength.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "These are drawing facts and circuit implications. They do not establish a safe substitution, measured output or the condition of a surviving amp.",
-    "detail": "The marker identifies one output-tube envelope. Tube locations and glass shapes are illustrative, not a service layout.",
+    "listen": "If two Princetons feel different, check tube condition, bias and service history along with the speaker. The tube brand doesn’t describe the circuit it’s sitting in.",
+    "together": "The 6V6s are fixed bias. Feedback goes from the output secondary through a 2.7 kΩ resistor to the stage ahead of the inverter. How much it does depends on the amp and the speaker load together.",
+    "extraTitle": "Where this comes from",
+    "extra": "These are facts from the AA1164 drawing and what follows from them.",
+    "detail": "The marker is on one output tube. Tube positions and shapes are illustrative. Nothing here is advice on substitutions.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -150,8 +150,8 @@ export const PRINCETON_FEATURES=[
     "label": "Rectifier & supply evidence",
     "side": "rear",
     "menuOnly": false,
-    "title": "The rectifier story has a loose end.",
-    "body": "The AA1164 drawing specifies a 5U4GB. Research also reports GZ34 on an early AA764-marked chart. A replacement bottle in a dealer’s amp can’t settle what Fender originally fitted.",
+    "title": "The original rectifier is an open question.",
+    "body": "The AA1164 drawing calls for a 5U4GB. Research also reports a GZ34 on an early chart marked AA764. Whatever tube is in a dealer’s amp today can’t settle what Fender put in originally.",
     "attributes": [
       [
         "Modeled specification",
@@ -162,11 +162,11 @@ export const PRINCETON_FEATURES=[
         "Early chart reportedly specifies GZ34"
       ]
     ],
-    "listen": "Rectifier type is one part of supply response. Transformer resistance, filter storage and current demand also affect what happens under a hard attack.",
-    "together": "AA1164 draws four 20 µF supply sections with resistor filtering and no choke. That topology alone doesn’t tell us how much the supply drops or how the amp feels.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The scanned drawing carries later revision markings. The chart conflict remains unresolved, and no replacement recommendation follows from this card.",
-    "detail": "The marker identifies the drawing-based rectifier envelope. Filter-can geometry and internal supply placement are estimates.",
+    "listen": "Rectifier type is one part of how the supply responds. Transformer resistance, filtering and current draw also shape what happens when you hit it hard.",
+    "together": "The drawing shows four 20 µF filter sections joined by resistors, with no choke. That alone doesn’t tell you how far the supply drops or how the amp feels.",
+    "extraTitle": "Where this comes from",
+    "extra": "The scan of the drawing carries later revision marks. The chart conflict is still unresolved. The model shows the 5U4GB.",
+    "detail": "The marker is on the rectifier. Filter-can shape and placement are estimates. Sag wasn’t measured.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -183,8 +183,8 @@ export const PRINCETON_FEATURES=[
     "label": "One ten & specimen history",
     "side": "rear",
     "menuOnly": false,
-    "title": "A ten-inch speaker isn’t one particular sound.",
-    "body": "The model uses an Oxford-style ten. Our main cabinet reference has a replacement Weber, while the generated illustrations use a generic ceramic speaker. Those are different evidence records.",
+    "title": "Which ten-inch speaker matters.",
+    "body": "The model has an Oxford-style ten. The amp we used for the cabinet has a replacement Weber in it, and the illustrations show a generic ceramic speaker. Keep those three apart when you read this page.",
     "attributes": [
       [
         "Factory format represented",
@@ -195,11 +195,11 @@ export const PRINCETON_FEATURES=[
         "Oxford 10J4-style construction study"
       ]
     ],
-    "listen": "Cone condition, motor, sensitivity and frequency response matter when you compare speakers. Diameter alone doesn’t establish bass response, headroom or breakup.",
-    "together": "The Oxford-style selection follows the separately reported early-1965 example. It does not reproduce the main cabinet specimen’s replacement driver.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The speaker identity is specimen attribution, not a universal factory supplier rule. No original cone, power rating or response curve has been authenticated.",
-    "detail": "The marker attaches to the actual shared speaker mesh. Basket, magnet and mounting dimensions remain estimated.",
+    "listen": "Cone condition, magnet, sensitivity and frequency response all matter when you compare speakers. The diameter doesn’t tell you the bass response, the headroom or the breakup.",
+    "together": "The Oxford choice follows a separately reported early-1965 amp, an Oxford 10J4 type. It isn’t a copy of the Weber in our main cabinet reference.",
+    "extraTitle": "Where this comes from",
+    "extra": "The speaker identity comes from one amp. It isn’t a rule about who supplied Fender.",
+    "detail": "The marker is on the speaker. Basket, magnet and mounting dimensions are estimates. No original cone, power rating or response curve is claimed.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -218,8 +218,8 @@ export const BROWN_FEATURES=[
     "label": "Normal & Bright tone networks",
     "side": "front",
     "menuOnly": false,
-    "title": "Bright has its own tone circuit.",
-    "body": "Each channel has its own Volume and Tone, and the drawing gives the two tone networks different capacitor values. This is more than two labels feeding a single tone control.",
+    "title": "The Bright channel has its own tone circuit.",
+    "body": "Each channel has its own Volume and Tone, and the drawing gives the two tone networks different capacitor values. So Normal and Bright are voiced differently, not just labeled differently.",
     "attributes": [
       [
         "Controls",
@@ -230,11 +230,11 @@ export const BROWN_FEATURES=[
         "220 kΩ resistors into the shared stage"
       ]
     ],
-    "listen": "Compare the channels with the same guitar and similar level. The different networks give you another way to balance attack before you reach for a pedal.",
-    "together": "The channels join through mixing resistors before a shared gain stage. Their controls are not the 5E3’s volume network, although no two paths sharing a circuit are perfectly isolated.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "Channel order follows the inspected 1962 panel: Normal then Bright. We have not established the layout of every earlier brown Deluxe.",
-    "detail": "The marker identifies Normal Tone. Components are hidden behind the panel; coordinates come from the shared six-knob profile.",
+    "listen": "Compare the channels with the same guitar at about the same level. Picking a channel is one more way to change the attack before you reach for a pedal.",
+    "together": "The channels join through 220 kΩ mixing resistors ahead of a shared gain stage. It’s not the 5E3’s interactive volume network, though two channels that share a circuit are never perfectly isolated.",
+    "extraTitle": "Where this comes from",
+    "extra": "Channel order follows the 1962 panel we looked at: Normal, then Bright. We haven’t confirmed that layout for every earlier brown Deluxe.",
+    "detail": "The marker is on the Normal Tone knob. The parts are behind the panel.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -247,8 +247,8 @@ export const BROWN_FEATURES=[
     "label": "Bias tremolo on both channels",
     "side": "front",
     "menuOnly": false,
-    "title": "Either channel goes through the pulse.",
-    "body": "The 6G3 oscillator varies the output pair’s bias. Both channels have joined the signal path by then, so the tremolo belongs to both, despite a dealer description tying it to Bright.",
+    "title": "The tremolo works on both channels.",
+    "body": "The 6G3’s oscillator varies the bias on the two 6V6s. Both channels have joined by that point, so the tremolo works on either one. A dealer description ties it to the Bright channel. The drawing doesn’t.",
     "attributes": [
       [
         "Method",
@@ -259,11 +259,11 @@ export const BROWN_FEATURES=[
         "Speed and Intensity"
       ]
     ],
-    "listen": "You can choose the Normal channel’s balance and keep the tremolo. Listen to the pulse on a sustained note as well as a chord.",
-    "together": "The Intensity wiper connects to the common output-grid bias feed. The output stage acts on whichever channel supplies the audio.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The Fender I-FA drawing supports this routing. Depth versus playing level is a circuit interaction, not a measured listening result here.",
-    "detail": "The marker is on Intensity. The oscillator and bias network are internal.",
+    "listen": "You can use the Normal channel’s voicing and still have tremolo. Listen to it on a held note as well as a chord.",
+    "together": "The Intensity control’s wiper connects to the bias feed for the output-tube grids. Whichever channel is supplying the signal, the output stage is where the tremolo happens.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 6G3 drawing, sheet I-FA.",
+    "detail": "The marker is on Intensity. The oscillator and bias parts are inside. How depth changes with playing level wasn’t measured.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -276,8 +276,8 @@ export const BROWN_FEATURES=[
     "label": "Hidden: long-tail inverter",
     "side": "rear",
     "menuOnly": true,
-    "title": "This Deluxe changes the way it drives the pair.",
-    "body": "The brown Deluxe uses a two-triode long-tail phase inverter. The tweed 5E3 uses a one-triode cathodyne, so the change to brown covering came with a real circuit change.",
+    "title": "A different phase inverter from the tweed Deluxe.",
+    "body": "The brown Deluxe uses a long-tail phase inverter with two triodes. The tweed 5E3 uses a one-triode cathodyne. So going from tweed to brown changed the circuit, not just the covering.",
     "attributes": [
       [
         "Inverter",
@@ -288,11 +288,11 @@ export const BROWN_FEATURES=[
         "5E3 · split-load inverter"
       ]
     ],
-    "listen": "Compare the way a note moves from clean attack into overdrive. The inverter, bias, feedback, supply and speaker all contribute to the difference.",
-    "together": "The 6G3 drawing shows two inverter triodes with a common cathode/tail network and separate plate loads feeding the 6V6 grids.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The topology is a drawing fact. No one-stage explanation of the amp’s overdrive or resemblance to another brand is implied.",
-    "detail": "Menu-only topic: the inverter tube and circuit sit behind the upper rear panel. The rear view identifies the chassis area; interior spacing is estimated.",
+    "listen": "Listen to how a note goes from a clean attack into overdrive on each. The inverter is part of that difference, along with bias, feedback, supply and speaker.",
+    "together": "The 6G3 drawing shows the two halves of a 12AX7 with a shared cathode tail and separate plate loads, each feeding one 6V6 grid.",
+    "extraTitle": "Where this comes from",
+    "extra": "The topology is from Fender’s drawing.",
+    "detail": "There’s no marker on the model for this one. The tube sits behind the upper rear panel, so it’s in the menu only. Interior spacing is estimated.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -305,8 +305,8 @@ export const BROWN_FEATURES=[
     "label": "Fixed bias & output feedback",
     "side": "rear",
     "menuOnly": false,
-    "title": "The 6V6s keep their name and change their working conditions.",
-    "body": "The brown Deluxe uses negative grid bias and feedback from the output transformer. The 5E3’s pair uses cathode bias and has no global speaker-output feedback loop.",
+    "title": "Still 6V6s, now fixed bias with feedback.",
+    "body": "The brown Deluxe biases its 6V6s from a negative grid supply and takes feedback from the output transformer. The 5E3’s pair is cathode biased, with no feedback loop from the speaker output.",
     "attributes": [
       [
         "Output",
@@ -317,11 +317,11 @@ export const BROWN_FEATURES=[
         "56 kΩ from output secondary"
       ]
     ],
-    "listen": "That gives you concrete circuit differences to investigate when a brown Deluxe feels firmer than a tweed one. It doesn’t turn a bias label into a promise about compression.",
-    "together": "The I-FA drawing shows a resistor-set bias supply without an adjustment pot. Tremolo is added to that same output-grid bias feed.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The marked voltages are drawing conditions, not readings from the modeled specimen. Bias and feedback effects here are engineering interpretation.",
-    "detail": "The marker identifies one of the paired output tubes. The upper panel can obscure it at some angles; the menu always retains access.",
+    "listen": "If a brown Deluxe feels firmer to you than a tweed one, those are two real circuit differences to look at. Fixed bias on its own doesn’t promise a particular amount of compression.",
+    "together": "The drawing shows the bias set by fixed resistors, with no adjustment pot, and a 56 kΩ feedback resistor from the output secondary. The tremolo is fed into that same bias line.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 6G3 drawing, sheet I-FA.",
+    "detail": "The marker is on one of the two output tubes, and the upper panel can hide it. Voltages on the drawing are design figures, not readings from an amp.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -335,7 +335,7 @@ export const BROWN_FEATURES=[
     "side": "rear",
     "menuOnly": false,
     "title": "The drawing calls for a GZ34.",
-    "body": "A 5Y3 fitted in a surviving amp doesn’t make it the 6G3 factory specification. Fender’s drawing names GZ34, and that is the tube represented in this construction study.",
+    "body": "A 5Y3 in a surviving amp doesn’t make it the factory spec for the 6G3. Fender’s drawing names a GZ34, and that’s what the model shows.",
     "attributes": [
       [
         "Rectifier",
@@ -346,11 +346,11 @@ export const BROWN_FEATURES=[
         "Resistor filtering · 16 µF sections"
       ]
     ],
-    "listen": "If you compare two serviced amps, record the rectifier as well as the output tubes. A supply change can alter operating conditions throughout the amp.",
-    "together": "Voltage drop depends on rectifier behavior, transformer resistance and load. Tube type alone does not quantify sag or recovery time.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The drawing settles the design specification, not the originality of an installed bottle. No tube substitution is recommended here.",
-    "detail": "The marker attaches to the rectifier envelope. Its position and dimensions are estimates.",
+    "listen": "If you’re comparing two serviced amps, note the rectifier as well as the output tubes. A different rectifier can change the operating conditions through the whole amp.",
+    "together": "The drawing shows resistor filtering with 16 µF sections. How much the supply drops depends on the rectifier, the transformer’s resistance and the load, so the tube type alone doesn’t give you a number.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 6G3 drawing.",
+    "detail": "The marker is on the rectifier. Its position and size are estimates. The drawing gives the design spec. It can’t tell you whether an installed tube is original.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -363,8 +363,8 @@ export const BROWN_FEATURES=[
     "label": "Oxford & replacement history",
     "side": "rear",
     "menuOnly": false,
-    "title": "The sale included two speakers, not two factory options.",
-    "body": "The 1962 reference listing includes an Oxford 12K5 and says a modern Mojotone was fitted for use. Its photographs and sale description need to be read separately.",
+    "title": "The reference amp came with two speakers.",
+    "body": "The 1962 amp we worked from was listed with an Oxford 12K5 included and a modern Mojotone fitted for playing. Read the photos and the sale description separately.",
     "attributes": [
       [
         "Represented format",
@@ -375,11 +375,11 @@ export const BROWN_FEATURES=[
         "Estimated Oxford-family ceramic study"
       ]
     ],
-    "listen": "Before crediting a vintage speaker name for a sound, establish which driver was actually installed and whether its cone survives.",
-    "together": "The dealer attributes the included Oxford as original. That is a specimen claim, not independent proof of factory fitment or cone originality.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The opened rear photograph shows the pale Oxford basket. It does not establish measured response, sensitivity or power capacity.",
-    "detail": "The marker attaches to the speaker mesh. The modeled motor and basket are approximations, and no dealer photo is embedded.",
+    "listen": "Before you credit a vintage speaker name for a sound, find out which speaker was in the amp at the time and whether its cone is original.",
+    "together": "The dealer says the Oxford is the original. That’s a claim about one amp, not independent proof of what the factory fitted. The photo with the back off shows the pale Oxford basket.",
+    "extraTitle": "Where this comes from",
+    "extra": "The dealer listing and photos for the 1962 reference amp. No dealer photo is shown here.",
+    "detail": "The marker is on the speaker. The magnet and basket in the model are approximations of an Oxford-type ceramic speaker. No response, sensitivity or power figures are claimed.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -398,8 +398,8 @@ export const CHAMP_FEATURES=[
     "label": "One Volume, no tone stack",
     "side": "top",
     "menuOnly": false,
-    "title": "The one knob comes after a tube stage.",
-    "body": "A boost reaches the first half of the 12AX7 before it reaches Volume. Turning the knob down reduces the feed to the second stage; it doesn’t undo what happened at the input.",
+    "title": "The one knob comes after the first tube stage.",
+    "body": "Your signal hits the first half of the 12AX7 before it gets to Volume. Turning the knob down sends less to the second stage. It doesn’t undo anything that happened at the input.",
     "attributes": [
       [
         "Signal path",
@@ -410,11 +410,11 @@ export const CHAMP_FEATURES=[
         "No separate tone control"
       ]
     ],
-    "listen": "If a hot input gets rough even with Volume low, reduce the signal coming from the guitar or pedal and compare at a similar listening level.",
-    "together": "The K-EE drawing shows two 12AX7 gain stages with the volume pot between them and no passive Treble/Bass stack. The coupling and cathode networks still shape frequency response.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "This is circuit interpretation from the drawing. No clipping point has been measured, and one knob does not mean an electrically unfiltered signal.",
-    "detail": "The top marker follows the actual shared Volume knob. Panel dimensions and knob spacing are estimates.",
+    "listen": "If a hot pickup or a boost sounds rough even with Volume low, turn down the guitar or the pedal and compare at about the same loudness.",
+    "together": "The drawing shows two 12AX7 gain stages with the Volume pot between them and no Treble and Bass network. That doesn’t mean nothing shapes the tone. The coupling caps and cathode networks still do.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 5F1 drawing, sheet K-EE.",
+    "detail": "The marker is on the Volume knob. Panel dimensions and knob spacing are estimates. No clipping point was measured.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Champ-5F1-Schematic.pdf",
@@ -427,8 +427,8 @@ export const CHAMP_FEATURES=[
     "label": "Hidden: output feedback",
     "side": "rear",
     "menuOnly": true,
-    "title": "Single-ended doesn’t mean no feedback.",
-    "body": "The 5F1 returns a sample from the speaker side of its transformer to the second gain stage. That’s a useful correction to the idea of the Champ as nothing but an unchecked little power tube.",
+    "title": "Single-ended, and it still has a feedback loop.",
+    "body": "The 5F1 takes a sample from the speaker side of the output transformer back to the second gain stage. So the Champ isn’t just one little power tube with nothing reining it in.",
     "attributes": [
       [
         "Drawing return",
@@ -439,11 +439,11 @@ export const CHAMP_FEATURES=[
         "Second 12AX7 cathode network"
       ]
     ],
-    "listen": "While the loop has headroom, it changes gain and how the amplifier responds to distortion and speaker loading. It doesn’t remove the rest of the amp’s character.",
-    "together": "The drawing’s feedback connection reaches the second triode cathode. The resistor value by itself does not tell us the amount of feedback under every load and frequency.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The loop is a drawing fact; its audible contribution is engineering interpretation. No feedback modification or measured response is presented.",
-    "detail": "Menu-only topic: the network is inside the chassis behind the upper back panel. The rear view identifies that assembly, not a visible resistor.",
+    "listen": "As long as the loop has headroom, it changes the gain and how the amp reacts to distortion and to the speaker. It doesn’t take the rest of the amp’s character away.",
+    "together": "On the drawing, a 22 kΩ resistor carries the feedback to the cathode of the second triode. The value alone doesn’t tell you how much feedback there is at every load and frequency.",
+    "extraTitle": "Where this comes from",
+    "extra": "The loop is on Fender’s K-EE drawing. What it does to the sound is engineering reasoning, not a measurement.",
+    "detail": "There’s no marker on the model for this one. The parts are inside the chassis behind the upper back panel, so it’s in the menu only.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Champ-5F1-Schematic.pdf",
@@ -456,8 +456,8 @@ export const CHAMP_FEATURES=[
     "label": "Single-ended 6V6",
     "side": "rear",
     "menuOnly": false,
-    "title": "One output tube needs no phase inverter.",
-    "body": "The 5F1 drives one 6V6GT, rather than splitting the signal for a push-pull pair. There is no phase-inverter stage between the preamp and that output tube.",
+    "title": "One 6V6, so no phase inverter.",
+    "body": "The 5F1 drives a single 6V6GT. There’s no push-pull pair to feed, so there’s no phase inverter between the preamp and the output tube.",
     "attributes": [
       [
         "Output",
@@ -468,11 +468,11 @@ export const CHAMP_FEATURES=[
         "470 Ω · 25 µF bypass"
       ]
     ],
-    "listen": "The small output stage is part of why this amp is useful when you want to work it hard at a lower level than a large combo. The speaker and room still decide how loud that feels.",
-    "together": "The output transformer carries the single tube’s standing current as well as the changing signal. That is a different design requirement from a balanced push-pull pair.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "Single-ended topology does not establish an exact harmonic spectrum or make all the distortion come from the 6V6. No waveform or output measurement was made.",
-    "detail": "The marker is on the output-tube envelope. The inspected chart gives rear order 5Y3GT, 6V6GT, 12AX7; all spacing remains illustrative.",
+    "listen": "That small output stage is part of why people use a Champ when they want to work an amp hard at a lower volume than a big combo. How loud that ends up still depends on the speaker and the room.",
+    "together": "The 6V6 is cathode biased, with a 470 Ω resistor and a 25 µF bypass. Its output transformer has to carry the tube’s standing current along with the signal, which is a different job from a transformer on a balanced push-pull pair.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s K-EE drawing. The tube chart we looked at gives the rear order as 5Y3GT, 6V6GT, 12AX7.",
+    "detail": "The marker is on the output tube. Spacing is illustrative. No output or waveform was measured, and not all of a Champ’s distortion has to come from the 6V6.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Champ-5F1-Schematic.pdf",
@@ -485,8 +485,8 @@ export const CHAMP_FEATURES=[
     "label": "5Y3 & resistor filtering",
     "side": "rear",
     "menuOnly": false,
-    "title": "The supply has fewer parts than a 5E1’s.",
-    "body": "The 5F1 drawing uses a 5Y3GT and resistor filtering, with no choke. That distinguishes this design from the earlier 5E1 without telling us how much either supply sags.",
+    "title": "A 5Y3 and no choke.",
+    "body": "The 5F1 drawing has a 5Y3GT, with resistors between the filter stages and no choke. That’s one of the things that separates it from the earlier 5E1.",
     "attributes": [
       [
         "Rectifier",
@@ -497,11 +497,11 @@ export const CHAMP_FEATURES=[
         "16 µF · 8 µF · 8 µF"
       ]
     ],
-    "listen": "Listen to light picking and sustained hard playing separately. Supply response, stage clipping and speaker compression can all affect the result.",
-    "together": "The drawing joins the supply sections through 10 kΩ and 22 kΩ resistors. A resistor-filtered supply is a circuit description, not a measurement of softness.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "Values follow K-EE. Transformer resistance, current demand and recovery behavior have not been measured on the reference amp.",
-    "detail": "The marker follows the rectifier envelope. Supply components are hidden; no internal wiring is reconstructed.",
+    "listen": "Listen to light picking and hard sustained playing separately. Supply response, stage clipping and speaker compression can all be part of what you hear.",
+    "together": "The filter caps are 16, 8 and 8 µF, joined by 10 kΩ and 22 kΩ resistors. That describes the circuit. It doesn’t tell you how soft the supply feels.",
+    "extraTitle": "Where this comes from",
+    "extra": "Values are from Fender’s K-EE drawing.",
+    "detail": "The marker is on the rectifier. The supply parts are hidden. Sag and recovery weren’t measured on the reference amp.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Champ-5F1-Schematic.pdf",
@@ -514,8 +514,8 @@ export const CHAMP_FEATURES=[
     "label": "Eight-inch cabinet & speaker",
     "side": "rear",
     "menuOnly": false,
-    "title": "This is the eight-inch Champ entry.",
-    "body": "The catalog separates this Champ by speaker size. Its 1958 timeline date is not a claim that the 5F1 circuit first appeared that year; the construction study represents a 1959-style eight-inch combo.",
+    "title": "This entry is the eight-inch Champ.",
+    "body": "The catalog splits the Champ by speaker size, and this is the eight. The 1958 date belongs to that catalog entry. It isn’t a claim that the 5F1 circuit first appeared that year. The model is a 1959-style eight-inch combo.",
     "attributes": [
       [
         "Format",
@@ -526,11 +526,11 @@ export const CHAMP_FEATURES=[
         "13.5 × 12 × 8 in · W × H × D"
       ]
     ],
-    "listen": "A different eight can change sensitivity and tonal balance substantially. Don’t infer a particular breakup point just from the cone diameter.",
-    "together": "The cabinet reference C-12147 is dealer-measured at eight inches deep. A second 1959 example is listed at 7.5 inches; that discrepancy remains open.",
-    "extraTitle": "What the evidence tells us",
-    "extra": "The rendered speaker is deliberately unbranded. The reference’s missing label and dealer originality claim do not establish a particular factory speaker model.",
-    "detail": "The marker attaches to the speaker mesh. Basket, motor and all detailed dimensions are estimated.",
+    "listen": "Swap in a different eight and the sensitivity and tonal balance can change a lot. Don’t assume a breakup point from the cone size.",
+    "together": "Our cabinet reference, C-12147, is dealer-measured at eight inches deep. A second 1959 amp is listed at 7.5. We haven’t resolved that.",
+    "extraTitle": "Where this comes from",
+    "extra": "The reference amp’s speaker label is missing, and the dealer’s originality claim doesn’t establish a factory speaker model. So the speaker in the model is unbranded.",
+    "detail": "The marker is on the speaker. Basket, magnet and detail dimensions are estimates.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Champ-5F1-Schematic.pdf",

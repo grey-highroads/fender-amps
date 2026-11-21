@@ -23,8 +23,8 @@ const amps=[
  "width": 1.325,
  "height": 2.418,
  "circuit": "1972-style master-volume family",
- "voice": "Twin-family power, spread across six tens.",
- "story": "Six tens in three rows, a master-volume Twin-family chassis, and a cabinet more than forty inches tall before the casters. The Super Six makes its point through speaker area and scale. Both channels have Volume, Treble, Middle and Bass; the Vibrato channel adds spring reverb and tremolo. This study represents the 100-watt early version, with no later pull boost, line out or hum-balance hardware. The period Fender specification sheet supports the cabinet envelope and removable casters. Surviving speaker brands and the exact introduction date remain less settled.",
+ "voice": "Six tens on a master-volume Twin-family chassis.",
+ "story": "Six ten-inch speakers in three rows, on a master-volume chassis from the Twin family. The cabinet is more than forty inches tall before you put the casters on. Both channels have Volume, Treble, Middle and Bass, and the Vibrato channel adds spring reverb and tremolo. Ours is the early 100-watt version, so there’s no pull boost, line out or hum balance. The cabinet size and the removable casters come from Fender’s spec sheet for the period. Which speakers these shipped with, and exactly when the model first appeared, are less settled.",
  "ratingNote": "Catalog row 91 retains 1972 introduction and 1972–1979 production; sources suggest earlier examples. Six nominal 8 Ω speakers modeled as three series pairs in parallel give 16/3 Ω (5.33 Ω), commonly published as 5.2 Ω. Later 135 W versions are outside this assembly."
 },
 {
@@ -40,8 +40,8 @@ const amps=[
  "width": 0.9,
  "height": 0.955,
  "circuit": "PR 295 / original 1995 family",
- "voice": "An EL84 pair, a single twelve, and gain before the Master.",
- "story": "The original Blues Junior puts two EL84s and a twelve-inch speaker into a compact black cabinet. Volume sets how hard the preamp works, while Master sets the level that follows it. The Fat switch changes the first stage’s bypassing; it is a switch beside six rotary controls. The November 1995 Fender manual supplies the cabinet dimensions, 15-watt rating and one 8-ohm Eminence speaker. Our exterior follows a seller-dated December 1995 US example, with its chrome top panel, rectangular Fender tag and distinctive tube opening in the rear board.",
+ "voice": "Two EL84s, one twelve, and a Master after the gain.",
+ "story": "Two EL84s and a twelve-inch speaker in a small black cabinet, rated at 15 watts. Volume sets how hard the preamp works and Master sets the level after it, so you can push the preamp without sending all of that on to the output section. The Fat switch changes the bypassing on the first stage. This is the original 1995 version. The dimensions, the rating and the 8-ohm Eminence come from Fender’s November 1995 manual. The look follows a seller-dated December 1995 US amp, with the chrome top panel, the rectangular Fender tag and the tube opening in the rear board.",
  "ratingNote": "Catalog row 131 groups generations I–II through 2010. This is the original 1995 PR 295 configuration, not a Blues Junior III/IV or an audit of a particular green circuit board. Speaker basket, rear opening and hardware spacing are estimates."
 },
 {
@@ -57,8 +57,8 @@ const amps=[
  "width": 1.2,
  "height": 1.105,
  "circuit": "CSR 13 combo / 30–50–60 W modes",
- "voice": "Two gain controls, two tens, and three power-section settings.",
- "story": "The Prosonic gives its drive channel two gain controls before a separate Master. Its more unusual choice sits on the rear: the bias/rectifier selector. Fender specifies 30 watts for Class A/tube, 50 for AB/tube and 60 for AB/solid-state. Those are the factory mode names, not a measurement of this model. This is the 2×10 reverb combo, with two nominal 8-ohm Celestion-format speakers in series. Red is one of the manual’s factory color choices. The black front panel and chicken-head knobs follow an opened, seller-dated 1996 red-lizard example; the covering texture is an approximation.",
+ "voice": "Two gain knobs, two tens, and a three-way power-section switch.",
+ "story": "The drive channel has two gain controls ahead of its own Master. The more unusual feature is on the back: a switch that changes the rectifier and the output-tube bias together. Fender’s manual gives 30 watts for Class A with the tube rectifier, 50 for AB with the tube rectifier and 60 for AB with solid-state rectification. Those are Fender’s names and ratings, and we haven’t measured them. This is the 2 × 10 combo with reverb, two 8-ohm tens wired in series. Red was one of the factory colors. Our black front panel and chicken-head knobs follow a seller-dated 1996 red-lizard amp, and the covering texture is an approximation.",
  "ratingNote": "Catalog row 137 groups combo and head. This study selects the CSR 13 combo: 16 Ω internal, switching the amplifier to 8 Ω when an extension is connected; the head’s 4/8/16 selector is omitted. Catalog ends 2002; secondary product guides end 2001. Internal layout and detailed speaker geometry are estimates."
 },
  {

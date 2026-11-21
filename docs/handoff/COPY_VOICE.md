@@ -133,7 +133,7 @@ The vintage Pro Reverb was a two-channel 2 × 12, and this is a different amp. T
 
 ## Still to do
 
-Hotspot cards (Deluxe Reverb, Twin, 5E3), then interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, object captions ("OUTSIZED INFLUENCE.").
+Interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, spec fine print and `ratingNote` lines, object captions.
 
 ## First hotspot expansion selective integration
 
@@ -143,27 +143,24 @@ title to avoid promising cleanup. Deferred its flagged 5E3 lore and new figures.
 Added 18 source-scoped small-amp cards. See EXPLORER_BATCH.md for reviewed
 claims, explicit interpretation, rectifier dispute and remaining uncertainty.
 
-## Parked: batch 2 hotspot draft (not live)
+## Batch 2 and 3: hotspot cards and stories for all ten active amps (live)
 
-Written on branch `copy/hotspots` against an older `main`, before the builder added hotspots for the Princeton, brown Deluxe, Champ and other new amps and changed the same files. It no longer merges cleanly, so it was saved here and the branch was deleted. The full change is in [copy-drafts/hotspots-batch-2.patch](copy-drafts/hotspots-batch-2.patch) as a reference: reuse the wording, but redo the pass on the current `main` and cover every active amp's cards.
+November 20, 2026, on `main`. Every active amp now has its story, one-line description and hotspot cards in the approved voice: 65 cards across the Tweed Deluxe, Tremolux, Champ, brown Deluxe, Deluxe Reverb, Princeton Reverb, 1968 Twin, Super Six, Blues Junior and Prosonic. The 198 catalog-only entries are untouched.
 
-Caution: the Tweed Deluxe cards drew on the first version of the 5E3 research packet. That version had the volume-pot wiring backwards and stated several sound claims too strongly. Use the corrected [5E3 packet](../research/packets/deluxe-5e3-explorer.md).
+What changed in this pass:
 
-The copy agent's notes from that batch, unchanged:
+- Tweed Deluxe cards (`dist/tweed-features.js`), redone against the corrected 5E3 packet. The volume-pot wiring matches the corrected packet, channels are called Instrument and Mic, and the sound claims are stated as owner or analyst reports.
+- All 39 cards in `dist/active-amp-features.js` and `dist/small-amp-features.js`. Facts are the builder's; only the wording changed. The repeated "Evidence & scope" disclaimers are now one line saying where the fact comes from, and one fine-print note saying what was not measured.
+- Stories and one-line descriptions for the Super Six, Blues Junior and Prosonic in `dist/collection.js`.
+- The Deluxe Reverb and Twin cards were already live from the earlier draft and were left as they are, including the builder-side title edit on the Deluxe Reverb inputs card.
 
-All 26 explorer cards rewritten: nine Deluxe Reverb (`dist/deluxe-features.js`), eight Twin (`dist/twin-features.js`, `dist/twin-tone.js`) and nine Tweed Deluxe (`dist/tweed-features.js`). Titles, body, "Why it matters", "Dig a little deeper" and the fine-print note changed. Attribute rows, sources, photos, captions and anchors did not.
+Attribute rows, sources, photos, captions, anchors and `ratingNote` lines were not changed. The old patch in `copy-drafts/` is superseded and removed.
 
-Caveats are consolidated: each card states its evidence limit once, in the fine-print note under Sources, and the body text no longer repeats it.
+Checks: `npm test` passes except the Blender check (needs Git LFS content not in the copy agent's clone); `checks/explorers.mjs` run separately and passes. Cards were opened in a headless browser at 1440 px wide; a 390 px pass was run on the earlier draft only.
 
-Every card was opened in a headless browser at 1440 and 390 px wide. Cards scroll inside their panel as before; the longest title wraps to three lines.
+Flags for the owner:
 
-Flags:
-
-- The Tweed Deluxe cards now use lore and figures from `docs/research/next-expansion/packets/deluxe-5e3-explorer.md` on the research branch: Rob Robinette's load figures for the unused Volume, his under-2 gain figure for the inverter, his transformer-saturation point, the bright cap sitting on the Instrument channel, the 12AX7 and GZ34 swaps owners try, and owner descriptions of headroom and low end. Each is attributed in the card. None is a Fender drawing fact.
-- "One of the softer rectifiers Fender used" (5Y3) is the packet's wording and is not sourced there.
-- Where a card's extra section was only a disclaimer, it was replaced with a fact already in the card or packet, or cut to one line.
-- `dist/explore.js` still holds three unused base cards for the Twin ("Where electricity becomes sound." and two others). The live cards override their text. Left alone.
-
-Interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, spec fine print and `ratingNote` lines, object captions ("OUTSIZED INFLUENCE.").
-
-Branch `copy/voice-pass` held an earlier version of batch 1 (all 23 old timeline entries). It was superseded by the batch 1 now on `main` and the parked drafts above, and was deleted.
+- Tweed Deluxe cards cite Rob Robinette for the unused-Volume load figures, the under-2 inverter gain and transformer saturation. These are his analysis, not Fender drawing facts, and the cards say so.
+- "One of the softer rectifiers Fender used" (5Y3) is the packet's wording with no source given.
+- The Tweed Deluxe speaker card still describes a reconed P12R on a 1957 reference amp. The corrected packet's reference amp (RetroFret 10964) is listed with an original P12R. The card's fact was left for the builder to confirm.
+- `dist/explore.js` still holds three unused base cards for the Twin ("Where electricity becomes sound." and two others). The live cards override their text.
