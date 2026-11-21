@@ -211,3 +211,13 @@ Post-release project inspection reconfirmed the existing team/project and
 `all_except_custom_domains` SSO protection: public custom domains, protected
 generated URLs. Original private Sites prototype, existing Site ID and DNS
 were untouched. Documentation/evidence follow-up does not change runtime bytes.
+
+## Brown Deluxe image replacement — user approved
+
+November 20: user approved the new same-specimen D02985 front/rear pair and
+requested publication. `brown/front-v2.jpg` and `rear-v2.jpg` replace the painted
+placeholders in the shared image registry. Full prompts and corrected provenance
+are in `assets/studies/manifest.json`; no text-omission claim remains for this pair.
+The previous files remain unused. No model, hotspot, other amp image or viewer
+behavior changed. Six npm checks and whitespace passed; both images were opened
+and visually checked in the local viewer. Image accuracy is still interpretive.

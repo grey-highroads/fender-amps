@@ -39,37 +39,37 @@
     "id": "brown-front",
     "assemblyId": "deluxe-6g3",
     "amp": "Brown Deluxe",
-    "configuration": "1962-style 6G3, six brown barrel knobs, one twelve, no grille badge",
+    "configuration": "1962 Deluxe 6G3 specimen study guided by Music Emporium D02985; six brown barrel knobs, four inputs, one twelve, no grille badge",
     "view": "Front",
     "kind": "whole-amp",
     "label": "Generated illustration",
-    "path": "assets/studies/brown/front.jpg",
+    "path": "assets/studies/brown/front-v2.jpg",
     "generationDate": "2026-11-20",
     "method": "Built-in image generation",
-    "prompt": "Use case: scientific-educational. Generate a whole-amplifier front illustration for an educational website, 1962 Fender brown Deluxe 6G3. Use attached front photograph only for form and cosmetics, do not copy room, wear or photographic composition. Clean warm ivory studio background, centered straight front with slight top visible, full cabinet and feet, consistent soft light, detailed painted product illustration clearly distinguishable from a historical photograph. Brown textured covering, wheat cloth, brown leather top handle, no grille logo. Exactly six brown barrel knobs across brown front panel: two input jacks then two knobs, two more input jacks then two knobs, then two tremolo knobs, red pilot far right. One 12 inch speaker hidden behind cloth. No readable lettering or numbers anywhere, omit wordmarks and small print rather than inventing text. No extra switches, no reverb, no watermark. This is an illustrative placeholder, not authenticated specimen evidence.",
+    "prompt": "Use case: product-mockup. Generate one extremely photorealistic studio catalog FRONT image of the exact 1962 brown Fender Deluxe 6G3 specimen D02985 in these real photographs. Image 1 is the whole specimen, images 2 and 3 are its panel detail references. Faithfully reconstruct this object, not a generic Fender. Change only camera to straight-on front, and environment to neutral pale warm gray seamless studio floor/backdrop, soft large key upper left and gentle fill. Full uncropped cabinet and leather handle, centered, cabinet fills about 80% width; long lens, very slight view of top. Match width/height about 21:17, tapered vintage cabinet, rounded brown textured vinyl edges, wheat golden-beige woven grille with its actual fine layered weave, dark brown control faceplate across top. NO logo on grille, NO corner protectors, NO front baffle screw heads. Raised curved brown leather handle, metal mounts, as photographed, not black strap. Exactly FOUR input jacks and SIX dark brown barrel knobs, flat brown tops, fine ribbed sides and narrow cream indicator lines; numerals printed on faceplate NOT knobs. Exact left-to-right arrangement: two NORMAL inputs labeled 1 2, VOLUME knob, TONE knob; two BRIGHT inputs labeled 1 2, VOLUME knob, TONE knob; SPEED knob, INTENSITY knob; white two-line Deluxe-Amp script toward right, red pilot jewel far right. Preserve irregular real cloth and subtle photographed age, avoid exaggerated damage. Match reference proportions, spacing, colors corrected only for warm shop illumination, hardware and cloth scale. No reverb, no silver knob centers, no blackface styling, no extra controls. Optical photographic realism, small natural surface imperfections and physical material reflections, no plastic CGI surfaces, no stylization, no caption or watermark. Reference-informed image study; maintain this specific specimen's identity.",
     "referenceLinks": [
       "https://themusicemporium.com/products/fender-6g3-deluxe-1962"
     ],
-    "knownInaccuracies": "Text deliberately omitted. Knob shape, covering color, basket, magnet, tube tips and hardware spacing are interpretive; no exact Oxford construction or factory-originality claim.",
-    "provenance": "Generated from privately inspected specimen photographs; only generated output redistributed"
+    "knownInaccuracies": "Generated lettering, covering color, weave and hardware dimensions remain approximate. Photographed speaker appearance follows the specimen; factory originality is not independently verified.",
+    "provenance": "User-approved replacement pair generated from one specimen: Music Emporium D02985. Front references AMP26002-1, -4 and -5; rear references -12 and -11. Prior painted placeholders superseded; original dealer photographs are not redistributed."
   },
   {
     "id": "brown-rear",
     "assemblyId": "deluxe-6g3",
     "amp": "Brown Deluxe",
-    "configuration": "1962-style 6G3, six brown barrel knobs, one twelve, no grille badge",
+    "configuration": "1962 Deluxe 6G3 specimen study guided by Music Emporium D02985; six brown barrel knobs, four inputs, one twelve, no grille badge",
     "view": "Rear",
     "kind": "whole-amp",
     "label": "Generated illustration",
-    "path": "assets/studies/brown/rear.jpg",
+    "path": "assets/studies/brown/rear-v2.jpg",
     "generationDate": "2026-11-20",
     "method": "Built-in image generation",
-    "prompt": "Use case: scientific-educational. Whole-amp rear view illustration of a 1962 Fender brown Deluxe 6G3, centered straight rear, slight top visible, warm ivory seamless studio background, soft light, detailed painted product illustration, not historical photograph. Reference photo establishes cabinet and opening shapes only; do not copy room or wear. Rough brown covering, leather handle, upper removable panel with shallow trapezoid top opening exposing rear chassis strip; flat lower panel; large middle opening reveals ONE 12-inch Oxford-style speaker back, pale gold basket, dark magnet, no readable speaker label. Six tubes belong above the middle opening mostly hidden behind upper panel, only tips visible. Rear strip ground toggle, fuse, one power toggle, speaker and extension jacks, tremolo pedal jack; no standby. No readable lettering, serials, logos, tube charts or wiring detail. Omit text rather than invent it. Full cabinet and glides. Illustration only, not a circuit layout or verified specimen.",
+    "prompt": "Use case: product-mockup. Generate one extremely photorealistic studio catalog REAR image of the exact 1962 brown Fender Deluxe 6G3 specimen D02985 in reference 1. Reference 2 is this same specimen's rear control close-up. Strictly follow these photographs. Neutral pale warm gray seamless studio floor/backdrop, soft large key upper left and gentle fill; long-lens straight-on rear centered camera, a very slight view of top, full cabinet and leather handle uncropped, cabinet fills about 80% width. Match compact cabinet width/height about 21:17. Brown rough finely textured vinyl, rounded edges, subtle actual age. Arched brown leather handle above, not black strap. Rear: upper brown board with shallow wide trapezoid cut into its TOP edge exposing recessed chassis, sloped cut ends and broad solid board below; two screws each end. Large middle horizontal open gap shows ONE twelve-inch vintage speaker, aged gold/ochre stamped basket with elongated rounded rectangular openings and flat round pale metal magnet center as photographed, black handwritten/stamped codes, NO blue Fender label, NO bell cover, NO extra speaker. Flat lower brown rear board, two screws each end. Match heights and gaps to photograph exactly. Speaker lead runs from cream/tan round plug on top strip down toward speaker terminals at right. Rear dark brown strip, left to right: GROUND toggle; black FUSE cap labeled FUSE 2 AMP.; 1.1 AMP. / 117 VOLTS / 60 CYCLES; ON toggle; cream round SPEAKER plug; empty EXT. SPKR. jack; tiny FENDER ELECTRIC INSTRUMENT CO. Fullerton, California; TREMOLO PEDAL jack at right; bare steel chassis end to right with D 02985 stamp. Only the photographed lower tube tips are partly visible in the upper slot; do not expose a fantasy row of tubes in the middle opening. Interior brown wood at sides, natural dark interior with readable speaker, no added lighting glow. Exactly the hardware in references, no standby toggle, no reverb jacks, no ventilation slots cut through boards, no metal corner protectors. Preserve same specimen identity; do not substitute newer components or invent original fitment. Optical photographic detail, physically believable texture scale, soft grounded contact shadow, no plastic CGI surfaces, no captions or watermark. Match the neutral studio presentation of a companion front catalog view.",
     "referenceLinks": [
       "https://themusicemporium.com/products/fender-6g3-deluxe-1962"
     ],
-    "knownInaccuracies": "Text deliberately omitted. Knob shape, covering color, basket, magnet, tube tips and hardware spacing are interpretive; no exact Oxford construction or factory-originality claim.",
-    "provenance": "Generated from privately inspected specimen photographs; only generated output redistributed"
+    "knownInaccuracies": "Generated lettering, covering color, weave and hardware dimensions remain approximate. Photographed speaker appearance follows the specimen; factory originality is not independently verified.",
+    "provenance": "User-approved replacement pair generated from one specimen: Music Emporium D02985. Front references AMP26002-1, -4 and -5; rear references -12 and -11. Prior painted placeholders superseded; original dealer photographs are not redistributed."
   },
   {
     "id": "champ-front",

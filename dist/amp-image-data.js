@@ -32,29 +32,29 @@ export const AMP_IMAGE_STUDIES=[
     "id": "brown-front",
     "assemblyId": "deluxe-6g3",
     "amp": "Brown Deluxe",
-    "configuration": "1962-style 6G3, six brown barrel knobs, one twelve, no grille badge",
+    "configuration": "1962 Deluxe 6G3 specimen study guided by Music Emporium D02985; six brown barrel knobs, four inputs, one twelve, no grille badge",
     "view": "Front",
     "kind": "whole-amp",
     "label": "Generated illustration",
-    "path": "assets/studies/brown/front.jpg",
+    "path": "assets/studies/brown/front-v2.jpg",
     "referenceLinks": [
       "https://themusicemporium.com/products/fender-6g3-deluxe-1962"
     ],
-    "knownInaccuracies": "Text deliberately omitted. Knob shape, covering color, basket, magnet, tube tips and hardware spacing are interpretive; no exact Oxford construction or factory-originality claim."
+    "knownInaccuracies": "Generated lettering, covering color, weave and hardware dimensions remain approximate. Photographed speaker appearance follows the specimen; factory originality is not independently verified."
   },
   {
     "id": "brown-rear",
     "assemblyId": "deluxe-6g3",
     "amp": "Brown Deluxe",
-    "configuration": "1962-style 6G3, six brown barrel knobs, one twelve, no grille badge",
+    "configuration": "1962 Deluxe 6G3 specimen study guided by Music Emporium D02985; six brown barrel knobs, four inputs, one twelve, no grille badge",
     "view": "Rear",
     "kind": "whole-amp",
     "label": "Generated illustration",
-    "path": "assets/studies/brown/rear.jpg",
+    "path": "assets/studies/brown/rear-v2.jpg",
     "referenceLinks": [
       "https://themusicemporium.com/products/fender-6g3-deluxe-1962"
     ],
-    "knownInaccuracies": "Text deliberately omitted. Knob shape, covering color, basket, magnet, tube tips and hardware spacing are interpretive; no exact Oxford construction or factory-originality claim."
+    "knownInaccuracies": "Generated lettering, covering color, weave and hardware dimensions remain approximate. Photographed speaker appearance follows the specimen; factory originality is not independently verified."
   },
   {
     "id": "champ-front",

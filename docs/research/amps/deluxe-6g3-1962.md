@@ -92,3 +92,22 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - The schematic was read at low zoom. Small component values were not checked.
 - Changed from first pass: "The schematic link was not opened" no longer applies. The 5Y3 specimen claim could not be found in the dealer text read this time.
 
+
+## User-requested image retry — November 20, 2026
+
+The user reopened image generation for this amp only after preferring the earlier
+Princeton pair. Used five existing Music Emporium D02985 photographs, inspected
+at full size in this task: front 1, panel details 4/5, rear 12 and rear-strip detail
+11. Two separate built-in image-generation calls used three front references and
+two rear references, with explicit hardware/order constraints and matching neutral
+studio backgrounds. No new research or external photograph downloads were needed.
+
+New review PNGs and exact prompts are saved under ignored
+`outputs/brown-deluxe-photoreal-review-v2/` (`front.png`, `rear.png`, `prompts.json`).
+They preserve the six-knob/four-input arrangement, bare grille, brown leather
+handle and rear trapezoid/board/single-speaker arrangement more closely than a
+generic amp interpretation. They are generated illustrations, not measured
+reconstructions. Fine lettering, weave, color and texture scale remain approximate;
+photographed Oxford appearance is specimen attribution, not independent proof of
+factory originality. User review is pending. No existing site assets, code,
+hotspot content or publication changed. Other image work remains deferred.
