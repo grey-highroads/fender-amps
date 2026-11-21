@@ -106,5 +106,41 @@
     ],
     "knownInaccuracies": "Generated tweed pitch, color, tiny lettering, tube details and obscured speaker motor remain approximate. Wear and fitted parts follow the photographed specimen, not independently verified factory fitment.",
     "provenance": "User-approved replacement pair from one specimen, RetroFret C-12147. Front references photos 1, 3 and 5; rear references 2, 5 and 1. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "tremolux-front",
+    "assemblyId": "tremolux-5e9",
+    "amp": "Tweed Tremolux",
+    "configuration": "June 1955 small-box 5E9 specimen study guided by RetroFret serial 0093; five top controls, one twelve",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tremolux/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case product-mockup. Create a highly photorealistic studio FRONT product image of the exact vintage June 1955 small-box Fender Tremolux 5E9 serial 0093 in the reference photographs. Reference 1 whole front, reference 2 three-quarter confirms depth/covering, reference 3 top rear establishes handle and controls. Preserve this actual specimen, not a generic tweed Deluxe or later tall Tremolux. Full cabinet uncropped centered, width/height approximately 20:16, long-lens straight-on front camera with just a slight glimpse of top. Cabinet fills about 80% image width. Neutral pale warm gray seamless studio floor/background, large soft key upper left gentle fill, realistic grounded contact shadow. Dark aged amber/orange-brown lacquered diagonal tweed, frayed corners with exposed wood and wear as photographed, not new bright yellow cloth. Large dark oxblood/brown grille with delicate horizontal gold weave stripes and thin vertical threads. Narrow tweed rails above and below grille with four dark baffle screw heads at photographed positions. Small rectangular brown badge CENTERED on upper front rail with silver Fender script and thin silver border. No large tail logo on grille. Low arched old brown leather handle atop cabinet, photographed dark mounts. No front panel controls. Exactly five black chicken-head knobs belong on recessed horizontal chrome TOP-REAR panel, mostly hidden in this frontal view; do not move them onto the face. Top hardware, if visible, follows reference: fuse, toggle, red jewel, five knobs, four input jacks. Preserve actual wide small-box proportions, aged grille and tweed weave scale. Rich optical photo detail, physically believable cloth/leather/metal, no painted illustration, no plastic CGI look, no added controls or corner protectors, no captions or watermark. Match a paired rear studio view. This is a specimen appearance study, not an assertion all fitted parts are original.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, wear, dimensions, tube envelopes and speaker construction remain approximate. Fitted parts follow the photographed specimen, not independently verified factory originality.",
+    "provenance": "User-approved same-specimen pair. Front references RetroFret 0093 photos 1/3/5; rear references 2/5/1. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "tremolux-rear",
+    "assemblyId": "tremolux-5e9",
+    "amp": "Tweed Tremolux",
+    "configuration": "June 1955 small-box 5E9 specimen study guided by RetroFret serial 0093; five top controls, one twelve",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tremolux/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case product-mockup. Create a highly photorealistic studio REAR product image of the exact June 1955 small-box Fender Tremolux 5E9 serial 0093 in reference 1. Reference 2 is its top/control view; reference 3 front confirms matching age and proportions. Faithfully follow THIS specimen's rear, not a generic Deluxe, Champ or later large Tremolux. Full uncropped compact wide cabinet, body width/height about 20:16, straight-on rear long lens very slightly elevated. Centered fills about 80% image width. Neutral pale warm gray seamless studio floor/backdrop, large soft key upper left, gentle fill, contact shadow. Dark aged amber/orange-brown diagonal lacquered tweed with fraying/exposed wood at corners and photographed wear, old low arched brown leather handle. Large upper rear tweed board held by four screws, two per side, has exactly TWO long horizontally rounded ventilation slots near its LOWER edge, as photo: left slot in front of three large tube bottles, right slot in front of three smaller tubes/shields. Six tubes total, mostly concealed by upper board, tips of left large bottles hang slightly below board. Do not add a trapezoid top cutout or a rear-facing chassis control strip. Wide open horizontal gap BETWEEN rear boards shows ONE dark twelve-inch Jensen speaker, dark stamped basket, aged dark alnico bell/motor with small gold round Jensen Special Design label, speaker motor offset right of rear cabinet center exactly as photograph. Cord loosely follows bottom left of opening. Lower rear tweed board has an unmistakable broad shallow CENTRAL SCOOP in its TOP edge, smoothly sloping curved ends descending from higher side shoulders into lower center. Copy this cutout's contour from photo, do not substitute flat rectangular board. Four screws in lower board, two each side. Natural dark brown wooden interior and subtle tube glass/metal, no glowing tubes. Recessed horizontal CHROME TOP panel behind handle, seen obliquely from rear: left-to-right fuse cap, power toggle, red pilot, exactly FIVE black chicken-head knobs labeled DEPTH, SPEED, TONE, INST. VOL., MIC. VOL., then FOUR input jacks in a 2 by 2 group at far right. Control tops visible just above upper board, not mounted vertically on rear face. Match exact photographed panel/board/speaker relationships, small-box proportions and material scale. No extra speakers, blue label, giant ceramic magnet, modern corner protectors or invented switches/jacks. Natural optical photographic realism, no painted illustration or plastic CGI surfaces, no captions or watermark. Specimen appearance study, not a factory originality claim.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, wear, dimensions, tube envelopes and speaker construction remain approximate. Fitted parts follow the photographed specimen, not independently verified factory originality.",
+    "provenance": "User-approved same-specimen pair. Front references RetroFret 0093 photos 1/3/5; rear references 2/5/1. Original dealer photographs are not redistributed."
   }
 ]

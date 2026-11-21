@@ -99,3 +99,18 @@ The original 5E9 drawing remains unestablished; no 5E9-A mechanism is asserted.
 
 See [build evidence, anchors and review captures](../../handoff/ACTIVE_HOTSPOTS.md).
 This round adds no images, models or realism work.
+
+## User-requested image pair — November 20, 2026
+
+User requested realistic front/rear generation following the approved brown Deluxe
+and Champ approach. Opened existing RetroFret 0093 photos 1, 2, 3 and 5 at full
+size. Two built-in generation calls used front/angle/top (1/3/5) and rear/top/front
+(2/5/1). No new research or photo downloads. Private review PNGs and exact prompts:
+`outputs/tremolux-photoreal-review/{front.png,rear.png,prompts.json}` (ignored).
+
+These follow the actual small-box specimen: aged tweed, centered rectangular
+badge, five-knob horizontal top panel, two upper-board rounded vents, scooped
+lower board and offset speaker motor. Fine text, cloth pitch/color, wear, tube
+and speaker details remain approximate; no factory-originality claim. Rear view
+shows more top panel than front, for readable construction. User review pending;
+site code, images and publication unchanged.

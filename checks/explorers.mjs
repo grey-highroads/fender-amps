@@ -29,7 +29,7 @@ for(const [id,parts] of Object.entries(profiles)){
   if(anchor.rearControl!==undefined)assert.ok(COMBO_REAR_CONTROLS[id][anchor.rearControl]);
   if(anchor.tube!==undefined)assert.ok((assembly.tubeKinds||assembly.tubeTypes)[anchor.tube]);
  }
- const media=AMP_IMAGE_STUDIES.filter(m=>m.assemblyId===id);if(!ACTIVE_EXPLORATIONS[id])assert.deepEqual(media.map(m=>m.view).sort(),['Front','Rear']);else assert.equal(media.length,0,'Hotspot-only batch must not acquire generated media');
+ const media=AMP_IMAGE_STUDIES.filter(m=>m.assemblyId===id);if(!ACTIVE_EXPLORATIONS[id]||id==='tremolux-5e9')assert.deepEqual(media.map(m=>m.view).sort(),['Front','Rear']);else assert.equal(media.length,0,'Hotspot-only batch must not acquire generated media');
 }
 const manifest=JSON.parse(fs.readFileSync(new URL('../dist/assets/studies/manifest.json',import.meta.url)));
 assert.equal(new Set(manifest.map(m=>m.id)).size,manifest.length);
@@ -40,4 +40,4 @@ for(const record of manifest){
  assert.ok(!record.path.includes('..'));const bytes=fs.readFileSync(new URL('../dist/'+record.path,import.meta.url));assert.equal(bytes.readUInt16BE(0),0xffd8,'Media must be materialized JPEG');
  const runtime=AMP_IMAGE_STUDIES.find(m=>m.id===record.id);for(const [key,value] of Object.entries(runtime))assert.deepEqual(value,record[key]);
 }
-console.log(`Validated ${Object.values(profiles).flat().length} expansion topics, shared hardware targets, menu-only disclosures and ${manifest.length} existing media records; new batch is hotspot-only.`);
+console.log(`Validated ${Object.values(profiles).flat().length} expansion topics, shared hardware targets, menu-only disclosures and ${manifest.length} media records; Tremolux images separately authorized.`);

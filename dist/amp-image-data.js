@@ -83,5 +83,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054"
     ],
     "knownInaccuracies": "Generated tweed pitch, color, tiny lettering, tube details and obscured speaker motor remain approximate. Wear and fitted parts follow the photographed specimen, not independently verified factory fitment."
+  },
+  {
+    "id": "tremolux-front",
+    "assemblyId": "tremolux-5e9",
+    "amp": "Tweed Tremolux",
+    "configuration": "June 1955 small-box 5E9 specimen study guided by RetroFret serial 0093; five top controls, one twelve",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tremolux/front.jpg",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, wear, dimensions, tube envelopes and speaker construction remain approximate. Fitted parts follow the photographed specimen, not independently verified factory originality."
+  },
+  {
+    "id": "tremolux-rear",
+    "assemblyId": "tremolux-5e9",
+    "amp": "Tweed Tremolux",
+    "configuration": "June 1955 small-box 5E9 specimen study guided by RetroFret serial 0093; five top controls, one twelve",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tremolux/rear.jpg",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, wear, dimensions, tube envelopes and speaker construction remain approximate. Fitted parts follow the photographed specimen, not independently verified factory originality."
   }
 ];

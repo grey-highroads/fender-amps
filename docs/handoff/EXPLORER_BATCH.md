@@ -246,3 +246,15 @@ Live front resolved to `champ/front-v2.jpg` (1330 px wide); direct rear thumbnai
 and Next navigation showed the approved rear pair, Escape returned to detail.
 Private live capture: `outputs/champ-photoreal-review-v2/published-rear.jpg`.
 https://fendertubeamps.com/?amp=champ-1959
+
+## Tremolux image pair — user approved
+
+November 20: user approved and requested publication of the RetroFret 0093
+same-specimen front/rear pair. Two new records in the shared media registry use
+`assets/studies/tremolux/{front,rear}.jpg`; the existing thumbnail rail and enlarged
+viewer mount automatically. Full generation prompts and provenance are in the
+media manifest. This separately authorizes media on Tremolux after its original
+hotspot-only batch; its tests now require Front/Rear while the other three newer
+profiles remain without media. No geometry, hotspot, other amp media or viewer
+behavior changed. Six npm checks and whitespace pass; local viewer opened both
+images and visually matched the approved pair. Fine details remain interpretive.
