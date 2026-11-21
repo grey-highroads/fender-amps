@@ -1,4 +1,4 @@
-// Builder factual first drafts. Wording awaits the copy role; facts are scoped to the selected circuit.
+// Card copy: copy pass November 21, 2026. Facts are scoped to the selected circuit.
 export const VINTAGE_EXPLORATIONS={
  "super-reverb-ab763": {
   "name": "Super Reverb",
@@ -8,8 +8,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Vibrato-channel Middle",
     "side": "front",
     "menuOnly": false,
-    "title": "The Middle control belongs to the reverb channel.",
-    "body": "The Super Reverb gives the Vibrato channel a Middle control while the Normal channel keeps a fixed mid resistance. The channels therefore offer different tone-shaping choices before the effects are considered.",
+    "title": "Only the Vibrato channel gets a Middle knob.",
+    "body": "The Vibrato channel has Treble, Middle and Bass. The Normal channel has Treble and Bass, with a fixed resistor where the Middle pot would be, so its mids are set for you.",
     "attributes": [
      [
       "Vibrato",
@@ -20,11 +20,11 @@ export const VINTAGE_EXPLORATIONS={
       "6.8 kΩ fixed resistor"
      ]
     ],
-    "listen": "Middle changes the tone-stack loading as well as the midrange balance. It is a useful difference when comparing this amp with the Deluxe Reverb.",
-    "together": "The AB763 drawing shows .022 µF mid capacitors in both channels. Those values are specific to this drawing; no AA763 change history is asserted here.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The control is part of a passive tone stack. Turning it up does not add an independent active boost.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Middle is part of the passive tone stack, so turning it up doesn’t add a boost. It changes how much midrange the stack lets through, and it changes how Treble and Bass behave as well.",
+    "together": "On the AB763 drawing the Vibrato channel’s Middle is a 10 kΩ pot, and the Normal channel has a 6.8 kΩ resistor in its place. Both channels use .022 µF mid caps.",
+    "extraTitle": "Where this comes from",
+    "extra": "The AB763 Super Reverb drawing.",
+    "detail": "The marker is on the Vibrato channel’s Middle knob. The tone stack is behind the panel.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -37,8 +37,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Switched 120 pF bright caps",
     "side": "front",
     "menuOnly": false,
-    "title": "Each channel can bypass highs around its Volume control.",
-    "body": "Both channels have a switched 120 pF capacitor across part of the Volume pot. The switch changes the high-frequency path before the later stages.",
+    "title": "Both channels have a Bright switch.",
+    "body": "Each channel has a switch that puts a 120 pF cap across part of its Volume pot. Switch it on and treble gets around the pot, so you hear more top end at the same setting.",
     "attributes": [
      [
       "Capacitor",
@@ -49,11 +49,11 @@ export const VINTAGE_EXPLORATIONS={
       "Separate Bright switches"
      ]
     ],
-    "listen": "The bypass is expected to matter more at lower Volume settings, where more of the pot resistance remains in the signal path. This is circuit inference, not a measured response curve.",
-    "together": "The capacitors and switches are shown on the AB763 Super Reverb drawing. This is different from an always-connected bright capacitor.",
-    "extraTitle": "Circuit and construction",
-    "extra": "At full Volume, the resistance being bypassed is small, so the switch has less work to do.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "It does the most at low Volume settings and less as you turn up, because near full Volume there’s very little pot left for the cap to get around. If Bright sounds sharp at home and hardly there at a loud gig, that’s why.",
+    "together": "The Deluxe Reverb has a fixed bright cap on its Vibrato channel only. The Super has one on each channel, and you can switch either one off.",
+    "extraTitle": "Where this comes from",
+    "extra": "The AB763 Super Reverb drawing.",
+    "detail": "The marker is on a Bright switch. The change in response depends on the Volume setting, and we haven’t measured it.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -66,8 +66,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Reverb mix and extra gain stage",
     "side": "front",
     "menuOnly": false,
-    "title": "The reverb channel has another gain stage in the dry path.",
-    "body": "The Vibrato channel mixes the recovered spring signal with the dry signal and then passes through another 7025 triode. The Normal channel reaches the channel mix without that extra stage.",
+    "title": "Reverb at zero still leaves an extra gain stage.",
+    "body": "On the Vibrato channel the dry signal and the spring return are mixed, then go through another 7025 gain stage. The Normal channel skips that stage. So even with Reverb all the way down, the two channels aren’t the same clean path.",
     "attributes": [
      [
       "Dry mix",
@@ -78,11 +78,11 @@ export const VINTAGE_EXPLORATIONS={
       "12AT7 and reverb transformer"
      ]
     ],
-    "listen": "Even with Reverb turned down, the Vibrato channel retains its extra stage and dry mixing network. The two channels are not identical clean paths.",
-    "together": "The AB763 drawing shows two input-channel stages followed by the dry/wet mixing stage; the spring recovery uses the other half of that 7025.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The reverb tank and transformer envelopes are shown as estimates. Spring length, tank identity and decay are not measured by the model.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Channel Volume sets how hard the springs get driven. The Reverb knob sets how much of the return you hear. Turning one up and the other down doesn’t give you the same result as just turning Reverb up.",
+    "together": "On the AB763 drawing a 12AT7 drives the tank through a transformer. The dry signal reaches the mixer through 3.3 MΩ with a 10 pF bypass, and the other half of the mixing 7025 recovers the spring return.",
+    "extraTitle": "Where this comes from",
+    "extra": "The AB763 Super Reverb drawing.",
+    "detail": "The marker is on the Reverb knob. The tank in the model is an estimated outline. Its spring length and decay aren’t identified.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -95,8 +95,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Optical tremolo",
     "side": "front",
     "menuOnly": false,
-    "title": "The pulse comes after the reverb mix.",
-    "body": "The AB763 tremolo uses an oscillator and an optical coupling element to vary signal level in the Vibrato channel after the reverb mixing stage.",
+    "title": "The tremolo pulses the reverb tail too.",
+    "body": "The optical tremolo works on the Vibrato channel after the reverb mix, so the spring tail gets pulsed along with the note.",
     "attributes": [
      [
       "Oscillator",
@@ -107,11 +107,11 @@ export const VINTAGE_EXPLORATIONS={
       "Lamp and light-sensitive resistance"
      ]
     ],
-    "listen": "The effect changes level rather than deliberately shifting pitch. It has a different circuit mechanism from the harmonic vibrato in the brown Vibrasonic and blonde Showman.",
-    "together": "The optical element loads the signal near the channel output. Speed controls the oscillator rate and Intensity sets the coupling to the audio path.",
-    "extraTitle": "Circuit and construction",
-    "extra": "No pulse waveform or tremolo depth has been measured here; the model shows the control, not the hidden optical unit.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "This is a volume tremolo. The brown Vibrasonic and the blonde Showman have harmonic vibrato, which moves the tone around as well, so they’re worth hearing side by side.",
+    "together": "A 12AX7 oscillator flashes a lamp, and a light-sensitive resistor near the channel output pulls the signal down in time with it. Speed sets the rate and Intensity sets how hard the cell pulls.",
+    "extraTitle": "Where this comes from",
+    "extra": "The AB763 Super Reverb drawing.",
+    "detail": "The marker is on the tremolo controls. The optical cell is inside the chassis. We haven’t measured the pulse shape or depth.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -124,8 +124,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Four tens and the 2 Ω load",
     "side": "rear",
     "menuOnly": false,
-    "title": "Four 8 Ω tens share one output.",
-    "body": "The four speakers are connected in parallel. With four nominal 8 Ω drivers, the combined nominal load is 2 Ω.",
+    "title": "Four 8-ohm tens wired for 2 ohms.",
+    "body": "The four tens are wired in parallel, so the amp sees 2 ohms. AB763 Supers have CTS or Oxford 10L6 tens. Earlier ones had Jensen C10Rs.",
     "attributes": [
      [
       "Array",
@@ -136,11 +136,11 @@ export const VINTAGE_EXPLORATIONS={
       "8 Ω ÷ 4 = 2 Ω"
      ]
     ],
-    "listen": "Changing the speaker count changes the load. Disconnecting two of the four equal drivers gives 4 Ω; this is a wiring calculation, not a recommendation for operating the amp.",
-    "together": "The Fender drawing shows four parallel speakers. Nominal driver and load values come from the model research; impedance varies with frequency.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The generic ceramic frames do not establish one stock supplier for every 1965 amp. Jensen, CTS and Oxford references must remain distinguished from individual fitted speakers.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Two ohms is about as low as Fender went. Pull two speakers and the load goes up to 4 ohms. Add an extension cab and it drops below 2. Either way the output stage is working into a different load from the one it was built for, which changes the feel and the stress on the amp.",
+    "together": "Fender’s drawing shows the four speakers in parallel across the output transformer, plus an extension speaker jack. It doesn’t print an impedance. The 2 ohms comes from four nominal 8-ohm speakers.",
+    "extraTitle": "Where this comes from",
+    "extra": "Speaker models are from Fender Guru and Mojotone’s Fender field guide. The wiring is from the AB763 drawing.",
+    "detail": "The marker is on the speakers. The tens in the model are generic. A speaker’s real impedance moves with frequency.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -157,8 +157,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "GZ34 rectifier",
     "side": "rear",
     "menuOnly": false,
-    "title": "AB763 keeps a tube rectifier.",
-    "body": "The Super Reverb AB763 uses a GZ34 to supply its high-voltage DC. Its two 6L6GC output tubes and tube rectifier distinguish this power section from the four-output-tube, diode-rectified Showman.",
+    "title": "AB763 Supers have a GZ34 rectifier.",
+    "body": "The AB763 Super Reverb rectifies with a GZ34 tube. The Vibrasonic and Showman in this set use silicon diodes instead.",
     "attributes": [
      [
       "Rectifier",
@@ -169,11 +169,11 @@ export const VINTAGE_EXPLORATIONS={
       "2 × 6L6GC"
      ]
     ],
-    "listen": "A tube rectifier has voltage loss that varies with current. How much supply movement reaches the player depends on the whole power supply and operating level; no amount of sag is measured here.",
-    "together": "The drawing specifies GZ34. It does not justify substituting the rectifier specification of a later Super Reverb revision.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The rectifier position and bottle envelope are estimated. The card concerns the AB763 specification, not the installed tube in a particular surviving amp.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "A tube rectifier drops more voltage when the amp is working hard, and players feel that as some give under the pick. How much depends on the whole supply. Rob Robinette notes the Super uses the same power transformer as the blackface Bassman, a size up from the other 40-watt blackface amps.",
+    "together": "Later Super Reverb revisions aren’t covered here. The AB763 drawing calls for a GZ34.",
+    "extraTitle": "Where this comes from",
+    "extra": "The rectifier is from the AB763 drawing. The power transformer comparison is Robinette’s analysis.",
+    "detail": "The marker is on the rectifier. Sag wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -186,8 +186,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "6L6GC pair and fixed bias",
     "side": "rear",
     "menuOnly": false,
-    "title": "Two 6L6GCs drive the four tens.",
-    "body": "The AB763 output stage uses two 6L6GCs with adjustable fixed bias and a transformer feeding the speaker array.",
+    "title": "Two 6L6GCs and an output transformer wound for 2 ohms.",
+    "body": "The Super runs two 6L6GCs in fixed bias, with a 10 kΩ bias pot. Four speakers don’t mean four power tubes. It’s a two-tube output stage like the other 40-watt blackface amps, driving more speaker.",
     "attributes": [
      [
       "Output stage",
@@ -198,11 +198,11 @@ export const VINTAGE_EXPLORATIONS={
       "40 W into nominal 2 Ω"
      ]
     ],
-    "listen": "Four speakers do not mean four power tubes. The Super pairs a two-tube output stage with more cone area than the smaller one- and two-speaker combos.",
-    "together": "The drawing identifies output transformer 125A9A and a 10 kΩ bias adjustment. Its voltage annotations are service references, not current measurements.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The transformer impedance figures and claims about unusually tight bass come from secondary analysis, not the part-number box alone.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Rob Robinette’s analysis puts the output transformer at 4.2k to 2 ohms, where the Vibrolux and Pro use 4k to 8 ohms. It’s a big transformer for a 40-watt amp, and it gets the credit for the tight low end that sets a Super apart from the smaller combos.",
+    "together": "The drawing calls the output transformer 125A9A and marks about −52 V at the output-tube grids. Those voltages are service references, not readings from an amp.",
+    "extraTitle": "Where this comes from",
+    "extra": "Part numbers and bias are from the AB763 drawing. The transformer ratio and the low-end credit are Robinette’s.",
+    "detail": "The marker is on one output tube. Tube positions in the model are illustrative.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -219,8 +219,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Output feedback network",
     "side": "rear",
     "menuOnly": true,
-    "title": "Speaker output also returns to the phase inverter.",
-    "body": "An 820 Ω resistor feeds a sample of the output signal back to the inverter network, where the drawing shows a 100 Ω return resistance.",
+    "title": "Less feedback than its blackface siblings.",
+    "body": "The feedback loop takes its signal from the speaker output, and on the Super that output is 2 ohms. It uses the same 820 Ω and 100 Ω divider as the other multi-speaker blackface amps, so less feedback voltage gets back to the phase inverter.",
     "attributes": [
      [
       "Feedback resistor",
@@ -231,11 +231,11 @@ export const VINTAGE_EXPLORATIONS={
       "100 Ω"
      ]
     ],
-    "listen": "Feedback changes gain and output-stage behavior. Comparing the feel with another amp requires the output tap and whole loop, not just matching these two resistor values.",
-    "together": "The AB763 drawing establishes the connection and values. A percentage comparison with other Fender models requires analysis beyond that drawing.",
-    "extraTitle": "Circuit and construction",
-    "extra": "No numerical feedback reduction, distortion result or breakup threshold is assigned to this model.",
-    "detail": "The circuit is hidden; this topic is available through the menu. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Less feedback usually means a rawer edge and earlier breakup for an amp this size. Rob Robinette puts the reduction at about 41 percent.",
+    "together": "The AB763 drawing shows an 820 Ω resistor from the speaker output to a 100 Ω resistor at the inverter. It doesn’t give a percentage. That figure is Robinette’s.",
+    "extraTitle": "Where this comes from",
+    "extra": "The divider is on the AB763 drawing. The comparison is Robinette’s analysis.",
+    "detail": "There’s no marker on the model for this one because the network is inside the chassis. The breakup point wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Super-Reverb-AB763-Schematic.pdf",
@@ -248,23 +248,23 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Tilt-back legs",
     "side": "rear",
     "menuOnly": false,
-    "title": "The cabinet can aim the four tens upward.",
-    "body": "Long side-mounted legs allow the tall cabinet to rest at an angle. This changes where the speaker array points without changing its wiring.",
+    "title": "Tilt it back and the tens point at your ears.",
+    "body": "The Super has long legs on the sides so the cabinet can lean back. Flat on the floor, the four tens point at about knee height.",
     "attributes": [
      [
-      "Hardware",
-      "19-inch legs in the field guide"
+      "Legs",
+      "19-inch, side-mounted"
      ],
      [
-      "Model pose",
-      "Upright, legs stowed"
+      "Use",
+      "Tilts the four tens back"
      ]
     ],
-    "listen": "Tilting changes the listening angle at the player’s ears. A directional measurement would be needed to quantify the difference in treble at a particular position.",
-    "together": "The leg length follows the field guide. Pivot, stop and cross-section dimensions remain estimates.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The shared model keeps the legs attached in the same upright assembly; it does not simulate a deployed, load-bearing stand.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Treble is directional, so tilting the cabinet changes how much top end you hear from where you stand. Nothing in the circuit changes.",
+    "together": "The legs are listed at 19 inches.",
+    "extraTitle": "Where this comes from",
+    "extra": "Leg length is from Mojotone’s Fender field guide.",
+    "detail": "The model shows the legs folded. Pivot and stop dimensions are estimates.",
     "sources": [
      [
       "https://mojotone.com/blogs/fender-field-guide/fender-blackface-super-reverb?page=3",
@@ -282,8 +282,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Early 5G13 tone circuit",
     "side": "front",
     "menuOnly": false,
-    "title": "The early Vibrasonic has its own tone-control circuit.",
-    "body": "Each channel has Bass, Treble and Volume. The 5G13 drawing uses a different tone network from the later black-panel AB763 family.",
+    "title": "The early Vibrasonic’s tone stack isn’t the blackface one.",
+    "body": "Each channel has Bass, Treble and Volume, but the 5G13 tone network is different from the one in the later blackface amps. The same knob settings on a Vibrasonic and a Deluxe Reverb won’t give you the same sound.",
     "attributes": [
      [
       "Channels",
@@ -294,11 +294,11 @@ export const VINTAGE_EXPLORATIONS={
       "5G13, selected 1960 configuration"
      ]
     ],
-    "listen": "Matching knob positions between a Vibrasonic and a black-panel Fender does not establish matching response. The circuit around those controls matters.",
-    "together": "The early drawing shows a 250 kΩ Treble control and 250 kΩ Bass control in each channel. Later 6G13-A values are outside this card.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The front order is read by reversing the underside layout view: Bass, Treble, Volume within each channel.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "If you know blackface amps, don’t set this one from memory. Set it by ear.",
+    "together": "On the 5G13 drawing, Treble and Bass are both 250 kΩ pots in each channel. The later 6G13-A isn’t covered here.",
+    "extraTitle": "Knob order",
+    "extra": "On the panel, each channel reads Bass, Treble, Volume.",
+    "detail": "The marker is on a Treble knob. Response wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Vibrasonic-5G13-Schematic.pdf",
@@ -311,8 +311,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Harmonic vibrato",
     "side": "front",
     "menuOnly": false,
-    "title": "The motion involves frequency bands, not just level.",
-    "body": "The 5G13 Vibrato channel routes audio through a multi-triode modulation network before the phase inverter. It is the brown-era harmonic arrangement rather than the later optical tremolo circuit.",
+    "title": "Harmonic vibrato moves the tone, not just the volume.",
+    "body": "The Vibrato channel splits the signal into a high band and a low band and pulses them in opposite directions. As one comes up the other goes down, so the tone sweeps back and forth with the pulse. It’s the brown-era design, not the optical tremolo of the later blackface amps.",
     "attributes": [
      [
       "Modulation",
@@ -323,11 +323,11 @@ export const VINTAGE_EXPLORATIONS={
       "Five 7025 in the complete 5G13 amp"
      ]
     ],
-    "listen": "Opposed modulation of the filtered paths changes the tonal balance over the cycle. That description follows circuit operation; the model does not synthesize or measure the effect.",
-    "together": "The Fender drawing shows the oscillator and the two signal branches feeding the modulation stage, controlled by Speed and Intensity.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Five 7025 means five dual-triode bottles in the whole amp, not five tubes devoted only to vibrato. The later eight-tube catalog configuration is not used here.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Hold a chord and listen to the balance between bass and treble move, not just the level. A tremolo pedal in front of the amp won’t do that, because it only turns the whole signal up and down.",
+    "together": "On the 5G13 drawing, an oscillator drives a modulation stage that works on the two filtered branches before the phase inverter. Speed sets the rate and Intensity sets the depth.",
+    "extraTitle": "Five 7025s in all",
+    "extra": "The whole amp has five 7025 dual triodes. Mojotone puts two of them in the vibrato circuit. Later catalogs list eight tubes, but that’s the later circuit.",
+    "detail": "The marker is on Intensity. The model doesn’t simulate the effect.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Vibrasonic-5G13-Schematic.pdf",
@@ -340,8 +340,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Presence in the feedback loop",
     "side": "front",
     "menuOnly": false,
-    "title": "Presence acts beyond the channel tone controls.",
-    "body": "The 5G13 Presence control is part of the output-feedback network. It changes that network’s frequency-dependent action after the two channels have joined.",
+    "title": "Presence works on both channels.",
+    "body": "There’s one Presence knob, and it sits in the feedback loop after the two channels join. So it changes the top end of both channels, at a different point in the circuit from either channel’s Treble.",
     "attributes": [
      [
       "Location",
@@ -352,11 +352,11 @@ export const VINTAGE_EXPLORATIONS={
       "5 kΩ Presence"
      ]
     ],
-    "listen": "Presence can change high-frequency behavior in both channels. It works at a different point from the individual Treble controls.",
-    "together": "The drawing connects feedback from the output transformer secondary to the inverter network and shows the Presence pot and capacitor there.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Describing a change in attack is an engineering interpretation. No response curve or player comparison is measured in this model.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Set each channel’s Treble for its own sound, then use Presence for the overall top end.",
+    "together": "On the 5G13 drawing, feedback runs from the output transformer to the phase inverter, and the 5 kΩ Presence pot and its cap sit in that path.",
+    "extraTitle": "Where this comes from",
+    "extra": "The 5G13 drawing.",
+    "detail": "The marker is on Presence. No response curve was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Vibrasonic-5G13-Schematic.pdf",
@@ -369,8 +369,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Single fifteen and aluminum dome",
     "side": "rear",
     "menuOnly": false,
-    "title": "The Vibrasonic puts one fifteen in an open-back combo.",
-    "body": "The early Vibrasonic combines a single 15-inch Lansing-format speaker with its two-6L6GC amplifier. The large aluminum dust dome is a distinctive part of the speaker construction.",
+    "title": "One fifteen, and a JBL as standard.",
+    "body": "The Vibrasonic has a single 15-inch speaker in an open-back cabinet. Fender’s 1962–63 catalog lists it as a Lansing D-130, and Mojotone gives the D-130F at 8 ohms. Vintage Guitar calls it the first Fender with a JBL as standard.",
     "attributes": [
      [
       "Format",
@@ -381,11 +381,11 @@ export const VINTAGE_EXPLORATIONS={
       "8 Ω in the field guide"
      ]
     ],
-    "listen": "Diameter alone does not predict the sound. Cone, motor, dome, cabinet and condition all matter when comparing a fifteen with a group of tens.",
-    "together": "The later Fender catalog explicitly names a Lansing D-130. It supports the speaker family but does not settle every suffix or factory detail of the selected 1960 5G13.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The cast basket, motor dimensions and dome are generic construction estimates. No later D140F replacement is presented as original equipment.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Don’t assume a fifteen means a bassier amp. Cone, magnet, dome and cabinet all count, and so does whether it’s still the original speaker.",
+    "together": "The big aluminum dust dome is the easiest way to spot the JBL. A lot of these have been reconed or replaced over the years, and a later D140F isn’t what they shipped with.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 1962–63 catalog, which is later than this circuit, plus Mojotone’s Fender field guide and Vintage Guitar.",
+    "detail": "The marker is on the speaker. The basket, magnet and dome in the model are generic estimates.",
     "sources": [
      [
       "https://guitar-compare.com/wp-content/uploads/2019/08/Fender-1962-1963-Catalog.pdf",
@@ -402,8 +402,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Two 6L6GC output tubes",
     "side": "rear",
     "menuOnly": false,
-    "title": "The early circuit uses a 6L6GC pair.",
-    "body": "The 5G13 drawing specifies two 6L6GC output tubes with fixed grid bias. There is no user bias control on the front or rear panel.",
+    "title": "Two 6L6GCs, fixed bias, no bias pot.",
+    "body": "The 5G13 drawing has two 6L6GCs in fixed bias, with no bias adjustment anywhere on the amp. The catalog rates it at 40 watts. Mojotone says 50.",
     "attributes": [
      [
       "Output tubes",
@@ -414,11 +414,11 @@ export const VINTAGE_EXPLORATIONS={
       "40 W retained"
      ]
     ],
-    "listen": "This is a two-output-tube combo. Its single fifteen and power supply do not make it the same amplifier as the four-5881 Showman.",
-    "together": "The early drawing shows the pair and its bias supply. Later catalog literature lists 5881s and a different small-tube complement; those are not silently carried onto 5G13.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Secondary references quote 50 W. The catalog’s 40 W remains the displayed rating; no output-power test was performed.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Two output tubes into one fifteen makes it a very different amp from the four-tube Showman, even though both have harmonic vibrato.",
+    "together": "Later catalogs list 5881s and a different set of small tubes. That’s the later circuit, not the 5G13.",
+    "extraTitle": "Expensive per watt",
+    "extra": "Vintage Guitar notes that when it was new it was by far Fender’s most expensive amp per watt.",
+    "detail": "The marker is on one output tube. No output test was run.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Vibrasonic-5G13-Schematic.pdf",
@@ -435,8 +435,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Silicon rectifier supply",
     "side": "rear",
     "menuOnly": true,
-    "title": "There is no rectifier tube in the 5G13.",
-    "body": "Six rectifier diodes supply the high-voltage DC. The seven glass bottles in this early circuit are five 7025s and two 6L6GCs.",
+    "title": "No rectifier tube. Six diodes do the job.",
+    "body": "The 5G13 rectifies with six silicon diodes, so all seven tubes are doing audio work: five 7025s and two 6L6GCs. Vintage Guitar calls it the first Fender with solid-state rectification.",
     "attributes": [
      [
       "Rectification",
@@ -447,11 +447,11 @@ export const VINTAGE_EXPLORATIONS={
       "Seven bottles total"
      ]
     ],
-    "listen": "This removes a tube rectifier’s particular voltage-drop behavior. The amount of supply movement still depends on the transformer, filtering and load.",
-    "together": "Both the schematic and layout A-FJ show the diode network. The early circuit has a speaker jack and a vibrato-pedal jack, with no later extension-speaker jack.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The diodes are inside the chassis and are available as a menu topic. No first-ever claim is made from this drawing alone.",
-    "detail": "The circuit is hidden; this topic is available through the menu. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "A diode supply doesn’t have a tube rectifier’s voltage drop under load. How stiff the amp feels still depends on the transformer, the filtering and how hard you’re playing.",
+    "together": "The early drawing has a speaker jack and a vibrato pedal jack, and no extension speaker jack. Mojotone notes the 6G13-A added one.",
+    "extraTitle": "Where this comes from",
+    "extra": "The 5G13 schematic and layout. The first-diode claim is Vintage Guitar’s.",
+    "detail": "There’s no marker on the model for this one because the diodes are inside the chassis.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Vibrasonic-5G13-Schematic.pdf",
@@ -469,8 +469,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Harmonic vibrato",
     "side": "front",
     "menuOnly": false,
-    "title": "The blonde Showman keeps the harmonic effect.",
-    "body": "The 6G14-A Vibrato channel uses filtered signal branches and a multi-triode modulation circuit. The Normal channel bypasses that effect network.",
+    "title": "Harmonic vibrato, like the brown amps.",
+    "body": "The Vibrato channel splits the signal into filtered branches and pulses them against each other, so the tone moves along with the volume. The Normal channel skips the whole network.",
     "attributes": [
      [
       "Revision",
@@ -481,11 +481,11 @@ export const VINTAGE_EXPLORATIONS={
       "Two 12AX7s in the circuit"
      ]
     ],
-    "listen": "The changing balance of filtered audio gives a different kind of motion from the optical tremolo of a Super Reverb. This is a circuit comparison, not an audio demonstration.",
-    "together": "Drawing K-FJ shows the oscillator, modulation stages and recombination before the inverter. The complete amp also uses four 7025s.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The marker identifies Intensity on the shared front panel. The hidden oscillator and frequency-selective components are not placed as visible exterior parts.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Compare it with the Super Reverb’s optical tremolo, which only moves the volume. On a held chord, listen for the balance between highs and lows shifting.",
+    "together": "Drawing K-FJ shows the oscillator, the modulation stages and the branches recombining before the phase inverter. Two 12AX7s handle the modulation.",
+    "extraTitle": "Where this comes from",
+    "extra": "The 6G14-A drawing, K-FJ.",
+    "detail": "The marker is on Intensity. The model doesn’t simulate the effect.",
     "sources": [
      [
       "https://el34world.com/charts/Schematics/files/fender/Fender_SHOWMAN_6G14A.pdf",
@@ -498,8 +498,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Shared Presence control",
     "side": "front",
     "menuOnly": false,
-    "title": "Presence changes feedback after the channels join.",
-    "body": "The 6G14-A has one Presence control for the amplifier, alongside separate Bass and Treble controls for each channel.",
+    "title": "One Presence knob for both channels.",
+    "body": "Each channel has its own Bass and Treble. Presence sits in the feedback return at the phase inverter, after the channels join, so it shapes the top end of both.",
     "attributes": [
      [
       "Circuit position",
@@ -510,11 +510,11 @@ export const VINTAGE_EXPLORATIONS={
       "25 kΩ Presence on the layout"
      ]
     ],
-    "listen": "Presence works on a shared part of the circuit, so it can affect the Normal channel as well as the Vibrato channel.",
-    "together": "The Fender drawing places the Presence network in the feedback return at the inverter. It is not another preamp Treble control.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The brown faceplate uses estimated ivory barrel knobs from selected-year photographs. Exact pointer shape and lettering remain studies.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "It isn’t a third Treble knob. Set each channel’s Treble first, then use Presence for the overall edge.",
+    "together": "The layout shows a 25 kΩ Presence pot.",
+    "extraTitle": "Where this comes from",
+    "extra": "The 6G14-A drawing, K-FJ.",
+    "detail": "The marker is on Presence. The ivory barrel knobs in the model are estimates. No response curve was measured.",
     "sources": [
      [
       "https://el34world.com/charts/Schematics/files/fender/Fender_SHOWMAN_6G14A.pdf",
@@ -527,8 +527,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Four 5881 output tubes",
     "side": "rear",
     "menuOnly": false,
-    "title": "The head has four output tubes.",
-    "body": "Four 5881s form the 6G14-A push-pull output stage. The amplifier sits in the head, connected by a speaker lead to the separate cabinet.",
+    "title": "Four 5881s in the head.",
+    "body": "The output stage is four 5881s in push-pull. The cabinet has no amplifier in it, just the speaker, fed by a lead from the head.",
     "attributes": [
      [
       "Output tubes",
@@ -539,11 +539,11 @@ export const VINTAGE_EXPLORATIONS={
       "85 W retained"
      ]
     ],
-    "listen": "The separate cabinet does not contain a second power amplifier. Its speaker receives the output from the head’s transformer.",
-    "together": "The Fender schematic and layout identify all four 5881 sockets. Two 12AX7s and four 7025s complete the ten-tube complement.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Published ratings range from about 80 to 100 W. The authoritative catalog retains 85 W; no measured power or universal clean-headroom threshold is asserted.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Four output tubes give it a lot of clean headroom. Vintage Guitar describes the 1961 Showman chassis as nearly identical to the blonde Twin’s, apart from an 8-ohm output transformer.",
+    "together": "With two 12AX7s and four 7025s, that’s ten tubes in all and no rectifier tube.",
+    "extraTitle": "The rating",
+    "extra": "The catalog says 85 watts. You’ll also see 80 and 100 quoted. We use the catalog figure.",
+    "detail": "The marker is on one output tube. Output wasn’t measured.",
     "sources": [
      [
       "https://el34world.com/charts/Schematics/files/fender/Fender_SHOWMAN_6G14A.pdf",
@@ -560,8 +560,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Silicon power supply",
     "side": "rear",
     "menuOnly": true,
-    "title": "All ten tubes have jobs beyond rectification.",
-    "body": "The Showman 6G14-A uses six silicon rectifier diodes. Its ten glass bottles serve the audio and modulation circuits.",
+    "title": "Six diodes and no rectifier tube.",
+    "body": "The 6G14-A uses six silicon diodes, in two strings of three, for its high-voltage supply. All ten tubes are in the audio and vibrato circuits.",
     "attributes": [
      [
       "Rectifier",
@@ -572,11 +572,11 @@ export const VINTAGE_EXPLORATIONS={
       "4 × 5881, 4 × 7025, 2 × 12AX7"
      ]
     ],
-    "listen": "A diode supply differs from the Super Reverb’s GZ34 supply. Rectifier type alone does not predict the complete amp’s stiffness or feel.",
-    "together": "The drawing shows two three-diode strings feeding the high-voltage supply, with separate bias circuitry.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The rectifier network is inside the chassis and stays a menu-only topic. No fictitious rectifier bottle is added to the model.",
-    "detail": "The circuit is hidden; this topic is available through the menu. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Rectifier type alone doesn’t tell you how stiff an amp feels. The transformer, the filtering and the load all play a part.",
+    "together": "Bias has its own separate supply on the drawing.",
+    "extraTitle": "Where this comes from",
+    "extra": "The 6G14-A drawing, K-FJ.",
+    "detail": "There’s no marker on the model for this one because the diodes are inside the chassis.",
     "sources": [
      [
       "https://el34world.com/charts/Schematics/files/fender/Fender_SHOWMAN_6G14A.pdf",
@@ -589,8 +589,8 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Piggyback and tone-ring cabinet",
     "side": "front",
     "menuOnly": false,
-    "title": "The speaker has its own enclosure.",
-    "body": "The Showman separates the chassis and speaker into two boxes. In the tone-ring format, an inner mounting ring supports the speaker behind the outer baffle aperture.",
+    "title": "The speaker hangs on a tone ring in a closed box.",
+    "body": "The Showman cabinet is closed at the back, and the speaker doesn’t bolt to the front baffle. It mounts on a ring inside, set back from the baffle opening.",
     "attributes": [
      [
       "Selected format",
@@ -601,11 +601,11 @@ export const VINTAGE_EXPLORATIONS={
       "Closed removable rear panel"
      ]
     ],
-    "listen": "Separating the boxes changes the construction and placement options. The cabinet’s tone-ring path also makes a simple open-back-combo comparison incomplete.",
-    "together": "The period catalog describes separate Lansing speaker enclosures and shows the head mounted above the cabinet. The modeled annular path follows the tone-ring construction references.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The ring, supports, port spacing and fasteners are estimates. The model does not calculate acoustic tuning or promise a particular bass response.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "The usual explanation is that the closed back and tone ring tighten the low end compared with an open-back combo. Splitting the head from the cabinet also means you can stack it on top or put it somewhere else.",
+    "together": "Fender’s 1962–63 catalog describes the separate Lansing speaker enclosure and shows the head mounted on top. It lists the 15-inch cabinet at 36 × 24½ × 11½ inches.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 1962–63 catalog.",
+    "detail": "The ring, supports and fasteners in the model are estimates. The low-end explanation comes from dealer write-ups, not a measurement.",
     "sources": [
      [
       "https://guitar-compare.com/wp-content/uploads/2019/08/Fender-1962-1963-Catalog.pdf",
@@ -622,23 +622,23 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Enclosed single fifteen",
     "side": "rear",
     "menuOnly": true,
-    "title": "The fifteen is inside the closed cabinet.",
-    "body": "The selected Showman format uses a single nominal 8 Ω, 15-inch Lansing-format driver. The cabinet rear stays in place in this assembled view.",
+    "title": "A 15-inch JBL, model not settled.",
+    "body": "The single-fifteen Showman has one 15-inch JBL at 8 ohms. Fender’s catalog calls it a 15-inch Lansing without a model number. Mojotone lists the D140F, and the D130 also turns up, so which one was stock in 1961 isn’t settled.",
     "attributes": [
      [
       "Speaker",
-      "One fifteen-inch driver"
+      "One 15-inch JBL · 8 Ω"
      ],
      [
-      "Visibility",
-      "Hidden behind the closed rear panel"
+      "Mounting",
+      "Tone ring, closed back"
      ]
     ],
-    "listen": "A single driver must be considered together with its power handling and the amplifier output. No unknown vintage speaker rating is inferred from this model.",
-    "together": "The period Fender catalog identifies a fifteen-inch Lansing speaker but does not print a model suffix. That supports the format without resolving D130 versus later F-series fitment for 1961.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The internal cast-frame study is shared with the Vibrasonic. It does not authenticate the D140F replacements found in surviving Showman cabinets.",
-    "detail": "The circuit is hidden; this topic is available through the menu. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "It shipped with a JBL, not a Jensen or an Oxford. That’s a big part of the hard, clear attack people associate with these amps.",
+    "together": "There was also a single-twelve cabinet, and a two-fifteen version came later. This card covers the fifteen.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 1962–63 catalog and Mojotone’s Fender field guide.",
+    "detail": "There’s no marker on the model for this one because the speaker sits behind the closed back. The speaker in the model is generic.",
     "sources": [
      [
       "https://guitar-compare.com/wp-content/uploads/2019/08/Fender-1962-1963-Catalog.pdf",
@@ -655,23 +655,23 @@ export const VINTAGE_EXPLORATIONS={
     "label": "Legs and head restraints",
     "side": "rear",
     "menuOnly": false,
-    "title": "Tilting the cabinet also requires securing the head.",
-    "body": "The piggyback format combines cabinet tilt-back legs with head-securing hardware. The head and cabinet remain separate structures even when mounted together.",
+    "title": "Legs to tilt the cabinet, hardware to hold the head.",
+    "body": "The cabinet has tilt-back legs, and there’s hardware to hold the head on top. They’re still two separate boxes when they’re stacked.",
     "attributes": [
      [
       "Construction",
       "Separate head and cabinet"
      ],
      [
-      "Displayed pose",
-      "Upright with legs stowed"
+      "Hardware",
+      "Tilt-back legs, head hold-downs"
      ]
     ],
-    "listen": "The hardware lets the speaker enclosure point upward while retaining the head on top. This model shows the relationship without simulating deployed hardware.",
-    "together": "Period Fender catalog text describes tilt-back legs and top mounting for the Showman chassis unit.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Leg length, pivot locations and hold-down dimensions are estimates. Replaced lugs in specimen photographs are not taken as proof of factory geometry.",
-    "detail": "Marker follows the shared component coordinates. Geometry and interior placement are educational estimates, not a measured vintage assembly.",
+    "listen": "Tilting points the fifteen up toward your ears, which changes how much top end you hear from where you stand. The hold-downs keep the head in place when the cabinet leans back.",
+    "together": "Fender’s catalog describes the tilt-back legs and the head mounting on top.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s 1962–63 catalog.",
+    "detail": "The model shows the legs folded. Leg length, pivots and hold-down sizes are estimates.",
     "sources": [
      [
       "https://guitar-compare.com/wp-content/uploads/2019/08/Fender-1962-1963-Catalog.pdf",
