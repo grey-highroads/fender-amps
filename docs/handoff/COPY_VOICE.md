@@ -142,3 +142,28 @@ rewrites with the same evidence/attributes/media/anchors; softened the input
 title to avoid promising cleanup. Deferred its flagged 5E3 lore and new figures.
 Added 18 source-scoped small-amp cards. See EXPLORER_BATCH.md for reviewed
 claims, explicit interpretation, rectifier dispute and remaining uncertainty.
+
+## Parked: batch 2 hotspot draft (not live)
+
+Written on branch `copy/hotspots` against an older `main`, before the builder added hotspots for the Princeton, brown Deluxe, Champ and other new amps and changed the same files. It no longer merges cleanly, so it was saved here and the branch was deleted. The full change is in [copy-drafts/hotspots-batch-2.patch](copy-drafts/hotspots-batch-2.patch) as a reference: reuse the wording, but redo the pass on the current `main` and cover every active amp's cards.
+
+Caution: the Tweed Deluxe cards drew on the first version of the 5E3 research packet. That version had the volume-pot wiring backwards and stated several sound claims too strongly. Use the corrected [5E3 packet](../research/packets/deluxe-5e3-explorer.md).
+
+The copy agent's notes from that batch, unchanged:
+
+All 26 explorer cards rewritten: nine Deluxe Reverb (`dist/deluxe-features.js`), eight Twin (`dist/twin-features.js`, `dist/twin-tone.js`) and nine Tweed Deluxe (`dist/tweed-features.js`). Titles, body, "Why it matters", "Dig a little deeper" and the fine-print note changed. Attribute rows, sources, photos, captions and anchors did not.
+
+Caveats are consolidated: each card states its evidence limit once, in the fine-print note under Sources, and the body text no longer repeats it.
+
+Every card was opened in a headless browser at 1440 and 390 px wide. Cards scroll inside their panel as before; the longest title wraps to three lines.
+
+Flags:
+
+- The Tweed Deluxe cards now use lore and figures from `docs/research/next-expansion/packets/deluxe-5e3-explorer.md` on the research branch: Rob Robinette's load figures for the unused Volume, his under-2 gain figure for the inverter, his transformer-saturation point, the bright cap sitting on the Instrument channel, the 12AX7 and GZ34 swaps owners try, and owner descriptions of headroom and low end. Each is attributed in the card. None is a Fender drawing fact.
+- "One of the softer rectifiers Fender used" (5Y3) is the packet's wording and is not sourced there.
+- Where a card's extra section was only a disclaimer, it was replaced with a fact already in the card or packet, or cut to one line.
+- `dist/explore.js` still holds three unused base cards for the Twin ("Where electricity becomes sound." and two others). The live cards override their text. Left alone.
+
+Interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, spec fine print and `ratingNote` lines, object captions ("OUTSIZED INFLUENCE.").
+
+Branch `copy/voice-pass` held an earlier version of batch 1 (all 23 old timeline entries). It was superseded by the batch 1 now on `main` and the parked drafts above, and was deleted.

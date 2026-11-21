@@ -13,7 +13,7 @@ file it sends you to for your task. Everything below is on `main`.
 | Research status per amp (readiness, blockers, catalog row) | [docs/research/manifest.json](docs/research/manifest.json) | To see what is ready to build |
 | Modeling packets and rechecked hotspot drafts | [docs/research/packets/](docs/research/packets/) | Princeton model, 5E3 hotspots, checks on Champ, Tremolux, brown Deluxe |
 | Photo sets for composites (lists only; files are on the owner's Mac) | [docs/research/images/](docs/research/images/) | When collecting or using photos |
-| Copy voice direction and copy-pass log | [docs/handoff/COPY_VOICE.md](docs/handoff/COPY_VOICE.md) | Before writing or editing any site copy or hotspot text |
+| Copy voice direction, copy-pass log and parked drafts | [docs/handoff/COPY_VOICE.md](docs/handoff/COPY_VOICE.md), drafts in [docs/handoff/copy-drafts/](docs/handoff/copy-drafts/) | Before writing or editing any site copy or hotspot text |
 | Build notes for each batch of modeled amps (small amps, three combos, Princeton, explorers, faceplates) | `docs/handoff/*.md`, linked from [docs/handoff/README.md](docs/handoff/README.md) | When changing an amp that is already built |
 | Catalog (source of truth) | [data/catalog/](data/catalog/README.md) | When mapping an amp to a catalog row |
 | Site code and copy (published) | `dist/` | Only for site changes |
@@ -28,11 +28,32 @@ dealer listings last.
 
 - Only `dist/` is published to fendertubeamps.com. Documentation, research and
   handoff notes go straight to `main` in the folders above.
-- Use a branch only for changes to the site itself (`dist/`, models) that need the
-  owner's review before going live. Merge or delete it when done. Do not keep
-  long-lived branches as storage; anything another agent needs must be on `main`.
+- Commit to `main` by default. For changes to the site itself (`dist/`, models),
+  run `npm test` and check the change in the browser before pushing, because a
+  push to `main` goes live.
+- Use a branch only when the owner asks to review a change before it goes live.
+  Merge it as soon as it is approved and delete it in the same step. Do not keep
+  branches as storage; anything another agent needs must be on `main`.
 - When you finish substantive work, update the relevant file above so the next
   agent finds it from here.
+
+## Who owns what
+
+Agents split the work by job so two agents never edit the same text at once.
+
+| Job | Owns | Does not touch |
+| --- | --- | --- |
+| Builder | Models, layout, code, hotspot placement and the facts on each card (what the part is, which circuit, which source) | Card and story wording beyond a first factual draft |
+| Copy | All site wording: timeline stories, hotspot card text, interface text. Voice rules are in [docs/handoff/COPY_VOICE.md](docs/handoff/COPY_VOICE.md). | Geometry, hotspot positions, code logic, the facts themselves |
+| Research | The briefs, packets, QUESTIONS.md and manifest in `docs/research/`. Other agents may add findings to a brief or QUESTIONS.md; they do not start parallel studies. | `dist/` |
+
+- The copy agent always starts from the current `main`. Before rewriting a file,
+  pull `main` again; if the builder has changed it since, work on top of that.
+- The builder adds new hotspots with plain factual text and leaves the wording to
+  the copy agent. If a fact in the copy is wrong, the builder corrects the fact
+  and says so in the commit message; the copy agent then rewords it.
+- If a job needs the other's file, finish and merge your change first, then hand
+  off. Do not edit the same file on two branches.
 
 ## Project rules
 
