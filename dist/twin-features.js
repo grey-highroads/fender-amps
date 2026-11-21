@@ -8,8 +8,8 @@ export const TWIN_FEATURES=[
       0,
       -25
     ],
-    "title": "The first stage can be pushed before Volume turns it down.",
-    "body": "Input 2 reduces the signal before the first gain stage. Turning down Volume happens later. Those moves can produce different distortion even when the eventual loudness is similar.",
+    "title": "Input 2 and Volume turn you down at different points.",
+    "body": "Input 2 cuts the signal by about 6 dB before the first gain stage. The Volume control comes later. So the two can give you different distortion at about the same loudness.",
     "attributes": [
       [
         "Single occupied input",
@@ -24,10 +24,10 @@ export const TWIN_FEATURES=[
         "Input → first gain stage → EQ / Volume → second triode"
       ]
     ],
-    "listen": "A hot pickup or boost can push the first gain stage before Volume turns the signal down. Input 2 changes both the level and the load seen by a passive pickup; its lower impedance can take some edge off a passive pickup’s resonant peak. Restoring downstream volume does not restore that same input interaction.",
-    "together": "The phase inverter and output stage respond to the signal that survives the preamp. A quieter input therefore changes where clipping begins; it does not independently change the 6L6 operating conditions. The guitar’s source impedance, EQ settings and available downstream gain matter.",
-    "extraTitle": "The channel-jumper wrinkle",
-    "extra": "In the AB763 drawing, the Vibrato channel has an additional dry-signal gain stage at the reverb mixer. The Normal and Vibrato dry paths consequently reach the common mix with opposite polarity. Bridging channels can yield frequency-dependent cancellation. The input-jack loading figures above assume only one socket in that channel is occupied.",
+    "listen": "A hot pickup or a boost can push the first stage before Volume gets a say. Input 2 drops the level and also loads a passive pickup harder, which can take some edge off its resonant peak. Turning the Volume back up afterward doesn’t undo that.",
+    "together": "With one jack in use, Input 1 is about 1 MΩ and Input 2 about 136 kΩ. A quieter input changes where clipping starts. It doesn’t change how the 6L6s are running. Your guitar, the EQ settings and the gain after the preamp all figure in.",
+    "extraTitle": "Jumpering the channels",
+    "extra": "On the AB763 drawing the Vibrato channel has an extra dry-signal gain stage at the reverb mixer. That puts the Normal and Vibrato dry signals in opposite polarity where they meet, so bridging the channels can cancel some frequencies.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
@@ -38,7 +38,7 @@ export const TWIN_FEATURES=[
         "Fender AC568 · comparison drawing"
       ]
     ],
-    "detail": "Impedances and attenuation are nominal circuit calculations, not measurements of the modeled specimen. AB763 is the stated baseline for the channel-polarity comparison."
+    "detail": "Impedance and pad figures are calculated from the drawings, not measured on this amp, and assume one jack in use per channel. The channel-polarity point is from the AB763 drawing."
   },
   {
     "id": "reverb",
@@ -48,8 +48,8 @@ export const TWIN_FEATURES=[
       -15,
       -48
     ],
-    "title": "Reverb on zero still leaves a different dry path.",
-    "body": "The AB763 Vibrato channel routes its dry signal through a 3.3 MΩ / 10 pF network into an extra mixing stage. Setting Reverb to zero silences the wet return; it leaves that dry-path architecture in circuit.",
+    "title": "Reverb at zero still leaves a different dry path.",
+    "body": "On the AB763 drawing, the Vibrato channel sends its dry signal through a 3.3 MΩ resistor with a 10 pF bypass into an extra mixing stage. Turn Reverb to zero and the springs go quiet, but that dry path is still in the circuit.",
     "attributes": [
       [
         "Driver",
@@ -64,10 +64,10 @@ export const TWIN_FEATURES=[
         "Recovery triode → Reverb pot → mixer"
       ]
     ],
-    "listen": "The small bypass capacitor gives high frequencies a route around the large dry-mix resistor. Its effect depends on the surrounding impedances. The Vibrato channel’s response and gain structure therefore deserve attention even when the springs are not audible.",
-    "together": "The send is taken after the channel’s second gain stage. Channel drive and EQ shape what excites the tank; the Reverb pot changes the return level, not the driver’s gain. More tank excitation and more wet return are different variables.",
-    "extraTitle": "The tank is an electrical match, too",
-    "extra": "Drive and pickup impedance, decay, grounding and mounting orientation all matter when identifying a replacement tank. An apparently similar pan is not enough to establish the correct match. We have not authenticated this specimen’s tank code, so no specific model, decay rating or spring count is assigned.",
+    "listen": "The little bypass cap gives highs a way around the big resistor. So the Vibrato channel has its own response and gain structure, and it’s worth a listen on those terms even when you’re not using the reverb.",
+    "together": "The send comes off after the channel’s second gain stage, so channel drive and EQ shape what hits the tank. Two 12AT7 triodes in parallel drive it through a transformer. The Reverb pot only sets how much return you hear. It doesn’t change how hard the tank is driven.",
+    "extraTitle": "Replacing a tank",
+    "extra": "Drive and pickup impedance, decay, grounding and mounting orientation all have to match. A pan that looks the same isn’t necessarily the right one.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
@@ -78,7 +78,7 @@ export const TWIN_FEATURES=[
         "Fender AC568 · reverb path"
       ]
     ],
-    "detail": "Circuit observations refer to the linked drawings. They do not establish the condition, identity or measured response of the specimen’s surviving tank."
+    "detail": "From the linked AB763 and AC568 drawings. We haven’t identified this amp’s tank, so no model, decay or spring count is given."
   },
   {
     "id": "vibrato",
@@ -88,8 +88,8 @@ export const TWIN_FEATURES=[
       30,
       -12
     ],
-    "title": "The spring tail goes through the pulse, too.",
-    "body": "The optical tremolo acts downstream of the Vibrato channel’s dry/reverb mix. The spring tail is pulsed too. That feels different from putting a reverb pedal after a tremolo pedal.",
+    "title": "The tremolo pulses the reverb tail too.",
+    "body": "The optical tremolo sits after the Vibrato channel’s dry and reverb mix. The spring tail gets pulsed along with the note, which feels different from a reverb pedal after a tremolo pedal.",
     "attributes": [
       [
         "Topology",
@@ -104,10 +104,10 @@ export const TWIN_FEATURES=[
         "Not the modulation point"
       ]
     ],
-    "listen": "Listen to the spring tail inside the pulse. The optical cell’s response and the oscillator shape contribute to the envelope; a generic sine-wave volume effect does not establish the same feel. This is a circuit implication, not a measured waveform from this amp.",
-    "together": "The light-dependent resistor loads the Vibrato channel signal through the Intensity network. The oscillator does not swing the 6L6 grid-bias supply as a bias-vary tremolo would. Similar “Vibrato” labels across Fender generations can therefore hide substantially different circuits.",
-    "extraTitle": "The component is part of the waveform",
-    "extra": "An optical assembly’s light response and dark resistance can influence depth and recovery. Age or a replacement cell can matter even if the panel and oscillator values are unchanged. No original optical cell or modulation measurement has been authenticated for this specimen.",
+    "listen": "Listen for the tail inside the pulse. The optical cell and the oscillator both shape that pulse, so don’t expect it to feel like a plain sine-wave volume effect.",
+    "together": "A light-dependent resistor loads the Vibrato channel signal through the Intensity control. The oscillator doesn’t touch the 6L6 bias the way a bias tremolo would. Fender put the word Vibrato on a lot of panels over the years, and the circuits behind it aren’t all the same.",
+    "extraTitle": "Old cells drift",
+    "extra": "The cell’s light response and dark resistance affect depth and recovery. An aged or replaced cell can change the feel even when the panel and the oscillator parts are untouched.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
@@ -118,15 +118,15 @@ export const TWIN_FEATURES=[
         "Fender AC568 · optical circuit"
       ]
     ],
-    "detail": "“Vibrato” follows Fender’s panel label; the discussion concerns amplitude modulation. Claims about the actual cell’s age, originality or measured speed range remain open."
+    "detail": "Vibrato is Fender’s panel label. The effect is tremolo, a change in volume. We haven’t measured the waveform or speed range, or checked whether this amp’s cell is original."
   },
   {
     "id": "grille-cloth",
     "label": "Grille cloth",
     "side": "front",
     "cosmetic": true,
-    "title": "A correct-looking weave can conceal a restoration.",
-    "body": "The silver/aqua grille helps place this Twin visually in the early silver-panel family. Its weave is useful evidence; its apparent color alone is much weaker evidence after decades of fading, dirt and photography.",
+    "title": "The right-looking cloth isn’t proof of original cloth.",
+    "body": "The silver and aqua grille puts this Twin in the early silver-panel family at a glance. The weave is decent evidence. The color is much weaker, after decades of fading, dirt and whatever the camera did.",
     "attributes": [
       [
         "Collector detail",
@@ -141,10 +141,10 @@ export const TWIN_FEATURES=[
         "None from cloth alone"
       ]
     ],
-    "listen": "Compare the weave structure and installation evidence, not just how blue the photograph looks. A period-style replacement can match the broad appearance while the original mounting and fabric history are lost.",
-    "together": "Cloth, aluminum surround and panel graphics make a persuasive period ensemble. They are all serviceable or replaceable parts. Establishing originality requires evidence beyond the ensemble looking right.",
-    "extraTitle": "Keep the acoustic claim proportional",
-    "extra": "There is no measured transmission curve for this modeled cloth. Assigning a signature treble loss or an “open” sound to its rendered weave would be invention. The speaker, cabinet and room remain separate questions.",
+    "listen": "Look at the weave and how the cloth is installed, not how blue it looks in the photo. A period-style replacement can get the look right while the original mounting and fabric are long gone.",
+    "together": "Cloth, aluminum trim and panel graphics add up to a convincing period front. Every one of those parts can be replaced, so the look alone doesn’t establish originality.",
+    "extraTitle": "Does the cloth change the sound?",
+    "extra": "We don’t have a measurement for this cloth, so we’re not making a claim either way.",
     "sources": [
       [
         "https://www.vintageguitarandbass.com/fender/catalogues/1968_33.php",
@@ -155,15 +155,15 @@ export const TWIN_FEATURES=[
         "1968 specimen · photographic comparison"
       ]
     ],
-    "detail": "Color, pitch and relief are modeling estimates. No inference about factory cloth originality is made from the dealer photographs alone."
+    "detail": "Color, thread pitch and relief in the model are estimates. We’re not judging factory originality from the dealer photos."
   },
   {
     "id": "drip-edge",
     "label": "Drip edge",
     "side": "front",
     "cosmetic": true,
-    "title": "The surround dates a look, not a circuit.",
-    "body": "This trim is a useful early silver-panel cue, but a drip-edge Twin is not automatically an AB763 Twin. The photographic reference is dealer-identified as AC568—exactly why cosmetics and circuitry need separate records.",
+    "title": "The drip edge dates the look, not the circuit.",
+    "body": "The aluminum trim is a good early silver-panel cue. It doesn’t make the amp an AB763. The amp in our reference photos is dealer-identified as an AC568, and that’s why we keep cosmetics and circuit as separate records.",
     "attributes": [
       [
         "Visible cue",
@@ -178,10 +178,10 @@ export const TWIN_FEATURES=[
         "Chassis evidence against the circuit drawing"
       ]
     ],
-    "listen": "A frame and cloth restoration can preserve the early appearance while the chassis has been modified. A “blackfaced” amp may retain the same surround and panel; that work is invisible in this exterior view.",
-    "together": "The AC568 drawing documents output-stage and phase-inverter differences from AB763. Those electrical details are more useful to a tone comparison than the outline of the grille frame.",
-    "extraTitle": "A transitional appearance needs a circuit check",
-    "extra": "Component dates, circuit inspection and records can strengthen an identification. No exact transition date, untouched circuit or universal production rule is inferred from this surround. The model’s trim profile remains approximate.",
+    "listen": "A restored frame and cloth can keep the early look on a chassis that’s been modified. It works the other way too: a blackfaced amp keeps the same trim and panel, and you can’t see that work from the front.",
+    "together": "The AC568 drawing shows output-stage and phase-inverter differences from the AB763. If you’re comparing tone, those matter more than the outline of the grille frame.",
+    "extraTitle": "How to check what you’ve got",
+    "extra": "Component dates, a look at the circuit and any paperwork all help pin down what an amp is. The trim alone doesn’t give you a transition date or tell you the circuit is untouched.",
     "sources": [
       [
         "https://www.vintageguitarandbass.com/fender/catalogues/1968_33.php",
@@ -196,6 +196,6 @@ export const TWIN_FEATURES=[
         "Fender AC568 · circuit reference"
       ]
     ],
-    "detail": "The trim is represented as aluminum. Its shape and dimensions are estimates, and the “drip edge” nickname does not establish its engineering purpose."
+    "detail": "The trim is modeled as aluminum, with estimated shape and dimensions. Drip edge is a nickname, and it doesn’t tell you what the trim was for."
   }
 ];

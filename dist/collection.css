@@ -77,3 +77,13 @@
 #collection-count{margin-left:10px;color:#aeb8c1;font-size:14px}
 #collection-decades button:disabled{opacity:.3;cursor:default}
 @media(max-width:760px){.collection-filter button{padding:9px 12px}#collection-count{flex-basis:100%;margin:5px 0 0}}
+
+/* Shared explorer and illustration rail coexist on both layouts. */
+.has-image-studies .construction-demo .amp-images{top:45%;max-height:calc(100% - 260px)}
+.has-image-studies .construction-demo.part-selected .amp-images{top:42%}
+@media(max-width:760px){
+ .has-image-studies .construction-demo .amp-images{top:160px;transform:none;max-height:220px}
+ .has-image-studies .construction-demo.part-selected .amp-images{top:140px}
+ .has-image-studies .construction-demo.part-selected #viewport{left:80px}
+ #study-viewer>p{max-height:24vh;overflow:auto;flex-shrink:0}
+}

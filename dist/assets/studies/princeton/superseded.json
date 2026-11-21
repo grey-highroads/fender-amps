@@ -1,0 +1,38 @@
+[
+  {
+    "id": "princeton-front",
+    "assemblyId": "princeton-reverb-aa1164",
+    "amp": "Princeton Reverb",
+    "configuration": "1965-style black-panel AA1164, one ten, six controls; image reference A-05948 differs from construction evidence",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/princeton/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Create a photorealistic studio product rendering, FRONT view only, of the exact vintage 1965 Fender Princeton Reverb specimen A-05948 in reference 1. Reference 2 is its control-panel close-up. Preserve photographed cabinet proportions, black finely pebbled Tolex, subtly aged silver/beige woven grille, upper-left raised chrome Fender tail logo, black strap handle with metal end caps. Exactly two input jacks left, exactly six skirted silver-center knobs ordered VOLUME TREBLE BASS REVERB SPEED INTENSITY, white Princeton Reverb-Amp script at right and unlit dark red jewel at far right. Correct early CBS small Fender Musical Instruments lettering. Carefully match spacing, rounded cabinet edges, texture scale and hardware. Straight-on centered long-lens camera at cabinet center with a very slight view of top, full cabinet uncropped filling 80% image, pale warm gray seamless studio floor/background, soft large key upper left and subtle fill, believable contact shadow. Crisp detailed photographic materials, no CGI plastic look, no added objects, no captions or watermark. This is a faithful visual study of photographed specimen, do not redesign or add controls.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-princeton-reverb-aa-764-tube-amplifier-1965-13238"
+    ],
+    "knownInaccuracies": "Generated lettering and component details are approximate; rear manufacturer text is inaccurate. Speaker originality unverified. These depict a different reference from the model and do not authenticate either specimen.",
+    "provenance": "Reused earlier generated study; original PNG and prompt retained locally"
+  },
+  {
+    "id": "princeton-rear",
+    "assemblyId": "princeton-reverb-aa1164",
+    "amp": "Princeton Reverb",
+    "configuration": "1965-style black-panel AA1164, one ten, six controls; image reference A-05948 differs from construction evidence",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/princeton/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Create a photorealistic studio product rendering, REAR view only, of the exact vintage 1965 Fender Princeton Reverb specimen A-05948 in the reference photograph. Faithfully preserve rear geometry and relative dimensions: compact black pebbled Tolex rounded cabinet; upper back panel with wide shallow trapezoid cutout along its TOP edge exposing chassis control strip, sloping cutout ends, wide solid black panel below cutout; large middle opening exposing ONE dark ten-inch speaker with black stamped basket and small round blue Fender label in its center; flat lower removable Tolex-covered rear board; screws at photographed positions; brown wood inside sidewalls. Copy visible cable routing and speaker connections. Rear control strip is narrow black with white lettering, recessed at top: mains outlet on bare metal far left, ground toggle, fuse, on toggle, connected speaker jack, ext speaker jack, UL emblem, vibrato pedal, reverb pedal, reverb output and input connections toward right. Match photograph precisely, no extra tubes visible hanging in the central speaker opening, no additional slots or removed panels, no second speaker, no Weber alnico bell. Black strap handle just visible atop cabinet. Straight-on centered long-lens camera at cabinet center with a very slight view of top, full cabinet uncropped filling 80% frame. Pale warm gray seamless studio floor/background, soft large key upper left and subtle fill, natural shadow inside cabinet while speaker remains readable, believable contact shadow. Detailed photographic materials and subtle age matching reference, no CGI plastic look, no captions, no watermark. Pair stylistically with a clean front catalog render. Preserve specimen details, do not invent factory authenticity.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-princeton-reverb-aa-764-tube-amplifier-1965-13238"
+    ],
+    "knownInaccuracies": "Generated lettering and component details are approximate; rear manufacturer text is inaccurate. Speaker originality unverified. These depict a different reference from the model and do not authenticate either specimen.",
+    "provenance": "Reused earlier generated study; original PNG and prompt retained locally"
+  }
+]

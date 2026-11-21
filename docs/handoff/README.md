@@ -267,13 +267,23 @@ phones retain the thumbnail rail beside the model with story below. Published ru
 `0ef21d9` is READY and live-browser verified. See
 [implementation and evidence limits](PRINCETON_IMAGE_STUDIES.md).
 
+## First hotspot expansion batch
+
+Princeton AA1164 (7 topics), brown Deluxe 6G3 (6) and Champ 5F1 (5) now join
+the original three explorers. All share actual model anchors, menu access and
+amp-specific generated front/rear illustrations, visibly labeled Generated
+illustration. See [topics, sources, provenance, review and limits](EXPLORER_BATCH.md).
+Ten models and all 208 catalog mappings remain unchanged. Exact interior
+positions are estimates; Princeton rectifier and Champ depth conflicts remain open.
+
 ## Next useful work
 
 1. Repository maintenance is complete: 208-entry catalog mapping, all five
    checks, and approved LFS migration. See [recovery and collaborator
    instructions](LFS_MIGRATION.md) before using an old working copy.
-2. Next: Princeton Reverb AA1164 hotspot content on its new shared assembly,
-   then review the Super Reverb AB763 treatment. The 5E3 explorer is published.
+2. Next: evidence and anchor review for Tremolux, Super Six, original Blues
+   Junior and Prosonic; requirements are in EXPLORER_BATCH.md. The first six
+   explorers are implemented. Super Reverb still needs its own reviewed assembly.
 3. Establish source-backed interior positions and model-specific authorized
    photos as the profiles expand. Keep variants, measurements and specimen
    evidence distinct.

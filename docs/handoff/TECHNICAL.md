@@ -576,3 +576,14 @@ series-pair/parallel arrays and verify physical frame/control clearance.
 The timeline camera is common to all colored assemblies and now fits the tallest
 cabinet. Detail views adapt camera zoom for new studies without changing geometry.
 See [current batch validation and limits](THREE_COMBOS.md).
+
+## First hotspot expansion batch
+
+See [current implementation and validation](EXPLORER_BATCH.md). Shared anchor
+targets live in `explorer-anchors.js`; card profiles in `small-amp-features.js`.
+The image viewer consumes `amp-image-data.js`, with full generation provenance
+in `assets/studies/manifest.json`. Native modal Escape preserves the underlying
+card; capture-phase card Escape preserves the amp and restores focus. Detail
+focus handling includes selects and disclosure summaries. `batchFit` precedes
+exploration zoom. `npm test` now runs six check scripts. Catalog/configurations
+are unchanged; estimated anchor metadata propagates to shared GLB exports.

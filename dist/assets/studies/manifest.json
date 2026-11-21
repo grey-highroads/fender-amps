@@ -1,0 +1,111 @@
+[
+  {
+    "id": "princeton-front",
+    "assemblyId": "princeton-reverb-aa1164",
+    "amp": "Princeton Reverb",
+    "configuration": "1965-style black-panel AA1164, one ten, six controls; family illustration with A-03894 cabinet reference and generic ceramic speaker",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/princeton/front-v2.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case scientific-educational. Generate whole amp FRONT illustration of 1965-style Fender Princeton Reverb AA1164. Detailed painted product illustration on warm ivory seamless studio background matching a museum educational series, clearly not archival photograph. Centered straight front with slight top visible full cabinet and feet. Black finely textured covering, silver/beige grille cloth, black strap handle with metal ends, two chrome chassis strips. Exactly TWO input jacks at left and SIX black skirted knobs with silver centers on black upper front panel, red pilot far right. Use reference for proportions only; no wear copying. NO readable lettering, numbers or wordmarks: leave the upper-left raised tail-logo location as a simple abstract small silver flourish without letters, and panel title area blank. No bright switch, no extra controls. One ten-inch speaker hidden by grille. Family configuration illustration, not a particular authenticated specimen.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-princeton-reverb-tube-amplifier-1965-9339"
+    ],
+    "knownInaccuracies": "Lettering and numbers deliberately omitted; front logo is an abstract silver shape. Speaker basket/magnet, tube tips, covering texture and spacing are illustrative. Reference Weber replacement is not copied. No identical authenticated specimen is implied.",
+    "provenance": "Built-in generation using privately inspected A-03894 cabinet photograph; configured as a family illustration. Replaces inaccurate A-05948 text studies, retained separately as superseded."
+  },
+  {
+    "id": "princeton-rear",
+    "assemblyId": "princeton-reverb-aa1164",
+    "amp": "Princeton Reverb",
+    "configuration": "1965-style black-panel AA1164, one ten, six controls; family illustration with A-03894 cabinet reference and generic ceramic speaker",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/princeton/rear-v2.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case scientific-educational. Generate whole amp REAR illustration of 1965-style Fender Princeton Reverb AA1164, clearly painted product illustration matching warm ivory museum educational series background. Full cabinet and feet centered, straight rear slight top visible. Black textured covering, strap handle, upper removable board with wide shallow trapezoid TOP cutout exposing narrow black chassis strip, solid board beneath it, large middle gap reveals ONE dark 10-inch speaker basket with small dark ceramic magnet, small flat blue central circular label with NO TEXT. Flat black lower back board. Use reference cabinet form only; reference speaker is replacement Weber alnico and MUST NOT copy its large bell cover. Use generic small ceramic magnet basket instead, no speaker model claim. Seven tubes are mostly hidden behind upper board, only tips in upper slot, no hanging tubes across speaker gap. Rear chassis hardware outlet at left, ground toggle, fuse, one power toggle, speaker and extension jack then four small effects connectors at right. No extra switches or standby. No readable lettering, words, numerals, certification logos or tube chart anywhere. Omit all text. Approximate whole-amp illustration, not a service layout or authenticated specimen.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-princeton-reverb-tube-amplifier-1965-9339"
+    ],
+    "knownInaccuracies": "Lettering and numbers deliberately omitted; front logo is an abstract silver shape. Speaker basket/magnet, tube tips, covering texture and spacing are illustrative. Reference Weber replacement is not copied. No identical authenticated specimen is implied.",
+    "provenance": "Built-in generation using privately inspected A-03894 cabinet photograph; configured as a family illustration. Replaces inaccurate A-05948 text studies, retained separately as superseded."
+  },
+  {
+    "id": "brown-front",
+    "assemblyId": "deluxe-6g3",
+    "amp": "Brown Deluxe",
+    "configuration": "1962-style 6G3, six brown barrel knobs, one twelve, no grille badge",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/brown/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: scientific-educational. Generate a whole-amplifier front illustration for an educational website, 1962 Fender brown Deluxe 6G3. Use attached front photograph only for form and cosmetics, do not copy room, wear or photographic composition. Clean warm ivory studio background, centered straight front with slight top visible, full cabinet and feet, consistent soft light, detailed painted product illustration clearly distinguishable from a historical photograph. Brown textured covering, wheat cloth, brown leather top handle, no grille logo. Exactly six brown barrel knobs across brown front panel: two input jacks then two knobs, two more input jacks then two knobs, then two tremolo knobs, red pilot far right. One 12 inch speaker hidden behind cloth. No readable lettering or numbers anywhere, omit wordmarks and small print rather than inventing text. No extra switches, no reverb, no watermark. This is an illustrative placeholder, not authenticated specimen evidence.",
+    "referenceLinks": [
+      "https://themusicemporium.com/products/fender-6g3-deluxe-1962"
+    ],
+    "knownInaccuracies": "Text deliberately omitted. Knob shape, covering color, basket, magnet, tube tips and hardware spacing are interpretive; no exact Oxford construction or factory-originality claim.",
+    "provenance": "Generated from privately inspected specimen photographs; only generated output redistributed"
+  },
+  {
+    "id": "brown-rear",
+    "assemblyId": "deluxe-6g3",
+    "amp": "Brown Deluxe",
+    "configuration": "1962-style 6G3, six brown barrel knobs, one twelve, no grille badge",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/brown/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: scientific-educational. Whole-amp rear view illustration of a 1962 Fender brown Deluxe 6G3, centered straight rear, slight top visible, warm ivory seamless studio background, soft light, detailed painted product illustration, not historical photograph. Reference photo establishes cabinet and opening shapes only; do not copy room or wear. Rough brown covering, leather handle, upper removable panel with shallow trapezoid top opening exposing rear chassis strip; flat lower panel; large middle opening reveals ONE 12-inch Oxford-style speaker back, pale gold basket, dark magnet, no readable speaker label. Six tubes belong above the middle opening mostly hidden behind upper panel, only tips visible. Rear strip ground toggle, fuse, one power toggle, speaker and extension jacks, tremolo pedal jack; no standby. No readable lettering, serials, logos, tube charts or wiring detail. Omit text rather than invent it. Full cabinet and glides. Illustration only, not a circuit layout or verified specimen.",
+    "referenceLinks": [
+      "https://themusicemporium.com/products/fender-6g3-deluxe-1962"
+    ],
+    "knownInaccuracies": "Text deliberately omitted. Knob shape, covering color, basket, magnet, tube tips and hardware spacing are interpretive; no exact Oxford construction or factory-originality claim.",
+    "provenance": "Generated from privately inspected specimen photographs; only generated output redistributed"
+  },
+  {
+    "id": "champ-front",
+    "assemblyId": "champ-5f1",
+    "amp": "Tweed Champ",
+    "configuration": "1959-style 5F1, one top Volume, two inputs, one eight",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/champ/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: scientific-educational. Whole amplifier FRONT illustration, 1959-style Fender Champ 5F1 with one 8-inch speaker. Detailed painted product illustration, distinctly illustrative rather than archival photograph. Warm ivory studio background, centered full cabinet and feet, straight front slightly elevated so chrome TOP REAR control panel is visible behind the leather handle. Small nearly square narrow-panel honey tweed cabinet, oxblood/gold striped grille, small blank metal badge on upper front rail. Exactly ONE black chicken-head volume knob, TWO input jacks, red pilot and black fuse cap on recessed top-rear panel, no front controls, no extra toggle. Use reference photos for proportions and top layout only, not wear. No readable text, logo lettering, numbers or watermark. A generic family illustration, not an authenticated specimen.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054"
+    ],
+    "knownInaccuracies": "Text deliberately omitted. Tweed pitch, panel shape, tube envelopes, speaker motor/basket and depth are approximate; cabinet depth remains disputed.",
+    "provenance": "Generated from privately inspected specimen photographs; only generated output redistributed"
+  },
+  {
+    "id": "champ-rear",
+    "assemblyId": "champ-5f1",
+    "amp": "Tweed Champ",
+    "configuration": "1959-style 5F1, one top Volume, two inputs, one eight",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/champ/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: scientific-educational. Whole amplifier REAR illustration, 1959-style Fender Champ 5F1, small nearly square narrow-panel honey tweed box, detailed painted product illustration on warm ivory seamless background, centered straight rear slightly elevated with full cabinet and feet visible. Use rear reference for proportions only not wear. Large flat tweed upper panel hides chassis, narrow flat lower panel, rectangular middle gap showing ONE 8-inch alnico speaker basket and THREE downward hanging tubes, two large glass tubes at rear-left and middle, one small tube toward right partly hidden above gap. Tiny output transformer may attach to speaker basket; do not invent big additional rear transformers. Brown leather handle on top in front of recessed chrome control panel: exactly one chicken-head knob, red pilot, fuse cap, two input jacks. No readable text, labels, serials or tube chart, no watermark. No complex wiring diagram. Illustrative placeholder, no factory-originality claim.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054"
+    ],
+    "knownInaccuracies": "Text deliberately omitted. Tweed pitch, panel shape, tube envelopes, speaker motor/basket and depth are approximate; cabinet depth remains disputed. Corrected initial missing motor and added illustrative basket-mounted output transformer; neither is a traced vintage part.",
+    "provenance": "Generated from privately inspected specimen photographs; only generated output redistributed",
+    "revisionPrompt": "Edit target: generated rear illustration attached first. Keep cabinet, THREE tubes, panel, knob count, background, lighting unchanged. Correct the speaker construction: behind the center large tube add a plausible compact dark cylindrical alnico magnet projecting backward from the CENTER of the speaker basket, partially occluded by that tube. The current basket appears to have no magnet; correct this omission. Add a small simple dark output-transformer block attached to basket off-center as seen in supporting second photograph. No readable lettering, no new knobs or tubes. This is an illustrative 1959 Champ 5F1 rear placeholder, not a circuit or factory-authenticated part reconstruction."
+  }
+]

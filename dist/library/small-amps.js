@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import {assetById} from './catalog.js';
+import {EXPLORER_ANCHORS} from './explorer-anchors.js';
+import {SMALL_PANELS} from './small-amp-profiles.js';
 import {REAR_PANELS} from './rear-profiles.js';
 import {createRearChassis} from './rear-chassis.js';
 import {MM,createSpeaker,createFaceplate,createBadge,createHandle,createScrew} from './parts.js';
@@ -63,11 +66,12 @@ export function createSmallAmp(profile){
 
  const speaker=createSpeaker(profile.speaker);speaker.position.set(profile.speakerOffset[0]*W,profile.speakerOffset[1]*H,D/2-27);body.add(speaker);
  // Tube counts follow visible tube chart / chassis evidence. Positions are explanatory.
+ const tubes=[];
  const tubeX=princeton?[-W*.34,-W*.23,-W*.12,W*.04,W*.14,W*.26,W*.37]:champ?[-W*.30,-W*.11,W*.25]:[-W*.34,-W*.21,-W*.08,W*.13,W*.25,W*.36];
  box(body,W-2*t-12,40,55,0,H/2-57,-D*.23,metal);
  for(const [i,kind] of profile.tubeKinds.entries()){
   const large=kind!=='preamp',length=princeton?(i===0?82:large?68:46):large?72:48,x=-tubeX[i],drop=trem?150:princeton?58:rear?60:105,y=H/2-drop-length/2;
-  const tube=new THREE.Group();tube.name=profile.tubeTypes?.[i]||kind;body.add(tube);
+  const tube=new THREE.Group();tubes.push(tube);tube.name=profile.tubeTypes?.[i]||kind;tube.userData.anchorMm=[x,y-length*.32,-D*.24-12];body.add(tube);
   cylinder(tube,large?12:9,7,x,H/2-drop,-D*.24,black);
   const glass=mat(large?'#a39c87':'#b4b6aa',large?{transparent:true,opacity:.52,roughness:.2}:{metalness:.75,roughness:.32});
   cylinder(tube,large?11:8,length,x,y,-D*.24,glass);
@@ -87,5 +91,14 @@ export function createSmallAmp(profile){
  const handle=createHandle(profile.handle);handle.rotation.x=-Math.PI/2;handle.scale.x=profile.handleSpan/185;handle.position.set(0,H/2+2,D*.12);body.add(handle);
  for(const x of [-W*.39,W*.39])for(const z of [-D*.33,D*.33])cylinder(body,9,8,x,-H/2-4,z,tweed?black:metal);
  amp.userData={assemblyId:profile.id,modelProfile:profile.example,dimensionsBasis:profile.dimensionsStatus,dimensionsMm:profile.dimensionsMm,construction:'Exterior study; interior envelopes and placements estimated',revision:rear?'1.1':'1.0',rectifierBasis:profile.rectifierBasis||null};
+ const topics=EXPLORER_ANCHORS[profile.id];
+ if(topics){
+  const layout=SMALL_PANELS[profile.panel];
+  for(const [id,target] of Object.entries(topics)){
+   if(target.knob!==undefined){const anchor=new THREE.Object3D();anchor.name=`explore-${id}`;anchor.position.set(layout.knobs[target.knob]-layout.width/2,0,18);anchor.userData={explorePart:id,explorePoint:true,placement:'Shared hardware center; panel spacing estimated'};plate.add(anchor);}
+   else {const object=target.speaker?speaker:target.tube!==undefined?tubes[target.tube]:body;const anchor=new THREE.Object3D();anchor.name=`explore-${id}`;anchor.userData={explorePart:id,explorePoint:true,placement:'Estimated construction location',menuOnly:!!target.menuOnly};if(target.speaker)anchor.position.set(0,0,-assetById(profile.speaker).build.depth-9);else if(target.tube!==undefined){anchor.position.fromArray(object.userData.anchorMm);}else anchor.position.set(0,H/2-60,-D*.24);object.add(anchor);}
+  }
+  amp.userData.exploration='small-hotspots-v1';amp.userData.controlPanelY=H/2*MM;
+ }
  return amp;
 }

@@ -1,8 +1,8 @@
 // A circuit drawing describes a design, not the condition of a surviving specimen.
 export const TWIN_TONE={
   "speakers": {
-    "title": "The JBL option changes the final filter.",
-    "body": "A JBL-equipped Twin and an Oxford-equipped Twin can share an amplifier circuit while delivering different attack and upper-frequency character. The optional speaker is a major configuration choice, not simply a different badge on the same sound.",
+    "title": "JBLs or Oxfords: same circuit, different attack and top end.",
+    "body": "A Twin with JBLs and a Twin with Oxfords can have the same circuit and still differ in attack and upper-frequency character. The speaker option is a real configuration choice.",
     "attributes": [
       [
         "Modeled configuration",
@@ -17,10 +17,10 @@ export const TWIN_TONE={
         "Response · efficiency · compression · cone condition"
       ]
     ],
-    "listen": "For matched nominal drivers, parallel wiring shares amplifier power between the pair. Sensitivity determines acoustic level for that electrical input; frequency response determines where it is emphasized. A higher power-capacity label alone proves neither greater sensitivity nor a particular breakup sound.",
-    "together": "JBL’s 1970 literature specifies a 4-inch edgewound coil and an aluminum center dome, and promotes strong high-frequency definition. That is a documented design emphasis. The modeled Oxford’s exact response and sensitivity remain unmeasured, so an honest Oxford/JBL comparison still needs identified drivers and matched listening conditions.",
-    "extraTitle": "A recone can change the comparison",
-    "extra": "A vintage frame label can survive replacement of the cone and other moving parts. Reconing, coil details and condition matter to the sound attributed to a model name. The generic Nubert photograph illustrates construction only; it supplies no evidence about either vintage option’s tone.",
+    "listen": "Two matched speakers in parallel split the amp’s power between them. Sensitivity decides how loud that power gets, and frequency response decides where it’s emphasized. A higher power rating on the label doesn’t tell you a speaker is louder, or how it breaks up.",
+    "together": "JBL’s 1970 literature lists a 4-inch edgewound voice coil and an aluminum center dome for the D120F, and promotes its high-frequency definition. That’s JBL describing its own design. The 1968 Fender catalog documents the D120F as a factory option.",
+    "extraTitle": "A recone changes the comparison",
+    "extra": "A vintage frame label can outlive the cone and the other moving parts. Ask whether a speaker has been reconed before you credit the model name for what you hear.",
     "sources": [
       [
         "https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php",
@@ -31,11 +31,11 @@ export const TWIN_TONE={
         "JBL 1970 brochure · D120F construction"
       ]
     ],
-    "detail": "Oxford identity is owner-attributed and its geometry remains estimated. No power rating, response curve or sensitivity is invented for it."
+    "detail": "Our model shows Oxford-family speakers, an owner attribution, with estimated geometry. We have no measured response or sensitivity for them, so a fair Oxford and JBL comparison still needs identified speakers at matched volume. The photo is a generic Nubert speaker."
   },
   "power-tubes": {
-    "title": "AC568 adds cathode resistance to the bias story.",
-    "body": "The AC568 drawing retains a negative grid-bias supply and also puts substantial resistance in the output-tube cathode returns. “Four 6L6GCs” therefore misses a consequential distinction from the AB763 arrangement.",
+    "title": "The AC568 adds cathode resistors to the output tubes.",
+    "body": "The AC568 drawing keeps the negative grid-bias supply and also puts substantial resistance in the output-tube cathode returns. On the AB763 those cathodes go to ground. So calling both of them four 6L6GCs skips a real difference.",
     "attributes": [
       [
         "AC568 drawing",
@@ -50,10 +50,10 @@ export const TWIN_TONE={
         "Phase-inverter component values"
       ]
     ],
-    "listen": "As current rises, voltage at the cathodes can shift the tubes’ bias—the conditions they are working under. That makes the circuit worth checking before giving the tube brand credit for a change in feel. The exact audible result still requires a known circuit, healthy tubes and measurements.",
-    "together": "The phase inverter, grid-bias network, cathode returns, supply and feedback work together. A “blackface conversion” can change that system while leaving the same quartet installed. Tube type alone cannot tell you which version you are hearing.",
-    "extraTitle": "Why the 1968 label is insufficient",
-    "extra": "The reference dealer calls this specimen AC568. That attribution is useful, but the model has not reproduced or audited its entire chassis. The linked AB763/AC568 drawings establish a circuit comparison; they do not certify that this surviving amp is unmodified.",
+    "listen": "As current rises, the voltage at the cathodes can shift the bias the tubes are running at. If a silver-panel Twin feels different from a black-panel one, check the circuit before you credit the tube brand.",
+    "together": "Phase-inverter values changed on the AC568 too. Inverter, bias network, cathode returns, supply and feedback all work as one system, and a blackface conversion can change that system with the same four tubes still in their sockets.",
+    "extraTitle": "About this particular amp",
+    "extra": "The dealer calls our reference amp an AC568. That’s useful, but we haven’t audited its whole chassis, and the drawings can’t tell you whether a surviving amp has been modified.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Twin-Reverb-AC568-Schematic.pdf",
@@ -64,11 +64,11 @@ export const TWIN_TONE={
         "Fender AB763 · comparison"
       ]
     ],
-    "detail": "This corrects the earlier generic fixed-bias summary: the AC568 cathode network deserves explicit treatment. Tube positions and envelopes in the model remain illustrative."
+    "detail": "The comparison is between the linked AB763 and AC568 drawings. What you’d hear from the difference hasn’t been measured here. Tube positions and shapes in the model are illustrative."
   },
   "output-transformer": {
-    "title": "The same transformer number can hide a different circuit.",
-    "body": "Both linked AB763 and AC568 drawings identify output transformer TR3 as 125A29A. A matching transformer identifier therefore cannot, by itself, prove that a silver-panel Twin retains the black-panel circuit.",
+    "title": "Same transformer number, different circuit.",
+    "body": "Both the AB763 and AC568 drawings call the output transformer TR3, part 125A29A. So a matching transformer number can’t tell you a silver-panel Twin still has the black-panel circuit.",
     "attributes": [
       [
         "Drawing identifier",
@@ -83,10 +83,10 @@ export const TWIN_TONE={
         "Output secondary feeds the feedback network"
       ]
     ],
-    "listen": "The transformer makes the speaker’s load part of what the power tubes work into. The feedback loop then samples the secondary signal, placing transformer behavior inside the amplifier’s correction loop. Core, windings, loading and available loop gain belong in the same explanation.",
-    "together": "A speaker change can alter the acoustic result while preserving nominal impedance. A load change also alters the electrical operating conditions seen through the transformer. Those are different comparisons; “same iron” does not hold the rest of the system constant.",
-    "extraTitle": "What the number does not tell us",
-    "extra": "The drawing designation does not establish this specimen’s installed unit, winding condition or measured bandwidth. We have not measured saturation or independently confirmed its transformer codes. No claim of a special vintage alloy or a universal “big iron” tone is warranted.",
+    "listen": "The transformer makes the speaker load part of what the power tubes work into. The feedback loop takes its sample from the transformer’s secondary, so the transformer’s behavior is inside the loop too.",
+    "together": "Swap speakers at the same nominal impedance and you change the sound. Change the load and you also change the conditions the output stage runs under. Those are separate comparisons, and having the same transformer doesn’t hold everything else constant.",
+    "extraTitle": "What the number doesn’t tell you",
+    "extra": "It doesn’t tell you which unit is in this amp, what shape its windings are in, or its bandwidth. We haven’t confirmed the codes or measured anything, and we’re not claiming a special vintage alloy or a big-iron tone.",
     "sources": [
       [
         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
@@ -97,6 +97,6 @@ export const TWIN_TONE={
         "Fender AC568 · TR3 and feedback"
       ]
     ],
-    "detail": "The transformer block is an estimated spatial marker. Part-number comparison is schematic evidence, not authentication of the installed specimen."
+    "detail": "The block in the model marks an estimated location. The part number comes from the drawings, not from the amp."
   }
 };

@@ -134,3 +134,11 @@ The vintage Pro Reverb was a two-channel 2 × 12, and this is a different amp. T
 ## Still to do
 
 Hotspot cards (Deluxe Reverb, Twin, 5E3), then interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, object captions ("OUTSIZED INFLUENCE.").
+
+## First hotspot expansion selective integration
+
+November 20: reviewed copy branch `6c9b62c`. Retained Twin and Deluxe Reverb
+rewrites with the same evidence/attributes/media/anchors; softened the input
+title to avoid promising cleanup. Deferred its flagged 5E3 lore and new figures.
+Added 18 source-scoped small-amp cards. See EXPLORER_BATCH.md for reviewed
+claims, explicit interpretation, rectifier dispute and remaining uncertainty.

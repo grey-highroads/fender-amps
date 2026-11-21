@@ -3,6 +3,7 @@ import {TWIN_TONE} from './twin-tone.js';
 import {TWIN_FEATURES} from './twin-features.js';
 import {TWEED_FEATURES} from './tweed-features.js';
 import {DELUXE_FEATURES} from './deluxe-features.js';
+import {PRINCETON_FEATURES,BROWN_FEATURES,CHAMP_FEATURES} from './small-amp-features.js';
 
 const vintage='https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479';
 const partReferences=[
@@ -12,6 +13,9 @@ const partReferences=[
 ];
 export const twinParts=[...TWIN_FEATURES,...partReferences.map(part=>({...part,...TWIN_TONE[part.id],side:'rear'}))];
 export const EXPLORATIONS={
+ 'princeton-reverb-aa1164':{name:'Princeton Reverb',parts:PRINCETON_FEATURES},
+ 'deluxe-6g3':{name:'Brown Deluxe',parts:BROWN_FEATURES},
+ 'champ-5f1':{name:'Champ',parts:CHAMP_FEATURES},
  'deluxe-5e3':{name:'Tweed Deluxe',parts:TWEED_FEATURES},
  'twin-reverb-early':{name:'Twin',parts:twinParts},
  'deluxe-reverb-black':{name:'Deluxe Reverb',parts:DELUXE_FEATURES}
@@ -30,21 +34,22 @@ export function createExploration({host,stage,camera,stopMotion,focusPart}){
   for(const side of ['front','top','rear']){const group=document.createElement('optgroup');group.label=side==='front'?'Controls & cosmetics':side==='top'?'Top-panel controls':'Rear components';for(const p of parts.filter(p=>p.side===side))group.append(new Option(p.label,p.id));if(group.children.length)menu.append(group)}
   buttons=parts.map(part=>{const b=document.createElement('button');b.className='part-hotspot';b.innerHTML=`<span class="hotspot-symbol" aria-hidden="true">+</span><span class="hotspot-label">${part.label}</span>`;b.setAttribute('aria-label',`Explore ${part.label.toLowerCase()}`);b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','part-info');b.onclick=()=>select(part.id,b);layer.append(b);const line=document.createElementNS(svg.namespaceURI,'line');line.setAttribute('stroke','#d7b47d');line.setAttribute('stroke-width','1');svg.append(line);return {part,b,line,occluded:false};});
  }
- function clear(focus=false){panel.hidden=true;selected=null;menu.value='';stage.classList.remove('part-selected');buttons.forEach(({b})=>b.setAttribute('aria-expanded','false'));if(focus)lastButton?.focus({preventScroll:true});}
+ function clear(focus=false){panel.hidden=true;selected=null;menu.value='';stage.classList.remove('part-selected');buttons.forEach(({b})=>b.setAttribute('aria-expanded','false'));if(focus)(lastButton?.getClientRects().length?lastButton:menu).focus({preventScroll:true});}
  function select(id,button){stopMotion();lastButton=button;selected=id;menu.value=id;const p=parts.find(p=>p.id===id);focusPart(p.side);stage.classList.add('part-selected');panel.hidden=false;panel.scrollTop=0;panel.innerHTML=`<button class="part-close" aria-label="Close part information">×</button><span class="eyebrow">EXPLORE ${profile.name.toUpperCase()} / ${p.label.toUpperCase()}</span><h2>${p.title}</h2><p>${p.body}</p><dl class="tone-attributes">${p.attributes.map(([key,value])=>`<div><dt>${key}</dt><dd>${value}</dd></div>`).join('')}</dl><section class="tone-listen"><h3>${p.cosmetic?'The collector angle':'Why it matters'}</h3><p>${p.listen}</p></section><details class="tone-notes"><summary>${p.cosmetic?'Evidence & context':'Dig a little deeper'}</summary><p>${p.together}</p>${p.choice?`<h3>Design rationale</h3><span class="interpretation">INTERPRETATION</span><p>${p.choice}</p>`:''}<h3>${p.extraTitle}</h3><p>${p.extra}</p></details><details class="tone-photo"><summary>${p.image?'Photograph & sources':'Sources & reference notes'}</summary>${p.image?`<figure><img src="${p.image}" alt="${p.alt}"><figcaption>${p.caption}</figcaption></figure><p class="photo-credit"><a href="${p.photoSource}" target="_blank" rel="noopener noreferrer">${p.credit}</a>${p.license?` · <a href="${p.license}" target="_blank" rel="noopener noreferrer">License</a>`:''}</p>`:p.empty?`<p class="photo-pending">${p.empty}</p><a class="part-source" href="${p.source}" target="_blank" rel="noopener noreferrer">${p.sourceLabel}</a>`:''}<p class="part-detail">${p.detail}</p><ul class="tone-sources">${p.sources.map(([url,label])=>`<li><a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a></li>`).join('')}</ul></details>`;panel.querySelector('button').onclick=()=>clear(true);buttons.forEach(({part,b})=>b.setAttribute('aria-expanded',String(part.id===id)));panel.querySelector('button').focus({preventScroll:true});}
  menu.onchange=()=>{if(menu.value)select(menu.value,menu);else clear()};
  panel.addEventListener('keydown',e=>{if(e.key==='Escape'){e.stopPropagation();clear(true)}});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&selected&&!document.querySelector('dialog[open]')){e.preventDefault();e.stopImmediatePropagation();clear(true)}},true);
  function visibleHierarchy(o){for(let n=o;n;n=n.parent)if(!n.visible)return false;return true;}
  return {
   attach(next){clear();model=next;profile=EXPLORATIONS[model?.userData.assemblyId];enabled=!!model?.userData.exploration&&!!profile;mount(enabled?profile:null);hint.textContent=`Explore the ${profile?.name||'amp'} · select a marker or rotate for more`;anchors=[];meshes=[];model?.traverse(o=>{if(o.userData.explorePart)anchors.push(o);if(o.isMesh)meshes.push(o)});stage.classList.toggle('construction-demo',enabled);layer.hidden=nav.hidden=hint.hidden=!enabled;lastRay=0;},
   clear,
   update(){if(!enabled)return;model.updateWorldMatrix(true,true);localCamera.copy(camera.position);model.worldToLocal(localCamera);const now=performance.now(),testRays=now-lastRay>100;const placed=[];
    buttons.forEach(item=>{const {part,b,line}=item;const o=anchors.find(o=>o.userData.explorePart===part.id);if(!o){b.hidden=true;line.style.display='none';return;}if(o.userData.explorePoint)o.getWorldPosition(world);else {bounds.setFromObject(o).getCenter(world);if(o.userData.exploreOffset){o.worldToLocal(world);world.add(new THREE.Vector3(...o.userData.exploreOffset));o.localToWorld(world);}}
-    projected.copy(world).project(camera);const x=(projected.x*.5+.5)*host.clientWidth,y=(-projected.y*.5+.5)*host.clientHeight;let hidden=projected.z< -1||projected.z>1||x<12||x>host.clientWidth-12||y<12||y>host.clientHeight-12||(part.side==='top'?localCamera.y<(model.userData.controlPanelY||0):part.side==='front'?localCamera.z<.1:localCamera.z>-.1);
+    projected.copy(world).project(camera);const x=(projected.x*.5+.5)*host.clientWidth,y=(-projected.y*.5+.5)*host.clientHeight;let hidden=part.menuOnly||projected.z< -1||projected.z>1||x<12||x>host.clientWidth-12||y<12||y>host.clientHeight-12||(part.side==='top'?localCamera.y<(model.userData.controlPanelY||0):part.side==='front'?localCamera.z<.1:localCamera.z>-.1);
     if(!hidden&&testRays){direction.subVectors(world,camera.position);const distance=direction.length();ray.set(camera.position,direction.normalize());ray.far=distance+.02;const hit=ray.intersectObjects(meshes,false).find(h=>visibleHierarchy(h.object));let own=false;for(let n=hit?.object;n;n=n.parent)if(n===o)own=true;item.occluded=!!hit&&!own&&hit.distance<distance-.035;}
     hidden=hidden||item.occluded;b.hidden=hidden;line.style.display=hidden?'none':'';if(hidden)return;
-    const preferredX=x+(part.offset?.[0]||0),preferredY=y+(part.offset?.[1]||0);let bx,by;
-    for(const [dx,dy] of [[0,0],[0,-36],[36,0],[-36,0],[0,36],[36,-36],[-36,-36],[36,36],[-36,36],[72,0],[-72,0]]){bx=Math.max(18,Math.min(host.clientWidth-18,preferredX+dx));by=Math.max(18,Math.min(host.clientHeight-18,preferredY+dy));if(!placed.some(p=>Math.hypot(p.x-bx,p.y-by)<35))break;}placed.push({x:bx,y:by});b.style.left=`${bx}px`;b.style.top=`${by}px`;b.classList.toggle('selected',selected===part.id);line.setAttribute('x1',x);line.setAttribute('y1',y);line.setAttribute('x2',bx);line.setAttribute('y2',by);
+    const rail=stage.querySelector('#amp-images:not([hidden])');const railEdge=rail?rail.getBoundingClientRect().right-host.getBoundingClientRect().left+18:18;const preferredX=x+(part.offset?.[0]||0),preferredY=y+(part.offset?.[1]||0);let bx,by;
+    for(const [dx,dy] of [[0,0],[0,-36],[36,0],[-36,0],[0,36],[36,-36],[-36,-36],[36,36],[-36,36],[72,0],[-72,0]]){bx=Math.max(railEdge,Math.min(host.clientWidth-18,preferredX+dx));by=Math.max(18,Math.min(host.clientHeight-18,preferredY+dy));if(!placed.some(p=>Math.hypot(p.x-bx,p.y-by)<35))break;}placed.push({x:bx,y:by});b.style.left=`${bx}px`;b.style.top=`${by}px`;b.classList.toggle('selected',selected===part.id);line.setAttribute('x1',x);line.setAttribute('y1',y);line.setAttribute('x2',bx);line.setAttribute('y2',by);
    });if(testRays)lastRay=now;
   }
  };
