@@ -122,7 +122,7 @@ Licence and credit were read from the Commons metadata on 2026-11-20. Check each
 
 ### Q23. No shared assemblies for the Bassman 5F6-A and Vibroverb 6G16.
 
-**Status: partly resolved November 21.** The owner authorized and the builder implemented a shared 5F6-A assembly and nine topics; its absence blocker is resolved upon publication. The Vibroverb 6G16 still needs its own assembly. The following is historical context: both were on the timeline. Main now has six assemblies (5E3, Deluxe Reverb, 1968 Twin, Champ, early Tremolux and brown Deluxe), none of which is a 4x10 or a 2x10 brown cabinet, so hotspot anchors need a new assembly first.
+**Status: partly resolved November 21.** The owner authorized and the builder implemented a shared 5F6-A assembly and nine topics; its absence blocker is resolved by published runtime `a3580a6`. The Vibroverb 6G16 still needs its own assembly. The following is historical context: both were on the timeline. Main now has six assemblies (5E3, Deluxe Reverb, 1968 Twin, Champ, early Tremolux and brown Deluxe), none of which is a 4x10 or a 2x10 brown cabinet, so hotspot anchors need a new assembly first.
 
 ### Q24. Bassman 5B6 dimensions.
 

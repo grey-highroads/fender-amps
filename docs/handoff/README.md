@@ -31,7 +31,7 @@ models remain interpretive and exact interior placement is not established.
 | Timeline | Active (default): sixteen modeled amps. All: 208 catalog entries including 192 gray WIP placeholders; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
 | Library | 68 components/materials and sixteen reference assemblies |
-| Hotspots | Sixteen profiles / 109 topics; Bassman/Pano batch locally validated, live verification pending |
+| Hotspots | Sixteen profiles / 109 topics; Bassman/Pano runtime `a3580a6` READY and live-verified |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
@@ -294,7 +294,7 @@ No new amps or generated assets are part of this round.
 1. Repository maintenance is complete: 208-entry catalog mapping, all five
    checks, and approved LFS migration. See [recovery and collaborator
    instructions](LFS_MIGRATION.md) before using an old working copy.
-2. All ten active hotspot profiles are published; see ACTIVE_HOTSPOTS.md.
+2. All sixteen active hotspot profiles are published; see BASSMAN_PANO.md for the latest batch.
    Exact 5E9 mechanism, selected-year circuit revisions and interior measurements
    remain evidence gaps. Image realism is deferred.
 3. Establish source-backed interior positions and model-specific authorized
@@ -377,7 +377,7 @@ uncommitted homepage concepts.
 
 Owner authorized tweed Bassman 5F6-A, black-panel Bassman AB165 and Pano Verb
 construction plus hotspots, no generated images. The three shared assemblies
-and 22 factual draft topics are locally validated. See
+and 22 factual draft topics are published and live-verified. See
 [BASSMAN_PANO.md](BASSMAN_PANO.md) for scope, sources, uncertainty and release.
 The Pano's two speaker outputs retain distinct loads, rather than being treated
 as a parallel pair. Current previous-trio copy from `f4aa2cc` is preserved.

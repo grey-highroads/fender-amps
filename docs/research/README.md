@@ -194,3 +194,11 @@ fifteen now use shared construction and 22 factual hotspot drafts. See
 [builder record](../handoff/VINTAGE_TRIO.md) and the appended checks in each
 existing brief. Readiness still means ready with estimates: Q17 and new Q28
 remain open. No new generated illustrations or reference-photo redistribution.
+
+## November 21: two Bassmans and Pano Verb published
+
+The owner-authorized construction/hotspot batch adds 5F6-A, AB165 and Pano Verb
+with 22 factual drafts, no generated images. See [builder release record](../handoff/BASSMAN_PANO.md).
+5F6-A's missing-assembly blocker Q23 is resolved; Vibroverb still needs its own
+model. Q22's cabinet dimensions and new Q29's I-EG tube-label conflict remain.
+Pano's manufacturer manual resolves the OUT1 4 Ω / OUT2 8 Ω assignment.

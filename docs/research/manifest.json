@@ -232,8 +232,9 @@
       ],
       "modeledAssembly": "pano-verb-2024",
       "builderCheckedOn": "2026-11-21",
-      "builderStatus": "Desktop/phone cards, source mappings and metre-scale exports validated; production verification next",
-      "handoff": "../../docs/handoff/BASSMAN_PANO.md"
+      "builderStatus": "Published a3580a6; all 22 cards live-verified, desktop/phone and metre-scale exports validated",
+      "handoff": "../../docs/handoff/BASSMAN_PANO.md",
+      "publishedOnMain": "a3580a6"
     },
     {
       "id": "deluxe-5e3",
@@ -412,8 +413,9 @@
       "researchPass": 3,
       "modeledAssembly": "bassman-blackface-ab165-1965",
       "builderCheckedOn": "2026-11-21",
-      "builderStatus": "Desktop/phone cards, source mappings and metre-scale exports validated; production verification next",
-      "handoff": "../../docs/handoff/BASSMAN_PANO.md"
+      "builderStatus": "Published a3580a6; all 22 cards live-verified, desktop/phone and metre-scale exports validated",
+      "handoff": "../../docs/handoff/BASSMAN_PANO.md",
+      "publishedOnMain": "a3580a6"
     },
     {
       "id": "fender-75-1980",
@@ -482,9 +484,10 @@
       "researchPass": 3,
       "modeledAssembly": "bassman-5f6a",
       "builderCheckedOn": "2026-11-21",
-      "builderStatus": "Desktop/phone cards, source mappings and metre-scale exports validated; production verification next",
+      "builderStatus": "Published a3580a6; all 22 cards live-verified, desktop/phone and metre-scale exports validated",
       "handoff": "../../docs/handoff/BASSMAN_PANO.md",
-      "assemblyBlockResolution": "Q23: owner-authorized assembly now implemented; publish after validation"
+      "assemblyBlockResolution": "Q23 resolved for 5F6-A by published assembly; Vibroverb still unmodeled",
+      "publishedOnMain": "a3580a6"
     },
     {
       "id": "vibroverb-6g16",
@@ -515,6 +518,31 @@
     }
   ],
   "timelineOnMain": {
+    "entries": 208,
+    "assemblies": [
+      "bassman-5f6a",
+      "bassman-blackface-ab165-1965",
+      "pano-verb-2024",
+      "super-reverb-ab763",
+      "vibrasonic-5g13-1960",
+      "showman-blonde-1961",
+      "super-six-reverb-1972",
+      "blues-junior-1995",
+      "prosonic-1996",
+      "princeton-reverb-aa1164",
+      "champ-5f1",
+      "tremolux-5e9",
+      "deluxe-6g3",
+      "deluxe-5e3",
+      "deluxe-reverb-black",
+      "twin-reverb-early"
+    ],
+    "mainCommit": "a3580a650ea38a0b1401254bbc1c028b6fd28dcd",
+    "note": "Runtime baseline; documentation follow-up may have a later SHA."
+  },
+  "blockingRule": "A question is blocking when its QUESTIONS.md status says \"Blocks\". Readiness is \"blocked\" when a blocker stops modeling or the explorer (Q20, Q23, Q24); other blockers leave readiness as is and stop only the named content.",
+  "location": "docs/research on main (moved from branch codex/amp-expansion-research 2026-11-20)",
+  "historicalTimelineOnMain": {
     "entries": 22,
     "assemblies": [
       "5E3 Deluxe",
@@ -525,7 +553,5 @@
       "brown Deluxe 6G3"
     ],
     "mainCommit": "b6d1c2f"
-  },
-  "blockingRule": "A question is blocking when its QUESTIONS.md status says \"Blocks\". Readiness is \"blocked\" when a blocker stops modeling or the explorer (Q20, Q23, Q24); other blockers leave readiness as is and stop only the named content.",
-  "location": "docs/research on main (moved from branch codex/amp-expansion-research 2026-11-20)"
+  }
 }

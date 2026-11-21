@@ -86,4 +86,18 @@ and realism remain deferred.
 
 ## Release
 
-Local validation complete; production release and live verification pending.
+Runtime `a3580a650ea38a0b1401254bbc1c028b6fd28dcd` is published on
+[fendertubeamps.com](https://fendertubeamps.com). Vercel production deployment
+`dpl_8vW2xRQSLaboYG5ThtEpDeZUBt9s` is READY; build logs confirm all six checks
+passed with materialized LFS/Blender assets.
+
+Live browser verification: all 17 changed/new published files matched validated
+local bytes; all 22 new cards opened; 16 Active / 208 All; phone AB165's hidden
+speaker menu topic and Escape close passed; no browser errors. Own live Pano
+review image is [here](images/bassman-pano/live-pano-verb-2024.png).
+
+5F6-A's Q23 missing-assembly blocker is now resolved. Q22 dimensions and Q29
+inverter labeling remain open. Final source copy is a factual builder draft
+awaiting the copy role. No image generation, private prototype publication,
+reference-photo redistribution, storage branch or history rewrite.
+Documentation follow-up keeps this runtime unchanged.
