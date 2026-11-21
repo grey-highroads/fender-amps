@@ -275,3 +275,10 @@ provenance. No model, hotspot, other amp media or viewer behavior changed.
 Six npm checks and whitespace passed; local viewer visually reviewed front/rear.
 Fine lettering, cloth and components remain approximate; replacement handle and
 reconed speaker appearance are specimen evidence, not factory fitment proof.
+
+Tweed Deluxe publication verified: runtime `6400a31a7d38234d4a80b4535df960144bb7865a`,
+Git production deployment `dpl_FQQiwkV2HyeG45J3xu9WZnX85K68`, READY.
+Live thumbnail/viewer check loaded front (1402 px, `tweed-deluxe/front.jpg`) and
+rear visibly matching the approved pair. Private capture:
+`outputs/tweed-deluxe-photoreal-review/published-rear.jpg`.
+https://fendertubeamps.com/?amp=deluxe-1957
