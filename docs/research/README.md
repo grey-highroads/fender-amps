@@ -186,3 +186,11 @@ After the second pass:
 - `amps/<stable-amp-id>.md`: one brief per amp, twenty-one in total after the third pass.
 - `manifest.json`: structured index, with catalog row pins and open questions.
 - `QUESTIONS.md`: unresolved issues ranked by what they block.
+
+## November 21: three more assemblies published
+
+Super Reverb AB763, early Vibrasonic 5G13 and blonde Showman 6G14-A/single
+fifteen now use shared construction and 22 factual hotspot drafts. See
+[builder record](../handoff/VINTAGE_TRIO.md) and the appended checks in each
+existing brief. Readiness still means ready with estimates: Q17 and new Q28
+remain open. No new generated illustrations or reference-photo redistribution.

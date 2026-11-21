@@ -31,7 +31,7 @@ models remain interpretive and exact interior placement is not established.
 | Timeline | Active (default): thirteen modeled amps. All: 208 catalog entries including 195 gray WIP placeholders; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
 | Library | 57 components/materials and thirteen reference assemblies |
-| Hotspots | Thirteen profiles / 87 topics; vintage trio locally validated, production verification next |
+| Hotspots | Thirteen profiles / 87 topics; vintage trio runtime `e50a45f` READY and live-verified |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |

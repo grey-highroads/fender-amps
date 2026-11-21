@@ -92,7 +92,8 @@
       ],
       "modeledAssembly": "showman-blonde-1961",
       "builderCheckedOn": "2026-11-21",
-      "builderStatus": "Shared model and explorer locally validated; production verification next"
+      "builderStatus": "Published e50a45f; desktop/phone cards and metre-scale exports verified; historical estimates remain",
+      "handoff": "../../docs/handoff/VINTAGE_TRIO.md"
     },
     {
       "id": "deluxe-6g3-1962",
@@ -303,7 +304,8 @@
       ],
       "modeledAssembly": "super-reverb-ab763",
       "builderCheckedOn": "2026-11-21",
-      "builderStatus": "Shared model and explorer locally validated; production verification next"
+      "builderStatus": "Published e50a45f; desktop/phone cards and metre-scale exports verified; historical estimates remain",
+      "handoff": "../../docs/handoff/VINTAGE_TRIO.md"
     },
     {
       "id": "pro-tv-front-1949",
@@ -378,7 +380,8 @@
       "researchPass": 3,
       "modeledAssembly": "vibrasonic-5g13-1960",
       "builderCheckedOn": "2026-11-21",
-      "builderStatus": "Shared model and explorer locally validated; production verification next"
+      "builderStatus": "Published e50a45f; desktop/phone cards and metre-scale exports verified; historical estimates remain",
+      "handoff": "../../docs/handoff/VINTAGE_TRIO.md"
     },
     {
       "id": "bassman-blackface-ab165-1965",

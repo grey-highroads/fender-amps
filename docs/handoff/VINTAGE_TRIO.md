@@ -70,5 +70,26 @@ Front/rear screenshots reviewed. All three inspectors and GLB exports passed: 9/
 
 Own rendered review images are in [images/vintage-trio](images/vintage-trio/), under LFS. Export review found and fixed a missing hidden-chassis anchor; component review also corrected the inspector’s hard-coded 12-inch label to the actual nominal diameter. Existing combo baffle cutouts retain their previous sizes.
 
-Next: record production verification, then the copy role can refine the new factual drafts. Dimensional questions need targeted evidence,
+Next: the copy role can refine the new factual drafts. Dimensional questions need targeted evidence,
 not another broad research pass. Image realism remains deferred.
+
+## Published verification
+
+Runtime commit `e50a45f06c1388e22290659be4fbe19e9362e205` is live on
+[fendertubeamps.com](https://fendertubeamps.com). Production deployment
+`dpl_3y3EArEH3Vgi91TbQXNziViTx4uL` is READY. Its build logs confirm all six
+checks passed, including materialized Blender/LFS data.
+
+Live browser verification: all 18 changed/new published files matched the local
+validated bytes; all 22 new topics opened; 13 Active / 208 All; phone Showman
+hidden-speaker menu topic and Escape passed; no browser errors. Local review
+also opened every new card at both 1440×1000 and 390×844, tested expansion of
+notes/sources and original/previous explorer regressions. Three metre-scale
+GLBs exported with 9/6/7 anchors and finite attributes. Own live Showman screenshot
+is [here](images/vintage-trio/live-showman-blonde-1961.png).
+
+The original workspace's uncommitted homepage concepts were left untouched.
+The release was made from detached worktree `/private/tmp/fender-next-build`
+based on current main, then pushed as a normal fast-forward to public main. No
+new storage branch, private prototype update or history rewrite. Documentation
+follow-up commits keep the same published runtime bytes.
