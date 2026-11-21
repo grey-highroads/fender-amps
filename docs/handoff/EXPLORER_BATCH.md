@@ -258,3 +258,10 @@ hotspot-only batch; its tests now require Front/Rear while the other three newer
 profiles remain without media. No geometry, hotspot, other amp media or viewer
 behavior changed. Six npm checks and whitespace pass; local viewer opened both
 images and visually matched the approved pair. Fine details remain interpretive.
+
+Tremolux publication verified: runtime `6f4bb873ff19973365fae2bdaa2802c92a9a2d8b`,
+Git production deployment `dpl_HPifttf7SNYVuMqLgqByKPjqEMfY`, READY.
+Live thumbnails opened front (1402 px, `tremolux/front.jpg`) and rear; the rear
+visually matched the approved pair. Private capture:
+`outputs/tremolux-photoreal-review/published-rear.jpg`.
+https://fendertubeamps.com/?amp=tremolux-1955
