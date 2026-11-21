@@ -351,3 +351,10 @@ dating and originality are not independently verified. No model, hotspot or
 viewer behavior changed. Media scope check now includes this explicit approval.
 All six checks and whitespace passed; local front/rear enlarged views visually
 checked. Next action: verify production publication.
+
+Blues Junior publication verified: runtime `2ffcf168cf1e7e8363b624ed8b1ce48c3f8b4e6d`,
+Git production deployment `dpl_4SiVhLigMLowXJjMwisy6f1HUh2F`, READY.
+Public thumbnail/viewer loaded front (1254 px, `blues-junior/front.jpg`) and
+rear visibly matching the approved pair. Private review capture:
+`outputs/blues-junior-photoreal-review/published-rear.jpg`.
+https://fendertubeamps.com/?amp=blues-junior-1995
