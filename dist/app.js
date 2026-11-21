@@ -97,7 +97,7 @@ function initScene(){
  const ring=new THREE.Mesh(new THREE.RingGeometry(1.95,1.958,128),new THREE.MeshBasicMaterial({color:0x7a6542,transparent:true,opacity:.2,side:THREE.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.y=-1.86;scene.add(ring);
  const ring2=ring.clone();ring2.scale.setScalar(1.27);ring2.material=ring.material.clone();ring2.material.opacity=.07;scene.add(ring2);
  let light=true,auto=!reduced,last=0;let viewTransition=null;
- const exploration=createExploration({host,stage:$('stage'),camera,stopMotion(){auto=false;updateRotate();},focusPart(side){if(side==='top'){view(2.8,7.2,-7.8);return;}const local=activeAmp.worldToLocal(camera.position.clone());if((side==='front'&&local.z<0)||(side==='rear'&&(local.z>0||local.y>3.5)))view(side==='front'?3.5:-3.5,side==='front'?1.8:.65,side==='front'?8.5:-8.5);}});
+ const exploration=createExploration({host,stage:$('stage'),camera,stopMotion(){auto=false;updateRotate();},focusPart(side){viewTransition=null;if(side==='top'){view(2.8,7.2,-7.8);return;}const local=activeAmp.worldToLocal(camera.position.clone());if((side==='front'&&local.z<0)||(side==='rear'&&(local.z>0||local.y>3.5)))view(side==='front'?3.5:-3.5,side==='front'?1.8:.65,side==='front'?8.5:-8.5);}});
  function updateRotate(){controls.autoRotate=auto;$('rotate').innerHTML=auto?'Ⅱ <span>Pause rotation</span>':'▷ <span>Resume rotation</span>';$('rotate').setAttribute('aria-pressed',String(auto));$('rotate').title=auto?'Pause rotation':'Resume rotation';$('rotate').setAttribute('aria-label',auto?'Pause automatic rotation':'Resume automatic rotation');}updateRotate();
  $('rotate').onclick=()=>{auto=!auto;updateRotate()};
  controls.addEventListener('start',()=>{auto=false;updateRotate();viewTransition=null});
