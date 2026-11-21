@@ -174,3 +174,15 @@ November 20, 2026, on `main`, after owner feedback on the brown Deluxe speaker c
 - Dealer and specimen references were removed from the main text of the Tremolux revision, input-tube and rectifier cards, the brown Deluxe tremolo card, the Princeton supply card, the Deluxe Reverb reverb, grille-cloth, speakers and output-transformer cards, and the Twin drip-edge and power-tube cards.
 
 Flags: stock speaker models come from Mojotone's field guide (and Guitar Player for the 6G3), not from a Fender document. The Deluxe Reverb has no research brief, so its card still rests on two dated examples with Oxford 12K5-6 speakers.
+
+## Batch 5: interface text
+
+November 21, 2026, on `main`. Owner: slogan-style interface copy goes.
+
+- Home hero and masthead rewritten plainly (commit 0992777): headline "Fender tube amps you can open up.", "1946 to now", plain intro and timeline hint. Page title and meta description match.
+- Amp page: removed the "Small cabinet. Outsized influence." caption (the element is kept but hidden, and the script no longer fills it). Loading text is now "Loading the 3D model…". The model label is one plain line, "3D model · built from drawings and photos", in place of the four internal labels (interpretive recreation, representative cabinet study, refined cabinet study, component library / reference assembly).
+- Notes dialog: eyebrow "Notes and sources"; closing caveat rewritten plainly.
+- About dialog rewritten.
+- Catalog note and footer tagline rewritten.
+
+Not changed: the hidden history section in `dist/index.html` and its era and milestone text in `dist/app.js` (not displayed; `collection.css` hides `.timeline-section`). If it is ever shown again, its copy needs this pass. The footer's "Prototype / 001" and "Component library" link, and the details tab's "Reference example" row and component-library link, are builder items.
