@@ -83,3 +83,15 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - Tone differences between green and cream boards are player reports.
 - Second pass: a December 1995 PR 295 specimen was viewed. The owner's manual pages photographed in that listing include a specifications page that was not read at full size.
 - No photo of the green circuit board was viewed. Board colour is still from text sources.
+
+## November 20 hotspot implementation follow-up
+
+Five-topic original PR 295 profile completed on `codex/remaining-active-hotspots`,
+pending owner review/publication. The November 1995 theory/specification page was
+rendered and read: first-stage Fat bypass/JFET, Volume then later Master,
+solid-state spring drive/recovery fed after Master, fixed negative grid bias
+and push-pull EL84s. The same PDF bundle contains 1996 and 2001–2003 revisions;
+these are not silently treated as first-year component-value evidence.
+
+See [build evidence, anchors and review captures](../../handoff/ACTIVE_HOTSPOTS.md).
+This round adds no images, models or realism work.

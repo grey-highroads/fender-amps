@@ -90,3 +90,13 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - Listings often label 1957 to 1960 amps "5E9" because the tube chart was not updated. Treat chart labels with care.
 - Changed from first pass: "Cabinet size for 1955 rests on one dealer listing" is now three specimens from two dealers.
 
+
+## November 20 hotspot implementation follow-up
+
+Four-topic 5E9 profile completed on `codex/remaining-active-hotspots`, pending
+owner review/publication. It reopens 0093’s chart and panel and covers revision
+identification, 12AY7, corrected rectifier chart and small-box/speaker evidence.
+The original 5E9 drawing remains unestablished; no 5E9-A mechanism is asserted.
+
+See [build evidence, anchors and review captures](../../handoff/ACTIVE_HOTSPOTS.md).
+This round adds no images, models or realism work.

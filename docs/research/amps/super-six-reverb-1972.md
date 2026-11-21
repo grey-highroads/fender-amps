@@ -85,3 +85,16 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - Second pass: the dealer page shows a Fender advert that calls the Super Six and Quad "new" and quotes a serial range for 1971. That supports an introduction before 1972 but is not a dated Fender document.
 - One specimen has Jensen C10Q speakers per its seller. Stock speaker brand is not settled.
 - The Fender spec sheet image on the dealer page was seen but not read at full size. It may carry factory dimensions.
+
+## November 20 hotspot implementation follow-up
+
+Six-topic 100 W profile completed on `codex/remaining-active-hotspots`, pending
+owner review/publication. The inspected Fender 010182 Rev C no-pull family sheet
+explicitly includes the Super Six speaker hookup. It supports pre-inverter
+Master, 120 pF Bright bypasses, reverb/tremolo routing, output bias Balance and
+three series-pair branches in parallel. The newly opened undated-title official
+Super Six owner PDF is actually a later 135 W/pull-boost version and was excluded
+as early-model evidence. Exact CFA7106 circuit revision remains unauthenticated.
+
+See [build evidence, anchors and review captures](../../handoff/ACTIVE_HOTSPOTS.md).
+This round adds no images, models or realism work.

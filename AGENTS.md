@@ -36,12 +36,15 @@ dealer listings last.
 
 ## Project rules
 
-- The current priority is an educational construction explorer: use 3D for
-  proportions and component relationships, with clearly attributed real photos.
-  Photorealism is deferred. The explorer now covers the 1968 Twin, blackface Deluxe Reverb and tweed 5E3 Deluxe. Use
-  one assembled model with hotspots across front/rear features; separate Cabinet
-  and Inside modes were superseded. Keep improvements in the shared library so they reach the timeline and
-  detail views. Collection expansion is now authorized in reviewed batches. The first additions are the Champ 5F1, early Tremolux 5E9 and brown Deluxe 6G3; see docs/handoff/SMALL_AMPS.md. The Princeton Reverb construction study is also authorized and mapped; see docs/handoff/PRINCETON_BROWN_REAR.md. Other additions still require review.
+- Current work is hotspot content and placement across the ten active amps.
+  The user accepted the Princeton / brown Deluxe / Champ hotspot information
+  and placement, but rejected their generated renders as unrealistic. Do not
+  treat those images as accepted realistic assets. Image generation and realism
+  work are deferred; the remaining-active-amp batch is hotspots only. See
+  docs/handoff/ACTIVE_HOTSPOTS.md for current scope and evidence limits.
+  Preserve one assembled model and keep anchors in shared factories so timeline,
+  detail, inspector and exports use the same model. Do not restore Cabinet/Inside
+  modes. Additional collection assemblies still require reviewed authorization.
 - Write for experienced musicians: clear, conversational, and technical only
   where the detail earns its place. Lead with what changes under the pick or
   in the sound, with deeper circuit notes available. Hotspots should reveal a distinctive

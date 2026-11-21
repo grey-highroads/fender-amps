@@ -81,3 +81,16 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 - A dealer dates one combo 1995. The service manual is dated August 1996.
 - The "300 made" claim is a seller's.
 - The manual page with dimensions blocked a direct fetch in the second pass; the figures here come from search excerpts of three copies of the manual, which agree.
+
+## November 20 hotspot implementation follow-up
+
+Six-topic combo profile completed on `codex/remaining-active-hotspots`, pending
+owner review/publication. The official Fender owner manual supports drive-only
+Master, manufacturer-described Gain 2 behavior, both-channel combo reverb,
+switched Return and the extension-jack tap change. Both available schematic
+sheets were opened: head 050173 Rev C and combo D049951 Rev E (January 1997).
+The latter is a later topology reference, not a complete 1996 value audit.
+Head-only impedance selection remains excluded.
+
+See [build evidence, anchors and review captures](../../handoff/ACTIVE_HOTSPOTS.md).
+This round adds no images, models or realism work.

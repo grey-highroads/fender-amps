@@ -279,14 +279,24 @@ Runtime `75b619d` is READY on the public site; live cards, images and served
 bytes were verified. Ten models and all 208 catalog mappings remain unchanged. Exact interior
 positions are estimates; Princeton rectifier and Champ depth conflicts remain open.
 
+## Current user review and hotspot-only continuation
+
+The user accepted the Princeton/brown Deluxe/Champ hotspot information and
+placement, and rejected the generated renders as unrealistic. They are **not
+accepted realistic assets**. Image generation and realism work are deferred.
+The isolated `codex/remaining-active-hotspots` implementation (pending owner
+review/publication) completes hotspots on Tremolux, Super Six,
+original Blues Junior and Prosonic (21 new topics; all ten active profiles). See [topics, anchors, sources and limits](ACTIVE_HOTSPOTS.md).
+No new amps or generated assets are part of this round.
+
 ## Next useful work
 
 1. Repository maintenance is complete: 208-entry catalog mapping, all five
    checks, and approved LFS migration. See [recovery and collaborator
    instructions](LFS_MIGRATION.md) before using an old working copy.
-2. Next: evidence and anchor review for Tremolux, Super Six, original Blues
-   Junior and Prosonic; requirements are in EXPLORER_BATCH.md. The first six
-   explorers are implemented. Super Reverb still needs its own reviewed assembly.
+2. Review/publish the completed hotspot-only active-amp batch described in
+   ACTIVE_HOTSPOTS.md. Exact 5E9 mechanism, selected-year circuit revisions and
+   interior measurements remain evidence gaps; image realism is deferred.
 3. Establish source-backed interior positions and model-specific authorized
    photos as the profiles expand. Keep variants, measurements and specimen
    evidence distinct.
