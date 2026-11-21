@@ -107,5 +107,5 @@ export function createComboAmp(a){
  if(junior){
   const paths=[];label(paths,'BLUES JUNIOR',70,10,8,{width:120});label(paths,'TYPE PR 295',70,35,3,{width:105});label(paths,'FENDER - MADE IN USA',70,47,2.4,{width:120});const c=document.createElement('canvas');c.width=1024;c.height=440;drawArtwork(c,{width:140,height:60,background:'#a7aaa1',ink:'#232826',paths});const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;const tag=new THREE.Mesh(new THREE.PlaneGeometry(140,60),mat('#fff',{map}));tag.rotation.y=Math.PI;tag.position.set(75,H/2-77,-D/2);tag.name='rear-identification-study';b.add(tag);
  }
- amp.userData={assemblyId:a.id,modelProfile:a.example,dimensionsBasis:a.dimensionsStatus,dimensionsMm:a.dimensionsMm,construction:'Educational construction; hardware and interior placement estimated',batchFit:six?.65:1,revision:'1.0',rectifierBasis:a.rectifierBasis};return amp;
+ amp.userData={assemblyId:a.id,modelProfile:a.example,dimensionsBasis:a.dimensionsStatus,dimensionsMm:a.dimensionsMm,construction:'Educational construction; hardware and interior placement estimated',batchFit:six?.52:1,revision:'1.0',rectifierBasis:a.rectifierBasis};return amp;
 }
