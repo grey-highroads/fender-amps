@@ -373,3 +373,10 @@ Fine lettering, covering pattern, dimensions and component details approximate.
 No model, hotspots or viewer behavior changed. Media scope check includes this
 explicit user approval. Six npm checks and whitespace passed; local enlarged
 front/rear visually checked. Next action: verify production publication.
+
+Prosonic publication verified: runtime `c1945225b47b05755d0144d3b4f30d05b2d06076`,
+Git production deployment `dpl_F6NXDUkopsM8AsYRrsRopEgaAr4w`, READY.
+Public thumbnail/viewer loaded front (1254 px, `prosonic/front.jpg`) and rear
+visibly matching the approved pair. Private review capture:
+`outputs/prosonic-photoreal-review/published-rear.jpg`.
+https://fendertubeamps.com/?amp=prosonic-1996
