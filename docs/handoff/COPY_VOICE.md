@@ -200,7 +200,7 @@ existing briefs and Q28. No new generated illustrations.
 
 ## Batch 6: Super Reverb, early Vibrasonic and blonde Showman
 
-November 21, 2026, on `main`. Stories, one-line descriptions and all 22 cards in `dist/vintage-amp-features.js` rewritten from the builder's factual drafts. Facts, sources and anchors unchanged. Attribute rows that described the model's pose or visibility (Super Reverb legs, Showman speaker and legs) now describe the amp. Year-range labels for six amps no longer say "study" or "-style".
+November 21, 2026, on `main`. Stories, one-line descriptions and all 22 cards in `dist/vintage-amp-features.js` rewritten from the builder's factual drafts. Facts, sources and anchors unchanged. Attribute rows that described the model's pose or visibility (Super Reverb legs, Showman speaker and legs) now describe the amp.
 
 Attributed lore added from the research briefs: Robinette on the Super's output transformer, feedback reduction and shared Bassman power transformer; Vintage Guitar on the Vibrasonic's firsts (diode rectifier, JBL as standard) and price per watt, and on the Showman chassis being close to the blonde Twin's; Mojotone on stock speakers and the 6G13-A's extension jack.
 
@@ -210,5 +210,6 @@ Flags:
 - The Showman tone-ring low-end explanation and the "hard, clear attack" line come from dealer sources in the brief. Both are framed as what people say, not as fact.
 - Dick Dale is not mentioned; the brief has no source for the association.
 - `ratingNote` fine print for these amps is the builder's and was not changed.
+- The year-range labels on six amps ("1959–1963; 1960-style 5G13 study" and similar) read as internal notes, but they are reconciled against `data/catalog/timeline-map.json` and `checks/library.mjs` fails if they change. A copy change was pushed and reverted on November 21. Builder item: change them together with the map.
 
 Checked in a headless browser at 1440 and 390 px wide: every card opens, no title wraps past three lines, no script errors.
