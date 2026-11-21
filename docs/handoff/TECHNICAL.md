@@ -564,3 +564,15 @@ review, 5E3 hotspot and exact scroll restoration passed. Full evidence and limit
 [FACEPLATE_TYPOGRAPHY.md](FACEPLATE_TYPOGRAPHY.md). Review helpers live under
 `tools/typography/`; owner-facing annotated source sheet is included. The
 original private Sites prototype and hosting settings remain unchanged.
+
+## Three-combo shared construction batch
+
+`combo-profiles.js` adds source-scoped Super Six, original Blues Junior and
+Prosonic configurations and new components; `combo-amps.js` constructs their
+separate speaker/rear structures. `createAmpModel` routes the same assembly to
+timeline, detail and inspector/GLB export. Existing panels are retained; new
+layouts use the shared vector alphabet. Nominal-load checks support series and
+series-pair/parallel arrays and verify physical frame/control clearance.
+The timeline camera is common to all colored assemblies and now fits the tallest
+cabinet. Detail views adapt camera zoom for new studies without changing geometry.
+See [current batch validation and limits](THREE_COMBOS.md).

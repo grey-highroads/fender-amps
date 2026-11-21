@@ -182,4 +182,31 @@ Fender 75 remain blocked by missing/conflicting model-specific dimensions.
 Dual Professional is now research-ready with explicitly estimated dimensions;
 its V-front is a separate construction task, not a silent substitute cabinet.
 
-Publication verification will be appended after the Git auto-deployment.
+## Publication verified
+
+Runtime `4ab115e5b04a54aebea725d23e8adf78a5259e89` is on main and the
+codex batch branch. Vercel Git production deployment
+`dpl_GiuBbS1SqW9xeoycEhe4qmJxu9R7` is **READY**, aliased to the existing
+custom domains. All five remote checks passed, including materialized LFS GLB
+validation. Initial batch `d68b21e` also passed its branch preview and production
+build; the final forward commit only pulls back the Super Six detail framing
+so its complete cabinet remains visible. No history was rewritten.
+
+Eight public runtime files matched the tested batch byte for byte; after the
+framing follow-up, `collection.js`, `library/combo-amps.js` and `library/parts.js`
+were checked again against final source. Live Chrome review opened all three
+models, checked the Junior pilot control and confirmed the full Super Six in
+its final framing. No page errors were captured. Live own screenshots:
+[Super Six](images/three-combos/live-super-six.jpg) and
+[Prosonic](images/three-combos/live-prosonic.jpg).
+
+- https://fendertubeamps.com/?amp=super-six-reverb-1972
+- https://fendertubeamps.com/?amp=blues-junior-1995
+- https://fendertubeamps.com/?amp=prosonic-1996
+
+Project inspection confirms `all_except_custom_domains` authentication remains:
+custom domains public, generated previews protected. The original private Sites
+prototype, Site ID, DNS and access settings were not changed. The canonical
+workspace was fast-forwarded to the batch, preserving existing typography and
+Princeton image work. Later documentation commits may redeploy identical runtime.
+

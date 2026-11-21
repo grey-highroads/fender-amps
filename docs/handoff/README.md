@@ -39,8 +39,8 @@ years, so its 1955 Deluxe and 1963 Deluxe Reverb cards use later photographed
 examples as construction references. Keep introduction year, production range,
 reference-specimen year, and modern reissue year distinct.
 
-The other timeline entries remain representative studies. They are not all
-connected to individually verified historical assemblies.
+The other 198 timeline entries remain spreadsheet-only placeholders. Their gray
+silhouettes make no model-specific geometry claim.
 
 The [corrected source spreadsheet](https://docs.google.com/spreadsheets/d/18bzOLj0RdEdjSneLXf9USwPAM5Zs7IRoAFwKpWmkBJw/edit)
 supersedes the earlier workbook by user instruction on November 20, 2026.
@@ -269,7 +269,7 @@ phones retain the thumbnail rail beside the model with story below. Published ru
 
 ## Next useful work
 
-1. Repository maintenance is complete: 19-entry catalog mapping, all five
+1. Repository maintenance is complete: 208-entry catalog mapping, all five
    checks, and approved LFS migration. See [recovery and collaborator
    instructions](LFS_MIGRATION.md) before using an old working copy.
 2. Next: Princeton Reverb AA1164 hotspot content on its new shared assembly,

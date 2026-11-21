@@ -160,3 +160,14 @@ Runtime `0ef21d9` deployed READY via Git as `dpl_EnV3in4CmYU7YJdnnV1QfebQ9Uqj`.
 All five remote checks passed. Live model, thumbnail rail, updated copy and image
 enlargement/Escape were verified. See [image study record](PRINCETON_IMAGE_STUDIES.md).
 Public domain/protected previews and original private Sites remain unchanged.
+
+## Three-combo construction publication
+
+Final runtime `4ab115e5b04a54aebea725d23e8adf78a5259e89` auto-deployed from
+main as `dpl_GiuBbS1SqW9xeoycEhe4qmJxu9R7`, READY, Git source. All five
+remote checks passed (ten assemblies, 47 components, 208 mapped entries and
+materialized LFS master). Final served runtime files match source; live Chrome
+review opened Super Six Reverb, original Blues Junior and Prosonic. See
+[construction, evidence, renders and validation](THREE_COMBOS.md). Public
+custom domains / protected generated URLs and the original private Sites prototype
+remain unchanged. The final forward commit fixes tall Super Six detail framing.
