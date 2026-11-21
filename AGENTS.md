@@ -13,7 +13,8 @@ file it sends you to for your task. Everything below is on `main`.
 | Research status per amp (readiness, blockers, catalog row) | [docs/research/manifest.json](docs/research/manifest.json) | To see what is ready to build |
 | Modeling packets and rechecked hotspot drafts | [docs/research/packets/](docs/research/packets/) | Princeton model, 5E3 hotspots, checks on Champ, Tremolux, brown Deluxe |
 | Photo sets for composites (lists only; files are on the owner's Mac) | [docs/research/images/](docs/research/images/) | When collecting or using photos |
-| Small-amp build notes | [docs/handoff/SMALL_AMPS.md](docs/handoff/SMALL_AMPS.md) | When working on Champ, Tremolux or brown Deluxe |
+| Copy voice direction and copy-pass log | [docs/handoff/COPY_VOICE.md](docs/handoff/COPY_VOICE.md) | Before writing or editing any site copy or hotspot text |
+| Build notes for each batch of modeled amps (small amps, three combos, Princeton, explorers, faceplates) | `docs/handoff/*.md`, linked from [docs/handoff/README.md](docs/handoff/README.md) | When changing an amp that is already built |
 | Catalog (source of truth) | [data/catalog/](data/catalog/README.md) | When mapping an amp to a catalog row |
 | Site code and copy (published) | `dist/` | Only for site changes |
 

@@ -19,15 +19,15 @@ All amp research for the site lives in this folder on `main`. Start from [AGENTS
 | 1961 | Showman (blonde) | new timeline amp | ready, with estimates | [showman-blonde-1961.md](amps/showman-blonde-1961.md) |
 | 1962 | Deluxe (6G3) | new timeline amp | on the live site | [deluxe-6g3-1962.md](amps/deluxe-6g3-1962.md) |
 | 1963 | Vibroverb (6G16 brown) | explorer upgrade | blocked (Q21, Q23) | [vibroverb-6g16.md](amps/vibroverb-6g16.md) |
-| 1965 | Princeton Reverb (black panel) | new timeline amp | ready, with estimates (Q17) | [princeton-reverb-aa1164.md](amps/princeton-reverb-aa1164.md) |
+| 1965 | Princeton Reverb (black panel) | new timeline amp | on the live site (Q17) | [princeton-reverb-aa1164.md](amps/princeton-reverb-aa1164.md) |
 | 1965 | Super Reverb (black panel) | explorer upgrade | ready, with estimates (Q17) | [super-reverb-ab763.md](amps/super-reverb-ab763.md) |
 | 1965 | Bassman (black panel) | new timeline amp | ready, with estimates (Q22) | [bassman-blackface-ab165-1965.md](amps/bassman-blackface-ab165-1965.md) |
-| 1972 | Super Six Reverb | new timeline amp | ready, with estimates | [super-six-reverb-1972.md](amps/super-six-reverb-1972.md) |
+| 1972 | Super Six Reverb | new timeline amp | on the live site | [super-six-reverb-1972.md](amps/super-six-reverb-1972.md) |
 | 1980 | Fender 75 | new timeline amp | blocked (Q20) | [fender-75-1980.md](amps/fender-75-1980.md) |
 | 1988 | The Twin (red/black knob) | new timeline amp | ready, with estimates (Q15) | [the-twin-1987.md](amps/the-twin-1987.md) |
 | 1993 | Vibro-King | new timeline amp | ready, with estimates | [vibro-king-1993.md](amps/vibro-king-1993.md) |
-| 1995 | Blues Junior (I–II) | new timeline amp | ready | [blues-junior-1995.md](amps/blues-junior-1995.md) |
-| 1996 | Prosonic | new timeline amp | ready | [prosonic-1996.md](amps/prosonic-1996.md) |
+| 1995 | Blues Junior (I–II) | new timeline amp | on the live site | [blues-junior-1995.md](amps/blues-junior-1995.md) |
+| 1996 | Prosonic | new timeline amp | on the live site | [prosonic-1996.md](amps/prosonic-1996.md) |
 | 2024 | Jack White Pano Verb | new timeline amp | ready | [pano-verb-2024.md](amps/pano-verb-2024.md) |
 
 ## What else is here
