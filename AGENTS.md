@@ -72,6 +72,12 @@ Agents split the work by job so two agents never edit the same text at once.
   circuit, construction or collector insight and its consequences, not teach
   basic control functions. Scope schematic facts to their circuit revision;
   distinguish measured behavior, engineering inference and specimen attribution.
+- Hotspots and stories are about the amp as Fender designed and released it:
+  its stock speaker, tubes, circuit and construction, and what those mean to a
+  player. The particular amp, dealer listing or photo set behind a model is
+  research evidence. It belongs in `docs/research/` and, at most, in a card's
+  fine-print note, never in the card's main text. (Owner rule, November 20, 2026;
+  see rule 9 in docs/handoff/COPY_VOICE.md.)
 - Model Fender factory production for the selected year. Use period Fender
   documentation for configuration, label factory options, and do not treat a
   dealer originality claim as proof of factory fitment.
