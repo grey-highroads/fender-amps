@@ -1,3 +1,20 @@
+## Active / All filter — November 20, 2026
+
+The timeline now opens with Show active: all ten current modeled construction
+studies. Show all reveals all 208 entries, including 198 gray WIP placeholders.
+The pressed buttons and live count state the current selection. No preference
+is saved: a fresh load defaults to Active. Existing amp review links still work.
+
+Filtering hides empty year groups, recalculates shared-year counts and markers,
+and disables decades with no entries in that view. It retains the nearest year
+when changing views. Hidden cards do not participate in navigation or rendering.
+Catalog mappings and all assembly/model data remain unchanged.
+
+Validation in this task: npm test passed all five checks. Browser review verified
+10/208 card counts, switching both ways, 2020s navigation in All, Active after
+reload, desktop and 390 × 844 layout, and no console errors. Local review image:
+`outputs/timeline-toggle-review.jpg`. Historical evidence limits below apply.
+
 Current update: the [second construction batch](THREE_COMBOS.md) brings the timeline
 to ten models / 198 WIP entries, still 208 total. The record below describes
 the preceding full-catalog rollout.

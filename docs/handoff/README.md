@@ -26,7 +26,7 @@ models remain interpretive and exact interior placement is not established.
 | GitHub | [grey-highroads/fender-amps](https://github.com/grey-highroads/fender-amps), branch `main` |
 | Runtime baseline | Three-combo construction 1.0 (Super Six, Blues Junior, Prosonic); existing faceplate lettering 1.0; Princeton construction 1.0 / brown Deluxe rear 1.1; knob 0.4 retained |
 | Hosting | [Public site](https://fendertubeamps.com), GitHub auto-deployment connected; preview URLs protected; [existing private Sites prototype](https://tweed-deluxe-observatory.breezy-lime-2897.chatgpt.site) retained unchanged. GoDaddy DNS connected. |
-| Timeline | 208 catalog entries: ten colored construction studies and 198 gray WIP placeholders; about six visible on desktop, two on a phone |
+| Timeline | Active (default): ten modeled amps. All: 208 catalog entries including 198 gray WIP placeholders; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
 | Library | 47 components/materials and ten reference assemblies |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |

@@ -70,3 +70,10 @@
 #study-viewer>p{font-size:12px;line-height:1.5;margin:0;color:#a5b4bf}
 @media(max-width:760px){.has-image-studies .amp-images{width:70px;gap:10px;top:47%}.has-image-studies #viewport{left:80px}.study-thumbnail img{height:65px}.study-thumbnail>span{padding:6px;font-size:11px}.study-rail-label,.study-rail-note{font-size:8px}.study-viewer-bar{align-items:flex-start;flex-direction:column;gap:10px}.study-viewer-bar button{padding:9px 11px}#study-viewer{padding:12px}}
 @media(max-width:760px){.has-image-studies .object-caption{display:none}}
+
+.collection-filter{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 18px}
+.collection-filter button{padding:10px 16px;border:1px solid var(--line);border-radius:4px;color:#aeb8c1;font-size:14px}
+.collection-filter button[aria-pressed="true"]{background:#d3b77e;color:#101418;border-color:#d3b77e}
+#collection-count{margin-left:10px;color:#aeb8c1;font-size:14px}
+#collection-decades button:disabled{opacity:.3;cursor:default}
+@media(max-width:760px){.collection-filter button{padding:9px 12px}#collection-count{flex-basis:100%;margin:5px 0 0}}
