@@ -229,3 +229,13 @@ to `front-v2.jpg` (1393 px wide), rear visibly matched the approved new pair.
 Escape returned to the model. Live capture saved privately under
 `outputs/brown-deluxe-photoreal-review-v2/published-rear.jpg`.
 https://fendertubeamps.com/?amp=deluxe-1962
+
+## Champ image replacement — user approved
+
+November 20: user approved the C-12147 same-specimen pair and requested publication.
+Shared registry now uses `champ/front-v2.jpg` and `champ/rear-v2.jpg`, replacing
+painted placeholders. Exact prompts and corrected provenance are in the media
+manifest. Earlier files remain unused. No model, hotspot or other amp media changed.
+Six npm checks and whitespace pass; local browser opened and visually reviewed
+both replacement images. Tiny lettering, tweed and obscured components remain
+interpretive, with fitted parts and wear attributed to the photographed specimen.
