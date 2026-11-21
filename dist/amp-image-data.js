@@ -251,5 +251,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://reverb.com/item/101464396-fender-blues-junior-pr-295-1995"
     ],
     "knownInaccuracies": "Generated lettering, textures, dimensions and component details remain approximate. Seller dating and originality are not independently verified."
+  },
+  {
+    "id": "prosonic-front",
+    "assemblyId": "prosonic-1996",
+    "amp": "Prosonic",
+    "configuration": "Red-lizard Prosonic combo specimen study, Zikinf listing 2328714; international 230 V rear panel, eight controls and two staggered tens",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/prosonic/front.jpg",
+    "referenceLinks": [
+      "https://www.zikinf.com/annonces/annonce-2328714"
+    ],
+    "knownInaccuracies": "Generated lettering, covering pattern, dimensions and component details remain approximate. Specimen year and originality are not independently verified. The rear follows this international 230 V specimen; speaker fitment is specimen evidence."
+  },
+  {
+    "id": "prosonic-rear",
+    "assemblyId": "prosonic-1996",
+    "amp": "Prosonic",
+    "configuration": "Red-lizard Prosonic combo specimen study, Zikinf listing 2328714; international 230 V rear panel, eight controls and two staggered tens",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/prosonic/rear.jpg",
+    "referenceLinks": [
+      "https://www.zikinf.com/annonces/annonce-2328714"
+    ],
+    "knownInaccuracies": "Generated lettering, covering pattern, dimensions and component details remain approximate. Specimen year and originality are not independently verified. The rear follows this international 230 V specimen; speaker fitment is specimen evidence."
   }
 ];

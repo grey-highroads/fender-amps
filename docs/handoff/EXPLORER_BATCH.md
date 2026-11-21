@@ -358,3 +358,18 @@ Public thumbnail/viewer loaded front (1254 px, `blues-junior/front.jpg`) and
 rear visibly matching the approved pair. Private review capture:
 `outputs/blues-junior-photoreal-review/published-rear.jpg`.
 https://fendertubeamps.com/?amp=blues-junior-1995
+
+## Prosonic images — user approved
+
+November 20: user approved the red-lizard Zikinf 2328714 front/rear pair and
+requested publication in the shared thumbnail rail. Two `prosonic-1996` records
+use `assets/studies/prosonic/{front,rear}.jpg`. Exact prompts and specimen source
+are in the manifest; third-party photographs remain ignored. This photo set
+provides an assembled rear missing from the earlier model's reference set.
+International 230 V panel, staggered speaker placement and fitted Celestions
+are specimen evidence, not an independent factory fitment audit. Exact specimen
+year/originality remain unverified; seller limited-run claim is not adopted.
+Fine lettering, covering pattern, dimensions and component details approximate.
+No model, hotspots or viewer behavior changed. Media scope check includes this
+explicit user approval. Six npm checks and whitespace passed; local enlarged
+front/rear visually checked. Next action: verify production publication.

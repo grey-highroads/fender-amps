@@ -322,5 +322,41 @@
     ],
     "knownInaccuracies": "Generated lettering, textures, dimensions and component details remain approximate. Seller dating and originality are not independently verified.",
     "provenance": "User-approved same-specimen pair guided by Reverb listing 101464396 front, rear plate and assembled rear photographs. Rear received a targeted six-knob correction. Original seller photographs are not redistributed."
+  },
+  {
+    "id": "prosonic-front",
+    "assemblyId": "prosonic-1996",
+    "amp": "Prosonic",
+    "configuration": "Red-lizard Prosonic combo specimen study, Zikinf listing 2328714; international 230 V rear panel, eight controls and two staggered tens",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/prosonic/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Create a fresh highly photorealistic studio catalog photograph of this exact Fender Prosonic red lizard 2x10 combo specimen from the attached photographs. Preserve low wide cabinet proportions, red reptile embossed vinyl with fine scale texture and subtle fading/wear, black ribbed strap handle with nickel ends, nickel chassis straps and bottom metal corners, no casters. Warm pale gray seamless studio floor/background, soft key upper left gentle fill, natural grounded shadow. Centered long-lens camera nearly straight-on, slight elevation reveals a hint of top, whole amp uncropped filling about 80% square canvas width. Optical realism, authentic materials, no plastic CGI or illustration, no extra objects, footswitch on floor, mic stands, wall, curtains, cables plugged in front, captions or watermarks. Keep specimen fittings; no claims of independent originality. SINGLE FRONT VIEW ONLY. Reference1 front three-quarter closeup locks panel and materials, reference2 full front angle locks complete cabinet and proportions, reference3 rear confirms specimen. Front black control panel white script Prosonic -Amp at right and green pilot jewel at far right. EXACTLY EIGHT black chicken-head knobs left-to-right VOLUME, GAIN 1, GAIN 2, TREBLE, BASS, MIDDLE, MASTER, REVERB, with two input jacks and small channel push switch/red LED at left. No silver skirt knobs, no cream faceplate, no standby/power toggles on front. Silver/black finely woven grille, raised Fender tail badge upper left, narrow red perimeter, no drip edge, no added badges. Entire amplifier and top handle visible; remove the front plugged cable and floor microphone stands from source scene. One front image only, no rear inset, collage or diptych.",
+    "referenceLinks": [
+      "https://www.zikinf.com/annonces/annonce-2328714"
+    ],
+    "knownInaccuracies": "Generated lettering, covering pattern, dimensions and component details remain approximate. Specimen year and originality are not independently verified. The rear follows this international 230 V specimen; speaker fitment is specimen evidence.",
+    "provenance": "User-approved same-specimen pair guided by Zikinf listing 2328714 photographs 4715456, 4715457 and 4715458. Front uses both front angles plus rear; rear uses assembled rear plus front angle. Seller limited-production claim is not adopted. Original seller photographs are not redistributed."
+  },
+  {
+    "id": "prosonic-rear",
+    "assemblyId": "prosonic-1996",
+    "amp": "Prosonic",
+    "configuration": "Red-lizard Prosonic combo specimen study, Zikinf listing 2328714; international 230 V rear panel, eight controls and two staggered tens",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/prosonic/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Create a fresh highly photorealistic studio catalog photograph of this exact Fender Prosonic red lizard 2x10 combo specimen from the attached photographs. Preserve low wide cabinet proportions, red reptile embossed vinyl with fine scale texture and subtle fading/wear, black ribbed strap handle with nickel ends, nickel chassis straps and bottom metal corners, no casters. Warm pale gray seamless studio floor/background, soft key upper left gentle fill, natural grounded shadow. Centered long-lens camera nearly straight-on, slight elevation reveals a hint of top, whole amp uncropped filling about 80% square canvas width. Optical realism, authentic materials, no plastic CGI or illustration, no extra objects, footswitch on floor, mic stands, wall, curtains, cables plugged in front, captions or watermarks. Keep specimen fittings; no claims of independent originality. SINGLE REAR VIEW ONLY. Reference1 assembled rear is strict layout authority; reference2 front angle supports covering/top hardware identity. KEEP both rectangular red rear boards installed. Flat broad upper board BELOW exposed black chassis rear strip, no trapezoid scoop, separate flat broad lower board; large horizontal opening between. TWO Celestion ten-inch speakers with black cast/stamped baskets and round silver-gray magnet backs, small black/gold Celestion labels, staggered EXACTLY as photographed: rear viewer LEFT speaker LOWER, RIGHT speaker HIGHER. Not side-by-side at equal height, not JBL bell covers or Fender blue labels. Dark baffle/interior, red wooden cleats, modest wiring between speakers. Black rear panel matches photographed left-to-right POWER toggle, fuse, black rotary RECTIFIER/CLASS selector with 1/2/3 positions, STANDBY toggle, connected speaker jack and empty external speaker, FOOTSWITCH connector, caution/230V area, EFFECTS RETURN and SEND at right, CSR13 identification. Retain international 230V specimen, not invent US rear panel. Glimpses tubes and retainers below chassis above board, no exposed circuit board. Top black handle nickel end caps, nickel corners and side tilt leg barely visible if at all. Leave external footswitch disconnected and remove long foreground crossing cable; keep necessary speaker lead and mains cable tucked at left. Do not change board proportions or remove boards to reveal more interior. One full rear photograph only, no front view, sheet, inset or collage.",
+    "referenceLinks": [
+      "https://www.zikinf.com/annonces/annonce-2328714"
+    ],
+    "knownInaccuracies": "Generated lettering, covering pattern, dimensions and component details remain approximate. Specimen year and originality are not independently verified. The rear follows this international 230 V specimen; speaker fitment is specimen evidence.",
+    "provenance": "User-approved same-specimen pair guided by Zikinf listing 2328714 photographs 4715456, 4715457 and 4715458. Front uses both front angles plus rear; rear uses assembled rear plus front angle. Seller limited-production claim is not adopted. Original seller photographs are not redistributed."
   }
 ]
