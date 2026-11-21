@@ -1,0 +1,707 @@
+From 6c9b62cdefe64b377b3ca21208b2160ab231f8b8 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 20 Nov 2026 17:22:15 -0600
+Subject: [PATCH] Copy voice pass, batch 2: rewrite all 26 hotspot cards
+
+Deluxe Reverb, 1968 Twin and Tweed Deluxe explorer cards in the approved
+voice. Evidence limits are stated once per card in the fine-print note.
+Attribute rows, sources, photos and anchors are unchanged. Tweed Deluxe
+cards draw attributed analysis and owner lore from the 5E3 research
+packet; see docs/handoff/COPY_VOICE.md for flags.
+
+Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01ACvL11Kej7Bsqu5jPvgEE4
+---
+ dist/deluxe-features.js    | 126 ++++++++++++++++++-------------------
+ dist/tweed-features.js     | 108 +++++++++++++++----------------
+ dist/twin-features.js      |  70 ++++++++++-----------
+ dist/twin-tone.js          |  42 ++++++-------
+ docs/handoff/COPY_VOICE.md |  17 ++++-
+ 5 files changed, 189 insertions(+), 174 deletions(-)
+
+diff --git a/dist/deluxe-features.js b/dist/deluxe-features.js
+index 530403b..8adf137 100644
+--- a/dist/deluxe-features.js
++++ b/dist/deluxe-features.js
+@@ -4,8 +4,8 @@ export const DELUXE_FEATURES=[
+     "id": "inputs",
+     "label": "Inputs",
+     "side": "front",
+-    "title": "Turning down Volume may leave the first stage driven.",
+-    "body": "A boost pedal meets the first gain stage before the Volume control. Input 2 turns the signal down earlier, so it can clean up that first stage in a way the Volume knob cannot.",
++    "title": "Input 2 cleans up the first stage. The Volume knob can’t.",
++    "body": "A hot pickup or a boost pedal hits the first gain stage before the Volume control ever sees it. Input 2 knocks the signal down about 6 dB ahead of that stage, so it can clean things up in a way turning down Volume won’t.",
+     "attributes": [
+       [
+         "Input 2",
+@@ -20,11 +20,11 @@ export const DELUXE_FEATURES=[
+         "First stage → tone controls / Volume → next stage"
+       ]
+     ],
+-    "listen": "With a hot pickup or boost, try input 2 and bring the amp’s volume back up. You may get a cleaner attack, but passive pickups can also lose some of their resonant edge because input 2 loads them more heavily.",
+-    "together": "The AB763 drawing gives roughly 1 MΩ at input 1 and 136 kΩ at input 2 when only one input in that channel is used. What happens later depends on the EQ, gain stages, phase inverter and power section. The input choice does not separately rebias the 6V6s.",
+-    "extraTitle": "The channels have another wrinkle",
+-    "extra": "The Vibrato channel adds a dry-signal mixing stage around the reverb circuit. Its dry signal and the Normal channel’s reach the common mix with opposite polarity, so bridging them can cancel some frequencies. They are not two interchangeable copies of one channel.",
+-    "detail": "Values are nominal circuit calculations, not measurements of a surviving amp. Both-input use changes the switching network.",
++    "listen": "With a hot pickup or a boost, try Input 2 and bring the Volume back up. You may get a cleaner attack. The trade is that Input 2 loads passive pickups harder, so they can lose some of their top-end edge.",
++    "together": "On the AB763 drawing, Input 1 is roughly 1 MΩ and Input 2 roughly 136 kΩ when only one jack in the channel is in use. Plug into both and the switching network changes. Picking an input doesn’t rebias the 6V6s. What happens after the first stage still depends on the EQ, the later gain stages, the phase inverter and the power section.",
++    "extraTitle": "Jumpering the channels can cancel things out",
++    "extra": "The Vibrato channel has an extra dry-signal mixing stage around the reverb circuit, and that flips its polarity relative to the Normal channel. Bridge the two and some frequencies can cancel. They aren’t two copies of the same channel.",
++    "detail": "Impedance and pad figures are calculated from the AB763 drawing, not measured on a surviving amp.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -44,8 +44,8 @@ export const DELUXE_FEATURES=[
+     "id": "bright-cap",
+     "label": "Bright capacitor",
+     "side": "front",
+-    "title": "The extra bite changes as you turn up.",
+-    "body": "The Vibrato channel has a small bright capacitor across its Volume control. It lets some treble get around the control at lower settings. As you turn up, that shortcut makes less difference.",
++    "title": "The bright cap does most of its work at low volume.",
++    "body": "There’s a 47 pF cap across the Vibrato channel’s Volume pot, and it lets treble get around the control. You hear it most at low settings. As you turn up it matters less, and near full volume it’s effectively out of the picture.",
+     "attributes": [
+       [
+         "AB763 drawing",
+@@ -60,11 +60,11 @@ export const DELUXE_FEATURES=[
+         "No matching bright capacitor shown"
+       ]
+     ],
+-    "listen": "A pedal that sounds sharp into the Vibrato channel at home may behave differently with the amp turned up. The Normal channel is a useful comparison, though its different gain path means this is not a perfectly isolated bright-cap test.",
+-    "together": "This is a fixed capacitor, not the Twin’s Bright switch. At full volume the two ends of the bypass path are effectively together, so the capacitor no longer has the same treble-lifting job.",
+-    "extraTitle": "The whole rig still matters",
+-    "extra": "Pickup output, cable, pedal EQ and the speaker all affect how that extra edge lands. The drawing explains a useful cause to investigate; it does not guarantee that every Deluxe Reverb sounds harsh or that a surviving amp still has the original capacitor.",
+-    "detail": "The marker sits on Vibrato Volume. The capacitor itself is behind the panel, not a visible extra control.",
++    "listen": "If a pedal sounds sharp at home and fine at the gig, this is a good suspect. Try the same thing in the Normal channel, where the AB763 drawing shows no bright cap. It isn’t a perfect A/B, because the two channels differ in other ways too.",
++    "together": "This is a fixed cap, not a switch like the Twin’s Bright switch, so you can’t turn it off from the panel. At full volume both ends of the bypass path are effectively tied together, and the cap has nothing left to do.",
++    "extraTitle": "It’s not the only thing making it bright",
++    "extra": "Pickup output, cable, pedal EQ and the speaker all change how that extra edge comes across. And on a surviving amp, the original cap may not still be there.",
++    "detail": "The marker sits on the Vibrato Volume knob. The cap itself is behind the panel. The 47 pF value is from the AB763 drawing.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -84,8 +84,8 @@ export const DELUXE_FEATURES=[
+     "id": "reverb",
+     "label": "Reverb",
+     "side": "front",
+-    "title": "Reverb at zero still leaves a different channel.",
+-    "body": "The Vibrato channel keeps its extra dry-signal mixing stage even with Reverb turned down. That is one reason comparing the two channels tells you more than just “with effects” versus “without.”",
++    "title": "Turn Reverb to zero and it’s still a different channel.",
++    "body": "The Vibrato channel keeps its extra dry-signal mixing stage even with Reverb all the way down. So comparing the two channels isn’t just effects versus no effects.",
+     "attributes": [
+       [
+         "Dry path",
+@@ -100,11 +100,11 @@ export const DELUXE_FEATURES=[
+         "Set after the tank and recovery stage"
+       ]
+     ],
+-    "listen": "Channel volume changes how hard the spring circuit is driven; the Reverb knob changes how much of its return you hear. Hitting the tank harder and adding more return are different ways to change the result.",
+-    "together": "The dry signal reaches the mixer through a 3.3 MΩ resistor with a 10 pF treble bypass. The spring return joins it there after recovery amplification. The extra stage changes the dry path’s gain and polarity as well as making the wet mix possible.",
+-    "extraTitle": "A useful detail on the surviving pan",
+-    "extra": "Black Book’s 1965 example lists a pan marked RA 3265. That is a dealer-recorded marking, not proof of a particular modern replacement code, decay rating or spring count. Drive/pickup impedance, mounting and grounding also matter when identifying a tank.",
+-    "detail": "The model combines reference evidence; it is not a scan of the Black Book or Folkway amp. No exact tank specification is assigned.",
++    "listen": "Channel Volume sets how hard the springs get driven. The Reverb knob sets how much of the return you hear. Hitting the tank harder and turning up the return are two different moves, and they give you different results.",
++    "together": "On the AB763 drawing the dry signal reaches the mixer through a 3.3 MΩ resistor with a 10 pF treble bypass. The spring return joins it there after the recovery stage. That extra stage changes the dry signal’s gain and polarity too. Two halves of a 12AT7 work together as the reverb driver.",
++    "extraTitle": "About the tank",
++    "extra": "The 1965 Black Book amp is listed with a pan marked RA 3265. That’s the dealer’s reading of the marking. It doesn’t tell you the decay, the spring count or which modern replacement matches. If you’re identifying a tank, drive and pickup impedance, mounting and grounding all matter.",
++    "detail": "Our model draws on more than one reference amp. We haven’t assigned it a specific tank.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -124,8 +124,8 @@ export const DELUXE_FEATURES=[
+     "id": "vibrato",
+     "label": "Vibrato / tremolo",
+     "side": "front",
+-    "title": "The spring tail goes through the pulse, too.",
+-    "body": "The Deluxe Reverb’s optical tremolo works after the Vibrato channel’s dry and reverb signals have been mixed. That puts the spring tail inside the volume movement, rather than leaving an untouched reverb tail after it.",
++    "title": "The tremolo pulses the reverb tail too.",
++    "body": "The Deluxe Reverb’s optical tremolo comes after the Vibrato channel’s dry and reverb signals are mixed. So the spring tail gets pulsed along with the note.",
+     "attributes": [
+       [
+         "Location",
+@@ -140,11 +140,11 @@ export const DELUXE_FEATURES=[
+         "Not the point being modulated"
+       ]
+     ],
+-    "listen": "That order is part of the feel when reverb and tremolo are used together. It gives a different relationship from putting a reverb pedal after a tremolo pedal.",
+-    "together": "A neon lamp and light-sensitive resistor form the optical cell often nicknamed the “roach.” The oscillator flashes the lamp; the resistor changes how much signal is pulled down. It is a different approach from tremolo that varies the output tubes’ bias.",
+-    "extraTitle": "An old cell can change the feel",
+-    "extra": "The cell’s response and dark resistance can affect the pulse and depth. A replacement may behave differently even when the faceplate is unchanged. We have not measured the optical cell in either reference specimen.",
+-    "detail": "The description follows the AB763 drawing; exact pulse shape and speed range are not measured here.",
++    "listen": "That order is part of how the two effects feel together. It’s not what you get from a reverb pedal after a tremolo pedal, where the tail rings on untouched.",
++    "together": "A neon lamp and a light-sensitive resistor make up the optical cell, the part people call the roach. The oscillator flashes the lamp and the resistor pulls the signal down in time with it. It’s a different design from bias tremolo, which works on the output tubes. Here the 6V6 bias isn’t what’s moving.",
++    "extraTitle": "Old cells drift",
++    "extra": "The cell’s response and its dark resistance affect the shape and depth of the pulse. A replacement can feel different even though nothing on the panel has changed.",
++    "detail": "Follows the AB763 drawing. We haven’t measured the pulse shape, the speed range or the cell in either reference amp.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -164,8 +164,8 @@ export const DELUXE_FEATURES=[
+     "id": "grille-cloth",
+     "label": "Grille cloth",
+     "side": "front",
+-    "title": "A familiar front can hide a lot of history.",
+-    "body": "Silver cloth and a black panel give a convincing period look, but both are replaceable. The early-1965 Folkway example even lacks the raised Fender badge that appears on later examples.",
++    "title": "The front of the amp is the easiest part to replace.",
++    "body": "Silver cloth and a black panel look right for the period, but both can be swapped. The look wasn’t fixed anyway: Folkway’s early-1965 amp has no raised Fender badge, where later examples do.",
+     "attributes": [
+       [
+         "Appearance",
+@@ -180,11 +180,11 @@ export const DELUXE_FEATURES=[
+         "Needs more than a front-view match"
+       ]
+     ],
+-    "listen": "For a collector, the weave, mounting evidence, chassis dates and speaker codes are more useful together than the cloth’s color in one photograph.",
+-    "together": "Our shared assembly includes a raised badge and uses more than one 1965 reference. Treat it as a family study, not a reconstruction of the badge-less Folkway specimen.",
+-    "extraTitle": "Keep the sound claim honest",
+-    "extra": "We have no acoustic transmission measurement for this cloth. A claim that this rendered weave produces a particular amount of sparkle or treble loss would go beyond the evidence.",
+-    "detail": "Cloth scale and color remain estimates. Dealer photos are linked, not republished.",
++    "listen": "If you’re judging originality, look at the weave, how the cloth is mounted, the chassis dates and the speaker codes together. The color of the cloth in one photo tells you very little.",
++    "together": "Our model has the raised badge and draws on more than one 1965 amp. Treat it as a picture of the family, not a copy of the badge-less Folkway amp.",
++    "extraTitle": "Does the cloth change the sound?",
++    "extra": "We don’t have a measurement for this cloth, so we’re not making a claim either way.",
++    "detail": "Cloth scale and color are estimates. Dealer photos are linked, not republished.",
+     "sources": [
+       [
+         "https://folkwaymusic.com/vintage-instruments/item/id.5437",
+@@ -201,8 +201,8 @@ export const DELUXE_FEATURES=[
+     "id": "speakers",
+     "label": "Speaker",
+     "side": "rear",
+-    "title": "The speaker can change where the grit comes from.",
+-    "body": "The single 12-inch speaker handles the amp’s whole output. How much it compresses or breaks up can change the feel of a pushed Deluxe Reverb, even when the circuit and volume setting stay the same.",
++    "title": "Some of the grit is the speaker.",
++    "body": "One 12-inch speaker takes everything this amp puts out. How much it compresses and breaks up changes how a pushed Deluxe Reverb feels, with the same circuit and the same knob settings.",
+     "attributes": [
+       [
+         "Modeled reference",
+@@ -217,11 +217,11 @@ export const DELUXE_FEATURES=[
+         "Measured sensitivity, response and power capacity"
+       ]
+     ],
+-    "listen": "Before calling a recording “6V6 breakup,” ask which speaker was in the amp and whether it was reconed. Speaker compression and amp distortion can arrive together, and a frame label does not prove the moving parts are original.",
+-    "together": "Black Book identifies an Oxford 12K5-6 dated to the twelfth week of 1965. Folkway describes another original Oxford dated late 1964. Those are useful specimen records, not a promise that every blackface Deluxe Reverb shipped with the same speaker.",
+-    "extraTitle": "Compare at the same listening level",
+-    "extra": "A more efficient speaker can sound louder with the same electrical input. Comparing at the same knob setting can therefore confuse loudness with tonal character. No matched listening test or response measurement is claimed here.",
+-    "detail": "The photograph is a generic Nubert speaker, not the Oxford. Basket and motor dimensions remain estimated.",
++    "listen": "Before you call a recording 6V6 breakup, ask what speaker was in the amp and whether it had been reconed. Speaker compression and amp distortion show up together, and a label on the frame doesn’t prove the cone is original.",
++    "together": "Black Book lists an Oxford 12K5-6 dated to the twelfth week of 1965. Folkway describes another original Oxford dated late 1964. Those are records of two amps. They don’t mean every blackface Deluxe Reverb shipped with that speaker.",
++    "extraTitle": "Match the volume before you compare",
++    "extra": "A more efficient speaker is louder at the same knob setting, and louder is easy to mistake for a change in tone. Compare speakers at the same listening level.",
++    "detail": "The photo is a generic Nubert speaker, not the Oxford. We have no measured sensitivity, response or power rating for the Oxford, and the basket and magnet dimensions are estimated.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -246,8 +246,8 @@ export const DELUXE_FEATURES=[
+     "id": "power-tubes",
+     "label": "Power tubes",
+     "side": "rear",
+-    "title": "You can reach the power section sooner than on a Twin.",
+-    "body": "Two 6V6s and the Deluxe Reverb’s lower output give you a different clean-volume ceiling from a four-6L6 Twin. That is the useful comparison: where your picking starts to push the whole amp, not a magic sound attached to one tube name.",
++    "title": "You hit the power section sooner than on a Twin.",
++    "body": "Two 6V6s and about 22 watts put the clean ceiling a lot lower than a four-6L6 Twin’s. That’s the comparison that matters: where your picking starts to push the whole amp. It isn’t about a magic sound that comes with a tube type.",
+     "attributes": [
+       [
+         "Output stage",
+@@ -262,11 +262,11 @@ export const DELUXE_FEATURES=[
+         "22 W · single 8 Ω speaker"
+       ]
+     ],
+-    "listen": "At a level where the Twin can stay clean, the Deluxe may already be adding compression or grit. How soon that happens depends on the guitar, settings, bias, speaker and condition—not a universal Volume number.",
+-    "together": "The AB763 Deluxe uses a fixed-bias output pair, feedback and a tube rectifier. The tweed 5E3 uses its 6V6s in a different circuit, so swapping the model name while keeping “two 6V6s” does not preserve the feel.",
+-    "extraTitle": "Compare the whole setup",
+-    "extra": "A worn pair, different bias or a more efficient speaker can move the apparent sweet spot. The circuit drawing describes the design; it does not tell us the health or settings of a surviving amp.",
+-    "detail": "Two large output tubes are shown beside six small tubes and one separate GZ34 rectifier. Positions are illustrative.",
++    "listen": "At a volume where a Twin is still clean, the Deluxe may already be adding compression or grit. Where that starts depends on the guitar, the settings, the bias, the speaker and the condition of the amp, so there’s no universal number on the Volume knob.",
++    "together": "The AB763 Deluxe runs its 6V6s in fixed bias, with negative feedback and a tube rectifier, and a 12AT7 phase inverter driving the pair. The tweed 5E3 also has two 6V6s, in a different circuit. Having two 6V6s in common doesn’t make the two amps feel alike.",
++    "extraTitle": "The sweet spot moves",
++    "extra": "A tired pair of tubes, a different bias setting or a more efficient speaker will all shift where the sweet spot seems to be. The drawing describes the design, not the health or settings of the amp in front of you.",
++    "detail": "Tube positions in the model are illustrative: two output tubes, six small tubes and a separate GZ34.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -282,8 +282,8 @@ export const DELUXE_FEATURES=[
+     "id": "rectifier",
+     "label": "GZ34 rectifier",
+     "side": "rear",
+-    "title": "The power supply can join in when you dig in.",
+-    "body": "The GZ34 helps supply the amp’s high-voltage power. Under a hard load, supply voltage can fall and recover, adding to the give under your pick. The whole supply determines how much—not the “tube rectifier” label alone.",
++    "title": "Dig in hard and the power supply gives a little.",
++    "body": "The GZ34 is part of the high-voltage supply. Under a hard load the supply voltage can drop and recover, and you feel that as some give under the pick. How much depends on the whole supply, not just on having a tube rectifier.",
+     "attributes": [
+       [
+         "AB763 drawing",
+@@ -298,11 +298,11 @@ export const DELUXE_FEATURES=[
+         "Power transformer, filtering and current demand"
+       ]
+     ],
+-    "listen": "This matters most when the amp is working hard. At quiet settings, the bright capacitor, speaker and preamp may explain more of what you notice than supply sag.",
+-    "together": "Rectifier voltage drop, transformer resistance and filter storage all affect the supply’s response. A GZ34 does not make every amp equally soft, and its presence does not explain every kind of compression you hear.",
+-    "extraTitle": "A contrast worth exploring",
+-    "extra": "The Twin’s diode-rectified supply is a useful comparison, but the two amps also differ in power, output tubes, speakers and other circuit details. It would not be an isolated rectifier comparison.",
+-    "detail": "The drawing specifies GZ34. No supply-voltage recording, sag measurement or original rectifier authentication was performed.",
++    "listen": "This shows up when the amp is working hard. At quiet settings, the bright cap, the speaker and the preamp probably explain more of what you’re hearing than sag does.",
++    "together": "The rectifier’s voltage drop, the transformer’s resistance and the filter caps all shape how the supply responds. A GZ34 doesn’t make every amp equally soft, and it isn’t behind every kind of compression you hear.",
++    "extraTitle": "Comparing it to the Twin",
++    "extra": "The Twin’s supply uses diodes, so it’s a tempting comparison. But the two amps also differ in power, output tubes, speakers and other circuit details, so you can’t pin the difference on the rectifier.",
++    "detail": "The AB763 drawing specifies a GZ34. We haven’t measured sag or supply voltage, or checked that either reference amp’s rectifier is original.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+@@ -318,8 +318,8 @@ export const DELUXE_FEATURES=[
+     "id": "output-transformer",
+     "label": "Output transformer",
+     "side": "rear",
+-    "title": "The speaker load is part of what the tubes see.",
+-    "body": "The output transformer connects the 6V6 pair to the speaker and feeds the amp’s feedback loop. A speaker swap can change the sound while keeping 8 Ω; changing the load also changes the electrical conditions seen by the power stage.",
++    "title": "The power tubes work into the speaker load.",
++    "body": "The output transformer connects the 6V6 pair to the speaker and feeds the feedback loop. You can swap speakers and stay at 8 ohms, and the sound changes. Change the load itself and you’ve also changed the conditions the power stage runs under.",
+     "attributes": [
+       [
+         "AB763 drawing",
+@@ -334,11 +334,11 @@ export const DELUXE_FEATURES=[
+         "Output also feeds the feedback network"
+       ]
+     ],
+-    "listen": "Those are two different comparisons: the speaker’s voice, and the load it presents to the amp. Keeping the nominal load the same helps keep one variable steady, though a speaker’s impedance still changes with frequency.",
+-    "together": "Feedback returns a sample of the output to an earlier stage to reduce error while the amp has room to correct it. Transformer, speaker load and available gain work as a system; one part number cannot describe the whole response.",
+-    "extraTitle": "The actual transformer still needs checking",
+-    "extra": "Black Book lists the installed transformer code separately. We have not independently read its stamp, measured its bandwidth or reconstructed its windings. The block in this model is a location estimate.",
+-    "detail": "125A1A is the drawing’s designation, not authentication of either specimen’s installed transformer.",
++    "listen": "Those are two separate comparisons: the voice of the speaker, and the load it puts on the amp. Keeping the nominal load the same holds one of them steady, though a speaker’s real impedance still moves around with frequency.",
++    "together": "The AB763 drawing calls the output transformer TR3, part 125A1A. The feedback loop takes a sample of the output back to an earlier stage, which reduces error as long as the amp has room to correct. Transformer, speaker load and gain all work together, so one part number doesn’t describe the response.",
++    "extraTitle": "What’s actually in the amp",
++    "extra": "Black Book lists the transformer code on its amp separately from the drawing’s number. We haven’t read the stamp ourselves or measured anything about it.",
++    "detail": "125A1A is the drawing’s designation, not proof of what’s installed in either reference amp. The block in the model marks an estimated location.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_DELUXE_REVERB_AB763.pdf",
+diff --git a/dist/tweed-features.js b/dist/tweed-features.js
+index 5bfead3..146d822 100644
+--- a/dist/tweed-features.js
++++ b/dist/tweed-features.js
+@@ -4,67 +4,67 @@ const specimen='https://www.andybaxterbass.com/products/1956-fender-deluxe';
+ const photo={image:'./assets/explore/tweed-deluxe-nimasu.jpg',alt:'Representative hand-wired Deluxe-style chassis with modern orange capacitors.',caption:'Representative construction, with modern orange capacitors. Year, circuit and vintage originality are not established. This is not the modeled 1957 specimen.',credit:'Nimasu · CC BY-SA 4.0 · unmodified photograph',photoSource:'https://commons.wikimedia.org/wiki/File:Tweed_deluxe.jpg',license:'https://creativecommons.org/licenses/by-sa/4.0/'};
+ const card=(id,label,side,title,body,attributes,listen,together,extraTitle,extra,detail,illustrated=false)=>({id,label,side,title,body,attributes,listen,together,extraTitle,extra,detail,sources:[[drawing,'Fender Deluxe 5E3 · schematic and layout'],[specimen,'1957 Baxter specimen · serviced, reconed speaker']],...(illustrated?photo:{})});
+ export const TWEED_FEATURES=[
+- card('volumes','Interacting volumes','top','The unused volume is still in the conversation.',
+- 'Plug into one channel and the other Volume control can still change what you hear. The two channels meet through an unusually interactive volume network, rather than isolated channel mixers.',
++ card('volumes','Interacting volumes','top','The Volume you’re not using still changes your sound.',
++ 'Plug into one channel and the other channel’s Volume still does something. The two channels aren’t isolated from each other. They meet in a shared volume network, and each pot loads the other’s signal.',
+  [['Controls','Two 1 MΩ volume pots'],['Shared destination','Both feed the next gain stage']],
+- 'Keep your guitar and active channel steady, then sweep the unused Volume. Listen for changes in level and body, rather than assuming the unplugged channel is out of the circuit.',
+- 'Each first-stage signal arrives at its volume pot’s moving contact. The two controls share a connection onward, so their settings change the loading on the signals. The result depends on both settings, not just the one you are playing through.',
+- 'A setting is not a universal recipe','Pickups, component tolerances and modifications change the useful range. A favorite setting from another 5E3 is a starting point, not a calibrated sound.',
+- 'The marker spans Instrument and Microphone Volume. Wiring follows the drawing; no individual specimen was electrically measured.'),
+- card('tone','Tone control','top','Three knobs, more than three independent decisions.',
+- 'The Tone knob works with the volume network. Its sweep can change the apparent level and the way the next stage is driven as well as the balance of treble.',
++ 'Hold your guitar and your channel’s Volume steady, then sweep the other Volume. A lot of owners treat it as an extra voicing control and set it by ear. If a tweed Deluxe sounds different from last time at the same settings, check that knob first.',
++ 'On the drawing, each first-stage signal arrives at the wiper of its own 1 MΩ volume pot. The outer terminals of the two pots join and feed the next stage. Rob Robinette’s analysis puts the load from the unused pot at about 100k with it full up and about 1M at zero.',
++ 'Don’t copy somebody else’s settings','Pickups, part tolerances and mods all move the useful range. A favorite setting from another 5E3 is a place to start.',
++ 'The marker spans the Instrument and Microphone Volumes. Wiring follows Fender’s drawing. No individual amp was measured.'),
++ card('tone','Tone control','top','The Tone knob isn’t independent of the Volumes.',
++ 'Tone works through the volume network. Sweep it and you can change the apparent level and how hard the next stage is driven, along with the treble.',
+  [['Drawing values','500 pF and 5 nF tone capacitors'],['Controls involved','Tone and both Volumes']],
+- 'Try a Tone sweep at two different volume settings. Recheck the unused channel, too: the same Tone number need not give the same balance after you change either Volume.',
+- 'This is not the later Fender bass-and-treble tone stack. Small capacitors route high frequencies around and through parts of the volume network, which helps explain why the controls feel tied together.',
+- 'Why keep it simple?','A compact, low-parts-count control network fits this small amplifier. That is a plausible design benefit, not a documented statement of Fender’s intent.',
+- 'Capacitor values are read from Fender’s drawing; frequency response and exact knob tapers have not been measured.'),
+- card('inputs','Inputs & channel bridging','top','Bridging adds another voice before the shared controls.',
+- 'A patch cable can feed the guitar into both channels. That gives you two first-stage signals to blend with the interacting volume controls, rather than turning the amp into two separate power sections.',
++ 'Try a Tone sweep at two different Volume settings, then move the unused channel’s Volume and try again. The same number on the Tone knob won’t necessarily give you the same balance.',
++ 'This isn’t the later Fender bass-and-treble tone stack. The drawing shows a 500 pF cap and a 5 nF cap routing highs around and through parts of the volume network. The 500 pF one ties Tone to the Instrument Volume next to it, so that’s the channel with the bright cap.',
++ 'With the Instrument Volume at zero','Robinette works through this case: with the Instrument Volume all the way down, the bright cap pulls the top of the tone circuit toward ground and the Tone knob loses its brightest settings.',
++ 'Cap values are read from Fender’s drawing. Frequency response and pot tapers haven’t been measured.'),
++ card('inputs','Inputs & channel bridging','top','Jumper the channels and you’re blending two first stages.',
++ 'Run a short patch cable from one channel’s spare input to the other channel and your guitar feeds both halves of the 12AY7. Now both Volumes are live and you set them against each other.',
+  [['First tube','One half of a 12AY7 per channel'],['Input network','Switched jacks · 68 kΩ resistors']],
+- 'Compare one channel with a bridged setup at a similar listening level. The extra channel changes the blend and loading; louder alone is not proof of a richer sound.',
+- 'The two input triodes have the same basic gain-stage arrangement and share a cathode resistor. Both arrive at the common volume/tone network. Jack switching changes the input network when more than one plug is inserted.',
+- 'The signal still meets a tube first','The Volume controls sit after the first stages. Turning them down does not reduce what a hot pickup or boost sends into those stages in the same way as reducing the incoming signal.',
+- 'The drawing supports the circuit relationship. No particular patch-cable arrangement or level increase is promised.'),
+- card('preamp','12AY7 input stage','rear','The original input tube is part of the gain recipe.',
+- 'Fender specifies a 12AY7 at the input. A 12AX7 in that socket changes the gain and operating behavior, so “it fits” does not mean the amp keeps the same response.',
++ 'It’s a well-known tweed habit, and there’s no agreed best setting. Compare jumpered against one channel at about the same loudness, because louder on its own will fool you.',
++ 'Each channel has two switched input jacks with 68 kΩ resistors, and the two input triodes share a cathode resistor. Both feed the common volume and tone network. The jumper itself is a player trick. It isn’t on Fender’s drawing.',
++ 'The first tube still gets hit first','The Volumes come after the first stages. Turning them down doesn’t reduce what a hot pickup or a boost sends into those stages. Turning down the guitar or the pedal does.',
++ 'The circuit relationship is from the drawing. No particular patch arrangement or level change is promised.'),
++ card('preamp','12AY7 input stage','rear','It’s a 12AY7 up front, not a 12AX7.',
++ 'Fender’s drawing puts a 12AY7 in the first socket. A 12AX7 fits and has more gain, so the amp doesn’t respond the same way with one in there.',
+  [['V1','12AY7 · two input triodes'],['Shared cathode','820 Ω · 25 µF bypass']],
+- 'When comparing two 5E3s, check the first tube before blaming the speaker or transformers for a difference in how soon the amp gets lively.',
+- 'A 12AY7 generally gives less voltage gain than a 12AX7 in this sort of stage. The following stages and controls still decide how that translates into headroom and drive; the tube name alone does not identify where distortion begins.',
+- 'The channels share more than a cabinet','Both input halves share the cathode resistor and bypass capacitor. They are separate input paths inside a connected circuit, not two wholly independent preamps.',
+- 'The small-tube positions follow the drawing’s rear socket order. Spacing and glass shapes are illustrative.',true),
+- card('phase-inverter','12AX7 phase inverter','rear','One tube half gives the pair opposite jobs.',
+- 'The 5E3 uses a split-load, or cathodyne, phase inverter. It takes opposite-polarity signals from one tube half to drive the two 6V6s.',
++ 'Owners do try a 12AX7 here, and it can make the amp break up earlier. Whether that’s better is a matter of taste. If two 5E3s get lively at different points, check the first tube before you blame the speaker or the transformers.',
++ 'With less gain in the first stage, more of the overdrive tends to come from the later stages and the power tubes. The tube type alone doesn’t tell you where the distortion starts. The stages and controls after it decide that.',
++ 'The two channels share a cathode','Both halves of the 12AY7 sit on one 820 Ω cathode resistor with a 25 µF bypass. So the two inputs are separate paths inside a connected circuit, not two independent preamps.',
++ 'Small-tube positions follow the socket order on Fender’s layout. Spacing and glass shapes are illustrative.',true),
++ card('phase-inverter','12AX7 phase inverter','rear','Half a 12AX7 drives both power tubes.',
++ 'The 5E3 uses a split-load phase inverter, also called a cathodyne. One half of the 12AX7 puts out two opposite-polarity signals, one for each 6V6.',
+  [['V2','12AX7 · gain stage plus phase inverter'],['Split-load network','56 kΩ plate and cathode loads']],
+- 'The inverter’s available drive and behavior when pushed are part of the amp’s overdrive character. “Two 6V6s” does not make it behave like a later Deluxe Reverb.',
+- 'The other half of V2 supplies voltage gain first. The cathodyne then splits the drive rather than providing another large voltage-gain stage. Its circuit and the load of the output tubes matter together.',
+- 'Avoid a single-part explanation','Hard-playing distortion may involve the input stage, following gain stage, inverter, output pair and speaker. No clipping waveform was measured for this model.',
+- 'The drawing establishes the topology. The marker identifies V2, not a separately visible phase-inverter component.',true),
+- card('power-tubes','Cathode-biased 6V6 pair','rear','The same tube family, a different kind of Deluxe.',
+- 'The two 6V6s share a cathode-bias network. The 5E3 drawing also has no global feedback loop returning the speaker output to an earlier stage—two useful differences from the blackface Deluxe Reverb.',
++ 'Some analysts and owners credit part of the tweed Deluxe’s rough edge to this stage, on top of the 6V6s. It’s one of the reasons people give for a tweed and a blackface Deluxe sounding so different when both run two 6V6s.',
++ 'The other half of the same tube supplies the gain. The inverter half splits the signal and adds almost none: Robinette puts its gain at just under 2. On the drawing it has 56 kΩ plate and cathode loads.',
++ 'It’s never just one stage','When you’re playing hard, the input stage, the gain stage, the inverter, the output pair and the speaker can all be adding distortion at once.',
++ 'The topology is from Fender’s drawing. The marker is on V2. No clipping measurements were made.',true),
++ card('power-tubes','Cathode-biased 6V6 pair','rear','Cathode bias and no feedback loop.',
++ 'The two 6V6s share one cathode-bias resistor, and the 5E3 drawing shows no feedback loop from the speaker output back to an earlier stage. Those are two big differences from the blackface Deluxe Reverb, which also runs two 6V6s.',
+  [['Output pair','Two 6V6GTs'],['Shared bias network','250 Ω / 5 W · 25 µF bypass']],
+- 'Listen to how attack, compression and cleanup change with your picking and guitar volume. Those are whole-amp results; cathode bias alone does not guarantee a particular amount of softness.',
+- 'Cathode voltage can move as the output pair’s average current changes under sustained drive. Removing global output feedback also changes how the power stage responds to distortion and the speaker load while it has headroom.',
+- '“No feedback” needs a qualifier','There is no global speaker-output loop on this drawing. That does not mean there is no local feedback anywhere in the circuit, or that the amp is automatically operating in class A.',
+- 'The marker identifies one of the paired output tubes. Bias voltages, output power and operating class were not measured.',true),
+- card('rectifier','5Y3 power supply','rear','Some of the give comes from the supply.',
+- 'The 5Y3GT rectifier is part of a supply that can drop and recover under a heavy playing load. That can contribute to the feeling of the amp giving way, then coming back.',
++ 'Players usually describe limited clean headroom at band volume, with the breakup arriving early and building gradually. Plenty of people want that for recording and small rooms. On a loud stage it can be a limit.',
++ 'The shared resistor is 250 Ω, 5 watts, with a 25 µF bypass. As the pair draws more current under sustained drive, the cathode voltage moves. With no global feedback, nothing is correcting the output stage’s distortion.',
++ 'What no feedback doesn’t mean','It means no loop from the speaker output on this drawing. It doesn’t mean there’s no local feedback anywhere, and it doesn’t make the amp class A.',
++ 'The marker is on one of the two output tubes. Bias voltage, output power and operating class weren’t measured.',true),
++ card('rectifier','5Y3 power supply','rear','Some of the give comes from the 5Y3.',
++ 'The 5Y3GT is one of the softer rectifiers Fender used. Hit the amp hard and the supply voltage can dip and recover, which players describe as sag or a swell after the attack.',
+  [['Rectifier','5Y3GT'],['Filter drawing','Three 16 µF capacitors']],
+- 'Compare a light touch with a sustained, hard attack when the amp is working. At quiet settings, the controls and speaker may explain more of what you hear than supply sag.',
+- 'Rectifier voltage drop, transformer resistance, filter storage and current demand all affect the response. Not every bit of compression is supply sag, and not every tube-rectified amp has the same feel.',
+- 'A tube label is not a voltage measurement','The drawing specifies the tube but does not give a measured supply voltage. We have not assigned one or measured the recovery time of the reference amp.',
+- 'Socket order follows Fender’s layout. Transformer dimensions and all internal spacing remain estimates.',true),
+- card('output-transformer','Output transformer & bass','rear','Big bass asks more of a small amp.',
+- 'The output transformer couples the 6V6 pair to the speaker. How the whole amp handles bass at high level depends on that transformer, the coupling network, the supply and the speaker together.',
++ 'Compare a light touch with a hard, sustained attack when the amp’s working. At quiet settings the controls and the speaker probably explain more of what you hear than sag does.',
++ 'The drawing shows three 16 µF filter caps after the rectifier. Rectifier drop, transformer resistance, filtering and current draw all shape the response, so not every bit of compression is sag.',
++ 'People swap rectifiers','Some owners try a GZ34. It drops less voltage than a 5Y3, so the supply runs higher. Reports on the result vary, and the 5Y3 is the only rectifier on Fender’s drawing.',
++ 'Socket order follows Fender’s layout. The drawing gives no supply voltages and we haven’t measured any. Transformer size and internal spacing are estimates.',true),
++ card('output-transformer','Output transformer & bass','rear','Why the low end loosens up when it’s loud.',
++ 'At high settings, owners often describe the low end loosening and the whole sound compressing. Several stages are involved: the output transformer, the coupling caps, the supply and the speaker.',
+  [['Coupling capacitors','0.1 µF at the output-tube grids'],['Unmeasured here','Transformer bandwidth and saturation']],
+- 'A bass-heavy boost can make the low strings feel less defined when the amp is pushed. Compare with less bass before deciding that the speaker alone is the problem.',
+- 'Low frequencies can consume headroom through several stages. The drawing’s relatively large coupling capacitors are relevant, but do not prove that a particular transformer saturates at a particular knob setting.',
+- 'What the drawing does not establish','It does not state the output transformer’s primary impedance or a frequency-response curve. Neither is inferred from the size of our rendered block.',
+- 'The block is a conceptual construction marker. Its mounting location, dimensions and windings have not been authenticated against the 1957 specimen.'),
+- card('speakers','Jensen speaker & surviving cone','rear','The badge does not tell you what cone you are hearing.',
+- 'The 1957 reference is listed with a Jensen P12R that has been reconed. That matters: the moving parts can change while the original frame and date code stay in place.',
++ 'A bass-heavy boost makes it worse on the low strings. Before you blame the speaker, back off the bass with Tone, your channel choice or the guitar’s controls, and listen again.',
++ 'The drawing has 0.1 µF coupling caps feeding the output-tube grids. Those are big enough to pass a lot of low end to stages that can’t handle it cleanly at volume. Robinette also points to the transformer saturating. That part is his analysis.',
++ 'What Fender’s drawing leaves out','It doesn’t give the output transformer’s primary impedance or any response curve, so we don’t state either.',
++ 'The block in the model is a rough marker. Its location, size and windings haven’t been checked against the 1957 amp.'),
++ card('speakers','Jensen speaker & surviving cone','rear','The label doesn’t tell you what cone you’re hearing.',
++ 'Our 1957 reference amp is listed with a Jensen P12R that’s been reconed. The frame and date code can stay the same while the parts that move get replaced.',
+  [['Reference speaker','12-inch Jensen P12R · reconed'],['Dealer-listed code','220633 · week 33, 1956'],['Drawing load','One nominal 8 Ω speaker']],
+- 'Before describing a recording as the sound of an original P12R, ask about the cone. Sensitivity, breakup and compression can change with a recone or replacement.',
+- 'The speaker is a major part of the amp’s voice, alongside the open cabinet and circuit. The reference’s speaker date predates the amp’s February 1957 tube-chart code; it is a specimen record, not a universal production specification.',
+- 'Keep the load in the comparison','A different speaker can change the sound while keeping the same nominal impedance. Changing the load also changes what the output stage sees through the transformer. We are not treating the extra jack as permission for any extension-cabinet combination.',
+- 'The model is an estimated Jensen-family construction. No original cone, vintage wattage, measured response or sensitivity is claimed.')
++ 'Before you call a recording the sound of an original P12R, ask about the cone. A recone or a replacement can change sensitivity, breakup and compression.',
++ 'The dealer lists the speaker code as 220633, which is week 33 of 1956, earlier than the amp’s February 1957 tube-chart code. That’s a record of one amp, not a production spec.',
++ 'Speaker swaps and the load','A different speaker at the same nominal impedance changes the sound. A different load also changes what the output stage is working into. The extra speaker jack doesn’t mean any extension cabinet is a good idea.',
++ 'The speaker in the model is an estimated Jensen-style build. No original cone, power rating, response or sensitivity is claimed.')
+ ];
+diff --git a/dist/twin-features.js b/dist/twin-features.js
+index d1c6615..c56c355 100644
+--- a/dist/twin-features.js
++++ b/dist/twin-features.js
+@@ -8,8 +8,8 @@ export const TWIN_FEATURES=[
+       0,
+       -25
+     ],
+-    "title": "The first stage can be pushed before Volume turns it down.",
+-    "body": "Input 2 reduces the signal before the first gain stage. Turning down Volume happens later. Those moves can produce different distortion even when the eventual loudness is similar.",
++    "title": "Input 2 and Volume turn you down at different points.",
++    "body": "Input 2 cuts the signal by about 6 dB before the first gain stage. The Volume control comes later. So the two can give you different distortion at about the same loudness.",
+     "attributes": [
+       [
+         "Single occupied input",
+@@ -24,10 +24,10 @@ export const TWIN_FEATURES=[
+         "Input → first gain stage → EQ / Volume → second triode"
+       ]
+     ],
+-    "listen": "A hot pickup or boost can push the first gain stage before Volume turns the signal down. Input 2 changes both the level and the load seen by a passive pickup; its lower impedance can take some edge off a passive pickup’s resonant peak. Restoring downstream volume does not restore that same input interaction.",
+-    "together": "The phase inverter and output stage respond to the signal that survives the preamp. A quieter input therefore changes where clipping begins; it does not independently change the 6L6 operating conditions. The guitar’s source impedance, EQ settings and available downstream gain matter.",
+-    "extraTitle": "The channel-jumper wrinkle",
+-    "extra": "In the AB763 drawing, the Vibrato channel has an additional dry-signal gain stage at the reverb mixer. The Normal and Vibrato dry paths consequently reach the common mix with opposite polarity. Bridging channels can yield frequency-dependent cancellation. The input-jack loading figures above assume only one socket in that channel is occupied.",
++    "listen": "A hot pickup or a boost can push the first stage before Volume gets a say. Input 2 drops the level and also loads a passive pickup harder, which can take some edge off its resonant peak. Turning the Volume back up afterward doesn’t undo that.",
++    "together": "With one jack in use, Input 1 is about 1 MΩ and Input 2 about 136 kΩ. A quieter input changes where clipping starts. It doesn’t change how the 6L6s are running. Your guitar, the EQ settings and the gain after the preamp all figure in.",
++    "extraTitle": "Jumpering the channels",
++    "extra": "On the AB763 drawing the Vibrato channel has an extra dry-signal gain stage at the reverb mixer. That puts the Normal and Vibrato dry signals in opposite polarity where they meet, so bridging the channels can cancel some frequencies.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
+@@ -38,7 +38,7 @@ export const TWIN_FEATURES=[
+         "Fender AC568 · comparison drawing"
+       ]
+     ],
+-    "detail": "Impedances and attenuation are nominal circuit calculations, not measurements of the modeled specimen. AB763 is the stated baseline for the channel-polarity comparison."
++    "detail": "Impedance and pad figures are calculated from the drawings, not measured on this amp, and assume one jack in use per channel. The channel-polarity point is from the AB763 drawing."
+   },
+   {
+     "id": "reverb",
+@@ -48,8 +48,8 @@ export const TWIN_FEATURES=[
+       -15,
+       -48
+     ],
+-    "title": "Reverb on zero still leaves a different dry path.",
+-    "body": "The AB763 Vibrato channel routes its dry signal through a 3.3 MΩ / 10 pF network into an extra mixing stage. Setting Reverb to zero silences the wet return; it leaves that dry-path architecture in circuit.",
++    "title": "Reverb at zero still leaves a different dry path.",
++    "body": "On the AB763 drawing, the Vibrato channel sends its dry signal through a 3.3 MΩ resistor with a 10 pF bypass into an extra mixing stage. Turn Reverb to zero and the springs go quiet, but that dry path is still in the circuit.",
+     "attributes": [
+       [
+         "Driver",
+@@ -64,10 +64,10 @@ export const TWIN_FEATURES=[
+         "Recovery triode → Reverb pot → mixer"
+       ]
+     ],
+-    "listen": "The small bypass capacitor gives high frequencies a route around the large dry-mix resistor. Its effect depends on the surrounding impedances. The Vibrato channel’s response and gain structure therefore deserve attention even when the springs are not audible.",
+-    "together": "The send is taken after the channel’s second gain stage. Channel drive and EQ shape what excites the tank; the Reverb pot changes the return level, not the driver’s gain. More tank excitation and more wet return are different variables.",
+-    "extraTitle": "The tank is an electrical match, too",
+-    "extra": "Drive and pickup impedance, decay, grounding and mounting orientation all matter when identifying a replacement tank. An apparently similar pan is not enough to establish the correct match. We have not authenticated this specimen’s tank code, so no specific model, decay rating or spring count is assigned.",
++    "listen": "The little bypass cap gives highs a way around the big resistor. So the Vibrato channel has its own response and gain structure, and it’s worth a listen on those terms even when you’re not using the reverb.",
++    "together": "The send comes off after the channel’s second gain stage, so channel drive and EQ shape what hits the tank. Two 12AT7 triodes in parallel drive it through a transformer. The Reverb pot only sets how much return you hear. It doesn’t change how hard the tank is driven.",
++    "extraTitle": "Replacing a tank",
++    "extra": "Drive and pickup impedance, decay, grounding and mounting orientation all have to match. A pan that looks the same isn’t necessarily the right one.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
+@@ -78,7 +78,7 @@ export const TWIN_FEATURES=[
+         "Fender AC568 · reverb path"
+       ]
+     ],
+-    "detail": "Circuit observations refer to the linked drawings. They do not establish the condition, identity or measured response of the specimen’s surviving tank."
++    "detail": "From the linked AB763 and AC568 drawings. We haven’t identified this amp’s tank, so no model, decay or spring count is given."
+   },
+   {
+     "id": "vibrato",
+@@ -88,8 +88,8 @@ export const TWIN_FEATURES=[
+       30,
+       -12
+     ],
+-    "title": "The spring tail goes through the pulse, too.",
+-    "body": "The optical tremolo acts downstream of the Vibrato channel’s dry/reverb mix. The spring tail is pulsed too. That feels different from putting a reverb pedal after a tremolo pedal.",
++    "title": "The tremolo pulses the reverb tail too.",
++    "body": "The optical tremolo sits after the Vibrato channel’s dry and reverb mix. The spring tail gets pulsed along with the note, which feels different from a reverb pedal after a tremolo pedal.",
+     "attributes": [
+       [
+         "Topology",
+@@ -104,10 +104,10 @@ export const TWIN_FEATURES=[
+         "Not the modulation point"
+       ]
+     ],
+-    "listen": "Listen to the spring tail inside the pulse. The optical cell’s response and the oscillator shape contribute to the envelope; a generic sine-wave volume effect does not establish the same feel. This is a circuit implication, not a measured waveform from this amp.",
+-    "together": "The light-dependent resistor loads the Vibrato channel signal through the Intensity network. The oscillator does not swing the 6L6 grid-bias supply as a bias-vary tremolo would. Similar “Vibrato” labels across Fender generations can therefore hide substantially different circuits.",
+-    "extraTitle": "The component is part of the waveform",
+-    "extra": "An optical assembly’s light response and dark resistance can influence depth and recovery. Age or a replacement cell can matter even if the panel and oscillator values are unchanged. No original optical cell or modulation measurement has been authenticated for this specimen.",
++    "listen": "Listen for the tail inside the pulse. The optical cell and the oscillator both shape that pulse, so don’t expect it to feel like a plain sine-wave volume effect.",
++    "together": "A light-dependent resistor loads the Vibrato channel signal through the Intensity control. The oscillator doesn’t touch the 6L6 bias the way a bias tremolo would. Fender put the word Vibrato on a lot of panels over the years, and the circuits behind it aren’t all the same.",
++    "extraTitle": "Old cells drift",
++    "extra": "The cell’s light response and dark resistance affect depth and recovery. An aged or replaced cell can change the feel even when the panel and the oscillator parts are untouched.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
+@@ -118,15 +118,15 @@ export const TWIN_FEATURES=[
+         "Fender AC568 · optical circuit"
+       ]
+     ],
+-    "detail": "“Vibrato” follows Fender’s panel label; the discussion concerns amplitude modulation. Claims about the actual cell’s age, originality or measured speed range remain open."
++    "detail": "Vibrato is Fender’s panel label. The effect is tremolo, a change in volume. We haven’t measured the waveform or speed range, or checked whether this amp’s cell is original."
+   },
+   {
+     "id": "grille-cloth",
+     "label": "Grille cloth",
+     "side": "front",
+     "cosmetic": true,
+-    "title": "A correct-looking weave can conceal a restoration.",
+-    "body": "The silver/aqua grille helps place this Twin visually in the early silver-panel family. Its weave is useful evidence; its apparent color alone is much weaker evidence after decades of fading, dirt and photography.",
++    "title": "The right-looking cloth isn’t proof of original cloth.",
++    "body": "The silver and aqua grille puts this Twin in the early silver-panel family at a glance. The weave is decent evidence. The color is much weaker, after decades of fading, dirt and whatever the camera did.",
+     "attributes": [
+       [
+         "Collector detail",
+@@ -141,10 +141,10 @@ export const TWIN_FEATURES=[
+         "None from cloth alone"
+       ]
+     ],
+-    "listen": "Compare the weave structure and installation evidence, not just how blue the photograph looks. A period-style replacement can match the broad appearance while the original mounting and fabric history are lost.",
+-    "together": "Cloth, aluminum surround and panel graphics make a persuasive period ensemble. They are all serviceable or replaceable parts. Establishing originality requires evidence beyond the ensemble looking right.",
+-    "extraTitle": "Keep the acoustic claim proportional",
+-    "extra": "There is no measured transmission curve for this modeled cloth. Assigning a signature treble loss or an “open” sound to its rendered weave would be invention. The speaker, cabinet and room remain separate questions.",
++    "listen": "Look at the weave and how the cloth is installed, not how blue it looks in the photo. A period-style replacement can get the look right while the original mounting and fabric are long gone.",
++    "together": "Cloth, aluminum trim and panel graphics add up to a convincing period front. Every one of those parts can be replaced, so the look alone doesn’t establish originality.",
++    "extraTitle": "Does the cloth change the sound?",
++    "extra": "We don’t have a measurement for this cloth, so we’re not making a claim either way.",
+     "sources": [
+       [
+         "https://www.vintageguitarandbass.com/fender/catalogues/1968_33.php",
+@@ -155,15 +155,15 @@ export const TWIN_FEATURES=[
+         "1968 specimen · photographic comparison"
+       ]
+     ],
+-    "detail": "Color, pitch and relief are modeling estimates. No inference about factory cloth originality is made from the dealer photographs alone."
++    "detail": "Color, thread pitch and relief in the model are estimates. We’re not judging factory originality from the dealer photos."
+   },
+   {
+     "id": "drip-edge",
+     "label": "Drip edge",
+     "side": "front",
+     "cosmetic": true,
+-    "title": "The surround dates a look, not a circuit.",
+-    "body": "This trim is a useful early silver-panel cue, but a drip-edge Twin is not automatically an AB763 Twin. The photographic reference is dealer-identified as AC568—exactly why cosmetics and circuitry need separate records.",
++    "title": "The drip edge dates the look, not the circuit.",
++    "body": "The aluminum trim is a good early silver-panel cue. It doesn’t make the amp an AB763. The amp in our reference photos is dealer-identified as an AC568, and that’s why we keep cosmetics and circuit as separate records.",
+     "attributes": [
+       [
+         "Visible cue",
+@@ -178,10 +178,10 @@ export const TWIN_FEATURES=[
+         "Chassis evidence against the circuit drawing"
+       ]
+     ],
+-    "listen": "A frame and cloth restoration can preserve the early appearance while the chassis has been modified. A “blackfaced” amp may retain the same surround and panel; that work is invisible in this exterior view.",
+-    "together": "The AC568 drawing documents output-stage and phase-inverter differences from AB763. Those electrical details are more useful to a tone comparison than the outline of the grille frame.",
+-    "extraTitle": "A transitional appearance needs a circuit check",
+-    "extra": "Component dates, circuit inspection and records can strengthen an identification. No exact transition date, untouched circuit or universal production rule is inferred from this surround. The model’s trim profile remains approximate.",
++    "listen": "A restored frame and cloth can keep the early look on a chassis that’s been modified. It works the other way too: a blackfaced amp keeps the same trim and panel, and you can’t see that work from the front.",
++    "together": "The AC568 drawing shows output-stage and phase-inverter differences from the AB763. If you’re comparing tone, those matter more than the outline of the grille frame.",
++    "extraTitle": "How to check what you’ve got",
++    "extra": "Component dates, a look at the circuit and any paperwork all help pin down what an amp is. The trim alone doesn’t give you a transition date or tell you the circuit is untouched.",
+     "sources": [
+       [
+         "https://www.vintageguitarandbass.com/fender/catalogues/1968_33.php",
+@@ -196,6 +196,6 @@ export const TWIN_FEATURES=[
+         "Fender AC568 · circuit reference"
+       ]
+     ],
+-    "detail": "The trim is represented as aluminum. Its shape and dimensions are estimates, and the “drip edge” nickname does not establish its engineering purpose."
++    "detail": "The trim is modeled as aluminum, with estimated shape and dimensions. Drip edge is a nickname, and it doesn’t tell you what the trim was for."
+   }
+ ];
+diff --git a/dist/twin-tone.js b/dist/twin-tone.js
+index 5d09e40..adab527 100644
+--- a/dist/twin-tone.js
++++ b/dist/twin-tone.js
+@@ -1,8 +1,8 @@
+ // A circuit drawing describes a design, not the condition of a surviving specimen.
+ export const TWIN_TONE={
+   "speakers": {
+-    "title": "The JBL option changes the final filter.",
+-    "body": "A JBL-equipped Twin and an Oxford-equipped Twin can share an amplifier circuit while delivering different attack and upper-frequency character. The optional speaker is a major configuration choice, not simply a different badge on the same sound.",
++    "title": "JBLs or Oxfords: same circuit, different attack and top end.",
++    "body": "A Twin with JBLs and a Twin with Oxfords can have the same circuit and still differ in attack and upper-frequency character. The speaker option is a real configuration choice.",
+     "attributes": [
+       [
+         "Modeled configuration",
+@@ -17,10 +17,10 @@ export const TWIN_TONE={
+         "Response · efficiency · compression · cone condition"
+       ]
+     ],
+-    "listen": "For matched nominal drivers, parallel wiring shares amplifier power between the pair. Sensitivity determines acoustic level for that electrical input; frequency response determines where it is emphasized. A higher power-capacity label alone proves neither greater sensitivity nor a particular breakup sound.",
+-    "together": "JBL’s 1970 literature specifies a 4-inch edgewound coil and an aluminum center dome, and promotes strong high-frequency definition. That is a documented design emphasis. The modeled Oxford’s exact response and sensitivity remain unmeasured, so an honest Oxford/JBL comparison still needs identified drivers and matched listening conditions.",
+-    "extraTitle": "A recone can change the comparison",
+-    "extra": "A vintage frame label can survive replacement of the cone and other moving parts. Reconing, coil details and condition matter to the sound attributed to a model name. The generic Nubert photograph illustrates construction only; it supplies no evidence about either vintage option’s tone.",
++    "listen": "Two matched speakers in parallel split the amp’s power between them. Sensitivity decides how loud that power gets, and frequency response decides where it’s emphasized. A higher power rating on the label doesn’t tell you a speaker is louder, or how it breaks up.",
++    "together": "JBL’s 1970 literature lists a 4-inch edgewound voice coil and an aluminum center dome for the D120F, and promotes its high-frequency definition. That’s JBL describing its own design. The 1968 Fender catalog documents the D120F as a factory option.",
++    "extraTitle": "A recone changes the comparison",
++    "extra": "A vintage frame label can outlive the cone and the other moving parts. Ask whether a speaker has been reconed before you credit the model name for what you hear.",
+     "sources": [
+       [
+         "https://www.vintageguitarandbass.com/fender/catalogues/1968_32.php",
+@@ -31,11 +31,11 @@ export const TWIN_TONE={
+         "JBL 1970 brochure · D120F construction"
+       ]
+     ],
+-    "detail": "Oxford identity is owner-attributed and its geometry remains estimated. No power rating, response curve or sensitivity is invented for it."
++    "detail": "Our model shows Oxford-family speakers, an owner attribution, with estimated geometry. We have no measured response or sensitivity for them, so a fair Oxford and JBL comparison still needs identified speakers at matched volume. The photo is a generic Nubert speaker."
+   },
+   "power-tubes": {
+-    "title": "AC568 adds cathode resistance to the bias story.",
+-    "body": "The AC568 drawing retains a negative grid-bias supply and also puts substantial resistance in the output-tube cathode returns. “Four 6L6GCs” therefore misses a consequential distinction from the AB763 arrangement.",
++    "title": "The AC568 adds cathode resistors to the output tubes.",
++    "body": "The AC568 drawing keeps the negative grid-bias supply and also puts substantial resistance in the output-tube cathode returns. On the AB763 those cathodes go to ground. So calling both of them four 6L6GCs skips a real difference.",
+     "attributes": [
+       [
+         "AC568 drawing",
+@@ -50,10 +50,10 @@ export const TWIN_TONE={
+         "Phase-inverter component values"
+       ]
+     ],
+-    "listen": "As current rises, voltage at the cathodes can shift the tubes’ bias—the conditions they are working under. That makes the circuit worth checking before giving the tube brand credit for a change in feel. The exact audible result still requires a known circuit, healthy tubes and measurements.",
+-    "together": "The phase inverter, grid-bias network, cathode returns, supply and feedback work together. A “blackface conversion” can change that system while leaving the same quartet installed. Tube type alone cannot tell you which version you are hearing.",
+-    "extraTitle": "Why the 1968 label is insufficient",
+-    "extra": "The reference dealer calls this specimen AC568. That attribution is useful, but the model has not reproduced or audited its entire chassis. The linked AB763/AC568 drawings establish a circuit comparison; they do not certify that this surviving amp is unmodified.",
++    "listen": "As current rises, the voltage at the cathodes can shift the bias the tubes are running at. If a silver-panel Twin feels different from a black-panel one, check the circuit before you credit the tube brand.",
++    "together": "Phase-inverter values changed on the AC568 too. Inverter, bias network, cathode returns, supply and feedback all work as one system, and a blackface conversion can change that system with the same four tubes still in their sockets.",
++    "extraTitle": "About this particular amp",
++    "extra": "The dealer calls our reference amp an AC568. That’s useful, but we haven’t audited its whole chassis, and the drawings can’t tell you whether a surviving amp has been modified.",
+     "sources": [
+       [
+         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Twin-Reverb-AC568-Schematic.pdf",
+@@ -64,11 +64,11 @@ export const TWIN_TONE={
+         "Fender AB763 · comparison"
+       ]
+     ],
+-    "detail": "This corrects the earlier generic fixed-bias summary: the AC568 cathode network deserves explicit treatment. Tube positions and envelopes in the model remain illustrative."
++    "detail": "The comparison is between the linked AB763 and AC568 drawings. What you’d hear from the difference hasn’t been measured here. Tube positions and shapes in the model are illustrative."
+   },
+   "output-transformer": {
+-    "title": "The same transformer number can hide a different circuit.",
+-    "body": "Both linked AB763 and AC568 drawings identify output transformer TR3 as 125A29A. A matching transformer identifier therefore cannot, by itself, prove that a silver-panel Twin retains the black-panel circuit.",
++    "title": "Same transformer number, different circuit.",
++    "body": "Both the AB763 and AC568 drawings call the output transformer TR3, part 125A29A. So a matching transformer number can’t tell you a silver-panel Twin still has the black-panel circuit.",
+     "attributes": [
+       [
+         "Drawing identifier",
+@@ -83,10 +83,10 @@ export const TWIN_TONE={
+         "Output secondary feeds the feedback network"
+       ]
+     ],
+-    "listen": "The transformer makes the speaker’s load part of what the power tubes work into. The feedback loop then samples the secondary signal, placing transformer behavior inside the amplifier’s correction loop. Core, windings, loading and available loop gain belong in the same explanation.",
+-    "together": "A speaker change can alter the acoustic result while preserving nominal impedance. A load change also alters the electrical operating conditions seen through the transformer. Those are different comparisons; “same iron” does not hold the rest of the system constant.",
+-    "extraTitle": "What the number does not tell us",
+-    "extra": "The drawing designation does not establish this specimen’s installed unit, winding condition or measured bandwidth. We have not measured saturation or independently confirmed its transformer codes. No claim of a special vintage alloy or a universal “big iron” tone is warranted.",
++    "listen": "The transformer makes the speaker load part of what the power tubes work into. The feedback loop takes its sample from the transformer’s secondary, so the transformer’s behavior is inside the loop too.",
++    "together": "Swap speakers at the same nominal impedance and you change the sound. Change the load and you also change the conditions the output stage runs under. Those are separate comparisons, and having the same transformer doesn’t hold everything else constant.",
++    "extraTitle": "What the number doesn’t tell you",
++    "extra": "It doesn’t tell you which unit is in this amp, what shape its windings are in, or its bandwidth. We haven’t confirmed the codes or measured anything, and we’re not claiming a special vintage alloy or a big-iron tone.",
+     "sources": [
+       [
+         "https://el34world.com/charts/Schematics/files/fender/Fender_TWIN_REVERB_AB763.pdf",
+@@ -97,6 +97,6 @@ export const TWIN_TONE={
+         "Fender AC568 · TR3 and feedback"
+       ]
+     ],
+-    "detail": "The transformer block is an estimated spatial marker. Part-number comparison is schematic evidence, not authentication of the installed specimen."
++    "detail": "The block in the model marks an estimated location. The part number comes from the drawings, not from the amp."
+   }
+ };
+diff --git a/docs/handoff/COPY_VOICE.md b/docs/handoff/COPY_VOICE.md
+index 66995e1..7b4bdda 100644
+--- a/docs/handoff/COPY_VOICE.md
++++ b/docs/handoff/COPY_VOICE.md
+@@ -131,6 +131,21 @@ Fender's current hand-wired amp based on the 5E3: 12 watts, one twelve, a pine c
+ 
+ The vintage Pro Reverb was a two-channel 2 × 12, and this is a different amp. The '68 Custom Pro Reverb is a 2021 design with one channel and one twelve, at 40 watts. The speaker is a lightweight Neo Creamback, which helps keep the weight down. It has the silver-panel look, but it's a modern amp.
+ 
++## Batch 2: hotspot cards
++
++All 26 explorer cards rewritten: nine Deluxe Reverb (`dist/deluxe-features.js`), eight Twin (`dist/twin-features.js`, `dist/twin-tone.js`) and nine Tweed Deluxe (`dist/tweed-features.js`). Titles, body, "Why it matters", "Dig a little deeper" and the fine-print note changed. Attribute rows, sources, photos, captions and anchors did not.
++
++Caveats are consolidated: each card states its evidence limit once, in the fine-print note under Sources, and the body text no longer repeats it.
++
++Every card was opened in a headless browser at 1440 and 390 px wide. Cards scroll inside their panel as before; the longest title wraps to three lines.
++
++Flags:
++
++- The Tweed Deluxe cards now use lore and figures from `docs/research/next-expansion/packets/deluxe-5e3-explorer.md` on the research branch: Rob Robinette's load figures for the unused Volume, his under-2 gain figure for the inverter, his transformer-saturation point, the bright cap sitting on the Instrument channel, the 12AX7 and GZ34 swaps owners try, and owner descriptions of headroom and low end. Each is attributed in the card. None is a Fender drawing fact.
++- "One of the softer rectifiers Fender used" (5Y3) is the packet's wording and is not sourced there.
++- Where a card's extra section was only a disclaimer, it was replaced with a fact already in the card or packet, or cut to one line.
++- `dist/explore.js` still holds three unused base cards for the Twin ("Where electricity becomes sound." and two others). The live cards override their text. Left alone.
++
+ ## Still to do
+ 
+-Hotspot cards (Deluxe Reverb, Twin, 5E3), then interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, object captions ("OUTSIZED INFLUENCE.").
++Interface text: home page intro, masthead, decade blurbs and history entries in `dist/app.js`, era dialog, explorer prompts, spec fine print and `ratingNote` lines, object captions ("OUTSIZED INFLUENCE.").
+-- 
+2.43.0
+
