@@ -311,3 +311,9 @@ explicitly distinguishes its JBL configuration from the shared model's speakers.
 Six npm checks and whitespace passed; local enlarged front/rear visually checked.
 Fine lettering, dimensions and texture scale remain approximate. No model,
 hotspot or viewer behavior changed. Next action: verify production publication.
+
+Twin publication verified: runtime `15e6a610d164a18ac02bea2ac52a773344114922`,
+Git production deployment `dpl_EfDgCkzyWQHMza3tv3VbMJq5RmpA`, READY.
+Public thumbnail/viewer loaded front (1254 px, `twin/front.jpg`) and rear
+visibly matching the approved pair. This completes the publication check above.
+https://fendertubeamps.com/?amp=twin-1968
