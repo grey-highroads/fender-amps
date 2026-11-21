@@ -11,6 +11,8 @@ models remain interpretive and exact interior placement is not established.
 
 ## Read next
 
+- [Amp research briefs, questions and status](../research/README.md) (all researched amps, on `main`)
+- [Copy voice direction and copy-pass log](COPY_VOICE.md)
 - [Decisions and user priorities](DECISIONS.md)
 - [Architecture, validation and publishing](TECHNICAL.md)
 - [Vercel hosting and update workflow](VERCEL.md)

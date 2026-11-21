@@ -23,7 +23,7 @@ The component inspector separately normalizes an object to fit its viewport.
 
 ## Photographs actually inspected in this build
 
-The research branch `codex/amp-expansion-research` at `6d2b197` was read as a
+The research (now on `main` in [docs/research/](../research/README.md); it was read from branch `codex/amp-expansion-research` at `6d2b197`) was read as a
 starting point, not merged. Its photo readiness claims were not accepted without
 inspection. This build inspected new dated galleries directly:
 
