@@ -239,3 +239,10 @@ manifest. Earlier files remain unused. No model, hotspot or other amp media chan
 Six npm checks and whitespace pass; local browser opened and visually reviewed
 both replacement images. Tiny lettering, tweed and obscured components remain
 interpretive, with fitted parts and wear attributed to the photographed specimen.
+
+Champ publication verified: runtime `8399b4dd5c698ca563c503988c37cd5e22293023`,
+Git production deployment `dpl_69tna6ib9RkThkme4GqbZt248pr8`, READY.
+Live front resolved to `champ/front-v2.jpg` (1330 px wide); direct rear thumbnail
+and Next navigation showed the approved rear pair, Escape returned to detail.
+Private live capture: `outputs/champ-photoreal-review-v2/published-rear.jpg`.
+https://fendertubeamps.com/?amp=champ-1959
