@@ -185,6 +185,21 @@ pair. No additional explorer or assembly is authorized by this completion.
 
 ## Publication
 
-Publication record will be appended after the exact checked source reaches READY
-and public bytes/browser routes are verified. Original private Sites prototype,
-existing Site ID, protected Vercel previews and DNS are outside this change.
+User explicitly approved the public-main fast-forward in this session. Runtime
+`75b619d59d8d74b4e74e1d2e672dd1263aad45b8` auto-deployed via Git as
+`dpl_2LhcFKjkRWJptykHzb2ArbhSRHqC`, **READY**, aliased to fendertubeamps.com.
+All six checks passed in the inspected build logs, including hydrated LFS master
+and the new explorer/media check. Public bytes matched all 16 checked runtime,
+manifest and current-image files. Live Chrome opened each new explorer, its
+correct topic count, both images, navigation/zoom and layered Escape; no page
+errors were observed. Our captures: `images/explorer-batch/live-*.png`.
+
+Live links:
+- https://fendertubeamps.com/?amp=princeton-reverb-1965
+- https://fendertubeamps.com/?amp=deluxe-1962
+- https://fendertubeamps.com/?amp=champ-1959
+
+Post-release project inspection reconfirmed the existing team/project and
+`all_except_custom_domains` SSO protection: public custom domains, protected
+generated URLs. Original private Sites prototype, existing Site ID and DNS
+were untouched. Documentation/evidence follow-up does not change runtime bytes.

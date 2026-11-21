@@ -171,3 +171,14 @@ review opened Super Six Reverb, original Blues Junior and Prosonic. See
 [construction, evidence, renders and validation](THREE_COMBOS.md). Public
 custom domains / protected generated URLs and the original private Sites prototype
 remain unchanged. The final forward commit fixes tall Super Six detail framing.
+
+## First hotspot expansion publication
+
+Runtime `75b619d59d8d74b4e74e1d2e672dd1263aad45b8` auto-deployed via Git from
+main as `dpl_2LhcFKjkRWJptykHzb2ArbhSRHqC`, READY, aliased to the public
+custom domains. All six checks passed remotely. Sixteen public runtime/media
+files matched tested source bytes; live Chrome verified Princeton, brown Deluxe
+and Champ cards, images and layered Escape. See [topics, evidence, generated
+provenance and screenshots](EXPLORER_BATCH.md). Post-release project inspection
+reconfirmed protected generated URLs and public custom domains. Private Sites
+prototype, original Site ID, DNS and other repository branches remain intact.

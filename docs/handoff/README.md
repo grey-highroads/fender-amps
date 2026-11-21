@@ -273,7 +273,8 @@ Princeton AA1164 (7 topics), brown Deluxe 6G3 (6) and Champ 5F1 (5) now join
 the original three explorers. All share actual model anchors, menu access and
 amp-specific generated front/rear illustrations, visibly labeled Generated
 illustration. See [topics, sources, provenance, review and limits](EXPLORER_BATCH.md).
-Ten models and all 208 catalog mappings remain unchanged. Exact interior
+Runtime `75b619d` is READY on the public site; live cards, images and served
+bytes were verified. Ten models and all 208 catalog mappings remain unchanged. Exact interior
 positions are estimates; Princeton rectifier and Champ depth conflicts remain open.
 
 ## Next useful work
