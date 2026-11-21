@@ -111,5 +111,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792"
     ],
     "knownInaccuracies": "Generated fine lettering, tweed pitch/color, wear, dimensions, tube envelopes and speaker construction remain approximate. Fitted parts follow the photographed specimen, not independently verified factory originality."
+  },
+  {
+    "id": "tweed-deluxe-front",
+    "assemblyId": "deluxe-5e3",
+    "amp": "Tweed Deluxe",
+    "configuration": "1957 Deluxe 5E3 specimen study guided by Andy Baxter D-03176; three top controls, four inputs, one twelve",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tweed-deluxe/front.jpg",
+    "referenceLinks": [
+      "https://www.andybaxterbass.com/products/1956-fender-deluxe"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, tube and speaker construction remain approximate. Replacement handle and reconed speaker appearance follow the specimen, not independently verified factory fitment."
+  },
+  {
+    "id": "tweed-deluxe-rear",
+    "assemblyId": "deluxe-5e3",
+    "amp": "Tweed Deluxe",
+    "configuration": "1957 Deluxe 5E3 specimen study guided by Andy Baxter D-03176; three top controls, four inputs, one twelve",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tweed-deluxe/rear.jpg",
+    "referenceLinks": [
+      "https://www.andybaxterbass.com/products/1956-fender-deluxe"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, tube and speaker construction remain approximate. Replacement handle and reconed speaker appearance follow the specimen, not independently verified factory fitment."
   }
 ];

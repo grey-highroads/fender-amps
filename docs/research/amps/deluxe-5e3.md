@@ -173,3 +173,18 @@ Superseded on 2026-11-20 by the [5E3 explorer packet](../packets/deluxe-5e3-expl
 - A 1957 specimen with interior photos was not found in this pass. The licensed chassis photo is undated and has replaced capacitors.
 - Do not repeat artist associations without a source in the repo.
 
+
+## User-requested image pair — November 20, 2026
+
+User requested the same specimen-based generation approach as Champ/Tremolux.
+Opened existing Andy Baxter D-03176 photographs 1/2/3/4/6/7/8/9/10 at full size.
+Built-in front generation used 1/3/10; rear used 6/7/10/1. The existing JSON
+identifies the listing as 1957 despite its older 1956 URL slug; no new dating
+claim or research was made. Dealer replacement handle/reconed speaker caveats
+remain. Outputs and exact prompts are private ignored files under
+`outputs/tweed-deluxe-photoreal-review/{front.png,rear.png,prompts.json}`.
+
+The pair follows the centered Fender Deluxe badge, three-knob panel, five-tube
+rear, two vent slots and scooped lower board. Tweed, tiny letters/numerals and
+speaker/tube details remain generated approximations, not measured construction
+or factory-fitment verification. User review pending; site assets unchanged.

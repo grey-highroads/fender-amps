@@ -142,5 +142,41 @@
     ],
     "knownInaccuracies": "Generated fine lettering, tweed pitch/color, wear, dimensions, tube envelopes and speaker construction remain approximate. Fitted parts follow the photographed specimen, not independently verified factory originality.",
     "provenance": "User-approved same-specimen pair. Front references RetroFret 0093 photos 1/3/5; rear references 2/5/1. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "tweed-deluxe-front",
+    "assemblyId": "deluxe-5e3",
+    "amp": "Tweed Deluxe",
+    "configuration": "1957 Deluxe 5E3 specimen study guided by Andy Baxter D-03176; three top controls, four inputs, one twelve",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tweed-deluxe/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case product-mockup. Generate a highly photorealistic studio FRONT product image of the exact 1957 Fender Deluxe 5E3 specimen D-03176 in these real photographs. Reference 1 full front, reference 2 badge/grille detail, reference 3 top control panel. Faithfully preserve this specimen's identity. Replace only setting with pale warm gray seamless studio floor/background and soft large key upper left with gentle fill, natural grounded contact shadow. Long-lens centered straight-on front with just slight top visible, full cabinet/handle uncropped filling about 80% width, body width/height roughly 20:16. Narrow-panel cabinet in pale honey/olive-gold diagonal lacquered tweed, gently aged, modest scuffs and stains matching photos, NOT heavily shredded orange tweed of a different amp. Dark oxblood/brown grille with dense delicate horizontal gold threads and fine vertical weave. Four dark front mounting screws two upper and two lower at reference positions. Small long rectangular brown metal badge CENTERED on upper front tweed rail, silver script 'Fender Deluxe', small block 'FULLERTON, CALIFORNIA' below, four small corner fasteners, correct slim proportions. No large tail badge on grille. Low arched glossy burgundy-brown stitched leather handle with aged metal brackets as photographed, replacement appearance preserved as specimen detail. No front controls. Rear-top recessed horizontal chrome panel with exactly THREE black chicken-head knobs and FOUR input jacks, mostly hidden at front angle; no fourth knob, no Tremolux Depth/Speed controls. Do not add metal corner protectors or oversized feet. Exact cabinet/grille proportions and fine real woven material scale, natural cloth irregularity, leather sheen, no synthetic plastic CGI or painted illustration. No caption or watermark. Match a companion rear catalog image; do not claim factory originality of fitted parts.",
+    "referenceLinks": [
+      "https://www.andybaxterbass.com/products/1956-fender-deluxe"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, tube and speaker construction remain approximate. Replacement handle and reconed speaker appearance follow the specimen, not independently verified factory fitment.",
+    "provenance": "User-approved same-specimen pair. Front references Andy Baxter D-03176 photos 1/3/10; rear references 6/7/10/1. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "tweed-deluxe-rear",
+    "assemblyId": "deluxe-5e3",
+    "amp": "Tweed Deluxe",
+    "configuration": "1957 Deluxe 5E3 specimen study guided by Andy Baxter D-03176; three top controls, four inputs, one twelve",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/tweed-deluxe/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case product-mockup. Generate a highly photorealistic studio REAR product image of the exact 1957 Fender Deluxe 5E3 specimen D-03176 in reference 1. Reference 2 rear detail, reference 3 control detail, reference 4 front for same cabinet/material appearance. Follow THIS actual specimen, not a generic tweed amp or five-knob Tremolux. Full cabinet/handle uncropped centered, width/height roughly 20:16. Straight-on rear long lens camera, very slightly elevated enough to show recessed horizontal TOP chrome panel; consistent pale warm gray seamless studio floor/backdrop, large soft key upper left gentle fill, believable contact shadow. Pale honey/olive-gold finely diagonal tweed with modest photographed scuffs and dark stain on upper back board left near control panel, no heavy shredding, no orange-brown relic finish. Low burgundy-brown stitched leather handle with aged brackets as reference. Large upper tweed rear board four screws two each end, exactly TWO elongated horizontal rounded vent slots near LOWER edge: left slot shows portions of three larger bottles, right slot portions of two small tubes. Five tubes total, mostly hidden above/behind board, no six-tube Tremolux array. Broad open middle gap shows ONE dark green/black twelve-inch Jensen alnico speaker back with compact rounded dark motor and small yellow-gold circular Jensen label offset a little to RIGHT of cabinet center, faithful size and placement from photo. Thin tan speaker lead descends from chassis toward right; black mains cord drapes diagonally across lower opening and exits toward floor right. Natural dark wood cabinet interior with subtle readable speaker, no invented exposed chassis guts, no glowing tubes. Lower tweed removable board has broad shallow CENTRAL SCOOP in TOP edge with curved/sloping ends from high side shoulders to lower central flat stretch, exactly as reference, four screws two per side. No flat substitute board. Chrome horizontal TOP-REAR panel from rear left to right: GROUND toggle, black fuse cap, ON toggle, dark red pilot lamp, exactly THREE black chicken-head knobs TONE / INST. VOL. / MIC. VOL., FOUR input jacks in 2x2 group at right labeled INST. / MIC. Scale numbers 1 to 12 on plate. No Depth/Speed controls, no fourth knob, no separate vertical rear control strip. Match actual cabinet proportions, panel openings and material weave scale. Optical photographic realism, soft aged metal and glass reflections, no painted illustration or plastic CGI, no extra speakers or metal corner protectors. No caption/watermark. Specimen appearance study with replacement handle/reconed speaker treated as photographed details, not factory-originality proof.",
+    "referenceLinks": [
+      "https://www.andybaxterbass.com/products/1956-fender-deluxe"
+    ],
+    "knownInaccuracies": "Generated fine lettering, tweed pitch/color, tube and speaker construction remain approximate. Replacement handle and reconed speaker appearance follow the specimen, not independently verified factory fitment.",
+    "provenance": "User-approved same-specimen pair. Front references Andy Baxter D-03176 photos 1/3/10; rear references 6/7/10/1. Original dealer photographs are not redistributed."
   }
 ]

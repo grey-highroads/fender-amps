@@ -265,3 +265,13 @@ Live thumbnails opened front (1402 px, `tremolux/front.jpg`) and rear; the rear
 visually matched the approved pair. Private capture:
 `outputs/tremolux-photoreal-review/published-rear.jpg`.
 https://fendertubeamps.com/?amp=tremolux-1955
+
+## Tweed Deluxe image pair — user approved
+
+November 20: user approved the Andy Baxter D-03176 front/rear pair and requested
+publication in the shared thumbnail rail. Added two `deluxe-5e3` media records,
+`assets/studies/tweed-deluxe/{front,rear}.jpg`, with exact prompts and specimen
+provenance. No model, hotspot, other amp media or viewer behavior changed.
+Six npm checks and whitespace passed; local viewer visually reviewed front/rear.
+Fine lettering, cloth and components remain approximate; replacement handle and
+reconed speaker appearance are specimen evidence, not factory fitment proof.
