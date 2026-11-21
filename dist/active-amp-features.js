@@ -6,11 +6,11 @@ export const TREMOLUX_FEATURES=[
     "side": "top",
     "menuOnly": false,
     "title": "The tube chart doesn’t identify the circuit.",
-    "body": "Our model follows a June 1955 amp with Depth and Speed on the top panel. Later Tremoluxes kept the name and even the chart stock while the circuit changed. So the chart alone is a poor guide to which tremolo circuit is in the amp.",
+    "body": "The early Tremolux has Depth and Speed on the top panel. Later Tremoluxes kept the name and even the chart stock while the circuit changed. So the chart alone is a poor guide to which tremolo circuit is in the amp.",
     "attributes": [
       [
-        "Represented example",
-        "1955 · serial 0093 · chart marked 5E9"
+        "Chart marking",
+        "5E9"
       ],
       [
         "Panel",
@@ -18,9 +18,9 @@ export const TREMOLUX_FEATURES=[
       ]
     ],
     "listen": "If you’re comparing or buying one, find out the actual circuit revision first. Don’t borrow a description of a later Tremolux’s tremolo or headroom.",
-    "together": "The panel and chart on serial 0093 support the early layout and the tube lineup. We haven’t found a Fender drawing for the 5E9 itself. The one that’s available is the 5E9-A, and we don’t use it to fill the gap.",
+    "together": "The early amp’s tube chart is marked 5E9. We haven’t found a Fender drawing for the 5E9 itself. The one that’s available is the 5E9-A, and we don’t use it to fill the gap.",
     "extraTitle": "Where this comes from",
-    "extra": "Photos of the chart and panel on serial 0093, a dealer-dated 1955 amp.",
+    "extra": "The panel layout and the chart marking are from photos of a June 1955 amp.",
     "detail": "The marker is on Depth. How the 5E9’s tremolo works isn’t established here.",
     "sources": [
       [
@@ -49,7 +49,7 @@ export const TREMOLUX_FEATURES=[
     "listen": "Before you give the speaker or the transformer all the credit for a difference in drive, check which input tube is fitted.",
     "together": "Tube type is only part of a stage’s gain and headroom. The circuit around it, the signal level and the loading decide how a swap reaches the rest of the amp.",
     "extraTitle": "Where this comes from",
-    "extra": "Read from the tube chart on serial 0093.",
+    "extra": "Read from the tube chart of a 1955 amp.",
     "detail": "The marker is on the small tube at the right end, following the chart’s rear order. Spacing is illustrative. The circuit hasn’t been traced, so no gain figure or swap advice is implied.",
     "sources": [
       [
@@ -63,8 +63,8 @@ export const TREMOLUX_FEATURES=[
     "label": "Hand-corrected rectifier chart",
     "side": "rear",
     "menuOnly": false,
-    "title": "Somebody corrected the rectifier on the chart by hand.",
-    "body": "On serial 0093’s chart, the printed 5U4GA is crossed out and 5Y3GT is written in. The power-consumption figure is corrected too. That’s better evidence than whatever rectifier happens to be in the socket today.",
+    "title": "The chart says 5U4GA in print and 5Y3GT in ink.",
+    "body": "The early Tremolux tube chart was printed with a 5U4GA rectifier. On a 1955 example it’s crossed out by hand and 5Y3GT is written in, and the power-consumption figure is corrected too. That’s better evidence than whatever rectifier is in a socket today.",
     "attributes": [
       [
         "Printed chart",
@@ -76,9 +76,9 @@ export const TREMOLUX_FEATURES=[
       ]
     ],
     "listen": "On a serviced early Tremolux, keep two records: what the chart says and what’s installed. Neither one settles what every first-run amp left the factory with.",
-    "together": "Our model goes with the 5Y3GT. Rectifier drop, transformer resistance and load would all figure in any real comparison of how the supply responds.",
+    "together": "We show a 5Y3GT. Rectifier drop, transformer resistance and load would all figure in any real comparison of how the supply responds.",
     "extraTitle": "Where this comes from",
-    "extra": "The hand correction is visible in the photo of the chart. We don’t know who made it.",
+    "extra": "The hand correction is visible in a photo of the chart. We don’t know who made it.",
     "detail": "The marker is on the rectifier. Nothing here is a claim about sag or a recommendation to swap.",
     "sources": [
       [
@@ -89,26 +89,26 @@ export const TREMOLUX_FEATURES=[
   },
   {
     "id": "speaker",
-    "label": "Small box & Jensen-family speaker",
+    "label": "Speaker & small cabinet",
     "side": "rear",
     "menuOnly": false,
-    "title": "The earliest Tremolux is in a smaller box.",
-    "body": "This is the compact early Tremolux, not the taller cabinet you usually see pictured under the name. The single twelve sits in a Deluxe-size box. Compare two Tremoluxes without checking their dates and you may be comparing different cabinets.",
+    "title": "A Jensen twelve in a Deluxe-size box.",
+    "body": "The early Tremolux has one 12-inch Jensen at 8 ohms, a P12R or P12Q, in a cabinet the size of a tweed Deluxe’s. The taller cabinet you usually see pictured under the Tremolux name came later.",
     "attributes": [
       [
-        "Modeled format",
-        "One twelve · nominal 8 Ω"
+        "Stock speaker",
+        "One 12-inch Jensen P12R or P12Q · 8 Ω"
       ],
       [
         "Working cabinet",
         "20 × 16 × 9.5 in · W × H × D"
       ]
     ],
-    "listen": "When you compare two Tremolux recordings, cabinet size, speaker and cone condition belong in the comparison along with the circuit revision.",
-    "together": "The speaker in the model stands in for a Jensen P12Q-type. The reference amp has had its output transformer replaced, so it can’t show you an untouched factory signal chain.",
+    "listen": "So an early Tremolux and a later one differ in the box as well as the circuit. If you’re comparing two, get the dates first.",
+    "together": "Several June 1955 amps are described as being in the same size cabinet as the 5E3 Deluxe. Published dimensions for them don’t all agree.",
     "extraTitle": "Where this comes from",
-    "extra": "The small-box call follows several early examples. Dealer dimensions for them don’t all agree.",
-    "detail": "The marker is on the back of the speaker. Basket, magnet and cabinet dimensions are estimates.",
+    "extra": "The speaker models are from Mojotone’s Fender field guide. The small cabinet follows descriptions of early 1955 amps.",
+    "detail": "The marker is on the back of the speaker. The speaker in the model stands in for a P12Q type. Basket, magnet and cabinet dimensions are estimates.",
     "sources": [
       [
         "https://retrofret.com/products/fender-tremolux-model-5e9-tube-amplifier-1955-10792",
@@ -117,6 +117,10 @@ export const TREMOLUX_FEATURES=[
       [
         "https://www.creamcitymusic.com/vintage-fender-tremolux-15w-1x12-tube-combo-amp-1955/",
         "Second small-box specimen · dealer dimensions"
+      ],
+      [
+        "https://mojotone.com/blogs/fender-field-guide/fender-narrow-panel-tweed-tremolux",
+        "Mojotone Fender field guide · narrow-panel Tremolux"
       ]
     ]
   }
@@ -420,19 +424,19 @@ export const JUNIOR_FEATURES=[
   },
   {
     "id": "speaker",
-    "label": "One twelve in a small cabinet",
+    "label": "Stock speaker",
     "side": "rear",
     "menuOnly": false,
-    "title": "Not every Blues Junior has the same speaker.",
-    "body": "The first-year manual calls for one 8-ohm Eminence twelve. A speaker from a later limited edition doesn’t tell you what a 1995 amp shipped with.",
+    "title": "The 1995 amp has an Eminence twelve.",
+    "body": "The first-year manual calls for one 12-inch Eminence at 8 ohms. A later limited edition with a different speaker doesn’t change what a 1995 amp shipped with.",
     "attributes": [
       [
-        "Factory format",
-        "One 12-inch Eminence · nominal 8 Ω"
+        "Stock speaker",
+        "One 12-inch Eminence · 8 Ω"
       ],
       [
-        "Model",
-        "Unbranded construction proxy"
+        "Source",
+        "November 1995 owner’s manual"
       ]
     ],
     "listen": "If two Juniors sound different, write down which speaker each one has and whether its cone is original before you put it all down to green board versus later boards.",

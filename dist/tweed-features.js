@@ -60,11 +60,11 @@ export const TWEED_FEATURES=[
  'The drawing has 0.1 µF coupling caps feeding the output-tube grids. Those are big enough to pass a lot of low end to stages that can’t handle it cleanly at volume. Robinette puts part of it down to the transformer saturating. The transformer’s rating isn’t on Fender’s drawing, so that’s his analysis.',
  'What Fender’s drawing leaves out','It doesn’t give the output transformer’s primary impedance or any response curve, so we don’t state either.',
  'The block in the model is a rough marker. Its location, size and windings haven’t been checked against the 1957 amp.'),
- card('speakers','Jensen speaker & surviving cone','rear','The label doesn’t tell you what cone you’re hearing.',
- 'Our 1957 reference amp is listed with a Jensen P12R that’s been reconed. The frame and date code can stay the same while the parts that move get replaced.',
- [['Reference speaker','12-inch Jensen P12R · reconed'],['Dealer-listed code','220633 · week 33, 1956'],['Drawing load','One nominal 8 Ω speaker']],
- 'Before you call a recording the sound of an original P12R, ask about the cone. A recone or a replacement can change sensitivity, breakup and compression.',
- 'The dealer lists the speaker code as 220633, which is week 33 of 1956, earlier than the amp’s February 1957 tube-chart code. That’s a record of one amp, not a production spec.',
+ card('speakers','Jensen speaker','rear','The stock speaker is a Jensen P12R.',
+ 'The 5E3 has one 12-inch Jensen at 8 ohms. It’s normally a P12R, and you’ll also see the P12Q listed.',
+ [['Stock speaker','12-inch Jensen P12R, sometimes P12Q'],['Drawing load','One nominal 8 Ω speaker']],
+ 'Before you call a recording the sound of an original P12R, ask about the cone. A recone or a replacement can change sensitivity, breakup and compression, and the frame and date code stay the same either way.',
+ 'Jensen date codes don’t date the amp exactly. A speaker can be months older than the amp it’s in. One 1957 Deluxe has a speaker coded week 33 of 1956 and a tube chart stamped February 1957.',
  'Speaker swaps and the load','A different speaker at the same nominal impedance changes the sound. A different load also changes what the output stage is working into. The extra speaker jack doesn’t mean any extension cabinet is a good idea.',
- 'The speaker in the model is an estimated Jensen-style build. No original cone, power rating, response or sensitivity is claimed.')
+ 'The speaker models are from Mojotone’s Fender field guide. The speaker in the model is an estimated Jensen-style build. No power rating, response or sensitivity is claimed.')
 ];

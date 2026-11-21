@@ -151,7 +151,7 @@ export const PRINCETON_FEATURES=[
     "side": "rear",
     "menuOnly": false,
     "title": "The original rectifier is an open question.",
-    "body": "The AA1164 drawing calls for a 5U4GB. Research also reports a GZ34 on an early chart marked AA764. Whatever tube is in a dealer’s amp today can’t settle what Fender put in originally.",
+    "body": "The AA1164 drawing calls for a 5U4GB. Research also reports a GZ34 on an early chart marked AA764. Whatever tube is in a given amp today can’t settle what Fender put in originally.",
     "attributes": [
       [
         "Modeled specification",
@@ -180,26 +180,26 @@ export const PRINCETON_FEATURES=[
   },
   {
     "id": "speaker",
-    "label": "One ten & specimen history",
+    "label": "Stock speaker",
     "side": "rear",
     "menuOnly": false,
-    "title": "Which ten-inch speaker matters.",
-    "body": "The model has an Oxford-style ten. The amp we used for the cabinet has a replacement Weber in it, and the illustrations show a generic ceramic speaker. Keep those three apart when you read this page.",
+    "title": "It shipped with a Jensen or an Oxford ten.",
+    "body": "The Princeton Reverb has one 10-inch speaker at 8 ohms: a Jensen C10R or C10N, or an Oxford 10L5 or 10J4. So two original Princetons don’t necessarily have the same speaker.",
     "attributes": [
       [
-        "Factory format represented",
-        "One nominal 8 Ω ten"
+        "Stock speakers",
+        "Jensen C10R or C10N · Oxford 10L5 or 10J4"
       ],
       [
-        "Model",
-        "Oxford 10J4-style construction study"
+        "Load",
+        "One 10-inch · 8 Ω"
       ]
     ],
-    "listen": "Cone condition, magnet, sensitivity and frequency response all matter when you compare speakers. The diameter doesn’t tell you the bass response, the headroom or the breakup.",
-    "together": "The Oxford choice follows a separately reported early-1965 amp, an Oxford 10J4 type. It isn’t a copy of the Weber in our main cabinet reference.",
+    "listen": "The ten is a big part of what makes a Princeton a Princeton, and a 12-inch baffle is the classic owner mod. If you’re comparing two, check the speaker size first, then the model.",
+    "together": "The AA1164 drawing shows one speaker and an extension jack, and it doesn’t name a model. We show the Oxford 10J4 type.",
     "extraTitle": "Where this comes from",
-    "extra": "The speaker identity comes from one amp. It isn’t a rule about who supplied Fender.",
-    "detail": "The marker is on the speaker. Basket, magnet and mounting dimensions are estimates. No original cone, power rating or response curve is claimed.",
+    "extra": "The speaker list is from Mojotone’s Fender field guide. Fender’s drawing doesn’t name a speaker.",
+    "detail": "The marker is on the speaker. Basket, magnet and mounting dimensions are estimates. No power rating or response curve is claimed.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Princeton-Reverb-AA1164-Schematic.pdf",
@@ -208,6 +208,10 @@ export const PRINCETON_FEATURES=[
       [
         "https://retrofret.com/products/fender-princeton-reverb-tube-amplifier-1965-9339",
         "Cabinet specimen A-03894 · replacement history"
+      ],
+      [
+        "https://mojotone.com/blogs/fender-field-guide/fender-blackface-princeton-reverb",
+        "Mojotone Fender field guide · blackface Princeton Reverb"
       ]
     ]
   }
@@ -248,7 +252,7 @@ export const BROWN_FEATURES=[
     "side": "front",
     "menuOnly": false,
     "title": "The tremolo works on both channels.",
-    "body": "The 6G3’s oscillator varies the bias on the two 6V6s. Both channels have joined by that point, so the tremolo works on either one. A dealer description ties it to the Bright channel. The drawing doesn’t.",
+    "body": "The 6G3’s oscillator varies the bias on the two 6V6s. Both channels have joined by that point, so the tremolo works on either one, not just Bright.",
     "attributes": [
       [
         "Method",
@@ -360,26 +364,26 @@ export const BROWN_FEATURES=[
   },
   {
     "id": "speaker",
-    "label": "Oxford & replacement history",
+    "label": "Stock speaker",
     "side": "rear",
     "menuOnly": false,
-    "title": "The reference amp came with two speakers.",
-    "body": "The 1962 amp we worked from was listed with an Oxford 12K5 included and a modern Mojotone fitted for playing. Read the photos and the sale description separately.",
+    "title": "The stock speaker is an Oxford 12K5-6.",
+    "body": "The brown Deluxe has one 12-inch Oxford 12K5-6 at 8 ohms. It’s an Oxford where the tweed Deluxe had a Jensen.",
     "attributes": [
       [
-        "Represented format",
-        "One 12-inch · nominal 8 Ω"
+        "Stock speaker",
+        "One 12-inch Oxford 12K5-6"
       ],
       [
-        "Model",
-        "Estimated Oxford-family ceramic study"
+        "Load",
+        "8 Ω"
       ]
     ],
-    "listen": "Before you credit a vintage speaker name for a sound, find out which speaker was in the amp at the time and whether its cone is original.",
-    "together": "The dealer says the Oxford is the original. That’s a claim about one amp, not independent proof of what the factory fitted. The photo with the back off shows the pale Oxford basket.",
+    "listen": "Speakers get swapped and reconed over sixty years. If you’re judging a brown Deluxe by ear, find out whether the Oxford is still in it and whether the cone is original.",
+    "together": "The rear panel has two jacks, Speaker and Ext. Spkr, so the amp can take an extension cabinet as well.",
     "extraTitle": "Where this comes from",
-    "extra": "The dealer listing and photos for the 1962 reference amp. No dealer photo is shown here.",
-    "detail": "The marker is on the speaker. The magnet and basket in the model are approximations of an Oxford-type ceramic speaker. No response, sensitivity or power figures are claimed.",
+    "extra": "Mojotone’s Fender field guide and Guitar Player both list the 12K5-6 for the 6G3. We haven’t seen a Fender document that names it.",
+    "detail": "The marker is on the speaker. The magnet and basket in the model are approximations of the Oxford. No response, sensitivity or power figures are claimed.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Deluxe-6G3-Schematic.pdf",
@@ -388,6 +392,10 @@ export const BROWN_FEATURES=[
       [
         "https://themusicemporium.com/products/fender-6g3-deluxe-1962",
         "D02985 · dealer replacement account"
+      ],
+      [
+        "https://mojotone.com/blogs/fender-field-guide/fender-brownface-deluxe",
+        "Mojotone Fender field guide · brownface Deluxe"
       ]
     ]
   }
@@ -511,26 +519,26 @@ export const CHAMP_FEATURES=[
   },
   {
     "id": "speaker",
-    "label": "Eight-inch cabinet & speaker",
+    "label": "Eight-inch speaker",
     "side": "rear",
     "menuOnly": false,
-    "title": "This entry is the eight-inch Champ.",
-    "body": "The catalog splits the Champ by speaker size, and this is the eight. The 1958 date belongs to that catalog entry. It isn’t a claim that the 5F1 circuit first appeared that year. The model is a 1959-style eight-inch combo.",
+    "title": "The eight-inch speaker sets this Champ apart.",
+    "body": "This Champ has an 8-inch speaker: a Jensen P8T, an Oxford 8EV or a CTS alnico. The earlier 5E1 and the first 5F1s had a six, in a slightly smaller cabinet.",
     "attributes": [
       [
-        "Format",
-        "One eight-inch · nominal 4 Ω"
+        "Stock speakers",
+        "Jensen P8T · Oxford 8EV · CTS alnico"
       ],
       [
-        "Study envelope",
-        "13.5 × 12 × 8 in · W × H × D"
+        "Load",
+        "One 8-inch · listed 4 Ω, often marked 3.2 Ω"
       ]
     ],
-    "listen": "Swap in a different eight and the sensitivity and tonal balance can change a lot. Don’t assume a breakup point from the cone size.",
-    "together": "Our cabinet reference, C-12147, is dealer-measured at eight inches deep. A second 1959 amp is listed at 7.5. We haven’t resolved that.",
+    "listen": "The cabinet grew when the speaker went from six inches to eight, and that’s a good part of why the later Champs sound fuller. A different eight can still change the sensitivity and the balance a lot.",
+    "together": "The load is listed as 4 ohms, and the vintage speakers are usually marked 3.2. Our catalog splits the Champ by speaker size, which is why this entry is dated 1958 even though the 5F1 circuit is usually dated from 1956.",
     "extraTitle": "Where this comes from",
-    "extra": "The reference amp’s speaker label is missing, and the dealer’s originality claim doesn’t establish a factory speaker model. So the speaker in the model is unbranded.",
-    "detail": "The marker is on the speaker. Basket, magnet and detail dimensions are estimates.",
+    "extra": "The speaker models and the cabinet change are from Mojotone’s Fender field guide.",
+    "detail": "The marker is on the speaker. The speaker in the model is unbranded, and its basket and magnet are estimates. Two 1959 cabinets we checked are given as 8 and 7.5 inches deep, and we haven’t resolved that.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Champ-5F1-Schematic.pdf",
@@ -539,6 +547,10 @@ export const CHAMP_FEATURES=[
       [
         "https://retrofret.com/products/fender-champ-amp-5f1-tube-amplifier-1959-8054",
         "C-12147 · cabinet and specimen account"
+      ],
+      [
+        "https://mojotone.com/blogs/fender-field-guide/fender-narrow-panel-tweed-champ",
+        "Mojotone Fender field guide · narrow-panel Champ"
       ]
     ]
   }

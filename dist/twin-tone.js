@@ -52,8 +52,8 @@ export const TWIN_TONE={
     ],
     "listen": "As current rises, the voltage at the cathodes can shift the bias the tubes are running at. If a silver-panel Twin feels different from a black-panel one, check the circuit before you credit the tube brand.",
     "together": "Phase-inverter values changed on the AC568 too. Inverter, bias network, cathode returns, supply and feedback all work as one system, and a blackface conversion can change that system with the same four tubes still in their sockets.",
-    "extraTitle": "About this particular amp",
-    "extra": "The dealer calls our reference amp an AC568. That’s useful, but we haven’t audited its whole chassis, and the drawings can’t tell you whether a surviving amp has been modified.",
+    "extraTitle": "Check the chassis, not the year",
+    "extra": "A 1968 date doesn’t settle which circuit is in a Twin, and the drawings only show the two designs. They can’t tell you whether a surviving amp has been modified.",
     "sources": [
       [
         "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Twin-Reverb-AC568-Schematic.pdf",

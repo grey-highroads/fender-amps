@@ -163,7 +163,7 @@ export const TWIN_FEATURES=[
     "side": "front",
     "cosmetic": true,
     "title": "The drip edge dates the look, not the circuit.",
-    "body": "The aluminum trim is a good early silver-panel cue. It doesn’t make the amp an AB763. The amp in our reference photos is dealer-identified as an AC568, and that’s why we keep cosmetics and circuit as separate records.",
+    "body": "The aluminum trim is a good early silver-panel cue. It doesn’t tell you the circuit. A drip-edge Twin can be an AC568 and not an AB763, so check cosmetics and circuit separately.",
     "attributes": [
       [
         "Visible cue",

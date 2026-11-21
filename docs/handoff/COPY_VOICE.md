@@ -14,6 +14,7 @@ Who's talking: a friend who has owned, fixed and gigged these amps, talking to a
 6. No taglines, no slogan pairs, no closing zingers, no em dashes. Copy has to matter or it gets removed.
 7. Don't add facts. Use what the repo, catalog and research briefs support. Flag doubtful facts; don't rewrite them.
 8. Don't name famous players unless the repo sources the association.
+9. Cards are about the amp as Fender built it: its stock speaker, tubes and circuit. Don't write about the particular amp, dealer listing or photo set the 3D model was based on. If that has to be recorded, it goes in the fine-print note only. (Owner, November 20, 2026.)
 
 ## Batch 1: timeline stories and one-line descriptions
 
@@ -164,3 +165,12 @@ Flags for the owner:
 - "One of the softer rectifiers Fender used" (5Y3) is the packet's wording with no source given.
 - The Tweed Deluxe speaker card still describes a reconed P12R on a 1957 reference amp. The corrected packet's reference amp (RetroFret 10964) is listed with an original P12R. The card's fact was left for the builder to confirm.
 - `dist/explore.js` still holds three unused base cards for the Twin ("Where electricity becomes sound." and two others). The live cards override their text.
+
+## Batch 4: cards rewritten to be about the amp, not the reference amp
+
+November 20, 2026, on `main`, after owner feedback on the brown Deluxe speaker card. Sixteen cards plus the Tweed Deluxe speaker card had main text about a dealer listing or the specimen behind the model. They now describe the amp itself.
+
+- Speaker cards (brown Deluxe, Princeton Reverb, Champ, Tremolux, Blues Junior, Tweed Deluxe) now lead with the stock speaker from each amp's research brief. Their labels and attribute rows changed to match, and the Mojotone field guide link was added to their sources.
+- Dealer and specimen references were removed from the main text of the Tremolux revision, input-tube and rectifier cards, the brown Deluxe tremolo card, the Princeton supply card, the Deluxe Reverb reverb, grille-cloth, speakers and output-transformer cards, and the Twin drip-edge and power-tube cards.
+
+Flags: stock speaker models come from Mojotone's field guide (and Guitar Player for the 6G3), not from a Fender document. The Deluxe Reverb has no research brief, so its card still rests on two dated examples with Oxford 12K5-6 speakers.

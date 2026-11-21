@@ -102,8 +102,8 @@ export const DELUXE_FEATURES=[
     ],
     "listen": "Channel Volume sets how hard the springs get driven. The Reverb knob sets how much of the return you hear. Hitting the tank harder and turning up the return are two different moves, and they give you different results.",
     "together": "On the AB763 drawing the dry signal reaches the mixer through a 3.3 MΩ resistor with a 10 pF treble bypass. The spring return joins it there after the recovery stage. That extra stage changes the dry signal’s gain and polarity too. Two halves of a 12AT7 work together as the reverb driver.",
-    "extraTitle": "About the tank",
-    "extra": "The 1965 Black Book amp is listed with a pan marked RA 3265. That’s the dealer’s reading of the marking. It doesn’t tell you the decay, the spring count or which modern replacement matches. If you’re identifying a tank, drive and pickup impedance, mounting and grounding all matter.",
+    "extraTitle": "Replacing a tank",
+    "extra": "Drive and pickup impedance, mounting and grounding all have to match. A pan that looks the same isn’t necessarily the right one.",
     "detail": "Our model draws on more than one reference amp. We haven’t assigned it a specific tank.",
     "sources": [
       [
@@ -165,7 +165,7 @@ export const DELUXE_FEATURES=[
     "label": "Grille cloth",
     "side": "front",
     "title": "The front of the amp is the easiest part to replace.",
-    "body": "Silver cloth and a black panel look right for the period, but both can be swapped. The look wasn’t fixed anyway: Folkway’s early-1965 amp has no raised Fender badge, where later examples do.",
+    "body": "Silver cloth and a black panel look right for the period, but both can be swapped. The look wasn’t fixed anyway: at least one early-1965 amp has no raised Fender badge, where later examples do.",
     "attributes": [
       [
         "Appearance",
@@ -181,7 +181,7 @@ export const DELUXE_FEATURES=[
       ]
     ],
     "listen": "If you’re judging originality, look at the weave, how the cloth is mounted, the chassis dates and the speaker codes together. The color of the cloth in one photo tells you very little.",
-    "together": "Our model has the raised badge and draws on more than one 1965 amp. Treat it as a picture of the family, not a copy of the badge-less Folkway amp.",
+    "together": "The model shows the raised badge, so it’s the later look. An early amp without one isn’t necessarily wrong.",
     "extraTitle": "Does the cloth change the sound?",
     "extra": "We don’t have a measurement for this cloth, so we’re not making a claim either way.",
     "detail": "Cloth scale and color are estimates. Dealer photos are linked, not republished.",
@@ -218,7 +218,7 @@ export const DELUXE_FEATURES=[
       ]
     ],
     "listen": "Before you call a recording 6V6 breakup, ask what speaker was in the amp and whether it had been reconed. Speaker compression and amp distortion show up together, and a label on the frame doesn’t prove the cone is original.",
-    "together": "Black Book lists an Oxford 12K5-6 dated to the twelfth week of 1965. Folkway describes another original Oxford dated late 1964. Those are records of two amps. They don’t mean every blackface Deluxe Reverb shipped with that speaker.",
+    "together": "The speaker that turns up in original 1965 amps is an Oxford 12K5-6. Two examples we know of have one, dated late 1964 and early 1965. Two amps isn’t every amp, so don’t treat it as the only stock speaker.",
     "extraTitle": "Match the volume before you compare",
     "extra": "A more efficient speaker is louder at the same knob setting, and louder is easy to mistake for a change in tone. Compare speakers at the same listening level.",
     "detail": "The photo is a generic Nubert speaker, not the Oxford. We have no measured sensitivity, response or power rating for the Oxford, and the basket and magnet dimensions are estimated.",
@@ -336,8 +336,8 @@ export const DELUXE_FEATURES=[
     ],
     "listen": "Those are two separate comparisons: the voice of the speaker, and the load it puts on the amp. Keeping the nominal load the same holds one of them steady, though a speaker’s real impedance still moves around with frequency.",
     "together": "The AB763 drawing calls the output transformer TR3, part 125A1A. The feedback loop takes a sample of the output back to an earlier stage, which reduces error as long as the amp has room to correct. Transformer, speaker load and gain all work together, so one part number doesn’t describe the response.",
-    "extraTitle": "What’s actually in the amp",
-    "extra": "Black Book lists the transformer code on its amp separately from the drawing’s number. We haven’t read the stamp ourselves or measured anything about it.",
+    "extraTitle": "The stamp on the transformer",
+    "extra": "The number on the drawing is the design part. The code stamped on the transformer in a given amp is a separate thing to check, and we haven’t verified one.",
     "detail": "125A1A is the drawing’s designation, not proof of what’s installed in either reference amp. The block in the model marks an estimated location.",
     "sources": [
       [
