@@ -292,3 +292,10 @@ media manifest; private dealer references remain ignored. No model, hotspot,
 other amp media or viewer code changed. Six npm checks and whitespace pass;
 local front/rear viewer images visually checked. Generated fine details remain
 interpretive; dealer originality and replacement grounded cord remain qualified.
+
+Deluxe Reverb publication verified: runtime `536700398f32b7c963ab6f665d8752c4dbbf0127`,
+Git production deployment `dpl_BFoaCGdyxf2DuyCYBCMphufc3q9r`, READY.
+Live thumbnail/viewer loaded front (1536 px, `deluxe-reverb/front.jpg`) and rear
+visibly matching the approved pair. Private capture:
+`outputs/deluxe-reverb-photoreal-review/published-rear.jpg`.
+https://fendertubeamps.com/?amp=deluxe-reverb-1965
