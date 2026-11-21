@@ -317,3 +317,16 @@ Git production deployment `dpl_EfDgCkzyWQHMza3tv3VbMJq5RmpA`, READY.
 Public thumbnail/viewer loaded front (1254 px, `twin/front.jpg`) and rear
 visibly matching the approved pair. This completes the publication check above.
 https://fendertubeamps.com/?amp=twin-1968
+
+## Super Six Reverb images — user approved
+
+November 20: user approved the Hendrix CFA7106 front/rear pair and requested
+publication in the existing shared thumbnail rail. Two `super-six-reverb-1972`
+records use `assets/studies/super-six/{front,rear}.jpg`. Exact prompts and source
+links are tracked in the manifest; dealer photos remain ignored. The twelve
+controls, side handles and installed boards follow the specimen; upper speaker
+row remains partly hidden. Fine lettering, dimensions and speaker details are
+approximate; dealer dating and originality are not independently authenticated.
+No model, hotspots or viewer behavior changed. Updated the media scope check
+for this explicit user authorization. All six npm checks and whitespace pass;
+local front and rear enlarged views visually checked. Production check follows.

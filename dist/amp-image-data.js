@@ -195,5 +195,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479"
     ],
     "knownInaccuracies": "Generated fine lettering, dimensions and texture scale remain approximate. JBL speakers and casters follow this photographed specimen; dealer originality claims are not independently verified. The shared 3D model uses a different speaker configuration."
+  },
+  {
+    "id": "super-six-front",
+    "assemblyId": "super-six-reverb-1972",
+    "amp": "Super Six Reverb",
+    "configuration": "Early-1970s Super Six Reverb specimen study guided by Hendrix Guitars CFA7106; twelve controls and six tens",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/super-six/front.jpg",
+    "referenceLinks": [
+      "https://www.hendrixguitars.com/Am070.htm"
+    ],
+    "knownInaccuracies": "Generated fine lettering, rear panel text, dimensions and speaker details remain approximate. Speaker originality and dealer specimen dating are not independently authenticated. Casters are not depicted."
+  },
+  {
+    "id": "super-six-rear",
+    "assemblyId": "super-six-reverb-1972",
+    "amp": "Super Six Reverb",
+    "configuration": "Early-1970s Super Six Reverb specimen study guided by Hendrix Guitars CFA7106; twelve controls and six tens",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/super-six/rear.jpg",
+    "referenceLinks": [
+      "https://www.hendrixguitars.com/Am070.htm"
+    ],
+    "knownInaccuracies": "Generated fine lettering, rear panel text, dimensions and speaker details remain approximate. Speaker originality and dealer specimen dating are not independently authenticated. Casters are not depicted."
   }
 ];

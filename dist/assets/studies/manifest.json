@@ -250,5 +250,41 @@
     ],
     "knownInaccuracies": "Generated fine lettering, dimensions and texture scale remain approximate. JBL speakers and casters follow this photographed specimen; dealer originality claims are not independently verified. The shared 3D model uses a different speaker configuration.",
     "provenance": "User-approved same-specimen pair guided by RetroFret A-13834 gallery 01, 02 and 03. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "super-six-front",
+    "assemblyId": "super-six-reverb-1972",
+    "amp": "Super Six Reverb",
+    "configuration": "Early-1970s Super Six Reverb specimen study guided by Hendrix Guitars CFA7106; twelve controls and six tens",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/super-six/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Generate a fresh highly photorealistic studio catalog photograph of the exact vintage early-1970s Fender Super Six Reverb specimen in the references (Hendrix Guitars CFA7106). Reference 1 whole front sets tall cabinet proportions, reference 2 assembled rear sets boards, speakers and side handles, reference 3 front panel closeup sets exact controls. Preserve very tall rectangular cabinet, roughly 40.5 inches high by 26.5 wide, black finely pebbled Tolex, subtle wear, silver/aqua woven cloth, period hardware. Warm light-gray seamless studio floor and background, soft key upper left and gentle fill, grounded shadow, long-lens straight-on camera at cabinet midheight, complete cabinet uncropped with modest margin, portrait composition, amp fills 85% height. Real material microtexture, natural metal reflections, no illustration or plastic CGI, no props or captions. No invented top carrying handle; this tall cabinet uses side strap handles. Keep photographed features rather than modern reissue details. FRONT VIEW. Match reference1 and3 faithfully. Silver panel, turquoise lettering and thin turquoise channel boxes. EXACTLY TWELVE black skirted knobs with silver centers: Normal four Volume/Treble/Middle/Bass, Vibrato seven Volume/Treble/Middle/Bass/Reverb/Speed/Intensity, then separate Master Volume. Two input jacks per channel FOUR total, two bright slide switches. Right panel reads SUPER SIX / REVERB with dark red pilot jewel far right. No pull-boost label. Black/silver Fender tail logo upper left grille. HUGE uninterrupted grille extends almost full cabinet height, no horizontal divisions, no JBL badge, no aluminum drip-edge border. Black top with two nickel chassis straps near outer sides. Narrow black bottom rail, worn nickel bottom corners. Preserve actual grille/cabinet width-to-height ratio, avoid making this a Twin-sized squat combo. Side handles may be barely visible beyond edges. Retain base as photographed without inventing large caster wheels.",
+    "referenceLinks": [
+      "https://www.hendrixguitars.com/Am070.htm"
+    ],
+    "knownInaccuracies": "Generated fine lettering, rear panel text, dimensions and speaker details remain approximate. Speaker originality and dealer specimen dating are not independently authenticated. Casters are not depicted.",
+    "provenance": "User-approved same-specimen pair. Front guided by Hendrix Am070.JPG, Am070g.JPG and Am070b.JPG; final rear by assembled Am070g.JPG alone. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "super-six-rear",
+    "assemblyId": "super-six-reverb-1972",
+    "amp": "Super Six Reverb",
+    "configuration": "Early-1970s Super Six Reverb specimen study guided by Hendrix Guitars CFA7106; twelve controls and six tens",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/super-six/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "SINGLE IMAGE ONLY: one REAR VIEW photograph, no front view, no diptych, no comparison sheet, no collage. Use attached rear photograph as the sole specimen/layout reference. Use case: product-mockup. Generate a fresh highly photorealistic studio catalog photograph of the exact vintage early-1970s Fender Super Six Reverb specimen in the references (Hendrix Guitars CFA7106). The sole reference is the assembled rear; reproduce its tall proportions and installed boards. Preserve very tall rectangular cabinet, roughly 40.5 inches high by 26.5 wide, black finely pebbled Tolex, subtle wear, silver/aqua woven cloth, period hardware. Warm light-gray seamless studio floor and background, soft key upper left and gentle fill, grounded shadow, long-lens straight-on camera at cabinet midheight, complete cabinet uncropped with modest margin, portrait composition, amp fills 85% height. Real material microtexture, natural metal reflections, no illustration or plastic CGI, no props or captions. No invented top carrying handle; this tall cabinet uses side strap handles. Keep photographed features rather than modern reissue details. REAR VIEW. The attached rear is strict layout authority; do NOT remove the rear boards. Wide upper black Tolex board with shallow trapezoid cut into TOP edge exposes silver chassis rear strip, long sloping shoulders; board solid broad beneath, hiding the TOP ROW speaker motors almost entirely. Separate flat lower black Tolex board, screws at ends. SIX ten-inch drivers TOTAL in THREE ROWS of TWO, upper pair partly occluded by upper board exactly as photo, four lower drivers fully visible. Match vintage dull silver stamped steel baskets, rectangular dark alnico magnet covers with small bright blue round Fender labels as photographed, not large gray JBL bell magnets, not modern ceramic round magnets, not two twelve-inch drivers. Muted silver-gray baffle interior, vintage light leads linking speakers, black mains cable descending left interior. Right exterior side black strap handle with nickel end mounts. Rear strip convenience outlet far left, ground toggle, fuse, power and standby toggles, speaker and extension jacks, right RCA vibrato/reverb connections, match actual spacing. Glimpses of tubes only in top cutaway, no invented open circuit board. Preserve exceptionally TALL cabinet and vertical speaker spacing; top row hidden is essential, do not expose all six motors by deleting upper board. No front grille visible, no invented caster wheels.",
+    "referenceLinks": [
+      "https://www.hendrixguitars.com/Am070.htm"
+    ],
+    "knownInaccuracies": "Generated fine lettering, rear panel text, dimensions and speaker details remain approximate. Speaker originality and dealer specimen dating are not independently authenticated. Casters are not depicted.",
+    "provenance": "User-approved same-specimen pair. Front guided by Hendrix Am070.JPG, Am070g.JPG and Am070b.JPG; final rear by assembled Am070g.JPG alone. Original dealer photographs are not redistributed."
   }
 ]
