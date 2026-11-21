@@ -299,3 +299,15 @@ Live thumbnail/viewer loaded front (1536 px, `deluxe-reverb/front.jpg`) and rear
 visibly matching the approved pair. Private capture:
 `outputs/deluxe-reverb-photoreal-review/published-rear.jpg`.
 https://fendertubeamps.com/?amp=deluxe-reverb-1965
+
+## Twin Reverb images — user approved
+
+November 20: user approved the RetroFret A-13834 front/rear pair and requested
+publication in the existing shared thumbnail rail. Two `twin-reverb-early`
+records use `assets/studies/twin/{front,rear}.jpg`. Exact prompts and specimen
+source are in the media manifest; dealer photographs remain ignored. JBLs and
+casters describe this specimen, not universal factory equipment. The viewer
+explicitly distinguishes its JBL configuration from the shared model's speakers.
+Six npm checks and whitespace passed; local enlarged front/rear visually checked.
+Fine lettering, dimensions and texture scale remain approximate. No model,
+hotspot or viewer behavior changed. Next action: verify production publication.

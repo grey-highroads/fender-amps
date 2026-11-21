@@ -214,5 +214,41 @@
     ],
     "knownInaccuracies": "Generated fine lettering, texture scale and dimensions remain approximate. Speaker and fitted parts follow the photographed specimen; dealer originality claims are not independently verified. Grounded cord is a replacement.",
     "provenance": "User-approved same-specimen pair. Front references Black Book gallery photos 1/21/22; rear references 3/4, preserving installed rear boards. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "twin-front",
+    "assemblyId": "twin-reverb-early",
+    "amp": "Twin Reverb",
+    "configuration": "1968 early silverface drip-edge Twin Reverb specimen study, RetroFret A-13834; JBL-equipped specimen with casters",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/twin/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Generate a new exceptionally photorealistic studio product photograph of the FRONT of this exact vintage 1968 Fender Twin Reverb specimen, matching the supplied reference photographs. Reference 1 front is geometry and identification authority; reference 2 rear locks specimen identity; reference 3 angle clarifies depth/hardware. Preserve its wide low cabinet proportions, black finely pebbled Tolex, silver/aqua aged woven grille, aluminum drip-edge trim, tail Fender badge upper left and small JBL badge bottom right, black top handle, worn nickel lower corners and photographed casters. Silverface control panel with turquoise lettering, EXACTLY eleven black skirted knobs with silver centers: four Normal, seven Vibrato, four input jacks total and two bright switches; TWIN REVERB / -AMP title at right, red jewel beyond. No master volume. Match observed hardware and subtle patina without exaggeration. Straight-on front camera centered at cabinet midheight, minimal visible top, long-lens perspective, entire amp and casters visible; amp fills about 80% image width, centered square canvas, warm light gray seamless studio backdrop and soft floor shadow. Fine real material texture and restrained softbox reflections, no CGI appearance, no illustrated outlines, no extra objects, cables or text captions. Create a fresh photograph-like image, not a collage or screenshot. Keep construction faithful; do not improvise modern controls.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479"
+    ],
+    "knownInaccuracies": "Generated fine lettering, dimensions and texture scale remain approximate. JBL speakers and casters follow this photographed specimen; dealer originality claims are not independently verified. The shared 3D model uses a different speaker configuration.",
+    "provenance": "User-approved same-specimen pair guided by RetroFret A-13834 gallery 01, 02 and 03. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "twin-rear",
+    "assemblyId": "twin-reverb-early",
+    "amp": "Twin Reverb",
+    "configuration": "1968 early silverface drip-edge Twin Reverb specimen study, RetroFret A-13834; JBL-equipped specimen with casters",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/twin/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Generate a new exceptionally photorealistic studio product photograph of the REAR of this exact vintage 1968 Fender Twin Reverb specimen, matching supplied photographs. Reference 1 front locks specimen identity, reference 2 assembled REAR is strict geometry/layout authority, reference 3 clarifies cabinet/hardware. Wide low black pebbled Tolex cabinet on photographed casters, black top handle, worn nickel lower corners. Keep BOTH rear cover boards installed as in reference 2: broad upper board with trapezoid cutaway showing the rear chassis panel, broad flat lower board, open horizontal speaker area between. EXACTLY TWO side by side JBL D120F speakers, gray cast frames, large rounded aged brown-gray magnet backs with yellow/white circular labels and central dark mesh vent, accurately match reference 2, not blue Fender labels or modern speakers. Realistic wiring passing above/between speakers and down right, shadowed interior and glimpsed tubes below chassis, no invented circuit board exposed. Rear chassis reading from left has convenience AC socket, black control strip with ground, fuse, on, standby, speaker and ext speaker jacks, then vibrato/reverb RCA connectors; match reference positions. Straight-on centered rear at cabinet midheight, long lens, complete amp and casters visible. Square canvas, cabinet about 80% width, warm light gray seamless backdrop and soft floor shadow, matching companion front studio photograph. Authentic restrained patina, fine physical textures, softbox lighting, no CGI look, no captions, no extra props, no front grille visible.",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479"
+    ],
+    "knownInaccuracies": "Generated fine lettering, dimensions and texture scale remain approximate. JBL speakers and casters follow this photographed specimen; dealer originality claims are not independently verified. The shared 3D model uses a different speaker configuration.",
+    "provenance": "User-approved same-specimen pair guided by RetroFret A-13834 gallery 01, 02 and 03. Original dealer photographs are not redistributed."
   }
 ]

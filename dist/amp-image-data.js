@@ -167,5 +167,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://www.blackbookguitars.com/products/1966-fender-deluxe-reverb-nickel-copy"
     ],
     "knownInaccuracies": "Generated fine lettering, texture scale and dimensions remain approximate. Speaker and fitted parts follow the photographed specimen; dealer originality claims are not independently verified. Grounded cord is a replacement."
+  },
+  {
+    "id": "twin-front",
+    "assemblyId": "twin-reverb-early",
+    "amp": "Twin Reverb",
+    "configuration": "1968 early silverface drip-edge Twin Reverb specimen study, RetroFret A-13834; JBL-equipped specimen with casters",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/twin/front.jpg",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479"
+    ],
+    "knownInaccuracies": "Generated fine lettering, dimensions and texture scale remain approximate. JBL speakers and casters follow this photographed specimen; dealer originality claims are not independently verified. The shared 3D model uses a different speaker configuration."
+  },
+  {
+    "id": "twin-rear",
+    "assemblyId": "twin-reverb-early",
+    "amp": "Twin Reverb",
+    "configuration": "1968 early silverface drip-edge Twin Reverb specimen study, RetroFret A-13834; JBL-equipped specimen with casters",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/twin/rear.jpg",
+    "referenceLinks": [
+      "https://retrofret.com/products/fender-twin-reverb-ac-568-wfactory-jbls-large-combo-tube-amplifier-1968-13479"
+    ],
+    "knownInaccuracies": "Generated fine lettering, dimensions and texture scale remain approximate. JBL speakers and casters follow this photographed specimen; dealer originality claims are not independently verified. The shared 3D model uses a different speaker configuration."
   }
 ];
