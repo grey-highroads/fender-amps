@@ -87,7 +87,7 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 ## November 20 hotspot implementation follow-up
 
 Five-topic original PR 295 profile completed on `codex/remaining-active-hotspots`,
-pending owner review/publication. The November 1995 theory/specification page was
+now published on the public site. The November 1995 theory/specification page was
 rendered and read: first-stage Fat bypass/JFET, Volume then later Master,
 solid-state spring drive/recovery fed after Master, fixed negative grid bias
 and push-pull EL84s. The same PDF bundle contains 1996 and 2001–2003 revisions;

@@ -88,8 +88,7 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 
 ## November 20 hotspot implementation follow-up
 
-Six-topic 100 W profile completed on `codex/remaining-active-hotspots`, pending
-owner review/publication. The inspected Fender 010182 Rev C no-pull family sheet
+Six-topic 100 W profile completed on `codex/remaining-active-hotspots`, now published on the public site. The inspected Fender 010182 Rev C no-pull family sheet
 explicitly includes the Super Six speaker hookup. It supports pre-inverter
 Master, 120 pF Bright bypasses, reverb/tremolo routing, output bias Balance and
 three series-pair branches in parallel. The newly opened undated-title official

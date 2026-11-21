@@ -182,3 +182,15 @@ and Champ cards, images and layered Escape. See [topics, evidence, generated
 provenance and screenshots](EXPLORER_BATCH.md). Post-release project inspection
 reconfirmed protected generated URLs and public custom domains. Private Sites
 prototype, original Site ID, DNS and other repository branches remain intact.
+
+## Remaining active hotspot publication
+
+Owner approved public publication of the hotspot-only update. Final runtime
+`bae1288a97231d8e207321211961d1a1805c688b` deployed READY via Git as
+`dpl_B8vU6cXGHGP6ueTdhwUHyzUHC6xo`, aliased to the existing public custom
+domains. This includes the focused correction that cancels stale camera turns
+on rapid topic changes. All six remote checks passed; fourteen live runtime/
+image files matched source. Public Chrome verified all 21 new cards at desktop
+and phone widths with no page errors. Ten active models now share 65 topics.
+See [release, sources and live evidence](ACTIVE_HOTSPOTS.md). Existing image
+assets/viewer, DNS, protected previews and private Sites remain unchanged.

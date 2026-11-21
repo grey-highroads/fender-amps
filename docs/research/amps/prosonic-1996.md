@@ -84,8 +84,7 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 
 ## November 20 hotspot implementation follow-up
 
-Six-topic combo profile completed on `codex/remaining-active-hotspots`, pending
-owner review/publication. The official Fender owner manual supports drive-only
+Six-topic combo profile completed on `codex/remaining-active-hotspots`, now published on the public site. The official Fender owner manual supports drive-only
 Master, manufacturer-described Gain 2 behavior, both-channel combo reverb,
 switched Return and the extension-jack tap change. Both available schematic
 sheets were opened: head 050173 Rev C and combo D049951 Rev E (January 1997).

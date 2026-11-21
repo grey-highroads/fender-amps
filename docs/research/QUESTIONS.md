@@ -139,8 +139,8 @@ Licence and credit were read from the Commons metadata on 2026-11-20. Check each
 
 ## Hotspot implementation follow-up
 
-The remaining-active-amp profiles are implemented on the isolated
-`codex/remaining-active-hotspots` site-review branch. See
+The remaining-active-amp profiles were reviewed on
+`codex/remaining-active-hotspots` and are now published from main. See
 [build notes](../handoff/ACTIVE_HOTSPOTS.md) and the four updated briefs. This
 does not settle the missing original 5E9 drawing, precise specimen socket
 placements, exact 1972 Super Six revision or 1996 Prosonic values against the

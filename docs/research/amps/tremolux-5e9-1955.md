@@ -93,8 +93,7 @@ Not written for this pass. The brief makes full hotspot writing optional for tim
 
 ## November 20 hotspot implementation follow-up
 
-Four-topic 5E9 profile completed on `codex/remaining-active-hotspots`, pending
-owner review/publication. It reopens 0093’s chart and panel and covers revision
+Four-topic 5E9 profile completed on `codex/remaining-active-hotspots`, now published on the public site. It reopens 0093’s chart and panel and covers revision
 identification, 12AY7, corrected rectifier chart and small-box/speaker evidence.
 The original 5E9 drawing remains unestablished; no 5E9-A mechanism is asserted.
 

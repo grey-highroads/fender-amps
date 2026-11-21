@@ -5,7 +5,7 @@ Observatory without relying on the chat history.
 
 **Current priority: educational construction, supported by real photographs.**
 The user redirected the project away from photoreal asset production after
-reviewing the workload. The 1968 Twin, blackface Deluxe Reverb and tweed 5E3 Deluxe now share the single-model explorer.
+reviewing the workload. All ten active amps now share the single-model explorer, with 65 topics.
 Accurate proportions and meaningful construction relationships matter; the
 models remain interpretive and exact interior placement is not established.
 
@@ -31,6 +31,7 @@ models remain interpretive and exact interior placement is not established.
 | Timeline | Active (default): ten modeled amps. All: 208 catalog entries including 198 gray WIP placeholders; about six visible on desktop, two on a phone |
 | Source collection | Corrected 208-entry workbook is authoritative; all three tabs are snapshotted in `data/catalog/`; 208 timeline entries are mapped with explicit differences; no live sync |
 | Library | 47 components/materials and ten reference assemblies |
+| Hotspots | Ten active profiles / 65 topics; final hotspot-only runtime `bae1288` READY and live-verified |
 | Fidelity | Procedural photographic studies, not certified replicas or a photoreal asset pack |
 | Blender master | [1968 Twin A-13834, badge/panel pass 0.4](../../models/twin-1968/README.md); separate from production |
 | Backend | None. Static HTML, JavaScript and vendored Three.js; no build or dependency installation required |
@@ -284,8 +285,7 @@ positions are estimates; Princeton rectifier and Champ depth conflicts remain op
 The user accepted the Princeton/brown Deluxe/Champ hotspot information and
 placement, and rejected the generated renders as unrealistic. They are **not
 accepted realistic assets**. Image generation and realism work are deferred.
-The isolated `codex/remaining-active-hotspots` implementation (pending owner
-review/publication) completes hotspots on Tremolux, Super Six,
+The published hotspot-only update completes hotspots on Tremolux, Super Six,
 original Blues Junior and Prosonic (21 new topics; all ten active profiles). See [topics, anchors, sources and limits](ACTIVE_HOTSPOTS.md).
 No new amps or generated assets are part of this round.
 
@@ -294,9 +294,9 @@ No new amps or generated assets are part of this round.
 1. Repository maintenance is complete: 208-entry catalog mapping, all five
    checks, and approved LFS migration. See [recovery and collaborator
    instructions](LFS_MIGRATION.md) before using an old working copy.
-2. Review/publish the completed hotspot-only active-amp batch described in
-   ACTIVE_HOTSPOTS.md. Exact 5E9 mechanism, selected-year circuit revisions and
-   interior measurements remain evidence gaps; image realism is deferred.
+2. All ten active hotspot profiles are published; see ACTIVE_HOTSPOTS.md.
+   Exact 5E9 mechanism, selected-year circuit revisions and interior measurements
+   remain evidence gaps. Image realism is deferred.
 3. Establish source-backed interior positions and model-specific authorized
    photos as the profiles expand. Keep variants, measurements and specimen
    evidence distinct.

@@ -11,7 +11,7 @@ branch started at `0cfe2db`. Read the research briefs through Git, not a merge o
 its older runtime. During completion, main advanced to `d3b0003` with the research
 moved into `docs/research/`; those documentation-only commits were merged into
 the review branch without runtime changes. The four briefs and QUESTIONS now
-link this implementation/evidence follow-up. On the review branch, all ten active amps now have explorers: **65 topics**, adding
+link this implementation/evidence follow-up. All ten active amps now have published explorers: **65 topics**, adding
 4 Tremolux, 6 Super Six, 5 original Blues Junior and 6 Prosonic. The ten assembly
 choices, 208 catalog mappings, panel art, dimensions and component geometry are
 unchanged. Anchors are metadata/empty objects in the actual shared factories.
@@ -203,6 +203,33 @@ first-card and rear-view captures are included for each new profile.
 
 ## Release status
 
-Completed and validated on the isolated review branch. Publication of this new
-batch is separate from the earlier approved first-batch release. Private Sites,
-DNS, Vercel protection settings and existing generated assets were untouched.
+The owner explicitly authorized publication of the hotspot-only update. Main
+fast-forwarded to `333438d2c3bed8e0a7633e53b682594782062c15`, producing READY
+Git production deployment `dpl_CcnF7t9n4N3ojVVdsU7FX7rWdcsU`.
+
+Live review exposed a rapid-selection camera race: a pending rear turn could
+finish after a front card was selected. `app.js` now cancels a pending view
+transition before deciding which side the new topic needs. All four new profiles,
+Princeton and Deluxe Reverb passed focused rapid-switch checks. This changes no
+anchor, component geometry or existing image asset.
+
+Final runtime `bae1288a97231d8e207321211961d1a1805c688b` auto-deployed READY as
+`dpl_B8vU6cXGHGP6ueTdhwUHyzUHC6xo`, Git source, aliased to fendertubeamps.com.
+All six checks passed locally and in the inspected final remote build logs.
+Public bytes matched fourteen runtime/current-image files. All 21 new cards were
+opened on the public site at 1440 and 390 px widths; Escape preserved detail,
+new profiles had no image rail, and no page errors or horizontal overflow were
+observed. Final live captures are `images/active-hotspots/live-*.png`.
+
+Live explorers:
+- https://fendertubeamps.com/?amp=tremolux-1955
+- https://fendertubeamps.com/?amp=super-six-reverb-1972
+- https://fendertubeamps.com/?amp=blues-junior-1995
+- https://fendertubeamps.com/?amp=prosonic-1996
+
+Existing generated-image files, image data and viewer code were compared with
+the previous public release and are unchanged. Post-release project inspection
+reconfirmed `all_except_custom_domains` protection: custom domains public,
+generated preview URLs protected. Private Sites, its original Site ID, DNS and
+hosting access settings were untouched. Documentation-only follow-up may deploy
+the same runtime bytes again.
