@@ -221,3 +221,11 @@ are in `assets/studies/manifest.json`; no text-omission claim remains for this p
 The previous files remain unused. No model, hotspot, other amp image or viewer
 behavior changed. Six npm checks and whitespace passed; both images were opened
 and visually checked in the local viewer. Image accuracy is still interpretive.
+
+Publication verified: runtime `5da8975659023511b9e4a459b18013d9cfc0f95e`,
+Git production deployment `dpl_EUyTgnNMXXbhcMfADnJHmYCsZ7nH`, READY.
+Public brown Deluxe route loaded both replacement images; front source resolved
+to `front-v2.jpg` (1393 px wide), rear visibly matched the approved new pair.
+Escape returned to the model. Live capture saved privately under
+`outputs/brown-deluxe-photoreal-review-v2/published-rear.jpg`.
+https://fendertubeamps.com/?amp=deluxe-1962
