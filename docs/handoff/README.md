@@ -338,3 +338,17 @@ The Princeton Reverb now has a 1964 timeline entry and shared 1965-style
 construction assembly, mapped to catalog row 67. Its deeper explorer is next.
 The brown Deluxe rear has the photographed upper opening and chassis hardware.
 See [evidence, validation and limits](PRINCETON_BROWN_REAR.md).
+
+
+## November 21: approved Amp Archive branding
+
+Owner approved the horizontal tube emblem / slanted lettering combination and
+tube favicon. Header now uses the generated transparent ivory/brass lockup in
+`dist/assets/brand/amp-archive-horizontal.png`; a simplified vector tube favicon
+is shared by collection and library. Runtime names are Amp Archive. Generated
+with the built-in image tool from the approved concept: preserve the tube at
+left and slanted Amp Archive lettering / gold underline at right, transparent
+background, no extra content. Source concept remains in the owner's generated
+image library. No historical or model changes. All six checks pass; local browser
+review confirms the horizontal mark. Separate uncommitted orbital layout work
+is excluded from this branding release.

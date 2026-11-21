@@ -87,3 +87,12 @@
  .has-image-studies .construction-demo.part-selected #viewport{left:80px}
  #study-viewer>p{max-height:24vh;overflow:auto;flex-shrink:0}
 }
+
+/* Amp Archive: a typographic identity, without a separate emblem. */
+.masthead .archive-identity{display:flex;flex-direction:column;align-items:flex-start;gap:8px;line-height:1;text-decoration:none}
+.archive-name{font-family:Georgia,'Times New Roman',serif;font-size:36px;font-weight:700;letter-spacing:-1.6px;color:#eee8dc}
+.archive-subtitle{font-family:var(--display);font-size:9px;font-weight:400;letter-spacing:2.5px;color:var(--amber)}
+@media(max-width:760px){.masthead .archive-identity{gap:7px}.archive-name{font-size:28px;letter-spacing:-1.2px}.archive-subtitle{font-size:7px;letter-spacing:1.8px}}
+
+.masthead .archive-identity{display:block;line-height:0}.archive-logo{display:block;width:252px;height:auto;max-width:100%}
+@media(max-width:760px){.archive-logo{width:200px}.masthead .archive-identity{flex-shrink:0}.masthead .quiet{font-size:10px;max-width:110px;text-align:right}}
