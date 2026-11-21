@@ -1,0 +1,506 @@
+{
+  "schemaVersion": 1,
+  "researchedOn": "2026-11-20",
+  "amps": [
+    {
+      "id": "dual-professional-1947",
+      "catalogRowId": "csv-row-5",
+      "treatment": "timeline-addition",
+      "selectedYear": 1947,
+      "circuit": null,
+      "brief": "amps/dual-professional-1947.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [
+        "Q16"
+      ],
+      "reuseCandidates": [
+        "tweed covering (needs an early white/linen variant)",
+        "speaker-jensen-p12r construction as a starting point for 10-inch field-era Jensens",
+        "pointer knobs from the 5E3 assembly"
+      ],
+      "catalogName": "Dual Professional",
+      "catalogCsvRow": 5,
+      "catalogRowSha256": "c99ad0232a622ee842b869966b04bdbd4d1f5cea42e7b773935ac0fc5dae33b4",
+      "openQuestions": [
+        "Q13",
+        "Q16"
+      ]
+    },
+    {
+      "id": "tremolux-5e9-1955",
+      "catalogRowId": "csv-row-25",
+      "treatment": "timeline-addition",
+      "selectedYear": 1955,
+      "circuit": "5E9",
+      "brief": "amps/tremolux-5e9-1955.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "deluxe-5e3 assembly (tweed, oxblood grille, chicken-head knobs, top chrome panel)",
+        "speaker-jensen-p12r"
+      ],
+      "catalogName": "Tremolux (5E9 / 5E9-A)",
+      "catalogCsvRow": 25,
+      "catalogRowSha256": "a980f77902208299f6e7c28b7c1a71148266ba8c6291cf63a531a41d3894f6b1",
+      "openQuestions": [],
+      "publishedOnMain": "d0a8761",
+      "checks": "packets/small-amp-checks.md"
+    },
+    {
+      "id": "champ-5f1-1958",
+      "catalogRowId": "csv-row-37",
+      "treatment": "timeline-addition",
+      "selectedYear": 1959,
+      "circuit": "5F1",
+      "brief": "amps/champ-5f1-1958.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "deluxe-5e3 assembly scaled down (tweed, oxblood grille, chicken-head knob, top chrome panel)",
+        "new 8-inch speaker needed"
+      ],
+      "catalogName": "Champ (5F1, 8-inch)",
+      "catalogCsvRow": 37,
+      "catalogRowSha256": "88d19afc2f4689745371f21f2beb2f1f6a2e1d6b7b4921027ebf0dd76992258d",
+      "openQuestions": [
+        "Q8",
+        "Q25"
+      ],
+      "publishedOnMain": "d0a8761",
+      "checks": "packets/small-amp-checks.md"
+    },
+    {
+      "id": "showman-blonde-1961",
+      "catalogRowId": "csv-row-44",
+      "treatment": "timeline-addition",
+      "selectedYear": 1961,
+      "circuit": "6G14-A",
+      "brief": "amps/showman-blonde-1961.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "brown-era barrel knobs and forward-facing brown panel from the brown Princeton and Vibroverb studies",
+        "oxblood grille",
+        "new blonde tolex material, piggyback head and separate cabinet"
+      ],
+      "catalogName": "Showman (blonde)",
+      "catalogCsvRow": 44,
+      "catalogRowSha256": "d58700fc194a56ac315826dfbce21bd177d26b8df2d45ddcfa934f71d45403aa",
+      "openQuestions": [
+        "Q3"
+      ]
+    },
+    {
+      "id": "deluxe-6g3-1962",
+      "catalogRowId": "csv-row-46",
+      "treatment": "timeline-addition",
+      "selectedYear": 1962,
+      "circuit": "6G3",
+      "brief": "amps/deluxe-6g3-1962.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "brown tolex, wheat grille and brown barrel knobs from the brown Princeton and Vibroverb studies",
+        "speaker-oxford-12k5",
+        "front-facing panel layout approach from deluxe-reverb-black"
+      ],
+      "catalogName": "Deluxe (6G3)",
+      "catalogCsvRow": 46,
+      "catalogRowSha256": "9275965059155f46cbedbabe904d12761dd1da64ff9a188629310b5f2cef1476",
+      "openQuestions": [
+        "Q2",
+        "Q4"
+      ],
+      "publishedOnMain": "d0a8761",
+      "checks": "packets/small-amp-checks.md"
+    },
+    {
+      "id": "super-six-reverb-1972",
+      "catalogRowId": "csv-row-91",
+      "treatment": "timeline-addition",
+      "selectedYear": 1972,
+      "circuit": null,
+      "brief": "amps/super-six-reverb-1972.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "twin-reverb-early chassis, silver panel artwork, skirted knobs, silver/aqua grille and black tolex",
+        "10-inch speakers shared with the Super Reverb study",
+        "new tall cabinet, casters and side strap handles"
+      ],
+      "catalogName": "Super Six Reverb",
+      "catalogCsvRow": 91,
+      "catalogRowSha256": "ce148522710d64d033f4dcc08dc2a1781b7ef1ed330c3f52b2270e3eae732f26",
+      "openQuestions": [
+        "Q2",
+        "Q11"
+      ]
+    },
+    {
+      "id": "the-twin-1987",
+      "catalogRowId": "csv-row-115",
+      "treatment": "timeline-addition",
+      "selectedYear": 1988,
+      "circuit": null,
+      "brief": "amps/the-twin-1987.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [
+        "Q15"
+      ],
+      "reuseCandidates": [
+        "black tolex and silver grille from the black-panel studies",
+        "two 12-inch speakers and Twin-width cabinet from twin-reverb-early",
+        "new red knobs and a dense two-row panel"
+      ],
+      "catalogName": "The Twin (red/black knob)",
+      "catalogCsvRow": 115,
+      "catalogRowSha256": "3365de6a0520b7655f50c27f83acdede2387e0436735dc44bbbf81943fa425c2",
+      "openQuestions": [
+        "Q2",
+        "Q10",
+        "Q15"
+      ]
+    },
+    {
+      "id": "vibro-king-1993",
+      "catalogRowId": "csv-row-128",
+      "treatment": "timeline-addition",
+      "selectedYear": 1993,
+      "circuit": null,
+      "brief": "amps/vibro-king-1993.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "10-inch speakers shared with the Super Reverb and Bassman studies",
+        "black tolex or new blonde tolex (shared with the Showman)",
+        "new ivory radio knobs and three-section panel"
+      ],
+      "catalogName": "Vibro-King",
+      "catalogCsvRow": 128,
+      "catalogRowSha256": "72fb7cbe5ff4fcb3044aa73b68707bf298379567bd5bf29165655a36cd1efb1b",
+      "openQuestions": [
+        "Q2",
+        "Q5"
+      ]
+    },
+    {
+      "id": "blues-junior-1995",
+      "catalogRowId": "csv-row-131",
+      "treatment": "timeline-addition",
+      "selectedYear": 1995,
+      "circuit": "PR 295",
+      "brief": "amps/blues-junior-1995.md",
+      "readiness": "ready",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "black tolex and silver grille",
+        "chicken-head knobs and top chrome panel from deluxe-5e3",
+        "new 12-inch Eminence speaker"
+      ],
+      "catalogName": "Blues Junior (I–II)",
+      "catalogCsvRow": 131,
+      "catalogRowSha256": "a4b1e0566f46e86ccb72f8a599e84a985fb98ac4b5be93a25bb65bce444e88ca",
+      "openQuestions": [
+        "Q2"
+      ]
+    },
+    {
+      "id": "pano-verb-2024",
+      "catalogRowId": "csv-row-206",
+      "treatment": "timeline-addition",
+      "selectedYear": 2024,
+      "circuit": null,
+      "brief": "amps/pano-verb-2024.md",
+      "readiness": "ready",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "10-inch and 15-inch speaker builders (a 15 is new to the library)",
+        "black tolex",
+        "tilt-back legs from the Twin and Super Reverb studies",
+        "new yellow, black and white trim"
+      ],
+      "catalogName": "Jack White Pano Verb",
+      "catalogCsvRow": 206,
+      "catalogRowSha256": "9f092ed314d66940267f6176dd1216c7f2fdd7fb653ef642400e883a346e675c",
+      "openQuestions": [
+        "Q2"
+      ]
+    },
+    {
+      "id": "deluxe-5e3",
+      "catalogRowId": "csv-row-24",
+      "treatment": "explorer-upgrade",
+      "selectedYear": 1957,
+      "circuit": "5E3",
+      "brief": "amps/deluxe-5e3.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "deluxe-5e3 (existing assembly)",
+        "speaker-jensen-p12r"
+      ],
+      "catalogName": "Deluxe (5E3)",
+      "catalogCsvRow": 24,
+      "catalogRowSha256": "4c98a42c0e668f56b7b8f341bab112c24811f04f7a1d1c6924f8b84b4d755e86",
+      "openQuestions": [
+        "Q2"
+      ],
+      "explorerPacket": "packets/deluxe-5e3-explorer.md"
+    },
+    {
+      "id": "princeton-reverb-aa1164",
+      "catalogRowId": "csv-row-67",
+      "treatment": "timeline-addition",
+      "selectedYear": 1965,
+      "circuit": "AA1164",
+      "brief": "amps/princeton-reverb-aa1164.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [
+        "Q17"
+      ],
+      "reuseCandidates": [
+        "deluxe-reverb-black parts: black tolex, silver grille, skirted knobs, black panel, strap handle, glides",
+        "new 10-inch speaker",
+        "new smaller cabinet and six-knob single-channel panel"
+      ],
+      "catalogName": "Princeton Reverb (black panel)",
+      "catalogCsvRow": 67,
+      "catalogRowSha256": "3d0846ac0ac8d4b1e92f701ae6f3765982c89e46f5f6c5d0b741bf3cb3aa284b",
+      "openQuestions": [
+        "Q2",
+        "Q7",
+        "Q12",
+        "Q17"
+      ],
+      "modelingPacket": "packets/princeton-reverb-modeling.md"
+    },
+    {
+      "id": "super-reverb-ab763",
+      "catalogRowId": "csv-row-60",
+      "treatment": "explorer-upgrade",
+      "selectedYear": 1965,
+      "circuit": "AB763",
+      "brief": "amps/super-reverb-ab763.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [
+        "Q17"
+      ],
+      "reuseCandidates": [
+        "deluxe-reverb-black and twin-reverb-early parts: black tolex, silver grille, skirted knobs, tail badge, strap handle, tilt-back legs",
+        "new 10-inch speaker, four used",
+        "new tall 4x10 cabinet"
+      ],
+      "catalogName": "Super Reverb (black panel)",
+      "catalogCsvRow": 60,
+      "catalogRowSha256": "c3e5d82578d7848a58ce794ed67cb60ab429403c6474ac405676bb7defe0f98e",
+      "openQuestions": [
+        "Q12",
+        "Q17"
+      ]
+    },
+    {
+      "id": "pro-tv-front-1949",
+      "catalogRowId": "csv-row-9",
+      "treatment": "timeline-addition",
+      "selectedYear": 1949,
+      "circuit": "5A5",
+      "brief": "amps/pro-tv-front-1949.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [
+        "Q19"
+      ],
+      "reuseCandidates": [
+        "TV-front cabinet shared with the Bassman 5B6",
+        "tweed material and top-hung chassis approach from deluxe-5e3",
+        "new 15-inch speaker (shared with Vibrasonic, Fender 75 and Pano Verb)"
+      ],
+      "catalogName": "Pro (TV front)",
+      "catalogCsvRow": 9,
+      "catalogRowSha256": "08f5ded2c977f81248d4a0eb3fa7c4b0f2c86c4ea776a25587e62664e357c720",
+      "openQuestions": [
+        "Q19"
+      ],
+      "researchPass": 3
+    },
+    {
+      "id": "bassman-5b6-1952",
+      "catalogRowId": "csv-row-13",
+      "treatment": "timeline-addition",
+      "selectedYear": 1952,
+      "circuit": "5B6",
+      "brief": "amps/bassman-5b6-1952.md",
+      "readiness": "blocked",
+      "blockingQuestions": [
+        "Q24",
+        "Q27"
+      ],
+      "reuseCandidates": [
+        "TV-front cabinet from the Pro study",
+        "new 15-inch speaker",
+        "chicken-head knobs from deluxe-5e3"
+      ],
+      "catalogName": "Bassman (5B6, 1x15)",
+      "catalogCsvRow": 13,
+      "catalogRowSha256": "dcfee0b6eb6b74a0beaffb841613e431bed465e62cc09074bb4f865aba0a014a",
+      "openQuestions": [
+        "Q24",
+        "Q27"
+      ],
+      "researchPass": 3
+    },
+    {
+      "id": "vibrasonic-5g13-1960",
+      "catalogRowId": "csv-row-38",
+      "treatment": "timeline-addition",
+      "selectedYear": 1960,
+      "circuit": "5G13",
+      "brief": "amps/vibrasonic-5g13-1960.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "brown panel, barrel knobs and covering from the Deluxe 6G3 and Showman studies",
+        "new 15-inch speaker"
+      ],
+      "catalogName": "Vibrasonic (6G13 / 6G13-A)",
+      "catalogCsvRow": 38,
+      "catalogRowSha256": "659c834fb5a6cadd845623dd23e5c9044f3f664880ac6af1bc9f160561ba5462",
+      "openQuestions": [
+        "Q2"
+      ],
+      "researchPass": 3
+    },
+    {
+      "id": "bassman-blackface-ab165-1965",
+      "catalogRowId": "csv-row-70",
+      "treatment": "timeline-addition",
+      "selectedYear": 1965,
+      "circuit": "AB165",
+      "brief": "amps/bassman-blackface-ab165-1965.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [
+        "Q22"
+      ],
+      "reuseCandidates": [
+        "black tolex, grille, skirted knobs, tail logo and tilt-back legs from deluxe-reverb-black and twin-reverb-early",
+        "piggyback head-and-cabinet form from the Showman study",
+        "12-inch speaker"
+      ],
+      "catalogName": "Bassman (black panel)",
+      "catalogCsvRow": 70,
+      "catalogRowSha256": "06ee0639ba8f9578c9e1cff3072bfe903c60794f6313204c80819dd14cedb3f2",
+      "openQuestions": [
+        "Q22"
+      ],
+      "researchPass": 3
+    },
+    {
+      "id": "fender-75-1980",
+      "catalogRowId": "csv-row-103",
+      "treatment": "timeline-addition",
+      "selectedYear": 1980,
+      "circuit": null,
+      "brief": "amps/fender-75-1980.md",
+      "readiness": "blocked",
+      "blockingQuestions": [
+        "Q20"
+      ],
+      "reuseCandidates": [
+        "black tolex, skirted knobs and glides from existing studies",
+        "new 15-inch speaker",
+        "new tailless logo"
+      ],
+      "catalogName": "Fender 75",
+      "catalogCsvRow": 103,
+      "catalogRowSha256": "004c44374834b16c6501fdbc2ec479bbd63eb6b71fc2af3791cd36e2cb7ae656",
+      "openQuestions": [
+        "Q20"
+      ],
+      "researchPass": 3
+    },
+    {
+      "id": "prosonic-1996",
+      "catalogRowId": "csv-row-137",
+      "treatment": "timeline-addition",
+      "selectedYear": 1996,
+      "circuit": "CSR 13",
+      "brief": "amps/prosonic-1996.md",
+      "readiness": "ready",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "10-inch speakers from the Super Reverb study",
+        "tail logo and silver grille",
+        "new red and green coverings"
+      ],
+      "catalogName": "Prosonic",
+      "catalogCsvRow": 137,
+      "catalogRowSha256": "3a6c4f948181ec1abb7f8aae731f2187976aefd1b30413e9c5ff18ed11b6cfee",
+      "openQuestions": [],
+      "researchPass": 3
+    },
+    {
+      "id": "bassman-5f6a",
+      "catalogRowId": "csv-row-35",
+      "treatment": "explorer-upgrade",
+      "selectedYear": 1959,
+      "circuit": "5F6-A",
+      "brief": "amps/bassman-5f6a.md",
+      "readiness": "blocked",
+      "blockingQuestions": [
+        "Q23"
+      ],
+      "reuseCandidates": [
+        "tweed, oxblood grille, chicken-head knobs and top-hung chassis from deluxe-5e3",
+        "10-inch speaker from the Super Reverb study",
+        "new 4x10 narrow-panel cabinet (no shared assembly yet)"
+      ],
+      "catalogName": "Bassman (5F6 / 5F6-A)",
+      "catalogCsvRow": 35,
+      "catalogRowSha256": "a529901fb44a2ccb3eaf20c74a4c5b633bd7ecfc47a25a558954670860bd295f",
+      "openQuestions": [
+        "Q23"
+      ],
+      "researchPass": 3
+    },
+    {
+      "id": "vibroverb-6g16",
+      "catalogRowId": "csv-row-56",
+      "treatment": "explorer-upgrade",
+      "selectedYear": 1963,
+      "circuit": "6G16",
+      "brief": "amps/vibroverb-6g16.md",
+      "readiness": "blocked",
+      "blockingQuestions": [
+        "Q21",
+        "Q23"
+      ],
+      "reuseCandidates": [
+        "brown panel, knobs and covering from the Deluxe 6G3 and Vibrasonic studies",
+        "10-inch speakers from the Super Reverb study",
+        "tilt-back legs",
+        "new 2x10 brown cabinet (no shared assembly yet)"
+      ],
+      "catalogName": "Vibroverb (6G16 brown)",
+      "catalogCsvRow": 56,
+      "catalogRowSha256": "c44b0b6ed07e1ca1d149c2290b0b60fea4ab1ce310b984a7019bad2566b10d25",
+      "openQuestions": [
+        "Q21",
+        "Q23"
+      ],
+      "researchPass": 3
+    }
+  ],
+  "timelineOnMain": {
+    "entries": 22,
+    "assemblies": [
+      "5E3 Deluxe",
+      "Deluxe Reverb",
+      "1968 Twin",
+      "Champ 5F1",
+      "early Tremolux 5E9",
+      "brown Deluxe 6G3"
+    ],
+    "mainCommit": "b6d1c2f"
+  },
+  "blockingRule": "A question is blocking when its QUESTIONS.md status says \"Blocks\". Readiness is \"blocked\" when a blocker stops modeling or the explorer (Q20, Q23, Q24); other blockers leave readiness as is and stop only the named content.",
+  "location": "docs/research on main (moved from branch codex/amp-expansion-research 2026-11-20)"
+}

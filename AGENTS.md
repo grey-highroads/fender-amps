@@ -1,8 +1,39 @@
 # Fender Amps agent entry point
 
-Read [docs/handoff/README.md](docs/handoff/README.md) before changing this project.
-It links the current state, user priorities, decisions, architecture, references,
-and the separate GitHub and private-site publishing workflows.
+This file is the single starting point for every agent. Read it first, then the
+file it sends you to for your task. Everything below is on `main`.
+
+## Where everything lives
+
+| What | Where | Read it when |
+| --- | --- | --- |
+| Project state, priorities, decisions, architecture, publishing | [docs/handoff/README.md](docs/handoff/README.md) | Always, before changing anything |
+| Amp research: one brief per amp, with sources, dimensions, photo references and proposed hotspots | [docs/research/README.md](docs/research/README.md), briefs in [docs/research/amps/](docs/research/amps/) | Before modeling, writing copy or hotspots for any amp |
+| Open and resolved research questions | [docs/research/QUESTIONS.md](docs/research/QUESTIONS.md) | Before treating any figure as settled |
+| Research status per amp (readiness, blockers, catalog row) | [docs/research/manifest.json](docs/research/manifest.json) | To see what is ready to build |
+| Modeling packets and rechecked hotspot drafts | [docs/research/packets/](docs/research/packets/) | Princeton model, 5E3 hotspots, checks on Champ, Tremolux, brown Deluxe |
+| Photo sets for composites (lists only; files are on the owner's Mac) | [docs/research/images/](docs/research/images/) | When collecting or using photos |
+| Small-amp build notes | [docs/handoff/SMALL_AMPS.md](docs/handoff/SMALL_AMPS.md) | When working on Champ, Tremolux or brown Deluxe |
+| Catalog (source of truth) | [data/catalog/](data/catalog/README.md) | When mapping an amp to a catalog row |
+| Site code and copy (published) | `dist/` | Only for site changes |
+
+**Do not redo research that exists.** Check the amp's brief and the packets first.
+If something is missing or looks wrong, add to the brief or QUESTIONS.md rather
+than starting a parallel study. Research follows the source order in
+[docs/research/README.md](docs/research/README.md): Fender's own material first,
+dealer listings last.
+
+## Branches
+
+- Only `dist/` is published to fendertubeamps.com. Documentation, research and
+  handoff notes go straight to `main` in the folders above.
+- Use a branch only for changes to the site itself (`dist/`, models) that need the
+  owner's review before going live. Merge or delete it when done. Do not keep
+  long-lived branches as storage; anything another agent needs must be on `main`.
+- When you finish substantive work, update the relevant file above so the next
+  agent finds it from here.
+
+## Project rules
 
 - The current priority is an educational construction explorer: use 3D for
   proportions and component relationships, with clearly attributed real photos.
