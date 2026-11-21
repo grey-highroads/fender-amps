@@ -284,7 +284,8 @@ positions are estimates; Princeton rectifier and Champ depth conflicts remain op
 The user accepted the Princeton/brown Deluxe/Champ hotspot information and
 placement, and rejected the generated renders as unrealistic. They are **not
 accepted realistic assets**. Image generation and realism work are deferred.
-The new isolated implementation completes hotspots on Tremolux, Super Six,
+The isolated `codex/remaining-active-hotspots` implementation (pending owner
+review/publication) completes hotspots on Tremolux, Super Six,
 original Blues Junior and Prosonic (21 new topics; all ten active profiles). See [topics, anchors, sources and limits](ACTIVE_HOTSPOTS.md).
 No new amps or generated assets are part of this round.
 

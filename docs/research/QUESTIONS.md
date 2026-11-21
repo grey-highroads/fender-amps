@@ -136,3 +136,14 @@ Licence and credit were read from the Commons metadata on 2026-11-20. Check each
 ### Q27. Bassman 5B6: is the 1952 TV-front amp a 5B6 at all?
 
 **Status: open. Needs an owner or builder decision.** Fender's own history says the 1952 TV-front amp appeared in sales literature labelled "Amplifier", and that the 5B6 was the 1953 wide-panel restyle of it, essentially the same amp. The brief and catalog row 13 pair "5B6" with the 1952 TV front, and the Fender drawing read for the brief is headed only "BASSMAN" with no number. Either model the 1952 TV front without the 5B6 name, or switch to the 1953 wide panel and keep it. Fender also says the 1952 amp was its first closed-back amp, with two ports, a Jensen P15N and a bottom-mounted, copper-plated chassis; dimensions and output are not given. [fender-bassman-history](https://www.fender.com/articles/parts-and-accessories/going-low-the-history-of-the-bassman)
+
+## Hotspot implementation follow-up
+
+The remaining-active-amp profiles are implemented on the isolated
+`codex/remaining-active-hotspots` site-review branch. See
+[build notes](../handoff/ACTIVE_HOTSPOTS.md) and the four updated briefs. This
+does not settle the missing original 5E9 drawing, precise specimen socket
+placements, exact 1972 Super Six revision or 1996 Prosonic values against the
+available 1997 sheet. The original Junior service text is kept separate from
+later sheets in the downloaded bundle. Owner accepted the earlier batch’s
+hotspots but rejected its renders; further generated-image work is deferred.

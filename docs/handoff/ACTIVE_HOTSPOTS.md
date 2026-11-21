@@ -7,8 +7,11 @@ active amps**, not image generation or model/material realism. Existing image
 files/viewer remain unchanged; no new media is attached to these four profiles.
 
 Started on isolated `codex/remaining-active-hotspots` from `c2853f5`; research
-branch remained `0cfe2db`. Read the research briefs through Git, not a merge of
-its older runtime. All ten active amps now have explorers: **65 topics**, adding
+branch started at `0cfe2db`. Read the research briefs through Git, not a merge of
+its older runtime. During completion, main advanced to `d3b0003` with the research
+moved into `docs/research/`; those documentation-only commits were merged into
+the review branch without runtime changes. The four briefs and QUESTIONS now
+link this implementation/evidence follow-up. On the review branch, all ten active amps now have explorers: **65 topics**, adding
 4 Tremolux, 6 Super Six, 5 original Blues Junior and 6 Prosonic. The ten assembly
 choices, 208 catalog mappings, panel art, dimensions and component geometry are
 unchanged. Anchors are metadata/empty objects in the actual shared factories.
