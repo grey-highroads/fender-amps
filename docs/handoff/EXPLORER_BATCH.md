@@ -330,3 +330,10 @@ approximate; dealer dating and originality are not independently authenticated.
 No model, hotspots or viewer behavior changed. Updated the media scope check
 for this explicit user authorization. All six npm checks and whitespace pass;
 local front and rear enlarged views visually checked. Production check follows.
+
+Super Six publication verified: runtime `e6e95f0348a175e91da1ac97abf84cc17d4967f1`,
+Git production deployment `dpl_8purVxpqrmzEuLBAJcMMCr8Ai8vs`, READY.
+Public thumbnail/viewer loaded front (1024 px, `super-six/front.jpg`) and rear
+visibly matching the approved pair. Private review capture:
+`outputs/super-six-photoreal-review/published-rear.jpg`.
+https://fendertubeamps.com/?amp=super-six-reverb-1972
