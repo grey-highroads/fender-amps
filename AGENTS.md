@@ -34,6 +34,24 @@ dealer listings last.
 - When you finish substantive work, update the relevant file above so the next
   agent finds it from here.
 
+## Who owns what
+
+Agents split the work by job so two agents never edit the same text at once.
+
+| Job | Owns | Does not touch |
+| --- | --- | --- |
+| Builder | Models, layout, code, hotspot placement and the facts on each card (what the part is, which circuit, which source) | Card and story wording beyond a first factual draft |
+| Copy | All site wording: timeline stories, hotspot card text, interface text. Voice rules are in [docs/handoff/COPY_VOICE.md](docs/handoff/COPY_VOICE.md). | Geometry, hotspot positions, code logic, the facts themselves |
+| Research | Everything in `docs/research/` | `dist/` |
+
+- The copy agent always starts from the current `main`. Before rewriting a file,
+  pull `main` again; if the builder has changed it since, work on top of that.
+- The builder adds new hotspots with plain factual text and leaves the wording to
+  the copy agent. If a fact in the copy is wrong, the builder corrects the fact
+  and says so in the commit message; the copy agent then rewords it.
+- If a job needs the other's file, finish and merge your change first, then hand
+  off. Do not edit the same file on two branches.
+
 ## Project rules
 
 - Current work is hotspot content and placement across the ten active amps.
