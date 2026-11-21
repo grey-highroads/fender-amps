@@ -352,3 +352,13 @@ background, no extra content. Source concept remains in the owner's generated
 image library. No historical or model changes. All six checks pass; local browser
 review confirms the horizontal mark. Separate uncommitted orbital layout work
 is excluded from this branding release.
+
+## November 21: timeline emphasis
+
+Owner requested a smaller intro and removal of “THE TIMELINE”, “The modeled
+ones have a 3D explorer.” and the modeled-amp count. Reduced intro heading to
+28–40 px, tightened top/section spacing and filter controls, and removed the
+count element and its update so filters still work without a missing-node error.
+The timeline retains its existing model/card scale, now appearing substantially
+higher on the page. All six checks pass; browser review at desktop and 390 px
+confirmed the new balance. Separate orbital experiment remains excluded.

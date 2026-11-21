@@ -96,3 +96,23 @@
 
 .masthead .archive-identity{display:block;line-height:0}.archive-logo{display:block;width:252px;height:auto;max-width:100%}
 @media(max-width:760px){.archive-logo{width:200px}.masthead .archive-identity{flex-shrink:0}.masthead .quiet{font-size:10px;max-width:110px;text-align:right}}
+
+/* Let the timeline lead; keep the introduction compact. */
+#collection{padding-top:24px}
+.collection-intro{align-items:center;gap:40px;margin-bottom:20px}
+.collection-intro h1{font-size:clamp(28px,2.6vw,40px);line-height:1.14;letter-spacing:-1.3px;margin:0}
+.collection-intro p{max-width:490px;font-size:13px;line-height:1.65;margin:0}
+.collection-intro p span{font-size:12px}
+.collection-filter{margin-bottom:12px}
+.collection-filter button{padding:7px 12px;font-size:12px}
+@media(max-width:760px){
+ #collection{padding-top:18px}
+ .collection-intro{margin-bottom:16px}
+ .collection-intro h1{font-size:28px;letter-spacing:-1px;margin:0}
+ .collection-intro h1 br{display:none}
+ .collection-intro h1 em{margin-left:.22em}
+ .collection-intro p{margin-top:10px;font-size:12px;line-height:1.55}
+ .collection-intro p br{display:none}
+ .collection-intro p span{display:block;margin-top:4px;font-size:11px}
+ .collection-filter button{padding:7px 12px}
+}

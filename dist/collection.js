@@ -225,7 +225,6 @@ function filterTimeline(all){
  }
  $('show-active').setAttribute('aria-pressed',!all);$('show-all').setAttribute('aria-pressed',all);
  const count=cards.filter(b=>!b.hidden).length;
- $('collection-count').textContent=all?`${count} entries · including WIP`:`${count} modeled amps`;
  document.querySelectorAll('#collection-decades button').forEach(b=>b.disabled=!amps.some((a,i)=>!cards[i].hidden&&Math.floor(a.year/10)*10===+b.dataset.decade));
  const next=amps.findIndex((a,i)=>!cards[i].hidden&&a.year>=year);
  const target=next>=0?next:cards.findLastIndex(b=>!b.hidden);
