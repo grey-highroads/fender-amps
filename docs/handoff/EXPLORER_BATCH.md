@@ -167,6 +167,14 @@ Princeton rectifier history and Champ depth remain open.
 These are our browser captures, stored under Git LFS. They are not historical
 reference photographs or a controlled rendering comparison.
 
+## Subsequent owner review
+
+The owner accepted this batch’s hotspot information and placement, but rejected
+its renders as unrealistic. The generation inspection above records checks
+performed during that task; it **does not record owner acceptance of realism**.
+The next round is hotspot-only for the remaining four active amps; see
+[updated scope](ACTIVE_HOTSPOTS.md). Generated media are not a prerequisite.
+
 ## Next batch requirements
 
 - **Tremolux:** trace a genuine 5E9 before writing mechanism claims; the available
@@ -180,8 +188,8 @@ reference photographs or a controlled rendering comparison.
 - **Prosonic combo:** trace CSR 13 switching/rectification and reverb against its
   service documents; keep head-only features out of the 2×10 combo.
 
-Each needs reviewed source-to-topic/anchor decisions and its own front/rear media
-pair. No additional explorer or assembly is authorized by this completion.
+Each needs reviewed source-to-topic/anchor decisions. The subsequent owner
+instruction authorizes those four hotspot profiles only and defers image work.
 
 ## Publication
 

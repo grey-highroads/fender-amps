@@ -587,3 +587,13 @@ card; capture-phase card Escape preserves the amp and restores focus. Detail
 focus handling includes selects and disclosure summaries. `batchFit` precedes
 exploration zoom. `npm test` now runs six check scripts. Catalog/configurations
 are unchanged; estimated anchor metadata propagates to shared GLB exports.
+
+## Remaining active hotspot profiles
+
+See [scope, sources and current validation](ACTIVE_HOTSPOTS.md). Four profiles
+add 21 cards through the same explorer. `combo-rear-profiles.js` supplies the
+existing rear hardware coordinates to both construction and anchor placement.
+No component geometry, panel artwork, image code or image assets changed.
+All ten assemblies now have profiles; current checks verify that coverage.
+Original six-profile placement remains intact. Later manual/drawing revisions
+are scoped in the new content rather than silently assigned to selected years.

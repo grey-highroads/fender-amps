@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {ACTIVE_EXPLORATIONS} from './active-amp-features.js';
 import {TWIN_TONE} from './twin-tone.js';
 import {TWIN_FEATURES} from './twin-features.js';
 import {TWEED_FEATURES} from './tweed-features.js';
@@ -13,6 +14,7 @@ const partReferences=[
 ];
 export const twinParts=[...TWIN_FEATURES,...partReferences.map(part=>({...part,...TWIN_TONE[part.id],side:'rear'}))];
 export const EXPLORATIONS={
+ ...ACTIVE_EXPLORATIONS,
  'princeton-reverb-aa1164':{name:'Princeton Reverb',parts:PRINCETON_FEATURES},
  'deluxe-6g3':{name:'Brown Deluxe',parts:BROWN_FEATURES},
  'champ-5f1':{name:'Champ',parts:CHAMP_FEATURES},

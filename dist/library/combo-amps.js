@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import {MM,createSpeaker,createFaceplate,createBadge,createHandle,createScrew,createJack,createCaster} from './parts.js';
 import {createMaterial,physicalUV} from './materials.js';
+import {COMBO_REAR_CONTROLS} from './combo-rear-profiles.js';
+import {EXPLORER_ANCHORS} from './explorer-anchors.js';
+import {assetById} from './catalog.js';
 import {COMBO_PANELS} from './combo-profiles.js';
 import {label,drawArtwork} from './panel-lettering.js';
 const mat=(color,extra={})=>new THREE.MeshStandardMaterial({color,roughness:.65,...extra});
@@ -21,12 +24,8 @@ function rearBoard(p,w,h,y,z,m,holes=[]){
  const o=plate(p,w,h,9,0,y,z,m,holes,'removable-rear-board');o.userData.rearPanel=true;
  for(const x of [-w/2+12,w/2-12])for(const yy of [y-h/2+12,y+h/2-12]){const s=createScrew();s.rotation.y=Math.PI;s.position.set(x,yy,z-1);p.add(s);}return o;
 }
-const rearControls={
- 'super-six-reverb-1972':[['outlet',24,'AC'],['toggle',69,'GROUND'],['fuse',108,'FUSE'],['toggle',153,'POWER'],['toggle',194,'STANDBY'],['jack',258,'SPEAKER'],['jack',299,'EXT SPKR'],['jack',377,'VIBRATO'],['jack',419,'REVERB'],['rca',475,'REV OUT'],['rca',515,'REV IN']],
- 'prosonic-1996':[['cord',17,''],['toggle',54,'POWER'],['fuse',94,'FUSE'],['toggle',137,'STANDBY'],['rotary',190,'BIAS/RECTIFIER'],['jack',253,'SPEAKER'],['jack',294,'EXT SPKR'],['jack',353,'FOOTSWITCH'],['jack',410,'RETURN'],['jack',455,'SEND']]
-};
 function rearStrip(p,id,W,H,D,metal){
- const controls=rearControls[id],w=W-76,h=48,g=new THREE.Group();g.name='rear-controls-'+id;g.rotation.y=Math.PI;g.position.set(0,H/2-42,-D/2+3);p.add(g);
+ const controls=COMBO_REAR_CONTROLS[id],w=W-76,h=48,g=new THREE.Group();g.name='rear-controls-'+id;g.rotation.y=Math.PI;g.position.set(0,H/2-42,-D/2+3);p.add(g);
  box(g,w,h,2,0,0,0,metal);
  const paths=[];for(const [kind,x,text]of controls)if(text)label(paths,text,x,h-4,2.5,{width:kind==='rotary'?64:39,weight:.12});
  if(id==='prosonic-1996'){label(paths,'A/TUBE - AB/TUBE - AB/SS',190,5,1.8,{width:95,weight:.1});label(paths,'PROSONIC',w-28,6,3,{width:51});}
@@ -38,6 +37,7 @@ function rearStrip(p,id,W,H,D,metal){
   else if(kind==='cord'){const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(X,0,3),new THREE.Vector3(X-7,-35,20),new THREE.Vector3(X-20,-80,24)]);g.add(new THREE.Mesh(new THREE.TubeGeometry(curve,20,2.3,6,false),mat('#171b1a')));}
   else{const cap=cylinder(g,kind==='rotary'?9:5.5,kind==='toggle'?10:12,X,0,7,kind==='toggle'?metal:mat('#212624'));cap.rotation.x=Math.PI/2;cap.name=text;}
  }
+ return g;
 }
 function wire(p,points,color='#b6af8b',name='speaker-lead-estimate'){const c=new THREE.CatmullRomCurve3(points.map(v=>new THREE.Vector3(...v)));const m=new THREE.Mesh(new THREE.TubeGeometry(c,28,1.1,6,false),mat(color));m.name=name;p.add(m);}
 export function createComboAmp(a){
@@ -67,8 +67,9 @@ export function createComboAmp(a){
  else panel.position.set(0,H/2-39,D/2-8);
  b.add(panel);
  const badge=createBadge(a.badge);badge.position.set(junior?0:-W/2+99,junior?H/2-22:H/2-a.topRail-45,D/2+1);b.add(badge);
+ const speakers=[],tubes=[];let rearPanel=null;
  for(const [i,[x,y]]of a.speakerPositions.entries()){
-  const speaker=createSpeaker(a.speaker);speaker.position.set(x,y,D/2-29);speaker.name='speaker-'+(i+1);speaker.userData.speakerIndex=i;b.add(speaker);
+  const speaker=createSpeaker(a.speaker);speaker.position.set(x,y,D/2-29);speaker.name='speaker-'+(i+1);speaker.userData.speakerIndex=i;speakers.push(speaker);b.add(speaker);
  }
  // Back boards differ materially: capsule tube window vs sloping service cutout.
  if(junior){rearBoard(b,W-2*t-4,a.rearUpper,H/2-t-a.rearUpper/2,-D/2+1,cover,[capsule(-49,-72,209,39)]);}
@@ -76,7 +77,7 @@ export function createComboAmp(a){
   const h=a.rearUpper,w=W-2*t-4,y=H/2-t-h/2,shape=new THREE.Shape();
   shape.moveTo(-w/2,-h/2);shape.lineTo(w/2,-h/2);shape.lineTo(w/2,h/2);shape.lineTo(w*.46,h/2);shape.lineTo(w*.38,h/2-61);shape.lineTo(-w*.38,h/2-61);shape.lineTo(-w*.46,h/2);shape.lineTo(-w/2,h/2);shape.closePath();
   const back=new THREE.Mesh(new THREE.ExtrudeGeometry(shape,{depth:9,bevelEnabled:false}),cover);back.position.set(0,y,-D/2+1);back.name='upper-sloped-rear-board';back.userData.rearPanel=true;physicalUV(back);b.add(back);
-  rearStrip(b,a.id,W,H,D,metal);
+  rearPanel=rearStrip(b,a.id,W,H,D,metal);
  }
  rearBoard(b,W-2*t-4,a.rearLower,-H/2+t+a.rearLower/2,-D/2+1,cover);
  // Metal chassis and tubes. Exact tube/socket positions are explanatory estimates.
@@ -85,7 +86,7 @@ export function createComboAmp(a){
  for(const [i,type]of a.tubeTypes.entries()){
   const large=!type.startsWith('12')&&type!=='7025',r=type==='EL84'?9:large?12:8,length=type==='EL84'?66:large?78:44;
   const x=junior?48-i*36:-W*.36+i*(W*.72/(n-1)),socketY=junior?H/2-205:H/2-83,z=-D/2+45;
-  const tube=new THREE.Group();tube.name=type;tube.userData.tubeType=type;b.add(tube);
+  const tube=new THREE.Group();tube.name=type;tube.userData.tubeType=type;tube.userData.anchorMm=[x,socketY-length*.75,z-r-2];tubes.push(tube);b.add(tube);
   cylinder(tube,r+1,7,x,socketY,z,dark);cylinder(tube,r,length,x,socketY-length/2,z,mat('#9c9e8e',{transparent:true,opacity:.32,roughness:.2}));cylinder(tube,r*.65,length*.76,x,socketY-length/2,z,dark);
  }
  const tank=box(b,Math.min(W-75,390),23,85,0,-H/2+32,-7,dark,'reverb-tank-envelope-estimate');
@@ -107,5 +108,18 @@ export function createComboAmp(a){
  if(junior){
   const paths=[];label(paths,'BLUES JUNIOR',70,10,8,{width:120});label(paths,'TYPE PR 295',70,35,3,{width:105});label(paths,'FENDER - MADE IN USA',70,47,2.4,{width:120});const c=document.createElement('canvas');c.width=1024;c.height=440;drawArtwork(c,{width:140,height:60,background:'#a7aaa1',ink:'#232826',paths});const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;const tag=new THREE.Mesh(new THREE.PlaneGeometry(140,60),mat('#fff',{map}));tag.rotation.y=Math.PI;tag.position.set(75,H/2-77,-D/2);tag.name='rear-identification-study';b.add(tag);
  }
- amp.userData={assemblyId:a.id,modelProfile:a.example,dimensionsBasis:a.dimensionsStatus,dimensionsMm:a.dimensionsMm,construction:'Educational construction; hardware and interior placement estimated',batchFit:six?.52:1,revision:'1.0',rectifierBasis:a.rectifierBasis};return amp;
+ amp.userData={assemblyId:a.id,modelProfile:a.example,dimensionsBasis:a.dimensionsStatus,dimensionsMm:a.dimensionsMm,construction:'Educational construction; hardware and interior placement estimated',batchFit:six?.52:1,revision:'1.0',rectifierBasis:a.rectifierBasis};
+ const targets=EXPLORER_ANCHORS[a.id],layout=COMBO_PANELS[a.panel];
+ if(targets){
+  for(const [id,target] of Object.entries(targets)){
+   const anchor=new THREE.Object3D();anchor.name=`explore-${id}`;anchor.userData={explorePart:id,explorePoint:true,placement:'Estimated construction; shared hardware coordinates',menuOnly:!!target.menuOnly};
+   if(target.knob!==undefined){anchor.position.set(layout.knobs[target.knob]-layout.width/2,0,18);panel.add(anchor);}
+   else if(target.button!==undefined||target.toggle!==undefined){const [x,y]=target.button!==undefined?layout.buttons[target.button]:layout.toggles[target.toggle];anchor.position.set(x-layout.width/2,y,16);panel.add(anchor);}
+   else if(target.rearControl!==undefined){const [,x]=COMBO_REAR_CONTROLS[a.id][target.rearControl];anchor.position.set(x-(W-76)/2,0,20);rearPanel.add(anchor);}
+   else if(target.speakerIndex!==undefined){anchor.position.set(0,0,-assetById(a.speaker).build.depth-9);speakers[target.speakerIndex].add(anchor);}
+   else if(target.tube!==undefined){anchor.position.fromArray(tubes[target.tube].userData.anchorMm);tubes[target.tube].add(anchor);}
+  }
+  amp.userData.exploration='active-hotspots-v1';amp.userData.controlPanelY=H/2*MM;
+ }
+ return amp;
 }

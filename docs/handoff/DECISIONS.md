@@ -16,6 +16,17 @@
 | Keep project context in the repository | Future agents should find current state, decisions, rationale, evidence and operational details without rereading the chat. |
 | Corrected workbook is the catalog authority (November 20, 2026) | Use the 208-entry workbook identified in `data/catalog/source.json`; it supersedes the previous sheet. Preserve all three tabs and evidence qualifications. Runtime mapping and exact-year configurations require explicit reconciliation; this does not authorize collection expansion. |
 
+## November 20: hotspot acceptance and realism correction
+
+The user accepted the first expansion batch’s hotspot information and placement,
+but rejected its generated renders as not realistically representing the amps.
+Passing structural checks and our internal illustration review did not establish
+user acceptance of realism. Preserve that distinction in future handoffs.
+The next round is **only hotspot content and placement for Tremolux, Super Six,
+original Blues Junior and Prosonic**, completing the active set. Do not spend
+this round on image generation, new modeled amps, materials or photorealism.
+Existing images are retained pending separate direction, not promoted as accepted.
+
 ## Implementation choices
 
 **Keep the existing static app while improving assets.** The current fidelity
