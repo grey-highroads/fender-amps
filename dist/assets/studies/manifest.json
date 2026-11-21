@@ -286,5 +286,41 @@
     ],
     "knownInaccuracies": "Generated fine lettering, rear panel text, dimensions and speaker details remain approximate. Speaker originality and dealer specimen dating are not independently authenticated. Casters are not depicted.",
     "provenance": "User-approved same-specimen pair. Front guided by Hendrix Am070.JPG, Am070g.JPG and Am070b.JPG; final rear by assembled Am070g.JPG alone. Original dealer photographs are not redistributed."
+  },
+  {
+    "id": "blues-junior-front",
+    "assemblyId": "blues-junior-1995",
+    "amp": "Blues Junior",
+    "configuration": "Original PR 295 specimen study, seller-dated December 1995 B-029650; six knobs, Fat switch and five tubes",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/blues-junior/front.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Create a new highly photorealistic catalog studio photograph of the exact original black Fender Blues Junior PR 295 specimen B-029650 shown in attached reference photographs, seller-dated December 1995. Compact black finely pebbled Tolex cabinet about 18 inches wide by 16 high, silver-gray woven grille, black ribbed top strap handle with metal ends, authentic modest patina. Warm pale gray seamless studio floor/backdrop, softbox key upper left gentle fill, natural contact shadow, long-lens camera centered with slight elevation enough to glimpse top edge. Whole amp uncropped filling about 80% square frame width. Crisp believable materials, subtle wear, optical photographic realism, not illustration or glossy CGI. No furniture, props, captions, watermark or invented extras. This is an early USA PR295, not Blues Junior III/IV, no big red jewel, no later full-size Fender script badge. SINGLE FRONT VIEW ONLY. Reference1 front is strict appearance authority, reference2 plate/top detail and reference3 rear support identity. Front has broad black upper rail with SMALL rectangular metal-framed dark Fender script plaque CENTERED, two visible mounting screws toward upper rail ends. Silver-gray tightly woven grille rectangle, slim black lower rail two screws, softly rounded outer edges, no metal corner protectors. Top chrome control panel is recessed at BACK of top surface, not on front face; at most a slight hint behind handle from this front angle. No controls across front. No extra logos or labels. Black small feet, no casters. Preserve reference cabinet proportions and grille margins exactly. Produce only one front photograph, no rear inset or paired sheet.",
+    "referenceLinks": [
+      "https://reverb.com/item/101464396-fender-blues-junior-pr-295-1995"
+    ],
+    "knownInaccuracies": "Generated lettering, textures, dimensions and component details remain approximate. Seller dating and originality are not independently verified.",
+    "provenance": "User-approved same-specimen pair guided by Reverb listing 101464396 front, rear plate and assembled rear photographs. Rear received a targeted six-knob correction. Original seller photographs are not redistributed."
+  },
+  {
+    "id": "blues-junior-rear",
+    "assemblyId": "blues-junior-1995",
+    "amp": "Blues Junior",
+    "configuration": "Original PR 295 specimen study, seller-dated December 1995 B-029650; six knobs, Fat switch and five tubes",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/blues-junior/rear.jpg",
+    "generationDate": "2026-11-20",
+    "method": "Built-in image generation",
+    "prompt": "Use case: product-mockup. Create a new highly photorealistic catalog studio photograph of the exact original black Fender Blues Junior PR 295 specimen B-029650 shown in attached reference photographs, seller-dated December 1995. Compact black finely pebbled Tolex cabinet about 18 inches wide by 16 high, silver-gray woven grille, black ribbed top strap handle with metal ends, authentic modest patina. Warm pale gray seamless studio floor/backdrop, softbox key upper left gentle fill, natural contact shadow, long-lens camera centered with slight elevation enough to glimpse top edge. Whole amp uncropped filling about 80% square frame width. Crisp believable materials, subtle wear, optical photographic realism, not illustration or glossy CGI. No furniture, props, captions, watermark or invented extras. This is an early USA PR295, not Blues Junior III/IV, no big red jewel, no later full-size Fender script badge. SINGLE REAR VIEW ONLY. Reference1 assembled rear is STRICT layout authority; reference2 closeup supports early plate/top controls. KEEP the large upper black Tolex rear panel installed: it spans about upper two-thirds of rear, silver rectangular Blues Junior identification plate on viewer LEFT with small quality sticker below; capsule-shaped horizontal ventilation opening offset to viewer RIGHT near lower edge shows five hanging tubes, two larger EL84 left and three smaller preamp tubes right as photographed. Chrome top panel visible behind upper board: power toggle at viewer far left, tiny red LED, EXACTLY SIX black chicken-head knobs ordered left-to-right REVERB, MASTER, MIDDLE, BASS, TREBLE, VOLUME, small FAT button near Volume and one input at far right. No seventh knob, no front-face controls. Beneath broad upper panel is a low rectangular open strip, then narrow fixed bottom rail. Low opening shows coiled dark power cable and gold/brass rectangular spring reverb tank near floor viewer right, dark largely hidden one twelve-inch speaker behind upper board; do not expose a full speaker magnet or remove panel. Preserve original rear opening shape, board screws and low tank position from photo, no invented large open back, no visible circuit board. Small feet no casters. One full rear photograph only, no front view, collage or diptych.\nCorrection pass: Edit this rear product photograph. Change ONLY the top chrome control panel so it has EXACTLY SIX separate black chicken-head knobs, correctly labeled left to right REVERB, MASTER, MIDDLE, BASS, TREBLE, VOLUME. Current image has only five knobs and omits BASS; add the missing BASS knob between MIDDLE and TREBLE, redistribute six knobs evenly across available strip while retaining far-left power toggle and red LED, far-right FAT button and INPUT jack. Six knobs required, count carefully. Keep all other pixels/appearance as close as possible: cabinet silhouette, handle, studio background, rear plaque, screws, five tubes, rear capsule slot, low opening, cord and reverb tank. Same single rear view, no inset or collage.",
+    "referenceLinks": [
+      "https://reverb.com/item/101464396-fender-blues-junior-pr-295-1995"
+    ],
+    "knownInaccuracies": "Generated lettering, textures, dimensions and component details remain approximate. Seller dating and originality are not independently verified.",
+    "provenance": "User-approved same-specimen pair guided by Reverb listing 101464396 front, rear plate and assembled rear photographs. Rear received a targeted six-knob correction. Original seller photographs are not redistributed."
   }
 ]

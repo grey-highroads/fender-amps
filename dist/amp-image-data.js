@@ -223,5 +223,33 @@ export const AMP_IMAGE_STUDIES=[
       "https://www.hendrixguitars.com/Am070.htm"
     ],
     "knownInaccuracies": "Generated fine lettering, rear panel text, dimensions and speaker details remain approximate. Speaker originality and dealer specimen dating are not independently authenticated. Casters are not depicted."
+  },
+  {
+    "id": "blues-junior-front",
+    "assemblyId": "blues-junior-1995",
+    "amp": "Blues Junior",
+    "configuration": "Original PR 295 specimen study, seller-dated December 1995 B-029650; six knobs, Fat switch and five tubes",
+    "view": "Front",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/blues-junior/front.jpg",
+    "referenceLinks": [
+      "https://reverb.com/item/101464396-fender-blues-junior-pr-295-1995"
+    ],
+    "knownInaccuracies": "Generated lettering, textures, dimensions and component details remain approximate. Seller dating and originality are not independently verified."
+  },
+  {
+    "id": "blues-junior-rear",
+    "assemblyId": "blues-junior-1995",
+    "amp": "Blues Junior",
+    "configuration": "Original PR 295 specimen study, seller-dated December 1995 B-029650; six knobs, Fat switch and five tubes",
+    "view": "Rear",
+    "kind": "whole-amp",
+    "label": "Generated illustration",
+    "path": "assets/studies/blues-junior/rear.jpg",
+    "referenceLinks": [
+      "https://reverb.com/item/101464396-fender-blues-junior-pr-295-1995"
+    ],
+    "knownInaccuracies": "Generated lettering, textures, dimensions and component details remain approximate. Seller dating and originality are not independently verified."
   }
 ];

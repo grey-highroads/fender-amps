@@ -337,3 +337,17 @@ Public thumbnail/viewer loaded front (1024 px, `super-six/front.jpg`) and rear
 visibly matching the approved pair. Private review capture:
 `outputs/super-six-photoreal-review/published-rear.jpg`.
 https://fendertubeamps.com/?amp=super-six-reverb-1972
+
+## Blues Junior images — user approved
+
+November 20: user approved the B-029650 original PR 295 front/rear pair and
+requested publication in the shared thumbnail rail. Two `blues-junior-1995`
+records use `assets/studies/blues-junior/{front,rear}.jpg`. Exact generation and
+six-knob rear correction prompts and specimen source are tracked in the manifest;
+seller photographs remain ignored. The rectangular badge, top controls, installed
+rear board, offset tube slot and low tank opening follow the specimen. Generated
+lettering, textures, dimensions and component details remain approximate; seller
+dating and originality are not independently verified. No model, hotspot or
+viewer behavior changed. Media scope check now includes this explicit approval.
+All six checks and whitespace passed; local front/rear enlarged views visually
+checked. Next action: verify production publication.
