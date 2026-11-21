@@ -1,4 +1,4 @@
-// Builder factual first drafts, scoped to factory circuit/manual evidence. No generated media.
+// Card copy: copy pass November 21, 2026. Facts scoped to factory circuit and manual evidence. No generated media.
 export const BP_EXPLORATIONS={
  "bassman-5f6a": {
   "name": "Tweed Bassman",
@@ -8,8 +8,8 @@ export const BP_EXPLORATIONS={
     "label": "12AY7 and shared input cathode",
     "side": "top",
     "menuOnly": false,
-    "title": "Both channels start in one 12AY7.",
-    "body": "Normal and Bright use separate halves of the same 12AY7, with a shared cathode resistor and bypass capacitor. They have individual Volume controls before mixing.",
+    "title": "It starts with a 12AY7, not a 12AX7.",
+    "body": "Both channels start in the same 12AY7, one half each. A 12AY7 has less gain than the 12AX7 that a lot of later Fenders put in the first socket, so the first stage has less gain to work with.",
     "attributes": [
      [
       "Input bottle",
@@ -20,11 +20,11 @@ export const BP_EXPLORATIONS={
       "820 Ω / 250 µF"
      ]
     ],
-    "listen": "A shared cathode network gives the channels an electrical relationship even before their signals meet at the mixing resistors. It is one reason to compare their actual circuits rather than assume two fully independent preamps.",
-    "together": "The I-EG drawing shows 68 kΩ input resistors and 1 MΩ input returns. Each input pair has switching contacts; the first tube differs from the 12AX7 input specified in many later Fender designs.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The drawing establishes the factory tube type. The model does not measure gain or claim that every surviving amp still has that tube fitted.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "Don’t treat Normal and Bright as two separate preamps. The two halves share a cathode resistor and bypass cap, and the channels meet again at the mixing resistors after their Volumes.",
+    "together": "On the drawing the inputs have 68 kΩ resistors and 1 MΩ returns, and the shared cathode is 820 Ω with a 250 µF bypass.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "The marker is on the first tube. Socket positions are estimates. Gain wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -37,8 +37,8 @@ export const BP_EXPLORATIONS={
     "label": "Bright-channel bypass capacitor",
     "side": "top",
     "menuOnly": false,
-    "title": "The Bright Volume has a 100 pF bypass.",
-    "body": "A small capacitor bypasses part of the Bright channel’s Volume pot. The Normal Volume does not have that capacitor.",
+    "title": "The Bright Volume has a cap you can’t switch off.",
+    "body": "A 100 pF cap bridges part of the Bright channel’s Volume pot. The Normal channel doesn’t have one. It’s always in the circuit, not a switch like the Bright switches on later Fenders.",
     "attributes": [
      [
       "Bright bypass",
@@ -49,11 +49,11 @@ export const BP_EXPLORATIONS={
       "1 MΩ audio taper"
      ]
     ],
-    "listen": "The bypass is expected to preserve more high-frequency signal at lower Volume settings. Its effect diminishes as less pot resistance remains in the signal path; that is circuit inference.",
-    "together": "The schematic prints .0001 µF; the layout marks 100 MMF on the Bright Volume. The channels mix through separate 270 kΩ resistors.",
-    "extraTitle": "Circuit and construction",
-    "extra": "This is an always-connected capacitor, not a later panel Bright switch. No measured response curve is implied.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "It does the most at low Volume settings and less as you turn up, because there’s less pot left for the cap to get around. If the Bright channel sounds much sharper turned down than turned up, that’s the cap.",
+    "together": "The schematic prints .0001 µF and the layout marks 100 MMF, which is the same value. The two channels mix through separate 270 kΩ resistors.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "The marker is on the Bright Volume. No response curve was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -66,8 +66,8 @@ export const BP_EXPLORATIONS={
     "label": "Cathode follower before the tone stack",
     "side": "rear",
     "menuOnly": true,
-    "title": "A cathode follower drives the tone controls.",
-    "body": "After the channel mix, a 12AX7 gain stage directly drives another triode configured as a cathode follower. The tone stack takes its signal from that follower’s cathode.",
+    "title": "A cathode follower drives the tone stack.",
+    "body": "After the channels mix, a 12AX7 gain stage feeds straight into another triode set up as a cathode follower, and the tone stack takes its signal from the follower.",
     "attributes": [
      [
       "Tube",
@@ -78,11 +78,11 @@ export const BP_EXPLORATIONS={
       "100 kΩ"
      ]
     ],
-    "listen": "The follower provides a lower-impedance source for the passive tone stack than a typical plate-fed stage. Its operation also matters when analyzing the amp under overload.",
-    "together": "The I-EG drawing shows the direct connection from the gain-stage plate to the follower grid. The low-impedance description is engineering interpretation of that topology.",
-    "extraTitle": "Circuit and construction",
-    "extra": "No numerical clipping threshold, distortion spectrum or subjective breakup result has been measured. The internal connection stays menu-only.",
-    "detail": "Hidden circuit or enclosed component; available through the menu. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "The follower feeds the passive tone controls from a low-impedance source, so the tone stack loads the signal less than it would hanging off a plate. When you push the amp, the follower and the stage before it are part of how it breaks up.",
+    "together": "The drawing shows the gain stage’s plate wired straight to the follower’s grid, with a 100 kΩ load on the follower’s cathode. Calling it low-impedance is a reading of that circuit, not a measurement.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "There’s no marker on the model for this one because the stage is inside the chassis. No clipping point was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -95,8 +95,8 @@ export const BP_EXPLORATIONS={
     "label": "Treble, Bass and Middle network",
     "side": "top",
     "menuOnly": false,
-    "title": "Middle is adjustable in this tweed circuit.",
-    "body": "The 5F6-A has a three-control tone stack after the cathode follower. Middle uses a pot rather than a fixed resistance.",
+    "title": "A Middle knob on a tweed.",
+    "body": "The 5F6-A has Treble, Bass and Middle, after the cathode follower. Fender added the Middle control on the 5F6, and the 5F6-A kept it.",
     "attributes": [
      [
       "Middle pot",
@@ -107,11 +107,11 @@ export const BP_EXPLORATIONS={
       "56 kΩ"
      ]
     ],
-    "listen": "These passive controls interact. Changing Middle alters the loading and tonal balance of the network rather than adding an independent active mid boost.",
-    "together": "The drawing specifies a 250 pF treble capacitor and .02 µF capacitors in the tone network. Treble is 250 kΩ and Bass is 1 MΩ.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The marker identifies the shared top-panel Middle control. Exact knob taper behavior and response are not simulated.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "These are passive controls, so they interact. Middle doesn’t boost anything. Turning it down takes mids out, and it changes how Treble and Bass behave too.",
+    "together": "On the drawing, Treble is 250 kΩ, Bass 1 MΩ and Middle a 25 kΩ linear pot, with a 250 pF treble cap, .02 µF caps and a 56 kΩ slope resistor.",
+    "extraTitle": "Where this comes from",
+    "extra": "Values from Fender drawing I-EG. The history is from Fender’s own Bassman history.",
+    "detail": "The marker is on the Middle knob. Response wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -124,8 +124,8 @@ export const BP_EXPLORATIONS={
     "label": "Presence and output feedback",
     "side": "top",
     "menuOnly": false,
-    "title": "Presence works in the feedback return.",
-    "body": "A sample from the speaker output returns to the phase-inverter network. Presence changes the frequency-dependent action of that feedback path.",
+    "title": "Presence works in the feedback loop.",
+    "body": "A sample of the speaker output goes back to the phase inverter as negative feedback. Presence changes how much treble that feedback takes away, so turning it up brings the top end up after both channels have joined.",
     "attributes": [
      [
       "Presence",
@@ -136,11 +136,11 @@ export const BP_EXPLORATIONS={
       "27 kΩ resistor"
      ]
     ],
-    "listen": "Presence acts after the channels have joined and at a different circuit location from Treble. Matching the two knob settings does not mean matching their effect.",
-    "together": "The drawing shows the 27 kΩ feedback connection and the Presence pot with its capacitor. The topology supports a change in high-frequency feedback action.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Descriptions of increased bite or altered attack are interpretations; no listening or frequency-response measurement is included here.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "It’s not a second Treble knob. Treble works in the tone stack ahead of the power section. Presence works in the loop around it, so the same setting on each doesn’t do the same thing.",
+    "together": "The drawing shows a 27 kΩ feedback resistor and a 5 kΩ Presence pot with its capacitor.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "The marker is on Presence. No frequency response was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -153,8 +153,8 @@ export const BP_EXPLORATIONS={
     "label": "Long-tailed-pair phase inverter",
     "side": "rear",
     "menuOnly": true,
-    "title": "The inverter uses two triodes.",
-    "body": "The 5F6-A phase inverter is a long-tailed pair. Its two outputs feed the push-pull 5881 pair through separate coupling capacitors.",
+    "title": "A long-tail phase inverter.",
+    "body": "The 5F6-A’s phase inverter is a long-tailed pair, two triodes working together, feeding the two 5881s. The tweed Deluxe uses a one-triode cathodyne instead.",
     "attributes": [
      [
       "Plate loads",
@@ -165,11 +165,11 @@ export const BP_EXPLORATIONS={
       "12AX7"
      ]
     ],
-    "listen": "The inverter has gain and can contribute to overload behavior. It is a different arrangement from the split-load inverter in the smaller tweed Deluxe.",
-    "together": "The layout labels the inverter 12AX7. On the companion schematic its tube label appears to read 12AY7; the model follows the layout and records this source conflict as Q29.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The long-tailed-pair topology is clear in both views. The label discrepancy prevents treating the entire drawing pair as an unambiguous tube specification.",
-    "detail": "Hidden circuit or enclosed component; available through the menu. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "A long-tail inverter has gain of its own, so it can be part of the breakup when you push the amp. It’s one of the circuit differences between a Bassman and a tweed Deluxe.",
+    "together": "The plate loads are 82 kΩ and 100 kΩ. The layout labels this tube a 12AX7, but the label on the schematic looks like 12AY7, so the two Fender sheets disagree. We follow the layout.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG, schematic and layout.",
+    "detail": "There’s no marker on the model for this one because the stage is inside the chassis. The tube label conflict is unresolved.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -182,8 +182,8 @@ export const BP_EXPLORATIONS={
     "label": "5881 pair and fixed bias",
     "side": "rear",
     "menuOnly": false,
-    "title": "Two 5881s drive the four tens.",
-    "body": "The output stage uses two 5881s with a fixed negative-bias supply. The original network has no bias-adjustment pot.",
+    "title": "Two 5881s, fixed bias, no bias pot.",
+    "body": "The output stage is a pair of 5881s with fixed negative bias, and there’s no adjustment pot. Each screen gets its own 470 Ω resistor. The catalog rates it at about 45 watts.",
     "attributes": [
      [
       "Output tubes",
@@ -194,11 +194,11 @@ export const BP_EXPLORATIONS={
       "470 Ω / 1 W each"
      ]
     ],
-    "listen": "This output stage differs from the cathode-biased small tweeds. Its operating behavior depends on the supply, load and tubes together.",
-    "together": "The drawing shows the fixed bias network and individual screen resistors. The catalog retains the approximate 45 W rating.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The scanned bias-voltage annotation is hard to read. No exact measured bias setting, dissipation or clean-power result is assigned to this model.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "That’s a different output stage from the cathode-biased small tweeds, with more power and four speakers to drive.",
+    "together": "Mojotone’s field guide says the 5F6 and 5F6-A used a selenium rectifier in the bias supply. The bias voltage on the drawing is hard to read on the scan.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG and Mojotone’s Fender field guide.",
+    "detail": "The marker is on one output tube. No bias setting or output was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -215,8 +215,8 @@ export const BP_EXPLORATIONS={
     "label": "GZ34 and choke-filtered supply",
     "side": "rear",
     "menuOnly": false,
-    "title": "A GZ34 feeds the power supply.",
-    "body": "The 5F6-A uses a GZ34 rectifier and a choke in its high-voltage filtering network. Its rectifier remains a separate bottle from the two output tubes.",
+    "title": "A GZ34 and a choke.",
+    "body": "The 5F6-A rectifies with a GZ34 and filters the high voltage through a choke. The rectifier is its own bottle next to the two 5881s.",
     "attributes": [
      [
       "Rectifier",
@@ -227,11 +227,11 @@ export const BP_EXPLORATIONS={
       "14684"
      ]
     ],
-    "listen": "Rectifier voltage loss and filtering affect how the supply responds to demand. This construction model shows their relationship without assigning a measured amount of sag.",
-    "together": "Drawing I-EG specifies power transformer 8087 and output transformer 45249. The factory rectifier is taken from the drawing rather than a replacement in a surviving amp.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Transformer envelopes and mounting coordinates are estimates. Voltage markings on the drawing are service references, not current measurements.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "A tube rectifier drops some voltage when the amp works hard, and players feel that as some give under the pick. How much depends on the transformer, the choke and the filtering too.",
+    "together": "The drawing lists power transformer 8087, choke 14684 and output transformer 45249.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "The marker is on the rectifier. Voltages on the drawing are service references. Sag wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -244,23 +244,23 @@ export const BP_EXPLORATIONS={
     "label": "Four tens and four parallel jacks",
     "side": "rear",
     "menuOnly": false,
-    "title": "Each ten has its own chassis connection.",
-    "body": "Four nominal 8 Ω ten-inch speakers connect to four parallel speaker jacks under the chassis. Their combined nominal load is 2 Ω.",
+    "title": "Four tens, four jacks, 2 ohms.",
+    "body": "Each of the four 8-ohm tens plugs into its own jack under the chassis, and the jacks are wired in parallel. Together that’s a 2-ohm load. The stock speakers are Jensen P10Rs or P10Qs.",
     "attributes": [
      [
-      "Speaker array",
-      "4 × 10-inch alnico format"
+      "Stock speakers",
+      "4 × 10-inch Jensen P10R or P10Q"
      ],
      [
-      "Nominal wiring",
+      "Load",
       "8 Ω ÷ 4 = 2 Ω"
      ]
     ],
-    "listen": "Removing a driver changes the load even though the remaining speakers still work. The four jacks are one output network, not four independent power amplifiers.",
-    "together": "The layout shows four linked jacks and the schematic four parallel speakers. P10R/P10Q attribution comes from secondary format research; the generic speaker geometry authenticates neither an individual speaker nor a universal supplier date.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Cabinet width remains a 23-inch working estimate. Frame spacing, wiring routes and original rear-board dimensions are not measured vintage geometry.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "Unplug one speaker and the others keep working, but the load goes up and the amp isn’t running into what it was built for. The four jacks are one output, not four.",
+    "together": "The layout shows the four linked jacks, and the schematic shows four speakers in parallel.",
+    "extraTitle": "Where this comes from",
+    "extra": "Wiring from Fender drawing I-EG. Speaker models from Mojotone’s Fender field guide.",
+    "detail": "The marker is on the speakers, which are generic in the model. Cabinet width is an estimate, and published figures vary by about an inch.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-5F6A-Schematic.pdf",
@@ -282,8 +282,8 @@ export const BP_EXPLORATIONS={
     "label": "Bass-channel Deep switch",
     "side": "front",
     "menuOnly": false,
-    "title": "Deep changes the Bass channel’s tone network.",
-    "body": "The Bass Instrument channel has a Deep switch in its tone circuit, while the Normal channel has a Bright switch at its Volume control.",
+    "title": "The Bass channel has Deep, the Normal channel has Bright.",
+    "body": "The Bass Instrument channel’s Deep switch works in its tone circuit. The Normal channel’s Bright switch works at its Volume. They’re two switches in two different places, not opposite settings of one control.",
     "attributes": [
      [
       "Channels",
@@ -294,11 +294,11 @@ export const BP_EXPLORATIONS={
       "AB165"
      ]
     ],
-    "listen": "The two switches act at different points. Deep and Bright are not opposite labels on a single shared boost circuit.",
-    "together": "The AB165 drawing places Deep in the Bass-channel tone network. The front order follows the factory layout, reversed from its underside view.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The card is scoped to AB165. Earlier AA864 and AA165 circuits must be identified separately, regardless of a reused tube-chart label.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "Each channel also has its own Volume, Treble and Bass, so the two can be set up for different jobs.",
+    "together": "Fender made three black-panel Bassman circuits: the AA864, AA165 and AB165. The tube-chart labels were reused, so check the circuit on the board, not the chart. These cards cover the AB165.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing D-FE and Mojotone’s Fender field guide.",
+    "detail": "The marker is on the Deep switch. No response was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-AB165-Schematic.pdf",
@@ -311,8 +311,8 @@ export const BP_EXPLORATIONS={
     "label": "Normal-channel Bright bypass",
     "side": "front",
     "menuOnly": false,
-    "title": "Normal has its own switched bright capacitor.",
-    "body": "The Normal channel’s Bright switch connects a 120 pF capacitor around part of its Volume control. It does not switch the Bass channel’s tone network.",
+    "title": "The Normal channel’s Bright switch.",
+    "body": "Bright puts a 120 pF cap across part of the Normal channel’s Volume pot, so treble gets around the pot. It doesn’t touch the Bass channel.",
     "attributes": [
      [
       "Bright capacitor",
@@ -323,11 +323,11 @@ export const BP_EXPLORATIONS={
       "Normal-channel Volume"
      ]
     ],
-    "listen": "A Volume bypass is expected to make a larger difference at lower settings. Its action depends on how much pot resistance remains to be bypassed.",
-    "together": "The capacitor and switch are shown at the Normal Volume on drawing D-FE. The surrounding channel tone network remains in circuit.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The expected setting dependence is circuit inference. No response curve or measured treble boost is claimed.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "It does the most at low Volume settings and less as you turn up, because there’s less pot left for the cap to get around.",
+    "together": "The cap and switch sit on the Normal Volume on the drawing. The tone controls stay in the circuit either way.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing D-FE, the AB165 schematic and layout.",
+    "detail": "The marker is on the Bright switch. No response curve was measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-AB165-Schematic.pdf",
@@ -340,8 +340,8 @@ export const BP_EXPLORATIONS={
     "label": "Shared gain stage and feedback",
     "side": "rear",
     "menuOnly": true,
-    "title": "Both channels pass through another gain stage.",
-    "body": "After their separate preamps, the channels join at a shared 7025 gain stage before the 12AT7 inverter. AB165 also returns output feedback to this stage.",
+    "title": "Both channels go through one more gain stage.",
+    "body": "After their own preamps, the two channels join at a shared 7025 gain stage before the 12AT7 phase inverter. The feedback loop comes back to that stage too.",
     "attributes": [
      [
       "Shared stage",
@@ -352,11 +352,11 @@ export const BP_EXPLORATIONS={
       "From output network"
      ]
     ],
-    "listen": "The post-mix gain stage makes the signal path different from a simple two-stage-per-channel comparison with other black-panel Fender amps.",
-    "together": "The schematic shows both channel feeds entering the shared stage and a 47 kΩ feedback connection from the output. Additional 220 kΩ paths return output-tube plate signals toward the drive network.",
-    "extraTitle": "Circuit and construction",
-    "extra": "These connections identify AB165 topology. No amount of gain, stability margin or audible breakup change is derived from the model.",
-    "detail": "Hidden circuit or enclosed component; available through the menu. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "That’s one more stage than you’d expect from comparing it with other black-panel Fenders, and you’re hearing it whichever channel you use.",
+    "together": "The schematic shows both channels feeding the shared stage, a 47 kΩ feedback connection from the output, and 220 kΩ paths from the output-tube plates back toward the drive network.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing D-FE, the AB165 schematic and layout.",
+    "detail": "There’s no marker on the model for this one because the stage is inside the chassis. Gain wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-AB165-Schematic.pdf",
@@ -369,8 +369,8 @@ export const BP_EXPLORATIONS={
     "label": "Output-tube bias balance",
     "side": "rear",
     "menuOnly": true,
-    "title": "The factory adjustment balances the output pair.",
-    "body": "AB165 uses a balance adjustment in the output-tube bias network. Fender’s drawing instructs setting it for minimum hum when fitting new output tubes.",
+    "title": "The bias control is a hum balance.",
+    "body": "The AB165’s adjustment sets the balance between the two 6L6GCs, not the overall bias level. Fender’s drawing says to set it for minimum hum after fitting new output tubes.",
     "attributes": [
      [
       "Output tubes",
@@ -381,11 +381,11 @@ export const BP_EXPLORATIONS={
       "10 kΩ balance pot"
      ]
     ],
-    "listen": "Balance and overall bias level are different adjustments. A description of the earlier AA864 bias control should not be transferred to this circuit.",
-    "together": "The 10 kΩ network and the service note appear on the AB165 schematic and layout.",
-    "extraTitle": "Circuit and construction",
-    "extra": "This is a description of the factory circuit, not a live servicing procedure. The hidden control is kept as a menu-only topic.",
-    "detail": "Hidden circuit or enclosed component; available through the menu. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "If you’re reading a service record or a forum post, check which circuit it’s about. The earlier AA864 had a bias adjust pot, which is a different control.",
+    "together": "It’s a 10 kΩ network on the AB165 schematic and layout, with Fender’s note printed beside it.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing D-FE. The AA864 detail is from Mojotone’s Fender field guide.",
+    "detail": "There’s no marker on the model for this one because the control is inside the chassis. This describes the factory circuit, not a service procedure.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-AB165-Schematic.pdf",
@@ -398,8 +398,8 @@ export const BP_EXPLORATIONS={
     "label": "6L6GC pair and silicon supply",
     "side": "rear",
     "menuOnly": false,
-    "title": "The black-panel Bassman has no rectifier tube.",
-    "body": "Two 6L6GCs form the output pair. Six silicon diodes supply the high-voltage DC; the smaller bottles are three 7025s and one 12AT7.",
+    "title": "No rectifier tube. Six diodes do it.",
+    "body": "Two 6L6GCs make about 50 watts, and six silicon diodes handle the high voltage, so there’s no rectifier bottle. The other tubes are three 7025s and a 12AT7.",
     "attributes": [
      [
       "Power stage",
@@ -410,11 +410,11 @@ export const BP_EXPLORATIONS={
       "Six tubes"
      ]
     ],
-    "listen": "The two-box format does not mean two amplifiers. One head drives the passive speaker cabinet through its output transformer.",
-    "together": "Drawing D-FE identifies the diode network and output transformer 125A13A. The authoritative catalog keeps the approximate 50 W rating.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Tube and transformer positions are explanatory estimates. No measured headroom or supply-stiffness comparison is attached to the geometry.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "A diode supply doesn’t drop voltage under load the way the tweed Bassman’s GZ34 does. That’s one of several differences between the two, along with the speakers, the cabinet and the circuit.",
+    "together": "The drawing shows the diode network and output transformer 125A13A. It also carries the CBS-era line “a division of Columbia Records Distribution Corp.”",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing D-FE, the AB165 schematic and layout.",
+    "detail": "The marker is on the output tubes. Positions are estimates. Headroom wasn’t measured.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-AB165-Schematic.pdf",
@@ -431,23 +431,27 @@ export const BP_EXPLORATIONS={
     "label": "Closed 2x12 and parallel wiring",
     "side": "rear",
     "menuOnly": true,
-    "title": "The cabinet holds two twelves on one output.",
-    "body": "Two nominal 8 Ω twelve-inch speakers in parallel give a nominal 4 Ω load. The head connects to the closed speaker cabinet through one speaker cable.",
+    "title": "Two twelves in a closed cabinet.",
+    "body": "The separate cabinet holds two 8-ohm twelves in parallel, a 4-ohm load, on one speaker cable from the head. Stock speakers were Jensen C12Ns, Oxford 12T6s or Utahs.",
     "attributes": [
      [
-      "Speaker cabinet",
-      "Horizontal 2 × 12-inch"
+      "Cabinet",
+      "Closed 2 × 12-inch"
      ],
      [
-      "Nominal load",
+      "Stock speakers",
+      "Jensen C12N · Oxford 12T6 · Utah"
+     ],
+     [
+      "Load",
       "4 Ω"
      ]
     ],
-    "listen": "This cabinet differs from the four-tens open-back tweed Bassman. Speaker count, enclosure and circuit revision all matter when making a comparison.",
-    "together": "The AB165 schematic draws two parallel speakers. Speaker suppliers vary in the secondary record, so these are generic ceramic-format twelves.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The cabinet remains closed in the model. Its 21-inch working height conflicts with a 20-inch reader correction (Q22); exact baffle and fastener coordinates remain estimates.",
-    "detail": "Hidden circuit or enclosed component; available through the menu. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "Closed back, two twelves and a separate head make it a very different amp from the open-back, four-ten tweed Bassman. Speaker count, cabinet and circuit all count in that comparison.",
+    "together": "The head has a speaker jack and an extension speaker jack. Which speaker brand went in during which year isn’t settled.",
+    "extraTitle": "Where this comes from",
+    "extra": "Wiring from Fender drawing D-FE. Speaker models and rear panel from Mojotone’s Fender field guide.",
+    "detail": "There’s no marker on the model for this one because the speakers are behind the closed back. The twelves in the model are generic. Cabinet height is 21 inches published and 20 in a reader correction.",
     "sources": [
      [
       "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Bassman-AB165-Schematic.pdf",
@@ -469,8 +473,8 @@ export const BP_EXPLORATIONS={
     "label": "Drive with an off detent",
     "side": "front",
     "menuOnly": false,
-    "title": "Drive can be removed from the signal path.",
-    "body": "The Drive control adds gain ahead of the amp’s main Volume. At its fully counterclockwise off setting, Fender specifies that the boost is bypassed.",
+    "title": "Drive clicks off and takes its boost out.",
+    "body": "Drive adds gain ahead of the main Volume, up to 26 dB by Fender’s spec. Turn it all the way down and it clicks off, which bypasses the boost completely.",
     "attributes": [
      [
       "Drive range",
@@ -481,11 +485,11 @@ export const BP_EXPLORATIONS={
       "Boost bypassed"
      ]
     ],
-    "listen": "The off detent provides a defined comparison with the added gain path removed, rather than simply assuming that a low Drive setting is identical.",
-    "together": "Fender describes higher Drive settings as increasing level, distortion and compression. Those are manufacturer descriptions, not measurements of this model.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Exact gain-stage circuitry and clipping thresholds are not established by the owner manual. No schematic-level implementation is invented.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "Off and barely on aren’t the same thing. If you want the amp without the Drive circuit, click it off.",
+    "together": "Fender says higher Drive settings add level, distortion and compression.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s PR 6273 owner’s manual.",
+    "detail": "The marker is on Drive. The manual doesn’t show the circuit.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",
@@ -498,8 +502,8 @@ export const BP_EXPLORATIONS={
     "label": "Split / Full spring reverb",
     "side": "front",
     "menuOnly": false,
-    "title": "Reverb can leave the fifteen dry.",
-    "body": "Split sends the spring-reverb signal to the ten-inch speaker only. Full sends it to both speakers. Mix still controls the amount of wet signal.",
+    "title": "Split leaves the fifteen dry.",
+    "body": "In Split, the spring reverb goes only to the ten. In Full it goes to both speakers. Mix still sets how much reverb you hear.",
     "attributes": [
      [
       "Split",
@@ -510,11 +514,11 @@ export const BP_EXPLORATIONS={
       "Reverb to both speakers"
      ]
     ],
-    "listen": "Split separates the wet signal from the fifteen’s output path. It is a routing choice beyond simply turning the overall reverb level up or down.",
-    "together": "The reverb section has Mix, Dwell and separate Treble/Bass controls. Fender identifies one 12AT7 reverb tube.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The card describes documented routing. Tank dimensions, internal wire routes and the precise signal-mixing circuit are not authenticated.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "Split keeps the fifteen dry under the reverb on the ten, so the low end stays solid while the ten carries the reverb.",
+    "together": "The reverb has its own Mix, Dwell, Treble and Bass controls, and Fender lists one 12AT7 for it.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s PR 6273 owner’s manual.",
+    "detail": "The marker is on the Split/Full switch. Tank size and the mixing circuit aren’t documented.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",
@@ -527,8 +531,8 @@ export const BP_EXPLORATIONS={
     "label": "Mono / Stereo harmonic tremolo",
     "side": "front",
     "menuOnly": false,
-    "title": "Stereo alternates the effect between the speakers.",
-    "body": "The tremolo switch selects a shared mono presentation or a stereo presentation alternating between the two speakers.",
+    "title": "Stereo tremolo bounces between the two speakers.",
+    "body": "The tremolo is harmonic, and a switch picks Mono or Stereo. In Stereo the effect alternates between the fifteen and the ten, from one combo.",
     "attributes": [
      [
       "Mono",
@@ -539,11 +543,11 @@ export const BP_EXPLORATIONS={
       "Alternating between speakers"
      ]
     ],
-    "listen": "The two separate output paths let the effect move across the unequal speakers within one combo. This differs from a single-output amp simply feeding two parallel speakers.",
-    "together": "Speed and Intensity set the effect; Fender specifies an off detent at Intensity zero. The manual calls the effect harmonic tremolo.",
-    "extraTitle": "Circuit and construction",
-    "extra": "No internal modulation schematic or measured pitch shift is established. The model does not turn the manufacturer’s effect name into an unverified circuit topology.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "That only works because the two speakers have separate outputs. An amp with two speakers wired in parallel can’t do it.",
+    "together": "Speed and Intensity set the effect, and Intensity clicks off at zero. Fender calls it harmonic tremolo, and the manual doesn’t show how it’s built.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s PR 6273 owner’s manual.",
+    "detail": "The marker is on the Mono/Stereo switch. The model doesn’t simulate the effect.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",
@@ -556,8 +560,8 @@ export const BP_EXPLORATIONS={
     "label": "Fifteen-inch C15N output",
     "side": "rear",
     "menuOnly": false,
-    "title": "The fifteen has the 50 W output path.",
-    "body": "A 15-inch Jensen C15N connects to OUT 1, rated at 50 W with a 4 Ω minimum load in Fender’s manual.",
+    "title": "The fifteen is on the 50-watt output.",
+    "body": "A 15-inch Jensen C15N runs off OUT 1, rated at 50 watts with a 4-ohm minimum load.",
     "attributes": [
      [
       "OUT 1",
@@ -568,11 +572,11 @@ export const BP_EXPLORATIONS={
       "15-inch Jensen C15N format"
      ]
     ],
-    "listen": "The fifteen is not in parallel with the ten. Its load belongs to its own amplifier output, so a single combined impedance would misdescribe the amp.",
-    "together": "The manual confirms the speaker, output number and nominal load. Its tube list names both output-tube types without providing a socket-by-socket wiring diagram.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The ceramic motor, basket and label are generic modeled geometry. Nominal amplifier output is not presented as the speaker’s power-handling rating.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "The fifteen isn’t wired in parallel with the ten. It has its own output, so there’s no single impedance for the amp.",
+    "together": "Fender’s manual confirms the speaker, the output and the load.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s PR 6273 owner’s manual.",
+    "detail": "The marker is on the fifteen. Its basket and magnet are generic in the model. 50 watts is the amp’s output, not the speaker’s rating.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",
@@ -589,8 +593,8 @@ export const BP_EXPLORATIONS={
     "label": "Ten-inch P10R output",
     "side": "rear",
     "menuOnly": false,
-    "title": "The ten has the separate 20 W path.",
-    "body": "A 10-inch Jensen P10R connects to OUT 2, specified at 20 W with an 8 Ω minimum load.",
+    "title": "The ten is on the 20-watt output.",
+    "body": "A 10-inch Jensen P10R alnico runs off OUT 2, rated at 20 watts with an 8-ohm minimum load. It’s the speaker that gets the reverb in Split.",
     "attributes": [
      [
       "OUT 2",
@@ -601,11 +605,11 @@ export const BP_EXPLORATIONS={
       "10-inch Jensen P10R format"
      ]
     ],
-    "listen": "This is the speaker that receives reverb in Split mode. Its independent output path enables the documented effect-routing choices.",
-    "together": "Fender’s specifications identify the P10R alnico format and distinguish its output from the fifteen’s 4 Ω path.",
-    "extraTitle": "Circuit and construction",
-    "extra": "The alnico envelope and speaker position are estimated from the factory rear photograph, not measured. No sonic ranking of tens versus fifteens is implied.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "With its own output, the ten can carry reverb or tremolo that the fifteen doesn’t. That’s what makes Split reverb and Stereo tremolo possible.",
+    "together": "Fender’s specs give the P10R and the 8-ohm output.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s PR 6273 owner’s manual.",
+    "detail": "The marker is on the ten. Its position follows Fender’s rear photo and is an estimate.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",
@@ -622,8 +626,8 @@ export const BP_EXPLORATIONS={
     "label": "Two output jacks, two loads",
     "side": "rear",
     "menuOnly": false,
-    "title": "The two speaker jacks are separate outputs.",
-    "body": "OUT 1 and OUT 2 each drive their own speaker and carry different minimum-load labels. They are not a main/extension pair.",
+    "title": "Two speaker jacks, two separate outputs.",
+    "body": "OUT 1 and OUT 2 each drive one speaker and have different minimum loads. They’re not a main jack and an extension jack.",
     "attributes": [
      [
       "OUT 1",
@@ -634,11 +638,11 @@ export const BP_EXPLORATIONS={
       "8 Ω minimum / ten"
      ]
     ],
-    "listen": "The combined 70 W figure describes 50 W plus 20 W across two amplifier paths. It does not describe 70 W into one shared load.",
-    "together": "The owner manual labels both rear sockets and assigns the speaker connection for each. The model routes a separate lead to each driver.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Rear-panel spacing is estimated. The amp remains assembled; these jacks are identified without changing any electrical configuration.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "The 70-watt rating is 50 plus 20 across two outputs. It isn’t 70 watts into one load.",
+    "together": "Fender’s manual labels both jacks and says which speaker each one feeds.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s PR 6273 owner’s manual.",
+    "detail": "The marker is on the output jacks. Their spacing is estimated.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",
@@ -651,8 +655,8 @@ export const BP_EXPLORATIONS={
     "label": "6L6 and 6V6 output pairs",
     "side": "rear",
     "menuOnly": false,
-    "title": "Two different output pairs share the cabinet.",
-    "body": "The Pano Verb contains two 6L6s and two 6V6s, alongside six 12AX7s and one 12AT7. Its power section serves two speaker outputs.",
+    "title": "A 6L6 pair and a 6V6 pair in one box.",
+    "body": "The Pano Verb has two 6L6s, two 6V6s, six 12AX7s and a 12AT7. It’s two power amps in one cabinet: the 6L6 pair on the 50-watt fifteen side and the 6V6 pair on the 20-watt ten side.",
     "attributes": [
      [
       "Power tubes",
@@ -663,11 +667,11 @@ export const BP_EXPLORATIONS={
       "6 × 12AX7 + 1 × 12AT7"
      ]
     ],
-    "listen": "The unequal power paths are part of the amp’s construction, not a speaker-size variation on a single shared output stage.",
-    "together": "The manufacturer documents eleven tubes total. The owner manual does not provide a socket map or an internal power-supply schematic.",
-    "extraTitle": "Circuit and construction",
-    "extra": "Tube envelopes and socket locations are explanatory estimates. No undocumented rectifier bottle or internal rectifier circuit is added.",
-    "detail": "Marker follows the shared modeled component. Positions and detailed geometry are estimates; the model is not a socket-by-socket service layout or an acoustic simulation.",
+    "listen": "The two sides aren’t the same amp at two volumes. They have different output tubes and different speakers, and the reverb and tremolo switches let you use that.",
+    "together": "Fender lists eleven tubes. The manual doesn’t include a socket map or a power-supply schematic, and no rectifier tube is listed.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s specifications. Which tube pair goes with which output is from our catalog and Fender’s product page, not a schematic.",
+    "detail": "The marker is on the output tubes. Socket positions are estimates.",
     "sources": [
      [
       "https://www.fmicassets.com/Damroot/Original/10063/OM_8151900000_Pano-Verb-Amp_USplus5.pdf",

@@ -23,8 +23,8 @@ const amps=[
  "width": 1.15,
  "height": 1.343,
  "circuit": "5F6-A",
- "voice": "Four tens, a cathode-driven tone stack and a 5881 pair.",
- "story": "The 5F6-A Bassman combines four ten-inch speakers with a pair of 5881s and a GZ34 rectifier. Normal and Bright feed a shared gain stage, followed by a cathode follower and Treble, Bass and Middle controls. Presence works in the output-feedback network. Each speaker has its own chassis jack, with all four connected in parallel.",
+ "voice": "Four tens, a Middle knob, and a cathode follower driving the tone stack.",
+ "story": "Fender built the Bassman for bass players. This is the 5F6-A, from 1958 to 1960: two 5881s and a GZ34 into four ten-inch Jensens wired for 2 ohms, about 45 watts. It has Normal and Bright channels with four inputs, and Treble, Bass, Middle and Presence controls. A cathode follower drives the tone stack, and the phase inverter is a long-tailed pair. Wikipedia notes that other makers copied the 5F6-A schematic directly. The earlier 5F6 is a different circuit, so check which one you’re looking at.",
  "ratingNote": "Catalog row 35 groups 5F6 and 5F6-A from 1957; this selects the 1959-style 5F6-A, whose circuit followed in 1958. Approximate 45 W retained. Working cabinet width 23 inches varies across specimen reports. Layout labels the inverter 12AX7; companion schematic label appears 12AY7 (Q29)."
 },
 {
@@ -40,8 +40,8 @@ const amps=[
  "width": 1.6,
  "height": 1.76,
  "circuit": "AB165",
- "voice": "A two-6L6GC head and a separate horizontal 2x12 cabinet.",
- "story": "The AB165 Bassman has Bass Instrument and Normal channels with separate tone controls. Deep works in the Bass-channel tone network; Bright bypasses part of the Normal Volume. Both channels join at another gain stage before the inverter. The diode-rectified head drives two parallel twelves in a closed cabinet.",
+ "voice": "A 50-watt head over a closed two-twelve cabinet.",
+ "story": "By the black-panel years the Bassman is a head and a separate cabinet. The AB165 head has two 6L6GCs, about 50 watts, and a silicon-diode supply with no rectifier tube. The Bass channel has a Deep switch and the Normal channel has a Bright switch, each with its own Volume, Treble and Bass, and both channels go through one more gain stage after they join. The cabinet is closed at the back, with two twelves at 4 ohms. Fender made three black-panel Bassman circuits, the AA864, AA165 and AB165, and reused the tube-chart labels, so check the board to know which one you have. Ours is a 1965 AB165.",
  "ratingNote": "Catalog row 70 covers 1964–1967 black-panel Bassmans; this selects 1965-style AB165 rather than AA864 or AA165. Approximate 50 W retained. Cabinet 21-inch working height conflicts with a 20-inch reader correction (Q22). Speaker supplier, exact hardware dimensions and interior placements remain estimates."
 },
 {
@@ -57,8 +57,8 @@ const amps=[
  "width": 1.33,
  "height": 1.606,
  "circuit": "PR 6273 / dual output",
- "voice": "Separate 50 W and 20 W outputs drive a fifteen and a ten.",
- "story": "The Pano Verb has a 15-inch Jensen C15N on OUT 1 and a 10-inch Jensen P10R on OUT 2. Split reverb leaves the fifteen dry and sends reverb to the ten; Full sends it to both. Harmonic tremolo can operate in mono or alternate between the speakers. A Drive control adds gain and clicks off to bypass its boost path.",
+ "voice": "Two power amps in one combo, a fifteen and a ten.",
+ "story": "Fender built the Pano Verb with Jack White, drawing on three amps from his collection: a 1964 Vibroverb, a 1960 Vibrasonic and a 1993 Vibro-King. It’s one channel with two separate power amps inside. A 6L6 pair drives a 15-inch Jensen C15N at 50 watts, and a 6V6 pair drives a 10-inch Jensen P10R at 20. Because each speaker has its own output, the reverb can go to the ten alone and leave the fifteen dry, and the harmonic tremolo can bounce between the two speakers. Drive adds up to 26 dB of gain and clicks off when you don’t want it. The 4 / 8 Ω on the spec line means one load per output, not a combined load.",
  "ratingNote": "Catalog row 206; Fender PR 6273 manual specifies 50 W / 4 Ω OUT 1 and 20 W / 8 Ω OUT 2, not one combined speaker load. Cabinet envelope follows Fender specifications. Detailed speaker geometry, socket positions, tank and transformer mounting remain estimates; no internal schematic is inferred from the owner manual."
 },
 {

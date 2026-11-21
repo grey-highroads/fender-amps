@@ -222,3 +222,18 @@ All previous copy is retained from main `f4aa2cc`. Copy role can refine the new
 text after the builder release. Keep factual values, anchors, two independent
 Pano outputs, cabinet estimates and Q29 drawing-label conflict intact. Factory
 circuit/construction leads the text; specimen caveats stay in fine print/docs.
+
+## Batch 7: tweed Bassman, black-panel Bassman and Pano Verb
+
+November 21, 2026, on `main`. Stories, one-line descriptions and all 22 cards in `dist/bassman-pano-features.js` rewritten from the builder's factual drafts. Facts, sources, labels and anchors unchanged. Speaker attribute rows on both Bassmans now give the stock speaker models from the research briefs.
+
+Attributed lore added: Fender's Bassman history for the Middle control on the 5F6; Wikipedia via the brief for other makers copying the 5F6-A; Mojotone for the selenium bias rectifier, the AA864 bias pot and stock speakers; the AB165 drawing's Columbia Records line; Fender's product page for the Jack White association and the three amps the Pano Verb draws on. The catalog row confirms the 6L6 50 W side and 6V6 20 W side.
+
+Flags:
+
+- Tweed Bassman inverter tube: the layout says 12AX7 and the schematic label looks like 12AY7 (Q29). The card says the sheets disagree and that we follow the layout.
+- Black-panel Bassman cabinet height: 21 inches published, 20 in a reader correction (Q22). In the fine print only.
+- Pano Verb: which tube pair feeds which output comes from the catalog and Fender's product page, not a schematic. The card's source line says so.
+- `ratingNote` and the year-range labels were not changed.
+
+Every card opened in a headless browser at 1440 and 390 px wide. All `checks/*.mjs` pass except the Blender check, which needs Git LFS content.
