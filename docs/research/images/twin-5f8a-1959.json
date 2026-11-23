@@ -1,0 +1,92 @@
+{
+ "amp": "Twin (5F8 / 5F8-A high power)",
+ "id": "twin-5f8a-1959",
+ "catalogCsvRow": 36,
+ "collectedOn": "2026-11-23",
+ "purpose": "Modeling and composite references for the builder. Not for publication.",
+ "rights": "Third-party dealer photographs; not licensed for redistribution. Do not commit the image files.",
+ "macFolder": "Fender Study/Images/Twin 5F8-A",
+ "images": [
+  {
+   "file": "01__front.jpg",
+   "view": "front",
+   "source": "Reverb listing 96869772 (Mike & Mike's Guitar Bar)",
+   "page": "https://reverb.com/item/96869772",
+   "specimen": "April 1959 tube chart; original tweed and circuit (seller)",
+   "knownReplacements": "Speakers era-correct Jensen P12N, not stated original",
+   "url": "https://rvb-img.reverb.com/i/s--2mRZKufi--/quality=medium-low,height=800,width=800,fit=contain/2173871c-24bf-4681-9b55-217aa770a303.jpg"
+  },
+  {
+   "file": "02__top-and-control-panel.jpg",
+   "view": "top and control panel",
+   "source": "Reverb listing 96869772 (Mike & Mike's Guitar Bar)",
+   "page": "https://reverb.com/item/96869772",
+   "specimen": "April 1959",
+   "knownReplacements": "as above",
+   "url": "https://rvb-img.reverb.com/i/s--rfq4wI3g--/quality=medium-low,height=800,width=800,fit=contain/579b84d7-8a11-4ce4-84b3-bff9a10bf779.jpg"
+  },
+  {
+   "file": "03__top-three-quarter.jpg",
+   "view": "top, three-quarter",
+   "source": "Reverb listing 96869772 (Mike & Mike's Guitar Bar)",
+   "page": "https://reverb.com/item/96869772",
+   "specimen": "April 1959",
+   "knownReplacements": "as above",
+   "url": "https://rvb-img.reverb.com/i/s--8r0JWniu--/quality=medium-low,height=800,width=800,fit=contain/4f176433-56bd-46ae-8d06-3dab9c2a6cb6.jpg"
+  },
+  {
+   "file": "04__control-panel-close-up.jpg",
+   "view": "control panel close-up",
+   "source": "Reverb listing 96869772 (Mike & Mike's Guitar Bar)",
+   "page": "https://reverb.com/item/96869772",
+   "specimen": "April 1959",
+   "knownReplacements": "as above",
+   "url": "https://rvb-img.reverb.com/i/s--KjvzERsY--/quality=medium-low,height=800,width=800,fit=contain/3eb6643d-8876-4cd5-81d7-dd5b33bad4b7.jpg"
+  },
+  {
+   "file": "05__side.jpg",
+   "view": "side",
+   "source": "Reverb listing 96869772 (Mike & Mike's Guitar Bar)",
+   "page": "https://reverb.com/item/96869772",
+   "specimen": "April 1959",
+   "knownReplacements": "as above",
+   "url": "https://rvb-img.reverb.com/i/s--co_AE-fl--/quality=medium-low,height=800,width=800,fit=contain/67b20c23-fd3f-4956-9064-9d27985d45d8.jpg"
+  },
+  {
+   "file": "06__rear.jpg",
+   "view": "rear",
+   "source": "Reverb listing 96869772 (Mike & Mike's Guitar Bar)",
+   "page": "https://reverb.com/item/96869772",
+   "specimen": "April 1959",
+   "knownReplacements": "as above",
+   "url": "https://rvb-img.reverb.com/i/s--FBV5V-xv--/quality=medium-low,height=800,width=800,fit=contain/4659628a-e592-471d-b649-c350aaebfe18.jpg"
+  },
+  {
+   "file": "07__front-studio.jpg",
+   "view": "front, studio",
+   "source": "RetroFret 11266",
+   "page": "https://retrofret.com/products/fender-twin-amp-5f8-a-high-power-tube-amplifier-1959-11266",
+   "specimen": "A-00576, chart \"IC\" March 1959",
+   "knownReplacements": "All original per dealer, speakers reconed",
+   "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/01_d19a44a9-b946-481a-a624-f94417102f47.jpg"
+  },
+  {
+   "file": "08__rear-studio.jpg",
+   "view": "rear, studio",
+   "source": "RetroFret 11266",
+   "page": "https://retrofret.com/products/fender-twin-amp-5f8-a-high-power-tube-amplifier-1959-11266",
+   "specimen": "A-00576",
+   "knownReplacements": "as above",
+   "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/02_6c7c708b-c587-46ef-ae96-ea2c2d1b5e01.jpg"
+  },
+  {
+   "file": "09__front-three-quarter-studio.jpg",
+   "view": "front three-quarter, studio",
+   "source": "RetroFret 11266",
+   "page": "https://retrofret.com/products/fender-twin-amp-5f8-a-high-power-tube-amplifier-1959-11266",
+   "specimen": "A-00576",
+   "knownReplacements": "as above",
+   "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/03_00387d7f-e364-4423-acab-995ce655b0b7.jpg"
+  }
+ ]
+}

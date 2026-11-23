@@ -1,0 +1,92 @@
+{
+  "amp": "Deluxe / Model 26 (woodie)",
+  "id": "deluxe-model-26-1946",
+  "catalogCsvRow": 3,
+  "collectedOn": "2026-11-23",
+  "purpose": "Modeling and composite references for the builder. Not for publication.",
+  "rights": "Third-party dealer photographs; not licensed for redistribution. Do not commit the image files.",
+  "macFolder": "Fender Study/Images/Deluxe Model 26",
+  "images": [
+    {
+      "file": "01__front-three-quarter.jpg",
+      "view": "front, three-quarter",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1946-fender-model-26-deluxe-amp",
+      "specimen": "1946, ash cabinet, red grille",
+      "knownReplacements": "Two of three knobs replaced (dealer); unserviced",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/products/1946-Fender-Model-26-Deluxe-Woody-Amp-8.jpg"
+    },
+    {
+      "file": "02__rear-chassis-and-panel.jpg",
+      "view": "rear, chassis and panel",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1946-fender-model-26-deluxe-amp",
+      "specimen": "1946, ash, red",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/products/1946-Fender-Model-26-Deluxe-Woody-Amp-12.jpg"
+    },
+    {
+      "file": "03__side.jpg",
+      "view": "side",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1946-fender-model-26-deluxe-amp",
+      "specimen": "1946, ash, red",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/products/1946-Fender-Model-26-Deluxe-Woody-Amp-10.jpg"
+    },
+    {
+      "file": "04__front.jpg",
+      "view": "front",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1946-fender-model-26-deluxe-amp",
+      "specimen": "1946, ash, red",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/products/1946-Fender-Model-26-Deluxe-Woody-Amp-9.jpg"
+    },
+    {
+      "file": "05__front-studio.jpg",
+      "view": "front, studio",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1947-fender-model-26",
+      "specimen": "1947 (speaker 1946 week 32), walnut, gold grille",
+      "knownReplacements": "All parts appear original (dealer); unserviced",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/files/1947FenderModel26-3_0c909cef-5ef7-43db-8072-8d368c42d756.jpg"
+    },
+    {
+      "file": "06__front-three-quarter-studio.jpg",
+      "view": "front three-quarter, studio",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1947-fender-model-26",
+      "specimen": "1947, walnut, gold",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/files/1947FenderModel26-4_97eb7b5d-c246-4043-91f3-521ed74f0df0.jpg"
+    },
+    {
+      "file": "07__side-studio.jpg",
+      "view": "side, studio",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1947-fender-model-26",
+      "specimen": "1947, walnut, gold",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/files/1947FenderModel26-2_faca189b-9e20-4dea-8af0-e1495e870977.jpg"
+    },
+    {
+      "file": "08__rear-studio.jpg",
+      "view": "rear, studio",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1947-fender-model-26",
+      "specimen": "1947, walnut, gold",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/files/1947fenderModel26-4-2.jpg"
+    },
+    {
+      "file": "09__rear-control-panel-close-up.jpg",
+      "view": "rear control panel close-up",
+      "source": "True Vintage Guitar",
+      "page": "https://truevintageguitar.com/products/1947-fender-model-26",
+      "specimen": "1947, walnut, gold",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0230/9164/2448/files/1947fenderModel26-2-3.jpg"
+    }
+  ]
+}

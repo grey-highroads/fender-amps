@@ -12,6 +12,7 @@ file it sends you to for your task. Everything below is on `main`.
 | Open and resolved research questions | [docs/research/QUESTIONS.md](docs/research/QUESTIONS.md) | Before treating any figure as settled |
 | Research status per amp (readiness, blockers, catalog row) | [docs/research/manifest.json](docs/research/manifest.json) | To see what is ready to build |
 | Modeling packets and rechecked hotspot drafts | [docs/research/packets/](docs/research/packets/) | Princeton model, 5E3 hotspots, checks on Champ, Tremolux, brown Deluxe |
+| Production copy written with research (timeline text and hotspot cards, live schema), from the fifth pass on | [docs/research/copy/](docs/research/copy/) | Before placing hotspots or adding a timeline entry for those amps |
 | Photo sets for composites (lists only; files are on the owner's Mac) | [docs/research/images/](docs/research/images/) | When collecting or using photos |
 | Copy voice direction, copy-pass log and parked drafts | [docs/handoff/COPY_VOICE.md](docs/handoff/COPY_VOICE.md) | Before writing or editing any site copy or hotspot text |
 | Build notes for each batch of modeled amps (small amps, three combos, Princeton, explorers, faceplates) | `docs/handoff/*.md`, linked from [docs/handoff/README.md](docs/handoff/README.md) | When changing an amp that is already built |

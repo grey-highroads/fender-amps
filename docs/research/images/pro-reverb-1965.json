@@ -1,0 +1,92 @@
+{
+  "amp": "Pro Reverb (black panel)",
+  "id": "pro-reverb-1965",
+  "catalogCsvRow": 71,
+  "collectedOn": "2026-11-23",
+  "purpose": "Modeling and composite references for the builder. Not for publication.",
+  "rights": "Third-party dealer photographs; not licensed for redistribution. Do not commit the image files.",
+  "macFolder": "Fender Study/Images/Pro Reverb",
+  "images": [
+    {
+      "file": "01__front.jpg",
+      "view": "front",
+      "source": "Reverb listing 92238272",
+      "page": "https://reverb.com/item/92238272",
+      "specimen": "September 1965 (seller)",
+      "knownReplacements": "Original tolex and grille; speakers original but reconed; reverb tank replaced",
+      "url": "https://rvb-img.reverb.com/i/s--tTpf8TSC--/quality=medium-low,height=800,width=800,fit=contain/vgdlk6azfokxrdrbpm1s.jpg"
+    },
+    {
+      "file": "02__front-three-quarter-left.jpg",
+      "view": "front three-quarter, left",
+      "source": "Reverb listing 92238272",
+      "page": "https://reverb.com/item/92238272",
+      "specimen": "September 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--qIuhl3f1--/quality=medium-low,height=800,width=800,fit=contain/rdcofcx5rxddxwiyewof.jpg"
+    },
+    {
+      "file": "03__front-three-quarter-right.jpg",
+      "view": "front three-quarter, right",
+      "source": "Reverb listing 92238272",
+      "page": "https://reverb.com/item/92238272",
+      "specimen": "September 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--ExOHsjcD--/quality=medium-low,height=800,width=800,fit=contain/yn9dfdzfltw6ytexcav2.jpg"
+    },
+    {
+      "file": "04__side.jpg",
+      "view": "side",
+      "source": "Reverb listing 92238272",
+      "page": "https://reverb.com/item/92238272",
+      "specimen": "September 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--JIuZcCtd--/quality=medium-low,height=800,width=800,fit=contain/mkhbqqnd4yk1rywnxcgm.jpg"
+    },
+    {
+      "file": "05__rear-three-quarter.jpg",
+      "view": "rear three-quarter",
+      "source": "Reverb listing 92238272",
+      "page": "https://reverb.com/item/92238272",
+      "specimen": "September 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--t9rKwIP9--/quality=medium-low,height=800,width=800,fit=contain/kmsziswtjyelz2kg0rrn.jpg"
+    },
+    {
+      "file": "06__rear-panel.jpg",
+      "view": "rear panel",
+      "source": "Reverb listing 92238272",
+      "page": "https://reverb.com/item/92238272",
+      "specimen": "September 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--6_NdToo6--/quality=medium-low,height=800,width=800,fit=contain/qj2vwznozg5mefjupusy.jpg"
+    },
+    {
+      "file": "07__front-studio.jpg",
+      "view": "front, studio",
+      "source": "The Music Zoo",
+      "page": "https://www.themusiczoo.com/products/1965-fender-pro-reverb-2x12-amplifier",
+      "specimen": "A00861, 1965",
+      "knownReplacements": "Speakers replaced with Italian-made Jensen C12N; three-prong cord",
+      "url": "https://cdn.shopify.com/s/files/1/0916/0836/files/3525-C_Vintage_1965_Fender_Pro_Reverb_A00861_1_7c0f1281-5835-400e-a43f-d575795dc2d6.jpg"
+    },
+    {
+      "file": "08__control-panel-studio.jpg",
+      "view": "control panel, studio",
+      "source": "The Music Zoo",
+      "page": "https://www.themusiczoo.com/products/1965-fender-pro-reverb-2x12-amplifier",
+      "specimen": "A00861, 1965",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0916/0836/files/3525-C_Vintage_1965_Fender_Pro_Reverb_A00861_4_4087f0c5-80b6-4082-b0cf-be7065b67f6d.jpg"
+    },
+    {
+      "file": "09__rear-studio.jpg",
+      "view": "rear, studio",
+      "source": "The Music Zoo",
+      "page": "https://www.themusiczoo.com/products/1965-fender-pro-reverb-2x12-amplifier",
+      "specimen": "A00861, 1965",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0916/0836/files/3525-C_Vintage_1965_Fender_Pro_Reverb_A00861_11_9375c358-e1d4-4b2f-9f5f-b306dac873c3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+ "id": "pro-reverb-1965",
+ "catalogCsvRow": 71,
+ "status": "production copy, research pass 5, 2026-11-23. Grey owns final wording.",
+ "schema": "timeline: fields for dist/collection.js entries (builder adds width, height, finish). explorer: the BP_EXPLORATIONS shape in dist/bassman-pano-features.js. side and menuOnly are proposals; placement is the builder’s.",
+ "timeline": {
+  "id": "pro-reverb-1965",
+  "year": 1965,
+  "name": "Pro Reverb",
+  "era": "The black-panel years",
+  "years": "1965–1967; 1965-style AA165 study",
+  "watts": 40,
+  "speakers": "2 × 12″",
+  "load": "4 Ω",
+  "circuit": "AA165",
+  "voice": "Two twelves like a Twin Reverb, with two 6L6s instead of four.",
+  "story": "Two twelves like a Twin Reverb, but two 6L6s instead of four, so it runs out of clean room sooner. Fender’s AA165 drawing follows the same plan as the Vibrolux Reverb: two channels with Volume, Treble, Bass and a Bright switch, then Reverb, Speed and Intensity on the Vibrato channel, with a tube-driven spring tank and optical tremolo. The difference is the power supply. The Pro Reverb has a bigger power transformer, about 440 volts on the plates, and stacked filter caps to handle it. It first shipped in mid-1965, after CBS bought Fender, so every one is a CBS amp, and some still say Fender Electric Instrument Co. on the panel.",
+  "ratingNote": "Catalog row 71, 40 W. Circuit follows Fender drawing AA165 (D-FE), which shows a GZ34 rectifier; Premier Guitar says 5U4GB (Q31). Cabinet 19.5 × 26.5 × 9.5 in from Mojotone. Rear-panel wording from a September 1965 amp."
+ },
+ "explorer": {
+  "name": "Pro Reverb (black panel)",
+  "parts": [
+   {
+    "id": "supply",
+    "label": "High-voltage power supply",
+    "side": "top",
+    "menuOnly": false,
+    "title": "More voltage than the Vibrolux on the same two tubes.",
+    "body": "The AA165 power transformer puts about 440 V on the plates of the two 6L6GCs, against about 410 V on the Vibrolux Reverb. The first filter is a 20 µF, 525 V cap, and the next stage uses two 70 µF, 350 V caps in series with 220K resistors across them to share the voltage.",
+    "attributes": [
+     [
+      "Plate voltage",
+      "about 440 V"
+     ],
+     [
+      "Bias",
+      "about −51 V"
+     ],
+     [
+      "Filters",
+      "20 µF 525 V; 2 × 70 µF 350 V in series"
+     ]
+    ],
+    "listen": "More plate voltage means more clean room from the same two tubes.",
+    "together": "Series caps are how Fender got a high voltage rating out of lower-voltage parts. The 220K resistors keep the two caps splitting the voltage evenly.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA165; drawing AA964 for the Vibrolux comparison.",
+    "detail": "Headroom is a reading of the drawing, not a measurement.",
+    "sources": [
+     [
+      "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Pro-Reverb-AA165-Schematic.pdf",
+      "Fender \"Pro-Reverb-Amp AA165\" schematic, drawing D-FE"
+     ],
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ]
+    ]
+   },
+   {
+    "id": "rectifier",
+    "label": "Rectifier tube",
+    "side": "top",
+    "menuOnly": true,
+    "title": "A GZ34, according to Fender’s drawing.",
+    "body": "The AA165 drawing shows a GZ34 rectifier fed with 340 V AC on each side.",
+    "attributes": [
+     [
+      "Rectifier",
+      "GZ34"
+     ],
+     [
+      "Secondary",
+      "340 V AC each side"
+     ]
+    ],
+    "listen": "If you find a 5U4GB in one, that isn’t automatically wrong. It drops more voltage than a GZ34, so the amp would run a little cooler and softer.",
+    "together": "Guitarpoint’s tube chart for a 1965 amp also reads GZ34.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA165.",
+    "detail": "Premier Guitar says the stock rectifier is a 5U4GB. Not settled.",
+    "sources": [
+     [
+      "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Pro-Reverb-AA165-Schematic.pdf",
+      "Fender \"Pro-Reverb-Amp AA165\" schematic, drawing D-FE"
+     ]
+    ]
+   },
+   {
+    "id": "reverb",
+    "label": "Tube-driven spring reverb",
+    "side": "rear",
+    "menuOnly": false,
+    "title": "The reverb has its own tube and transformer.",
+    "body": "A 12AT7 drives the spring tank through a small transformer, and a 7025 recovers the return. The Reverb knob blends it back into the Vibrato channel.",
+    "attributes": [
+     [
+      "Driver",
+      "12AT7"
+     ],
+     [
+      "Recovery",
+      "7025"
+     ],
+     [
+      "Reverb transformer",
+      "125A20B"
+     ]
+    ],
+    "listen": "The tank is driven hard, so a little Reverb goes a long way.",
+    "together": "The circuit matches the Vibrolux Reverb’s on Fender’s drawings.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA165.",
+    "detail": "The original tank isn’t in every surviving amp.",
+    "sources": [
+     [
+      "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Pro-Reverb-AA165-Schematic.pdf",
+      "Fender \"Pro-Reverb-Amp AA165\" schematic, drawing D-FE"
+     ]
+    ]
+   },
+   {
+    "id": "tremolo",
+    "label": "Optical tremolo",
+    "side": "top",
+    "menuOnly": true,
+    "title": "Tremolo on the Vibrato channel only.",
+    "body": "A 12AX7 oscillator flashes a lamp next to a light-dependent resistor, which pulses the Vibrato channel’s signal. Speed and Intensity are on that channel.",
+    "attributes": [
+     [
+      "Oscillator",
+      "12AX7"
+     ],
+     [
+      "Controls",
+      "Speed, Intensity"
+     ]
+    ],
+    "listen": "Plug into Normal and the tremolo isn’t there.",
+    "together": "Same plan as the Vibrolux Reverb.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA165.",
+    "detail": "Not measured.",
+    "sources": [
+     [
+      "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Pro-Reverb-AA165-Schematic.pdf",
+      "Fender \"Pro-Reverb-Amp AA165\" schematic, drawing D-FE"
+     ]
+    ]
+   },
+   {
+    "id": "rear-panel",
+    "label": "CBS-era back panel",
+    "side": "rear",
+    "menuOnly": false,
+    "title": "The back panel says CBS.",
+    "body": "The printed back panel reads Fender Musical Instruments, a division of Columbia Record Distribution Corp., and rates the speaker jack at 40 watts. It also has the ground switch, a 2 A slow-blow fuse, power and standby switches, an extension speaker jack, two pedal jacks and the reverb tank jacks.",
+    "attributes": [
+     [
+      "Fuse",
+      "2 A slow-blow"
+     ],
+     [
+      "Speaker jack rating",
+      "40 W"
+     ],
+     [
+      "Maker",
+      "CBS"
+     ]
+    ],
+    "listen": "The Pro Reverb arrived after the sale, so there’s no pre-CBS one to hunt for. Some still carry Fender Electric Instrument Co. on the front panel.",
+    "together": "Wikipedia dates the first Pro Reverbs to mid-1965.",
+    "extraTitle": "Where this comes from",
+    "extra": "A September 1965 amp’s back panel and Wikipedia.",
+    "detail": "Panel wording varied during the run.",
+    "sources": [
+     [
+      "https://en.wikipedia.org/wiki/Fender_Pro_Reverb",
+      "Wikipedia: Fender Pro Reverb"
+     ],
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-blackface-pro-reverb",
+      "Mojotone field guide: Blackface Pro Reverb"
+     ]
+    ]
+   },
+   {
+    "id": "cabinet",
+    "label": "Two twelves at 4 ohms",
+    "side": "front",
+    "menuOnly": false,
+    "title": "Two twelves in a cabinet a little smaller than a Twin.",
+    "body": "Two twelves at 4 ohms, Jensen C12N or Oxford 12L6 according to Mojotone, in a cabinet about 19.5 inches tall and 26.5 wide. Large chassis straps, tilt-back legs and chrome corners.",
+    "attributes": [
+     [
+      "Speakers",
+      "2 × 12″"
+     ],
+     [
+      "Load",
+      "4 Ω"
+     ],
+     [
+      "Size",
+      "19.5 × 26.5 × 9.5 in"
+     ]
+    ],
+    "listen": "Twelves give it a bigger low end than the Vibrolux’s tens.",
+    "together": "The tilt-back legs are 16 inches long.",
+    "extraTitle": "Where this comes from",
+    "extra": "Mojotone field guide.",
+    "detail": "Dimensions are Mojotone’s; Fender’s figure wasn’t found.",
+    "sources": [
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-blackface-pro-reverb",
+      "Mojotone field guide: Blackface Pro Reverb"
+     ]
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,101 @@
+{
+  "amp": "Vibrolux Reverb (black panel)",
+  "id": "vibrolux-reverb-1964",
+  "catalogCsvRow": 68,
+  "collectedOn": "2026-11-23",
+  "purpose": "Modeling and composite references for the builder. Not for publication.",
+  "rights": "Third-party dealer photographs; not licensed for redistribution. Do not commit the image files.",
+  "macFolder": "Fender Study/Images/Vibrolux Reverb",
+  "images": [
+    {
+      "file": "01__front.jpg",
+      "view": "front",
+      "source": "Reverb listing 97636999",
+      "page": "https://reverb.com/item/97636999",
+      "specimen": "A00868, chart \"OB\" February 1965, pre-CBS",
+      "knownReplacements": "Not itemized by seller",
+      "url": "https://rvb-img.reverb.com/i/s--kSLVH7wo--/quality=medium-low,height=800,width=800,fit=contain/2eca5dca-1459-449b-968c-9747fa4e5902.jpg"
+    },
+    {
+      "file": "02__front-three-quarter-left.jpg",
+      "view": "front three-quarter, left",
+      "source": "Reverb listing 97636999",
+      "page": "https://reverb.com/item/97636999",
+      "specimen": "February 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--98223gA_--/quality=medium-low,height=800,width=800,fit=contain/07819a8d-d87d-4b6b-8fa5-fa7df3b0f76b.jpg"
+    },
+    {
+      "file": "03__front-three-quarter-right.jpg",
+      "view": "front three-quarter, right",
+      "source": "Reverb listing 97636999",
+      "page": "https://reverb.com/item/97636999",
+      "specimen": "February 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--YxB01C6O--/quality=medium-low,height=800,width=800,fit=contain/2fdea017-f0da-4c52-8a53-ff8968ffc55c.jpg"
+    },
+    {
+      "file": "04__side.jpg",
+      "view": "side",
+      "source": "Reverb listing 97636999",
+      "page": "https://reverb.com/item/97636999",
+      "specimen": "February 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--WPMuTp5f--/quality=medium-low,height=800,width=800,fit=contain/5aa91d46-fcd2-486a-9690-3c25d0403593.jpg"
+    },
+    {
+      "file": "05__rear.jpg",
+      "view": "rear",
+      "source": "Reverb listing 97636999",
+      "page": "https://reverb.com/item/97636999",
+      "specimen": "February 1965",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--5p-XdvpY--/quality=medium-low,height=800,width=800,fit=contain/c1b81f31-efcc-4935-b801-2b44131be981.jpg"
+    },
+    {
+      "file": "06__front-first-year-amp.jpg",
+      "view": "front, first-year amp",
+      "source": "Reverb listing 4667867",
+      "page": "https://reverb.com/item/4667867",
+      "specimen": "A 00745, chart \"NL\" December 1964",
+      "knownReplacements": "Not itemized",
+      "url": "https://rvb-img.reverb.com/i/s--lm0BSGey--/quality=medium-low,height=800,width=800,fit=contain/regjlvhcqnk7oxe5dw0u.jpg"
+    },
+    {
+      "file": "07__front-studio.jpg",
+      "view": "front, studio",
+      "source": "RetroFret 13444",
+      "page": "https://retrofret.com/products/fender-vibrolux-reverb-aa-864-tube-amplifier-1966-13444",
+      "specimen": "A-04811, parts late 1965",
+      "knownReplacements": "Two volume pots replaced; original Jensen C10Q speakers and transformers",
+      "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/01_ca8fdaed-8755-4c0b-83ef-80cd59c6b7c5.jpg"
+    },
+    {
+      "file": "08__rear-studio.jpg",
+      "view": "rear, studio",
+      "source": "RetroFret 13444",
+      "page": "https://retrofret.com/products/fender-vibrolux-reverb-aa-864-tube-amplifier-1966-13444",
+      "specimen": "A-04811",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/02_069b073b-ea97-4a64-bdcc-d99a9fe35562.jpg"
+    },
+    {
+      "file": "09__front-three-quarter-studio.jpg",
+      "view": "front three-quarter, studio",
+      "source": "RetroFret 13444",
+      "page": "https://retrofret.com/products/fender-vibrolux-reverb-aa-864-tube-amplifier-1966-13444",
+      "specimen": "A-04811",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/03_9e51ab2c-22f8-4738-828c-73a04f5e6ace.jpg"
+    },
+    {
+      "file": "10__control-panel-close-up.jpg",
+      "view": "control panel close-up",
+      "source": "RetroFret 13444",
+      "page": "https://retrofret.com/products/fender-vibrolux-reverb-aa-864-tube-amplifier-1966-13444",
+      "specimen": "A-04811",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/24_be9f4e99-b819-4e48-a9f9-955f8070c04f.jpg"
+    }
+  ]
+}

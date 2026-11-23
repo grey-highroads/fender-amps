@@ -1,0 +1,92 @@
+{
+  "amp": "Vibro Champ (silver panel)",
+  "id": "vibro-champ-silverface",
+  "catalogCsvRow": 80,
+  "collectedOn": "2026-11-23",
+  "purpose": "Modeling and composite references for the builder. Not for publication.",
+  "rights": "Third-party dealer photographs; not licensed for redistribution. Do not commit the image files.",
+  "macFolder": "Fender Study/Images/Vibro Champ",
+  "images": [
+    {
+      "file": "01__front.jpg",
+      "view": "front",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "A37008, 1978 (seller)",
+      "knownReplacements": "Original per seller; serviced",
+      "url": "https://rvb-img.reverb.com/i/s--J9EzDi_t--/quality=medium-low,height=800,width=800,fit=contain/11f0837b-e435-4e9b-a0da-5510f859dd4e.jpeg"
+    },
+    {
+      "file": "02__front-three-quarter-left.jpg",
+      "view": "front three-quarter, left",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "1978",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--LxVNVJzf--/quality=medium-low,height=800,width=800,fit=contain/77a46a47-95a1-41e8-8da5-145d11fe6f2a.jpeg"
+    },
+    {
+      "file": "03__front-three-quarter-right.jpg",
+      "view": "front three-quarter, right",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "1978",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--YAWGhHXM--/quality=medium-low,height=800,width=800,fit=contain/44c606f7-978d-448e-96fb-5f972c7ce5a3.jpeg"
+    },
+    {
+      "file": "04__top-front-panel.jpg",
+      "view": "top front, panel",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "1978",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--R2nDlSG4--/quality=medium-low,height=800,width=800,fit=contain/5d5ab4fb-8b6d-4662-b440-a5fa80c5dab6.jpeg"
+    },
+    {
+      "file": "05__rear-elevated.jpg",
+      "view": "rear, elevated",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "1978",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--qC8q43LG--/quality=medium-low,height=800,width=800,fit=contain/8f848273-42f4-45b7-a2a5-7eee866752e2.jpeg"
+    },
+    {
+      "file": "06__rear-three-quarter.jpg",
+      "view": "rear three-quarter",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "1978",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--LKvunwMj--/quality=medium-low,height=800,width=800,fit=contain/595ff5bc-4343-4a8a-8cbb-9d3e0e81ed14.jpeg"
+    },
+    {
+      "file": "07__side.jpg",
+      "view": "side",
+      "source": "Reverb listing 98998500",
+      "page": "https://reverb.com/item/98998500",
+      "specimen": "1978",
+      "knownReplacements": "as above",
+      "url": "https://rvb-img.reverb.com/i/s--PPEI0ufp--/quality=medium-low,height=800,width=800,fit=contain/a5af0472-c9a5-4ce6-bf26-219dd0380e14.jpeg"
+    },
+    {
+      "file": "08__front-drip-edge-variant-studio.jpg",
+      "view": "front, drip-edge variant, studio",
+      "source": "RetroFret 10553",
+      "page": "https://retrofret.com/products/fender-vibro-champ-aa-764-tube-amplifier-1969-10553",
+      "specimen": "A-27933, transformers 1968 to 1969",
+      "knownReplacements": "Original apart from service (dealer)",
+      "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/01_e1d25fab-4930-460a-a7e1-15367c007e11.jpg"
+    },
+    {
+      "file": "09__rear-drip-edge-variant-studio.jpg",
+      "view": "rear, drip-edge variant, studio",
+      "source": "RetroFret 10553",
+      "page": "https://retrofret.com/products/fender-vibro-champ-aa-764-tube-amplifier-1969-10553",
+      "specimen": "A-27933",
+      "knownReplacements": "as above",
+      "url": "https://cdn.shopify.com/s/files/1/0672/8702/3756/files/02_2fdac552-2a48-4bc4-94ac-f1cdadda99c0.jpg"
+    }
+  ]
+}

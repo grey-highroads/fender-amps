@@ -1,0 +1,268 @@
+{
+ "id": "twin-5f8a-1959",
+ "catalogCsvRow": 36,
+ "status": "production copy, research pass 5, 2026-11-23. Grey owns final wording.",
+ "schema": "timeline: fields for dist/collection.js entries (builder adds width, height, finish). explorer: the BP_EXPLORATIONS shape in dist/bassman-pano-features.js. side and menuOnly are proposals; placement is the builder’s.",
+ "timeline": {
+  "id": "twin-5f8a-1959",
+  "year": 1957,
+  "name": "Twin (high power)",
+  "era": "The tweed years",
+  "years": "1957–1960, grouped 5F8 / 5F8-A; 1959-style 5F8-A study",
+  "watts": 80,
+  "speakers": "2 × 12″",
+  "load": "4 Ω",
+  "circuit": "5F8-A",
+  "voice": "Four 5881s, a Middle knob and a lot of clean room.",
+  "story": "Fender’s own history calls the 5F8-A a 100-watt amp. Most other sources, and our catalog, say 80. Either way it’s a tweed amp with four 5881 output tubes on fixed bias, a GZ34 rectifier, and two Jensen twelves side by side in a cabinet bigger than the earlier Twins. Normal and Bright each get a Volume, and Treble, Bass, Middle and Presence work on both. The Middle knob is new here. So is the long-tailed-pair phase inverter, the same kind you’ll find in the black-panel amps a few years later. There’s a standby switch too. The short-lived 5F8 came first, in 1957, and Fender moved the Twin into blonde tolex in 1960.",
+  "ratingNote": "Catalog row 36, 80 W retained; Fender’s Twin history says 100 W for the 5F8-A (Q30). Circuit follows Fender drawing I-EG. Cabinet size is a dealer measurement, 18.5 × 26.5 × 10.5 in, the same on two amps."
+ },
+ "explorer": {
+  "name": "Twin 5F8-A (tweed, high power)",
+  "parts": [
+   {
+    "id": "middle",
+    "label": "Middle control",
+    "side": "top",
+    "menuOnly": false,
+    "title": "The Twin is where the Middle knob shows up.",
+    "body": "Fender’s history names the Middle control as new on this Twin. On drawing I-EG the tone stack is a 250K Treble, a 1M Bass and a 25K Middle, with a 250 pF treble cap and two .02 µF caps.",
+    "attributes": [
+     [
+      "Treble",
+      "250 kΩ"
+     ],
+     [
+      "Bass",
+      "1 MΩ"
+     ],
+     [
+      "Middle",
+      "25 kΩ"
+     ]
+    ],
+    "listen": "The Middle pot sits at the bottom of the stack, where other Fenders have a fixed resistor. Turning it down cuts the mids, and the whole amp gets a bit quieter as you do.",
+    "together": "A 56K resistor sets the slope of the stack. The stack is fed from a cathode follower, as on the tweed Bassman.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG; Fender’s Twin history for the Middle knob being new.",
+    "detail": "The volume drop is read from the circuit, not measured.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ],
+     [
+      "https://www.fender.com/articles/behind-the-scenes/pristine-cleans-aggressive-overdrive-the-fender-twin-story",
+      "Fender: The Fender Twin story"
+     ]
+    ]
+   },
+   {
+    "id": "presence",
+    "label": "Presence on the feedback loop",
+    "side": "top",
+    "menuOnly": false,
+    "title": "Presence works on the power amp, not the preamp.",
+    "body": "Negative feedback runs from the speaker side back to the phase inverter, and the Presence control is a 5K pot with a .1 µF cap on that feedback path.",
+    "attributes": [
+     [
+      "Presence pot",
+      "5 kΩ"
+     ],
+     [
+      "Cap",
+      ".1 µF, 200 V"
+     ]
+    ],
+    "listen": "Turning Presence up lets more treble through without the feedback holding it back. It shapes the top end after the tone stack, and you notice it more as the amp gets louder.",
+    "together": "Because it sits on the feedback loop, Presence affects both channels equally.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "Behavior described from the circuit, not measured.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ]
+    ]
+   },
+   {
+    "id": "inverter",
+    "label": "Long-tailed-pair phase inverter",
+    "side": "top",
+    "menuOnly": true,
+    "title": "The phase inverter black-panel amps would use later.",
+    "body": "A 12AX7 runs as a long-tailed pair: two triodes sharing a tail resistor, with unequal plate loads of 82K and 100K. It feeds the four output tubes and takes the feedback signal.",
+    "attributes": [
+     [
+      "Tube",
+      "12AX7"
+     ],
+     [
+      "Plate loads",
+      "82 kΩ / 100 kΩ"
+     ],
+     [
+      "Tail",
+      "470 Ω + 10 kΩ"
+     ]
+    ],
+    "listen": "This inverter can swing a lot of signal cleanly, which is part of how four output tubes get used fully before things fall apart.",
+    "together": "A 47 pF cap sits across part of the circuit. The black-panel Vibrolux Reverb and Pro Reverb drawings show the same inverter type with a 12AT7.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG; drawings AA964 and AA165 for the later comparison.",
+    "detail": "The headroom point is an engineering reading of the circuit.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ],
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ],
+     [
+      "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Pro-Reverb-AA165-Schematic.pdf",
+      "Fender \"Pro-Reverb-Amp AA165\" schematic, drawing D-FE"
+     ]
+    ]
+   },
+   {
+    "id": "output",
+    "label": "Four 5881s on fixed bias",
+    "side": "top",
+    "menuOnly": false,
+    "title": "Four output tubes on fixed bias.",
+    "body": "Four 5881s in push-pull, with a fixed negative bias of about -41 V instead of the cathode bias the small tweeds use. Each tube has a 1500 Ω grid stopper and a 470 Ω, 1 W screen resistor. Plates sit at about 395 V.",
+    "attributes": [
+     [
+      "Output tubes",
+      "4 × 5881"
+     ],
+     [
+      "Bias",
+      "fixed, about −41 V"
+     ],
+     [
+      "Plate voltage",
+      "about 395 V"
+     ]
+    ],
+    "listen": "Fixed bias with four tubes is a lot of clean room. It’s still clean at volumes where a tweed Deluxe is well into breakup.",
+    "together": "Fixed bias needs its own negative supply, which the drawing includes. The small tweeds skip that by biasing from the cathode.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "Voltages are the drawing’s figures, not measurements of a real amp.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ]
+    ]
+   },
+   {
+    "id": "power",
+    "label": "GZ34 rectifier and standby",
+    "side": "rear",
+    "menuOnly": true,
+    "title": "A GZ34 and a standby switch.",
+    "body": "The rectifier is a GZ34 fed with 300 V AC on each side, into 20 µF, 600 V filter caps. There’s a standby switch next to the power switch, and a 3 A fuse.",
+    "attributes": [
+     [
+      "Rectifier",
+      "GZ34"
+     ],
+     [
+      "Filters",
+      "20 µF, 600 V"
+     ],
+     [
+      "Fuse",
+      "3 A"
+     ]
+    ],
+    "listen": "A GZ34 sags less than the 5Y3 in the small tweeds, so the big Twin stays tighter when you dig in.",
+    "together": "Transformer numbers on the drawing: power 7993, output 45268, choke 14684.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "The sag comparison is general tube behavior, not a measurement.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ]
+    ]
+   },
+   {
+    "id": "inputs",
+    "label": "Normal and Bright channels",
+    "side": "top",
+    "menuOnly": true,
+    "title": "Bright and Normal start in the same 12AY7.",
+    "body": "Each channel has two inputs and its own 1M Volume. Both channels start in one 12AY7, one half each, and share an 820 Ω cathode resistor with a 250 µF bypass. The Bright Volume has a 100 pF cap across it.",
+    "attributes": [
+     [
+      "Input tube",
+      "12AY7"
+     ],
+     [
+      "Bright cap",
+      "100 pF"
+     ],
+     [
+      "Mixing resistors",
+      "270 kΩ"
+     ]
+    ],
+    "listen": "The Bright cap does the most with the Volume low. Turn it up and the two channels get closer in tone.",
+    "together": "After the Volumes the channels mix through 270K resistors into a 12AX7 gain stage.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing I-EG.",
+    "detail": "The control panel on the model follows period photos.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ]
+    ]
+   },
+   {
+    "id": "cabinet",
+    "label": "Two Jensen twelves side by side",
+    "side": "front",
+    "menuOnly": false,
+    "title": "Two twelves side by side in a bigger box.",
+    "body": "By 1958 the Twin had a larger cabinet with the two twelves mounted side by side. Fender’s history names the Jensen P12N. The earlier 5E8 Twin was a 50-watt amp with its speakers offset.",
+    "attributes": [
+     [
+      "Speakers",
+      "2 × 12″ Jensen P12N"
+     ],
+     [
+      "Load",
+      "4 Ω"
+     ],
+     [
+      "Covering",
+      "tweed until 1960"
+     ]
+    ],
+    "listen": "The P12N is a beefier speaker than the P12R in a tweed Deluxe, which it needs with this much power behind it.",
+    "together": "There are two speaker jacks on the chassis. Fender moved the Twin to blonde tolex in 1960.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s history of the Twin.",
+    "detail": "The size is from dealer measurements; Fender’s figure wasn’t found.",
+    "sources": [
+     [
+      "https://www.fender.com/articles/behind-the-scenes/pristine-cleans-aggressive-overdrive-the-fender-twin-story",
+      "Fender: The Fender Twin story"
+     ],
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/fender_twin_5f8a.pdf?v=1758824597",
+      "Fender \"Twin-Amp\" schematic, Model 5F8-A, drawing I-EG"
+     ]
+    ]
+   }
+  ]
+ }
+}

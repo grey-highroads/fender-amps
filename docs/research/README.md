@@ -8,6 +8,7 @@ All amp research for the site lives in this folder on `main`. Start from [AGENTS
 
 | Year | Amp | Type | Status | Brief |
 | --- | --- | --- | --- | --- |
+| 1946 | Deluxe Model 26 (woodie) | new timeline amp | ready, with estimates (Q35) | [deluxe-model-26-1946.md](amps/deluxe-model-26-1946.md) |
 | 1947 | Dual Professional | new timeline amp | ready, with estimates (Q16) | [dual-professional-1947.md](amps/dual-professional-1947.md) |
 | 1949 | Pro (TV front) | new timeline amp | ready, with estimates (Q19) | [pro-tv-front-1949.md](amps/pro-tv-front-1949.md) |
 | 1952 | Bassman (5B6, 1x15) | new timeline amp | blocked (Q24, Q27) | [bassman-5b6-1952.md](amps/bassman-5b6-1952.md) |
@@ -15,14 +16,18 @@ All amp research for the site lives in this folder on `main`. Start from [AGENTS
 | 1957 | Deluxe (5E3) | explorer upgrade | ready, with estimates | [deluxe-5e3.md](amps/deluxe-5e3.md) |
 | 1959 | Champ (5F1, 8-inch) | new timeline amp | on the live site | [champ-5f1-1958.md](amps/champ-5f1-1958.md) |
 | 1959 | Bassman (5F6 / 5F6-A) | explorer upgrade | blocked (Q23) | [bassman-5f6a.md](amps/bassman-5f6a.md) |
+| 1959 | Twin (5F8-A high power) | new timeline amp | ready, with estimates (Q30) | [twin-5f8a-1959.md](amps/twin-5f8a-1959.md) |
 | 1960 | Vibrasonic (6G13 / 6G13-A) | new timeline amp | ready, with estimates | [vibrasonic-5g13-1960.md](amps/vibrasonic-5g13-1960.md) |
 | 1961 | Showman (blonde) | new timeline amp | ready, with estimates | [showman-blonde-1961.md](amps/showman-blonde-1961.md) |
 | 1962 | Deluxe (6G3) | new timeline amp | on the live site | [deluxe-6g3-1962.md](amps/deluxe-6g3-1962.md) |
 | 1963 | Vibroverb (6G16 brown) | explorer upgrade | blocked (Q21, Q23) | [vibroverb-6g16.md](amps/vibroverb-6g16.md) |
+| 1964 | Vibrolux Reverb (black panel) | new timeline amp | ready, with estimates (Q32, Q33) | [vibrolux-reverb-1964.md](amps/vibrolux-reverb-1964.md) |
 | 1965 | Princeton Reverb (black panel) | new timeline amp | on the live site (Q17) | [princeton-reverb-aa1164.md](amps/princeton-reverb-aa1164.md) |
 | 1965 | Super Reverb (black panel) | explorer upgrade | ready, with estimates (Q17) | [super-reverb-ab763.md](amps/super-reverb-ab763.md) |
 | 1965 | Bassman (black panel) | new timeline amp | ready, with estimates (Q22) | [bassman-blackface-ab165-1965.md](amps/bassman-blackface-ab165-1965.md) |
+| 1965 | Pro Reverb (black panel) | new timeline amp | ready, with estimates (Q31) | [pro-reverb-1965.md](amps/pro-reverb-1965.md) |
 | 1972 | Super Six Reverb | new timeline amp | on the live site | [super-six-reverb-1972.md](amps/super-six-reverb-1972.md) |
+| 1972 | Vibro Champ (silver panel) | new timeline amp | ready, with estimates (Q34) | [vibro-champ-silverface.md](amps/vibro-champ-silverface.md) |
 | 1980 | Fender 75 | new timeline amp | blocked (Q20) | [fender-75-1980.md](amps/fender-75-1980.md) |
 | 1988 | The Twin (red/black knob) | new timeline amp | ready, with estimates (Q15) | [the-twin-1987.md](amps/the-twin-1987.md) |
 | 1993 | Vibro-King | new timeline amp | ready, with estimates | [vibro-king-1993.md](amps/vibro-king-1993.md) |
@@ -39,6 +44,7 @@ All amp research for the site lives in this folder on `main`. Start from [AGENTS
   - [deluxe-5e3-explorer.md](packets/deluxe-5e3-explorer.md): the nine 5E3 hotspot cards, rechecked against the Fender drawing.
   - [small-amp-checks.md](packets/small-amp-checks.md): checks on the published Champ, Tremolux and brown Deluxe.
 - [images/](images/): photo lists for the composite tool. The image files are kept on the owner's Mac, never in the repo.
+- [copy/](copy/): production copy written with the research, from the fifth pass on. One JSON per amp with the timeline text and hotspot cards in the live schema.
 
 History: this research was done 2026-11-20 in four passes on branch `codex/amp-expansion-research` and moved here the same day. The sections below record each pass.
 
@@ -202,3 +208,18 @@ with 22 factual drafts, no generated images. See [builder release record](../han
 5F6-A's missing-assembly blocker Q23 is resolved; Vibroverb still needs its own
 model. Q22's cabinet dimensions and new Q29's I-EG tube-label conflict remain.
 Pano's manufacturer manual resolves the OUT1 4 Ω / OUT2 8 Ω assignment.
+
+## Fifth pass: five amps with photos and production copy (2026-11-23)
+
+Owner asked for five more amps split between the early years and the 1960s and 70s, with production copy and reference photos in the same pass. No separate copy pass follows; the copy is in [copy/](copy/) and the builder places it.
+
+| Amp | Catalog row | Selected year and circuit | Photos | Copy |
+| --- | --- | --- | --- | --- |
+| [Deluxe Model 26](amps/deluxe-model-26-1946.md) | 3 | 1946, Fender Model 26 drawing | 9, plus drawing | [json](copy/deluxe-model-26-1946.json) |
+| [Twin 5F8-A](amps/twin-5f8a-1959.md) | 36 | 1959, drawing I-EG | 9, plus drawing | [json](copy/twin-5f8a-1959.json) |
+| [Vibrolux Reverb](amps/vibrolux-reverb-1964.md) | 68 | 1964 to 65, drawing AA964 | 10, plus drawing | [json](copy/vibrolux-reverb-1964.json) |
+| [Pro Reverb](amps/pro-reverb-1965.md) | 71 | 1965, drawing AA165 | 9, plus drawing | [json](copy/pro-reverb-1965.json) |
+| [Vibro Champ](amps/vibro-champ-silverface.md) | 80 | 1970s, drawing AA764 | 9, plus drawing | [json](copy/vibro-champ-silverface.json) |
+
+Source order followed the protocol: Fender's articles and drawings first, Mojotone and Fenderguru next, dealers for photos and measured sizes only. New questions Q30 to Q35. The Vibro Champ finding (Q34) contradicts the catalog's description and needs the owner.
+

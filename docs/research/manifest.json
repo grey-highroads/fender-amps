@@ -515,6 +515,120 @@
         "Q23"
       ],
       "researchPass": 3
+    },
+    {
+      "id": "deluxe-model-26-1946",
+      "catalogRowId": "csv-row-3",
+      "treatment": "timeline-addition",
+      "selectedYear": 1946,
+      "circuit": "Model 26",
+      "brief": "amps/deluxe-model-26-1946.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "new hardwood cabinet family; nearest construction is the Dual Professional study"
+      ],
+      "catalogName": "Deluxe / Model 26 (woodie)",
+      "catalogCsvRow": 3,
+      "catalogRowSha256": "9158447db115257b0a939fb1ee04ed78e4d45f9eccbd6cc0cbe857372ca1f8b1",
+      "openQuestions": [
+        "Q35"
+      ],
+      "researchPass": 5,
+      "copy": "copy/deluxe-model-26-1946.json",
+      "photos": "images/deluxe-model-26-1946.json"
+    },
+    {
+      "id": "twin-5f8a-1959",
+      "catalogRowId": "csv-row-36",
+      "treatment": "timeline-addition",
+      "selectedYear": 1959,
+      "circuit": "5F8-A",
+      "brief": "amps/twin-5f8a-1959.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "tweed material, chicken-head knobs, jewel and chrome panel from the 5E3 and 5F6-A studies",
+        "Jensen speaker from the tweed amps"
+      ],
+      "catalogName": "Twin (5F8 / 5F8-A high power)",
+      "catalogCsvRow": 36,
+      "catalogRowSha256": "a362b606c15d11c52e1b410a9623f6644d2e69b4f15622e8206f94f189a01183",
+      "openQuestions": [
+        "Q30"
+      ],
+      "researchPass": 5,
+      "copy": "copy/twin-5f8a-1959.json",
+      "photos": "images/twin-5f8a-1959.json"
+    },
+    {
+      "id": "vibrolux-reverb-1964",
+      "catalogRowId": "csv-row-68",
+      "treatment": "timeline-addition",
+      "selectedYear": 1964,
+      "circuit": "AA864 family (AA964 drawing read)",
+      "brief": "amps/vibrolux-reverb-1964.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "black-panel knobs, panel, tolex and grille from the Princeton Reverb and Super Reverb studies",
+        "10-inch speaker from the Super Reverb study"
+      ],
+      "catalogName": "Vibrolux Reverb (black panel)",
+      "catalogCsvRow": 68,
+      "catalogRowSha256": "2fcf0fd06f2ff31b1e3037bec44b601e858d6a0bfb225f8304874ef4d07f1563",
+      "openQuestions": [
+        "Q32",
+        "Q33"
+      ],
+      "researchPass": 5,
+      "copy": "copy/vibrolux-reverb-1964.json",
+      "photos": "images/vibrolux-reverb-1964.json"
+    },
+    {
+      "id": "pro-reverb-1965",
+      "catalogRowId": "csv-row-71",
+      "treatment": "timeline-addition",
+      "selectedYear": 1965,
+      "circuit": "AA165",
+      "brief": "amps/pro-reverb-1965.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "front panel and chassis shared with the Vibrolux Reverb",
+        "black-panel parts from the Super Reverb and Princeton Reverb studies"
+      ],
+      "catalogName": "Pro Reverb (black panel)",
+      "catalogCsvRow": 71,
+      "catalogRowSha256": "2056ef029e5a75d05c093c58c4b7809d7a84fae8a55a96edd439a7024e9e3c99",
+      "openQuestions": [
+        "Q31"
+      ],
+      "researchPass": 5,
+      "copy": "copy/pro-reverb-1965.json",
+      "photos": "images/pro-reverb-1965.json"
+    },
+    {
+      "id": "vibro-champ-silverface",
+      "catalogRowId": "csv-row-80",
+      "treatment": "timeline-addition",
+      "selectedYear": 1972,
+      "circuit": "AA764",
+      "brief": "amps/vibro-champ-silverface.md",
+      "readiness": "ready-with-estimates",
+      "blockingQuestions": [],
+      "reuseCandidates": [
+        "silver-panel knobs and panel from the Super Six Reverb"
+      ],
+      "catalogName": "Vibro Champ (silver panel)",
+      "catalogCsvRow": 80,
+      "catalogRowSha256": "91b8eedff90db47dfe661408aaca6dc3ac1374f892678f3c35ed393b7b7a3168",
+      "openQuestions": [
+        "Q34"
+      ],
+      "researchPass": 5,
+      "copy": "copy/vibro-champ-silverface.json",
+      "photos": "images/vibro-champ-silverface.json"
     }
   ],
   "timelineOnMain": {

@@ -172,3 +172,30 @@ Model follows the layout and discloses the discrepancy in profile/card fine prin
 Need an authoritative revision clarification or sharper independent Fender copy;
 do not silently erase either label. Existing brief's statement that all tube
 labels agree is superseded by this current check.
+
+## New in the fifth pass (2026-11-23)
+
+### Q30. Twin 5F8-A: 80 or 100 watts.
+
+**Status: open; does not block the model.** Fender's own Twin history calls the 1958 to 1959 5F8-A "100-watt". The catalog and Wikipedia say 80 W. Drawing I-EG gives no rating. The timeline keeps the catalog's 80 W and says both. Need a period Fender catalog or price list.
+
+### Q31. Pro Reverb AA165: GZ34 or 5U4GB.
+
+**Status: open; does not block the model.** Fender drawing AA165 (D-FE) and a 1965 tube chart read GZ34. Premier Guitar says 5U4GB. Both fit the socket. The card follows the drawing and names the conflict in fine print.
+
+### Q32. Vibrolux Reverb: no AA864 drawing found.
+
+**Status: open; limits first-year circuit claims.** Only the later AA964 print (J-FD) was found. The first-year circuit may differ in bias arrangement (AA964 has a bias-adjust pot) and values. Cards are scoped to the AA964 drawing.
+
+### Q33. Vibrolux Reverb: logo on 1964 amps.
+
+**Status: leaning resolved.** Mojotone says 1964 amps have no logo or a grille-mounted one. Two dated first-year amps (December 1964, February 1965) both show the raised grille logo. Model with the logo unless a factory source says otherwise.
+
+### Q34. Vibro Champ: catalog says bias tremolo.
+
+**Status: open; catalog wording conflict.** Catalog row 80 describes "single-ended 6V6 with musical bias tremolo". Fender drawing AA764 shows the oscillator feeding the driver stage cathode through the Intensity pot, not the 6V6 bias. Fenderguru agrees. The copy follows the drawing. The catalog row needs the owner's correction.
+
+### Q35. Deluxe Model 26 dimensions.
+
+**Status: open; dimensions are estimates.** No dimensions found from Fender, Mojotone, Radiomuseum or the dealer pages read. Scale from the 10-inch speaker in the rear photos until a measurement turns up.
+

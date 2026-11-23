@@ -1,0 +1,243 @@
+{
+ "id": "deluxe-model-26-1946",
+ "catalogCsvRow": 3,
+ "status": "production copy, research pass 5, 2026-11-23. Grey owns final wording.",
+ "schema": "timeline: fields for dist/collection.js entries (builder adds width, height, finish). explorer: the BP_EXPLORATIONS shape in dist/bassman-pano-features.js. side and menuOnly are proposals; placement is the builder’s.",
+ "timeline": {
+  "id": "deluxe-model-26-1946",
+  "year": 1946,
+  "name": "Deluxe Model 26",
+  "era": "The woodie years",
+  "years": "1946–1948; 1946-style study",
+  "watts": 12,
+  "speakers": "1 × 10″",
+  "load": "8 Ω",
+  "circuit": "Model 26",
+  "voice": "The Deluxe before tweed: hardwood, a mic input and one ten.",
+  "story": "This is the Deluxe before it was tweed. Fender’s own history puts the Model 26 in spring 1946, in a cabinet made from the same hardwood boards Fender bought for its lap steels: maple, walnut, mahogany and now and then oak. You get two instrument inputs and a microphone input, a volume for each side, and one Tone knob that also turns the amp on. The controls face the back, on a panel stenciled with the lightning-bolt logo. Inside, two 6V6s run cathode-biased with no negative feedback into one ten-inch speaker. The first ones used a field-coil speaker, and Fender moved to a permanent magnet in 1947. By summer 1948 the tweed TV-front Deluxe had taken its place.",
+  "ratingNote": "Catalog row 3, 12 W retained; Fender’s history says 14 W and Mojotone says 10 to 14 W. No published cabinet dimensions were found, so the proportions are estimates scaled from the ten-inch speaker (Q35). Input and driver tube types changed by serial number during the run. Circuit follows Fender’s Model 26 drawing."
+ },
+ "explorer": {
+  "name": "Deluxe Model 26 (woodie)",
+  "parts": [
+   {
+    "id": "inputs",
+    "label": "Instrument and mic inputs",
+    "side": "rear",
+    "menuOnly": false,
+    "title": "Two guitars and a mic share one little amp.",
+    "body": "There are three jacks: two marked Instruments and one marked Microphone. The two instrument jacks go into one half of a 6SC7 through 75K resistors and share the Inst. Vol. knob. The mic jack gets the other half of the tube and its own Mic. Vol. knob.",
+    "attributes": [
+     [
+      "Input tube",
+      "6SC7 (dual triode)"
+     ],
+     [
+      "Instrument inputs",
+      "2, shared volume"
+     ],
+     [
+      "Mic input",
+      "1, own volume"
+     ]
+    ],
+    "listen": "Two players plugged into the instrument jacks get one volume between them, so you balance by turning your guitar down. The mic side is separate, which let one amp cover a steel player and a singer.",
+    "together": "Both triodes share one 1500 Ω cathode resistor with a 10 µF bypass. The two 1M volume pots then mix together into the next tube, a 6N7, which does the second gain stage and splits the phase for the output tubes.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s Model 26 schematic and the stenciled panel on surviving amps.",
+    "detail": "Calling it a steel-player-and-singer amp is our reading of the panel. Fender’s drawing doesn’t say who it was for. Early amps used different input tubes.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Model_26_Deluxe.gif?v=1759171998",
+      "Fender \"Deluxe\" schematic, Model 26"
+     ],
+     [
+      "https://www.fender.com/articles/behind-the-scenes/the-woodies-a-history-of-fenders-first-amps",
+      "Fender: The Woodies, a history of Fender's first amps"
+     ]
+    ]
+   },
+   {
+    "id": "tone",
+    "label": "Tone control and power switch",
+    "side": "rear",
+    "menuOnly": false,
+    "title": "The Tone knob is also the on switch.",
+    "body": "Turn the Tone knob all the way down and it clicks off; that’s the power switch. The tone circuit itself is a 2M pot with a .05 µF cap, and it sits across the plates of the two output tubes, not in the preamp.",
+    "attributes": [
+     [
+      "Tone pot",
+      "2 MΩ"
+     ],
+     [
+      "Cap",
+      ".05 µF"
+     ],
+     [
+      "Position",
+      "across the 6V6 plates"
+     ]
+    ],
+    "listen": "Because it works at the output stage, turning it down rolls treble off the whole amp after all the gain has happened. It acts more like a darkness control than an EQ.",
+    "together": "Later Fenders put the tone controls in the preamp, ahead of the output stage. Here there’s nothing between the 6N7 driver and the 6V6s except coupling caps, and the tone pot hangs on the output side.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s Model 26 schematic and Fender’s woodies history, which describes the tone knob doubling as on/off.",
+    "detail": "Frequency response wasn’t measured.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Model_26_Deluxe.gif?v=1759171998",
+      "Fender \"Deluxe\" schematic, Model 26"
+     ],
+     [
+      "https://www.fender.com/articles/behind-the-scenes/the-woodies-a-history-of-fenders-first-amps",
+      "Fender: The Woodies, a history of Fender's first amps"
+     ]
+    ]
+   },
+   {
+    "id": "output",
+    "label": "Two 6V6s, cathode-biased, no feedback",
+    "side": "top",
+    "menuOnly": false,
+    "title": "Two 6V6s, and nothing feeding back.",
+    "body": "The output stage is two 6V6GT tubes in push-pull, cathode-biased through one shared 250 Ω, 5 W resistor bypassed by 25 µF. There’s no negative feedback loop from the speaker back to the preamp.",
+    "attributes": [
+     [
+      "Output tubes",
+      "2 × 6V6GT"
+     ],
+     [
+      "Bias",
+      "cathode, 250 Ω / 25 µF shared"
+     ],
+     [
+      "Negative feedback",
+      "none"
+     ]
+    ],
+    "listen": "With no feedback, whatever the output tubes do goes straight to the speaker. Cathode bias plus no feedback is the same basic output recipe the tweed Deluxe kept for years.",
+    "together": "The 6N7 ahead of them works as a paraphase splitter: one half amplifies, and part of its output feeds the other half to make the opposite-phase signal for the second 6V6.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s Model 26 schematic.",
+    "detail": "Tube positions on the model are estimates from photos.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Model_26_Deluxe.gif?v=1759171998",
+      "Fender \"Deluxe\" schematic, Model 26"
+     ],
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-woody-deluxe-model-26",
+      "Mojotone field guide: Woody Deluxe (Model 26)"
+     ]
+    ]
+   },
+   {
+    "id": "speaker",
+    "label": "Field-coil speaker, then permanent magnet",
+    "side": "front",
+    "menuOnly": false,
+    "title": "The first speakers used an electromagnet.",
+    "body": "Early Model 26 amps have a ten-inch Jensen with a field coil, an electromagnet where a permanent magnet would be. Fender switched to permanent-magnet speakers in 1947.",
+    "attributes": [
+     [
+      "Speaker",
+      "1 × 10″ Jensen"
+     ],
+     [
+      "Load",
+      "8 Ω"
+     ],
+     [
+      "Change",
+      "field coil to PM, 1947"
+     ]
+    ],
+    "listen": "If you’re looking at one, check the speaker first. A field-coil speaker means an early amp, and the output transformer may be on the chassis rather than bolted to the speaker frame.",
+    "together": "Mojotone’s field guide says the output transformer sat on the chassis in field-coil amps and moved to the speaker basket after the switch to permanent magnets.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s woodies history for the speaker change; Mojotone for the transformer location.",
+    "detail": "The model shows a later amp with the transformer on the speaker basket.",
+    "sources": [
+     [
+      "https://www.fender.com/articles/behind-the-scenes/the-woodies-a-history-of-fenders-first-amps",
+      "Fender: The Woodies, a history of Fender's first amps"
+     ],
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-woody-deluxe-model-26",
+      "Mojotone field guide: Woody Deluxe (Model 26)"
+     ]
+    ]
+   },
+   {
+    "id": "cabinet",
+    "label": "Hardwood cabinet and grille",
+    "side": "front",
+    "menuOnly": false,
+    "title": "The cabinet is solid hardwood from the lap-steel shop.",
+    "body": "Fender built these cabinets from one-inch hardwood boards it had on hand for lap steels: blonde maple, black walnut, dark mahogany and sometimes oak. The grille cloth came in red, blue or gold, with a matching cloth panel on the lower back, behind three vertical metal strips.",
+    "attributes": [
+     [
+      "Woods",
+      "maple, walnut, mahogany, oak"
+     ],
+     [
+      "Grille cloth",
+      "red, blue or gold"
+     ],
+     [
+      "Handle",
+      "wood"
+     ]
+    ],
+    "listen": "No two woodies look quite alike, because the wood and cloth vary. That’s a big part of why collectors chase them.",
+    "together": "Some amps have two strips instead of three. By summer 1948 Fender had moved to the tweed TV-front Deluxe.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s history of the woodies.",
+    "detail": "The model uses one wood and cloth combination from photographs; others are just as correct.",
+    "sources": [
+     [
+      "https://www.fender.com/articles/behind-the-scenes/the-woodies-a-history-of-fenders-first-amps",
+      "Fender: The Woodies, a history of Fender's first amps"
+     ]
+    ]
+   },
+   {
+    "id": "power",
+    "label": "5Y3GT rectifier and filtering",
+    "side": "top",
+    "menuOnly": true,
+    "title": "A 5Y3 and three filter caps.",
+    "body": "The power supply is a 5Y3GT rectifier tube into 8, 8 and 16 µF filter caps rated 450 V, with 25K dropping resistors between them. A 2 A fuse protects the amp.",
+    "attributes": [
+     [
+      "Rectifier",
+      "5Y3GT"
+     ],
+     [
+      "Filters",
+      "8 / 8 / 16 µF, 450 V"
+     ],
+     [
+      "Fuse",
+      "2 A"
+     ]
+    ],
+    "listen": "A tube rectifier like this sags a little when you hit it hard. On an amp this size, that’s part of the feel.",
+    "together": "The 25K droppers feed lower voltages to the preamp and driver stages.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender’s Model 26 schematic.",
+    "detail": "Radiomuseum lists other tube changes by serial number in the input and driver sockets.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Model_26_Deluxe.gif?v=1759171998",
+      "Fender \"Deluxe\" schematic, Model 26"
+     ],
+     [
+      "https://radiomuseum.org/r/fender_deluxe.html",
+      "Radiomuseum: Model 26 Deluxe"
+     ]
+    ]
+   }
+  ]
+ }
+}

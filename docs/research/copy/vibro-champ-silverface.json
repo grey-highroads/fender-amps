@@ -1,0 +1,235 @@
+{
+ "id": "vibro-champ-silverface",
+ "catalogCsvRow": 80,
+ "status": "production copy, research pass 5, 2026-11-23. Grey owns final wording.",
+ "schema": "timeline: fields for dist/collection.js entries (builder adds width, height, finish). explorer: the BP_EXPLORATIONS shape in dist/bassman-pano-features.js. side and menuOnly are proposals; placement is the builder’s.",
+ "timeline": {
+  "id": "vibro-champ-silverface",
+  "year": 1968,
+  "name": "Vibro Champ",
+  "era": "The silver-panel years",
+  "years": "1968–1982; 1970s study",
+  "watts": 6,
+  "speakers": "1 × 8″",
+  "load": "4 Ω",
+  "circuit": "AA764",
+  "voice": "A Champ with tremolo, and the tremolo isn’t where you’d expect.",
+  "story": "Take a Champ and add Speed and Intensity knobs and you have a Vibro Champ: one 6V6, one eight-inch speaker and about six watts. Fender introduced it in 1964 and it went silver in 1968, which is the version here. The tremolo is the interesting part. On Fender’s AA764 drawing, the oscillator doesn’t touch the power tube’s bias. It works on the cathode of the preamp stage that drives the 6V6, and Fenderguru points out that no other black- or silver-panel Fender does it that way. Ours has the plain silver grille without the aluminum trim, which puts it from 1970 on. A black panel came back shortly before Fender stopped making it in 1982.",
+  "ratingNote": "Catalog row 80, 6 W, 4 Ω class; the rear label on a 1978 amp reads 3.2 ohms. The catalog describes bias tremolo; Fender drawing AA764 shows the tremolo on the driver stage cathode (Q34). Cabinet 14.5 × 17 × 7.25 in from Mojotone; a dealer measures a 1969 amp at 14 × 17 × 7 in."
+ },
+ "explorer": {
+  "name": "Vibro Champ (silver panel)",
+  "parts": [
+   {
+    "id": "tremolo",
+    "label": "Tremolo on the driver cathode",
+    "side": "top",
+    "menuOnly": false,
+    "title": "The tremolo works on the preamp, not the power tube.",
+    "body": "Half a 12AX7 runs as a phase-shift oscillator, with Speed on a 3M pot. The Intensity pot, 25K, feeds that wobble into the cathode of the stage that drives the 6V6. The power tube itself isn’t modulated.",
+    "attributes": [
+     [
+      "Oscillator",
+      "12AX7"
+     ],
+     [
+      "Speed",
+      "3 MΩ"
+     ],
+     [
+      "Intensity",
+      "25 kΩ"
+     ]
+    ],
+    "listen": "If the tremolo quits, look at the second 12AX7 and the driver stage, not the 6V6. That’s where the drawing puts it.",
+    "together": "Most Fender tremolos of the era either swing the output-tube bias or use a lamp and photocell. Fenderguru calls this arrangement unique among black- and silver-panel amps.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA764; Fenderguru.",
+    "detail": "Our catalog row describes it as bias tremolo. The drawing doesn’t support that.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibro-Champ_Amp_AA764.pdf?v=1758724309",
+      "Fender \"Vibro-Champ Amp AA764\" schematic, drawing 1-FD"
+     ],
+     [
+      "https://fenderguru.com/amps/champ/",
+      "Fenderguru: BF/SF Champ and Vibro Champ"
+     ]
+    ]
+   },
+   {
+    "id": "output",
+    "label": "Single-ended 6V6",
+    "side": "top",
+    "menuOnly": false,
+    "title": "One 6V6, no phase inverter.",
+    "body": "A single 6V6GT runs single-ended into the output transformer. It’s cathode-biased through a 470 Ω, 1 W resistor with a 25 µF bypass.",
+    "attributes": [
+     [
+      "Output tube",
+      "6V6GT"
+     ],
+     [
+      "Bias",
+      "cathode, 470 Ω / 25 µF"
+     ],
+     [
+      "Output",
+      "about 6 W"
+     ]
+    ],
+    "listen": "With one tube and no inverter, the amp gets to its breakup at bedroom volume. That’s why people record with these.",
+    "together": "Single-ended means the one tube handles the whole waveform, so there’s no push-pull cancellation of even harmonics.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA764.",
+    "detail": "Recording use is player lore, not documented by Fender.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibro-Champ_Amp_AA764.pdf?v=1758724309",
+      "Fender \"Vibro-Champ Amp AA764\" schematic, drawing 1-FD"
+     ],
+     [
+      "https://www.fender.com/articles/parts-and-accessories/indispensable-undeniable-the-legacy-of-the-champ",
+      "Fender: The legacy of the Champ"
+     ]
+    ]
+   },
+   {
+    "id": "tone",
+    "label": "Treble and Bass before the Volume",
+    "side": "top",
+    "menuOnly": false,
+    "title": "The tone controls come before the Volume.",
+    "body": "The first half of a 12AX7 feeds a 250K Treble and 250K Bass stack, and the 1M Volume comes after it, ahead of the driver stage.",
+    "attributes": [
+     [
+      "Treble",
+      "250 kΩ"
+     ],
+     [
+      "Bass",
+      "250 kΩ"
+     ],
+     [
+      "Volume",
+      "1 MΩ, after the tone stack"
+     ]
+    ],
+    "listen": "On a small amp you usually run the Volume high. The Treble and Bass shape what goes into the stage that gets pushed, so they change the breakup as well as the EQ.",
+    "together": "The stack uses a 250 pF treble cap, .1 µF and .047 µF caps and a fixed resistor for the middle.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA764.",
+    "detail": "The breakup point is our reading of the circuit.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibro-Champ_Amp_AA764.pdf?v=1758724309",
+      "Fender \"Vibro-Champ Amp AA764\" schematic, drawing 1-FD"
+     ]
+    ]
+   },
+   {
+    "id": "feedback",
+    "label": "Negative feedback",
+    "side": "rear",
+    "menuOnly": true,
+    "title": "There’s a feedback loop from the speaker.",
+    "body": "A 2700 Ω resistor runs from the speaker output back to a 47 Ω resistor in the driver stage cathode.",
+    "attributes": [
+     [
+      "Feedback resistor",
+      "2700 Ω"
+     ],
+     [
+      "Cathode resistor",
+      "47 Ω"
+     ]
+    ],
+    "listen": "Feedback tightens the bass and smooths the top a little. Owners who mod these sometimes lift it for a rawer sound.",
+    "together": "The tremolo signal goes into the same driver cathode.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA764.",
+    "detail": "The mod is common lore; not a Fender recommendation.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibro-Champ_Amp_AA764.pdf?v=1758724309",
+      "Fender \"Vibro-Champ Amp AA764\" schematic, drawing 1-FD"
+     ]
+    ]
+   },
+   {
+    "id": "speaker",
+    "label": "Eight-inch speaker and back label",
+    "side": "front",
+    "menuOnly": false,
+    "title": "An eight-inch speaker rated 3.2 ohms.",
+    "body": "One eight-inch speaker. Mojotone lists an Oxford 8EV at 4 ohms, and the printed label on a 1978 amp reads Speaker 3.2 Ohms, 6 Watts RMS. The back also carries a 1 A fuse and a jack for the vibrato pedal.",
+    "attributes": [
+     [
+      "Speaker",
+      "1 × 8″"
+     ],
+     [
+      "Label",
+      "3.2 Ω, 6 W RMS"
+     ],
+     [
+      "Fuse",
+      "1 A slow-blow"
+     ]
+    ],
+    "listen": "An eight in an open-back box is a big part of the small, focused sound.",
+    "together": "Fender’s drawing calls for a 1 A slow-blow fuse. The 3.2 ohm and 4 ohm figures describe the same class of load.",
+    "extraTitle": "Where this comes from",
+    "extra": "Mojotone field guide and a 1978 amp’s rear label.",
+    "detail": "Speaker brands varied through the run.",
+    "sources": [
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-silverface-vibro-champ",
+      "Mojotone field guide: Silverface Vibro Champ"
+     ],
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibro-Champ_Amp_AA764.pdf?v=1758724309",
+      "Fender \"Vibro-Champ Amp AA764\" schematic, drawing 1-FD"
+     ]
+    ]
+   },
+   {
+    "id": "cabinet",
+    "label": "Silver panel and grille",
+    "side": "front",
+    "menuOnly": true,
+    "title": "The trim tells you the year.",
+    "body": "Mojotone says 1968 to 1969 amps have an aluminum trim strip around the blue-white-silver grille, and later ones don’t. The model shows the later look.",
+    "attributes": [
+     [
+      "Grille",
+      "blue, white and silver"
+     ],
+     [
+      "Aluminum trim",
+      "1968 to 1969"
+     ],
+     [
+      "Size",
+      "14.5 × 17 × 7.25 in"
+     ]
+    ],
+    "listen": "A trim strip is a quick way to spot an early silver-panel amp.",
+    "together": "Fender brought back a black panel shortly before the Vibro Champ ended in 1982.",
+    "extraTitle": "Where this comes from",
+    "extra": "Mojotone field guide; Fender’s Champ history.",
+    "detail": "Dimensions are Mojotone’s.",
+    "sources": [
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-silverface-vibro-champ",
+      "Mojotone field guide: Silverface Vibro Champ"
+     ],
+     [
+      "https://www.fender.com/articles/parts-and-accessories/indispensable-undeniable-the-legacy-of-the-champ",
+      "Fender: The legacy of the Champ"
+     ]
+    ]
+   }
+  ]
+ }
+}

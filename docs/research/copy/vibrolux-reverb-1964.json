@@ -1,0 +1,227 @@
+{
+ "id": "vibrolux-reverb-1964",
+ "catalogCsvRow": 68,
+ "status": "production copy, research pass 5, 2026-11-23. Grey owns final wording.",
+ "schema": "timeline: fields for dist/collection.js entries (builder adds width, height, finish). explorer: the BP_EXPLORATIONS shape in dist/bassman-pano-features.js. side and menuOnly are proposals; placement is the builder’s.",
+ "timeline": {
+  "id": "vibrolux-reverb-1964",
+  "year": 1964,
+  "name": "Vibrolux Reverb",
+  "era": "The black-panel years",
+  "years": "1964–1967; 1964–65 study",
+  "watts": 35,
+  "speakers": "2 × 10″",
+  "load": "4 Ω",
+  "circuit": "AA864 family (AA964 drawing read)",
+  "voice": "Two 6L6s and two tens with the full black-panel reverb and tremolo.",
+  "story": "Two 6L6s and two ten-inch speakers in a cabinet about 25 inches wide, with the same reverb and optical tremolo setup as the bigger black-panel combos. Both channels have Volume, Treble, Bass and a Bright switch, and the Vibrato channel adds Reverb, Speed and Intensity. There’s no Middle knob; a fixed 6.8K resistor sits where it would go. A 12AT7 drives the reverb tank through its own small transformer, and half a 7025 brings the signal back. The tremolo is a lamp and a light-sensitive resistor in a sealed package, and it only works on the Vibrato channel. Fender introduced it in 1964 and kept it in black until 1967.",
+  "ratingNote": "Catalog row 68, 35 W. Circuit read from Fender drawing AA964 (J-FD), a later print; no AA864 drawing was found (Q32). Cabinet 18 × 25 × 9.5 in from Mojotone; one dealer measures 17.75 × 24.5 × 9.5 in. Both first-year amps photographed have the raised grille logo (Q33)."
+ },
+ "explorer": {
+  "name": "Vibrolux Reverb (black panel)",
+  "parts": [
+   {
+    "id": "reverb",
+    "label": "Tube-driven spring reverb",
+    "side": "rear",
+    "menuOnly": false,
+    "title": "The reverb has its own tube and transformer.",
+    "body": "The reverb isn’t a passive add-on. Half a 12AT7 drives the spring tank through a small transformer, and half a 7025 picks up the return. The Reverb knob is a 100K pot blending the wet signal back in through a .003 µF cap.",
+    "attributes": [
+     [
+      "Driver",
+      "12AT7"
+     ],
+     [
+      "Recovery",
+      "7025"
+     ],
+     [
+      "Reverb pot",
+      "100 kΩ"
+     ]
+    ],
+    "listen": "Because the tank is driven hard, a little Reverb goes a long way, and past halfway it gets splashy fast.",
+    "together": "The tank plugs into the RCA jacks marked Reverb Output and Reverb Input on the back. The reverb is on the Vibrato channel only.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA964.",
+    "detail": "How the reverb sounds is player consensus, not a measurement.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ],
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-blackface-vibrolux-reverb",
+      "Mojotone field guide: Blackface Vibrolux Reverb"
+     ]
+    ]
+   },
+   {
+    "id": "tremolo",
+    "label": "Optical tremolo",
+    "side": "top",
+    "menuOnly": false,
+    "title": "The tremolo is a lamp and a light sensor.",
+    "body": "Half a 12AX7 runs as an oscillator, with the Speed control a 3M pot. The oscillator flashes a small lamp sealed next to a light-dependent resistor, and that resistor pulls the Vibrato channel’s signal up and down. Intensity is a 50K pot.",
+    "attributes": [
+     [
+      "Oscillator",
+      "12AX7"
+     ],
+     [
+      "Speed",
+      "3 MΩ"
+     ],
+     [
+      "Intensity",
+      "50 kΩ"
+     ]
+    ],
+    "listen": "It only works on the Vibrato channel. Plug into Normal and the Speed and Intensity knobs do nothing.",
+    "together": "The oscillator, lamp and photocell are the same plan the drawing for the black-panel Pro Reverb shows.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA964.",
+    "detail": "The sealed lamp package is drawn as a block; its exact part isn’t named on this print.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ],
+     [
+      "https://www.thetubestore.com/lib/thetubestore/schematics/Fender/Fender-Pro-Reverb-AA165-Schematic.pdf",
+      "Fender \"Pro-Reverb-Amp AA165\" schematic, drawing D-FE"
+     ]
+    ]
+   },
+   {
+    "id": "mid",
+    "label": "Fixed middle resistor",
+    "side": "top",
+    "menuOnly": true,
+    "title": "There’s a Middle setting, you just can’t turn it.",
+    "body": "Each channel’s tone stack is a 250K Treble and a 250K Bass with a fixed 6.8K resistor at the bottom, where a Middle pot would go on a Twin or Super Reverb.",
+    "attributes": [
+     [
+      "Treble",
+      "250 kΩ"
+     ],
+     [
+      "Bass",
+      "250 kΩ"
+     ],
+     [
+      "Middle",
+      "6.8 kΩ fixed"
+     ]
+    ],
+    "listen": "A 6.8K resistor is a fairly low middle setting, so the mids are pulled back compared with a Middle pot turned up.",
+    "together": "The stack uses a 250 pF treble cap and .1 µF and .047 µF caps.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA964.",
+    "detail": "The comparison to other models is ours.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ]
+    ]
+   },
+   {
+    "id": "bright",
+    "label": "Bright switch",
+    "side": "top",
+    "menuOnly": true,
+    "title": "The Bright switch is a 120 pF cap.",
+    "body": "Each channel has a Bright switch that puts a 120 pF cap across its 1M Volume pot.",
+    "attributes": [
+     [
+      "Bright cap",
+      "120 pF"
+     ],
+     [
+      "Volume",
+      "1 MΩ"
+     ]
+    ],
+    "listen": "Like any bright cap on a volume pot, it’s strongest with the Volume low and fades as you turn up.",
+    "together": "Both channels start in a 7025, one per channel.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA964.",
+    "detail": "Not measured.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ]
+    ]
+   },
+   {
+    "id": "output",
+    "label": "Two 6L6s with adjustable bias",
+    "side": "top",
+    "menuOnly": false,
+    "title": "Two 6L6GCs and a bias you can set.",
+    "body": "Two 6L6GC output tubes run on fixed bias of about -42 V, with a 10K pot to adjust it. A 12AT7 long-tailed pair drives them, and feedback comes back through an 820 Ω resistor.",
+    "attributes": [
+     [
+      "Output tubes",
+      "2 × 6L6GC"
+     ],
+     [
+      "Bias",
+      "about −42 V, adjustable"
+     ],
+     [
+      "Plate voltage",
+      "about 410 V"
+     ]
+    ],
+    "listen": "Two 6L6s into two tens break up earlier than a Twin Reverb but much later than a Princeton.",
+    "together": "Grid stoppers are 1500 Ω and screen resistors 470 Ω, 1 W, the same values as the tweed Twin. The rectifier is a GZ34 at 315 V AC.",
+    "extraTitle": "Where this comes from",
+    "extra": "Fender drawing AA964.",
+    "detail": "This print is a later drawing. The first-year AA864 circuit wasn’t found and could differ in the bias arrangement.",
+    "sources": [
+     [
+      "https://cdn.shopify.com/s/files/1/0604/9615/0624/files/Fender_Vibrolux_Reverb_Amp_AA964.pdf?v=1758724723",
+      "Fender \"Vibrolux Reverb-Amp AA964\" schematic, drawing J-FD"
+     ]
+    ]
+   },
+   {
+    "id": "cabinet",
+    "label": "Two tens at 4 ohms",
+    "side": "front",
+    "menuOnly": false,
+    "title": "Two tens, wired for 4 ohms.",
+    "body": "Two ten-inch speakers make a 4-ohm load. Mojotone lists Jensen C10Q or Oxford 10L5 as stock. The cabinet is about 18 inches tall and 25 wide, with chrome glides and corners.",
+    "attributes": [
+     [
+      "Speakers",
+      "2 × 10″"
+     ],
+     [
+      "Load",
+      "4 Ω"
+     ],
+     [
+      "Size",
+      "18 × 25 × 9.5 in"
+     ]
+    ],
+    "listen": "It’s a lot easier to carry than a Super Reverb or a Twin.",
+    "together": "The back panel carries the ground switch, fuse, power and standby switches, speaker and extension speaker jacks, and the pedal and reverb jacks.",
+    "extraTitle": "Where this comes from",
+    "extra": "Mojotone field guide.",
+    "detail": "Mojotone lists no logo for 1964 amps, but both dated first-year amps we found have one.",
+    "sources": [
+     [
+      "https://mojotone.com/blogs/fender-field-guide/fender-blackface-vibrolux-reverb",
+      "Mojotone field guide: Blackface Vibrolux Reverb"
+     ]
+    ]
+   }
+  ]
+ }
+}
